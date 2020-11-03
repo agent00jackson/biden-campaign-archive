@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan De Biden Para Garantizar Que El Gobierno Sirva a La Gente | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan De Biden Para Garantizar Que El Gobierno Sirva a La Gente | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="&#8220;Nosotros, el pueblo.&#8221; Esas palabras lo cambiaron todo. El poder recaía en el pueblo, no en el gobierno. Libertad para pensar, hablar, actuar, criticar a su gobierno, todo protegido. Nos convertimos en el modelo del mundo. [&#8230;] Nuestra Constitución no comienza con la frase, &#8220;Nosotros los demócratas&#8221; o &#8220;Nosotros los republicanos&#8221;. Y ciertamente no comienza [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-03T19:48:14+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Government-Reform_1600x836_Digital_062920_Photo_V1-1024x683.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="683" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Government-Reform_1600x836_Digital_062920_Photo_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="21 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente/#webpage","url":"https://joebiden.com/es/el-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente/","name":"El Plan De Biden Para Garantizar Que El Gobierno Sirva a La Gente | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-07-27T18:13:20+00:00","dateModified":"2020-08-03T19:48:14+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente%2F&#038;format=xml" />
+<link rel="alternate" href="../../governmentreform.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-3656 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../governmentreform.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../governmentreform.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-3656 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan De Biden Para Garantizar Que El Gobierno Sirva a La Gente</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><i><span style="font-weight: 400;">&#8220;Nosotros, el pueblo.&#8221; Esas palabras lo cambiaron todo. El poder recaía en el pueblo, no en el gobierno. Libertad para pensar, hablar, actuar, criticar a su gobierno, todo protegido. Nos convertimos en el modelo del mundo. [&#8230;] Nuestra Constitución no comienza con la frase, &#8220;Nosotros los demócratas&#8221; o &#8220;Nosotros los republicanos&#8221;. Y ciertamente no comienza con la frase, &#8220;Nosotros los Donantes&#8221;.</span></i></p>
+<p><i><span style="font-weight: 400;">&#8211; Joe Biden, discurso al inicio de su campaña presidencial 2020, 18 de mayo de 2019</span></i></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Donald Trump ha presidido la administración más corrupta de la historia moderna. Trump ha abusado de la presidencia para enriquecerse, gastando innumerables fondos de los contribuyentes  en sus propias propiedades. Los miembros de su administración no han logrado desligarse de los conflictos de intereses como prometieron. Trump ha convertido a la rama ejecutiva en un arma contra su misión fundamental, incluyendo el uso del Departamento de Justicia de los Estados Unidos para proteger al presidente y sus intereses, por encima del pueblo estadounidense y el estado de derecho. Y, Trump ha dado la bienvenida a los ricos intereses especiales, incluyendo la Asociación Nacional del Rifle, a la Oficina Oval y a los niveles más altos de su administración para desarrollar y guiar políticas públicas. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La obligación que enfrenta el presidente que siga a Donald Trump es tan grande como esencial: restaurar la fe en el gobierno estadounidense. El próximo presidente debe demostrar con sus acciones, no con palabras vacías, que los servidores públicos sirven a todos en los Estados Unidos, no a ellos mismos ni a intereses especiales particulares. Un cargo público no es el premio por ganar una elección, sino un imperativo para mejorar la vida de las personas en todo el país, sin importar su género, raza, religión, orientación sexual, discapacidad, código postal o ingresos. El presidente de los Estados Unidos tiene la responsabilidad principal de ganarse la confianza del pueblo estadounidense y mantenerla.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Debemos elegir líderes con integridad, para quienes el interés público es primordial. Pero eso no es suficiente. También debemos fortalecer nuestras leyes para garantizar que ningún futuro presidente pueda volver a usar su cargo para beneficio personal. El poder del gobierno federal debe usarse para mejorar el país, y no al servicio de intereses privados y particulares. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden está ofreciendo una propuesta ambiciosa para garantizar que nuestro gobierno sirva a la gente. Específicamente, el presidente Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reducirá la influencia corruptora del dinero en la política y facilitará que candidatos de todos los orígenes se postulen para un cargo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Devolverá la integridad al Departamento de Justicia de los EE. UU. y a otras agencias de la rama ejecutiva que toman decisiones;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Restaurará la ética en el gobierno;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Controlará los conflictos de intereses financieros en la rama ejecutiva; y </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Exigirá a los cabilderos y a los funcionarios con quienes se reúnen un nivel más alto de rendición de cuentos.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Estos pasos son una parte esencial de renovar nuestra democracia y para asegurar que sirva a la gente e incluya a todos.</span></p>
+<p>&nbsp;</p>
+<p><b>REDUCIR LA INFLUENCIA CORRUPTORA DEL DINERO EN LA POLÍTICA</b></p>
+<p><span style="font-weight: 400;">Biden cree firmemente que podríamos mejorar nuestra política de la noche a la mañana si eliminamos al gran capital del sistema y obtuviéramos financiamiento público para nuestras elecciones. La democracia funciona mejor cuando una gran cuenta bancaria o una gran lista de donantes no son requisitos previos para el cargo, y los representantes elegidos provienen de todos los trasfondos, independientemente de los recursos. Pero durante demasiado tiempo, los intereses especiales y las corporaciones han parcializado el proceso político a su favor con contribuciones políticas. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden ha abogado por el financiamiento público de las campañas federales desde el comienzo de su carrera en el Senado. Primero copatrocinó la </span><a href="https://www.congress.gov/bill/93rd-congress/senate-bill/1103"><span style="font-weight: 400;">legislación</span></a><span style="font-weight: 400;"> para crear un sistema de financiamiento público para los candidatos a la Cámara y al Senado en 1973. En 1997 y muchos años después, </span><a href="https://www.congress.gov/bill/105th-congress/senate-joint-resolution/18"><span style="font-weight: 400;">copatrocinó</span></a><span style="font-weight: 400;"> una </span><a href="https://www.congress.gov/bill/105th-congress/senate-joint-resolution/18/cosponsors"><span style="font-weight: 400;">enmienda constitucional</span></a><span style="font-weight: 400;"> que habría limitado las contribuciones, así como los gastos corporativos y privados en las elecciones y hubiera evitado el daño causado por la Corte Suprema en el caso de </span><i><span style="font-weight: 400;">Citizens United.</span></i><span style="font-weight: 400;">      </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden reformará nuestro sistema de financiamiento de campañas para que amplifique las voces del público, no de los poderosos, especialmente las voces de los trabajadores en los Estados Unidos. Bajo su liderazgo, nuestro sistema se asegurará de que los principios de igualdad, transparencia e interés público, no privado, impulsen todas las decisiones gubernamentales. Con esos fines, Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Presentará una enmienda constitucional para eliminar por completo los fondos privados de nuestras elecciones federales. </b><span style="font-weight: 400;">Biden cree que ya es hora de poner fin a la influencia de los fondos privados en nuestras elecciones federales. Como presidente, Biden luchará por una enmienda constitucional que requerirá que los candidatos a cargos federales financien únicamente sus campañas con fondos públicos y eviten que el gasto externo distorsione el proceso electoral. Esta enmienda hará mucho más que simplemente revocar a </span><i><span style="font-weight: 400;">Citizens United:</span></i><span style="font-weight: 400;"> devolverá nuestra democracia a la gente y la alejará de los intereses corporativos que buscan tergiversarla.  </span></li>
+<li style="font-weight: 400;"><b>Promulgará legislación para proveer fondos públicos voluntarios complementarios para los candidatos federales que reciben contribuciones en pequeñas cantidades. </b><span style="font-weight: 400;">Mientras trabajamos hacia una enmienda constitucional, se pueden hacer cambios significativos con legislación. Biden propondrá legislación para suministrar fondos públicos para parear las contribuciones en pequeñas cantidades, a todos los candidatos federales. Esto ayudará especialmente a que quienes son candidatos por primera vez tengan acceso a los recursos necesarios para competir, liberándolos para que se concentren en interactuar con los votantes, no con los donantes de sumas elevadas.  </span></li>
+<li style="font-weight: 400;"><b>Mantendrá el dinero extranjero fuera de nuestras elecciones. </b><span style="font-weight: 400;">Biden propondrá una ley para fortalecer nuestras prohibiciones a los ciudadanos extranjeros que intentan influir en las elecciones federales, estatales o locales. Ordenará a una nueva agencia independiente, la Comisión de Ética Federal (que se discute en detalle a continuación), que garantice la aplicación vigorosa y unificada de esta y otras leyes anticorrupción. La Comisión establecerá requisitos sólidos de divulgación, de modo que cualquier comunicación de campaña electoral en línea que se origine en el extranjero se identifique y se señale.  </span></li>
+<li style="font-weight: 400;"><b>Limitará los SuperPAC. </b><span style="font-weight: 400;">La decisión de la Corte Suprema en </span><i><span style="font-weight: 400;">Citizens United </span></i><span style="font-weight: 400;">es incorrecta y debería ser revocada por una enmienda constitucional, pero estamos ansiosos por limitar su efecto peligroso. Como presidente, Biden trabajará para promulgar legislación que garantice que los súper comités de acción política (PAC, por sus siglas en inglés) sean totalmente independientes de las campañas y los partidos políticos, desde su establecimiento hasta la recaudación de fondos y los gastos.   </span></li>
+<li style="font-weight: 400;"><b>Aumentará la transparencia del gasto electoral. </b><span style="font-weight: 400;">Nuestra ley de financiamiento de campañas está obsoleta y Biden la actualizará para reflejar la era moderna. Con demasiada frecuencia, los candidatos y sus aliados ahora usan plataformas en línea como Facebook y Twitter para difundir anuncios engañosos o completamente falsos que son dirigidos específicamente a ciertas poblaciones y no son detectados por la prensa. Biden propondrá una legislación que codifique lo que debería ser un principio simple de la ley de financiamiento de campañas: cualquier grupo que abogue a favor o en contra de los candidatos a cargos federales en sus anuncios o comunicaciones debe divulgar quienes son sus contribuyentes. No más esconderse detrás de los grupos con “dinero de fuentes desconocidas” para difundir mentiras. Esta ley requerirá que los grupos publiquen todos los anuncios en línea, a quién están dirigidos y quién pagó por ellos, en una base de datos pública en un nuevo sitio web, ethics.gov, para que nadie pueda dirigirse a los votantes con información errónea sin atraer la atención de los medios o la atención política.  </span></li>
+<li style="font-weight: 400;"><b>Pondrá fin a los grupos con dinero de fuentes desconocidas. </b><span style="font-weight: 400;">La ley federal reconoce los grupos de “bienestar social”, también conocidos como 501(c)(4), que pretendían abogar por causas específicas. Pero después del caso de </span><i><span style="font-weight: 400;">Citizens United,</span></i><span style="font-weight: 400;"> se han utilizado cada vez más como grupos con dinero de fuentes desconocidas, gastando cientos de millones de dólares en elecciones federales y estatales sin revelar quiénes son sus donantes. Biden promulgará legislación para prohibir que los grupos 501(c)(4) gasten en las elecciones, la misma prohibición que se aplica a las organizaciones caritativas de la Sección 501(c)(3). También liderará la reforma de la Ley Federal de Campañas Electorales, para garantizar que cualquier entidad de cualquier tipo que gaste más de $10,000 en unas elecciones federales debe inscribirse en la Comisión de Ética Federal y divulgar públicamente a sus donantes. </span></li>
+<li style="font-weight: 400;"><b>Requerirá divulgación en tiempo real. </b><span style="font-weight: 400;">Actualmente, los votantes tienen que esperar hasta después de una elección para conocer a fondo quién gastó dinero para influir en su decisión. Biden propondrá legislación para cambiar eso, al exigir que las campañas y entidades externas que publiquen anuncios dentro de los 60 días previos a una elección revelen cualquier contribución nueva en 48 horas.  </span></li>
+<li style="font-weight: 400;"><b>Prohibirá las contribuciones de los comités de acción política (PAC) corporativos a los candidatos y prohibirá las contribuciones de cabilderos a aquellos con quienes se reúnen para abogar a favor de un tema.</b><span style="font-weight: 400;"> Biden se asegurará de que los cabilderos y los PAC corporativos no jueguen un rol en nuestras elecciones. La campaña presidencial de Biden está rechazando los fondos de los cabilderos y PAC corporativos. Como presidente, promulgará legislación para prohibir a los cabilderos que hagan contribuciones a aquellos con quienes se reúnen para abogar a favor de un tema, o recauden o agrupen fondos para ellos. Esta legislación estará diseñada para garantizar que el público sepa tanto como sea posible sobre el gasto político de aquellos que buscan influir en los funcionarios electos y en otros oficiales del gobierno. Cualquier contribución del cabildero debe divulgarse dentro de las siguientes 24 horas, y cualquier evento de recaudación de fondos organizado por el cabildero debe notificarse antes de que ocurra.</span></li>
+<li style="font-weight: 400;"><b>Reformará el financiamiento para las convenciones de los partidos nacionales. </b><span style="font-weight: 400;">Biden propondrá legislación que establezca que cualquier partido político que reciba más del 5% del voto nacional debe financiar su convención nacional con fondos públicos. Las primarias, y las convenciones que certifican sus resultados, son buenas para la democracia. Las convenciones también deberían serlo. No deben ser financiadas por intereses corporativos o monetarios. </span></li>
+<li style="font-weight: 400;"><b>Cerrará la laguna legal de los contratistas federales. </b><span style="font-weight: 400;">Como presidente, Biden cerrará la laguna legal que actualmente permite a los funcionarios y directores de contratistas federales contribuir a los candidatos a cargos federales. Si gana dinero con contratos del gobierno, debe hacerlo por mérito, no por contribuciones a la campaña.</span><b> </b></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>DEVOLVER LA INTEGRIDAD AL DEPARTAMENTO DE JUSTICIA Y A OTRAS AGENCIAS DE LA RAMA EJECUTIVA QUE TOMAN DECISIONES</b></p>
+<p><span style="font-weight: 400;">El procurador general y el resto del Departamento de Justicia de los Estados Unidos (DOJ, por sus siglas en inglés) sirven y protegen al pueblo estadounidense, no a los intereses privados y políticos del presidente. Lo mismo es cierto para otras agencias de la rama ejecutiva. Sin embargo, una y otra vez, el presidente Trump ha tratado de usar indebidamente el Departamento de Justicia para atacar a sus oponentes políticos y protegerse, proteger a su familia y a sus asociados de cualquier fiscalización o investigación significativa. Trump le ha pedido al Departamento de Justicia que procese a los demócratas y a otros que no están de acuerdo con él; ha alistado al Departamento de Justicia en su esfuerzo por evitar que sus declaraciones de impuestos vean la luz del día; y ha atacado a los fiscales de carrera y a los agentes que trabajan arduamente y dedican sus vidas al servicio público.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Trump ha utilizado al Departamento de Justicia como un arma contra las leyes promulgadas por el Congreso y apoyadas por el público, como la Ley del Cuidado de Salud a Bajo Precio, que ha dado a más de 20 millones de estadounidenses acceso a un seguro de salud que antes no tenían. De manera similar, ha utilizado sus nombramientos y órdenes ejecutivas para pedir a las agencias de la Rama Ejecutiva que se desvíen de su misión: ordenando al Departamento de Salud y Servicios Humanos que desmantele, en lugar de hacer cumplir, la Ley de Cuidado de Salud a Bajo Precio y solicitando a la Agencia de Protección Ambiental que exima a los contaminadores de responsabilidad, en lugar de que garantizar aire limpio y agua limpia para el pueblo estadounidense, como lo exige la ley. Esto está mal.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Para mantener el estado de derecho y devolver la integridad a nuestro sistema de justicia y al gobierno, Biden tomará medidas agresivas, que incluyen:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Evitar que el presidente o la Casa Blanca interfieran indebidamente en las investigaciones y en los juicios federales.</b><span style="font-weight: 400;"> Biden trabajará para impedir que cualquier futuro presidente o cualquier otra persona en la Casa Blanca interfiera indebidamente con las decisiones sobre quién o qué investigar y enjuiciar. Esas decisiones deben basarse únicamente en los hechos y en la ley, libres de influencia política o partidista. El presidente puede establecer amplias prioridades de aplicación, pero nunca debe decirle al DOJ qué personas o empresas específicas investigar o enjuiciar. El primer día de su presidencia, Biden emitirá una Orden Ejecutiva indicando que ningún miembro del personal de la Casa Blanca ni ningún miembro de su administración puede iniciar, alentar, obstruir o influir indebidamente en investigaciones o juicios específicos del Departamento de Justicia por ningún motivo; y se comprometerá a despedir a cualquiera que intente hacerlo. Biden también promulgará legislación que otorgue al inspector general del Departamento de Justicia todo el poder para investigar cualquier acusación de influencia partidista inadecuada en las investigaciones y juicios del Departamento de Justicia; y exigirá que el inspector general informe detalladamente al Congreso cada vez que se confirme una acusación como esa. Y, Biden trabajará con el Congreso para fortalecer nuestras leyes para denunciar irregularidades, de modo que cualquier empleado federal que se entere de un intento inadecuado de influir en una investigación o un juicio del Departamento de Justicia sepa cómo denunciarlo y reciba protección total contra represalias por parte de cualquier persona, incluido el presidente. Esas reformas también garantizarán que todos esos informes se transmitan directamente al Congreso. </span></li>
+<li style="font-weight: 400;"><b>Aumentar la transparencia en la toma de decisiones del DOJ.</b><span style="font-weight: 400;"> Biden hará que las políticas y prácticas del DOJ sean más transparentes y accesibles al público. Demasiadas de las peores decisiones de la Administración Trump, ya sea alegar que la Ley de Cuidado de Salud Asequible es inconstitucional o que DACA es ilegal, se tomaron sin fundamento legal. Biden requerirá que el Departamento de Justicia informe y explique en detalle cualquier cambio de posición sobre un tema legal importante al Congreso y al público. </span></li>
+<li style="font-weight: 400;"><b>Facultar a los guardianes en las agencia para combatir el comportamiento poco ético </b><span style="font-weight: 400;">Biden fortalecerá las leyes de los inspectores generales, que establecieron guardianes en casi todas las agencias de la rama ejecutiva, para dar a los inspectores generales plenos poderes de citación y la independencia que necesitan para investigar y publicitar la conducta impropia concreta, o el intento de conducta impropia, de cualquier funcionario. Los inspectores generales deben tener la autoridad expresa para prevenir, investigar y divulgar todas las violaciones.</span> <span style="font-weight: 400;"> </span></li>
+<li style="font-weight: 400;"><b>Prohibir la interferencia indebida en asuntos de las agencias. </b><span style="font-weight: 400;">Biden se asegurará de que las decisiones de la agencia sobre asuntos específicos, como otorgar contratos gubernamentales o otorgar permisos gubernamentales, se basen en los méritos y la experiencia, no en las preferencias políticas. Biden emitirá una Orden Ejecutiva que prohíba que cualquier persona en la Casa Blanca interfiera con las agencias federales en estos asuntos, y exigirá que la Casa Blanca revele al público si alguna corporación, individuo u otra entidad intenta solicitar ayuda de la Casa Blanca. Esta información será agregada y hecha pública por la Comisión de Ética Federal. </span></li>
+<li style="font-weight: 400;"><b>Dar poder al Departamento de Justicia para hacer cumplir la ley. </b><span style="font-weight: 400;">Biden se asegurará de que el Departamento de Justicia tenga los recursos y la autoridad para hacer cumplir nuestras leyes, incluidas las que la Administración Trump ha dicho a los fiscales de carrera y los agentes que ignoren, leyes que protegen nuestros derechos electorales, hacen que la discriminación sea ilegal y protegen el medio ambiente. Y, Biden volverá a comprometer las divisiones de Derechos Civiles y Energía y Recursos Naturales del Departamento para que lleven a cabo sus misiones.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>RESTAURAR LA ÉTICA EN EL GOBIERNO</b></p>
+<p><span style="font-weight: 400;">Durante los ocho años de la administración Obama-Biden, no hubo ni un indicio de escándalo. La administración estableció el código de ética más estricto jamás adoptado por alguna Casa Blanca. Sus procedimientos aseguraron que todas las decisiones se tomaran en los méritos, sin prejuicios, favoritismo o influencia indebida. El presidente Obama y el vicepresidente Biden establecieron expectativas claras de que debía seguirse el código de ética y la ley vigente.  </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La administración Trump ha hecho trizas esos estándares. Trump está aceptando emolumentos extranjeros, y ha ignorado su promesa de no expandir sus negocios en el extranjero. Y Trump está utilizando al gobierno federal para sostener sus complejos con innumerables dólares de los contribuyentes.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Muchas de nuestras imperfectas pero esenciales leyes de ética del gobierno tienen su origen en la respuesta del país a Watergate. Como presidente, Biden se asegurará de que la respuesta del país a las violaciones de la Administración Trump sea aún más agresiva. Específicamente, Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Establecerá la Comisión de Ética Federal para hacer cumplir más efectivamente la ley federal de ética. </b><span style="font-weight: 400;">Biden propondrá y promulgará una legislación que establezca una agencia gubernamental única facultada para supervisar y hacer cumplir las leyes federales de anticorrupción y ética. Hoy, la ley existente es un mosaico de mandatos específicos del tema, supervisada por agencias que a menudo carecen de la autoridad para exigir y recibir cumplimiento. Y, el seguimiento de datos públicos sobre quién está tratando de influir en nuestros funcionarios electos es igualmente fragmentado y difícil de encontrar. Esta comisión hará que toda la información sobre cómo ciertos intereses buscan influir en nuestro gobierno esté fácilmente accesible.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La oficina tendrá una amplia autoridad de investigación y aplicación de la ley civil, ampliando los poderes que ahora tienen la FEC, OGE y la Oficina del Asesor Especial. Tendrá la autoridad para hacer cumplir sus propias citaciones, poniendo fin al obstruccionismo ilegal de la Administración Trump. Tendrá el poder de remitir asuntos para investigación criminal al DOJ, y una obligación de informar al público cuando el DOJ haya decidido no proceder con ese referido. Y tendrá la tarea de cerrar las lagunas existentes que permiten a los funcionarios públicos ocultar activos en fideicomisos discrecionales, o dejar que los cabilderos encubran campañas de influencia en divulgaciones ambiguas. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Además, la Comisión de Ética Federal (CFE, por sus siglas en inglés) tendrá la tarea de establecer ethics.gov, un nuevo destino único para los estadounidenses interesados en conocer sobre los funcionarios electos y nombrados que les sirven, y aquellos que buscan influir en ese servicio.. Recopilará información sobre financiamiento de campañas, divulgación financiera y cabildeo, todo en un solo lugar y, como se detalla en este plan, esa información será más completa que nunca.  </span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Estructura de la CFE: </span></i><span style="font-weight: 400;">para evitar el estancamiento que afecta a algunas agencias actualmente, la CFE estará dirigida por una comisión de cinco miembros, nombrada por el presidente y confirmada por el Senado, con no más de tres comisionados del mismo partido político. Los comisionados ocuparán cargos por períodos escalonados de 10 años en las administraciones presidenciales, y podrán ser removidos solo por una causa. Las nominaciones a la comisión serán sugeridas por un panel especial de ex fiscales, jueces y reguladores estatales. Solo aquellos con experiencia en procesar casos de corrupción pública o regular la ética y el financiamiento de campañas serán elegibles para los nombramientos.</span> <span style="font-weight: 400;"> </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Para monitorear la efectividad de la CFE, y para garantizar que responda a todas las amenazas al gobierno ético y transparente, la oficina será asesorada por una Junta de Supervisión de la CFE de 11 miembros, compuesta por expertos bipartidistas en ética, financiamiento de campañas y gobierno abierto. La Junta informará a CFE dos veces al año con recomendaciones sobre cómo fortalecer el cumplimiento con la ética; cuando la Junta recomiende actualizaciones, la CFE estará obligada a considerarlas públicamente y explicar si alguna de ellas no se sigue.  </span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Exigirá que todos los candidatos a un cargo federal hagan públicas sus declaraciones de impuestos de 10 años antes de la fecha en que declararon su candidatura para su primer cargo federal.</b><span style="font-weight: 400;"> Muchos comités del Senado requieren que los nominados para puestos a nivel de gabinete suministren sus declaraciones de impuestos para inspección, porque el saber cómo una persona se ha ganado la vida puede fundamentar las decisiones sobre su aptitud para el cargo. Si requerimos el de los funcionarios designados, ¿por qué esperamos menos de quienes aspiran a cargos electos? Los últimos 21 años de declaraciones de impuestos federales de Biden han sido publicados, disponibles para ser inspeccionados por los votantes y los medios de comunicación. Como presidente, Biden promulgará una legislación que exija que todos los candidatos a cargos federales divulguen sus declaraciones de impuestos que datan de 10 años antes de la fecha en que declararon su candidatura para su primer cargo federal.</span></li>
+<li style="font-weight: 400;"><b>Ampliará y codificará en ley el juramento de ética de la Administración Obama-Biden. </b><span style="font-weight: 400;">En el primer día, Biden emitirá un juramento de ética, construyendo y mejorando el </span><a href="https://www.oge.gov/web/oge.nsf/Executive%2520Orders/A70F962587DAC28F85257E96006A90F2/%24FILE/23a5e4eeaffd4e14b4387b40b0eae5963.pdf%3Fopen"><span style="font-weight: 400;">juramento</span></a><span style="font-weight: 400;"> de la Administración Obama-Biden, para garantizar que cada miembro de su administración se enfoque día a día en los mejores resultados para el pueblo estadounidense, y nada más. El juramento abordará no solo la influencia inadecuada de los cabilderos, sino también cualquier influencia indebida o inapropiada de intereses personales, financieros y de otro tipo, asegurando una capa adicional de revisión y escrutinio cada vez que las propuestas o recomendaciones de políticas provengan de una fuente en conflicto.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>CONTROLAR LOS CONFLICTOS DE INTERESES EN LA RAMA EJECUTIVA</b></p>
+<p><span style="font-weight: 400;">El presidente Trump está utilizando la presidencia para enriquecerse. Su gabinete está lleno de miembros que no han cumplido con las desinversiones o recusaciones prometidas. Biden renovará la confianza pública en nuestra democracia asegurando que todos los que estén en una posición de confianza pública al remover incluso la apariencia de que sus participaciones financieras podrían influir en la toma de decisiones. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Evitará que el presidente y otros miembros de alto rango de la rama ejecutiva se vean influenciados por las participaciones financieras personales. </b><span style="font-weight: 400;">Ningún miembro de la Administración Biden será influenciado por las participaciones financieras personales. Como presidente, al igual que lo hizo como vicepresidente, Biden solo tendrá bonos del Tesoro, anualidades, fondos mutuos y bienes inmuebles residenciales privados; asimismo, cualquier plan de jubilación que beneficie a Joe o Jill Biden estará en fondos mutuos de gran capitalización. Por orden ejecutiva, Biden exigirá el estricto cumplimiento de los acuerdos de ética que exigirá a cada uno de sus gabinetes y otros altos funcionarios de la administración. Y promulgará una legislación que fortalezca estas prácticas, para que nunca más estemos expuestos a personas que quieren enriquecerse, como los que hemos visto en la Administración Trump.</span> <span style="font-weight: 400;"> </span></li>
+<li style="font-weight: 400;"><b>Extenderá este estándar a los miembros de la Cámara de Representantes y el Senado de los Estados Unidos. </b><span style="font-weight: 400;">Biden trabajará con el Congreso para promulgar legislación para aplicar normas similares a sus miembros.</span></li>
+<li style="font-weight: 400;"><b>Eliminará la laguna legal sobre los fideicomisos en la ley de divulgación financiera existente. </b><span style="font-weight: 400;">La Ley de Ética en el Gobierno exige que los candidatos a cargos federales y altos funcionarios de la Rama Ejecutiva revelen sus activos. Su objetivo es dar al público, a los medios de comunicación y a otros funcionarios del gobierno la oportunidad de identificar conflictos potenciales y exigir la recusación cuando sea apropiado. Pero los candidatos y los funcionarios públicos a menudo transfieren activos a fideicomisos controlados por miembros de la familia o amigos cercanos, y luego revelan solo la existencia del fideicomiso en lugar de los activos que posee. Esta laguna legal ha permitido a muchos altos funcionarios, incluido el presidente Trump, evitar revelar intereses financieros significativos. Biden trabajará con el Congreso para cerrar esta laguna legal; y mientras tanto requerirá que cualquier miembro de su Administración que sea beneficiario de un fideicomiso discrecional revele todas sus participaciones financieras. </span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>EXIGIR A LOS CABILDEROS Y A LOS FUNCIONARIOS CON QUIENES SE REÚNEN UN ESTÁNDAR MÁS ALTO DE RENDICIÓN DE CUENTAS</b></p>
+<p><span style="font-weight: 400;">Nuestro gobierno debe operar en el interés público, tomando decisiones sobre los méritos, y no para satisfacer las demandas de los intereses adinerados. El público tiene derecho a saber cuándo los cabilderos se reúnen con los miembros del Congreso y los funcionarios de la rama ejecutiva; debería saber con quién hablan y sobre qué. Además, los cabilderos a menudo suministran un borrador de lenguaje legislativo o regulatorio que esperan que se promulgue. Esa información también debe hacerse pública. Actualmente, nuestras regulaciones sobre los cabilderos están llenas de lagunas legales y solamente los cabilderos y los intereses corporativos que representan deben revelar muy poca información. Es hora de que fortalezcamos nuestras reglas sobre cabildeo y exijamos cuentas a los funcionarios públicos asegurándonos de que también cumplan con estos estándares más altos.   </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Exigirá cuentas a los funcionarios electos sobre la transparencia pública de las reuniones de cabildeo. </b><span style="font-weight: 400;">La ley de cabildeo existente se centra principalmente en las personas que cabildean. Es hora de que la ley se amplíe para incluir a los funcionarios públicos que son objeto de cabildeo. Si su senador o representante se reúne con un grupo de interés especial, usted debe saberlo. Si el secretario de Educación está tomando decisiones sobre la deuda estudiantil después de docenas de reuniones con prestamistas, usted también debe saberlo. Biden ampliará las leyes de divulgación de cabildeo, por lo que la obligación de transparencia recae en la persona que ostenta un cargo, así como en el cabildero. Específicamente, Biden propondrá legislación para exigir a los funcionarios electos que divulguen mensualmente cualquier reunión o comunicación con cualquier cabildero o interés especial que intente influir en la aprobación o la derrota de un proyecto de ley específico, ya sea que busque el voto del funcionario o asistencia para presentar o desarrollar legislación. Según el plan de Biden, los miembros del Congreso deberán divulgar cualquier lenguaje legislativo o texto de proyecto de ley presentado por cualquier grupo de presión. Se requerirá que los funcionarios de la rama ejecutiva revelen cualquier texto reglamentario presentado por cualquier entidad externa. Y, los miembros del Congreso y los altos funcionarios de la rama ejecutiva deberán desarrollar y divulgar cualquier política de acceso que tengan que rija las solicitudes de nombramientos. La CFE pondrá a disposición del público toda esa información. Si un funcionario cree que las reuniones con entidades particulares sirven al público, permítale explicar por qué.</span><b> </b></li>
+<li style="font-weight: 400;"><b>Hará que la divulgación de cabildeo sea significativa. </b><span style="font-weight: 400;">La ley de cabildeo debe informar efectivamente al público y desalentar conductas que distorsionen la toma de decisiones del gobierno. Pero la ley actual no hace ninguna de las dos cosas. Los requisitos de divulgación están llenos de lagunas, por lo que los cabilderos pueden coordinar una campaña de relaciones públicas sin revelar su trabajo. Las campañas detalladas se pueden proteger con vagas referencias a cabildear en una cámara del Congreso. Los “influencers” son libres de revelar solo información general sobre las leyes y la actividad reguladora que están tratando de configurar, sin revelar detalles. Biden reducirá el umbral para cuándo aquellos que buscan influir en las decisiones del gobierno deben registrarse como &#8220;cabilderos&#8221;, para incluir a cualquiera que gane más de $1,000 anuales para participar en el desarrollo o la supervisión de una estrategia de cabildeo. La ley les exigirá que revelen en detalle exactamente lo que están haciendo: con quién se reúnen, los materiales que comparten, cualquier lenguaje legislativo (o reglamentario) específico que propongan, y precisamente qué resultados están buscando.</span></li>
+<li style="font-weight: 400;"><b>Prohibirá el uso de cabilderos por parte de gobiernos extranjeros. </b><span style="font-weight: 400;">No hay ninguna razón por la cual un gobierno extranjero deba poder cabildear ante el Congreso o la rama ejecutiva, y mucho menos interferir en nuestras elecciones. Si un gobierno extranjero quiere compartir sus puntos de vista con los Estados Unidos o influir en su toma de decisiones, debe hacerlo a través de los canales diplomáticos regulares. La Administración Biden prohibirá el cabildeo por parte de gobiernos extranjeros; y requerirá que cualquier negocio extranjero que busque cabildear confirme que ningún gobierno extranjero posea o controle materialmente ninguna parte del mismo.</span></li>
+<li style="font-weight: 400;"><b>Garantizará un acceso verdaderamente público. </b><span style="font-weight: 400;">En Washington, la capacidad de programar una reunión con un funcionario electo o su personal es una forma de dinero. Según el plan Biden, los miembros del Congreso y los altos funcionarios de la rama ejecutiva deberán desarrollar y divulgar al público cualquier política que su oficina haya instituido para aceptar o priorizar citas. Además, Biden volverá a la práctica de la Administración Obama-Biden de revelar las listas de visitantes de la Casa Blanca. </span></li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../governmentreform.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-de-biden-para-garantizar-que-el-gobierno-sirva-a-la-gente/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":384,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

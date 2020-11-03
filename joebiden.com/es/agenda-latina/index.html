@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>La Agenda De Biden Para La Comunidad Latina | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="La Agenda De Biden Para La Comunidad Latina | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Joe Biden cree que la historia de los Estados Unidos es una de personas comunes que hacen cosas extraordinarias. La comunidad latina es una parte central de la historia estadounidense y sus contribuciones son evidentes en cada aspecto de la sociedad. La capacidad de nuestra nación de atraer a personas muy trabajadoras, con aspiraciones, de [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/agenda-latina/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-07T15:46:09+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/09/social-graphics_HQ_webcard_090220-1024x535.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="535" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="48 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/agenda-latina/#webpage","url":"https://joebiden.com/es/agenda-latina/","name":"La Agenda De Biden Para La Comunidad Latina | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-08-04T03:41:12+00:00","dateModified":"2020-08-07T15:46:09+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/agenda-latina/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fagenda-latina%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fagenda-latina%2F&#038;format=xml" />
+<link rel="alternate" href="../../latino-agenda.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-4214 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../latino-agenda.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../latino-agenda.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-4214 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">La Agenda De Biden Para La Comunidad Latina</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden cree que la historia de los Estados Unidos es una de personas comunes que hacen cosas extraordinarias. La comunidad latina es una parte central de la historia estadounidense y sus contribuciones son evidentes en cada aspecto de la sociedad. La capacidad de nuestra nación de atraer a personas muy trabajadoras, con aspiraciones, de todas las culturas, de todas las naciones, es una fortaleza indiscutible. Nuestra diversidad es la fuente de la renovación constante de los Estados Unidos, la razón por la que hemos podido reinventarnos una y otra vez.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El ataque del presidente Trump a la dignidad latina comenzó el primer día de su campaña. Su ataque de Trump no solo se pone de manifiesto en la traición a los </span><i><span style="font-weight: 400;">DREAMers</span></i><span style="font-weight: 400;"> o en el perdón de un sheriff que ha aterrorizado a la comunidad latina. Está en la falta de fondos a las escuelas, en los ataques a los sindicatos, y a la capacidad de los trabajadores de negociar por lo que valen, y en el abandono de los puertorriqueños después del huracán María. La estrategia de Trump es sembrar la división, excluir a los latinos por ser menos que completamente estadounidenses.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden se asegurará de que todos sean tratados con dignidad, sin importar su raza, género, orientación sexual, religión, discapacidad o código postal. Y, se asegurará de que todos tengan la oportunidad de unirse a la clase media, incluyendo a los latinos y otros individuos que nunca tuvieron una oportunidad justa en décadas pasadas. Actualmente,</span><a href="https://www.childstats.gov/americaschildren/demo.asp"> <span style="font-weight: 400;">una cuarta parte de todos los niños</span></a><span style="font-weight: 400;"> en los Estados Unidos son latinos. Nuestro éxito colectivo depende del éxito de la comunidad latina.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden estará listo en su primer día en el cargo para implementar los cambios necesarios para que la comunidad latina prospere. Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertirá en la movilidad económica de los latinos.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hará inversiones de gran alcance para poner fin a las disparidades de salud por raza.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará el acceso a una educación de alta calidad y hará frente a la inequidad racial en nuestro sistema educativo.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Combatirá los crímenes de odio y la violencia armada.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asegurará nuestros valores como una nación de inmigrantes.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Además, en reconocimiento a las contribuciones únicas de los latinos a la historia de los Estados Unidos durante los últimos 500 años, </span><b>Biden trabajará para establecer un Museo Nacional Smithsonian de los Latinos en los Estados Unidos</b><span style="font-weight: 400;">. La historia latina está estrechamente entretejida en la historia de los Estados Unidos y debe ser preservada y celebrada. Hace mucho tiempo que estas grandes contribuciones deberían ser reconocidas en la familia de los museos Smithsonian. Como paso inicial, Biden iniciará un estudio de viabilidad y una ubicación donde estará el museo. En julio de 2020, la Cámara de Representantes de los EE. UU. aprobó en votación a viva voz, de manera bipartidista, una </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/2420/text"><span style="font-weight: 400;">ley</span></a><span style="font-weight: 400;"> para establecer este museo.</span></p>
+<p>&nbsp;</p>
+<p><b>Biden también se asegurará de que los nombramientos políticos, incluido el gabinete del presidente, se vean como el país al que sirven, y se asegurará de que nuestra fuerza laboral federal sea representativa de la demografía en nuestro país.</b><span style="font-weight: 400;"> La Administración Obama-Biden hizo un </span><a href="https://www.eeoc.gov/federal/reports/fsp2016/index.cfm#_Toc525551161"><span style="font-weight: 400;">gran progreso</span></a><span style="font-weight: 400;"> en la creación de una fuerza laboral federal diversa, pero Biden sabe que queda trabajo para que el país haga realidad plenamente los beneficios de los talentos, habilidades y perspectivas de una fuerza laboral que se parece al país. Como presidente, Biden nominará y nombrará a personas que se parecen al país en el que sirven y comparten el compromiso de Biden de hacer cumplir rigurosamente las protecciones de los derechos civiles. Esto incluye promover un liderazgo diverso para todas las agencias federales, incluidas las agencias reguladoras financieras que tienen un impacto directo en la naturaleza de todo nuestro sistema económico; trabajar con todas las ramas del gobierno, incluido el Senado y la Corte Suprema, para crear prácticas recomendadas y estándares para garantizar la diversidad racial entre los funcionarios, empleados y pasantes; y crear un nuevo puesto en el Consejo de Asesores Económicos de la Casa Blanca para centrarse en la equidad racial, incluidas las brechas de ingresos y riqueza. También volverá a emitir y exigirá el cumplimiento estricto de la orden ejecutiva de Obama-Biden para promover la diversidad y la inclusión en el gobierno federal. Reconstruirá la cartera de trabajadores para el gobierno federal e incentivará a los trabajadores más calificados para que elijan el servicio público perdonando $10,000 al año en deuda estudiantil por hasta cinco años de servicio público. Aprovechará los mejores y más brillantes talentos de todas las fuentes mediante el desarrollo de una fuente de profesionales de las instituciones que sirven a los hispanos y otras instituciones que sirven a las minorías en agencias federales. Biden también ofrecerá más oportunidades de capacitación y mentores para mejorar la retención, y recopilará mejores datos sobre quién está solicitando puestos en el servicio federal además de quien es ascendido.</span></p>
+<p>&nbsp;</p>
+<p><b>INVERTIRÁ EN LA MOVILIDAD ECONÓMICA DE LOS LATINOS</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Los latinos cumplen roles esenciales en toda nuestra economía. Pero muchos latinos están atrapados en </span><a href="https://www.americanprogress.org/issues/race/reports/2019/08/07/472910/systematic-inequality-economic-opportunity/"><span style="font-weight: 400;">trabajos de bajos salarios</span></a><span style="font-weight: 400;"> y tienen tasas más bajas de </span><a href="https://www.census.gov/housing/hvs/files/currenthvspress.pdf"><span style="font-weight: 400;">propiedad de vivienda</span></a><span style="font-weight: 400;"> y </span><a href="https://www.americanprogress.org/issues/race/reports/2018/12/05/461823/job-not-enough/"><span style="font-weight: 400;">menos riqueza</span></a><span style="font-weight: 400;"> en comparación con los blancos no hispanos. Biden se está postulando para presidente para reconstruir la clase media para que esta vez todos progresen, incluidos los latinos.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Apoyará la inversión público-privada a través de un nuevo plan de oportunidad para los pequeños negocios</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La propiedad de pequeños negocios es una de las piedras angulares de nuestro país para la creación de riqueza y la creación de empleo. Sin embargo, las persistentes disparidades raciales en la riqueza y el acceso al capital, combinadas con la discriminación abierta en el sector financiero, han contribuido a las inequidades en la propiedad, el crecimiento y el éxito de los pequeños negocios. Por ejemplo, los latinos son aproximadamente el </span><a href="https://data.census.gov/cedsci/table?q=DP05&amp;tid=ACSDP5Y2018.DP05"><span style="font-weight: 400;">18% de la población de los EE. UU.</span></a><span style="font-weight: 400;">, pero poseen </span><a href="https://data.census.gov/cedsci/table?tid=ABSCS2017.AB1700CSA01"><span style="font-weight: 400;">menos del 6% de los pequeños negocios con empleados</span></a><span style="font-weight: 400;">. Las firmas propiedad de los latinos también informan que la falta de garantías es una de las </span><a href="https://www.fedsmallbusiness.org/survey/2017/report-on-minority-owned-firms"><span style="font-weight: 400;">principales razones</span></a><span style="font-weight: 400;"> para la denegación de crédito.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Para abordar la brecha de riqueza racial, la brecha de oportunidades y la brecha laboral para los latinos, Biden lanzará un esfuerzo histórico para potenciar la creación y expansión de pequeños negocios en áreas económicamente desfavorecidas, particularmente para negocios propiedad de latinos y negocios propiedad de otras personas de color. Además de proveer a los pequeños negocios un ambicioso “</span><a href="../../reopening.html"><span style="font-weight: 400;">paquete de reinicio</span></a><span style="font-weight: 400;">” para sobrevivir a la crisis actual y recomenzar con fuerza, está proponiendo una iniciativa especial y continua para fortalecer a estos empresarios para que tengan éxito y crezcan con un Plan de Oportunidad para los Pequeños Negocios de tres puntos. Plan. Su plan es consistente con los elementos clave de la </span><i><span style="font-weight: 400;">Ley de Inversión en Empleos y Vecindarios</span></i><span style="font-weight: 400;"> recientemente propuesta por los senadores demócratas Chuck Schumer, Mark Warner, Cory Booker y Kamala Harris. Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Impulsará más de $50 mil millones en capital de riesgo público-privado adicional para empresarios latinos y otros empresarios de color al otorgar fondos para iniciativas exitosas de inversión estatales y locales y hacer permanente el altamente efectivo Crédito de Impuestos para Nuevos Mercados.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará el acceso a $100 mil millones en préstamos comerciales a bajo interés al otorgar fondos a programas de préstamos estatales, locales, tribales y sin fines de lucro en comunidades latinas y otras comunidades de color y fortaleciendo las Instituciones Financieras de Desarrollo Comunitario (CDFI), las Instituciones de Depósito de Minorías (MDI) y la Ley de Reinversión Comunitaria.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Eliminará las barreras a la asistencia técnica y los servicios de asesoramiento invirtiendo en una red nacional de incubadoras de negocios y centros de innovación gratuitos y seminarios intensivos de negocios. Biden ubicará nuevos centros de innovación, en los terrenos de las instituciones que sirven a los hispanos y otras escuelas e instituciones en todo el país.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Reformará las zonas de oportunidad para garantizar que sirvan a las comunidades latinas, los pequeños negocios y los propietarios de viviendas</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Al igual que muchos estadounidenses, Biden inicialmente esperaba que las Zonas de Oportunidad fueran estructuradas y administradas por la Administración Trump de una manera que fomentara la equidad racial, la creación de pequeños negocios y la propiedad de viviendas en comunidades urbanas, rurales y tribales de bajos ingresos. Ahora está claro que la Administración Trump no ha cumplido esa promesa en demasiados lugares de los Estados Unidos. Cómo ha encontrado el Urban Institute, el programa en su conjunto “</span><a href="https://www.urban.org/urban-wire/opportunity-zone-incentive-isnt-living-its-equitable-development-goals-here-are-four-ways-improve-it"><span style="font-weight: 400;">no está cumpliendo con sus objetivos de desarrollo económico y comunitario</span></a><span style="font-weight: 400;">&#8220;. Si bien ha habido ejemplos positivos, en demasiados casos los inversores prefieren proyectos de alto rendimiento como apartamentos de lujo en lugar de viviendas asequibles y empresarios locales.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">No podemos cerrar la brecha racial de la riqueza si permitimos que los multimillonarios exploten las exenciones de impuestos de las Zonas de Oportunidad para aumentar su riqueza, en lugar de invertir en proyectos que beneficien a las comunidades de bajos ingresos que tienen dificultades y a las personas en los Estados Unidos que luchan por llegar a fin de mes. Como presidente, Biden le encomendará a su equipo desarrollar un plan para reformar las Zonas de Oportunidad, incluyendo pasos como incentivar los Fondos de Oportunidad para aliarse con organizaciones sin fines de lucro u orientadas a la comunidad y producir conjuntamente un plan de beneficio comunitario para cada inversión. El enfoque debe estar en la creación de empleos para los residentes de bajos ingresos y de otra manera proveer un impacto financiero directo a los hogares en las Zonas de Oportunidad.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Hará un compromiso histórico para igualar las compras federales</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El plan Reconstruir Mejor de Biden incluye un esfuerzo de compras histórico diseñado para apoyar a los pequeños negocios y abordar las </span><a href="https://www.mbda.gov/sites/mbda.gov/files/migrated/files-attachments/ContractingBarriers_AReviewofExistingDisparityStudies.pdf"><span style="font-weight: 400;">desigualdades que han ocurrido durante mucho tiempo</span></a><span style="font-weight: 400;"> en el sistema de contratación federal. Durante su primer mandato, Biden reforzará los requisitos de Compra Hecho en los Estados Unidos para las compras existentes e invertirá $400 mil millones en compras federales adicionales de productos hechos por trabajadores estadounidenses. Y realizará inversiones transparentes y específicas que potenciarán una nueva demanda de bienes y servicios nacionales y crearán empleos estadounidenses en las comunidades de todo el país.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como parte de este esfuerzo, su estrategia de contratación de pequeños negocios con múltiples frentes incluirá concesiones a base de fórmulas; amplia divulgación y asesoramiento a los propietarios de pequeños negocios, especialmente propietarios de empresas latinas y otros propietarios de negocios de color; y monitoreo transparente y frecuente de las adjudicaciones de contratos. Esto asegurará que la mayor movilización de inversiones públicas en compras, infraestructura e investigación y desarrollo desde la Segunda Guerra Mundial se distribuya equitativamente entre las comunidades y las empresas. Biden también tomará medidas concretas para agilizar el proceso de compras federales en su conjunto y garantizar que finalmente refleje la demografía de este país. Específicamente, Biden requerirá que los contratistas principales desarrollen y ejecuten totalmente los planes para aumentar las oportunidades de subcontratación para los pequeños negocios en desventaja (SDB, por sus siglas en inglés). También triplicará la meta federal para contratar a pequeños negocios en desventaja, del 5% a un mínimo del 15% de todos los fondos para compras para el 2025. Para lograr esta meta, que enviará decenas de miles de millones de dólares adicionales a las comunidades latinas y otras comunidades de color, Biden ampliará la asistencia técnica a largo plazo y las preferencias de contratación federal para los SDB. Además, incentivará a los gobiernos estatales y locales y a los socios del sector privado a contratar a pequeños negocios en desventaja.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">En todo momento, Biden asegurará que los fondos federales apoyen a los trabajadores latinos y sus familias. Según pidió en su </span><a href="../../labor/index.html"><span style="font-weight: 400;">plan</span></a><span style="font-weight: 400;"> para fortalecer la organización de los trabajadores, la negociación colectiva y los sindicatos, Biden exigirá que todas las empresas que reciben contratos de compra utilicen el dinero de los contribuyentes para apoyar los buenos empleos en los Estados Unidos, incluyendo el compromiso de pagar al menos $15 por hora, ofrecer vacaciones pagadas, mantener prácticas justas de tiempo extra y horarios, y garantizar la opción de unirse a un sindicato y negociar colectivamente.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Asegurará que los trabajadores latinos sean compensados justamente y tratados con dignidad</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Esta pandemia ha demostrado al mundo quiénes son realmente los trabajadores esenciales, y muchos de ellos son trabajadores latinos que alimentan al país, mantienen limpias nuestras comunidades y cuidan a nuestros seres queridos. Pero durante demasiado tiempo no han sido tratados con dignidad ni se les ha brindado la oportunidad que se merecen.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Los trabajadores latinos aún ganan una </span><a href="https://www.epi.org/publication/the-hispanic-white-wage-gap-has-remained-wide-and-relatively-steady-examining-hispanic-white-gaps-in-wages-unemployment-labor-force-participation-and-education-by-gender-immigrant/"><span style="font-weight: 400;">fracción</span></a><span style="font-weight: 400;"> de lo que ganan los trabajadores blancos y tienen menos probabilidades de tener beneficios esenciales como cobertura de salud y vacaciones pagadas. Y las </span><a href="https://nwlc-ciw49tixgw5lbab.stackpathdns.com/wp-content/uploads/2020/03/Women-and-the-Lifetime-Wage-Gap.pdf"><span style="font-weight: 400;">latinas ganan solo 54 centavos</span></a><span style="font-weight: 400;"> por cada dólar que gana un hombre blanco, sumando, en promedio, más de </span><a href="https://nwlc-ciw49tixgw5lbab.stackpathdns.com/wp-content/uploads/2020/03/Women-and-the-Lifetime-Wage-Gap.pdf"><span style="font-weight: 400;">$1.1 millones</span></a><span style="font-weight: 400;"> en una carrera de por vida. Esto es especialmente perjudicial para las más de </span><a href="https://www.americanprogress.org/issues/women/reports/2019/05/10/469739/breadwinning-mothers-continue-u-s-norm/"><span style="font-weight: 400;">cuatro de cada diez madres latinas</span></a><span style="font-weight: 400;"> que son las únicas o principales proveedoras de su familia. El plan de Biden para reconstruir mejor requiere eliminar la discriminación en el lugar de trabajo para que las personas puedan ganar lo que se merecen, mantener a sus familias y generar riqueza.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden continuará priorizando cerrar las brechas salariales y terminar con la discriminación salarial. Aumentará el salario mínimo federal a $15 en todo el país y eliminará el salario mínimo para los empleados que reciben propina, beneficiando desproporcionadamente a los </span><a href="https://www.epi.org/publication/raising-the-federal-minimum-wage-to-15-by-2024-would-lift-pay-for-nearly-40-million-workers/"><span style="font-weight: 400;">trabajadores latinos</span></a><span style="font-weight: 400;">. También </span><a href="../../smallbusinesses/index.html"><span style="font-weight: 400;">apoyará a los pequeños negocios</span></a><span style="font-weight: 400;"> como los restaurantes durante esta crisis económica, ayudándoles a recuperarse para que puedan mantener sus puertas abiertas y pagar a sus trabajadores. La </span><a href="https://obamawhitehouse.archives.gov/blog/2016/05/17/email-president-obama-ive-got-news-you-overtime"><span style="font-weight: 400;">Administración Obama-Biden luchó para extender el pago de horas extras</span></a><span style="font-weight: 400;"> a más de 4 millones de trabajadores y prevenir la pérdida horas extras para </span><a href="https://www.epi.org/blog/american-workers-lose-1-2-billion-in-2017-due-to-delay-in-update-of-overtime-rules/"><span style="font-weight: 400;">casi 9 millones</span></a><span style="font-weight: 400;">, pero la Administración Trump revirtió este progreso, implementando una nueva regla que deja atrás a millones de trabajadores, incluidos </span><a href="https://www.epi.org/publication/trump-overtime-proposal-april-update/"><span style="font-weight: 400;">casi 1.3 millones de trabajadores latinos</span></a><span style="font-weight: 400;">. Biden se asegurará de que los trabajadores reciban un pago justo por las largas horas que trabajan y obtengan el pago por horas extras que se merecen. Y se asegurará de que las trabajadoras domésticas y los trabajadores agrícolas reciban protección para el pago de horas extras.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden abordará la discriminación y el acoso en el lugar de trabajo, garantizará hasta 12 semanas de licencia familiar y médica remunerada para todos los trabajadores y hasta siete días de licencia con paga por enfermedad, familiar y por asuntos de seguridad. Aproximadamente </span><a href="https://www.rwjf.org/en/library/research/2017/10/discrimination-in-america--experiences-and-views.html"><span style="font-weight: 400;">uno de cada tres trabajadores latinos</span></a><span style="font-weight: 400;"> ha experimentado discriminación laboral y casi </span><a href="https://www.nationalpartnership.org/our-work/resources/economic-justice/paid-sick-days/paid-sick-days-improve-our-public-health.pdf"><span style="font-weight: 400;">uno de cada dos trabajadores latinos</span></a><span style="font-weight: 400;"> no tiene acceso a ninguna licencia con paga.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Y Biden facilitará a todos los trabajadores la organización de sindicatos y la negociación colectiva. Los sindicatos son un camino esencial hacia la clase media, especialmente para los latinos. Permiten a los trabajadores negociar salarios más altos y beneficios, y con más protecciones laborales, muchos trabajadores sindicalizados tienen una </span><a href="https://www.americanprogress.org/issues/economy/reports/2018/09/04/454781/union-membership-narrows-racial-wealth-gap-families-color/"><span style="font-weight: 400;">mayor estabilidad laboral</span></a><span style="font-weight: 400;">. De hecho, los latinos que se unen a un sindicato reciben un aumento salarial aún </span><a href="https://www.epi.org/publication/how-todays-unions-help-working-people-giving-workers-the-power-to-improve-their-jobs-and-unrig-the-economy/#epi-toc-10"><span style="font-weight: 400;">mayor</span></a><span style="font-weight: 400;"> que los trabajadores blancos que se unen a un sindicato, lo que ayuda a cerrar la brecha salarial, y un estudio encontró que los miembros latinos de un sindicato </span><a href="https://www.americanprogress.org/issues/economy/reports/2018/09/04/454781/union-membership-narrows-racial-wealth-gap-families-color/"><span style="font-weight: 400;">11 veces más riqueza</span></a><span style="font-weight: 400;"> que los latinos que no son miembros de un sindicato. Biden incluirá en la legislación de recuperación económica que envía al Congreso una serie de políticas para desarrollar el poder de los trabajadores para aumentar los salarios y asegurar beneficios más sólidos. Esta legislación facilitará a los trabajadores organizar un sindicato y negociar colectivamente con sus empleadores al incluir la Ley de Protección del Derecho a la Sindicalización (PRO, por sus siglas en inglés), la organización o afiliación mediante firma de tarjetas, derechos sindicales y de negociación para los trabajadores del servicio público y una definición amplia de “empleado” y una aplicación estricta para poner fin a la clasificación errónea de los trabajadores como contratistas independientes. También irá más allá de la Ley PRO al responsabilizar personalmente a los ejecutivos de la compañía cuando interfieran con los esfuerzos de organización. Y, Biden restablecerá la capacidad de los trabajadores federales para sindicalizarse y negociar colectivamente.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden también:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Perseguirá agresivamente a empleadores que violen las leyes de empleo, contra la discriminación, de salud y seguridad.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará las protecciones para los inmigrantes indocumentados que denuncian violaciones laborales. Cuando los inmigrantes indocumentados son víctimas de delitos graves y ayudan en la investigación de esos delitos, son elegibles para las </span><a href="https://www.uscis.gov/humanitarian/victims-human-trafficking-other-crimes/victims-criminal-activity-u-nonimmigrant-status/victims-criminal-activity-u-nonimmigrant-status"><span style="font-weight: 400;">visas U</span></a><span style="font-weight: 400;">. La Administración Obama-Biden </span><a href="https://www.dol.gov/dol/fact-sheet/immigration/20150402U&amp;TFactSheet.htm"><span style="font-weight: 400;">amplió el programa de visa U</span></a><span style="font-weight: 400;"> a ciertos delitos en el lugar de trabajo. Como presidente, Biden extenderá aún más estas protecciones a las víctimas de cualquier violación de las leyes laborales federales, estatales o locales en el lugar de trabajo al asegurar la aprobación de la </span><a href="https://www.congress.gov/bill/115th-congress/house-bill/5908/all-info"><span style="font-weight: 400;">Ley POWER</span></a><span style="font-weight: 400;">. Y, una Administración Biden se asegurará de que los trabajadores con visas temporales estén protegidos para que puedan ejercer los derechos laborales a los que tienen derecho.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Aumentará la seguridad y la salud en el lugar de trabajo. Las condiciones en las plantas empacadoras de carne y entre los trabajadores agrícolas han resaltado algunos de los lugares de trabajo peligrosos donde los trabajadores latinos trabajan de manera desproporcionada, pero incluso antes de la pandemia, los trabajadores latinos tenían más probabilidades de </span><a href="https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2016.1185"><span style="font-weight: 400;">lesionarse</span></a><span style="font-weight: 400;"> o </span><a href="https://aflcio.org/sites/default/files/2019-05/DOTJ2019Fnb_1.pdf"><span style="font-weight: 400;">morir</span></a><span style="font-weight: 400;"> en el trabajo que los trabajadores blancos. Nadie debería enfermarse, lesionarse o morir simplemente porque fueron a trabajar. Biden tomará medidas inmediatas para garantizar que los trabajadores tengan acceso a equipos de protección personal, pruebas y licencia por enfermedad con paga y exigirá a los empleadores que mantengan a los trabajadores a salvo del COVID-19. Más allá del COVID-19, también trabajará para abordar los riesgos más peligrosos que enfrentan los trabajadores en el lugar de trabajo moderno.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expandirá los derechos atrasados desde hace mucho tiempo para los trabajadores agrícolas y los trabajadores domésticos, que son desproporcionadamente latinos y otras personas de color, incluso mediante la promulgación de la </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2112"><span style="font-weight: 400;">Ley de Derechos de los Trabajadores Domésticos</span></a><span style="font-weight: 400;"> y la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1080"><span style="font-weight: 400;">Ley de Equidad para los Trabajadores Agrícolas</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará los derechos que se le debían haber otorgado hace tiempo a los trabajadores agrícolas y domésticos, quienes son desproporcionadamente latinos y otras personas de color, incluyendo aprobar la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3760/text#toc-HD74FC24BCCA94D4FB00FC0F83700DA81"><span style="font-weight: 400;">Carta de Derechos de los Trabajadores Domésticos</span></a><span style="font-weight: 400;"> y la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1080"><span style="font-weight: 400;">Ley de Equidad para los Trabajadores Agrícolas</span></a><span style="font-weight: 400;">.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden para alentar la sindicalización y la negociación colectiva en joebiden.com/empowerworker</span></i></p>
+<p>&nbsp;</p>
+<p><b><i>Invertirá en una infraestructura de cuidado del siglo XXI</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Incluso antes de la pandemia, más de </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2018/12/06/461643/americas-child-care-deserts-2018/"><span style="font-weight: 400;">tres de cada cinco familias latinas</span></a><span style="font-weight: 400;"> vivían en desiertos de cuidado infantil, con acceso limitado o nulo a cuidado infantil con licencia. Cuando las familias latinas encuentran cuidado infantil, pagan más de </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2019/06/20/471141/working-families-spending-big-money-child-care/"><span style="font-weight: 400;">$200 por semana</span></a><span style="font-weight: 400;">, a menudo más de lo que pueden pagar. Al mismo tiempo, los cuidadores y educadores de la primera infancia, desproporcionadamente mujeres latinas y otras mujeres de color, han sido mal pagados, invisibles y subvalorados durante demasiado tiempo.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden cree que si realmente queremos recompensar el trabajo en este país, tenemos que aliviar la carga financiera por el cuidado que enfrentan las familias, y tenemos que elevar la compensación, los beneficios, las oportunidades de capacitación y educación para la certificación y la dignidad de los trabajadores que proveen cuidado y los educadores.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Hará inversiones sustanciales en la infraestructura de cuidado en nuestro país para hacer que el cuidado infantil sea más asequible y accesible para las familias trabajadoras, y para que sea más fácil para los familiares mayores y los seres queridos con discapacidades tener un cuidado de calidad o asequible en el hogar o en la comunidad. Y propone dar a los cuidadores y educadores de la primera infancia un aumento y mayores beneficios, tratandolos como los profesionales que son. Este plan, combinado con la propuesta de Biden de proveer a las familias hasta 12 semanas de licencia familiar y médica remunerada, pondrá a tres millones de estadounidenses a trabajar en nuevos empleos de cuidado y educación, y aumentará el empleo general en aproximadamente cinco millones, después de tener en cuenta los impactos económicos de una mayor participación en la fuerza laboral luego de que los cuidadores no remunerados, desproporcionadamente mujeres, puedan seguir carreras remuneradas si así lo desean.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará el acceso a una amplia gama de servicios y apoyos a largo plazo en entornos locales, incluyendo cerrar las brechas en Medicaid para los servicios en el hogar y en la comunidad y establecer un fondo estatal de innovación para servicios de cuidado directo creativos y rentables.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asegurará el acceso a cuidado infantil asequible y de alta calidad y ofrecerá preescolar universal a niños de tres y cuatro años a través de una mayor inversión, créditos contributivos ampliados y subsidios en una escala móvil. Para los niños menores de 5 años, ninguna familia que gane menos de 1.5 veces el ingreso medio en su estado tendrá que pagar más del 7% de sus ingresos por un cuidado de calidad, que era el parámetro de </span><a href="https://www.govinfo.gov/content/pkg/FR-2016-09-30/pdf/2016-22986.pdf"><span style="font-weight: 400;">cuidado infantil asequible</span></a><span style="font-weight: 400;"> establecido por la Administración Obama-Biden. Una familia típica pagará no más de </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2018/09/13/457518/proposed-bill-help-american-families-afford-child-care/"><span style="font-weight: 400;">$45 por semana</span></a><span style="font-weight: 400;">. Para las familias trabajadoras más necesitadas, dichos costos de cuidado infantil temprano estarían totalmente cubiertos, ahorrandole a estas familias alrededor de $200 por semana. O, las familias de bajos ingresos y de clase media podrían optar por utilizar un crédito contributivo de hasta $8,000 para ayudar a pagar el cuidado de niños menores de 13 años.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Construirá instalaciones de cuidado infantil seguras, energéticamente eficientes y apropiadas para el desarrollo, incluso en los centros de trabajo, para que los padres y tutores nunca más tengan que buscar en vano una opción adecuada de cuidado infantil. Y Biden proporcionará incentivos para que los proveedores cubran la escasez crítica de cuidado infantil, incluso temprano en las mañanas, en las noches y en los fines de semana, y en muchas comunidades rurales que tienen pocos proveedores actualmente.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Tratará a los cuidadores y educadores de la primera infancia con respeto y dignidad, y les pagará el salario y los beneficios que se merecen, capacitación y escalas profesionales para trabajos mejor pagados, la opción de unirse a un sindicato y negociar colectivamente, y otros derechos fundamentales relacionados con el trabajo y las protecciones.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden para una fuerza laboral de cuidadoras del siglo 21 en joebiden.com/caregiving.</span></i></p>
+<p>&nbsp;</p>
+<p><b><i>Realizará inversiones audaces en propiedad de vivienda y acceso a viviendas asequibles para familias latinas</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden cree que la clase media no es un número, sino un conjunto de valores que incluye la capacidad de ser dueño de su propia casa y vivir en una comunidad segura. La vivienda debe ser un derecho, no un privilegio. Hoy, sin embargo, demasiados estadounidenses carecen de acceso a viviendas asequibles y de calidad. La desigualdad racial impregna los mercados inmobiliarios de los EE. UU., con una </span><a href="https://www.americanprogress.org/issues/race/reports/2019/08/07/472617/systemic-inequality-displacement-exclusion-segregation/"><span style="font-weight: 400;">tasa de propiedad de vivienda</span></a><span style="font-weight: 400;"> para las familias latinas muy inferior a la de sus contrapartes blancos. De hecho, </span><a href="https://www.census.gov/housing/hvs/files/currenthvspress.pdf"><span style="font-weight: 400;">solo el 51% de los latinos</span></a><span style="font-weight: 400;"> posee su propia casa, en comparación con el 76% de los estadounidenses blancos no hispanos. Debido a que la propiedad de vivienda es la manera en que muchas familias ahorran y generan riqueza, estas disparidades raciales contribuyen a la brecha de riqueza racial. Al mismo tiempo, muchas familias en todo el país enfrentan un riesgo inmediato de desalojo en medio de la crisis económica creada por Trump.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Para ayudar a las familias a generar riqueza, asegurar un lugar seguro para vivir en una comunidad vibrante y próspera, y garantizar el acceso equitativo a todos los aspectos del mercado de la vivienda, Biden ayudará a las familias a comprar su primera casa y a generar riqueza creando un nuevo crédito de impuestos reembolsable y anticipado de hasta $15,000. El primer crédito contributivo para el pago inicial de Biden ayudará a las familias de bajos y medianos ingresos a compensar los costos de la compra de viviendas y ayudará a millones de familias a echar raíces por primera vez. Biden también:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará el apoyo para invertir en propiedad de vivienda en áreas de revitalización.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Impulsará la construcción de 1.5 millones de hogares y unidades de vivienda pública para abordar la crisis de vivienda asequible, aumentar la eficiencia energética y reducir la brecha racial de riqueza.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Pedirá una calificación crediticia más precisa, no discriminatoria e inclusiva y creerá una </span><a href="https://www.demos.org/policy-briefs/establish-public-credit-registry"><span style="font-weight: 400;">agencia pública de informes crediticios</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Protegerá a los propietarios e inquilinos de los prestamistas y propietarios abusivos a través de una nueva Carta de Derechos de los Propietarios e Inquilinos.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proveerá vales de vivienda de Sección 8 a cada familia elegible para que nadie tenga que pagar más del 30% de sus ingresos por viviendas de alquiler, y trabajará con el Congreso para promulgar un nuevo crédito de impuestos para inquilinos, diseñado para reducir el alquiler y los servicios públicos al 30% de los ingresos para los individuos y familias de bajos ingresos que pueden ganar demasiado dinero para calificar para un vale de Sección 8 pero que aún tienen dificultades para pagar el alquiler.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Trabajará para promulgar la </span><a href="https://www.majoritywhip.gov/?press=majority-whip-clyburn-sen-bennet-reps-price-clarke-and-khanna-introduce-legislation-to-provide-legal-assistance-to-tenants-facing-eviction"><span style="font-weight: 400;">Ley de Asistencia Legal para Prevenir Desalojos del 2020</span></a><span style="font-weight: 400;"> del coordinador de la mayoría en la Cámara James E. Clyburn y el senador Michael Bennet, que ayudará a los inquilinos que enfrentan desalojos a acceder a asistencia legal.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Eliminará las regulaciones de vivienda locales y estatales que perpetúan la discriminación.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Exigirá cuentas a las instituciones financieras por las prácticas discriminatorias en el mercado inmobiliario.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Revertirá las políticas de la Administración Trump que han eliminado las protecciones para los préstamos justos y la equidad en la vivienda para los propietarios.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Invertirá en Infraestructura en las Comunidades Latinas</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El plan “Reconstruir Mejor” de Biden incluye un esfuerzo nacional para crear los empleos que necesitamos para construir una infraestructura moderna, sostenible y accesible ahora y ofrecer un futuro equitativo de energía limpia. Hará una inversión acelerada de $2 billones, con un plan para desplegar esos recursos durante su primer mandato, hacia ese fin.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Un enfoque principal de esta inversión será mejorar la infraestructura y las oportunidades laborales en las comunidades latinas y otras comunidades de color. Específicamente, Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Establecerá una meta para que las comunidades desfavorecidas reciban el 40% de los beneficios generales del gasto en las áreas de implementación de energía limpia y eficiencia energética; transporte público limpio y accesible y transportación; viviendas asequibles y sostenibles; capacitación y desarrollo de la fuerza laboral; remediación y reducción de la contaminación heredada; y desarrollo de infraestructura crítica de agua limpia. </b><span style="font-weight: 400;">Además, Biden otorgará fondos directamente para las inversiones históricas a las agencias federales con el objetivo de eliminar la contaminación heredada, especialmente en las comunidades latinas y otras comunidades desfavorecidas, y abordar los desafíos comunes que enfrentan estas comunidades, como los fondos para reemplazar y remediar las líneas de servicio con plomo y pintura con plomo en hogares, centros de cuidado infantil y escuelas para garantizar que todas las comunidades tengan acceso a infraestructura segura de agua potable y aguas residuales. Estas inversiones crearán empleos bien remunerados en comunidades de primera línea y en las que se encuentran en el perímetro de las fábricas y otras instalaciones.</span></li>
+<li style="font-weight: 400;"><b>Asegurará que los trabajos de construcción de carreteras y puentes y escuelas y las reformas de los sistemas de agua y las redes eléctricas estén ocupados por trabajadores diversos, locales y bien capacitados, incluidos los trabajadores latinos</b><span style="font-weight: 400;"> al exigir que los proyectos que reciben fondos del gobierno federal cumplan con altos estándares laborales, incluido el pago del salario vigente, priorizar los acuerdos de mano de obra laboral y comunitaria en los proyectos, y emplear trabajadores capacitados en programas de aprendizaje certificados. Biden hará inversiones en programas de pre-aprendizaje y en organizaciones comunitarias probadas que ayudan a los latinos y otras personas diversas a acceder a capacitación de alta calidad y oportunidades de trabajo. La propuesta de Biden asegurará que la infraestructura nacional y las inversiones en energía limpia creen millones de empleos de clase media que desarrollen una fuerza laboral diversa y local con la opción de unirse a un sindicato, fortaleciendo las comunidades a medida que reconstruimos nuestra infraestructura física.</span></li>
+<li style="font-weight: 400;"><b>Revolucionará las redes de transporte público municipal.</b><span style="font-weight: 400;"> Biden tendrá como objetivo proveer a todas las personas en municipios con más de 100,000 habitantes en los Estados Unidos un transporte público accesible y de calidad para el 2030.</span></li>
+<li style="font-weight: 400;"><b>Expandirá la banda ancha, o la banda ancha inalámbrica vía 5G, a todos en los Estados Unidos</b><span style="font-weight: 400;">, reconociendo que millones de familias sin acceso a banda ancha en el hogar, incluidos casi dos de cada cinco latinos, están excluidos de una economía que depende cada vez más de la colaboración virtual. Como la crisis del COVID-19 ha dejado claro, las personas en todas partes de los Estados Unidos necesitan internet universal, confiable, asequible y de alta velocidad para hacer su trabajo, participar igualmente en el aprendizaje escolar remoto y mantenerse conectados. Esta brecha digital debe cerrarse en todas partes.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden sobre infraestructura en joebiden.com/infrastructure y joebiden.com/clean-energy.</span></i></p>
+<p>&nbsp;</p>
+<p><b><i>Abordará las desigualdades de larga data en la agricultura</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Los agricultores latinos y otros agricultores de color han enfrentado barreras para hacer crecer sus negocios agrícolas, incluyendo precios injustos, acceso desigual al apoyo del gobierno, represalias por reclamos de derechos civiles e injusticia absoluta. Durante más de 100 años, el Departamento de Agricultura de los Estados Unidos (USDA, por sus siglas en inglés) hizo poco para aliviar la carga de la desigualdad sistémica para los agricultores latinos, negros e indígenas y a menudo fue un lugar donde se cometieron injusticias. Hace más de dos décadas, se inició un pleito de clase alegando discriminación de larga data contra campesinas latinas, negras y nativas. Los casos se prolongaron durante muchos años sin alivio para los demandantes y los agricultores impactados lucharon antes y durante el litigio por recuperar la posición que perdieron.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Se produjo un cambio profundo para los agricultores latinos, negros y nativos bajo la Administración Obama-Biden durante el cual el USDA supervisó la conclusión de lo que se convirtió en el mayor acuerdo de derechos civiles en la historia de los EE. UU. Los acuerdos en estos casos marcaron el comienzo de un compromiso renovado para apoyar la diversidad, la equidad y un ajuste de cuentas interno para el USDA. Bajo Obama-Biden, el USDA buscó abordar las causas estructurales y culturales de la desigualdad sistémica que habían sido reproducidas en generaciones anteriores por las políticas y prácticas de la agencia.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A pesar de los pasos innovadores para abordar la desigualdad que se tomaron bajo Obama-Biden, las prácticas y los valores del USDA sufrieron un retroceso bajo la autoridad de la Administración Trump, que cesó muchos esfuerzos a nivel de toda la agencia para nivelar el campo de juego.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden tomará como base el progreso histórico realizado durante la administración Obama-Biden, tomando medidas adicionales para apoyar los derechos de los agricultores latinos, negros y nativos al establecer de una comisión de equidad que se centrará en las barreras jurisdiccionales y regulatorias únicas que los agricultores, ganaderos y pescadores latinos, negros y nativos deben superar y asegurarse de que los procesos se agilicen y simplifiquen para promover las nuevas operaciones agrícolas y ganaderas de los agricultores latinos, negros y nativos y aquellas que están comenzando. Biden promoverá un esfuerzo integral para ayudar tanto en la compra de tierras de cultivo como en la capacidad de los agricultores latinos, negros y nativos para mantener esas tierras. Esto incluye crédito y apoyo técnico en forma de crédito rápido, préstamos a bajo interés y asistencia técnica. Además, Biden reconoce la desventaja que enfrentan los agricultores latinos, negros e indígenas cuando se ven obligados a competir con otros agricultores que tienen décadas de acceso privilegiado a la asistencia federal. Como presidente, explorará el uso de los fideicomisos de terrenos, las operaciones agrícolas cooperativas y los sistemas de crédito agrícola dirigidos a los agricultores latinos, negros y nativos como un medio para apoyar a esta población y diversificar nuestro sector agrícola.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Los trabajadores agrícolas, que son desproporcionadamente trabajadores latinos e inmigrantes, siempre han sido esenciales para trabajar en nuestras granjas y alimentar a nuestro país. Como presidente, Biden se asegurará de que los trabajadores agrícolas sean tratados con la dignidad y el respeto que merecen, independientemente de su estatus migratorio. Trabajará con el Congreso para proveer un estado legal basado en el historial de trabajo agrícola anterior, garantizar que puedan recibir licencia con paga por enfermedad y exigir que se cumplan estrictamente los estándares laborales y de seguridad, incluidas las horas extras, condiciones de vida dignas y la protección contra los pesticidas y la exposición al calor.</span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden para promover la equidad económica y racial en joebiden.com/racial-economic-equity.</span></i></p>
+<p>&nbsp;</p>
+<p><b>HARÁ INVERSIONES DE GRAN ALCANCE PARA TERMINAR CON LAS DISPARIDADES DE SALUD POR RAZA</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La pandemia de COVID-19 ha puesto de relieve las diferencias persistentes y generalizadas que existen en nuestro sistema de cuidado de salud debido al acceso desigual al tratamiento. Si bien todavía estamos aprendiendo sobre el impacto del COVID-19, ha surgido </span><a href="https://www.npr.org/sections/health-shots/2020/05/30/865413079/what-do-coronavirus-racial-disparities-look-like-state-by-state"><span style="font-weight: 400;">un patrón claro</span></a><span style="font-weight: 400;"> que sugiere que las comunidades latinas están sufriendo daños desproporcionados por la pandemia. Los latinos tienen un mayor riesgo tanto de contraer el COVID-19 como de experimentar una enfermedad grave. Los latinos tienen </span><a href="https://www.cdc.gov/coronavirus/2019-ncov/covid-data/covidview/index.html#hospitalizations"><span style="font-weight: 400;">más de cuatro veces más probabilidades</span></a><span style="font-weight: 400;"> de ser hospitalizados debido al COVID-19 que las personas blancas no hispanas. El presidente Trump debería trabajar con el Congreso para promulgar de inmediato el proyecto de ley de la senadora Kamala Harris para </span><a href="https://www.vox.com/2020/5/1/21243960/kamala-harris-coronavirus-disparities"><span style="font-weight: 400;">crear</span></a><span style="font-weight: 400;"> un grupo de trabajo que aborde las disparidades raciales que esta pandemia ha puesto al descubierto. Como presidente, Biden hará todo lo que esté en su poder para eliminar las disparidades en el cuidado de salud.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Asegurará el acceso al cuidado de salud durante esta crisis</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A corto plazo, el plan de respuesta al COVID-19 de Biden </span><a href="https://www.axios.com/coronavirus-biden-trump-drop-aca-obama-case-61ace1bc-b3cf-4a6f-83ff-cf77e2a0c33f.html"><span style="font-weight: 400;">hace un llamado</span></a><span style="font-weight: 400;"> a la Administración Trump para que retire su apoyo a una demanda para revocar Obamacare. Millones de personas en los Estados Unidos ya han perdido su seguro de salud porque perdieron su trabajo, y millones más pueden encontrar los servicios médicos cada vez más difíciles de pagar. Durante esta crisis, Biden ampliaría el acceso a un cuidado de salud asequible y de calidad para todos a través al:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Crear una opción pública;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proveer el pago total de las primas para los planes COBRA;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Aumentar los subsidios de la Ley de Cuidado de Salud a Bajo Precio;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reabrir las inscripciones de Obamacare para que las personas sin seguro puedan obtener uno;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Incrementar las inversiones federales en Medicaid;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asegurar que cada persona que necesita una prueba pueda obtener una, y que la prueba para aquellos que la necesiten sea gratuita. Las personas tampoco deberían tener que pagar nada de sus propios bolsillos por la visita en la que se ordena la prueba, independientemente de su estado migratorio; y</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asegurar que todas las personas, tengan seguro o no, no tengan que pagar un dólar de su bolsillo por visitas relacionadas con el tratamiento del COVID-19, los servicios preventivos y cualquier vacuna eventual. Sin copagos, sin deducibles y sin facturación médica sorpresa.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Garantizar el acceso a un cuidado de salud asequible y de alta calidad más allá de la crisis.</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Debido a Obamacare, más de </span><a href="https://avalere.com/press-releases/repeal-of-acas-pre-existing-condition-protections-could-affect-health-security-of-over-100-million-people"><span style="font-weight: 400;">100 millones de personas</span></a><span style="font-weight: 400;"> ya no tienen que preocuparse de que una compañía de seguros niegue la cobertura o cobren primas más altas solo porque tienen una </span><a href="https://www.healthcare.gov/coverage/pre-existing-conditions/"><span style="font-weight: 400;">condición preexistente</span></a><span style="font-weight: 400;">, ya sea cáncer o diabetes o una enfermedad cardíaca o un problema de salud mental. Las compañías de seguros </span><a href="https://www.hhs.gov/healthcare/about-the-aca/benefit-limits/index.html"><span style="font-weight: 400;">ya no pueden establecer límites anuales o de por vida</span></a><span style="font-weight: 400;"> en la cobertura. </span><a href="https://www.kff.org/uninsured/fact-sheet/key-facts-about-the-uninsured-population/"><span style="font-weight: 400;">Millones de latinos</span></a><span style="font-weight: 400;"> obtuvieron la tranquilidad que brinda el seguro de salud. Los jóvenes que están en transición de la escuela al trabajo tienen la opción de </span><a href="https://www.healthcare.gov/young-adults/children-under-26/"><span style="font-weight: 400;">permanecer cubiertos por el plan de sus padres</span></a><span style="font-weight: 400;"> hasta los 26 años. Como resultado, la tasa de personas sin seguro entre los latinos se desplomó del </span><a href="https://www.kff.org/disparities-policy/issue-brief/changes-in-health-coverage-by-race-and-ethnicity-since-the-aca-2010-2018/"><span style="font-weight: 400;">32% al 19%</span></a><span style="font-weight: 400;"> a raíz de Obamacare, la mayor disminución sustancial de cualquier grupo racial o étnico. Ahora, en medio de una pandemia, Trump está tratando de eliminar todas las protecciones de cuidado de salud para los millones de latinos que dependen de la Ley de Cuidado de Salud a Bajo Precio. Si el presidente Trump tiene éxito en sus esfuerzos para revocar la Ley de Cuidado de Salud a Bajo Precio, algunos estimados muestran que </span><a href="https://familiesusa.org/wp-content/uploads/2019/07/COV_Texas-v-US_Latinos_Issue-Brief.pdf"><span style="font-weight: 400;">uno de cada diez</span></a><span style="font-weight: 400;"> latinos menores de 65 años perderá su seguro de salud.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden ampliará en Obamacare para expandir el acceso de los latinos a un cuidado de salud de calidad y asequible. Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Reducirá la tasa de personas sin seguro entre los latinos </b><a href="../../healthcare..html"><b>creando una opción pública de seguro de salud</b></a><b>.</b><span style="font-weight: 400;"> A pesar de los avances transformacionales logrados bajo Obamacare a nivel nacional, los latinos menores de 65 años tienen más del doble de probabilidades de no tener seguro que los blancos (19% frente a 8% en 2018). Esta disparidad es mucho mayor en muchos estados con gobernadores republicanos que no han expandido Medicaid. Biden les dará a todos los estadounidenses una nueva opción, una opción pública de seguro de salud como Medicare. Y se asegurará de que las personas que serían elegibles para Medicaid si no hubiera sido por la inacción de su estado se inscriban automáticamente en la opción pública, sin costo alguno para la persona.</span></li>
+<li style="font-weight: 400;"><b>Mejorará el cuidado para pacientes con afecciones crónicas</b><span style="font-weight: 400;">, </span><a href="../../healthcare..html"><span style="font-weight: 400;">coordinando</span></a><span style="font-weight: 400;"> entre todos los médicos de un paciente. Esto es particularmente importante para pacientes con condiciones crónicas como la </span><a href="https://www.diabetes.org/resources/statistics/statistics-about-diabetes"><span style="font-weight: 400;">diabetes</span></a><span style="font-weight: 400;">, que afecta </span><a href="https://www.cdc.gov/diabetes/library/features/hispanic-diabetes.html"><span style="font-weight: 400;">desproporcionadamente</span></a><span style="font-weight: 400;"> a los latinos.</span></li>
+<li style="font-weight: 400;"><b>Reducirá los costos para los latinos </b><a href="https://www.cms.gov/About-CMS/Agency-Information/OMH/research-and-data/information-products/data-highlights/Race-Ethnicity-and-Language-Preference-in-the-Health-Insurance-Marketplace"><b>inscritos en los planes de Obamacare</b></a><span style="font-weight: 400;"> al aumentar el valor de los créditos contributivos para reducir las primas y reducir los deducibles al hacer otros cambios en la forma en que se calculan los créditos de impuestos.</span></li>
+<li style="font-weight: 400;"><b>Reducirá los precios de los medicamentos</b><span style="font-weight: 400;"> al permitir que Medicare negocie los precios de los medicamentos y evite que las compañías farmacéuticas aumenten los precios de los nuevos medicamentos.</span></li>
+<li style="font-weight: 400;"><b>Reducirá nuestra tasa de mortalidad materna entre las latinas, inaceptablemente alta</b><span style="font-weight: 400;">. Las mujeres latinas tienen </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5380443/#:~:text=Severe%20maternal%20morbidity%20occurred%20in,who%20were%20foreign%2Dborn%20Mexican."><span style="font-weight: 400;">una tasa de mortalidad materna significativamente más alta</span></a><span style="font-weight: 400;"> que las mujeres blancas no hispanas. California elaboró una estrategia que </span><a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2018.0463"><span style="font-weight: 400;">redujo a la mitad</span></a><span style="font-weight: 400;"> la tasa de mortalidad materna del estado. Biden implementará la estrategia de California en todo el país.</span></li>
+<li style="font-weight: 400;"><b>Duplicará la inversión de la nación en los centros de salud comunitarios</b><span style="font-weight: 400;">. Los centros de salud comunitarios brindan cuidado primario, prenatal y otra atención importante, y sus pacientes son miembros que pertenecen desproporcionadamente a grupos minoritarios raciales y étnicos, incluidos los </span><a href="http://www.nachc.org/wp-content/uploads/2018/06/Chartbook_FINAL_6.20.18.pdf"><span style="font-weight: 400;">latinos</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><b>Ampliará el acceso al cuidado de salud mental.</b><span style="font-weight: 400;"> Los latinos experimentan </span><a href="https://www.nami.org/Your-Journey/Identity-and-Cultural-Dimensions/Latinx-Hispanic"><span style="font-weight: 400;">disparidades en el acceso al tratamiento de salud mental</span></a><span style="font-weight: 400;"> y en la calidad del tratamiento que reciben. Biden garantizará la paridad de la salud mental, eliminando el estigma en torno a la salud mental, lo cual es fundamental para cerrar esta brecha. </span></li>
+<li style="font-weight: 400;"><b>Abordar los determinantes sociales de la salud.</b><span style="font-weight: 400;"> Debido a que las disparidades raciales de salud son el resultado de años de desigualdad sistémica no solo en nuestro sistema de salud, sino en toda nuestra economía, otras partes de la agenda de Biden también son necesarias para mejorar el bienestar general de los latinos. Biden invertirá en ayudar a las personas a mantenerse saludables. Eso significa asegurarse de que las familias latinas tengan acceso a alimentos frescos, cuidado infantil, trabajos que tengan condiciones seguras y justas, un salario digno, aire y agua limpios y apoyo para la salud mental, comunidades donde los niños y las familias prosperarán. Para mantener saludables a las personas en las comunidades latinas, Biden tomará medidas tales como ampliar el acceso a una educación de alta calidad, crear acceso a apoyos para la salud mental y abordar </span><a href="../../environmentaljustice.html"><span style="font-weight: 400;">la contaminación ambiental que perjudica desproporcionadamente a las comunidades latinas y otras comunidades de color</span></a><span style="font-weight: 400;">.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Invertirá en las instituciones que sirven a los hispanos para ayudar a resolver las disparidades de salud</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como parte de la inversión de más de $70 mil millones de Biden en las instituciones que sirven a los hispanos (HSI, por sus siglas en inglés), otras instituciones que prestan servicios a minorías (MSI, por sus siglas en inglés) y colegios y universidades históricamente negras (HBCU, por sus siglas en inglés), invertirá $10 mil millones para crear al menos 200 nuevos centros de excelencia que sirven como incubadoras de investigación y conectan a los estudiantes subrepresentados en campos críticos para el futuro de nuestra nación con el aprendizaje y las oportunidades profesionales. Desarrollará sólidas prácticas y pasantías y fuentes de oportunidades profesionales en las principales agencias de investigación, incluidos los Institutos Nacionales de Salud. También dedicará flujos de fondos adicionales y de mayor prioridad en las agencias federales para subvenciones y contratos para HSI, otras MSI y HBCU. Requerirá subvenciones federales de investigación a universidades con una dotación de más de $1 mil millones para formar una asociación significativa y celebrar un subcontrato mínimo del 10% con una HSI, otra MSI o HBCU. Y, Biden invertirá $5 mil millones en programas de posgrado en el área de cuidado de salud, junto con la enseñanza y ciencias, tecnología, ingeniería y matemáticas (STEM, por sus siglas en inglés), en estas escuelas.</span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden sobre cuidado de salud en joebiden.com/healthcare.</span></i></p>
+<p>&nbsp;</p>
+<p><b>EXPANDIRÁ EL ACCESO A LA EDUCACIÓN Y LA CAPACITACIÓN DE ALTA CALIDAD, Y ABORDARÁ LA INEQUIDAD RACIAL EN NUESTRO SISTEMA EDUCATIVO</b></p>
+<p>&nbsp;</p>
+<p><a href="https://nces.ed.gov/programs/coe/indicator_cge.asp"><span style="font-weight: 400;">Más de una cuarta parte</span></a><span style="font-weight: 400;"> de los estudiantes de escuelas públicas en los grados K-12 son latinos. Biden se asegurará de que cada niño en los Estados Unidos tenga la oportunidad de alcanzar su máximo potencial desde su nacimiento, independientemente de su código postal, raza o los ingresos de su familia. Biden trabajará con los estados para garantizar que todas las familias de bajos y medianos ingresos tengan acceso a cuidado infantil de alta calidad y que el pre-kínder de alta calidad esté disponible para todos los niños. Cerrará la brecha entre los distritos escolares blancos y no blancos al casi triplicar los fondos del Título I, el programa federal que otorga fondos a las escuelas con un alto porcentaje de estudiantes de familias de bajos ingresos. Estos nuevos fondos se usarán primero para garantizar que los maestros de las escuelas de Título I reciban un pago competitivo, los niños de tres y cuatro años tengan acceso a la educación preescolar y los distritos brinden acceso a cursos rigurosos, que incluyan ciencias de la computación y otras materias de STEM, en todas sus escuelas, no solo unas pocas. Expandirá las “escuelas de la  comunidad” que satisfacen las necesidades de los estudiantes y los padres; y duplicará el número de psicólogos escolares, enfermeras, consejeros escolares y trabajadores sociales, brindando a los niños el apoyo que necesitan para crecer. Biden trabajará para garantizar que más escuelas públicas tengan recursos adicionales para apoyar a los estudiantes que están aprendiendo inglés y que sus padres reciban información en el idioma que entiendan mejor para que puedan participar en la educación de sus hijos. Y, a través de alianzas entre escuelas secundarias, colegios comunitarios y empleadores, Biden se asegurará de que todos los estudiantes tengan la oportunidad de graduarse con una credencial de la industria, listos para competir en la fuerza laboral del siglo 21.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden también ampliará el acceso de los latinos a una educación y capacitación de calidad y asequible más allá de la escuela secundaria. Para muchos, obtener un título u otra credencial después de la secundaria no es asequible hoy en día. Para otros, su educación les impone tanta deuda que les impide comprar una casa o ahorrar para la jubilación, o sus padres o abuelos asumen parte de la carga financiera. Pero aproximadamente </span><a href="https://cew.georgetown.edu/wp-content/uploads/2014/11/Recovery2020.ES_.Web_.pdf"><span style="font-weight: 400;">seis de cada diez trabajos</span></a><span style="font-weight: 400;"> requieren algo de educación más allá de la escuela secundaria. Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Aumentará la terminación de la universidad haciendo que la universidad sea asequible para los estudiantes latinos.</b><span style="font-weight: 400;"> Nuestro sistema de educación postsecundaria no ha hecho lo suficiente para ayudar a los estudiantes latinos a acceder, pagar y tener éxito en la educación postsecundaria de alta calidad. El 64% de los estudiantes blancos por primera vez y a tiempo completo se gradúan de instituciones de cuatro años, en </span><a href="https://nces.ed.gov/programs/raceindicators/indicator_red.asp"><span style="font-weight: 400;">comparación</span></a><span style="font-weight: 400;"> con solo el 54% de los latinos. Para ayudar a los estudiantes latinos a acceder a la universidad y completarla, Biden:</span></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hará que los colegios y universidades públicas sean gratuitos para todos los estudiantes cuyos ingresos familiares sean inferiores a $125,000, incluidos los estudiantes en instituciones privadas, con pocos recursos, que prestan servicios a hispanos. Esta propuesta ayudará a aproximadamente el </span><a href="https://data.census.gov/cedsci/table?tid=ACSDT5Y2018.B19001I"><span style="font-weight: 400;">88%</span></a><span style="font-weight: 400;"> de los hogares latinos a pagar la universidad.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ofrecerá dos años de colegio comunitario u otros programas de capacitación de alta calidad sin deudas para cualquier persona que trabaje duro y busque aprender y mejorar sus habilidades para mantenerse al día con la naturaleza cambiante del trabajo. Este compromiso incluye instituciones públicas de dos años, con pocos recursos, que prestan servicios a los hispanos. Las personas también podrán usar estos fondos para continuar programas de capacitación que tengan un historial de participantes que completen sus programas y obtengan buenos empleos, incluidos adultos que nunca tuvieron la oportunidad de continuar una educación adicional más allá de la escuela secundaria o que necesitan aprender nuevas habilidades.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Dirigirá apoyo financiero adicional a personas de bajos ingresos y de clase media duplicando el valor máximo de las becas Pell, aumentando significativamente el número de estadounidenses de clase media que pueden participar en el programa. Casi el </span><a href="https://nces.ed.gov/pubs2019/2019487.pdf"><span style="font-weight: 400;">47%</span></a><span style="font-weight: 400;"> de los estudiantes universitarios latinos recibió una beca Pell durante el año académico 2015-2016.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;"><b>Ayudará a los latinos a lidiar con la deuda estudiantil</b><span style="font-weight: 400;">. Los planes de Biden para lidiar con la deuda de préstamos estudiantiles aliviarán la carga de la deuda estudiantil al:</span></li>
+</ul>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Incluir en la respuesta al COVID-19 una cancelación inmediata de un mínimo de $10,000 de deuda de préstamos estudiantiles federales.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Perdonar todas las deudas estudiantiles federales relacionadas con la matrícula de estudiantes universitarios en instituciones públicas de dos y cuatro años para personas que tienen deudas que ganen hasta $125,000. Esto también aplicará a las personas que tienen préstamos estudiantiles federales de matrícula en instituciones privadas que prestan servicios a hispanos.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Perdonar los pagos de préstamos para individuos que ganan $25,000 o menos por año y limitar los pagos de préstamos al 5% del ingreso discrecional para aquellos que ganan más.</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Arreglar el Programa de Perdón de Préstamos en el Servicio Público y perdonar $10,000 de deuda estudiantil de pregrado o posgrado por cada año de servicio nacional o comunitario, hasta cinco años.</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Penalizar a los prestamistas privados que se benefician de los estudiantes al facultar a la Oficina de Protección Financiera del Consumidor para que tome medidas contra los prestamistas privados que engañan a los estudiantes sobre sus opciones y no proporcionan un plan de pago asequible cuando las personas experimentan </span><a href="https://files.consumerfinance.gov/f/documents/cfpb_annual-report_student-loan-ombudsman_2017.pdf"><span style="font-weight: 400;">períodos agudos de dificultades financieras</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Permitir la eliminación de los préstamos estudiantiles en una bancarrota</span></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><b>Invertirá más de $70 mil millones en instituciones que prestan servicios a hispanos (HSI, por sus siglas en inglés), otras instituciones que prestan servicios a minorías y colegios y universidades históricamente negros (HBCU, por sus siglas en inglés) que capacitarán a nuestra próxima generación de profesionales latinos y otros profesionales de color.</b><span style="font-weight: 400;"> Las instituciones que sirven a los hispanos, instituciones de educación superior y post secundarias con al menos un 25% del total de la matrícula a tiempo completo de estudiantes hispanos de pregrado, </span><a href="https://www.doi.gov/pmb/eeo/doi-minority-serving-institutions-program"><span style="font-weight: 400;">inscriben al 40% de todos los estudiantes latinos</span></a><span style="font-weight: 400;"> de educación superior. A pesar del papel central que desempeñan las HSI en la educación de los estudiantes latinos, según los datos publicados en 2019, las HSI recibieron solo 68 centavos por cada dólar que se destina anualmente a todos los demás colegios y universidades, por estudiante, de todas las fuentes de fondos federales. Como presidente, Biden tomará medidas para rectificar las disparidades de fondos que enfrentan las HSI para que los Estados Unidos puedan beneficiarse de sus fortalezas únicas. Además de las propuestas detalladas anteriormente para hacer que las instituciones que sirven a los hispanos sean más asequibles para sus estudiantes, Biden:</span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertirá $10 mil millones para crear al menos 200 nuevos centros de excelencia en las HSI, otras MSI y HBCU que sirvan como incubadoras de investigación y conecten a estudiantes subrepresentados en campos críticos para el futuro de nuestra nación, incluidos los campos que abordan el cambio climático, la globalización, la desigualdad, las disparidades de salud y el cáncer, a oportunidades de aprendizaje y profesionales.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Construirá laboratorios e instalaciones de alta tecnología e infraestructura digital necesaria para el aprendizaje, la investigación y la innovación en las HSI, otras MSI y HBCU.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertirá $5 mil millones en programas de posgrado en HSI/MSI/HBCU en enseñanza, atención médica y STEM y desarrollará sólidas prácticas, pasantías y fuentes de oportunidades profesionales en las principales agencias de investigación.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Creará un “</b><a href="https://www.aft.org/sites/default/files/aft-hea-recs2019_complete.pdf"><b>Título I para la educación postsecundaria</b></a><b>” para ayudar a los estudiantes de universidades de cuatro años que reciben pocos recursos a completar sus títulos</b><span style="font-weight: 400;">. La Administración Biden establecerá un nuevo programa de subvenciones para apoyar a las escuelas de cuatro años con recursos insuficientes que atienden a un gran número de estudiantes elegibles para Pell. Los fondos se utilizarán para fomentar la colaboración entre las universidades y las organizaciones comunitarias con el fin proporcionar servicios de apoyo integrales a los estudiantes, incluida ayuda financiera adicional para cubrir los costos de los libros de texto y del transporte que a menudo evitan que los estudiantes se matriculen, a los servicios de cuidado infantil y de salud mental, a la facultad, mentores, tutorías y grupos de apoyo entre pares.</span></li>
+<li style="font-weight: 400;"><b>Realizará una inversión de $50 mil millones en capacitación de la fuerza laboral, incluidas las alianzas entre los colegios comunitarios y las empresas y los aprendizajes</b><span style="font-weight: 400;">. Estos fondos crearán y respaldarán alianzas entre colegios comunitarios, empresas, sindicatos, gobiernos estatales, locales y tribales, universidades y escuelas secundarias para identificar los conocimientos y habilidades en demanda en una comunidad y desarrollar o modernizar los programas de capacitación, que podrían ser tan cortos como unos pocos meses o tan largos hasta dos años, que lleven a una credencial relevante y de alta demanda, reconocida por la industria.</span></li>
+<li style="font-weight: 400;"><b>Proveerá a los </b><b><i>DREAMers</i></b><b> nuevas oportunidades de educación superior</b><span style="font-weight: 400;">. Biden se asegurará de que los </span><i><span style="font-weight: 400;">DREAMers</span></i><span style="font-weight: 400;"> sean elegibles para las propuestas de matrícula gratuita descritas anteriormente y otra ayuda financiera si cumplen con otros requisitos para esa ayuda.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea los planes completos de Biden sobre educación en joebiden.com/education y joebiden.com/beyondHS.</span></i></p>
+<p>&nbsp;</p>
+<p><b>COMBATIRA LOS CRÍMENES DE ODIO Y LA VIOLENCIA ARMADA</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El año pasado, un hombre armado mató a 23 personas en El Paso. Escogió esta ciudad por su diversidad, rica herencia hispana y amistad cercana con la gente de Ciudad Juárez. Esta horrible tragedia, parte de un aumento inquietante de los crímenes de odio contra los latinos, nos llama a todos a volver a comprometernos en la batalla por el alma de la nación. Según el FBI, los incidentes de odio contra los latinos reportados aumentaron en más del 40 por ciento entre </span><a href="https://ucr.fbi.gov/hate-crime/2016/tables/table-1"><span style="font-weight: 400;">2016</span></a><span style="font-weight: 400;"> y </span><a href="https://ucr.fbi.gov/hate-crime/2018/tables/table-1.xls"><span style="font-weight: 400;">2018</span></a><span style="font-weight: 400;">. Debemos luchar contra la supremacía blanca, que el presidente Trump ha envalentonado. Y debemos luchar contra la violencia armada en todas sus formas: tiroteos masivos y los actos diarios de violencia armada que no aparecen en loe titulares pero que son igual de trágicos para las familias y comunidades afectadas.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden adoptará medidas basadas la evidencia para erradicar los crímenes violentos persistentes y los crímenes de odio. Los delincuentes violentos deben rendir cuentas, y los sobrevivientes deben tener acceso a apoyo para lidiar con las consecuencias físicas, psicológicas y financieras de la violencia. Biden abordará el aumento de los crímenes de odio a través del liderazgo moral que deja en claro que este veneno no tiene lugar en los Estados Unidos. Y, en la Administración Biden, el Departamento de Justicia dará prioridad al enjuiciamiento de los crímenes de odio.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Además, Biden abordará los actos diarios de violencia armada en nuestras comunidades que pueden no ser titulares nacionales, pero son tan devastadores para los sobrevivientes y las familias de las víctimas como la violencia armada que aparece en primera plana. Estos actos diarios de violencia armada impactan desproporcionadamente a los latinos y a los negros. Biden creará una </span><a href="https://www.thetrace.org/2019/07/we-cant-end-inequality-until-we-stop-urban-gun-violence/"><span style="font-weight: 400;">iniciativa de ocho años por $900 millones</span></a><span style="font-weight: 400;"> para otorgar fondos para intervenciones basadas en evidencia en 40 ciudades de todo el país: las 20 ciudades con el mayor número de homicidios y 20 ciudades con el mayor número de homicidios per cápita. Se </span><a href="https://www.thetrace.org/2019/07/we-cant-end-inequality-until-we-stop-urban-gun-violence/"><span style="font-weight: 400;">estima que esta propuesta salvará más de 12,000 vidas</span></a><span style="font-weight: 400;"> durante el programa de ocho años.</span></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden para reducir la violencia armada en joebiden.com/gunsafety.</span></i></p>
+<p>&nbsp;</p>
+<p><b>ASEGURARÁ NUESTROS VALORES COMO NACIÓN DE INMIGRANTES</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Trump ha emprendido un ataque implacable contra nuestros valores y nuestra historia como una nación de inmigrantes. Está mal y se detendrá cuando Biden sea elegido presidente. Las políticas de inmigración racistas y equivocadas de la actual Administración han creado una crisis humanitaria en nuestra frontera, han socavado una fuente clave de nuestra fortaleza económica y han debilitado nuestra posición moral en el mundo.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden sabe que ya es hora de revisar nuestro sistema de inmigración que no funciona. Como vicepresidente, respaldó las reformas que habrían establecido un camino hacia la ciudadanía y cuando el Congreso no las aprobó, la Administración Obama-Biden creó y luego amplió el programa DACA para darles a los </span><i><span style="font-weight: 400;">DREAMers</span></i><span style="font-weight: 400;"> la oportunidad de seguir con sus vidas sin temor a ser deportados.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">En su primer día en el cargo, Biden enviará al Congreso un proyecto de ley para la reforma legislativa de inmigración que modernizará nuestro sistema de inmigración y dará a casi 11 millones de inmigrantes indocumentados una hoja de ruta hacia la ciudadanía. Biden sabe que podemos asegurar nuestras fronteras y hacer cumplir nuestras leyes de una manera que sea humana, justa y que establezca un conjunto racional de reglas para los inmigrantes que tienen aspiraciones. Invertirá en tecnología inteligente que aborde las amenazas reales a la seguridad de los EE. UU., que principalmente llegan a nuestro país a través de nuestros puertos de entrada legales, y restaurará nuestro sistema de asilo para que una vez más ofrezca protección y refugio a las personas que huyen del peligro. Se asegurará de que los que buscan refugio en los Estados Unidos sean tratados con dignidad y obtengan la audiencia justa que legalmente tienen derecho a recibir, y aumentará los recursos para contratar más jueces de inmigración y oficiales de asilo para abordar la crisis actual. Además, una Administración Biden revisará de inmediato cada decisión sobre el estatus de protección temporal (TPS, por sus siglas en inglés) tomada por la Administración Trump para garantizar que nadie sea devuelto a un país que no es seguro, extenderá el TPS a los venezolanos que buscan alivio de la crisis humanitaria provocada por el régimen de Maduro y ofrecerá a los beneficiarios de TPS que han estado en el país durante un período prolongado de tiempo un camino hacia la ciudadanía a través de la reforma legislativa de inmigración.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Revertirá las políticas de inmigración perjudiciales de la Administración Trump</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden tomará medidas urgentes para poner fin a las violaciones a la dignidad humana por parte de la Administración Trump y restablecerá el liderazgo moral de nuestra nación al:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Detener la separación de los niños de sus padres y reunir a las familias</b><span style="font-weight: 400;">. Biden revertirá de inmediato las políticas crueles e insensatas de la Administración Trump que separan a los padres de sus hijos en nuestra frontera, incluyendo terminar con el enjuiciamiento de los padres por violaciones menores de inmigración como una táctica de intimidación, y priorizar la reunificación de los niños que aún están separados de sus familias.</span><span style="font-weight: 400;">. </span></li>
+<li style="font-weight: 400;"><b>Poner fin a la detención prolongada y reinvertir en la gestión de casos.</b><span style="font-weight: 400;"> Las alternativas probadas a los programas de detención y el manejo de casos de casos por instituciones sin fines de lucro, que apoyan a los migrantes mientras navegan por sus obligaciones legales, son la mejor manera de garantizar que asistan a todas las citas de inmigración requeridas. Estos programas también permiten a los migrantes vivir con dignidad y seguridad mientras esperan sus audiencias judiciales, facilitando cosas como visitas al médico, servicios sociales e inscripción escolar para niños. </span><a href="https://scholarship.law.tamu.edu/cgi/viewcontent.cgi?article=1875&amp;context=facscholar"><span style="font-weight: 400;">La evidencia muestra</span></a><span style="font-weight: 400;"> que estos programas son altamente efectivos y mucho menos costosos y punitivos que detener a familias. Biden codificará protecciones para salvaguardar a los niños con el fin de asegurarse de que su tratamiento sea coherente con su interés superior e invertirá en programas de manejo de casos en la comunidad para trasladar a los migrantes a entornos seguros lo más rápido posible y poner fin a la detención prolongada de inmigración para los migrantes que no representan una amenaza para nuestra seguridad.</span></li>
+<li style="font-weight: 400;"><b>Poner fin a las políticas de asilo perjudiciales de Trump y aumentará las protecciones para los solicitantes de asilo.</b><span style="font-weight: 400;"> La Administración Trump ha trabajado para restringir drásticamente el acceso al asilo en los Estados Unidos, incluso imponiendo restricciones adicionales a cualquier persona que viaje a través de México o Guatemala; tratando de impedir que las víctimas de las pandillas y la violencia doméstica reciban asilo; enjuiciando sistemáticamente a los solicitantes de asilo adultos por el delito menor de la entrada ilegal; y limitando severamente la capacidad de los miembros de la comunidad LGBTQ+, un grupo especialmente vulnerable en muchas partes del mundo, de calificar para asilo como miembros de un “grupo social particular”. Biden pondrá fin a estas políticas, comenzando con los Protocolos de Protección al Migrante de Trump y los Acuerdos Seguros con Terceros Países. Además, trabajará para mejorar la protección de las víctimas de violencia y abuso, incluyendo la violencia basada en el género o la orientación sexual, la violencia de pareja y doméstica, o la violencia a manos de los cárteles de la droga, haciendo más difícil que las futuras administraciones reviertan las protecciones de asilo, como ha hecho Trump.</span></li>
+<li style="font-weight: 400;"><b>Revertir la regla de carga pública de Trump. </b><span style="font-weight: 400;">Permitir que los funcionarios de inmigración hagan que la capacidad de una persona para recibir una visa o obtener la residencia permanente esté supeditada a su uso de servicios gubernamentales como beneficios de SNAP o Medicaid, sus ingresos familiares y otros criterios discriminatorios socava el carácter de los Estados Unidos como una tierra de oportunidades que es abierta y acoge a todos, no solo a los ricos. La regla de cargos públicos de Trump va en contra de nuestros valores como estadounidenses y la historia de nuestra nación, y Biden la revertirá.</span></li>
+<li style="font-weight: 400;"><b>Poner fin a la llamada Emergencia Nacional que desvía fondos federales para construir un muro</b><span style="font-weight: 400;">. Construir un muro hará poco para disuadir a los delincuentes y los cárteles que buscan explotar nuestras fronteras. Biden dirigirá los recursos federales a los esfuerzos de control fronterizo inteligentes, como las inversiones para mejorar la infraestructura de detección en nuestros puertos de entrada, que realmente mantendrán a los Estados Unidos a salvo.</span></li>
+<li style="font-weight: 400;"><b>Proteger a los </b><b><i>DREAMers</i></b><b> y sus familias.</b><span style="font-weight: 400;"> Biden eliminará la incertidumbre para los </span><i><span style="font-weight: 400;">DREAMers</span></i><span style="font-weight: 400;"> al restablecer el programa de DACA, y explorará todas las opciones legales para proteger a sus familias de la separación inhumana. Biden también se asegurará de que los </span><i><span style="font-weight: 400;">DREAMers</span></i><span style="font-weight: 400;"> sean elegibles para recibir ayuda federal para estudiantes (préstamos, becas Pell) y están incluidos en sus propuestas para proveer acceso a los colegios comunitarias sin deudas e invertirá en HSI/HBCU/MSI, lo que ayudará a los </span><i><span style="font-weight: 400;">DREAMers</span></i><span style="font-weight: 400;"> a contribuir aún más a nuestra economía.</span></li>
+<li style="font-weight: 400;"><b>Poner fin al uso histórico de la Administración Trump de los acuerdos bajo la 287(g)</b><span style="font-weight: 400;">. </span><a href="https://www.whitehouse.gov/presidential-actions/executive-order-border-security-immigration-enforcement-improvements/"><span style="font-weight: 400;">La Sección 10 de la orden ejecutiva del 25 de enero de 2017 del presidente Trump</span></a><span style="font-weight: 400;"> buscaba delegar a las fuerzas del orden público estatales y locales para que desempeñaran la función de un oficial de inmigración. Este tipo de acciones socavan la confianza y la cooperación entre las fuerzas del orden locales y las comunidades a las que deben proteger. Como presidente, Biden pondrá fin a todos los acuerdos suscritos por la Administración Trump y limitará enérgicamente el uso de la 287(g) y programas similares que obligan a las fuerzas del orden locales a asumir el papel de la policía de inmigración.</span></li>
+<li style="font-weight: 400;"><b>Restaurar las prioridades de aplicación sensatas y protegerá ubicaciones sensibles de las acciones de aplicación.</b><span style="font-weight: 400;"> Enfocarse en las personas que nunca han sido condenadas por un delito grave y que han vivido, trabajado y contribuido a nuestras comunidades durante décadas es la definición de contraproducente. Biden dirigirá los esfuerzos de aplicación de la ley hacia amenazas graves a la seguridad pública y la seguridad nacional, mientras se asegura de que las personas sean tratadas con el debido proceso al que tienen derecho y sus derechos humanos estén protegidos. Nadie debería tener miedo de buscar atención médica, recoger a su hijo de la escuela o ser parte de una comunidad de fe por temor a una acción de inmigración. Biden protegerá las ubicaciones sensibles de las acciones de aplicación de la inmigración.</span></li>
+<li style="font-weight: 400;"><b>Hacer cumplir las leyes de inmigración sin violar los derechos de los trabajadores</b><span style="font-weight: 400;">. Los derechos de los inmigrantes y los derechos de los trabajadores están profundamente conectados. Debemos asegurarnos de que todos los trabajadores estén protegidos, puedan unirse a un sindicato y puedan ejercer sus derechos laborales, independientemente de su estatus migratorio, para la seguridad de todos los trabajadores. Biden pondrá fin a las redadas en el lugar de trabajo para garantizar que las amenazas basadas en el estado de los trabajadores no interfieran con su capacidad de organizarse y mejorar sus salarios y condiciones de trabajo.</span></li>
+<li style="font-weight: 400;"><b>Proteger a las familias militares de la deportación. </b><span style="font-weight: 400;">Biden protegerá y ampliará las oportunidades para las personas que arriesgaron sus vidas en el servicio militar. Biden no tendrá como objetivo deportar a los hombres y mujeres que sirvieron en uniforme, ni a sus familias. También ordenará al Secretario de Seguridad Nacional que cree un proceso de reingreso para los veteranos deportados por la Administración Trump para reunirlos con sus familias y colegas militares en los EE. UU.</span></li>
+<li style="font-weight: 400;"><b>Garantizar el acceso a un abogado en el tribunal de inmigración. </b><span style="font-weight: 400;">Muchos inmigrantes, incluidos niños de hasta tres años, comparecen en la corte de inmigración sin representación legal, a menudo porque no pueden pagar un abogado. También ha habido informes de que la Administración Trump limita el acceso a asesoría legal para inmigrantes detenidos. Esto socava nuestro valor central del debido proceso y la integridad de nuestro sistema de inmigración. Como presidente, Biden trabajará para garantizar que a los inmigrantes no se les niegue el acceso a un abogado y trabajará con organizaciones de la sociedad civil para establecer fondos para proveer representación legal.</span></li>
+<li style="font-weight: 400;"><b>Revitalizar el Grupo de Trabajo sobre los Nuevos Estadounidenses</b><span style="font-weight: 400;"> e impulsar nuestra economía al priorizar la integración, promover el emprendimiento de los inmigrantes, aumentar el acceso a la enseñanza de idiomas y promover la participación civil. Integrar los talentos de los nuevos inmigrantes en nuestras comunidades y ayudarlos a prosperar enriquece a nuestra nación y nuestra economía. Bajo la presidencia de Biden, el Grupo de Trabajo sobre los Nuevos Estadounidenses coordinará una vez más las agencias federales y los recursos para brindar apoyo comunitario en una variedad de temas, incluyendo aprendizaje de idiomas, emprendimiento y administración financiera, capacitación de la fuerza laboral y orientación sobre el proceso de naturalización.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Reforma permanente de inmigración a través de la acción legislativa</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como presidente, Biden comprometerá un importante capital político para finalmente llevar a cabo una reforma legislativa de inmigración para garantizar que los EE. UU. permanezcan abiertos y acojan a las personas de todas partes del mundo, y para sacar de las sombras a personas trabajadoras que han enriquecido nuestras comunidades y nuestro país, en algunos casos durante décadas.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Específicamente, Joe Biden trabajará con el Congreso para aprobar legislación que:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Cree una hoja de ruta hacia la ciudadanía para los casi 11 millones de personas que han estado viviendo y fortaleciendo nuestro país durante años. </b><span style="font-weight: 400;">Biden abogará enérgicamente por una legislación que cree una hoja de ruta clara hacia el estatus legal y la ciudadanía para los inmigrantes no autorizados que se inscriban, estén al día con sus impuestos y hayan aprobado una verificación de antecedentes.</span></li>
+<li style="font-weight: 400;"><b>Reforme el programa de visas para trabajadores temporales en industrias selectas.</b><span style="font-weight: 400;"> Biden trabajará con el Congreso para reformar el sistema actual de visas de trabajo temporales para permitir que los trabajadores de estas industrias selectas cambien de empleo, mientras certifica la necesidad de trabajadores extranjeros en el mercado laboral. Los empleadores deberían poder proporcionar datos que muestran la falta de disponibilidad de mano de obra y el daño que resultaría si los trabajadores temporales no estuvieran disponibles. Esta flexibilidad, junto con fuertes salvaguardas que requieran que los empleadores paguen un cálculo justo del salario prevaleciente y garanticen el derecho de todos los trabajadores a afiliarse a un sindicato y ejercer sus derechos laborales, ayudará a satisfacer las necesidades de los empleadores en la nación, a mantener salarios más altos para los trabajadores estadounidenses y los trabajadores extranjeros por igual, incentivará a los trabajadores y empleadores a operar dentro de los canales legales, prevendrá la explotación de los trabajadores temporales e impulsará las economías locales.</span></li>
+<li style="font-weight: 400;"><b>Provea un camino a la legalización para los trabajadores agrícolas que han trabajado durante años en las granjas de los Estados Unidos y continúan trabajando en la agricultura.</b><span style="font-weight: 400;"> Biden apoya la legislación de compromiso entre los trabajadores agrícolas y el sector agrícola que proporcionará un estatus legal basado en el historial de trabajo agrícola anterior y un camino más rápido hacia una tarjeta verde y, en última instancia, la ciudadanía. Biden también se asegurará de que puedan obtener una licencia por enfermedad con paga y exigirá que las normas laborales y de seguridad, incluidas las horas extras, las condiciones de vida dignas y la protección contra los pesticidas y la exposición al calor, se apliquen con respecto a estos trabajadores particularmente vulnerables.</span></li>
+<li style="font-weight: 400;"><b>Rechace la falsa elección entre inmigración por el empleo y por la familia.</b><span style="font-weight: 400;"> Como presidente, Biden apoyará la inmigración basada en la familia al preservar la unificación familiar como base de nuestro sistema de inmigración; al permitir que cualquier solicitante aprobado reciba una visa temporal de no inmigrante hasta que se procese la visa permanente; y apoyando la legislación que trata a los cónyuges e hijos de las personas con la tarjeta verde como los parientes inmediatos que son, eximiéndolos de límites y permitiendo que los padres traigan a sus hijos menores en el momento de la inmigración.</span></li>
+<li style="font-weight: 400;"><b>Aplique las reglas para proteger a los trabajadores estadounidenses y extranjeros por igual.</b><span style="font-weight: 400;"> El sistema de inmigración de EE. UU. debe protegerse contra los recortes salariales en toda la economía debido a la explotación de trabajadores extranjeros por parte de empleadores inescrupulosos que socavan el sistema al contratar trabajadores inmigrantes por debajo de la tarifa del mercado o salen del sistema de inmigración para encontrar trabajadores. Biden trabajará con el Congreso para garantizar que los empleadores no se aprovechen de los trabajadores inmigrantes y que los trabajadores que son ciudadanos estadounidenses no se vean perjudicados por los empleadores que no cumplen con las reglas. Biden también trabajará para garantizar que los empleadores tengan las herramientas adecuadas para certificar la situación laboral de sus trabajadores y restablecerá el enfoque en los empleadores abusivos en lugar de en los trabajadores vulnerables a quienes están explotando.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden sobre inmigración en joebiden.com/immigration</span></i></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">###</span></i></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../latino-agenda.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/agenda-latina/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":351,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

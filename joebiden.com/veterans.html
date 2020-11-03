@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Plan to Keep Our Sacred Obligation to Our Veterans | Joe Biden</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Joe Biden believes that as a nation we have a sacred obligation to our troops--both while they are deployed and when they are veterans. Read more here." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="veterans.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Plan to Keep Our Sacred Obligation to Our Veterans | Joe Biden" />
+	<meta property="og:description" content="Joe Biden believes that as a nation we have a sacred obligation to our troops--both while they are deployed and when they are veterans. Read more here." />
+	<meta property="og:url" content="https://joebiden.com/veterans/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-07-29T15:02:57+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Veterans_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Plan to Keep Our Sacred Obligation to Our Veterans | Joe Biden" />
+	<meta name="twitter:description" content="Joe Biden believes that as a nation we have a sacred obligation to our troops--both while they are deployed and when they are veterans. Read more here." />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Veterans_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="18 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/veterans/#webpage","url":"https://joebiden.com/veterans/","name":"Plan to Keep Our Sacred Obligation to Our Veterans | Joe Biden","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-11-11T15:52:39+00:00","dateModified":"2020-07-29T15:02:57+00:00","description":"Joe Biden believes that as a nation we have a sacred obligation to our troops--both while they are deployed and when they are veterans. Read more here.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/veterans/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fveterans%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fveterans%2F&#038;format=xml" />
+<link rel="alternate" href="veterans.html" hreflang="en" />
+<link rel="alternate" href="es/el-plan-de-biden-para-mantener-nuestro-deber-sagrado-con-nuestros-veteranos/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1561 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="veterans.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="veterans.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-mantener-nuestro-deber-sagrado-con-nuestros-veteranos/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/el-plan-de-biden-para-mantener-nuestro-deber-sagrado-con-nuestros-veteranos/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1561 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan to Keep Our Sacred Obligation to Our Veterans</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden believes that as a nation, we have many obligations, but we have only one truly sacred obligation: to properly prepare and equip our troops when we send them into harm’s way, and to care for them and their families&#8211;both while they are deployed and after they return home. As the parents of a son who deployed to Iraq, Joe and Jill Biden understand the gravity of this promise. Our service members ensure our freedoms, our security, and the very future of our country. They are willing to sacrifice everything. Many do. And each of them deserves our respect and enduring gratitude, both while on active duty and after separating from service.  </span></p>
+<p><span style="font-weight: 400;">President Trump has repeatedly failed our veterans and ignored this sacred obligation. From the outrage of deporting undocumented veterans without checking their record of military service, to allowing his wealthy Mar-a-Lago friends to drive veterans policy, to pursuing policies designed to privatize and dismantle the Department of Veterans Affairs (VA), Trump neither understands nor respects the idea of “duty, honor, country” that inspires our brave military members to serve and imbues our veterans with pride.  </span></p>
+<p><span style="font-weight: 400;">Less than one percent of Americans currently serve in the military, and the other 99 percent of us owe them the secure futures they have earned. As president, Joe Biden will keep faith with our veterans and their families. He will meet our sacred obligation. </span></p>
+<table>
+<tbody>
+<tr>
+<td><b>The Biden Record of Delivering for Our Veterans </b></p>
+<p><span style="font-weight: 400;">Joe Biden has fought aggressively for our service members and veterans throughout his career in public service. His record speaks for itself. On the broad range of issues that matter to our brave military members and our veterans, Joe Biden has always had their back. </span></p>
+<p><span style="font-weight: 400;">As a senator, Joe Biden was an early advocate for Vietnam veterans who were exposed to Agent Orange and other toxins to be able to access the care and benefits they deserve.</span></p>
+<p><span style="font-weight: 400;">He championed funding for prosthetics for veterans and mammogram coverage for female veterans, fought for proper burial allowances, and supported the concurrent receipt of retirement and disability pay for veterans. He co-sponsored the legislation to establish the Vietnam, Korean, and WWII memorials in Washington, D.C., as well as the post-9/11 GI Bill to provide educational benefits to a new generation of heroes. </span></p>
+<p><span style="font-weight: 400;">Biden also led the way in the Senate on critical issues to protect the health of our military, most notably driving the fight to increase funding for up-armored </span><a href="http://www.defense-aerospace.com/articles-view/release/3/86567/senate-panel-adds-%2423.6-billion-for-mrap-vehicles-in-fy08-bill.html"><span style="font-weight: 400;">Mine-Resistant Ambush Protected vehicles</span></a><span style="font-weight: 400;"> (MRAPs) by $23.6 billion, which saved thousands of lives and limbs of U.S. service members in Iraq and Afghanistan. And he introduced legislation to prohibit cuts to military medical care during times of war. </span></p>
+<p><span style="font-weight: 400;">In the White House, Biden continued to be a clarion voice advocating for our veterans. The Obama-Biden Administration accomplished </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2016/07/31/fact-sheet-record-serving-our-veterans"><span style="font-weight: 400;">major milestones</span></a><span style="font-weight: 400;">, including</span><a href="https://www.blogs.va.gov/VAntage/29697/federal-agencies-announce-veteran-veteran-homelessness-cut-nearly-half-down-47-percent-since-2010-cut-more-than-half-since-2010/"><span style="font-weight: 400;"> cutting the population of homeless veterans</span></a><span style="font-weight: 400;"> by almost half and </span><a href="https://data.bls.gov/timeseries/LNS14049526&amp;series_id=LNS14049601"><span style="font-weight: 400;">reducing the unemployment rate for veterans by more than half</span></a><span style="font-weight: 400;">. In 2013,  when an unacceptable backlog of veterans’ disability claims was uncovered at the VA, the Obama-Biden Administration took aggressive action to rectify the failures and ultimately </span><a href="https://www.benefits.va.gov/reports/mmwr_va_claims_backlog.asp"><span style="font-weight: 400;">reduced the backlog by nearly 90 percent</span></a><span style="font-weight: 400;"> in just over three years. The Obama-Biden Administration also increased the overall funding request for the VA by more than </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2016/07/31/fact-sheet-record-serving-our-veterans"><span style="font-weight: 400;">85 percent</span></a><span style="font-weight: 400;"> during its years in office, including a </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2016/07/31/fact-sheet-record-serving-our-veterans"><span style="font-weight: 400;">76 percent increase</span></a><span style="font-weight: 400;"> in funding devoted to the critical issue of veterans’ mental health. It successfully implemented the new GI Bill and approved the long overdue expansion of benefits to those suffering from </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2013/08/10/fact-sheet-obama-administration-s-work-honor-our-military-families-and-v"><span style="font-weight: 400;">Agent Orange-related conditions</span></a><span style="font-weight: 400;">. </span></p>
+<p><span style="font-weight: 400;">During the Obama-Biden Administration, the VA also led in creating the </span><a href="https://www.va.gov/bluebutton/"><span style="font-weight: 400;">Blue Button app</span></a><span style="font-weight: 400;"> to help veterans access their health data and medical records more easily. Today, Blue Button is used by more than </span><a href="https://www.va.gov/opa/pressrel/pressrelease.cfm?id=5158"><span style="font-weight: 400;">2 million veterans</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Additionally, Dr. Jill Biden and First Lady Michelle Obama created and led the </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2016/11/11/fact-sheet-five-years-joining-forces-call-action-americans-support"><span style="font-weight: 400;">Joining Forces</span></a><span style="font-weight: 400;"> initiative to build support for our veterans and military families, including a focus on increasing employment opportunities. Between April 2011 and the end of the Administration, Joining Forces supported programs and secured commitments from employers that led to the hiring or training of more than 1.5 million veterans and military spouses.</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">Our longest wars have taken their toll, both on our newest generation of veterans and on the system built to support them and previous generations of veterans. According to the most recent census data, there are more than </span><a href="https://www.census.gov/newsroom/facts-for-features/2019/veterans-day.html"><span style="font-weight: 400;">18 million veterans</span></a><span style="font-weight: 400;"> in the United States, and today’s veterans population has needs that the VA has never before addressed. This is reflected both in the growing interest for “anywhere, anytime” health care service models and in our growing understanding of behavioral health challenges, the harmful impacts of burn pits, environmental toxins, traumatic brain injury, and the devastating epidemic of opioid addiction and suicide. The VA must adapt to meet the ever-evolving needs of the veteran community.  </span></p>
+<p><span style="font-weight: 400;">At the same time, the VA continues to struggle with poor organizational performance, staff shortfalls, leadership gaps, and IT systems failures. The integration of a new generation of veterans into the VA system has added a substantial number of veterans eligible for health care and</span> <span style="font-weight: 400;">other benefits as overall demand for services has surged, with the combination creating capacity challenges across the system. Too often, the VA’s performance in terms of access, outcomes, cost, and accountability is mixed. There have been both important successes and intolerable failures or gaps in service. Solving these challenges will require a substantial investment in talent, leadership time, budget, and public attention. It’s what we owe our veterans. It is past time to rethink and reinvent a better VA.</span></p>
+<p><span style="font-weight: 400;">There is nothing partisan about improving support for service members, veterans, their families, caregivers, and survivors.  </span><b>As president, Joe Biden will unite the country and restore the VA as the premier agency for ensuring our veterans’ overall well-being by: </b></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Providing Veterans World Class Health Care to Meet Their Specific Needs</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Driving Progress to Eliminate Veterans Homelessness and Bring Down Suicide Rates</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creating Meaningful Employment and Educational Opportunities </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Improving VA Management and Accountability. </span></li>
+</ul>
+<p><span style="font-weight: 400;">To support the VA mission, a Biden Administration will ensure coordination with the Department of Defense (DoD), Department of Housing and Urban Development (HUD), state agencies, and the thousands of non-governmental organizations that support this vital community. It will work faithfully to restore public trust in the VA so that no one in the military community or beyond will ever again question whether the United States of America keeps its promises to those who serve our country. </span></p>
+<p><b>Providing Veterans World Class Health Care to Meet Their Specific Needs</b></p>
+<p><span style="font-weight: 400;">The Veterans Health Administration serves upwards of </span><a href="https://www.va.gov/health/aboutvha.asp"><span style="font-weight: 400;">9 million veterans</span></a><span style="font-weight: 400;"> and is responsible for their whole health, physical and mental. Studies have found that health </span><a href="https://tdi.dartmouth.edu/news-events/veterans-health-administration-hospitals-outperform-non-vha-hospitals-most-healthcare-markets"><span style="font-weight: 400;">outcomes at VA hospitals</span></a><span style="font-weight: 400;"> are often </span><a href="https://www.rand.org/news/press/2018/04/26.html"><span style="font-weight: 400;">better than their non-VA counterpart</span></a><span style="font-weight: 400;">, and more than </span><a href="https://vfworg-cdn.azureedge.net/-/media/VFWSite/Files/Advocacy/VFW-Our-Care-2019.pdf?&amp;la=en&amp;v=1&amp;d=20190927T135726Z"><span style="font-weight: 400;">90 percent</span></a><span style="font-weight: 400;"> of those who receive their health services through the VA report that they would recommend it to a fellow veteran. As president, Joe Biden will work to ensure that the VA provides the world class health care that our veterans have earned and deserve and sets the example for private sector care. </span></p>
+<p><span style="font-weight: 400;">In the area of mental health, the VA and DoD have done pioneering work to address the specific needs of veterans, deploying innovative treatment solutions such as telehealth and other platforms to address a variety of conditions. The private sector trails the VA in its ability to provide behavioral health services to the nation as a whole, much less to understand the unique needs of veterans. </span></p>
+<p><span style="font-weight: 400;">At the same time, the VA is also struggling with a rapidly deteriorating infrastructure, and many VA facilities are more than 60 years old. Further, across the system, the variance in quality of — and access to — care is unacceptable. As the demand for treatment has increased, the VA must continually strive to improve services and outcomes for veterans, especially in the areas of pain, polytrauma recovery, substance-use disorder (SUD), post-traumatic stress disorder (PTSD), traumatic brain injury (TBI), and general behavioral health, in the most effective and cost-efficient way possible.</span></p>
+<p><span style="font-weight: 400;">In addition to protecting and building on the Affordable Care Act with a </span><a href="healthcare..html"><span style="font-weight: 400;">public option</span></a><span style="font-weight: 400;"> to expand access to quality, affordable health care and lower costs, and commitments to </span><a href="rural.html"><span style="font-weight: 400;">keep rural hospitals open</span></a><span style="font-weight: 400;"> and expand health care delivery models for rural areas, a Biden Administration will: </span></p>
+<ul>
+<li><span style="font-weight: 400;">Rebuild trust in the Department of Veterans Affairs. During the Obama-Biden Administration, we improved access to health care offerings for veterans in their communities, but there is still more work to do. Private sector points of care were designed to provide care to veterans when it was faster, closer, or offered superior services for a particular veteran’s needs. We must ensure that health care purchased in the community actually improves access and convenience and does not compromise the health of our veterans. President Biden will establish the right balance of VA care and purchased care, region by region, based on veteran needs, existing VA capacity, and availability of market alternatives.</span></li>
+<li><span style="font-weight: 400;">Conduct a thorough assessment of the staffing needs and requirements across the VA to inform specific hiring initiatives and programs for attracting and retaining medical professionals. This includes ensuring that professionals are working to the full scope of their license and creating incentives to support health care professionals joining the VA workforce.</span></li>
+<li><span style="font-weight: 400;">Refine and update </span><a href="https://www.va.gov/COMMUNITYCARE/programs/veterans/General_Care.asp"><span style="font-weight: 400;">Community Care Guidelines</span></a><span style="font-weight: 400;">, ensuring that if a veteran is referred to a community care provider that does not meet the same level of access and quality as the VA,  the veteran will be referred back to the VA. This full-circle referral process will better ensure that veterans are seen in a timely manner and receive the best possible quality of care. </span></li>
+<li>Establish cultural competency training protocols to ensure that providers in VA facilities and in community care settings understand and are equipped to support the needs of LGBTQ veterans in the health care setting.</li>
+<li>Reverse the transgender military ban. In 2010, Biden played a leading role in the Obama-Biden Administration’s repeal of “Don’t Ask, Don’t Tell” to allow gay, lesbian, and bisexual service members to serve the country they love without hiding their sexual orientation. <a href="https://www.defense.gov/Explore/News/Article/Article/822235/transgender-service-members-can-now-serve-openly-carter-announces/" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://www.defense.gov/Explore/News/Article/Article/822235/transgender-service-members-can-now-serve-openly-carter-announces/&amp;source=gmail&amp;ust=1593031912559000&amp;usg=AFQjCNETE-ONmn9pfWAY3PCcuRIFqdGXZg">In June 2016, the Obama-Biden Administration overturned the ban on transgender individuals serving openly, without hiding their gender identity. </a>But Trump <a href="https://www.whitehouse.gov/presidential-actions/presidential-memorandum-secretary-defense-secretary-homeland-security/" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://www.whitehouse.gov/presidential-actions/presidential-memorandum-secretary-defense-secretary-homeland-security/&amp;source=gmail&amp;ust=1593031912559000&amp;usg=AFQjCNGJ-r5sWOuVBj6nn9uo-zqBpTOEyA">reversed </a>this policy, barring transgender patriots from serving openly. This is discriminatory and detrimental to our national security. Every American who is qualified to serve in our military should be able to do so—regardless of sexual orientation or gender identity and without having to hide who they are. Biden will direct the U.S. Department of Defense to allow transgender service members to serve openly, receive needed medical treatment, and be free from discrimination.</li>
+<li>Reverse Department of Defense policies that perpetuate stigmatization of and discrimination against people living with HIV.The Trump-Pence Administration’s “<a href="https://partner-mco-archive.s3.amazonaws.com/client_files/1518714002.pdf" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://partner-mco-archive.s3.amazonaws.com/client_files/1518714002.pdf&amp;source=gmail&amp;ust=1593031912559000&amp;usg=AFQjCNENKdDidTm2oI5wo8sjJRk3QNuqvA">Deploy or Get Out</a>” policy, which is used to forcibly discharge members of the military with <a href="https://www.nbcnews.com/feature/nbc-out/pentagon-discriminates-against-hiv-positive-service-members-suit-claims-n950826" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://www.nbcnews.com/feature/nbc-out/pentagon-discriminates-against-hiv-positive-service-members-suit-claims-n950826&amp;source=gmail&amp;ust=1593031912559000&amp;usg=AFQjCNHbFPKj_xhM9BF_lpkg55SYTuKmSQ">HIV</a>, was found to be<a href="https://www.lambdalegal.org/sites/default/files/legal-docs/downloads/roeandvoe_va_20190215_memorandum-opinion.pdf" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://www.lambdalegal.org/sites/default/files/legal-docs/downloads/roeandvoe_va_20190215_memorandum-opinion.pdf&amp;source=gmail&amp;ust=1593031912559000&amp;usg=AFQjCNFe0_s6Z9_Hzja5_s68CZT6nSNX_w"> “irrational, inconsistent, and at variance with modern science”</a> by a federal district court. The Fourth Circuit <a href="https://www.lambdalegal.org/sites/default/files/legal-docs/downloads/roe_va_20200110_opinion.pdf" target="_blank" rel="noopener noreferrer" data-saferedirecturl="https://www.google.com/url?q=https://www.lambdalegal.org/sites/default/files/legal-docs/downloads/roe_va_20200110_opinion.pdf&amp;source=gmail&amp;ust=1593031912559000&amp;usg=AFQjCNEmc58ao3Mo6yzy1BR0g06qsdsF9g">affirmed</a> this decision in January 2020 for “fail[ing] to account for current medical literature and expert opinion about current HIV treatment and transmission risks.” If the Trump-Pence Administration continues to try to implement the policy, the Biden Administration will rescind it.</li>
+<li><span style="font-weight: 400;">Work with Congress to improve health services for women veterans. Biden will ensure that each VA Medical Center has at least one full-time women’s primary care physician; and, within 200 days of taking office, make available a women veterans training module for community health care providers. And, Biden will work with Congress to enact the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/514/cosponsors"><span style="font-weight: 400;">Deborah Sampson Act</span></a><span style="font-weight: 400;"> and ensure that the safety and privacy concerns of women veterans are addressed throughout his Administration.</span></li>
+<li><span style="font-weight: 400;">Provide funding to ensure there is safe, reliable child care at all VA Medical Centers. </span></li>
+<li><span style="font-weight: 400;">Work with </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/1573"><span style="font-weight: 400;">Congress</span></a><span style="font-weight: 400;"> to eliminate co-pays for preventive health care for veterans, which can create unnecessary barriers to seeking basic preventive care.  </span></li>
+<li><span style="font-weight: 400;">Expand the list of presumptive conditions to ensure no veteran who experienced a TBI or had exposure to burn pits or other environmental toxins goes without access to VA health care and benefits.</span> <span style="font-weight: 400;">We cannot ask our veterans who are suffering to wait decades, as we did with Agent Orange. President Biden will also increase access to VA care beyond the 5-year eligibility window for combat veterans, as conditions related to toxic exposure may take many years to manifest. </span></li>
+<li><span style="font-weight: 400;">Increase research dollars by $300 million to invest in better understanding the impact of TBI and toxic exposures (including burn pits) on long-term health outcomes, and continue to drive research focused on the needs of disabled veterans.</span></li>
+<li><span style="font-weight: 400;">Ensure that disabled veterans that require a prosthesis are able to access the most modern prosthetics technology available, and that they are able to upgrade their equipment at no cost as new developments occur. </span></li>
+<li><span style="font-weight: 400;">Expand funding for direct and purchase-care treatment for disorders related to the misuse of alcohol and opioids in order to reduce unacceptably long wait-times for treatment. </span></li>
+<li><span style="font-weight: 400;">A Biden Administration will </span><span style="font-weight: 400;">support the legalization of cannabis for medical purposes and reschedule cannabis as a schedule II drug so researchers can study its positive and negative impacts. This will include </span><span style="font-weight: 400;">allowing the VA to research the use of medical cannabis to treat veteran-specific health needs. </span></li>
+<li><b><span style="font-weight: 400;">Ensure the full integration of veteran caregivers as members of the health care team for veterans. The VA offers a diverse array of programs and supports for caregivers, however, we must ensure that the VA remains a caregiver-friendly environment and respects their role in ensuring the recovery and rehabilitation of their loved one.  </span></b></li>
+<li><span style="font-weight: 400;">Increase funding for and expand access to telehealth through the VA, particularly in rural areas not able to access timely care.</span></li>
+<li><span style="font-weight: 400;">Modernize VA hospitals and clinics to serve our veterans better through a nationwide infrastructure plan that provides a comprehensive refresh of VA health facilities. Biden will retrofit VA’s existing brick and mortar physical locations, where patient volume warrants, and repurpose older facilities to meet new needs such as assisted-living facilities and long-term care alternatives. Biden will improve both the buildings and equipment, so the VA continues to lead in providing 21st century care.   </span></li>
+<li><span style="font-weight: 400;">Create safe, modern, clean, and recovery-oriented housing for veterans being treated for SUDs and those who are homeless by refurbishing buildings condemned or not in use, such as the massive VA Los Angeles campus.</span></li>
+</ul>
+<p><b>Driving Progress to Promote Veterans’ Mental Health and Well-Being </b></p>
+<p><span style="font-weight: 400;">Suicide is a public health crisis&#8211;the 10th leading cause of death in the United States. As a society, we need to work together to eliminate the stigma felt by those who are suffering and struggling with their mental health. There is no shame in asking for help. As president, Joe Biden will increase access to mental health treatment by enforcing full mental health parity and ensuring all Americans have access to high-quality mental health care, regardless of their insurance coverage status. Service members and veterans are at an elevated risk of dying by suicide. Recent data show that, on average, </span><a href="https://www.vfw.org/advocacy/national-legislative-service/congressional-testimony/2019/4/tragic-trends-suicide-prevention-among-veterans"><span style="font-weight: 400;">20 veterans and service members die by suicide every day</span></a><span style="font-weight: 400;">, and among some groups, the rate of suicide is rising alarmingly. Even one death by suicide is devastating, and we must do more to stem the tide. The Trump administration has grossly mismanaged this crisis, at one point leaving </span><a href="https://www.gao.gov/assets/700/695485.pdf"><span style="font-weight: 400;">millions of VA dollars dedicated to suicide prevention efforts unused</span></a><span style="font-weight: 400;">, and that’s just not right. This is a serious challenge, and our goal must be to remove the stigma in military communities to seek help, ensure that every veteran that reaches out is immediately connected to support and services, and to ultimately end the suicide crisis among veterans. As president, Biden will ensure a multi-faceted, substantive, and sustained commitment that addresses this as the public health emergency that it is. </span></p>
+<p><span style="font-weight: 400;">The same is true when it comes to veterans experiencing homelessness. The Obama-Biden Administration proved that we can make huge inroads to address this persistent challenge with sustained attention and cross-coordination among government departments. But with just over </span><a href="https://www.va.gov/HOMELESS/pit_count.asp"><span style="font-weight: 400;">23,000 veterans without shelter on any given night</span></a><span style="font-weight: 400;">, we have much more work to do. </span></p>
+<p><span style="font-weight: 400;">A Biden Administration will: </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Publish within the first 200 days in office a comprehensive public health and cross-sector approach to addressing suicide in veterans, service members, and their families. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work aggressively to facilitate immediate access to mental health services for veterans in crisis, to include standardizing performance expectations around same day, walk-in and urgent mental health services; hiring more ER psychiatric staff and peer specialists; </span><span style="font-weight: 400;">expanding crisis line capacity to ensure all calls are answered and appropriate referrals occur within hours; and implementing specific programs to encourage veterans to prioritize their mental health by reaching out to the VA when they need support. Within the first year in office, President Biden will have a goal of completely eliminating wait times for veterans who reach out with suicidal ideation so that they are immediately taken into treatment. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Together with states, community-based organizations, and employers, implement public education and outreach initiatives to help veterans understand that care is available and effective. We must work to end the culture of silence around mental health issues and remove the stigma associated with getting mental health treatment, particularly among service members who are more used to helping others than asking for it themselves. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure the DoD’s Suicide Prevention Office and the VA have the resources and staff they need to make smart investments with allocated funds&#8211;and that money dedicated to suicide prevention efforts never goes unused. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Create a national center of excellence for reducing veteran suicide, similar to the National Center on Homelessness among Veterans. Biden will recruit top-level leadership to build strategic partnerships and solutions that extend beyond the VA’s health care system.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Require all providers of veterans services funded by the VA to receive training on suicide risk identification and safety planning, to include lethal means restriction and appropriate response and reporting about suicide.  </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Enact policies that promote the value and dignity of life by supporting programs that increase economic stability; promote connectedness through structured social support; and reduce risky behaviors, such as substance use, poor sleep, and </span><a href="gunsafety.html"><span style="font-weight: 400;">improper firearm storage</span></a><span style="font-weight: 400;">. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expand capacity at Vet Centers to ensure veterans in communities can access readjustment counseling services and resources, including financial and long-term planning. President Biden will specifically expand outreach and resources for veterans as they experience periods of transition, not just out of the military, but throughout their life, including into post-career retirement. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Tackle issues that contribute to higher suicide risk. This includes </span><span style="font-weight: 400;">implementing programs to disseminate high-quality treatments for PTSD, ensuring that veterans have access to the best treatments available no matter where they receive care, and instituting policies that seek to eliminate discrimination, end harassment and hold perpetuators of sexual assault in the military accountable. A Biden Administration will not tolerate the sexual assault culture that has become all too common in the military and veteran sector.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work with Congress to continue to drive down veteran homelessness by permanently authorizing the Supportive Services for Veterans Families (SSVF) program, which provides critical funding for wrap-around services for those facing homelessness. President Biden will also work to ensure that we better understand the unique needs of women and LGBTQ veterans experiencing homelessness.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reform the policy and review processes for veterans so that less-than-honorable discharges will not be unjustly awarded for conduct directly linked to the behavioral health effects of PTSD, TBI, or other trauma experienced while serving. </span></li>
+</ul>
+<p><b>Creating Civilian Lives of Meaning and Opportunity </b></p>
+<p><span style="font-weight: 400;">The Obama-Biden Administration worked tirelessly to bring down high unemployment levels among our veterans. Over the course of 8 years, the Obama-Biden administration cut the veteran unemployment rate by more than half. That is vitally important progress, but now, we have to think about empowering our veterans and their future employers with the tools they need to build pathways to successful, long-term careers. Recent data indicate that veterans are more likely than their civilian counterparts to take a job at</span><a href="https://socialimpact.linkedin.com/content/dam/me/linkedinforgood/en-us/resources/veterans/LinkedIn-Veteran-Opportunity-Report.pdf"><span style="font-weight: 400;"> lower skill-level</span></a><span style="font-weight: 400;">. As president, Biden will keep his foot on the gas to ensure that service members transitioning back to civilian lives have the best opportunities to succeed and build fulfilling futures. </span></p>
+<p><span style="font-weight: 400;">A Biden Administration will: </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work closely with DoD to ensure that the Transition Assistance Program (TAP) is implemented effectively and that outcomes are regularly reported. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure that more transitioning service members are able to access job training and placement services prior to their end of active duty service. By expanding private sector relationships through programs like the </span><a href="https://dodskillbridge.usalearning.gov/"><span style="font-weight: 400;">SkillBridge program</span></a><span style="font-weight: 400;">, Biden will give qualified transitioning service members the opportunity to start building a meaningful civilian career as early as possible.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work with the Department of Labor to enforce the Vietnam Era Veterans Readjustment Assistance Act (</span><a href="https://www.dol.gov/ofccp/VEVRAA/"><span style="font-weight: 400;">VEVRAA</span></a><span style="font-weight: 400;">) hiring benchmark among federal contractors and subcontractors, and provide preferences and incentives to corporations that meet the benchmark. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Promote corporate mentorship programs between veteran-owned businesses and existing contractors to support veteran entrepreneurship.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure careful implementation of the Forever GI Bill so that veterans receive the educational benefits they have earned on time. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Implement annual reporting to be led by the VA in partnership with the Department of Education and promote interagency cooperation and data sharing to better understand academic outcomes for all GI Bill users. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Develop best-practice guidelines for supporting veterans in higher education to assist higher education institutions to improve graduation rates among GI Bill recipients and provide financial incentivizes for campuses that follow guidelines and transparently report their outcomes. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work aggressively to close the 90/10 loophole on GI Bill and Tuition Assistance dollars to keep for-profit bad actors from raiding the benefits service members and veterans have earned. </span></li>
+<li style="font-weight: 400;"><a href="beyondhs..html"><span style="font-weight: 400;">Support and protect post-9/11 GI benefits for veterans and qualified family members by strengthening the GI Bill Comparison Tool and School Feedback Tool to put an end to post-secondary institutions’ predatory practices.</span></a></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Protect undocumented members of our armed services, veterans, and their spouses from deportation, because if you are willing to risk your life for this country, you and your family have earned the chance to live safe, healthy, and productive lives in America. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Work with DoD and the Department of Homeland Security to provide timely naturalization for those who have served honorably in our military, with an earned path to citizenship prior to discharge or retirement. </span></li>
+<li>
+<div dir="ltr">
+<div>
+<div>Protect and expand opportunities for people who risked their lives in military service.Biden will not target the men and women who served in uniform, or their families, for deportation. He will also direct the Secretary of Homeland Security to create a parole process for veterans deported by the Trump Administration, to reunite them with their families and military colleagues in the U.S. <span style="font-family: Helvetica Neue;"><br />
+</span></div>
+</div>
+</div>
+</li>
+</ul>
+<p><b>Improving VA Management and Accountability</b></p>
+<p><span style="font-weight: 400;">The agency charged with meeting the needs of our veterans&#8211;not only their health care needs, but administering their full range of benefits and overseeing the cemeteries that guard their honor in death&#8211;should not be limited by outdated management tools and practices. Our veterans deserve the best services available. As president, Biden will enhance the capacity of the VA to serve our veterans as efficiently as possible by overseeing a generational upgrade to clinical and management systems, by leveraging commercial best-practices and modern technologies to meet the unique demands of public sector mission. </span></p>
+<p><span style="font-weight: 400;">A Biden Administration will:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Improve health care access, quality, and customer experience by seamlessly augmenting direct care with purchase care enabled under the </span><a href="https://missionact.va.gov/"><span style="font-weight: 400;">Mission Act</span></a><span style="font-weight: 400;">. Enhance the administrative, financial, and operational systems that underpin the provision of care in the network model by improving vital case management systems, quality oversight, integrative health treatments and supporting administrative, financial and IT systems. These reforms will help ensure access to high-quality care and a first-rate customer experience that satisfies all veterans, regardless of where they receive care.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Create standards of health record interoperability that ensure a comprehensive health record is provided by community care organizations back to the VA. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invest in improving human resource and management practices across the VA to strengthen the customer experience for our veterans and deliver services more efficiently. This will include a focus on workforce training and cultivating a culture across the VA that places a premium on quality and service. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Leverage options under the Mission Act to pilot alternative payment models and prioritize care models that improve the quality of care, not just the volume of services. Veterans should be able to access care in a way that works best for them, not the way that is most convenient for the system, in particular when it comes to meeting specific needs such as rehabilitation services, SUD, and behavioral health.   </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reduce delays and errors in claims processing and in scheduling the medical exams necessary for veterans to complete their disability claims. This has been a constant source of frustration for veterans. The long delays in the system, and rates of error — in both Regional Offices and the Board of Veterans’ Appeals — are too long and too high, and unfairly delay adjudication of veterans claims. A Biden VA will identify the sources of the problem and undertake the investments in personnel and training needed to ensure that veterans receive accurate decisions in a more timely manner.  </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Help more veterans gain access to their own health data and medical records through the Blue Button app. Blue Button has been downloaded by more than 2 million veterans and is increasingly being used by Medicare beneficiaries and the private sector. By making Blue Button easier to use, the VA will continue to lead the movement of patient-centered models of care.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Implement a VA-hosted health record that can serve any and every American who wants one. We can leverage Blue Button to access health information no matter where it is, to allow veterans and citizens to manage and use it as they see fit. By putting our veterans first, we can make the VA the nexus of the best care </span><i><span style="font-weight: 400;">every</span></i><span style="font-weight: 400;">where.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Create a national health database for non-profit research scientists and the commercial sector that would accelerate discovery of the best therapies against the devastating diseases of our time: cancer, heart disease, and Alzheimer’s, and dementia. Biden will direct the VA to support the database using its infrastructure, making access available to all. Veterans will be able to choose, on an individual basis, whether or not to contribute their data. This national repository for longitudinal health data will enable us to use technological innovations to see patterns that people don’t easily recognize and make connections we don’t normally make for the U.S. population as a whole.  </span></li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="veterans.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-mantener-nuestro-deber-sagrado-con-nuestros-veteranos/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="veterans.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/veterans/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":437,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

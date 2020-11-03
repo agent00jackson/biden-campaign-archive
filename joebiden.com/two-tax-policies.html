@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>A Tale Of Two Tax Policies: Trump Rewards Wealth, Biden Rewards Work | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="two-tax-policies.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="A Tale Of Two Tax Policies: Trump Rewards Wealth, Biden Rewards Work" />
+	<meta property="og:description" content="During the 2016 campaign, President Donald Trump promised tax cuts that would create jobs and provide substantial savings for working families. What did he deliver?  For four years, Trump has relentlessly pursued an economic agenda that rewards wealth over work and favors multinational corporations over small businesses. After first trying to strip health care protections [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/two-tax-policies/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-10-19T19:40:05+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/10/Web-Card_Two-tax-policies_1600x836_V1.png" />
+	<meta property="og:image:width" content="3200" />
+	<meta property="og:image:height" content="1672" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="A Tale Of Two Tax Policies: Trump Rewards Wealth, Biden Rewards Work" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/10/Web-Card_Two-tax-policies_1600x836_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Brenna Parker">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="9 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/two-tax-policies/#webpage","url":"https://joebiden.com/two-tax-policies/","name":"A Tale Of Two Tax Policies: Trump Rewards Wealth, Biden Rewards Work | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-09-17T16:19:43+00:00","dateModified":"2020-10-19T19:40:05+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/two-tax-policies/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Ftwo-tax-policies%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Ftwo-tax-policies%2F&#038;format=xml" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-6040 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="two-tax-policies.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="two-tax-policies.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-6040 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">A Tale Of Two Tax Policies: Trump Rewards Wealth, Biden Rewards Work</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">During the 2016 campaign, President Donald Trump promised tax cuts that would create jobs and provide substantial savings for working families. What did he deliver? </span><span id="more-6040"></span></p>
+<p><span style="font-weight: 400;">For four years, Trump has relentlessly pursued an economic agenda that rewards wealth over work and favors multinational corporations over small businesses. After first trying to strip health care protections away from </span><a href="https://avalere.com/press-releases/repeal-of-acas-pre-existing-condition-protections-could-affect-health-security-of-over-100-million-people"><span style="font-weight: 400;">more than 100 million Americans</span></a><span style="font-weight: 400;"> with pre-existing conditions, President Trump spent the remainder of his first year in office fighting for a $1.5 trillion tax giveaway primarily for large corporations and the wealthy. His Republican allies in Congress even admitted they needed to pass the bill </span><a href="https://prospect.org/power/tax-act-embodies-republican-culture-corruption/"><span style="font-weight: 400;">to satisfy their donors</span></a><span style="font-weight: 400;">. Almost immediately after signing the bill into law, Trump flew to Mar-a-Lago to tell his club’s wealthy members, &#8220;</span><a href="https://www.cbsnews.com/news/trump-mar-a-lago-christmas-trip/"><span style="font-weight: 400;">you all just got a lot richer.</span></a><span style="font-weight: 400;">&#8221; </span></p>
+<p><span style="font-weight: 400;">But middle-class Americans were largely left out. Tax experts estimate that over the long run, </span><a href="https://www.taxpolicycenter.org/publications/distributional-analysis-conference-agreement-tax-cuts-and-jobs-act/full"><span style="font-weight: 400;">83% of </span></a><span style="font-weight: 400;">Trump’s tax giveaway will flow to the top 1% of earners in this country. And, while our country faces an </span><a href="https://www.americanprogress.org/issues/race/reports/2018/02/21/447051/systematic-inequality/"><span style="font-weight: 400;">unconscionable racial wealth gap</span></a><span style="font-weight: 400;">, the average Black and Latino family received </span><a href="https://prosperitynow.org/resources/race-wealth-and-taxes"><span style="font-weight: 400;">less than half</span></a><span style="font-weight: 400;"> the tax savings as the average white family. Trump even snuck in a hidden middle-class tax hike that will kick in after he leaves office to pay for this permanent corporate tax giveaway. </span></p>
+<p><span style="font-weight: 400;">As President, Biden will require corporations and the wealthiest Americans to finally pay their fair share. He won&#8217;t ask a single person making under $400,000 per year to pay a penny more in taxes, and will in fact enact more than one-dozen middle class tax cuts that will finally give working families the financial support they deserve. But struggling families need support immediately, which is why Biden is demanding that Trump get off the golf course and provide emergency tax relief to middle class families as part of a new COVID-19 response package. </span></p>
+<p><span style="font-weight: 400;">Trump has not only refused to deliver for struggling working families, he is now pushing for another misguided tax giveaway for America’s wealthiest families. That’s the fundamental difference between Trump and Biden &#8212; Trump is focused on further enriching billionaires like himself, while Biden wakes up every day asking how he can help the middle class. </span><b></b></p>
+<p><b>I. Trump’s Tax Proposal In An Economic Crisis: A New Billionaire Tax Cut</b></p>
+<p><span style="font-weight: 400;">While 2020 has brought untold pain and economic hardship for tens of millions of working families, America’s richest billionaires have seen their fortunes swell. Trump should be focused on helping struggling Americans make their rent and mortgage payments, keep their lights on, and put food on the table for their children. Instead, he is focused on delivering yet another tax giveaway for the wealthy. </span><span style="font-weight: 400;">Trump has pledged to lower the maximum capital gains rate &#8211; the tax paid on profits from investments &#8211; to just 15% for wealthy Americans. </span></p>
+<p><b>If Trump succeeds, 99% of this giveaway will flow to the top one percent. Billionaires will pay a lower tax rate than tens of millions of essential workers and middle-class Americans. </b><span style="font-weight: 400;">In Trump’s America, a working family making $65,000 will pay 22% on every extra dollar they earn, not including payroll taxes, while billionaires will pay just 15% on their profits from investments.</span> <span style="font-weight: 400;">Trump’s billionaire tax giveaway will mean untold hundreds of billions of dollars in tax breaks to millionaires and billionaires over time. Indeed, it provides tens of billions of dollars in tax giveaways to billionaires just for their gains during the COVID year of 2020. In effect: </span><b></b></p>
+<ul>
+<li><b>Trump wants to give the 10 richest billionaires &#8211; who have made a total of $196 billion this year amid the COVID-19 crisis &#8211; a combined $17.2 billion tax cut. </b></li>
+<li><b>Trump wants to give the 50 richest billionaires &#8211; who have made $312 billion during the COVID-19 crisis &#8211; a combined $27.5 billion tax cut. </b></li>
+<li><b>Trump wants to give the 100 richest billionaires &#8211; who have made $334 billion during the COVID-19 crisis, a combined $29 billion tax cut. </b></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td colspan="4"><b>Table 1 &#8211; The Trump Billionaire Tax Cut, By The Numbers</b></td>
+</tr>
+<tr>
+<td><b>Wealthiest American Billionaires</b></td>
+<td><b>Wealth Gain in 2020 </b></td>
+<td><b>Trump Billionaire Tax Cut </b></td>
+<td><b>Biden Stops Trump Tax Giveaway &amp; Makes Billionaires Pay Their Fair Share</b></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Top 10</span></td>
+<td><span style="font-weight: 400;">$195.75 billion</span></td>
+<td><span style="font-weight: 400;">+$17.23 billion</span></td>
+<td><span style="font-weight: 400;">-$30.93 billion</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Top 50</span></td>
+<td><span style="font-weight: 400;">$312.63 billion</span></td>
+<td><span style="font-weight: 400;">+$27.39 billion</span></td>
+<td><span style="font-weight: 400;">-$49.19 billion</span></td>
+</tr>
+<tr>
+<td><span style="font-weight: 400;">Top 100</span></td>
+<td><span style="font-weight: 400;">$334.14 billion</span></td>
+<td><span style="font-weight: 400;">+$29.40 billion</span></td>
+<td><span style="font-weight: 400;">-$52.79 billion</span></td>
+</tr>
+<tr>
+<td colspan="4"><span style="font-weight: 400;">Source: Bloomberg Billionaires, September 8, 2020, </span></p>
+<p><span style="font-weight: 400;">Available at </span><a href="https://www.bloomberg.com/billionaires/?sref=Yt1f10Jr"><span style="font-weight: 400;">https://www.bloomberg.com/billionaires/?sref=Yt1f10Jr</span></a></p>
+<p><span style="font-weight: 400;">Notes: The Trump Billionaires Tax Cut is calculated by lowering the capital gains rate from its current level of 23.8% to Trump’s proposed 15% rate.  The difference between Trump’s Billionaire Tax Cut and Biden’s proposal shows how a Biden level of 39.6% compares to current law as well. </span></td>
+</tr>
+</tbody>
+</table>
+<p><b>II. Trump’s Tax Record: Billions For Foreign Investors And Large Multinational Corporations </b></p>
+<p><span style="font-weight: 400;">Trump’s original tax cut blatantly prioritized wealth over work, large corporations over small businesses, and even foreign investors over the American middle class. It is no wonder that:</span></p>
+<ul>
+<li><b>43% of the benefits of Trump’s corporate tax giveaway </b><a href="https://itep.org/congressional-budget-office-new-tax-law-helps-foreign-investors-even-more-than-you-thought/"><b>goes to foreign investors</b></a><b>.</b></li>
+<li><a href="https://www.americanprogress.org/issues/economy/news/2020/09/02/489924/foreign-investors-big-winners-trumps-tax-law/"><b>$134 billion in tax giveaway</b></a><b>s</b><a href="https://www.americanprogress.org/issues/economy/news/2020/09/02/489924/foreign-investors-big-winners-trumps-tax-law/"><b> went to foreign investors</b></a><b> in fewer than three years after Trump signed this bill into law.</b></li>
+<li><b>Foreign investors received </b><a href="https://www.americanprogress.org/issues/economy/news/2020/09/02/489924/foreign-investors-big-winners-trumps-tax-law/"><b>a bigger tax cut</b></a><b> than the 95 million most-hard pressed working households in our nation &#8212; combined!</b></li>
+<li><b>Corporations that pocketed billions of dollars from the tax giveaway still slashed jobs, shifted production overseas, and passed profits through to wealthy investors.</b></li>
+</ul>
+<p><span style="font-weight: 400;">In 2018, in the wake of the Trump tax giveaway, </span><a href="https://itep.org/corporate-tax-avoidance-in-the-first-year-of-the-trump-tax-law/"><b>91 companies in the Fortune 500 paid no federal taxes</b></a> <span style="font-weight: 400;">on their income and another 56 paid less than 5 percent. These firms could have used their tax windfall to raise wages, purchase new equipment, or invest in research and development. But Trump’s tax giveaway had no strings attached: many of these corporations simply passed their higher profits through to investors and executives by repurchasing more than </span><a href="https://www.cbsnews.com/news/copmanies-spent-record-1-trillion-buying-back-their-own-stock-this-year/"><span style="font-weight: 400;">$1 trillion</span></a><span style="font-weight: 400;"> worth of their own stock. Even worse, many of these companies took advantage of Trump’s </span><a href="wp-content/uploads/2020/09/Buy-America-fact-sheet.pdf"><span style="font-weight: 400;">new tax incentives for offshoring</span></a><span style="font-weight: 400;"> and shipped jobs overseas. </span></p>
+<p><span style="font-weight: 400;">Just a few examples  of the harmful impact of Trump’s corporate tax giveaway include: </span></p>
+<ul>
+<li><span style="font-weight: 400;">Wells Fargo saved </span><a href="https://www.bloomberg.com/news/articles/2020-01-16/trump-tax-cut-hands-32-billion-windfall-to-america-s-top-banks?sref=hKoyLsMo"><span style="font-weight: 400;">nearly $6.5 billion</span></a><span style="font-weight: 400;"> from the tax giveaway in 2018 and 2019, then </span><a href="https://rooseveltinstitute.org/2018/11/07/what-wells-fargos-40-6-billion-in-stock-buybacks-could-have-meant-for-its-employees-and-customers/"><span style="font-weight: 400;">authorized $40 billion</span></a><span style="font-weight: 400;"> worth of stock buybacks, </span><a href="https://www.bloomberg.com/news/articles/2018-02-15/big-banks-got-huge-tax-cuts-then-hiked-cities-interest-rates?sref=j9PkcaMF"><span style="font-weight: 400;">raised interest rates on borrowers</span></a><span style="font-weight: 400;">, and announced that it would </span><a href="https://money.cnn.com/2018/09/20/news/companies/wells-fargo-job-cuts/index.html"><span style="font-weight: 400;">lay off up to 26,000 workers</span></a><span style="font-weight: 400;">.</span></li>
+<li><span style="font-weight: 400;">The pharmaceutical giant AbbVie received a </span><a href="https://news.abbvie.com/news/abbvie-reports-full-year-and-fourth-quarter-2018-financial-results.htm"><span style="font-weight: 400;">$1.3 billion tax handout</span></a><span style="font-weight: 400;">, announced </span><a href="https://www.reuters.com/article/us-abbvie-buyback/abbvie-to-buy-back-10-billion-of-shares-raises-dividend-idUSKCN1FZ2GQ"><span style="font-weight: 400;">$10 billion</span></a><span style="font-weight: 400;"> worth of buybacks, then </span><a href="https://www.reuters.com/article/usa-healthcare-drugpricing/more-january-u-s-price-hikes-take-2020-tally-to-over-330-drugs-with-higher-cost-idUSL1N2970NX"><span style="font-weight: 400;">increased prices</span></a><span style="font-weight: 400;"> for more than 10 of its products, including the arthritis medication, Humira. </span></li>
+<li><span style="font-weight: 400;">JPMorgan Chase </span><a href="https://www.bloomberg.com/news/articles/2020-01-16/trump-tax-cut-hands-32-billion-windfall-to-america-s-top-banks?sref=hKoyLsMo"><span style="font-weight: 400;">pocketed $8.76 billion</span></a><span style="font-weight: 400;"> in tax breaks in 2018 and 2019 and yet last year still charged consumers </span><a href="https://www.responsiblelending.org/sites/default/files/nodes/files/research-publication/crl-overdraft-covid19-jun2019.pdf"><span style="font-weight: 400;">$2 billion in overdraft fees</span></a><span style="font-weight: 400;">, and </span><a href="https://www.bloomberg.com/news/articles/2020-01-28/jpmorgan-plans-to-cut-hundreds-of-jobs-across-consumer-division?sref=j9PkcaMF"><span style="font-weight: 400;">cut hundreds of jobs</span></a><span style="font-weight: 400;">.</span></li>
+<li><span style="font-weight: 400;">Harley-Davidson announced it would </span><a href="https://www.cbsnews.com/news/harley-davidson-cut-jobs-repurchased-shares-after-tax-cut/"><span style="font-weight: 400;">repurchase almost $700 million worth of its own stock</span></a><span style="font-weight: 400;">, </span><a href="https://www.usatoday.com/story/money/nation-now/2018/05/27/harley-davidson-layoffs/647199002/"><span style="font-weight: 400;">slash 350 manufacturing jobs</span></a><span style="font-weight: 400;">, and </span><a href="http://investor.harley-davidson.com/node/17401/html"><span style="font-weight: 400;">shift some of its production overseas</span></a><span style="font-weight: 400;">.</span></li>
+<li><span style="font-weight: 400;">AT&amp;T</span><a href="https://www.axios.com/trump-att-outsourcing-h1b-visa-foreign-workers-1f26cd20-664a-4b5f-a2e3-361c8d2af502.html"> <span style="font-weight: 400;">cut</span></a><a href="https://www.theguardian.com/business/2020/mar/10/at-and-t-layoffs-jobs-slashed-trump-tax-cuts"> <span style="font-weight: 400;">thousands</span></a><span style="font-weight: 400;"> of</span><a href="https://cwa-union.org/news/releases/instead-of-cutting-jobs-att-must-lead-recovery"> <span style="font-weight: 400;">jobs</span></a><span style="font-weight: 400;">, while Trump gave them</span><a href="http://goodjobsnation.org/content/uploads/2018/08/Broken-Promises2.pdf"> <span style="font-weight: 400;">$1 billion</span></a><span style="font-weight: 400;"> in federal contracts and a</span><a href="https://www.theguardian.com/business/2020/mar/10/at-and-t-layoffs-jobs-slashed-trump-tax-cuts"> <span style="font-weight: 400;">$3 billion</span></a><span style="font-weight: 400;"> per year tax cut.</span></li>
+<li><span style="font-weight: 400;">Boeing offshored </span><a href="http://goodjobsnation.org/content/uploads/2018/08/Broken-Promises2.pdf"><span style="font-weight: 400;">more than 2,000 U.S. jobs</span></a><span style="font-weight: 400;"> and announced </span><a href="https://www.cnbc.com/2018/12/17/boeing-raises-its-dividend-20percent-boosts-buyback-plan-to-20-billion.html"><span style="font-weight: 400;">billions in stock buybacks</span></a><span style="font-weight: 400;"> while receiving $29 billion in contracts and a</span><a href="https://qz.com/1572381/the-relationship-between-boeing-trump-and-the-federal-government/#:~:text=The%20Trump%20tax%20cuts%2C%20which,its%202017%20year%2Dend%20results."> <span style="font-weight: 400;">$1.1 billion tax cut</span></a><span style="font-weight: 400;"> from Trump.</span></li>
+</ul>
+<p><b>To help pay for his permanent tax giveaway to corporations, Trump imposed a secret tax hike on middle-class Americans. </b><span style="font-weight: 400;">Trump and his allies needed to sacrifice something in order to satisfy congressional rules and pass their tax giveaway for large corporations and the wealthy. Their solution was to </span><a href="https://taxfoundation.org/the-distributional-impact-of-the-tax-cuts-and-jobs-act-over-the-next-decade/"><span style="font-weight: 400;">raise taxes on the middle class</span></a><span style="font-weight: 400;"> by slowing the rate of inflation in the tax code, which will push working families into higher and higher tax brackets over time and devalue the amount of their tax credits. </span><b>The result is that by 2027, </b><a href="https://www.taxpolicycenter.org/sites/default/files/publication/150816/2001641_distributional_analysis_of_the_conference_agreement_for_the_tax_cuts_and_jobs_act_0.pdf"><b>around 70%</b></a><b> of middle-class families will have to pay higher taxes. </b></p>
+<p><b>III. Biden’s Plan: Make The Wealthy And Corporations Pay Their Fair Share, And Provide Tax Relief For Working Families</b></p>
+<p><span style="font-weight: 400;">While Trump and his allies have sought to mislead, deceive, and flat-out lie by suggesting Biden will raise taxes on ordinary Americans, fact-checkers have called this desperate line of attack what it is &#8212; </span><b>false</b><span style="font-weight: 400;">. </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">According to </span><a href="https://www.politifact.com/factchecks/2020/sep/04/donald-trump-jr/donald-trump-jr-misrepresents-joe-bidens-tax-plan/"><span style="font-weight: 400;">Politifact</span></a><span style="font-weight: 400;">, “Donald Trump Jr. claimed in a widespread tweet that former Vice President Joe Biden ‘wants to raise taxes on 82% of all Americans.’ The eldest son of President Donald Trump was repeating a refrain from the Republican National Convention, where Republican National Committee Chair Ronna McDaniel and Eric Trump made similar claims . . . We rate this statement False.”</span></li>
+<li style="font-weight: 400;"><a href="https://www.usatoday.com/story/news/factcheck/2020/08/30/fact-check-biden-tax-plan-raises-rates-those-who-make-over-400-k/3418926001/"><span style="font-weight: 400;">USA Today</span></a><span style="font-weight: 400;"> wrote</span><span style="font-weight: 400;"> “this claim is FALSE, based on our research. Biden said he will not raise taxes on anyone making less than $400,000 a year. A taxpayer making $75,000, or making $3,000 biweekly, would not move to a higher tax bracket, as claimed. Analysts concluded that Biden&#8217;s tax plan would apply to wealthy individuals and corporations.”</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The nonpartisan </span><a href="http://www.crfb.org/blogs/would-joe-biden-significantly-raise-taxes-middle-class-americans"><span style="font-weight: 400;">Committee for a Responsible Federal Budget</span></a><span style="font-weight: 400;"> stated</span><span style="font-weight: 400;">, &#8220;During the 2020 Republican National Convention, several speakers claimed that Democratic nominee and former Vice President Joe Biden would substantially raise middle-class taxes if elected President . . . We find that these statements range from somewhat misleading to largely false.&#8221;</span></li>
+</ul>
+<p><span style="font-weight: 400;">Joe Biden will not raise taxes on anyone making less than $400,000. Period. But he will ask wealthy Americans and big corporations to pay their fair share, including by:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Raising the corporate tax rate to 28 percent.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Requiring a true minimum tax on ALL foreign earnings of United States companies located overseas so that we do our part to put an end to the global race to the bottom that rewards global tax havens. This will be 21% &#8212; TWICE the rate of the Trump offshoring tax rate and will apply to all income.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Imposing a tax penalty on corporations that ship jobs overseas in order to sell products back to America.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Imposing a 15% minimum tax on book income so that no corporation gets away with paying no taxes.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Raising the top individual income rate back to 39.6 percent.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asking those making more than $1 million to pay the same rate on investment income that they do on their wages.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Joe Biden will provide meaningful tax relief for working families. For years, these Americans have felt the squeeze of </span><a href="https://www.pewresearch.org/fact-tank/2018/08/07/for-most-us-workers-real-wages-have-barely-budged-for-decades/"><span style="font-weight: 400;">stagnating wages</span></a><span style="font-weight: 400;"> and an </span><a href="https://www.cnbc.com/2020/02/04/47-percent-of-americans-say-cost-of-living-is-top-threat-to-future-security.html"><span style="font-weight: 400;">ever-increasing cost-of-living</span></a><span style="font-weight: 400;">. Now, Trump’s tragic mismanagement of the coronavirus pandemic has produced an almost unprecedented economic crisis. Almost </span><a href="https://www.census.gov/data/tables/2020/demo/hhp/hhp13.html"><span style="font-weight: 400;">half of all Americans</span></a><span style="font-weight: 400;"> live in a household that has lost employment income since mid-March and 1 in 4 expect to lose income in September. Approximately </span><a href="https://www.census.gov/data/tables/2020/demo/hhp/hhp13.html"><span style="font-weight: 400;">47% of renters</span></a><span style="font-weight: 400;"> believe they will likely face eviction over the next two months and more than 1 in 5 homeowners consider foreclosure likely. </span></p>
+<p><span style="font-weight: 400;">Biden is proposing more than a dozen bold policies to bolster financial security and spur economic growth by reducing taxes on the middle class. </span></p>
+<p><b>Expand the Child Tax Credit to help families through the crisis. </b><span style="font-weight: 400;">Biden understands the urgency of delivering immediate financial assistance to working families. As President, </span><b>he will support a significant expansion of the Child Tax Credit (CTC) for the duration of the crisis, as proposed in the House-passed </b><a href="https://www.congress.gov/116/bills/hr6800/BILLS-116hr6800pcs.pdf"><b>HEROES Act</b></a><span style="font-weight: 400;">. Biden’s CTC expansion will provide thousands of dollars of tax relief for middle-class households. It will also help the most-hard pressed working families avoid poverty and attain greater economic security. Specifically, Biden will increase the CTC to $3,000 per child for children ages 6 to 17 and $3,600 for children under 6. He will also make the CTC fully refundable so that hard-pressed families can access these resources quickly. And, he will allow families to receive monthly payments if they choose. Under the Biden plan, for 2021 and then as long as economic conditions require:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A teacher and an electrician with a 7th grader and a newborn will receive an additional $2,600 &#8212; or $6,600 total. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A nurse and a grocery store clerk with a 2-year-old and a 5-year-old will receive an additional $3,200 &#8212; or $7,200 total. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A firefighter with three teenagers will receive an additional $3,000 &#8212; or $9,000 total. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">A letter carrier and a child care worker with children ages three, five, seven, and nine will receive an additional $5,200 &#8212; or $13,200 total. </span></li>
+</ul>
+<p><b>As a long-term strategy to ease the financial burden on working families, Biden is committed to offering specific tax cuts for major costs these families face, including:</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Tax credits that help working families afford health insurance. </b><span style="font-weight: 400;">In addition to his bold policies to protect and expand Obamacare, Biden will ensure that no family spends more than 8.5% of their income on health insurance by expanding access to refundable health premium tax credits. </span></li>
+<li style="font-weight: 400;"><b>Tax credits that help working families afford child care. </b><span style="font-weight: 400;">Biden will offer up to $8,000 in tax credits to help low-income and middle-class families pay for child care as part of his comprehensive plan to create a 21st century caregiving economy. This is a major expansion of the existing tax credit which could mean up to $6,800 in additional tax relief each year for such families.</span></li>
+<li style="font-weight: 400;"><b>Tax credits that help working families pay for the cost of caring for an aging loved one</b><span style="font-weight: 400;">, modeled off of </span><a href="https://www.aarp.org/caregiving/financial-legal/info-2019/tax-credit-for-caring-act.html"><span style="font-weight: 400;">legislation supported by AARP</span></a><span style="font-weight: 400;">. Biden will also increase the generosity of tax benefits for older Americans who choose to buy long-term care insurance. </span></li>
+<li style="font-weight: 400;"><b>Tax credits to help families buy their first homes and build wealth &#8212; up to $15,000. </b><span style="font-weight: 400;">Building off of a </span><a href="https://www.irs.gov/newsroom/first-time-homebuyer-credit-questions-and-answers-basic-information"><span style="font-weight: 400;">temporary tax credit</span></a><span style="font-weight: 400;"> expanded as part of the Recovery Act, Biden’s tax credit will be permanent and advanceable, meaning that homebuyers receive the tax credit when they make the purchase instead of waiting to receive the assistance when they file taxes the following year.</span></li>
+</ul>
+<p><b>Equalizing the tax benefits of retirement plans. </b><span style="font-weight: 400;">Current tax benefits for retirement savings provide upper-income families with a significant tax break, while providing a limited benefit for low- and middle-income workers. Biden will equalize benefits across the income scale, so working families also receive substantial tax benefits when they put money away for retirement.</span></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="two-tax-policies.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="two-tax-policies.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/two-tax-policies/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":612,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>The Biden Plan for Mobilizing American Talent and Heart to Create a 21st Century Caregiving and Education Workforce | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="caregiving.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The Biden Plan for Mobilizing American Talent and Heart to Create a 21st Century Caregiving and Education Workforce | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Joe Biden has taken care of aging parents, and he’s been a single parent. Biden knows how hard it is to raise a family and to care for a sick family member. And, he knows how hard it is for millions of Americans who are just trying to make ends meet. The pandemic has laid [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/caregiving/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-10-18T18:26:25+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Vision_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Vision_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="18 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/caregiving/#webpage","url":"https://joebiden.com/caregiving/","name":"The Biden Plan for Mobilizing American Talent and Heart to Create a 21st Century Caregiving and Education Workforce | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-07-29T04:38:56+00:00","dateModified":"2020-10-18T18:26:25+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/caregiving/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fcaregiving%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fcaregiving%2F&#038;format=xml" />
+<link rel="alternate" href="caregiving.html" hreflang="en" />
+<link rel="alternate" href="es/el-plan-de-biden-para-movilizar-el-talento-y-el-corazon-estadounidenses-para-crear-una-fuerza-laboral-para-el-cuidado-y-la-educacion-del-siglo-21/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-3758 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="caregiving.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="caregiving.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-movilizar-el-talento-y-el-corazon-estadounidenses-para-crear-una-fuerza-laboral-para-el-cuidado-y-la-educacion-del-siglo-21/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/el-plan-de-biden-para-movilizar-el-talento-y-el-corazon-estadounidenses-para-crear-una-fuerza-laboral-para-el-cuidado-y-la-educacion-del-siglo-21/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-3758 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan for Mobilizing American Talent and Heart to Create a 21st Century Caregiving and Education Workforce</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden has taken care of aging parents, and he’s been a single parent. Biden knows how hard it is to raise a family and to care for a sick family member. And, he knows how hard it is for millions of Americans who are just trying to make ends meet.</span></p>
+<p><span style="font-weight: 400;">The pandemic has laid bare just how hard it is for people in this country to find access to quality caregiving they need for themselves, or to juggle the responsibilities of working and also caring for family members. People in nursing homes have been hit especially hard by the coronavirus, shining a bright light on the fact that many would prefer to be in a home or community based setting. And, many parents are struggling to find child care while they go to their essential jobs, or find themselves as 24/7 caregivers trying to keep their children safe and learning while working remotely. Other parents are caring for their kids, while worrying about how they will make ends meet after having hours cut or losing their jobs. And, at the same time, professional caregivers have either lost their jobs or continue to work while putting their lives at risk without sufficient pay and benefits. President Trump’s failure to take action to control the coronavirus has worsened all of these challenges facing families across the country.</span></p>
+<p><span style="font-weight: 400;">Even before the pandemic, our country was experiencing a caregiving crisis. Some care needs were going untended. Other care needs were filled by Americans serving as unpaid caregivers lacking the financial support or respite care they needed, and sometimes putting their careers on hold. Often, families made caregiving decisions that came with great financial, professional, physical and emotional costs. Caregivers and early childhood educators &#8211; disproportionately women of color &#8211; have been underpaid, unseen, and undervalued for far too long.</span></p>
+<p><span style="font-weight: 400;">Biden believes that if we truly want to reward work in this country, we have to ease the financial burden of care that families are carrying, and we have to elevate the compensation, benefits, training and education opportunities for certification, and dignity of caregiving workers and educators.</span></p>
+<p><span style="font-weight: 400;">Biden’s</span><a href="build-back-better.html"><span style="font-weight: 400;"> economic recovery plan</span></a><span style="font-weight: 400;"> won’t just build back our economy to the way it was before, but build it back better &#8211; including by building a robust 21st century caregiving and education workforce. </span><b>As a first step, Biden will immediately provide states, tribal, and local governments with the fiscal relief they need to keep workers employed and keep vital public services running, including direct care and child care services.</b></p>
+<p><span style="font-weight: 400;">Once we are able to move from relief to recovery, Biden will make substantial investments in the infrastructure of care in our country — to make child care more affordable and accessible for working families, and to make it easier for aging relatives and loved ones with disabilities to have quality, affordable home- or community-based care. And, he is proposing to give caregiving workers and early childhood educators a raise and stronger benefits, treating them as the professionals they are.</span></p>
+<p><span style="font-weight: 400;">These steps will mean families will be able to afford better, more productive care and early education for their loved ones. They will also have a significant jobs impact: </span><span style="font-weight: 400;">This plan, combined with Biden’s proposal to provide families with up to 12 weeks of paid family and medical leave, will put 3 million Americans to work in new care and education jobs, and increase overall employment by about 5 million after taking into account the economic impacts of increased labor force participation after unpaid caregivers &#8211; disproportionately women &#8211; are freed up to pursue paid careers if they so choose.</span></p>
+<p><span style="font-weight: 400;">Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Expand access to a broad array of long-term services and supports in local settings, </b><span style="font-weight: 400;">including through closing the gaps in Medicaid for home- and community-based services and establishing a state innovation fund for creative, cost effective direct care services.</span></li>
+<li style="font-weight: 400;"><b>Ensure access to high-quality, affordable child care and offer universal preschool to three-and four-year olds </b><span style="font-weight: 400;">through greater investment</span><span style="font-weight: 400;">, </span><span style="font-weight: 400;">expanded tax credits, and sliding-scale subsidies. </span></li>
+<li style="font-weight: 400;"><b>Build safe, energy-efficient, developmentally appropriate child care facilities</b><span style="font-weight: 400;">, including in workplaces, so that parents and guardians never again have to search in vain for a suitable child care option. </span></li>
+<li style="font-weight: 400;"><b>Treat caregivers and early childhood educators with respect and dignity</b><span style="font-weight: 400;">, and give them the pay and benefits they deserve, training and career ladders to higher-paying jobs, the choice to join a union and bargain collectively, and other fundamental work-related rights and protections.</span></li>
+</ul>
+<p><span style="font-weight: 400;">The plan will cost $775 billion over 10 years and will be paid for by rolling back unproductive and unequal tax breaks for real estate investors with incomes over $400,000 and taking steps to increase tax compliance for high-income earners.</span></p>
+<p><span style="font-weight: 400;">This plan builds on Biden’s proposals to support informal caregivers &#8211; family members or loved ones who do this work unpaid, including a </span><a href="older-americans..html"><span style="font-weight: 400;">$5,000 tax credit</span></a><span style="font-weight: 400;"> for informal caregivers, </span><a href="older-americans..html"><span style="font-weight: 400;">Social Security credits</span></a><span style="font-weight: 400;"> for people who care for their loved ones, and </span><a href="militaryfamilies.html"><span style="font-weight: 400;">professional and peer support</span><span style="font-weight: 400;"> for caregivers of wounded, injured, or ill active duty service members and veterans</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"> </span></p>
+<p><b>EXPAND ACCESS TO DIGNIFIED CARE FOR OLDER AMERICANS AND THOSE WITH DISABILITIES</b></p>
+<p><span style="font-weight: 400;">Biden will help ease the financial burden on families caring for aging relatives and loved ones with disabilities and reduce unnecessary and costly hospitalizations, while providing people who need care with better, more dignified services and supports that meet their specific needs and personal choices.  </span></p>
+<p><span style="font-weight: 400;">Biden will allocate $450 billion to give more people the choice to receive care at home or in supportive community situations, or to have that choice for their loved ones. He will help states offer cost-effective options for affordable primary and preventive care, and affordable support services like help with meals, transportation, home safety, and quality day programs for older Americans. This commitment will reduce health expenditures, help more Americans avoid unnecessary and expensive hospitalizations, and result in an expansion of the caregiving and community health workforce by roughly 1.5 million jobs. Specifically, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Eliminate the current waitlist for home and community services under Medicaid. </b><span style="font-weight: 400;">Approximately </span><a href="https://www.kff.org/health-reform/state-indicator/waiting-lists-for-hcbs-waivers/?currentTimeframe=0&amp;sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D"><span style="font-weight: 400;">800,000 people</span></a><span style="font-weight: 400;"> are on the waitlist for home and community care under Medicaid. It can take </span><a href="https://www.kff.org/report-section/key-questions-about-medicaid-home-and-community-based-services-waiver-waiting-lists-appendix-tables/"><span style="font-weight: 400;">as many as five years</span></a><span style="font-weight: 400;"> for these individuals to get the services they badly need. Biden will increase Medicaid funding to states, the District of Columbia, and outlying territories to pay for the full cost of ensuring these 800,000 individuals and families receive long-term services and supports in the most appropriate setting, with the support of qualified care providers. Following the elimination of the current waiting list, states will be given a choice to convert their current home and community based care services waivers into a new state plan option with an enhanced federal match. This will enable states to make home and community-based services more available to people in need.</span></li>
+<li style="font-weight: 400;"><b>Establish a long-term services and supports innovation fund to help expand home- and community-based alternatives to institutional care. </b><span style="font-weight: 400;">Biden believes we must move aggressively to eliminate the institutional bias that pervades our public programs. A Biden Administration will dedicate substantial resources to this fund to help states and locally based entities test innovative models that expand home- and community-based alternatives to institutional care. These could include approaches that provide care while allowing individuals to retain independence, such as day programs and respite services that enable unpaid caregivers to work, alternative home and community models that coordinate or directly provide care, and Medicaid buy-in models. For example, </span><a href="https://nursing.jhu.edu/faculty_research/research/projects/capable/"><span style="font-weight: 400;">the CAPABLE (Community Aging in Place-Advancing Better Living for Elders) Program</span></a><span style="font-weight: 400;"> provides home repairs and modifications to help create safer, more functional home environments for older adults. An initial trial in Baltimore found about $3,000 in program costs yielded more than $20,000 in savings. The pilot is now being tested in </span><a href="https://nursing.jhu.edu/faculty_research/research/projects/capable/where-we-work.html"><span style="font-weight: 400;">27 cities in 16 states</span></a><span style="font-weight: 400;">. Successful, cost-effective approaches to long-term care will be scaled up nationally. This fund will be administered by the Center for Medicare and Medicaid Innovation, which was established by the Affordable Care Act to support innovations that improve health care while constraining costs. </span></li>
+<li style="font-weight: 400;"><b>Improve caregiving and health outcomes in our nation’s most underserved communities by adding 150,000 community health workers. </b><span style="font-weight: 400;">Addressing our nation’s caregiving challenges also requires investing more in communities that suffer from significant racial health disparities driven by chronic underfunding and systemic racial discrimination. Biden will more than triple the number of community health workers – often workers of color serving the communities where they live – who are part of a national effort to both prevent and treat chronic conditions in underserved, economically-disadvantaged urban and rural communities. He will do this by providing direct grant funding, as well as adding community health worker services as an optional benefit for states under Medicaid. Community health solutions can lead to better health outcomes, allow people to live with more independence, and ease caregiving challenges through a focus on prevention and care coordination, reducing unnecessary and expensive hospitalization. And, in times of a health crisis, they can be repurposed to quickly fill basic public health needs. Repeated studies from across the country, including </span><a href="https://www.communitycarenc.org/media/files/data-brief-11-savings-impact-ccnc.pdf"><span style="font-weight: 400;">North Carolina</span></a><span style="font-weight: 400;"> and </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5607679/#bib5"><span style="font-weight: 400;">Philadelphia</span></a><span style="font-weight: 400;">, have shown that investments in community-based health care and health workers save money by reducing hospitalizations and costly treatments that could have been avoided or better managed, while also improving health and improving career ladders for workers, with annual savings of up to $2,290 per beneficiary. A recent study revealed that every dollar spent on community health workers would yield </span><a href="https://www.healthaffairs.org/doi/10.1377/hlthaff.2019.00981"><span style="font-weight: 400;">$2.47</span></a><span style="font-weight: 400;"> in savings. </span></li>
+<li style="font-weight: 400;"><b>Fill additional gaps in the nation’s health care infrastructure that impact families’ caregiving responsibilities.</b>
+<ul>
+<li style="font-weight: 400;"><b>Address the opioid epidemic and substance use disorders by training 35,000 workers to provide critical support.</b> <span style="font-weight: 400;">Today, we have a shortage of workers to help Americans experiencing substance use disorders. Biden will increase funding and training for workers to provide counseling, care, and peer support for these individuals.</span></li>
+<li style="font-weight: 400;"><b>Engage in a national strategy to recruit, retain and empower nursing professionals. </b><span style="font-weight: 400;">Biden will fully and rapidly implement the CARES Act which allocated nearly $1 billion over four years to address nursing burnout, faculty recruitment and retention, and increase nursing workforce diversity. A Biden administration will provide additional funding to ensure we are building up the training, clinical and educational capacity to welcome – not turn away – the qualified individuals interested in nursing education and training, bolstering the nursing profession for years to come.</span></li>
+<li style="font-weight: 400;"><b>Create tens of thousands of jobs providing care to veterans </b><span style="font-weight: 400;">by filling severe occupational shortages and vacant positions at almost every U.S. Department of Veterans Affairs facility. Biden will remove existing hiring and pay barriers that make it difficult to replace valued employees once they depart. These investments will ensure we fulfill our sacred obligation to provide high-quality care to our veterans.</span></li>
+<li style="font-weight: 400;"><b>Provide resources for Indian Health Service to create new health care jobs</b><span style="font-weight: 400;">. The Indian Health Service (IHS) has been underfunded for decades, and does not have enough </span><a href="https://www.gao.gov/products/GAO-18-580"><span style="font-weight: 400;">doctors or nurses</span></a><span style="font-weight: 400;"> to provide necessary care for American Indians and Alaska Natives. Biden has called for dramatically increasing funding for Indian Health Service &#8211; and making it mandatory &#8211; allowing IHS to recruit, train, and pay health professionals.</span></li>
+<li style="font-weight: 400;"><b>Create a Public Health Jobs Corps. </b><span style="font-weight: 400;">In partnership with state and local governments, and in consultation with unions, Biden will mobilize at least 100,000 additional Americans with support from trusted local organizations in communities most at risk across the country to perform culturally competent approaches to identify people at risk of contracting or spreading infectious diseases, including COVID-19; staff social isolation hotlines (similar to the data-informed model of the Crisis Text Line); provide COVID-19 vaccinations to immunize the population as quickly as possible; and conduct local outreach efforts to support people who are at high risk of COVID-19, especially low and moderate-income families, communities of color, and older adults. Beyond the current pandemic, those who enter the U.S. Public Health Jobs Corps will be positioned to take on jobs as community health workers and other jobs that help build longer term health infrastructure &#8212; including fighting the opioid epidemic and addressing social determinants of health.</span></li>
+</ul>
+</li>
+</ul>
+<p><span style="font-weight: 400;">It is also just too hard to figure out how to get care when you need it. </span><span style="font-weight: 400;">As part of his proposal, Biden will work with states to set up a simpler way for Americans searching for caregiving help to go online, find out what financial support they might be eligible for based on their income, and identify potential caregivers. </span></p>
+<p><b>MAKE HIGH-QUALITY CHILD CARE AFFORDABLE AND PRESCHOOL UNIVERSAL</b></p>
+<p><span style="font-weight: 400;">The pandemic has highlighted what has always been true: child care and early learning are essential to many Americans, providing a nurturing environment for children to learn and grow and allowing parents and guardians the choice to pursue careers and contribute to the economy while supporting their families. The pandemic has also reminded parents around the country just how valuable caregivers and educators are – and how challenging and important their jobs are. </span></p>
+<p><span style="font-weight: 400;">Even before the pandemic, millions of parents </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2019/03/28/467488/child-care-crisis-keeping-women-workforce/"><span style="font-weight: 400;">struggled to find</span></a><span style="font-weight: 400;"> a space for their child in a quality care and educational setting, keeping parents – primarily mothers – out of the workforce or causing them to settle for lower-paying jobs that allowed them time to provide their own child care. And now, many more parents are worrying how they will educate and care for their children while they work, while schools and child care providers are facing extreme financial challenges and uncertainty. Many child care facilities have lost much of their revenues and are struggling to pay their bills and stay afloat. Providers who already operate on extremely thin margins are spending money on personal protective equipment and cleaning supplies to keep children and early childhood educators safe, while facing falling revenues as they serve fewer children to make it easier to physically distance. If they don’t get help soon, a sizable portion of child care providers might have to close their doors permanently and as many as </span><a href="https://www.americanprogress.org/issues/early-childhood/news/2020/04/24/483817/coronavirus-pandemic-lead-permanent-loss-nearly-4-5-million-child-care-slots/"><span style="font-weight: 400;">half of all child care slots could disappear</span></a><span style="font-weight: 400;">. The danger of a radical decline in the child care sector will increase the challenges parents face as they seek to return to work, make it harder for the economy to recover, and force many early childhood educators – who are disproportionately </span><a href="https://cscce.berkeley.edu/files/2016/Early-Childhood-Workforce-Index-2016.pdf"><span style="font-weight: 400;">women of color</span></a><span style="font-weight: 400;"> – out of their jobs.</span></p>
+<p><span style="font-weight: 400;">President Trump has failed to effectively respond to the caregiving crisis for months, while exacerbating it by letting the virus continue to spread. He should immediately work with Congress to provide emergency relief to save child care centers and family child care providers and support child care workers. This urgent action is critical to investing in the care and education of our youngest children and ensuring that parents and guardians have the support they need to return to work when it is safe to do so. </span></p>
+<p><span style="font-weight: 400;">Beyond addressing the pandemic-driven child care crisis, Biden will build our child care infrastructure back better for the long-term, including by making high-quality child care affordable and preschool universal for three- and four-year-olds. His plan will cultivate the potential of young children, provide parents – primarily mothers – with career opportunities and economic security, create an additional 1.5 million new, good, early education jobs, and improve the existing jobs for the essential workers who educate our young children.</span> <span style="font-weight: 400;">Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Provide</b><a href="education.html"><b> all 3- and 4-year-olds access to free, high-quality pre</b></a><b>-kindergarten,</b><span style="font-weight: 400;"> laying a strong foundation for children and saving parents thousands of dollars a year on child care costs. Students who enter kindergarten school-ready are nearly two times more likely to </span><a href="https://www.theounce.org/wp-content/uploads/2017/03/Achieving-Kindergarten-ReadinessFact-Sheet.pdf"><span style="font-weight: 400;">master basic skills by age 11</span></a><span style="font-weight: 400;">, and high-quality preschool is critical to this preparation. </span><a href="https://www.rand.org/pubs/research_reports/RR1461.html"><span style="font-weight: 400;">One study</span></a><span style="font-weight: 400;"> found students who enter kindergarten school-ready are also less likely to repeat a grade and are more likely to graduate from high school. And studies show that high-quality preschool </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2013/11/12/79252/the-school-readiness-gap-and-preschool-benefits-for-children-of-color/#:~:text=Access%20to%20high%2Dquality%20preschool,career%20ready%20later%20in%20life.&amp;text=By%20school%20entry%2C%20the%20gap,poorest%20children%20is%20already%20pronounced."><span style="font-weight: 400;">reduces the school readiness gap</span></a><span style="font-weight: 400;"> caused by systemic racism. So parents and guardians can choose what works for them, Biden will partner with states to provide a mixed delivery system that includes public school systems, child care centers and family child care providers, and Head Start. </span></li>
+<li style="font-weight: 400;"><b>Offer low-income and middle-class families an up to $8,000 tax credit to help pay for child care.</b><span style="font-weight: 400;"> Families will get back as a tax credit as much as half of their spending on child care for children under age 13, up to a total of $8,000 for one child or $16,000 for two or more children. The tax credit will be refundable, meaning that families who don’t owe a lot in taxes will still benefit, and Biden will actively work with child care experts to explore ways to make it advanced, so cash-strapped families can immediately benefit from the credit. The full 50% reimbursement will be available to families making less than $125,000 a year. And, all families making between $125,000 and $400,000 will receive a partial credit ensuring that in no case will they get less under the Biden plan than they are eligible for today.</span></li>
+<li style="font-weight: 400;"><b>Provide access to affordable, high-quality child care</b> <b>on a sliding scale for low-income and middle-class families who would prefer this option over the tax credit for young children. </b><span style="font-weight: 400;">For young children ages 0-5, Biden will adopt the child care program envisioned in Senator Murray and Congressman Bobby Scott’s bipartisan </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/568"><span style="font-weight: 400;">Child Care for Working Families Act</span></a><span style="font-weight: 400;">. He will:</span>
+<ul>
+<li style="font-weight: 400;"><b>Save families money by helping them with child care costs. </b><span style="font-weight: 400;">Biden will partner with states to provide sliding scale subsidies so that the </span><span style="font-weight: 400;">cost of child care for low-income and middle-class families will be based on what they can afford. For children under the age of 5, no family earning below 1.5 times the median income in their state will have to pay more than 7% of their income for quality care, which was </span><span style="font-weight: 400;">the </span><a href="https://www.govinfo.gov/content/pkg/FR-2016-09-30/pdf/2016-22986.pdf"><span style="font-weight: 400;">affordable child care</span></a><span style="font-weight: 400;"> benchmark set by the Obama-Biden Administration. A typical family will pay no more than </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2018/09/13/457518/proposed-bill-help-american-families-afford-child-care/"><span style="font-weight: 400;">$45 per week</span></a><span style="font-weight: 400;">.</span><span style="font-weight: 400;"> For the most-hard pressed working families, such early childcare costs would be fully covered, saving these families about $200 per week. Biden will also set aside a portion of the funds for tribes to expand access to quality child care for Native children, as well as for outlying areas including U.S. territories.</span></li>
+<li style="font-weight: 400;"><b>Invest in quality child care standards and a well-trained and well-compensated child care workforce. </b><span style="font-weight: 400;">The quality of care matters: nearly all of </span><a href="https://www.firstthingsfirst.org/early-childhood-matters/brain-development/"><span style="font-weight: 400;">brain development</span></a><span style="font-weight: 400;"> happens before a child turns three-years-old. For low-income children, every dollar invested in high-quality child care can result in a </span><a href="https://www.nber.org/papers/w22993.pdf"><span style="font-weight: 400;">$7.30 return</span></a><span style="font-weight: 400;"> with lifetime impacts for children, as they grow up healthier, do better in school, and earn more over the course of their lifetimes. Biden will ensure families have access to the quality care their children need by working in partnership with states to ensure providers meet rigorous quality standards. These standards will include a developmentally appropriate curriculum, small class sizes, and support positive interactions between educators and children that promote children&#8217;s socio-emotional development. He will also provide funding reflective of the true cost of quality care. Recognizing that quality begins with supporting the early childhood workforce, Biden will invest in strategies to retain and grow the pool of diverse, talented early childhood educators and give them the time, resources and support &#8211; like coaches, training and education opportunities for certification, and financial stability &#8211; that they need to provide children an excellent education. </span></li>
+<li style="font-weight: 400;"><b>Expand access to care that works for working parents. </b><span style="font-weight: 400;">Biden will provide incentives for providers to fill critical child care shortages, including in the early mornings, evenings, and weekends, and in many rural communities that have few providers today. He will offer bonus payments to providers who operate during nontraditional hours and create a Child Care Growth and Innovation fund that will provide grants to programs filling essential needs, including expanding access to high-quality care for families with high barriers to care. He will also ensure all families will be able to choose high-quality child care that works for them, whether a child care center, home-based care with a family child care provider, or an informal arrangement with a friend, family member, or neighbor. And, Biden will build on the Obama-Biden Administration’s efforts to ensure Early Head Start is an option for families that will benefit from comprehensive family support and child development resources, including through doubling </span><a href="https://www.acf.hhs.gov/sites/default/files/occ/what_is_the_early_head_start_cc_partnership_final_4_508.pdf?nocache=1365689128"><span style="font-weight: 400;">Early Head Start-Child Care Partnerships</span></a><span style="font-weight: 400;">. </span></li>
+</ul>
+</li>
+<li style="font-weight: 400;"><b>Ensure families with school-aged children have expanded access to after-school, weekend, and summer care.</b><span style="font-weight: 400;"> Biden will expand Child Care Development Block Grant subsidies to increase the number of school-aged children up to age 13 in low-income families who can benefit from the program. Low- and middle-income families will also be able to take advantage of Biden’s expanded, refundable tax credit to help cover after-school, weekend, and summer care costs. And Biden will expand support for community schools, which often provide before, after-school, and summer learning opportunities, and increase funding for after-school programs, community centers, and extracurriculars to keep children safe, learning, and having fun when school is not in session. This includes expanding the 21st Century Community Learning Centers that provide critical enrichment opportunities for school-aged children.</span></li>
+<li style="font-weight: 400;"><b>Invest in child care and other wraparound services at community colleges, so parents don’t have to choose between their own education and their children. </b><a href="https://iwpr.org/publications/parents-college-numbers/"><span style="font-weight: 400;">One in four</span> </a><span style="font-weight: 400;">community college students is a parent </span><span style="font-weight: 400;">&#8212; and these parents are </span><a href="https://iwpr.org/wp-content/uploads/2017/03/ACCT_Paper-3-8-17-final.pdf"><span style="font-weight: 400;">disproportionately students of color</span></a><span style="font-weight: 400;">, and over half are Black women &#8212; yet </span><span style="font-weight: 400;">most</span><a href="https://iwpr.org/wp-content/uploads/2017/02/C451-5.pdf"><span style="font-weight: 400;"> colleges</span></a> <span style="font-weight: 400;">do not offer child care. It can be hard for many of these parents to graduate while juggling an extra job to pay their bills or caring for their children. Biden will </span><span style="font-weight: 400;">provide funds for states, the District of Columbia, and outlying territories to invest in wraparound services at community colleges, which could include child care for students’ children, while also creating new jobs for early childhood educators in the process. </span></li>
+<li style="font-weight: 400;"><b>Make sure more military children have access to the quality child care Department of Defense provides. </b><span style="font-weight: 400;">Biden will fully fund installation-based child care facilities</span> <span style="font-weight: 400;">and expand awareness of the U.S. Department of Defense fee assistance program,</span><a href="https://www.militaryfamily.org/get-involved/policy-issues/"> <span style="font-weight: 400;">as supported by leading advocates for military families</span></a><span style="font-weight: 400;">, so that military spouses can more easily pursue their education and careers and tap into respite care to relieve the stresses of deployments, and members of our military can rest easier knowing their children are well cared for. </span></li>
+</ul>
+<p><span style="font-weight: 400;">Not only will these investments </span><span style="font-weight: 400;">create jobs for new early educators, Biden’s </span><a href="education.html"><span style="font-weight: 400;">plan to support our public schools</span></a><span style="font-weight: 400;"> will also create new jobs by tripling Title I funding, fully-funding IDEA, funding community schools, and doubling the number of psychologists, counselors, nurses, social workers, and other health professionals in our schools so our kids get the mental health care they need.</span></p>
+<p><b>BUILD SAFE CHILD CARE FACILITIES</b></p>
+<p><span style="font-weight: 400;">Our nation faced a massive shortage of child care facilities before the pandemic, and the shortage has only intensified since then. One survey found that, even before COVID-19 hit, </span><a href="https://www.americanprogress.org/issues/early-childhood/reports/2019/03/28/467488/child-care-crisis-keeping-women-workforce/"><span style="font-weight: 400;">43% of parents</span></a><span style="font-weight: 400;"> had difficulty locating child care, and many more struggled to find convenient, affordable care. This shortage stresses parents and guardians, hurts family pocketbooks, and disadvantages children in areas with insufficient child care options.</span></p>
+<p><span style="font-weight: 400;">Biden will address this shortage by accelerating the construction and renovation of safe and developmentally appropriate child care facilities in communities and in workplaces, so parents do not have to search in vain for a suitable child care option. Specifically, </span><span style="font-weight: 400;">Biden will create a new child care construction tax credit to encourage businesses to build child care facilities at places of work. Employers will receive 50% of the first $1 million of construction costs per facility, so that employees can enjoy the peace of mind and convenience that comes with on-site child care. At the same time, he’ll make direct investments in building new child-care facilities and upgrading existing facilities around the country that are not accessible for people with disabilities, or safe or developmentally appropriate for young children who are especially vulnerable to environmental contaminants like lead and mold, and to safety hazards like electrical outlets. I</span><span style="font-weight: 400;">f his tax credit is fully utilized, and coupled with direct investments, these policies will lead to tens of thousands of new child care facilities across the country.</span></p>
+<p><span style="font-weight: 400;">All infrastructure investments will require high standards for the quality of the facilities, including ensuring they are healthy, energy efficient, climate resilient, developmentally appropriate places to learn and accessible for children with disabilities. And, they will require </span><a href="infrastructure/index.html"><span style="font-weight: 400;">high labor standards</span></a><span style="font-weight: 400;"> for the people who build the facilities, creating thousands of middle-class construction jobs with a choice to join a union. </span></p>
+<p><b>REWARD CAREGIVERS AND EDUCATORS WITH THE BENEFITS AND PROTECTIONS THEY DESERVE</b></p>
+<p><span style="font-weight: 400;">While we rely on our nation’s caregivers and educators to play essential roles in the lives of our loved ones, their current pay and benefits are abysmal. Caregivers and early childhood educators &#8212; who are disproportionately women and people of color &#8212; are poorly compensated. </span><a href="https://www.bls.gov/OOH/healthcare/home-health-aides-and-personal-care-aides.htm"><span style="font-weight: 400;">Direct support professionals</span></a><span style="font-weight: 400;"> and </span><a href="https://www.bls.gov/oes/2018/may/oes399011.htm"><span style="font-weight: 400;">child care</span></a><span style="font-weight: 400;"> workers earn on average less than $12 an hour and $25,000 annually. This low pay contributes to extremely </span><a href="https://phinational.org/wp-content/uploads/2020/01/Its-Time-to-Care-2020-PHI.pdf"><span style="font-weight: 400;">high rates of turnover</span></a><span style="font-weight: 400;"> in the care workforce, which hurts these workers and those for whom they care. </span></p>
+<p><span style="font-weight: 400;">Biden will maintain and grow a diverse, talented care and education workforce by providing increased pay and benefits, and access to collective bargaining, training and education, and career ladders. He will ensure these workers receive:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Increased pay. </b><span style="font-weight: 400;">No one should have to work more than one job to make ends meet. Biden will ensure caregivers and early childhood educators receive a raise, and get the pay they deserve, including by setting standards for the funding allocated under this plan. And, there is no reason an educator teaching toddlers should be making less than a similarly qualified kindergarten educator &#8212; Biden will also ensure early childhood educators in child care settings and public schools receive similar pay and benefits to elementary school teachers if they have similar qualifications and experience. </span></li>
+<li style="font-weight: 400;"><b>Benefits they have earned. </b><span style="font-weight: 400;">Benefits include affordable health care through their jobs or Biden’s new public option, federally-provided paid family and medical leave for up to 12 weeks, up to 7 days of paid sick leave, and affordable child care for their own children.</span></li>
+<li style="font-weight: 400;"><b>Stronger legal protections and the choice to join a union and collectively bargain. </b><span style="font-weight: 400;">Biden will work to ensure all workers &#8211; including direct support workers and early childhood educators &#8211; have an effective, meaningful way to unionize and collectively bargain, whether they work in a center- or home-based setting. He will make it easier to organize by signing the Protecting the Right to Organize (PRO) Act and providing local and state government workers with bargaining rights, fully restoring collective bargaining to federal government workers, and also improving the conditions of many care jobs by signing into law the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2112/text"><span style="font-weight: 400;">Domestic Workers’ Bill of Rights</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><b>Training and career ladders.</b><span style="font-weight: 400;"> Home care workers and early educators deserve opportunities for quality training and education and meaningful credentials so they can earn higher wages, develop rewarding and lasting careers, and stay in their jobs for longer, critical ingredients to delivering high-quality care and education. Biden will expand opportunities for these workers to earn needed credentials by investing in high quality training and education programs that lead to a certificate, as well as ongoing, job-embedded training and professional development through programs like labor-management training and registered apprenticeships. He will work with employers, unions and worker organizations, community colleges, the public workforce system, and organizations representing older Americans and people with disabilities and early childhood educators to modernize and develop new training programs for these jobs. Critically, he’ll provide funding for states to hire coaches for early childhood educators to continuously help them deliver high-quality learning experiences. And, he will create opportunities for these workers to further upskill, while building a pipeline of diverse early educators and health workers, through his </span><span style="font-weight: 400;">plan</span><a href="beyondhs.html"><span style="font-weight: 400;"> for Education Beyond High School</span></a><span style="font-weight: 400;">. </span></li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="caregiving.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-movilizar-el-talento-y-el-corazon-estadounidenses-para-crear-una-fuerza-laboral-para-el-cuidado-y-la-educacion-del-siglo-21/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="caregiving.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/caregiving/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":498,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

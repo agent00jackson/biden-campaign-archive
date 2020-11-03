@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan Biden De Educación Más Allá De La Escuela Secundaria | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan Biden De Educación Más Allá De La Escuela Secundaria | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Joe Biden se postula para presidente para reconstruir la columna vertebral de los Estados Unidos, la clase media, y esta vez asegurarse de que todos tengan una oportunidad. En la economía actual cada vez más globalizada e impulsada por la tecnología, 12 años de educación ya no son suficientes para que los trabajadores estadounidenses sigan [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-05T08:35:32+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Higher-Education_1600x836_Digital_062920_Photo_V1-1-1024x682.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="682" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Higher-Education_1600x836_Digital_062920_Photo_V1-1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="21 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria/#webpage","url":"https://joebiden.com/es/el-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria/","name":"El Plan Biden De Educaci\u00f3n M\u00e1s All\u00e1 De La Escuela Secundaria | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-10-22T20:17:56+00:00","dateModified":"2020-08-05T08:35:32+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria%2F&#038;format=xml" />
+<link rel="alternate" href="../../beyondhs..html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1471 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../beyondhs..html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../beyondhs..html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1471 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan Biden De Educación Más Allá De La Escuela Secundaria</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden se postula para presidente para reconstruir la columna vertebral de los Estados Unidos, la clase media, y esta vez asegurarse de que todos tengan una oportunidad. En la economía actual cada vez más globalizada e impulsada por la tecnología, 12 años de educación ya no son suficientes para que los trabajadores estadounidenses sigan siendo competitivos y obtengan un ingreso de clase media. Aproximadamente 6 de cada 10 trabajos requieren algo de educación más allá de un diploma de escuela secundaria. Y, debido a que la tecnología continúa cambiando, los trabajadores estadounidenses, ya sea que tengan una credencial reconocida en la industria, un título de asociado, una licenciatura o un doctorado, necesitarán oportunidades para continuar aprendiendo y desarrollar sus habilidades para el éxito profesional y el aumento de salarios en la economía del siglo XXI.</span></p>
+<p><span style="font-weight: 400;">Pero para muchos, obtener un título u otra credencial después de la secundaria actualmente no es asequible. Para otros, su educación les impone tanta deuda que les impide comprar una casa o ahorrar para la jubilación, o sus padres o abuelos asumen parte de la carga financiera.</span></p>
+<p><span style="font-weight: 400;">Biden está proponiendo un plan audaz para la educación y la capacitación más allá de la escuela secundaria que brindará a los estadounidenses trabajadores la oportunidad de unirse o mantener su lugar en la clase media, independientemente de los ingresos de sus padres o el color de su piel. El presidente Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertirá en colegios comunitarios y capacitación para mejorar el éxito de los estudiantes y hacer crecer una clase media más fuerte, más próspera e inclusiva.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Fortalecerá la universidad como la ruta confiable hacia la clase media, no una inversión que proporcione retornos limitados y deje a los graduados con montañas de deudas que no pueden pagar.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Apoyará a las universidades que son participantes únicos y vitales en sus comunidades., incluyendo los colegios y universidades históricamente afroamericanos, y las instituciones que sirven a las minorías.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Todas estas propuestas se implementarán en asociación con los estados, así como con el profesorado y el personal de las escuelas. Los educadores deben desempeñar un papel clave en las decisiones que afectan la enseñanza y el aprendizaje.</span></p>
+<p><span style="font-weight: 400;">Por supuesto, aumentar la calidad y la asequibilidad del sistema de educación postsecundaria por sí solo no es suficiente para garantizar que nuestra clase media tenga éxito. Este plan se basa en el plan integral del vicepresidente Biden para invertir en la educación de nuestros hijos desde el nacimiento hasta el grado 12. Y, en los próximos meses, Biden también presentará con más detalle sus propuestas para asegurarse de que haya trabajos de calidad listos para nuestros trabajadores.</span></p>
+<p><span style="font-weight: 400;">INVERSIÓN EN COLEGIOS COMUNITARIOS Y CAPACITACIÓN PARA MEJORAR EL ÉXITO DE LOS ESTUDIANTES Y CRECER UNA CLASE MEDIA MÁS FUERTE, MÁS PRÓSPERA E INCLUSIVA</span></p>
+<p><span style="font-weight: 400;">La Dra. Jill Biden, profesora actual de colegio comunitario, se refiere a los colegios comunitarios como el secreto mejor guardado de Estados Unidos. Son una herramienta probada y de alta calidad para proporcionar a los estadounidenses que trabajan fuerte, el acceso a la educación, habilidades, y una ruta hacia la clase media. De hecho, hoy en los Estados Unidos hay un estimado de 30 millones de empleos de calidad, con un salario promedio de $55,000, que no requieren un bachillerato. Cada año, millones de estadounidenses acuden a colegios comunitarios para obtener las credenciales que necesitan para obtener estos trabajos. Y las universidades comunitarias ofrecen formas asequibles y de calidad para que los estudiantes completen los primeros dos años de un título de cuatro años.</span></p>
+<p><span style="font-weight: 400;">Parte de lo que hace que los colegios comunitarios sean tan extraordinarios es que, trabajando con recursos limitados, han descubierto cómo proporcionar una educación rentable y de alta calidad a los estudiantes que a menudo hacen malabares con responsabilidades adicionales, como trabajos o cuidado infantil. Pero como país, no hemos invertido lo suficiente para asegurarnos de que las universidades comunitarias puedan llegar a todos los estadounidenses que podrían beneficiarse de sus programas o mejorar su calidad y tasas de finalización.</span></p>
+<p><span style="font-weight: 400;">La Administración Biden se basará en el éxito de los colegios comunitarios y desatará todo su potencial para desarrollar una clase media más fuerte e inclusiva al:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proporcionar dos años de universidad comunitaria u otro programa de capacitación de alta calidad sin deudas para cualquier persona que se esfuerce, y que busque aprender y mejorar sus habilidades para mantenerse al día con la naturaleza cambiante del trabajo. En el 2015, el presidente Obama y el vicepresidente Biden propusieron hacer dos años de colegios comunitarios gratuitos para estudiantes que se esfuerzan.  Desde entonces, el vicepresidente Biden y la Dra. Biden han defendido el progreso hacia esta meta, y cientos de programas estatales y locales de </span><i><span style="font-weight: 400;">College Promise</span></i><span style="font-weight: 400;"> han ampliado el acceso a la educación universitaria gratuita de dos o cuatro años. Como presidente, Biden se basará en este progreso mediante la promulgación de legislación para garantizar que todas las personas que trabajan arduamente, incluyendo los que acuden a la escuela a tiempo parcial y los DREAMers (adultos jóvenes que vinieron a los EE. UU. cuando eran niños), puedan ir a la universidad comunitaria hasta dos años sin tener que pagar la matrícula. Las personas también podrán utilizar estos fondos para seguir programas de capacitación que tengan un historial de participantes que completen sus programas y obtengan buenos empleos. Es importante destacar que esta iniciativa no será solo para los recién graduados de secundaria; también estará disponible para adultos que nunca tuvieron la oportunidad de seguir una educación adicional más allá de la escuela secundaria o que necesitan aprender nuevas habilidades. Y, los estudiantes que quieran un bachillerato podrían luego transferirse a una escuela de cuatro años, incluyendo a Colegios y Universidades Históricamente Afroamericanos (HBCU) e Instituciones de Servicio a las Minorías que juegan un papel vital en sus comunidades. Este plan será una asociación federal-estatal, con el gobierno federal cubriendo el 75% del costo y los estados contribuyendo con la obligación restante. El gobierno federal cubrirá hasta el 95% del costo de las tribus indígenas que operan colegios comunitarios que sirven a estudiantes de bajos ingresos.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Crear un nuevo programa de subvenciones para ayudar a los colegios comunitarios a mejorar el éxito de sus estudiantes. La Administración Biden apoyará a los colegios comunitarios que implementan prácticas basadas en evidencia y soluciones innovadoras para aumentar la retención y la finalización de credenciales de sus estudiantes. Las reformas podrían incluir servicios de asesoramiento académico y profesional; inscripción doble; acuerdos de articulación crediticia; invertir en salarios, beneficios y desarrollo profesional para reclutar y retener profesores, incluyendo las residencias de maestros; y mejoras a los programas de remediación. El plan Biden también ayudará a los colegios comunitarios de todo el país a escalar programas exitosos para ayudar a un mayor número de estudiantes.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Abordar las barreras que impiden que los estudiantes completen su título de universidad comunitaria o credencial de capacitación. Hay demasiados estadounidenses que no completan sus programas de educación o capacitación no por falta de voluntad, sino por otras responsabilidades que están haciendo malabares, como un trabajo para pagar sus cuentas o cuidar a los niños. A menudo, estos estudiantes y sus familias también enfrentan inseguridad alimentaria y de vivienda. La iniciativa de colegios comunitarios de la Administración Biden será un “programa de primer dólar”, lo que significa que los estudiantes podrán usar sus subvenciones Pell, ayuda estatal y otros apoyos para ayudarlos a cubrir los gastos más allá de la matrícula y las tarifas. Además, el plan Biden otorgará incentivos financieros a los estados para fomentar la colaboración entre los colegios comunitarios y las organizaciones comunitarias para brindar servicios de apoyo integral a los estudiantes, especialmente a los veteranos, padres solteros, estudiantes de bajos ingresos, estudiantes de color y estudiantes con discapacidades, que pueden enfrentar desafíos únicos. Los servicios de apoyo integrales pueden variar desde beneficios públicos y ayuda financiera adicional para cubrir los costos de libros de texto y transporte que a menudo evitan que los estudiantes permanezcan matriculados, hasta servicios de cuidado infantil y salud mental, tutoría docente, tutoría y grupos de apoyo de pares. Y, Biden establecerá un programa de subvenciones federales para ayudar a las universidades comunitarias a crear programas de subvenciones de emergencia para estudiantes que experimenten un desafío financiero inesperado que amenace su capacidad de permanecer matriculados.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Realizar una inversión de $50 mil millones en capacitación de la fuerza laboral, incluyendo a las asociaciones empresariales y los aprendizajes empresariales de la comunidad. En el 2014, el presidente Obama le pidió al vicepresidente Biden que desarrollara una estrategia nacional para reformar los programas de capacitación de la fuerza laboral de nuestra nación, diseñados para preparar a los &#8220;estadounidenses listos para trabajar con empleos listos para ser llenados&#8221;. La iniciativa del presidente Biden hará una inversión de $50 mil millones en programas de capacitación de alta calidad. Estos fondos crearán y apoyarán alianzas entre colegios comunitarios, empresas, sindicatos, gobiernos estatales, locales y tribales, universidades y escuelas secundarias, para identificar los conocimientos y habilidades en demanda en una comunidad y desarrollar o modernizar programas de capacitación, que podrían ser tan solo unos pocos meses o hasta dos años, lo cual lleva a una credencial relevante y reconocida por la industria de alta demanda. Estos fondos también aumentarán exponencialmente el número de aprendizajes en este país al fortalecer el Programa de Aprendizaje Registrado y asociarse con sindicatos que supervisan algunos de los mejores programas de aprendizaje en toda nuestra nación, sin diluir la calidad del sistema de aprendizaje como propone el presidente Trump.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertir en instalaciones y tecnología de colegios comunitarios. Biden invertirá $8 mil millones para ayudar a las universidades comunitarias a mejorar la salud y la seguridad de sus instalaciones, y equipará a sus escuelas con nueva tecnología que capacitará a sus estudiantes para tener éxito en el siglo XXI.</span></li>
+</ul>
+<p><span style="font-weight: 400;">FORTALECER A LA UNIVERSIDAD COMO UNA RUTA CONFIABLE A LA CLASE MEDIA</span></p>
+<p><span style="font-weight: 400;">Tenemos una crisis de deuda estudiantil en este país, con aproximadamente más de 44 millones de personas estadounidenses que ahora tienen un total de $1.5 trillones en préstamos estudiantiles. Uno de cada cinco adultos que tienen préstamos estudiantiles están atrasados ​​en los pagos, un número desproporcionado de los cuales son afroamericanos. Por lo tanto, la deuda estudiantil exacerba y resulta de la brecha racial de riqueza.</span></p>
+<p><span style="font-weight: 400;">Este desafío también es intergeneracional. Casi uno de cada diez estadounidenses de entre 40 y 50 años todavía tiene deudas de préstamos estudiantiles. Pero, la deuda universitaria ha impactado especialmente a los “millennials” que buscaron oportunidades educativas durante el apogeo de la Gran Recesión y ahora luchan por pagar sus préstamos estudiantiles en lugar de comprar una casa, abrir su propio negocio o apartar dinero para la jubilación. </span></p>
+<p><span style="font-weight: 400;">Hay varios impulsores de este problema. El costo de la educación superior se ha disparado, casi se ha duplicado desde mediados de la década de 1990. Los estados han reducido drásticamente las inversiones en educación superior, dejando a los estudiantes y sus familias con la factura. Y, con demasiada frecuencia, las personas se han visto obligadas a pagar credenciales universitarias que no proporcionan valor a los graduados en el mercado laboral. Como presidente, Biden abordará todos estos desafíos.</span></p>
+<p><span style="font-weight: 400;">El plan de Biden para completar dos años de universidad comunitaria sin deudas, ofrecerá de inmediato una forma de prepararse para el trabajo con un título de dos años o una certificación de la industria. También reducirá a la mitad sus costos de matrícula para obtener un título de cuatro años, al obtener un título de asociado, y luego transferir esos créditos a un colegio o universidad de cuatro años. Y, como una asociación federal-estatal, garantizará que los estados inviertan en colegios comunitarios y les dará cierta flexibilidad para invertir también en la preparación universitaria o la asequibilidad en instituciones de cuatro años. Además, el presidente Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Apuntará el apoyo financiero adicional a personas de bajos ingresos y de clase media, duplicando el valor máximo de las subvenciones Pell, aumentando significativamente el número de estadounidenses de clase media que pueden participar en el programa. Las becas Pell ayudan a 7 millones de estudiantes al año a pagar la universidad, pero no han seguido con el aumento del costo de la universidad. En la década de 1970, las subvenciones de Pell cubrían aproximadamente del 70 al 80 por ciento del costo de un título de cuatro años en una institución pública; hoy, ese porcentaje se ha reducido en más de la mitad, a aproximadamente el 30 por ciento. Biden duplicará el valor máximo de la subvención Pell, un nivel de inversión que los expertos dicen que es necesario para cerrar la brecha entre ricos y pobres, para que todos tengan la oportunidad de recibir una educación más allá de la escuela secundaria, y aumentar automáticamente el valor basado en inflación. Duplicar el valor máximo de las becas Pell aumentará el valor de la subvención para las personas que ya son elegibles para Pell y, dada la fórmula del programa para determinar la elegibilidad, ampliará los beneficios de Pell a más estadounidenses de clase media. Como presidente, Biden también se encargará de los jóvenes inmigrantes garantizando que los DREAMers sean elegibles para recibir ayuda financiera si cumplen con otros requisitos para esa ayuda. Y, restablecerá la elegibilidad de personas anteriormente encarceladas para Pell.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reducirá en más de una mitad los pagos de préstamos estudiantiles federales para estudiantes universitarios al simplificar y aumentar la generosidad del programa de pago, basado en los ingresos en la actualidad. Según el plan Biden, las personas que ganen $25,000 o menos al año no deberán pagar ningún pago de sus préstamos estudiantiles federales para estudiantes universitarios y tampoco acumularán ningún interés sobre esos préstamos. Todos los demás pagarán el 5% de sus ingresos discrecionales (ingresos menos impuestos y gastos esenciales como vivienda y alimentos) para sus préstamos al ganar más de $25,000. Este plan le ahorrará a millones de estadounidenses, miles de dólares al año. Después de 20 años, el resto de los préstamos para personas que hayan realizado pagos de manera responsable a través del programa serán 100% perdonados. Las personas con préstamos nuevos y existentes se inscribirán automáticamente en el programa de pago basado en los ingresos, con la oportunidad de optar por no participar si lo desean. Además de aliviar parte de la carga de la deuda estudiantil, esto permitirá a los graduados seguir carreras en el servicio público y otros campos sin altos niveles de compensación. Biden también cambiará el código tributario para que la deuda condonada a través del plan de pago basado en los ingresos, no sea gravada. Los estadounidenses no deberían tener que pedir un préstamo para pagar sus impuestos, cuando finalmente estén libres de sus préstamos estudiantiles.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hará que la condonación de préstamos funcione para los servidores públicos. Los servidores públicos hacen el trabajo arduo que es esencial para el éxito de nuestro país: protegernos, enseñar a nuestros hijos, mantener nuestras calles limpias y nuestras luces encendidas, y mucho más. Pero el programa diseñado para ayudar a estas personas a prestar servicios sin tener que preocuparse por la carga de sus préstamos estudiantiles, el Programa de Perdón de Préstamos de Servicio Público, no funciona. Biden creará un programa nuevo y simple que ofrece $10,000 de alivio de la deuda de estudiantes universitarios o graduados, por cada año de servicio nacional o comunitario, hasta cinco años. Las personas que trabajan en escuelas, gobierno y otros entornos sin fines de lucro se inscribirán automáticamente en este programa de perdón. Hasta cinco años de servicio nacional o comunitario previo, también serán elegibles. Además, Biden arreglará el programa de condonación de préstamos de servicio público existente al asegurar la aprobación de la Ley </span><i><span style="font-weight: 400;">What You Can Do for Your Country</span></i><span style="font-weight: 400;"> (Lo que puedes hacer por tu país) del 2019. Biden se asegurará de que los profesores adjuntos sean elegibles para esta condonación de préstamos, dependiendo de la cantidad de tiempo dedicado a la enseñanza.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creará un &#8220;Título I para la educación postsecundaria&#8221; para ayudar a los estudiantes de colegios de cuatro años de bajos recursos a completar sus títulos. La Administración Biden establecerá un nuevo programa de subvenciones para apoyar a las escuelas de cuatro años que tienen recursos insuficientes y que atienden a un gran número de estudiantes elegibles para Pell. Los fondos se utilizarán para fomentar la colaboración entre las universidades y las organizaciones comunitarias para proporcionar servicios de apoyo integrales para estudiantes, especialmente veteranos, padres solteros, estudiantes de bajos ingresos, estudiantes de color y estudiantes con discapacidades, que pueden enfrentar desafíos únicos. Los servicios de apoyo integrales pueden variar desde beneficios públicos y ayuda financiera adicional para cubrir los costos de libros de texto y transporte, que a menudo evitan que los estudiantes permanezcan matriculados, hasta servicios de cuidado infantil y salud mental, tutoría docente, tutoría y grupos de apoyo de pares. Y Biden se asegurará de que estos fondos se puedan usar para ayudar a las universidades a crear programas de subsidios de emergencia para estudiantes que experimentan un desafío financiero inesperado que amenaza su capacidad de permanecer matriculados.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creará senderos entre la escuela secundaria, la capacitación laboral, la universidad comunitaria y los programas de cuatro años, para ayudar a los estudiantes a obtener sus títulos y credenciales más rápido. La Administración Biden otorgará subvenciones a los estados que trabajan para acelerar el logro de credenciales de los estudiantes, incluyendo los títulos de licenciatura, al tiempo que garantiza la calidad y la responsabilidad. Por ejemplo, algunas comunidades han adoptado el modelo de la universidad temprana, lo que permite a los estudiantes comenzar a obtener créditos para obtener un título de asociado mientras aún están en la escuela secundaria. Y, en algunas áreas, los estudiantes pueden tener doble matrícula en el colegio comunitario y en el programa de cuatro años que desean completar. Biden desafiara a más comunidades a expandir estos senderos acelerados y crear una transición adecuada entre la escuela secundaria, la universidad comunitaria, otra capacitación laboral y programas de cuatro años, permitiendo a los estudiantes obtener un título de asociado o licenciatura en menos tiempo. Los enfoques para acelerar el logro del grado universitario incluyen vías guiadas que proporcionan una secuencia de clases para un área específica de estudio; cambiando hacia un calendario académico de 12 meses; alinear mejor la escuela secundaria, la universidad comunitaria y los cursos universitarios de cuatro años; proporcionar créditos universitarios para capacitación de calidad en el trabajo relacionada con el título; y ofreciendo pasantías remuneradas relacionadas con el título, para crédito de curso. Lea más sobre el plan de educación de Joe Biden desde el nacimiento hasta el grado 12 aquí.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Priorizará el uso de fondos de estudio y trabajo para puestos de servicio público y relacionados con el trabajo. Biden trabajará para reformar los programas federales de estudio del trabajo para garantizar que más de estos fondos coloquen a los estudiantes en puestos donde aprendan habilidades valiosas para sus carreras previstas o contribuyan a sus comunidades mediante la tutoría de estudiantes en aulas K-12 y centros comunitarios.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Evitará que los programas educativos con fines de lucro se aprovechen de los estudiantes. Los estudiantes que comenzaron su educación en universidades con fines de lucro no pagan sus préstamos estudiantiles a una tasa tres veces mayor que aquellos que comienzan en universidades sin fines de lucro. Estos programas con fines de lucro a menudo son depredadores: están dedicados a prácticas de reclutamiento de alta presión y engañosas, y cobran costos más altos por una educación de menor calidad que deja a los graduados con montañas de deudas y sin buenas oportunidades de trabajo. La Administración Biden requerirá que las organizaciones con fines de lucro prueben primero su valor ante el Departamento de Educación de los Estados Unidos, antes de obtener la elegibilidad para recibir ayuda federal. La Administración Biden también volverá a la Regla de Defensa del Prestatario Obama-Biden, perdonando la deuda de las personas que fueron engañadas por los peores especuladores con fines de lucro universitarios o profesionales. Finalmente, el presidente Biden promulgará una legislación que eliminará la llamada escapatoria 90/10 que brinda a las escuelas con fines de lucro un incentivo para matricular a veteranos e integrantes del servicio militar en programas que no están dando resultados.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Tomará medidas enérgicas contra los prestamistas privados que se aprovechan de los estudiantes y permitirá que las personas que tienen préstamos privados puedan cancelarlos en una bancarrota. En el 2015, la Administración Obama-Biden pidió al Congreso que aprobara una ley que permitiera la cancelación (</span><i><span style="font-weight: 400;">discharge</span></i><span style="font-weight: 400;">) de préstamos privados para estudiantes en bancarrota. Como presidente, Biden promulgará esta legislación. Además, la Administración Biden facultará a la Oficina de Protección Financiera del Consumidor, establecida durante la Administración Obama-Biden, para tomar medidas contra los prestamistas privados que engañan a los estudiantes sobre sus opciones y no proporcionan un plan de pago asequible cuando las personas experimentan períodos agudos de dificultad financiera.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Apoyará y protegerá los beneficios GI posteriores al 11 de septiembre para veteranos y familiares calificados. Los veteranos y sus familiares sirvieron a nuestro país y, como nación, debemos mantener nuestro compromiso con los beneficios GI. La Administración Obama-Biden tomó medidas innovadoras para garantizar que los veteranos y sus familiares estuvieran facultados para tomar decisiones informadas con respecto a su educación y, a su vez, garantizar que los programas que los educan cumplan con altos estándares de calidad. El presidente Biden construirá y convocará coaliciones de expertos y defensores para continuar este trabajo. También fortalecerá la Herramienta Virtual de Comparación de Escuelas de la Ley IG y la Herramienta de Opinión Pública de Escuelas para poner fin a las prácticas depredadoras de las instituciones postsecundarias.</span></li>
+</ul>
+<p><span style="font-weight: 400;">APOYO A LAS UNIVERSIDADES QUE TIENEN ROLES ÚNICOS Y VITALES EN SUS COMUNIDADES</span></p>
+<p><span style="font-weight: 400;">Los Colegios y Universidades Históricamente Afroestadounidense (HBCU), Colegios y Universidades Tribales (TCU), Instituciones que sirven a los hispanos (HSI), Instituciones que sirven a los isleños del Pacífico Asiático Americano y Nativo Americanos (AANAPISI), Instituciones que sirven a los nativos de Alaska e Instituciones que sirven a los nativos de Hawái (ANNHs), las instituciones predominantemente negras (PBI) y las instituciones no tribales que sirven a los nativos americanos (NASNTI), brindan servicios a un número desproporcionado de estudiantes de color y estudiantes de bajos ingresos, pero cuentan con pocos recursos, especialmente en comparación con otros colegios y universidades.</span></p>
+<p><span style="font-weight: 400;">Esto hace que las contribuciones de HBCU y MSI sean aún más impresionantes. Las HBCU, por ejemplo, educan en su mayoría a estudiantes de primera generación y de bajos ingresos. En el estado de origen del vicepresidente Biden, Delaware, la Universidad Estatal de Delaware HBCU gradúa a casi la mitad de los estudiantes Afroamericanos del estado.</span></p>
+<p><span style="font-weight: 400;">Como presidente, Biden tomará medidas para rectificar las disparidades de financiamiento que enfrentan las HBCU, las TCU y las instituciones de servicio a las minorías (MSI) para que los Estados Unidos puedan beneficiarse de sus fortalezas únicas. Los estudiantes de HBCU, TCU y MSI se beneficiarán de las propuestas de Biden para duplicar las subvenciones Pell, reducir el reembolso de los préstamos en función del “ingreso al 5%” de los ingresos y proporcionar matrícula gratuita para los estudiantes de todos los colegios comunitarios, incluyendo aquellos que son MSI. Además, Biden invertirá más de $70 mil millones en estos colegios y universidades para:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hacer que las HBCU, TCU y MSI de escasos recursos sean más asequibles para sus estudiantes. El plan Biden invertirá $18 mil millones en subvenciones para estas escuelas de cuatro años, equivalente a hasta dos años de matrícula por estudiante de clase media y de bajos ingresos, incluyendo DREAMers y estudiantes que se transfieren a una HBCU, TCU o MSI de cuatro años, de un colegio comunitario sin matrícula. Las escuelas deben invertir en reducir costos, mejorar las tasas de retención y graduación, y cerrar brechas de equidad año tras año para estudiantes de color.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertir en el talento diverso en HBCU, TCU y MSI para resolver los problemas más apremiantes del país. La Administración Biden invertirá $10 mil millones para crear al menos 200 nuevos centros de excelencia que sirvan como incubadoras de investigación y conecten a estudiantes sub-representados en campos críticos para el futuro de nuestra nación, incluyendo las áreas de trabajo que abordan el cambio climático, la globalización, la desigualdad, las disparidades de salud y el cáncer, las oportunidades de aprendizaje y desarrollo de carreras profesionales. Estos fondos proporcionarán oportunidades de estudio de trabajo adicionales e incentivarán dólares estatales, privados y filantrópicos para estos centros. Biden también aumentará los fondos para la investigación agrícola en las universidades que otorgan tierras, muchas de las cuales son HBCU y TCU, como se describe en su Plan para América Rural. Como presidente, Biden también dedicará fondos adicionales y de mayor prioridad en las agencias federales, para subvenciones y contratos para HBCU y MSI. Y, requerirá subvenciones federales de investigación a universidades con una dotación de más de $1 mil millones para formar una asociación significativa y celebrar un subcontrato mínimo del 10% con una HBCU, TCU o MSI.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Construir los laboratorios e instalaciones de alta tecnología y la infraestructura digital necesaria para el aprendizaje, la investigación y la innovación en las HBCU, TCU y MSI. Biden invertirá $20 mil millones en infraestructura para HBCU, TCU e MSI para construir las instalaciones y laboratorios de investigación física que se necesitan con urgencia para realizar la investigación y el desarrollo del país, actualizar y modernizar las instalaciones deterioradas, incluso mediante el fortalecimiento del programa de Preservación Histórica, y crear un nuevo espacio para aumentar las matrículas, especialmente en HSI. Si bien las escuelas podrán utilizar estos fondos para actualizar la infraestructura digital, Biden también apoyará a las TCU y otras instituciones en áreas rurales al invertir $20 mil millones en infraestructura rural de banda ancha y triplicar los fondos para expandir el acceso de banda ancha en áreas rurales. Además, como presidente, Biden se asegurará de que todas las HBCU, TCU y MSI tengan acceso a programas de financiamiento de capital federal de bajo costo y trabajará con los estados para garantizar que puedan aprovechar estos programas. Y trabajará para incentivar más inversiones públicas, privadas y filantrópicas en infraestructura escolar.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Brindar apoyo para mejorar continuamente el valor de las HBCU, TCU y MSI mediante la inversión de $10 mil millones en programas que aumentan los índices de matrícula, retención, finalización de estudios y empleo. Estos programas pueden incluir asociaciones con escuelas secundarias, otras universidades y empleadores; cursos de recuperación basados ​​en evidencia; servicios de asesoramiento académico y profesional; e invertir en salarios, beneficios y desarrollo profesional, y beneficios para reclutar y retener al profesorado, incluyendo las residencias docentes. Además, Biden incentivará dólares estatales, privados y filantrópicos para que inviertan en estos programas, a la vez que garantizará que las escuelas que no reciban las mismas, aumenten su competitividad.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliar las vías profesionales para los graduados de HBCU, TCU y MSI en áreas que cumplen con las prioridades nacionales, incluyendo la creación de un conducto para la preparación diversa de maestros de escuelas públicas. Biden invertirá $5 mil millones en programas de posgrado en enseñanza, atención médica y STEM, y desarrollará sólidas prácticas y pasantías profesionales en las principales agencias de investigación, incluyendo los Laboratorios Nacionales del Departamento de Energía, los Institutos Nacionales de Salud, la Fundación Nacional de Ciencias y el Departamento de Defensa.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Triplicar y hacer permanente el desarrollo de capacidades y el apoyo estudiantil para HBCU, TCU y MSI en el Título III y el Título V de la Ley de Educación Superior. Estos fondos sirven como una línea de vida para las HBCU, TCU y MSI con recursos insuficientes año tras año, asegurando que los estudiantes más vulnerables tengan el apoyo que necesitan para tener éxito. La Administración Biden ganará $750 millones anuales por año en los fondos del Título III y del Título V, lo que proporcionará un flujo de ingresos dedicado de $7.5 mil millones durante los primeros diez años.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reducir las disparidades en la financiación de HBCU, TCU y MSI. Biden requerirá que las agencias federales y los estados publiquen informes de su asignación de fondos federales a colegios y universidades. Cuando existan desigualdades entre las HBCU, TCU y MSI, y universidades similares que no sean HBCU, TCU, MSI; las agencias federales y estados deberán publicar una justificación sólida y mostrar mejoras en la eliminación de las disparidades año tras año. Para garantizar que la financiación se distribuya de manera más equitativa entre las HBCU, TCU y MSI, la Administración Biden exigirá que los programas de subvenciones competitivas hagan que las universidades similares compitan entre sí, por ejemplo, asegurando que las HBCU solo compitan contra las HBCU. Y, el presidente Biden requerirá que los acreditadores de educación superior brinden mayor transparencia en sus procesos.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Además, Biden reconoce el papel fundamental que desempeñan los colegios y universidades privadas de bajos recursos para proporcionar oportunidades educativas y empleos en muchas comunidades rurales. Como presidente, establecerá un fondo de subvención competitivo de innovación para estas instituciones, dándoles fondos adicionales para invertir en el aumento de los índices de graduación; cerrar las disparidades étnicas, raciales y de ingresos; e incrementar los resultados profesionales para estudiantes de bajos ingresos, estudiantes de color, estudiantes de primera generación y estudiantes con discapacidades.</span></p>
+<p><span style="font-weight: 400;">APOYANDO A LOS QUE BUSCAN EDUCARSE Y A LOS TRABAJADORES, NO RECOMPENSANDO A LA RIQUEZA</span></p>
+<p><span style="font-weight: 400;">El plan Biden para la educación más allá de la escuela secundaria es una inversión de $750 mil millones durante diez años, dirigida a desarrollar una clase media más fuerte e inclusiva. Se pagará asegurándose de que los súper ricos paguen su parte justa. Específicamente, este plan se pagará eliminando la falla en la ley tributaria conocida como </span><i><span style="font-weight: 400;">Stepped-Up Basis Loophole</span></i><span style="font-weight: 400;"> y limitando las deducciones detalladas que los estadounidenses más ricos pueden llevar hasta el 28%.</span></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../beyondhs..html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-biden-de-educacion-mas-alla-de-la-escuela-secundaria/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":470,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

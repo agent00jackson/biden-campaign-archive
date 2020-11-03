@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Joe&#039;s Leadership in Times of Crisis: COVID-19 | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="covid19-leadership.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Joe&#039;s Leadership in Times of Crisis: COVID-19 | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:url" content="https://joebiden.com/covid19-leadership/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-04T05:07:42+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Leadership-During-COVID-19_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Leadership-During-COVID-19_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/covid19-leadership/#webpage","url":"https://joebiden.com/covid19-leadership/","name":"Joe's Leadership in Times of Crisis: COVID-19 | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-03-24T19:56:30+00:00","dateModified":"2020-08-04T05:07:42+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/covid19-leadership/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fcovid19-leadership%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fcovid19-leadership%2F&#038;format=xml" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+<div class="bfp__interior-page">
+
+
+<body class="page-template page-template-page-vision page-template-page-vision-php page page-id-2334 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="covid19-leadership.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="covid19-leadership.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+    <div id="donate-trigger"></div>
+        <article class="vision__body-wrap" class="view-vision-updated post-2334 page type-page status-publish hentry">
+              <div class="vision__hero-wrap">
+                        <div class="vision__hero-img" style="background-image: url('wp-content/uploads/2020/07/Screen-Shot-2020-07-16-at-6.10.24-PM.png');"></div>
+                  </div>
+            <div class="vision__main-content">
+                  <section class="vision__ideas-body-wrap">
+            <div class="bfp__interior-block vision__ideas-body">
+                              <h1 class="bfp__title--largest vision__title vision__ideas-title">Joe's leadership during the COVID-19 Pandemic</h1>
+                                                      </div>
+          </section>
+        
+                  <section class="vision__column-block">
+            <div class="vision__column-block-body">
+                              <h2 class="bfp__title--large vision__title vision__column-title">Together, We Are Resilient and Strong</h2>
+              
+                              <figure class="vision__column-img">
+                  <noscript><img width="921" height="1024" src="wp-content/uploads/2020/08/Joe_03-921x1024.jpg" class="attachment-large size-large" alt="Joe Biden walking outside saluting wearing a black mask and black suit" sizes="(min-width: 768px) 50vw, 100vw" srcset="wp-content/uploads/2020/08/Joe_03-921x1024.jpg 921w, wp-content/uploads/2020/08/Joe_03-270x300.jpg 270w, wp-content/uploads/2020/08/Joe_03-768x854.jpg 768w, wp-content/uploads/2020/08/Joe_03-1381x1536.jpg 1381w, wp-content/uploads/2020/08/Joe_03.jpg 1748w" /></noscript><img width="921" height="1024" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20921%201024%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/uploads/2020/08/Joe_03-921x1024.jpg" class="lazyload attachment-large size-large" alt="Joe Biden walking outside saluting wearing a black mask and black suit" data-sizes="(min-width: 768px) 50vw, 100vw" data-srcset="https://joebiden.com/wp-content/uploads/2020/08/Joe_03-921x1024.jpg 921w, https://joebiden.com/wp-content/uploads/2020/08/Joe_03-270x300.jpg 270w, https://joebiden.com/wp-content/uploads/2020/08/Joe_03-768x854.jpg 768w, https://joebiden.com/wp-content/uploads/2020/08/Joe_03-1381x1536.jpg 1381w, https://joebiden.com/wp-content/uploads/2020/08/Joe_03.jpg 1748w" />                </figure>
+              
+                                                <div class="bfp__copy vision__column-copy">
+                    <p><span style="font-weight: 400;"><strong>In the midst of a growing public health crisis the country is looking for leadership, stability, and  trusted experience — and that’s Vice President Joe Biden</strong>. Biden knows how to mount an effective crisis response and elevate the voices of scientists, public health experts, and first responders because he has done it before. </span></p>
+                  </div>
+                                  <div class="bfp__copy vision__column-copy">
+                    <p><span style="font-weight: 400;"><strong>We need a decisive public health response to curb the spread of this disease and provide treatment to those in need</strong> — as well as a decisive economic response that delivers real relief to American workers, families, and small businesses, and protects the economy as a whole.</span></p>
+                  </div>
+                                  <div class="bfp__copy vision__column-copy">
+                    <div id=":2fe" class="a3s aXjCH ">
+<div dir="ltr">
+<div dir="ltr">
+<p dir="ltr"><span style="font-weight: 400;"><strong>Joe’s been honest with the American people about what is necessary to beat this challenge</strong>, and knows that we are up to this task and that we will meet this challenge together as one America.</span></p>
+</div>
+</div>
+</div>
+                  </div>
+                                          </div>
+          </section>
+        
+                  <div class="bfp__interior-block vision__sub-block">
+                                                                                              <section class="vision__sub-block-item" id="section-0">
+                  <h3 class="bfp__title--large vision__sub-block-sub-title">Statements</h3>
+                                      <figure class="vision__sub-block-img">
+                      <noscript><img width="1024" height="683" src="wp-content/uploads/2020/08/50139023832_6e32e726f0_k-1024x683.jpg" class="attachment-large size-large" alt="Joe Biden speaks to a woman and her son at a school." sizes="(min-width: 768px) 880px, 100vw" srcset="wp-content/uploads/2020/08/50139023832_6e32e726f0_k-1024x683.jpg 1024w, wp-content/uploads/2020/08/50139023832_6e32e726f0_k-300x200.jpg 300w, wp-content/uploads/2020/08/50139023832_6e32e726f0_k-768x512.jpg 768w, wp-content/uploads/2020/08/50139023832_6e32e726f0_k-1536x1024.jpg 1536w, wp-content/uploads/2020/08/50139023832_6e32e726f0_k.jpg 2048w" /></noscript><img width="1024" height="683" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%201024%20683%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/uploads/2020/08/50139023832_6e32e726f0_k-1024x683.jpg" class="lazyload attachment-large size-large" alt="Joe Biden speaks to a woman and her son at a school." data-sizes="(min-width: 768px) 880px, 100vw" data-srcset="https://joebiden.com/wp-content/uploads/2020/08/50139023832_6e32e726f0_k-1024x683.jpg 1024w, https://joebiden.com/wp-content/uploads/2020/08/50139023832_6e32e726f0_k-300x200.jpg 300w, https://joebiden.com/wp-content/uploads/2020/08/50139023832_6e32e726f0_k-768x512.jpg 768w, https://joebiden.com/wp-content/uploads/2020/08/50139023832_6e32e726f0_k-1536x1024.jpg 1536w, https://joebiden.com/wp-content/uploads/2020/08/50139023832_6e32e726f0_k.jpg 2048w" />                    </figure>
+                                                        <div class="bfp__copy vision__sub-block-copy"><p style="text-align: center;"><span style="font-weight: 400;">Since the start of this mounting national health crisis, Joe Biden has laid out what he would do as president to address this crisis, to ensure working families, small businesses and communities get the help they need, and to provide our frontline and essential workers the tools to do their jobs safely:</span></p>
+</div>
+                  
+                                      <div class="vision__article-wrap">
+                                                                        <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-0" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/27/20 - Statement by Vice President Joe Biden and the Biden for President Public Health Advisory Committee on Testing</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>We all agree on the need to <a class="cl di ia ib ic id" href="https://joebiden.us20.list-manage.com/track/click?u=6f4f7ad525ac07764c71a3e37&amp;id=757e3a469e&amp;e=25187913d6" target="_blank" rel="noopener nofollow">reopen the economy</a> and allow some semblance of normalcy as soon as possible. The economic pain and suffering are simply too great to delay unnecessarily. But it is wrong to talk about “choosing” between our public health and our economy. That’s a false choice. If we don’t beat the virus, we will never get back to full economic strength. And the experience of other nations and past pandemics is teaching us that we have to be prepared for a resurgence of cases that could once again stretch the capacity of our health care system and threaten lives.</p>
+<p><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-and-the-biden-for-president-public-health-advisory-committee-6407f37c93da"><strong>Read more &gt;&gt;</strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-1" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/23/20 - Statement by Vice President Joe Biden on the Latest Unemployment Filing Numbers</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>Today, we learned that another 4.4 million people filed new unemployment claims last week, bringing the total number of Americans filing new unemployment claims to 26 million since this crisis started, with many more feeling the direct economic impact of this pandemic.</p>
+<p>These aren’t just overwhelming numbers or aggregate statistics — every one is a life thrown into uncertainty, a family unable to make ends meet, a community worried about how it will recover. Every worker left wondering when they will next see a paycheck is part of this American crisis — and Donald Trump isn’t doing enough for them.</p>
+<p><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-on-the-latest-unemployment-filing-numbers-dd4c383a3395"><strong>Read more &gt;&gt;</strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-2" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/21/20 - Joe Biden Calls on Trump Administration to Ensure that Relief Funds Get to Deserving Small Businesses</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>As Congress reaches a new deal on economic relief measures, including more funds for the Paycheck Protection Program (PPP) for small businesses, I am grateful to Democratic leaders for securing more funds for hospitals and testing, and more resources for smaller lenders and community-based financial institutions, as well as the depleted Emergency Injury Disaster Loan and Emergency Economic Injury Grant programs. These hard-fought improvements will help deserving small businesses who were shut out in the first round of funding.</p>
+<p>Let’s be clear: It wasn’t just a shortage of funds in the PPP that kept so many small business owners — men and women who have put their work lives, savings, heart, and soul into their businesses — from getting loans.</p>
+<p><a href="https://medium.com/@JoeBiden/joe-biden-calls-on-trump-administration-to-ensure-that-relief-funds-get-to-deserving-small-60dce843e474"><strong>Read more &gt;&gt;</strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-3" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/16/20 - Joe Biden Announces New Plan to Scale Up Employment Insurance by Reforming Short-Time Compensation Program</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p id="6deb" class="hf ht ap by hh b hi hj hu hk hl hv hm hn hw ho hp hx hq hr hy hs ej" data-selectable-paragraph="">Today, we learned that another 5.2 million people have filed unemployment claims, bringing the total to more than 22 million in the last month.</p>
+<p id="d835" class="hf ht ap by hh b hi hj hu hk hl hv hm hn hw ho hp hx hq hr hy hs ej" data-selectable-paragraph="">This dire economic dislocation stems from the need to protect public health through strong social distancing measures. But let’s not forget: these measures are required to the extent they are because we didn’t prepare early enough, and when the virus surfaced in our communities, we didn’t test sufficiently to contain it. This pain is a product of poor decision making by Donald Trump.</p>
+<p data-selectable-paragraph=""><a href="https://medium.com/@JoeBiden/joe-biden-announces-new-plan-to-scale-up-employment-insurance-by-reforming-short-time-compensation-eb0c080ce465"><strong>Read more &gt;&gt;</strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-4" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/12/20 - Joe Biden: My Plan to Safely Reopen America</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="css-53u6y8">
+<p class="css-exrw3m evys1bk0">People across America are stepping up to the plate. Millions are performing essential services at great personal risk, and millions more are staying at home, away from friends and extended family. In return, they want the answer to a simple question: What is the plan to safely reopen America?</p>
+<p><a href="https://www.nytimes.com/2020/04/12/opinion/joe-biden-coronavirus-reopen-america.html"><strong>Read more &gt;&gt;</strong></a></p>
+</div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-5" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/10/20 - Statement by Vice President Joe Biden on Incidents of Racism Against Asian Americans and Pacific Islanders</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>Since the outbreak of COVID-19, we’ve heard increasing reports of Asian Americans in communities across our country being targeted with messages of hate. There are stories of Asian Americans being spit on while walking down the street, enduring verbal and physical assaults, finding their cars vandalized with racist messages — even a suspected acid attack and stabbings. The FBI has warned about the likelihood of an increase in hate crimes against the Asian American and Pacific Islander (AAPI) community.</p>
+<p><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-on-incidents-of-racism-against-asian-americans-and-pacific-ac6799b1586"><strong>Read more &gt;&gt;</strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-6" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/09/20 - Statement by Vice President Joe Biden on the Racial Inequities of COVID-19</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>This is an anxious, difficult time for Americans all across this nation. We’re all worried about our health and our families. And for the millions who have lost their jobs or had their hours slashed, you may also be worried about just making ends meet. As a nation, we are being tested as never before, and I want to offer my heartfelt sympathies to all those who have lost loved ones to this virus as well as my heartfelt gratitude to all the frontline workers who are literally carrying our nation on their backs.</p>
+<p><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-on-the-racial-inequities-of-covid-19-5e4f17f8fa0c"><strong>Read more &gt;&gt;</strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-7" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/09/20 - Joe Biden Outlines New Steps to Ease Economic Burden on Working People</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p id="0a7c" class="hf ht ap by hh b hi hj hu hk hl hv hm hn hw ho hp hx hq hr hy hs ej" data-selectable-paragraph="">The news this morning of another enormous number of unemployment claims — on top of the ten million that have already been filed — is devastating. These numbers represent catastrophic losses to our economy, but most importantly, they represent the loss of livelihood for millions of people across this country struggling to pay the rent, put food on the table, and keep the electricity on.</p>
+<p data-selectable-paragraph=""><a href="https://medium.com/@JoeBiden/joe-biden-outlines-new-steps-to-ease-economic-burden-on-working-people-e3e121037322"><strong>Read more &gt;&gt; </strong></a></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-8" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/04/20 - Joe Biden Urges President Trump to Appoint a Supply Commander</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p dir="ltr">Today, Joe Biden issued the following statement and subsequent <a href="https://joebiden.us20.list-manage.com/track/click?u=6f4f7ad525ac07764c71a3e37&amp;id=cadafb2464&amp;e=28fd00ace2" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://joebiden.us20.list-manage.com/track/click?u%3D6f4f7ad525ac07764c71a3e37%26id%3Dcadafb2464%26e%3D28fd00ace2&amp;source=gmail&amp;ust=1586352255972000&amp;usg=AFQjCNFzOgkD-sHO8BZVOfoHOMjWsDSxzQ">policy plan</a> urging Donald Trump to appoint a Supply Commander to coordinate critical materials for all 50 states and U.S. territories:</p>
+<p>“This public health crisis is foremost a human crisis, but it is also a crisis of supply, logistics and distribution. States, hospitals, and health care providers should not have to bid against one another, or against the federal government to get the supplies that they desperately need. Price gougers should not be able to take advantage of a market run amok, and we cannot allow an underground market to flourish for these critical supplies.</p>
+<p>“We are in a war with this virus — and our soldiers in this war are the doctors, nurses, health care workers, first responders, firefighters and cops, sanitation, delivery, food, and transit workers. But they are on the front lines of this battle without the equipment they need to protect themselves and save lives.</p>
+<p>“There are several reasons we are so far behind. First, there is no coordinated distribution of existing tests to states or identification of new testing sites where they can be administered quickly and effectively. Second, we still aren’t making enough tests, especially rapid point-of-care tests. Third, we don’t have enough personnel, or with enough protective gear, to administer tests. And finally, we haven’t developed sufficient lab capacity to provide rapid results. These are failures of organization, logistics, supply, and distribution.</p>
+<p>“It is clear that the current structure President Trump has put in place is not working&#8212; either because he hasn&#8217;t fully empowered those in charge or because he hasn&#8217;t made it clear that the mandate must be to take over the entire supply chain and determine the demand across all of our states, tribes and territories for these critical materials. In fact, there was a report yesterday that Trump Administration officials were still telling the Congress this week they prefer leaving it to the private sector.</p>
+<p>“As a result, those on the front lines are not getting the equipment and protection they need and deserve. We need a Supply Commander to step up and take charge and get the doctors, nurses, health care workers, first responders, firefighters, and cops the equipment they need to protect themselves and save lives. We especially need to focus on traditionally underserved populations, as early data suggests they are once again being left behind in this response. Today, I’m putting forward my recommendation to President Trump to coordinate critical supplies for all 50 States and U.S. Territories: appoint a Supply Commander reporting directly to the President to work with governors and manage the production, acquisition, and distribution of critical materials.”</p>
+<h5 style="font-weight: bold;">The Biden Plan to Coordinate Critical Materials for All 50 States and U.S. Territories</h5>
+<p dir="ltr">As commander in chief, it’s Trump&#8217;s responsibility to get these essential workers what they need. Trump should immediately task a Supply Commander to take command of the national supply chain for essential equipment, medications, and protective gear. We can no longer leave this to the private sector. The Supply Commander should work with every governor to determine their needs, and then coordinate production and delivery of those needs in a timely and efficient manner. And, the Supply Commander should direct the distribution of critical equipment as cases peak at different times in different states or territories. That goes for ventilators, masks, gowns, face shields, lab equipment, tests and testing components, medicines, and all other critical materials.</p>
+<p>Where they haven’t, states and territories should each appoint their own Supply Leads to coordinate with the federal effort and ensure a special emphasis on communities with traditionally underserved populations. This means requiring uniform data reporting to uncover the true extent of health disparities from COVID-19 and ensuring lifesaving equipment and supplies reaches them. The Supply Commander should report directly to Trump, not get buried in the bureaucracy, and transparently update the public daily on progress. The National Governors Association can assist in this effort by helping aggregate state’s demand in a uniform way with common definitions and reporting.</p>
+<p>And, the Supply Commander must work with Governors to draw on the support of the National Guard and a newly hired and trained U.S. Public Health Corps, including mobilized AmeriCorps and Peace Corps volunteers and those laid off by this crisis, to assess inventory of critical supplies and assist with their equitable distribution among other functions.</p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-9" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/03/20 - Statement by Vice President Joe Biden on Today’s Jobs Report</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>This morning’s employment numbers are another clear warning sign that we need more action to stem the bleeding. On top of yesterday’s new unemployment claims data, it’s a flashing red light we should not ignore. The CARES Act was an important step — and we’ll begin to see it start helping, as long as it’s implemented well — but it won’t be enough. It’s clear to me, and it should be clear to everyone, that a lot more is needed. Fast, bold action to bolster American workers now will save more pain later. Congress must get to work immediately on the next package. We can’t afford to waste time. There are a number of things that will have to be done all at once, but our economic priority must be to stop the bleeding in the labor market and keep as many people on payroll as possible&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-on-todays-jobs-report-3c1737991afe">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-10" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/02/20 - Statement from Vice President Joe Biden on Sanctions Relief During COVID-19</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>In times of global crisis, America should lead. We should be the first to offer help to people who are hurting or in danger. That’s who we are. That’s who we’ve always been. And, in the midst of this deadly pandemic that respects no borders, the United States should take steps to offer what relief we can to those nations hardest hit by this virus — including Iran — even as we prioritize the health of the American people&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-sanctions-relief-during-covid-19-f7c2447416f0">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-11" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/02/20 - Statement from Vice President Joe Biden on Record Number of Americans Filing for Unemployment</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>The economic damage from the worst public health crisis our country has faced in generations is both rising and deepening at an alarming rate. It is putting working families and the American middle class through unimaginable financial pain — and they need to be made whole as fast as possible. My heart goes out to the millions of Americans who filed for unemployment claims this week, and the millions more who worry what next week holds for them&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-record-number-of-americans-filing-for-unemployment-ec9e50223e7e">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-12" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/29/20 - Statement from Vice President Joe Biden on the Need to Protect Dreamers</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>Today, we are still in the early stages of the COVID-19 pandemic in the United States, but we know that hard days lie ahead. We know that we need everyone pulling together in support of our doctors, nurses, EMTs, and front line health care workers. And we know, beyond doubt, that we need every trained and qualified person we have fighting this virus — and that includes approximately 27,000 Dreamers who are working in hospitals and health care facilities all across our country thanks to their protections under Deferred Action for Childhood Arrivals (DACA)&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-the-need-to-protect-dreamers-54abc6f9ca0b">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-13" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/26/20 - Statement from Vice President Joe Biden on Record Unemployment Claims</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>Last week saw the largest single-week jump in new unemployment claims in American history — 3.3 million people filed for unemployment, and likely many more than that are now out of work as people are staying home to slow the spread of COVID-19. These numbers reflect overwhelming job losses in service industries like accommodation and food service, which means lower-income workers are already feeling the impact of this crisis in a major way. Secretary Mnuchin may think these numbers “are not relevant,” but for those who were already struggling to make ends meet, this is a very real crisis&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-record-unemployment-claims-97391f210e7b">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-14" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/23/20 - Joe Biden Presses Donald Trump and State Elected Officials to Drop Lawsuit Attacking Americans’ Health Care</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p id="2434" class="he hf ap by hg b hh hi hj hk hl hm hn ho hp hq hr ej" data-selectable-paragraph="">All across this nation, Americans are anxious and afraid about the impact the deadly COVID-19 pandemic is already having on their lives, their families, and their ability to pay their bills. Individuals and families are stepping up to do their part — staying home, taking individual precautions and implementing social distancing, and making donations to support food banks and other vital service providers, all to protect those most at-risk from the virus in our communities. Their level of dedication should be matched by their elected leaders.</p>
+<p data-selectable-paragraph=""><strong><a href="https://medium.com/@JoeBiden/joe-biden-presses-donald-trump-and-state-elected-officials-to-drop-lawsuit-attacking-americans-3e999265f3ed">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-15" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/22/20 - On Congressional Economic Stimulus Negotiations</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>It’s simple: President Trump and Mitch McConnell are trying to put corporate bailouts ahead of families. And it’s simply wrong.</p>
+<p>Here’s what’s happening. The White House and the Senate Republicans have proposed a $500 billion slush fund for corporations, with almost no conditions. Donald Trump’s Treasury Secretary would decide which big businesses get how much, and he can give out billions with virtually no strings attached. The Trump Administration could even allow companies to use taxpayers’ money for stock buybacks and executive pay packages, and they don’t have to tell Americans where the money is going for months&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-congressional-economic-stimulus-negotiations-99bf4f6daafc">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-16" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/22/20 - On FEMA Administrator Peter Gaynor’s Comments on CNN State of the Union</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>The coronavirus pandemic is the most severe threat to public health that the United States has confronted in decades. It’s also causing unimaginable damage to our economy, putting working families and middle class Americans under agonizing financial strain&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-fema-administrator-peter-gaynors-comments-on-cnn-state-9c5c43e65dce">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-17" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/18/20 - On Immediate Actions the Trump Administration Must Take to Address the Public Health Crisis</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>My heart goes out to all Americans who are suffering from the outbreak of the novel coronavirus — those who are sick, those who are caring for others, those who have lost loved ones, those who cannot spend time with family members due to social distancing, and those who are already dealing with the economic fallout&#8230;</p>
+<p><strong><a href="https://medium.com/@JoeBiden/statement-from-vice-president-joe-biden-on-immediate-actions-the-trump-administration-must-take-to-57857de533b8">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-0-18" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">01/27/20 - OP-ED: Trump is worst possible leader to deal with coronavirus outbreak</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <p>The possibility of a pandemic is a challenge Donald Trump is unqualified to handle as president. I remember how Trump sought to stoke fear and stigma during the 2014 Ebola epidemic. He called President Barack Obama a “<a class="gnt_ar_b_a" href="https://twitter.com/realDonaldTrump/status/525217854489374721" target="_blank" rel="noopener" data-t-l="|inline|intext|n/a">dope</a>” and “<a class="gnt_ar_b_a" href="https://twitter.com/realdonaldtrump/status/529829777608560641" target="_blank" rel="noopener" data-t-l="|inline|intext|n/a">incompetent</a>” and <a class="gnt_ar_b_a" href="https://twitter.com/realDonaldTrump/status/517106917127507968" target="_blank" rel="noopener" data-t-l="|inline|intext|n/a">railed against the evidence-based response</a> our administration put in place — which quelled the crisis and saved hundreds of thousands of lives — in favor of <a class="gnt_ar_b_a" href="https://twitter.com/realDonaldTrump/status/518552645414690816" target="_blank" rel="noopener" data-t-l="|inline|intext|n/a">reactionary travel bans</a> that would only have made things worse. He advocated abandoning exposed and infected American citizens rather than <a class="gnt_ar_b_a" href="https://twitter.com/realDonaldTrump/status/495379061972410369" target="_blank" rel="noopener" data-t-l="|inline|intext|n/a">bringing them home</a> for treatment&#8230;</p>
+<p><strong><a href="https://www.usatoday.com/story/opinion/2020/01/27/coronavirus-donald-trump-made-us-less-prepared-joe-biden-column/4581710002/">Read More &gt;&gt;</a></strong></p>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                  </div>
+                  
+                </section>
+                                                        <section class="vision__sub-block-item" id="section-1">
+                  <h3 class="bfp__title--large vision__sub-block-sub-title">Media</h3>
+                                      <figure class="vision__sub-block-img">
+                      <noscript><img width="1024" height="683" src="wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-1024x683.jpg" class="attachment-large size-large" alt="Joe Biden talks to supporters while wearing a face mask" sizes="(min-width: 768px) 880px, 100vw" srcset="wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-1024x683.jpg 1024w, wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-300x200.jpg 300w, wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-768x512.jpg 768w, wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-1536x1024.jpg 1536w, wp-content/uploads/2020/08/50045741202_f5c8d18a40_k.jpg 2048w" /></noscript><img width="1024" height="683" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%201024%20683%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-1024x683.jpg" class="lazyload attachment-large size-large" alt="Joe Biden talks to supporters while wearing a face mask" data-sizes="(min-width: 768px) 880px, 100vw" data-srcset="https://joebiden.com/wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-1024x683.jpg 1024w, https://joebiden.com/wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-300x200.jpg 300w, https://joebiden.com/wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-768x512.jpg 768w, https://joebiden.com/wp-content/uploads/2020/08/50045741202_f5c8d18a40_k-1536x1024.jpg 1536w, https://joebiden.com/wp-content/uploads/2020/08/50045741202_f5c8d18a40_k.jpg 2048w" />                    </figure>
+                                                        <div class="bfp__copy vision__sub-block-copy"><p style="text-align: center;"><span style="font-weight: 400;">Donald Trump is not to blame for the coronavirus. But he does bear responsibility for the response. The American people need and deserve a leader who will give them the truth. </span></p>
+</div>
+                  
+                                      <div class="vision__article-wrap">
+                                                                        <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-0" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/17/20 - The uncomfortable truth is that Trump left America exposed and vulnerable</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 75% 0 0; position: relative;"><iframe title="The uncomfortable truth is that Trump left America exposed and vulnerable | Joe Biden For President" width="500" height="375" src="https://www.youtube.com/embed/R2-5GXQASLE?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-1" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/15/20 - Virtual Town Hall With VP Joe Biden And Coronavirus Crisis Front Line Workers</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Join Our Virtual Town Hall With VP Joe Biden And Coronavirus Crisis Front Line Workers" width="500" height="281" src="https://www.youtube.com/embed/GdpV6_UVK5k?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-2" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/08/20 - Virtual Town Hall with Vice President Biden on Unemployment and Issues Facing Working Families</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Virtual Town Hall with Vice President Biden on Unemployment and Issues Facing Working Families" width="500" height="281" src="https://www.youtube.com/embed/sn1hWHUwvn4?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-3" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/05/20 - Family Town Hall on COVID-19</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Family Town Hall on COVID-19 with @itsJudysLife, @The Curly Coopers and @J House Vlogs" width="500" height="281" src="https://www.youtube.com/embed/Rox3zsT_wg8?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-4" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">04/02/20 - Joe Biden Delivers Remarks on Implementation & Oversight of CARES Act</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Joe Biden Delivers Remarks on Implementation &amp; Oversight of CARES Act | Joe Biden For President" width="500" height="281" src="https://www.youtube.com/embed/4PEkEc1ZFBs?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-5" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/27/20 - A Frontlines Round Table With Vice President Biden</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Tune in: A Frontlines Round Table With Vice President Biden | Joe Biden For President" width="500" height="281" src="https://www.youtube.com/embed/lnG13ft9BeI?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-6" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/25/20 - Joe Biden delivers remarks on the impact of the Coronavirus on Young Americans</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Joe Biden delivers remarks on the impact of the Coronavirus on Young Americans. Tune in:" width="500" height="281" src="https://www.youtube.com/embed/JfBVHeZkVFs?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-7" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/23/20 - Joe Biden Delivers Remarks on the Coronavirus Pandemic</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="TUNE IN: Joe Biden Delivers Remarks on the Coronavirus pandemic | Joe Biden For President" width="500" height="281" src="https://www.youtube.com/embed/MbNk-ryOEE4?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-8" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/21/20 - Coronavirus Explained By Former White House Ebola Response Coordinator</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Coronavirus Explained By Former White House Ebola Response Coordinator | Joe Biden For President" width="500" height="281" src="https://www.youtube.com/embed/-M7SH_xw_NY?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-9" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/17/20 - Joe Biden Addresses Election Results in the Midst of the Coronavirus Pandemic</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="TUNE IN: Joe Biden Addresses Tonight&#039;s Election Results | Joe Biden For President" width="500" height="281" src="https://www.youtube.com/embed/ubSRpQ-p-RE?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-10" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/15/20 - Joe Biden Discusses the Coronavirus Pandemic at the CNN Democratic Debate </h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 75% 0 0; position: relative;"><iframe title="Joe Biden Discusses the Coronavirus Outbreak During the Democratic Debate | Joe Biden For President" width="500" height="375" src="https://www.youtube.com/embed/WWDvWNyqQ74?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                                                <div class="vision__article">
+                            <button role="button" aria-expanded="false" href="#issue-1-11" class="vision__article-title-link">
+                              <h4 class="bfp__title--sm vision__article-title">03/12/20 - Joe Biden Addresses the Nation on Confronting the Coronavirus Pandemic.</h4>
+                            </button>
+                            <div class="bfp__copy vision__article-body-wrap" style="display: none">
+                              <div class="vision__article-body-copy">
+                                <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="TUNE IN: Joe Biden addresses the nation on confronting the coronavirus pandemic." width="500" height="281" src="https://www.youtube.com/embed/6GCr_AOKwt4?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              </div>
+                                                                                        </div>
+                          </div>
+                                                                  </div>
+                  
+                </section>
+                                                        <section class="vision__sub-block-item" id="section-2">
+                  <h3 class="bfp__title--large vision__sub-block-sub-title">Policy</h3>
+                                      <figure class="vision__sub-block-img">
+                      <noscript><img width="1024" height="683" src="wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-1024x683.jpg" class="attachment-large size-large" alt="Joe Biden waves while wearing a mask" sizes="(min-width: 768px) 880px, 100vw" srcset="wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-1024x683.jpg 1024w, wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-300x200.jpg 300w, wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-768x512.jpg 768w, wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-1536x1024.jpg 1536w, wp-content/uploads/2020/08/50045733642_aeae0ed72b_k.jpg 2048w" /></noscript><img width="1024" height="683" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%201024%20683%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-1024x683.jpg" class="lazyload attachment-large size-large" alt="Joe Biden waves while wearing a mask" data-sizes="(min-width: 768px) 880px, 100vw" data-srcset="https://joebiden.com/wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-1024x683.jpg 1024w, https://joebiden.com/wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-300x200.jpg 300w, https://joebiden.com/wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-768x512.jpg 768w, https://joebiden.com/wp-content/uploads/2020/08/50045733642_aeae0ed72b_k-1536x1024.jpg 1536w, https://joebiden.com/wp-content/uploads/2020/08/50045733642_aeae0ed72b_k.jpg 2048w" />                    </figure>
+                                                        <div class="bfp__copy vision__sub-block-copy"><p style="text-align: left;"><span style="font-weight: 400;">There is simply too much at stake – too many lives, too many livelihoods, too many homes and families and businesses and communities at risk.</span></p>
+<p style="text-align: left;"><span style="font-weight: 400;">The plan Vice President Biden released offers both a decisive public health response to curb the spread of this disease and provide treatment to those in need &#8212; as well as a decisive economic response that delivers real relief to American workers, families, and small businesses—and protects the economy as a whole. </span></p>
+<p style="text-align: left;"><a href="covid19.html"><strong>Read the full plan here&gt;&gt;</strong></a></p>
+<p><strong><a href="the-biden-emergency-action-plan-to-save-the-economy/index.html" rel="noopener">Read the emergency economic plan here &gt;&gt;</a></strong></p>
+<p><strong><a href="the-biden-make-it-work-checklist/index.html">Read the &#8220;Make it Work&#8221; checklist here &gt;&gt;</a></strong></p>
+<p><strong><a href="the-biden-plan-to-coordinate-critical-materials-for-all-50-states-and-u-s-territories/index.html">Read the plan to Coordinate Critical Materials for All 50 States and U.S. Territories here &gt;&gt;</a></strong></p>
+<p><strong><a href="joe-bidens-4-point-plan-for-our-essential-workers.html">Read the 4-point plan for our essential workers here &gt;&gt;</a></strong></p>
+<p><strong><a href="the-biden-plan-to-scale-up-employment-insurance-by-reforming-short-time-compensation-programs/index.html">Read the plan to scale up employment insurance here &gt;&gt;</a></strong></p>
+<p><strong><a href="smallbusinesses/index.html">Read the proposal to set up support for deserving small businesses here &gt;&gt;</a></strong></p>
+<p><strong><a href="plans-to-support-women-duringcovid19/index.html">Read highlights of Joe Biden&#8217;s plans to support women during the COVID-19 crisis here &gt;&gt;</a></strong></p>
+<p><a href="fact-sheet-how-joe-biden-would-help-you-get-health-insurance-coverage-during-the-coronavirus-crisis/index.html"><strong>Read the fact sheet on how Joe Biden would help you get health insurance coverage during the coronavirus crisis &gt;&gt;</strong></a></p>
+<p><a href="joe-biden-urges-donald-trump-to-address-hunger-crisis/index.html"><strong>Read more about Joe Biden urging Donald Trump to address the hunger crisis &gt;&gt;</strong></a></p>
+<p><a href="covid19-disabilities/index.html"><strong>Read the plan to support people with disabilities during the COVID-19 pandemic &gt;&gt; </strong></a></p>
+<p><a href="reopening.html"><strong>Read the plan for an effective re-opening that jumpstarts the economy &gt;&gt;</strong></a></p>
+<p><a href="beat-covid19/index.html"><strong>Read the plan to beat COVID-19 &gt;&gt;</strong></a></p>
+</div>
+                  
+                  
+                </section>
+                                    </div>
+              </div>
+    </article>
+  </div>
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="covid19-leadership.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/covid19-leadership/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFFLT1ARWQwL","queueTime":0,"applicationTime":327,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

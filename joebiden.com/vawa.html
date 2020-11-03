@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Joe Biden&#039;s Plan to End Violence Against Women | Joe Biden</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="Joe Biden&#039;s plan to end violence against women follows his strong track record of getting things done by building on the landmark Violence Against Women Act." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="vawa.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Joe Biden&#039;s Plan to End Violence Against Women | Joe Biden" />
+	<meta property="og:description" content="Joe Biden&#039;s plan to end violence against women follows his strong track record of getting things done by building on the landmark Violence Against Women Act." />
+	<meta property="og:url" content="https://joebiden.com/vawa/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-10-11T23:55:36+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Violence-Against-Women_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Joe Biden&#039;s Plan to End Violence Against Women | Joe Biden" />
+	<meta name="twitter:description" content="Joe Biden&#039;s plan to end violence against women follows his strong track record of getting things done by building on the landmark Violence Against Women Act." />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Violence-Against-Women_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="29 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/vawa/#webpage","url":"https://joebiden.com/vawa/","name":"Joe Biden's Plan to End Violence Against Women | Joe Biden","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-09-13T18:19:13+00:00","dateModified":"2020-10-11T23:55:36+00:00","description":"Joe Biden's plan to end violence against women follows his strong track record of getting things done by building on the landmark Violence Against Women Act.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/vawa/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fvawa%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fvawa%2F&#038;format=xml" />
+<link rel="alternate" href="vawa.html" hreflang="en" />
+<link rel="alternate" href="es/la-ley-emblematica-contra-la-violencia-hacia-las-mujeres/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1175 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="vawa.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="vawa.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/la-ley-emblematica-contra-la-violencia-hacia-las-mujeres/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/la-ley-emblematica-contra-la-violencia-hacia-las-mujeres/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1175 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan to End Violence Against Women</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">One of the driving forces throughout Joe Biden’s career has been fighting back against abuses of power &#8211; whether economic or physical power. That force motivated him to write and champion the Violence Against Women Act of 1994, establish the first-ever White House Advisor on Violence Against Women during the Obama-Biden Administration, and launch a national campaign to change the culture surrounding campus rape and sexual assault.</span></p>
+<p><span style="font-weight: 400;">In 2019, a bipartisan coalition in the House of Representatives passed the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1585/text"><span style="font-weight: 400;">Violence Against Women Reauthorization Act of 2019</span></a><span style="font-weight: 400;"> (VAWA 2019), which includes significant, forward-looking improvements and innovations proposed by advocates, survivors, lawyers, experts, prosecutors, and law enforcement who are in the trenches protecting and supporting survivors. </span><span style="font-weight: 400;">Last year, </span><a href="https://www.leahy.senate.gov/press/leahy-feinstein-and-other-senators-introduce-house-passed-violence-against-women-act"><span style="font-weight: 400;">every single Senate Democrat</span></a><span style="font-weight: 400;"> signed on to the Senate version of the House-passed bill. </span><span style="font-weight: 400;">But, Leader McConnell is refusing to bring the bill to the floor in the Senate. There’s no reason the Senate shouldn’t pass this reauthorization now and enact it long before President Biden’s first day in office. But if they don’t, Joe Biden will make enacting the VAWA reauthorization one of his top first 100 day priorities.</span></p>
+<p><span style="font-weight: 400;">In addition, President Joe Biden will build on his strong track record of getting things done by:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expanding the safety net for survivors,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Empowering and protecting our young people,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Confronting online harassment, abuse and stalking,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensuring justice for survivors,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ending the rape kit backlog, </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Addressing the deadly combination of guns and domestic violence,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Changing the culture that enables sexual violence,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Supporting the diverse needs of survivors of violence against women,</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Protecting and empowering immigrant women, and</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Leading the global effort to end gender-based violence.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><b><i>Building on the Landmark Violence Against Women Act</i></b></p>
+<p><span style="font-weight: 400;">The Violence Against Women Act has two goals: make women safer, and protect women&#8217;s civil rights. </span></p>
+<p><span style="font-weight: 400;">Joe Biden </span><a href="https://www.congress.gov/bill/101st-congress/senate-bill/2754/summary/00"><span style="font-weight: 400;">first</span></a><span style="font-weight: 400;"> introduced the law in 1990, when domestic violence was considered a family matter and few in Congress wanted to work on the issue. Over the next three years, then-Senator Biden used his role on the U.S. Senate Judiciary Committee to hear directly from survivors, </span><a href="http://niwaplibrary.wcl.american.edu/wp-content/uploads/Senate-Hearing-Aug-29-Dec-11-1990.pdf"><span style="font-weight: 400;">during</span></a><span style="font-weight: 400;"> hours of testimony, about their </span><a href="https://www.c-span.org/video/?15464-1/domestic-violence"><span style="font-weight: 400;">experiences</span></a><span style="font-weight: 400;"> with domestic violence and sexual assault and from experts armed with reports and data.  </span></p>
+<p><span style="font-weight: 400;">In 1993, then-Senator Biden </span><a href="http://www.ncdsv.org/images/OVW_HistoryVAWA.pdf"><span style="font-weight: 400;">wrote</span></a><span style="font-weight: 400;">, “Through this process, I have become convinced that violence against women reflects as much a failure of our nation’s collective moral imagination as it does the failure of our nation’s laws and regulations.” That moral outrage fueled Biden’s relentless drive to pass a bill even in the face of </span><a href="https://www.nytimes.com/2019/04/04/us/violence-against-women-act-reauthorization.html"><span style="font-weight: 400;">opposition</span></a><span style="font-weight: 400;"> from the Bush Administration, the then-Chief Justice of the Supreme Court, and conservatives in Congress. After four years of work, the Act passed in September 1994 with significant bipartisan support.</span></p>
+<p><span style="font-weight: 400;">But Biden didn’t stop at final passage of the Act. For nearly three decades, Joe Biden has worked so that the ambition of the Violence Against Women Act didn&#8217;t get lost in bureaucracy or bogged down by partisanship. Instead, his legislation has become a cornerstone for the movement to end violence against women. Since 1994, Biden has led efforts to ensure Congress passed legislation renewing and strengthening the Violence Against Women Act (VAWA) three times: in 2000, 2005, and 2013. </span><a href="https://www.nytimes.com/2019/04/04/us/violence-against-women-act-reauthorization.html"><span style="font-weight: 400;">Each</span></a><span style="font-weight: 400;"> time, the VAWA reauthorization has upped the ante and ensured that especially vulnerable communities &#8211; from Native women to LGBTQ individuals &#8211; are included in the Act.</span></p>
+<p><span style="font-weight: 400;">The Violence Against Women Act has worked. Between the Violence Against Women Act’s implementation in 1994 and 2011, serious victimization by an intimate partner declined by </span><a href="https://www.bjs.gov/content/pub/pdf/ipvav9311.pdf"><span style="font-weight: 400;">72%</span></a><span style="font-weight: 400;">. But, there is still more work to do. Now is no time to turn back, or even to simply sit still. Today, as many as </span><a href="https://www.cdc.gov/violenceprevention/pdf/2015data-brief508.pdf"><span style="font-weight: 400;">1 in 3</span></a><span style="font-weight: 400;"> women are subjected to physical violence, rape and/or stalking by a partner at some point in their lives. The rate is even higher for </span><a href="https://www.cdc.gov/violenceprevention/pdf/nisvs_executive_summary-a.pdf"><span style="font-weight: 400;">women of color</span></a><span style="font-weight: 400;">, </span><a href="https://vawnet.org/sc/rates-and-prevalence-dv-lgbtq-communities"><span style="font-weight: 400;">lesbian and bisexual women</span></a><span style="font-weight: 400;">, and </span><a href="https://www.cdc.gov/violenceprevention/pdf/nisvs_executive_summary-a.pdf"><span style="font-weight: 400;">transgender people</span></a><span style="font-weight: 400;">. </span></td>
+</tr>
+</tbody>
+</table>
+<p><b>EXPAND THE SAFETY NET FOR SURVIVORS </b></p>
+<p><span style="font-weight: 400;">As president, Biden will strengthen social supports for survivors of domestic and sexual violence, helping victims secure housing, gain economic stability, and recover from the trauma of abuse. The U.S. Conference of Mayors has </span><a href="https://www.tuw.org/sites/tuw.org/files/US%20Conference%20of%20Mayors%20Hunger%20and%20Homelessness%20Survey_2015.pdf"><span style="font-weight: 400;">identified</span></a><span style="font-weight: 400;"> domestic violence as a top driver of family homelessness, and </span><a href="https://safehousingpartnerships.org/sites/default/files/2017-05/SHP-Homelessness%20and%20DV%20Inforgraphic_1.pdf"><span style="font-weight: 400;">research</span></a><span style="font-weight: 400;"> points to domestic violence as a key cause of homelessness for many women. And, domestic violence survivors and their children often live in unstable housing conditions, such as with relatives or friends in crowded and potentially exploitative conditions or returning to abusive partners. </span><a href="https://www.usich.gov/news/positive-outcomes-for-victims-of-domestic-violence-and-families-through-hou/"><span style="font-weight: 400;">Research</span></a><span style="font-weight: 400;"> demonstrates that providing flexibility in eligibility, services, and support helps survivors feel safer and rebuild their lives after violence.</span></p>
+<p><span style="font-weight: 400;">The Biden plan will cut through the red tape that can slow down assistance and limit options for survivors. Specifically, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Establish a new coordinated housing initiative.</b><span style="font-weight: 400;"> Current federal housing programs are insufficient for meeting the needs of domestic and sexual violence survivors. Biden will bring federal agencies together to create a comprehensive housing grant program tailored to survivors of domestic and sexual violence. This grant program will include flexible funding to support the practical needs of survivors; advocacy with landlords and housing agencies to keep victims in housing; supportive services including legal assistance, child care, and employment training; new permanent housing vouchers; increased funding for the VAWA transitional housing program; and homeownership opportunities.</span></li>
+<li style="font-weight: 400;"><b>Expand access to housing assistance</b><span style="font-weight: 400;">. Biden will strengthen the VAWA housing provisions, for example by </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1585/text"><span style="font-weight: 400;">making it easier</span></a><span style="font-weight: 400;"> for victims to retain their federal housing subsidy when needed for safety reasons.</span></li>
+<li style="font-weight: 400;"><b>Protect survivors from housing discrimination</b><span style="font-weight: 400;">. The </span><a href="https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_act_overview"><span style="font-weight: 400;">Fair Housing Act</span></a><span style="font-weight: 400;"> protects women from gender discrimination in public and private housing, including survivors who may be unfairly evicted from housing because of domestic violence. The Trump Administration </span><a href="https://www.federalregister.gov/documents/2019/08/19/2019-17542/huds-implementation-of-the-fair-housing-acts-disparate-impact-standard"><span style="font-weight: 400;">proposed</span></a><span style="font-weight: 400;"> rolling back Fair Housing protections by making it harder to prove disparate impact claims and allowing landlords and banks to use discriminatory practices. The Biden Administration will vigorously enforce the Fair Housing Act. VAWA also protects survivors from discrimination in subsidized housing and allows survivors to transfer to new units if necessary for safety. But red tape makes these provisions challenging to implement. The Biden plan will make it easier for survivors to transfer their housing assistance and move to a new home so that they can be safe. </span></li>
+<li style="font-weight: 400;"><b>Provide cash assistance to survivors to help build safety and security</b><b><i>.</i></b> <span style="font-weight: 400;">Survivors of sexual violence and domestic violence often depend on cash assistance to help build a safe and secure livelihood. For example, a recent </span><a href="https://vawnet.org/sites/default/files/assets/files/2018-01/TheDifferenceBetweenSurvivingandNotSurviving_Jan2018.pdf"><span style="font-weight: 400;">survey</span></a><span style="font-weight: 400;"> of domestic violence and sexual assault advocates found that nearly 85% thought survivors relied critically on the Temporary Aid for Needy Families program for support. Unfortunately, these programs are insufficient to meet the needs of many survivors. As president, Biden will allocate $5 billion to community organizations to provide cash grants to survivors in need, whether the need is to help pay for daycare, transportation to work, or to buy a laptop for a new job. </span></li>
+<li style="font-weight: 400;"><b>Allow survivors to access their retirement savings as they rebuild their lives. </b><span style="font-weight: 400;">The tax code currently allows some employers to offer hardship withdrawals to retirement savers with a pressing need &#8211; such as medical expenses or to pay for a funeral. Recovering from domestic violence or sexual assault currently does not qualify as a condition for hardship withdrawals, but Biden would amend the tax code to ensure it does. In addition, Biden will amend the tax code to allow survivors to take a distribution from their retirement savings without the standard penalty &#8211; allowing survivors with retirement savings tax-free access to funds to help achieve a safer and more secure life. </span></li>
+<li style="font-weight: 400;"><b>Guarantee paid domestic violence, sexual assault, and stalking safe leave. </b><span style="font-weight: 400;">Biden will work with Congress to reform the </span><a href="https://www.dol.gov/whd/fmla/"><span style="font-weight: 400;">Family and Medical Leave Act</span></a><span style="font-weight: 400;"> to provide paid leave for survivors of domestic violence, sexual assault, or stalking who need time to seek physical or mental care, seek counsel, find new housing, or take other action related to the violence they experienced.</span></li>
+</ul>
+<p><b>EMPOWER AND PROTECT OUR YOUNG PEOPLE</b></p>
+<p><span style="font-weight: 400;">The Biden Administration will help educate and empower young people with the knowledge and tools they need to prevent sexual violence and dating violence, with a focus on online harassment and enforcing </span><a href="https://www2.ed.gov/about/offices/list/ocr/docs/tix_dis.html"><span style="font-weight: 400;">Title IX</span></a><span style="font-weight: 400;"> protections. Biden will:</span></p>
+<ul>
+<li><b>Expand requirements for comprehensive sexual assault, stalking, and dating violence prevention education on college campuses. <span style="font-weight: 400;">Biden will pursue legislation that will require schools to offer and fund peer-facilitated and student-led prevention education (in addition to comprehensive, data-informed, and ongoing prevention education), and mandate schools conduct campus climate surveys on sexual violence and dating violence and then develop a plan to address survey findings.</span></b></li>
+<li><strong>Expand survivors’ reporting rights and options on college campuses.</strong> <span style="font-weight: 400;">The Biden Administration will push for legislation that will require schools to improve reporting practices, including adopting amnesty policies for survivors who were in violation of minor campus policies at the time of their assault (e.g., underage drinking) implementing online, anonymous sexual assault and harassment reporting systems, and establishing agreements with local rape crisis and/or domestic violence centers to provide new reporting options for survivors. </span></li>
+<li><strong>Strengthen Title IX and Clery Act enforcement</strong>. <span style="font-weight: 400;">The Trump Administration has rolled back important protections for student survivors by </span><a href="https://www.washingtonpost.com/local/education/trump-administration-rescinds-obama-era-guidance-on-campus-sexual-assault/2017/09/22/43c5c8fa-9faa-11e7-8ea1-ed975285475e_story.html"><span style="font-weight: 400;">rescinding</span></a><span style="font-weight: 400;"> the Obama-Biden Administration’s 2011 Title IX guidance. Any backstepping on Title IX is unacceptable. The Biden Administration will restore the Title IX guidance for colleges, including the </span><a href="https://www2.ed.gov/about/offices/list/ocr/letters/colleague-201104.pdf"><span style="font-weight: 400;">2011 Dear Colleague Letter</span></a><span style="font-weight: 400;">, which outlined for schools how to fairly conduct Title IX proceedings. Biden will also increase fines imposed on colleges for Clery Act violations, or failing to report statistics about campus safety, as well as develop stronger enforcement protocols to oversee reporting under the U.S. Department of Education.</span></li>
+<li><strong>Train college administrators and staff how to support victims of sexual assault or other gender-based violence.</strong> <span style="font-weight: 400;">Through regulatory guidance, Biden will require all administrators and staff who participate in a Title IX investigative process or may interact with a survivor at any point in the reporting process to participate in training on victim-centered, trauma-informed interview techniques. He will also require staff who develop prevention education programs or may interact with a survivor at any point in the reporting process to undergo training on the role of technology in sexual violence, dating violence, stalking, and harassment, an emerging challenge that is too often insufficiently understood.</span></li>
+<li><strong>Expand prevention and services to public K-12 schools. </strong><span style="font-weight: 400;"><strong>Sexual assault, harassment, and dating violence don’t only affect college students.</strong> Biden will push for legislation, regulatory action, and appropriations so that K-12 public schools provide annual, age-appropriate education on healthy relationships and affirmative consent beginning in elementary school through graduation, and create funding opportunities for after-school programs and youth-serving groups to implement prevention education programs. Biden will also work to create new funding for public K-12 schools to implement Title IX trainings for administrators and staff. And, Biden will make it easier for teens experiencing dating violence and sexual assault to access accommodations, services, and protective measures.</span></li>
+</ul>
+<p><b>CONFRONT ONLINE HARASSMENT, ABUSE AND STALKING</b></p>
+<p><span style="font-weight: 400;">Technology brings with it new obligations and policy challenges. Nearly </span><a href="https://datasociety.net/blog/2017/01/18/online-harassment-digital-abuse/"><span style="font-weight: 400;">half</span></a><span style="font-weight: 400;"> of all Internet users report experiences of harassment or abuse. The Biden Administration will shine a light on the online harassment, stalking, and abuse that now is a too-frequent reality for Americans, particularly for young people and women. Joe Biden recognizes that culture change must extend to our online lives, whether clamping down on “</span><a href="https://post.ca.gov/cyber-exploitation"><span style="font-weight: 400;">cyber exploitation</span></a><span style="font-weight: 400;">,” online stalking, or intimate partner digital abuse.  </span></p>
+<ul>
+<li style="font-weight: 400;"><b>Convene a National Task Force on Online Harassment and Abuse.</b><span style="font-weight: 400;"> As President, Joe Biden will convene a national task force with federal agencies, state leaders, advocates, law enforcement, and technology experts to study rampant online sexual harassment, stalking, and threats, including revenge porn, deepfakes, and the connection between this harassment, mass shootings, extremism and violence against women. The Task Force will be charged with developing cutting-edge strategies and recommendations for how federal and state governments, social media companies, schools, and other public and private entities can tackle this unique challenge. The Task Force will consider platform accountability, transparent reporting requirements for incidents of harassment and response, and best practices. </span></li>
+<li style="font-weight: 400;"><b>Allocate new funding for law enforcement training to tackle online abuse.</b><span style="font-weight: 400;"> The Biden Administration will dedicate new funding to federal, state, and local law enforcement officials for investigating and prosecuting online sexual harassment, stalking, and threats while also supporting victims.</span></li>
+<li style="font-weight: 400;"><b>Support federal and state legislation creating a civil and criminal cause of action for unauthorized disclosure of intimate images. </b><span style="font-weight: 400;">Biden supports the Stopping Harmful Image Exploitation and Limiting Distribution (SHIELD) Act, introduced by Senator Harris, which makes the use of “</span><a href="https://post.ca.gov/cyber-exploitation"><span style="font-weight: 400;">cyber exploitation</span></a><span style="font-weight: 400;">” a criminal act</span><b>. </b><span style="font-weight: 400;">He will also support the enactment of federal and state legislation giving victims of “cyber exploitation” a civil cause of action.</span></li>
+</ul>
+<p><b>ENSURE JUSTICE FOR SURVIVORS</b></p>
+<p><span style="font-weight: 400;">For too many survivors, justice is out of reach. Many are denied the power to sue wrongdoers on their own. An abuser facing criminal charges has an undeniable right to an attorney, but if the victim needs to get a restraining order or battle for custody, they either have to pay for one or find one </span><i><span style="font-weight: 400;">pro bono</span></i><span style="font-weight: 400;">, or they are entirely on their own. In addition, workplace contracts often bar workers who experience sexual harassment or assault in the workplace from their day in court.</span><b> </b></p>
+<p><span style="font-weight: 400;">As president, Biden will:</span></p>
+<ul>
+<li><b>Restore and strengthen VAWA’s civil cause of action for survivors. </b><span style="font-weight: 400;">The original Violence Against Women Act included a revolutionary civil rights remedy that gave victims the power on their own to take their abusers to federal court, call them to account, and win monetary, injunctive, or declaratory relief. State criminal-justice systems often fail survivors. The federal civil rights remedy was designed to supplement state remedies, not displace them. The Supreme Court got it </span><a href="https://www.washingtonpost.com/opinions/joe-biden-time-to-take-sexual-assault-to-federal-court/2018/02/16/7e2afa48-101a-11e8-9065-e55346f6de81_story.html"><span style="font-weight: 400;">wrong</span></a><span style="font-weight: 400;"> when they </span><a href="https://www.oyez.org/cases/1999/99-5"><span style="font-weight: 400;">overturned</span></a><span style="font-weight: 400;"> the original civil rights remedy. Congress can and must pass an improved and expanded civil rights remedy that fills the gaps the Court found fatal last time, including a demonstrated connection between sexual assault and women’s economic opportunity.  </span></li>
+<li><b>Support ratification of the Equal Rights Amendment. </b><span style="font-weight: 400;">The U.S. Constitution does not explicitly protect equal rights for women. The Equal Rights Amendment (ERA) would change this, enshrining in our Constitution the principle that all individuals, regardless of sex, are equally protected under the law. This amendment would expand protections for survivors of violence against women who participate in or require access to government programs, and potentially encompass the aims of the expanded civil rights remedy described above. Biden co-sponsored the Equal Rights Amendment nine times and, as president, he will work with advocates across the country to enshrine the ERA in our Constitution. </span></li>
+<li><b>Expand access to lawyers.</b><span style="font-weight: 400;"> Biden will significantly expand the </span><a href="https://www.justice.gov/ovw/grant-programs"><span style="font-weight: 400;">Legal Assistance for Victims Grant Program</span></a><span style="font-weight: 400;"> in the Violence Against Women Act, and support expanded funding for the </span><a href="https://www.lsc.gov/"><span style="font-weight: 400;">Legal Services Corporation</span></a><span style="font-weight: 400;"> to ensure lawyers are available to help domestic violence survivors in civil and criminal proceedings. </span></li>
+<li><b>Ensure advocates for every victim</b><span style="font-weight: 400;">. Biden will </span><span style="font-weight: 400;">create a $50 million grant program from the Crime Victims Fund to hire victim advocates so that every survivor of domestic or sexual violence is offered the services of a highly-trained advocate if they want one. Victim advocates based in community organizations or in local law enforcement systems play an invaluable role by giving individualized attention to victims and helping them navigate the process, explore options and access services.</span></li>
+<li><b>Ensure workers can have their day in court by ending mandatory arbitration clauses imposed by employers on workers, including for claims of workplace sexual harassment. <a href="https://www.epi.org/publication/the-growing-use-of-mandatory-arbitration-access-to-the-courts-is-now-barred-for-more-than-60-million-american-workers/"><span style="font-weight: 400;">60 million</span></a><span style="font-weight: 400;"> American workers have been forced to sign contracts waiving their right to sue their employer and </span><a href="https://www.epi.org/publication/the-growing-use-of-mandatory-arbitration-access-to-the-courts-is-now-barred-for-more-than-60-million-american-workers/"><span style="font-weight: 400;">nearly 25 million</span></a><span style="font-weight: 400;"> are forced to waive their right to bring class action lawsuits and joint arbitration. An </span><a href="https://www.epi.org/files/pdf/144131.pdf"><span style="font-weight: 400;">estimated</span></a><span style="font-weight: 400;"> 57.6% of female workers are forced to sign forced arbitration clauses. These contracts require employees to use individual, private arbitrations when their employer violates federal and state laws &#8211; including workplace discrimination and harassment. Forced arbitration proceedings are conducted in private, often by arbitrators selected by the employer. Even worse, forced individual arbitration clauses bar employees with similar grievances from joining together, which would strengthen their claims and sometimes enable them to find lawyers who will represent them. Biden will spearhead legislation to completely eliminate mandatory individual arbitration, including for claims of workplace sexual harassment. By getting rid of mandatory individual arbitration, he will also support employees’ ability to band together in the courts to address their collective issues through class action lawsuits and to bring class claims through arbitration. </span></b></li>
+</ul>
+<p><b>END THE RAPE KIT BACKLOG</b></p>
+<p><span style="font-weight: 400;">Joe Biden has been on the forefront of the fight to harness the power of DNA testing and bring justice and security to victims of sexual violence. In 2002, then-Senator Biden invited a brave survivor, Debbie Smith, to testify in front of the United States Judiciary Committee about her harrowing experience and the cruel and inexcusable rape kit backlog that left her without accountability and closure until several years after her attack. In 2004, he championed the first </span><a href="https://www.congress.gov/bill/108th-congress/senate-bill/152"><span style="font-weight: 400;">bill</span></a><span style="font-weight: 400;"> addressing the rape kit backlog at crime labs that was signed into law. In 2015, as Vice President, Biden led the charge to secure the first </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2015/03/16/fact-sheet-investments-reduce-national-rape-kit-backlog-and-combat-viole"><span style="font-weight: 400;">$41 million</span></a><span style="font-weight: 400;"> in the federal Sexual Assault Kit Initiative to begin addressing the estimated </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2015/03/16/fact-sheet-investments-reduce-national-rape-kit-backlog-and-combat-viole"><span style="font-weight: 400;">400,000</span></a><span style="font-weight: 400;"> untested rape kits that were sitting on shelves in police property rooms across the country. </span></p>
+<p><span style="font-weight: 400;">Over the years, we have learned much more about how these backlogs accrue and what needs to happen to change that. </span><span style="font-weight: 400;">But there are still far too many untested kits. Survivors need to feel confident that when they report a sexual assault, they will be believed, taken seriously, and that the crime will be investigated thoroughly. </span><span style="font-weight: 400;">Joe Biden will invest the resources needed to end this problem through a multidisciplinary approach that improves the law enforcement response, supports survivors, and engages policy makers at every level. </span><span style="font-weight: 400;">Specifically, President Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Create Regional Sexual Assault Investigative Training Academies. </b><span style="font-weight: 400;">There is still a striking lack of investigative training for law enforcement and prosecutors in units dedicated to sex crimes despite the extreme complexities of sexual assault investigations. Biden will invest $20 million per year in creating Regional Sexual Assault Investigative Training Academies which will provide cutting-edge, evidence-based and trauma-informed training on investigating and prosecuting sexual assault crimes and offer incentive grants for teams of law enforcement, victim advocates, and prosecutors all over the United States to attend. </span></li>
+<li style="font-weight: 400;"><b>Increase funding for the Sexual Assault Kit Initiative (SAKI) to $100 million annually and ensure that law enforcement training addresses attitudes that lead to the neglect of testing for rape kits. </b><span style="font-weight: 400;">In addition, Biden will require that local law enforcement ensures that SAKI prioritizes the needs of survivors and their recovery when seeking to test old rape kits in order to be eligible for funding. This includes funding for rape crisis centers and advocates to ensure accountability to the survivor-centered model.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><b><i>ADDRESSING THE DEADLY COMBINATION OF GUNS AND DOMESTIC VIOLENCE</i></b></p>
+<p><span style="font-weight: 400;">The statistics tell a devastating and overwhelming story. The likelihood that a woman in a domestic violence situation will be killed increases by a </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1447915/"><span style="font-weight: 400;">factor of five</span></a><span style="font-weight: 400;"> if a gun is nearby. </span><a href="https://everytownresearch.org/reports/mass-shootings-analysis/"><span style="font-weight: 400;">Half</span> </a><span style="font-weight: 400;">of mass shootings involve an individual shooting a family member or former intimate partner. This deadly connection tragically impacts children as well: </span><a href="https://everytownresearch.org/reports/mass-shootings-analysis/"><span style="font-weight: 400;">86%</span></a><span style="font-weight: 400;"> of children killed in shootings with four or more victims were involved in domestic or family violence.</span></p>
+<p><span style="font-weight: 400;">Biden recognizes that the gun violence and domestic violence epidemics are linked and cannot be solved in isolation. Addressing the interconnectedness of these challenges will be a core focus of Biden’s anti-violence work as president. </span></p>
+<p><span style="font-weight: 400;">The House-passed </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1585"><span style="font-weight: 400;">Violence Against Women Reauthorization Act of 2019</span></a><span style="font-weight: 400;">, which Leader McConnell refuses to bring to the floor for a vote, includes a number of reforms to keep firearms out of the hands of abusers. Senator McConnell should ensure this legislation gets passed long before President Biden would take the oath of office. </span></p>
+<p><span style="font-weight: 400;">But if McConnell refuses to act, Biden will enact legislation to close the so-called “boyfriend loophole” and “stalking loophole” by prohibiting all individuals convicted of assault, battery, or stalking from purchasing or possessing firearms, regardless of their connection to the victim. This proposal is modeled after existing </span><a href="https://lawcenter.giffords.org/gun-laws/policy-areas/who-can-have-a-gun/domestic-violence-firearms/#federal"><span style="font-weight: 400;">laws</span></a><span style="font-weight: 400;"> in California, Connecticut, Hawaii, Nevada, New York, and Pennsylvania. Biden also supports enacting the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1585"><span style="font-weight: 400;">proposal</span></a><span style="font-weight: 400;"> to prohibit anyone under a temporary restraining order from purchasing or possessing a firearm before their hearing.</span></p>
+<p><span style="font-weight: 400;">In addition, President Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Establish a new Task Force on Online Harassment and Abuse to focus on the connection between mass shootings, online harassment, extremism, and violence against women. </b><span style="font-weight: 400;">As highlighted above, Biden will convene a national Task Force with federal agencies, state leaders, advocates, law enforcement, and technology experts to study rampant online sexual harassment, stalking, and threats, including revenge porn and deepfakes — and the connection between this harassment, mass shootings, extremism and violence against women. The Task Force will be charged with developing cutting-edge strategies and recommendations for how federal and state governments, social media companies, schools, and other public and private entities can tackle this unique challenge. The Task Force will consider platform accountability, transparent reporting requirements for incidents of harassment and response, and best practices. </span></li>
+<li style="font-weight: 400;"><b>Expand the use of evidence-based lethality assessments by law enforcement in cases of domestic violence.</b><span style="font-weight: 400;"> Lethality assessments, sometimes called “risk” or “danger” assessments, are a proven strategy to help law enforcement officers identify domestic violence survivors who are at high risk of being killed by their abusers. These survivors are then connected with social service programs that can offer services and safety planning. An evaluation of the Lethality Assessment Program (LEP) created by the Maryland Network Against Domestic Violence showed promising results. Increased federal funding will incentivize jurisdictions to take advantage of implementing these programs more widely.</span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Joe’s full plan to end gun violence at joebiden.com/gunsafety.</span></i></td>
+</tr>
+</tbody>
+</table>
+<p><b>CHANGE THE CULTURE THAT ENABLES SEXUAL VIOLENCE </b></p>
+<p><span style="font-weight: 400;">In 1990, when Biden began working on VAWA, domestic violence was considered a family affair. In recent years, the #MeToo movement has forced a national reckoning on the depth and breadth of sexual harassment and violence in our workplaces, our campuses, and our communities. Biden has long believed that lasting change starts with addressing the culture and engaging everyone to stand up and speak out against harassment and assault. Building on the success of campaigns targeted at young people, the Biden Administration will launch tools like innovative social awareness campaigns to expand the national movement to end rape culture. It’s on all of us to end the violence.</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Launch a new friends and family public awareness campaign</b><span style="font-weight: 400;">: Public education about responding to domestic and sexual violence is essential to the well-being of survivors. </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/23887351#"><span style="font-weight: 400;">Research</span></a><span style="font-weight: 400;"> indicates that many survivors disclose abuse to informal sources, namely family members and friends, and positive responses from these disclosures are associated with fewer symptoms of anxiety, depression, and post-traumatic stress. Biden will launch a new public awareness campaign focusing on what to say and do when someone discloses abuse and how to get that person help. The campaign will also highlight information about evidence-based bystander intervention, including what to do if you witness or become aware of abuse taking place, how to safely intervene, and when to get help. </span></li>
+</ul>
+<p><b>SUPPORT THE DIVERSE NEEDS OF SURVIVORS OF VIOLENCE AGAINST WOMEN</b></p>
+<p><span style="font-weight: 400;">Each reauthorization of VAWA that Vice President Biden has championed has included an expansion of efforts to support the diverse needs of survivors who are disproportionately affected by violence against women and also often face structural and systemic barriers to accessing justice, safety, and well-being. But, we must do more to meet the needs of women of color, lesbian and bisexual women, transgender individuals, American Indian and Alaska Native women, older women, women with disabilities, and low-income women and survivors impacted at the intersections of underserved populations.</span></p>
+<table>
+<tbody>
+<tr>
+<td>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">According to the National Intimate Partner and Sexual Violence Survey, nationally, </span><a href="https://www.cdc.gov/violenceprevention/pdf/cdc_nisvs_ipv_report_2013_v17_single_a.pdf"><span style="font-weight: 400;">44%</span></a><span style="font-weight: 400;"> of Black women experienced rape, physical violence, and/or stalking by an intimate partner in their lifetime.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">More than </span><a href="https://www.cdc.gov/violenceprevention/pdf/cdc_nisvs_ipv_report_2013_v17_single_a.pdf"><span style="font-weight: 400;">1 in 3</span></a><span style="font-weight: 400;"> Hispanic women have experienced rape, physical violence, or stalking by an intimate partner at one point in their lives, and </span><a href="https://www.cdc.gov/violenceprevention/pdf/cdc_nisvs_ipv_report_2013_v17_single_a.pdf"><span style="font-weight: 400;">1 in 12</span></a><span style="font-weight: 400;"> Hispanic women experienced this violence in the last 12 months.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Approximately </span><a href="https://www.ncjrs.gov/pdffiles1/nij/249736.pdf"><span style="font-weight: 400;">56%</span></a><span style="font-weight: 400;"> of Native women are subject to sexual violence in their lives, with more than </span><a href="https://www.ncjrs.gov/pdffiles1/nij/249736.pdf"><span style="font-weight: 400;">1 in 7</span></a><span style="font-weight: 400;"> experiencing it in the past year. Nearly </span><a href="https://www.ncjrs.gov/pdffiles1/nij/249736.pdf"><span style="font-weight: 400;">1 in 2</span></a><span style="font-weight: 400;"> reports being stalked.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">According to the National Center for Transgender Equality, </span><a href="http://www.transequality.org/sites/default/files/docs/usts/USTS%20Full%20Report%20-%20FINAL%201.6.17.pdf"><span style="font-weight: 400;">54%</span></a><span style="font-weight: 400;"> of transgender adults have been subject to intimate partner violence in their lives; </span><a href="http://www.transequality.org/sites/default/files/docs/usts/USTS%20Full%20Report%20-%20FINAL%201.6.17.pdf"><span style="font-weight: 400;">47%</span></a><span style="font-weight: 400;"> of transgender adults report experiencing sexual assault at some point in their lifetime, with Black transgender adults sexually assaulted at a higher lifetime rate of </span><a href="http://www.transequality.org/sites/default/files/docs/usts/USTS%20Full%20Report%20-%20FINAL%201.6.17.pdf"><span style="font-weight: 400;">53%</span></a><span style="font-weight: 400;">.</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">The Biden Administration will push forward work to strengthen and expand VAWA’s reach to women in marginalized communities by:</span></p>
+<ul>
+<li><b>Expanding grants </b><a href="https://www.justice.gov/ovw/file/450866/download"><b>to enhance culturally-specific services for victims of sexual assault, domestic violence, dating violence, and stalking programs</b></a><b>. </b><span style="font-weight: 400;">Since 2005, VAWA has funded a grant program to support targeted, community-driven strategies that include trauma-informed and culturally-specific programs that focus on the development of holistic prevention and intervention services for survivors from racial and ethnic minority communities. The Biden Administration will expand the resources available to scale up these initiatives and integrate a broader array of community-based organizations to address complex community needs in order to expand pathways to safety for survivors and continue to build community leadership to prevent and address domestic violence and sexual assault. </span></li>
+<li><b>Making existing federal programs for victims more responsive to the unique needs of different communities. <span style="font-weight: 400;">For example, the Biden Administration will recognize that while domestic violence and sexual violence disproportionately impact women and girls, efforts must include improving access to services and support for all survivors, regardless of gender or gender identity. Biden will work to include sexual orientation and gender identity nondiscrimination protections and permanent funding for the </span><a href="https://lgbtqipv.org/"><span style="font-weight: 400;">National LGBTQ Institute on IPV</span></a><span style="font-weight: 400;"> in the Family Violence Prevention and Services Act (FVPSA) reauthorization. And, his administration will ensure that existing and new housing initiatives for survivors of domestic violence and sexual assault take into account the disproportionate number of women of color survivors impacted by housing insecurity. Finally, Biden will secure an additional $20 million in annual funding to VAWA’s college campus grant for Historically Black Colleges and Universities, Hispanic Serving Institutions, Tribal Colleges, and community colleges to enable them to implement culturally and environmentally-specific prevention and survivor support initiatives.</span></b></li>
+<li><b>Reaffirming Tribal sovereignty to support victims and hold offenders accountable, and expanding federal resources for Alaska Native and American Indian women and girls impacted by violence and abuse.</b><span style="font-weight: 400;"> First and foremost, the Biden Administration will prioritize the extension of tribal authority against non-Native abusers for sexual assault, stalking, child violence, and trafficking, as called for in VAWA 2019. The Biden Administration will also make more federal resources available for Tribal domestic violence and sexual assault programs by increasing funding set aside for tribes under the Victims of Crime Fund (VOCA). To complement these efforts, the Biden Administration will commit to expanding enrollment for all tribal law enforcement agencies to participate in the </span><a href="https://www.justice.gov/opa/pr/department-justice-announces-expansion-program-enhance-tribal-access-national-crime-1"><span style="font-weight: 400;">Tribal Access Program</span></a><span style="font-weight: 400;">, a Department of Justice initiative to provide American Indian and Alaska Native police with access to national crime information databases. Currently, the </span><a href="https://www.justice.gov/opa/pr/department-justice-announces-expansion-program-enhance-tribal-access-national-crime-1"><span style="font-weight: 400;">vast majority</span></a><span style="font-weight: 400;"> of federally recognized Tribes participate in the program, which severely hinders a nationally accurate count of violent crimes against Native women and girls. To this end, Biden’s plan supports the proposals to tackle the data gaps fueling the epidemic of missing and murdered Native women and girls outlined under </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/227"><span style="font-weight: 400;">Savanna’s Act. </span></a><b></b></li>
+<li><b>Investing in the well-being of adolescent girls of color to reverse the upward trend of young women impacted by trauma becoming caught in the juvenile justice system — and offering pathways for their justice and healing to reduce their likelihood of experiencing incarceration as adults. <span style="font-weight: 400;">The Biden Administration will take action to recognize the </span><a href="http://www.uclalawreview.org/justice-for-girls-are-we-making-progress-2/"><span style="font-weight: 400;">disproportionate rates</span></a><span style="font-weight: 400;"> of harsh school discipline practices and juvenile justice responses to adolescent girls of color </span><a href="http://rights4girls.org/wp-content/uploads/r4g/2015/02/2015_COP_sexual-abuse_layout_web-1.pdf"><span style="font-weight: 400;">who are often</span></a><span style="font-weight: 400;"> struggling to cope with </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3714673/"><span style="font-weight: 400;">trauma, including trauma from sexual abuse, dating violence, or trafficking</span></a><span style="font-weight: 400;">. These survivors may run away from home to escape an abusive caregiver, or repeatedly miss school due to violence, and rather than being provided trauma-informed counseling, victim advocacy, or other supports, they are punished and thrust into a cycle of justice-system involvement &#8211; </span><a href="http://rights4girls.org/wp-content/uploads/r4g/2015/02/2015_COP_sexual-abuse_layout_web-1.pdf"><span style="font-weight: 400;">most of the time</span></a><span style="font-weight: 400;"> for non-violent behavior. As president, Biden will reinvest in the National Girls Initiative of the Department of Justice Office of Juvenile Justice and Delinquency Prevention to support communities and schools to develop gender-specific and trauma-informed prevention and treatment programs and services as alternatives to girls being placed in juvenile detention. To complement the revival of the National Girls Initiative, the Biden plan also expands funding for the VAWA Consolidated Youth Program.</span></b></li>
+<li><strong>Strengthen investment in alternative justice approaches</strong>. <span style="font-weight: 400;">VAWA 2019 allows local jurisdictions to invest in strategies that move beyond a criminal justice approach to reinforce community accountability in response to domestic and sexual violence. The Biden Administration will continue to research and expand the community-based work on alternative pathways for justice. </span></li>
+<li><b>Combat the epidemic of violence against transgender women of color. </b><span style="font-weight: 400;">As a direct response to the high rates of homicides of transgender people &#8211; particularly transgender women of color &#8211; the Biden Administration will push to provide federal funding for local efforts to meet the needs of transgender communities, including employment assistance, housing assistance, leadership development, and other priorities identified by local communities. Specifically, Biden will work to pass the Equality Act, to reduce economic barriers and social stigma, and the LGBTQ Essential Data Act, which would help collect a wide variety of critical data about anti-trans violence and the factors that drive it. He will also direct his Administration to </span><a href="https://assets2.hrc.org/files/assets/resources/2018AntiTransViolenceReportSHORTENED.pdf?_ga=2.232949846.952543193.1568314417-1300892567.1562690982"><span style="font-weight: 400;">update</span></a><span style="font-weight: 400;"> the FBI’s Uniform Crime Reports Supplementary Homicide Reports (UCR-SHR) to include sexual orientation and gender identity. Currently, these reports do not include categories for sexual orientation and gender identity, hampering our ability to fully diagnose and measure the extent of violent crimes against transgender, gay, lesbian, and bisexual victims.</span></li>
+</ul>
+<p><span style="font-weight: 400;">In addition, the Biden Administration will pursue the following proposals to support </span><a href="https://vawnet.org/sites/default/files/assets/files/2016-10/JEAN-InvisibilityOlderWomen.pdf"><span style="font-weight: 400;">older women</span></a><span style="font-weight: 400;">, transgender individuals, and </span><a href="https://www.endabusepwd.org/problem/outofreach/exploring-the-barriers-in-victim-services/"><span style="font-weight: 400;">women and girls with disabilities</span></a><span style="font-weight: 400;"> who are too often left out of current VAWA programs.</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Commission the Centers for Disease Control to conduct the first-ever national prevalence study on intimate partner and sexual violence on women and men ages 50 and older.</b><span style="font-weight: 400;"> This study will include a special focus on the ways older adults are uniquely at risk </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/27782784"><span style="font-weight: 400;">for abuse as a result of vulnerabilities exacerbated or created by aging.</span></a><b></b></li>
+<li style="font-weight: 400;"><b>Expand the </b><a href="https://www.nationalservice.gov/newsroom/press-releases/2016/justice-department-and-cncs-announce-elder-justice-americorps-2-million"><b>Elder Justice AmeriCorps program</b></a><b> to include a dedicated focus on legal advocacy for domestic violence and sexual assault victims, including the sexual abuse of older adults in nursing homes. </b><span style="font-weight: 400;">This partnership between the U.S. Department of Justice and the </span><span style="font-weight: 400;">Corporation for National and Community Service, </span><a href="https://www.nationalservice.gov/newsroom/press-releases/2016/justice-department-and-cncs-announce-elder-justice-americorps-2-million"><span style="font-weight: 400;">established</span></a><span style="font-weight: 400;"> by the Obama-Biden Administration, funded a national network of legal aid fellows to prevent and address the abuse of older adults. As president, Biden will continue this important program and emphasize the disproportionate impact of abuse on older women, including sexual assault and late life intimate partner violence.</span></li>
+<li style="font-weight: 400;"><b>Increase funding for communities to build multidisciplinary teams to prevent and address violence against older women, with a focus on investing in rural communities with aging populations. </b><a href="https://www.justice.gov/sites/default/files/jmd/pages/attachments/2015/02/02/30._office_on_violence_against_women_ovw.pdf"><span style="font-weight: 400;">Since 2000</span></a><span style="font-weight: 400;">, VAWA has funded the </span><a href="https://www.justice.gov/ovw/page/file/1117441/download"><span style="font-weight: 400;">Enhanced Training and Services to End Abuse in Later Life Program</span></a><span style="font-weight: 400;">, which trains criminal justice professionals and non-profit organizations to improve their ability to serve older victims of interpersonal violence. This program also works with states, tribes, and local governments to establish a coordinated community response to violence against victims who are 50 years of age or older. Biden will expand funding for this important program by increasing grant dollars available to communities at a scale that better reflects the increasingly aging population. </span></li>
+<li style="font-weight: 400;"><b>Teach youth with disabilities accessible, developmentally-appropriate lessons on the right to bodily autonomy, consent, and the dynamics of healthy relationships.</b> <a href="https://www.endabusepwd.org/problem/limited-efforts/"><span style="font-weight: 400;">Experts</span></a> <a href="https://www.cdc.gov/violenceprevention/datasources/nisvs/svandipv.html"><span style="font-weight: 400;">agree</span></a><span style="font-weight: 400;"> that these core elements are critical for the reduction of risk for abuse of people with disabilities. Unfortunately, most youth with disabilities are never offered the opportunity to learn them. Biden will establish special initiatives through the Centers for Disease Control and Prevention’s </span><a href="https://www.cdc.gov/violenceprevention/intimatepartnerviolence/datingmatters/index.html"><span style="font-weight: 400;">Dating Matters</span> </a><span style="font-weight: 400;">and </span><a href="https://www.cdc.gov/violenceprevention/sexualviolence/rpe/index.html"><span style="font-weight: 400;">Rape Prevention Education</span> </a><span style="font-weight: 400;">grant programs to support states, territories, tribes, and educational institutions to promote a public health approach to teaching young people these important lessons.</span></li>
+<li style="font-weight: 400;"><b>Help domestic violence and sexual assault programs build their capacity to serve victims with disabilities.</b><span style="font-weight: 400;"> Since 2000, VAWA has funded the </span><span style="font-weight: 400;">Training and Services to </span><a href="https://www.justice.gov/ovw/page/file/1117461/download"><span style="font-weight: 400;">End Violence Against Women with Disabilities Grant Program</span></a><span style="font-weight: 400;">, which helps victim services organizations and states, tribes, territories, and local governments modify advocacy programs to be accessible and inclusive of people with disabilities. Biden will expand funding for this vital program in order to better reflect the reality that women with disabilities are victimized by intimate partner and sexual violence at a rate higher than women without disabilities. </span></li>
+</ul>
+<p><b>PROTECT AND EMPOWER IMMIGRANT WOMEN</b></p>
+<p><span style="font-weight: 400;">Fleeing abuse should never mean risking deportation. In 1994, the Violence Against Women Act created important safeguards to assist immigrants married to abusive spouses who are U.S. citizens or lawful permanent residents by allowing them to self-petition, rather than allowing abusers to maintain control over the victims’ immigration status as a way to keep them trapped in an abusive relationship. Since then, each subsequent reauthorization of VAWA has strengthened protections and support for immigrant victims. VAWA 2000, in conjunction with the passage of the Victims of Trafficking and Violence Protection Act, created two new classes of nonimmigrant visas to protect non-citizens who are the victims of crimes and who agree to cooperate with U.S. law enforcement to investigate and prosecute those crimes. The T-visa permits human trafficking victims to stay in the U.S. and the U-visa ensures that non-citizen victims of multiple categories of crimes (including domestic violence, trafficking, and sexual assault) are able to report violations to authorities without fearing for their legal status.  </span></p>
+<p><span style="font-weight: 400;">While Biden continually sought to remove barriers for immigrant women, the Trump Administration continues to place these survivors in jeopardy. Biden will reverse these setbacks and then go further to protect and empower immigrant women who are survivors of domestic violence and abuse.</span></p>
+<ul>
+<li><b>Restore asylum eligibility for domestic violence survivors. <span style="font-weight: 400;">Under the Biden Administration, the U.S. Department of Justice will reinstate explicit asylum protections —rescinded by the Trump Administration —for domestic violence and sexual violence survivors whose home governments cannot or will not protect them. </span></b></li>
+<li><strong>Increase visas for domestic violence survivors.</strong> <span style="font-weight: 400;">Under the Trump Administration, there are unacceptable processing delays for adjudicating applications for VAWA self-petitions, U-visas, and T-visas. As president, Biden will end these delays and give victims the security and certainty they need. And, Biden will triple the current cap of 10,000 on U-visas; this cap is insufficient to meet the dire needs of victims and hinders our public safety. </span></li>
+<li style="font-weight: 400;"><b>Push to repeal extreme, anti-immigrant state laws that have a chilling effect on the ability of immigrant domestic violence and sexual assault survivors to seek safety and justice.</b><span style="font-weight: 400;"> Some state laws drive victims and witnesses into the shadows and threaten public safety. As documented in a recent national </span><a href="https://www.tahirih.org/wp-content/uploads/2019/06/2019-Advocate-Survey-Final.pdf"><span style="font-weight: 400;">survey</span></a><span style="font-weight: 400;">, immigrant victims of domestic violence, sexual assault, and trafficking are increasingly afraid to contact police, pursue civil or criminal cases, or go to court to seek safety. This traps victims who either ask for help and risk deportation, retaliation by an abuser, and separation from one’s children, or stay with a violent partner and risk one’s life. As president, Biden will work in partnership with cities, states, nonprofits, and law enforcement to build trust and push for states to repeal the laws that chill the reporting of domestic violence incidents and threaten public safety.</span></li>
+</ul>
+<p><b>LEAD THE GLOBAL EFFORT TO END GENDER-BASED VIOLENCE</b></p>
+<p><span style="font-weight: 400;">Violence against women and girls of all ages is a global epidemic: from </span><a href="https://www.reuters.com/article/asia-rideapps-harassment/feature-asian-ride-hailing-apps-put-the-brakes-on-sexual-harassment-idUSL8N1X43H3"><span style="font-weight: 400;">harassment on public transportation in Southeast Asia</span></a><span style="font-weight: 400;">; to </span><a href="https://www.bbc.com/news/world-europe-39047787"><span style="font-weight: 400;">trafficking of women in Eastern Europe</span></a><span style="font-weight: 400;">; to </span><a href="https://www.jpost.com/Magazine/Honor-killings-Culture-as-excuse-for-murdering-Arab-women-602112"><span style="font-weight: 400;">“honor” killings in the Middle East</span></a><span style="font-weight: 400;">, </span><a href="https://thediplomat.com/2016/12/honor-killings-in-afghanistan-and-pakistan/"><span style="font-weight: 400;">South Asia</span></a><span style="font-weight: 400;">, and elsewhere; to the use of rape as a weapon of war in </span><a href="https://www.hrw.org/news/2016/01/27/sudan-rape-weapon-war"><span style="font-weight: 400;">Darfur</span></a><span style="font-weight: 400;"> and </span><a href="https://www.mukwegefoundation.org/the-problem/rape-as-a-weapon-of-war/"><span style="font-weight: 400;">the Democratic Republic of the Congo</span></a><span style="font-weight: 400;">. </span><a href="https://www.unwomen.org/en/what-we-do/ending-violence-against-women/facts-and-figures"><span style="font-weight: 400;">One in three</span></a><span style="font-weight: 400;"> women worldwide will experience gender-based violence in her lifetime, and in some countries, that’s true for 70% of women. </span></p>
+<p><span style="font-weight: 400;">Throughout his career, Joe Biden has helped lead U.S. efforts to end this violence regardless of where it occurs. In 2007, then-Senator Biden expanded on his legacy addressing violence against women and girls, with the introduction of the</span><a href="https://www.congress.gov/bill/110th-congress/senate-bill/2279"><span style="font-weight: 400;"> International Violence Against Women Act</span></a><span style="font-weight: 400;"> (IVAWA). IVAWA provided a framework for the United States to address gender-based violence around the world through a comprehensive approach that promoted legal reform, changes in social norms, health and safety, and access to educational and economic opportunities. While IVAWA was never enacted, the Obama-Biden administration used </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2011/12/19/fact-sheet-united-states-national-action-plan-women-peace-and-security"><span style="font-weight: 400;">executive action</span></a><span style="font-weight: 400;"> to implement much of the bill and its comprehensive approach to gender-based violence. With a series of State Department strategies and plans on women, peace, and security; adolescent girls; women’s economic empowerment; and gender-based violence, the Administration focused its diplomatic, development, and even military efforts on promoting the health, safety, and empowerment of women and girls around the world. </span></p>
+<p><span style="font-weight: 400;">As powerful as the Obama-Biden Administration’s programs and policies were, one of the best tools the Administration had in persuading other countries to focus on this issue was its own legacy with the Violence Against Women Act, which has given the United States credibility to address gender-based violence on the international stage. </span></p>
+<p><span style="font-weight: 400;">As president, Biden will restore respected U.S. leadership in foreign affairs, leading not just by the example of our power, but by the power of our example. The Biden Administration will r</span><span style="font-weight: 400;">eturn to a government-wide focus on uplifting the rights of women and girls at home and around the world</span><span style="font-weight: 400;">, championing the fundamental human right of all women and girls to live free from violence &#8211; a future made more possible in the United States through the Violence Against Women Act. </span></p>
+<ul>
+<li style="font-weight: 400;"><b>Restore American leadership and support multilateral efforts to address sexual violence in conflict. </b><span style="font-weight: 400;">The United States has been a leader in focusing on the need to address sexual violence in conflict, but we have lost our voice under the Trump presidency. President Biden will restore that leadership by engaging with partners around the world at the highest levels working to address this issue. He will bolster women’s ability to participate in and drive peace processes to better prevent sexual violence and to hold accountable those that commit acts of sexual violence in conflict. While President Trump has </span><a href="https://www.theguardian.com/world/2019/apr/22/us-un-resolution-rape-weapon-of-war-veto"><span style="font-weight: 400;">watered down and threatened to veto</span></a><span style="font-weight: 400;"> UN Security Council resolutions that address sexual violence in conflict, the Biden administration will champion such issues in the Security Council, and offer increased support to the work of the Special Representative to the UN Secretary General for Sexual Violence in Conflict.</span></li>
+<li style="font-weight: 400;"><b>Hold accountable those who perpetrate sexual violence in conflict, starting with ISIS. </b><span style="font-weight: 400;">In 2014, the world watched in horror as ISIS </span><a href="https://www.theguardian.com/world/2017/jul/25/slaves-of-isis-the-long-walk-of-the-yazidi-women"><span style="font-weight: 400;">systematically employed</span></a> <a href="https://www.counterextremism.com/content/isiss-persecution-women"><span style="font-weight: 400;">sexual violence</span></a><span style="font-weight: 400;"> throughout the territories it seized, including by forcing Yazidi women and girls into sexual slavery. The Obama-Biden Administration </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2014/09/24/remarks-president-obama-address-united-nations-general-assembly"><span style="font-weight: 400;">forged</span></a><span style="font-weight: 400;"> a global coalition to defeat ISIS, which has been routed from the territory it controlled, but not defeated. ISIS soldiers who committed acts of sexual violence must be held accountable for their crimes.  As president, Biden will provide financial assistance and training for local and international efforts to document cases of ISIS-perpetrated sexual violence; urge the Government of Iraq at the highest levels to prosecute ISIS prisoners for crimes of rape, trafficking-in-persons, and sexual assault and enslavement, as well as crimes of terrorism; and support peacebuilding and development efforts in Iraq to promote women’s inclusion and long-term stability in the country. The Biden Administration will also direct resources toward local groups supporting survivors of sexual violence, including those working to address the social stigma survivors often face and to facilitate their reintegration back into their communities. It will support countries to help create national laws on sexual violence that align with international norms to bringperpetrators of sexual violence to account.</span></li>
+<li style="font-weight: 400;"><b>Address the specific challenges of displaced and migrant women and girls. </b><span style="font-weight: 400;">There are currently more than</span><a href="https://www.unhcr.org/en-us/figures-at-a-glance.html"> <span style="font-weight: 400;">70 million</span></a><span style="font-weight: 400;"> people around the world who have been forced from their homes because of conflict. Refugees and displaced women and girls face particular challenges, including decreased opportunities for education, limited access to healthcare (particularly sexual and reproductive healthcare), and increased risk of sexual and gender-based violence, trafficking, and exploitation. President Biden will support diplomatic and development programs to address and prevent conflict around the world, and will require that such programs include a gender-based violence component. He will also ensure that women and girls seeking asylum in the United States because of gender-based violence are given the opportunity to make their case, and that the threat of sexual violence and assault are treated with the seriousness they deserve in adjudication.</span></li>
+<li style="font-weight: 400;"><b>Launch a multi-sectoral effort to confront gender-based violence in Central America. </b><span style="font-weight: 400;">Many of the people seeking asylum on our southern border are </span><a href="https://www.lawfareblog.com/whos-really-crossing-us-border-and-why-theyre-coming"><span style="font-weight: 400;">women and children fleeing horrific forms of gender-based violence</span></a><span style="font-weight: 400;"> in Central America. They have reason to be afraid; Central America confronts some of the </span><a href="https://www.unodc.org/documents/data-and-analysis/gsh/Booklet_5.pdf"><span style="font-weight: 400;">highest rates</span></a><span style="font-weight: 400;"> of femicide (the murder of women because of their gender) in the world. Most of these cases are </span><a href="https://www.atlanticcouncil.org/blogs/new-atlanticist/violence-against-women-driving-migration-from-the-northern-triangle"><span style="font-weight: 400;">never investigated</span></a><span style="font-weight: 400;">. Central American women also face rape and sexual assault by gangs that use sexual violence as a mechanism of control and domestic violence perpetrated by intimate partners. Indigenous women are </span><a href="https://www.unfpa.org/resources/breaking-silence-violence-against-indigenous-girls-adolescents-and-young-women"><span style="font-weight: 400;">particularly affected</span></a><span style="font-weight: 400;">. Progress in the United States since Joe Biden first sponsored the Violence Against Women Act has taught us that any efforts to address this scourge must include many sectors. Biden will spearhead a comprehensive effort in Central America that will include diplomatic pressure on governments to do more to hold perpetrators accountable, training for law enforcement to root out the corruption that enables gender-based violence and teaches the police to effectively investigate these crimes and justice sectors to prosecute them, funding for comprehensive healthcare programs to support survivors of gender-based violence, and support to organizations on the ground who are working to address this issue comprehensively.</span></li>
+<li style="font-weight: 400;"><b>Amplify and elevate the voices of authentic, local women leaders globally. </b><span style="font-weight: 400;">Many of the most powerful efforts to prevent, combat and respond to gender-based violence around the world are local women leaders. For example, earlier this year, some </span><a href="https://www.npr.org/sections/goatsandsoda/2019/01/04/681988452/millions-of-women-in-india-join-hands-to-form-a-385-mile-wall-of-protest"><span style="font-weight: 400;">five million Indian women mobilized</span></a><span style="font-weight: 400;"> across Kerala with the support of over 175 organizations to advance gender equality. President Biden will focus on ensuring these powerful local voices lead efforts to combat gender-based violence and advance women’s and girls’ well-being by creating a comprehensive initiative to support and strengthen the influence of women-led civil society organizations that focus on addressing gender-based violence.</span></li>
+<li style="font-weight: 400;"><b>Ensure peacekeepers are trained to prevent conflict-related sexual violence.</b><span style="font-weight: 400;"> Peacekeepers have a major role in protecting civilians, after conflict and in countries still at risk of conflict. Tens of thousands of </span><a href="https://peacekeeping.un.org/en"><span style="font-weight: 400;">UN peacekeepers</span></a><span style="font-weight: 400;"> (military and police) are deployed globally. Yet, these troops are often ill-prepared to prevent sexual violence and, too often, they have been the perpetrators of crimes against the civilians they are charged to protect, particularly women and girls. President Biden </span><span style="font-weight: 400;">will work with the UN to continue to strengthen peacekeeper performance and accountability. He will work to </span>ensure that peace operations training undertaken by the United States and by other nations includes strong and comprehensive training on protecting against gender-based violence and sexual exploitation and abuse.</li>
+<li style="font-weight: 400;"><b>Restore U.S. support for women’s health. </b>Just as the Obama-Biden Administration <a href="https://obamawhitehouse.archives.gov/the-press-office/statement-president-barack-obama-rescinding-mexico-city-policy">did</a>, President Biden will rescind the Mexico City Policy (also referred to as the <a href="https://www.kff.org/global-health-policy/fact-sheet/mexico-city-policy-explainer/">global gag rul</a>e) that President Trump <a href="https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-mexico-city-policy/">reinstated and expanded</a>. This rule currently bars the U.S. federal government from supporting important global health efforts – including those that prevent and respond to gender-based violence – in developing countries simply because the organizations providing that aid also offer information on abortion services. The Trump Administration has also <a href="https://www.unfpa.org/press/statement-united-states-decision-again-withhold-funding-unfpa-0">suspended U.S. funding</a> to the United Nations Population Fund (UNFPA) for three consecutive years and allegedly <a href="https://www.hrw.org/news/2018/03/16/us-blocks-funds-un-population-fund-again">propagated false claims</a> about its work. President Biden will also restore U.S. funding to UNFPA and support its important work in preventing gender-based violence globally, including efforts to end <a href="https://www.unfpa.org/data/dashboard/fgm">female genital mutilation and cutting</a>, <a href="https://www.unfpa.org/child-marriage">early and forced marriage</a>, and other practices detrimental to the health of women and girls.</li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="vawa.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/la-ley-emblematica-contra-la-violencia-hacia-las-mujeres/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="vawa.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/vawa/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":452,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

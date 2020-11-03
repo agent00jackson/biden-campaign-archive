@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan Biden para Fortalecer el Compromiso de Estados Unidos con la Justicia | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan Biden para Fortalecer el Compromiso de Estados Unidos con la Justicia | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Igualdad, equidad, justicia: estas ideas forman el credo estadounidense. Nunca hemos estado a la altura y no siempre lo hemos hecho bien, pero nunca hemos dejado de intentarlo. Esto es especialmente cierto cuando se trata de nuestro sistema de justicia penal. Actualmente, muchas personas están encarceladas en los Estados Unidos, y muchas de ellas son [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-07-29T21:50:33+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Criminal-Justice-Reform_1600x836_Digital_062920_Photo_V1-1024x642.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="642" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Criminal-Justice-Reform_1600x836_Digital_062920_Photo_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="22 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia/#webpage","url":"https://joebiden.com/es/el-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia/","name":"El Plan Biden para Fortalecer el Compromiso de Estados Unidos con la Justicia | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-07-31T14:12:02+00:00","dateModified":"2020-07-29T21:50:33+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia%2F&#038;format=xml" />
+<link rel="alternate" href="../../justice.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1119 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../justice.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../justice.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1119 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan Biden para Fortalecer el Compromiso de Estados Unidos con la Justicia</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Igualdad, equidad, justicia: estas ideas forman el credo estadounidense. Nunca hemos estado a la altura y no siempre lo hemos hecho bien, pero nunca hemos dejado de intentarlo. Esto es especialmente cierto cuando se trata de nuestro sistema de justicia penal.</span></p>
+<p><span style="font-weight: 400;">Actualmente, muchas personas están encarceladas en los Estados Unidos, y muchas de ellas son personas de color. Para construir comunidades seguras y saludables, debemos repensar a quién enviamos a la cárcel, cómo tratamos a los que están en la cárcel y cómo les ayudamos a obtener la atención médica, la educación, los empleos y la vivienda que necesitan para reincorporarse con éxito a la sociedad después de cumplir  sus sentencias. </span><b>Como presidente, Joe Biden fortalecerá el compromiso de Estados Unidos con la justicia y reformará nuestro sistema de justicia penal.</b><span style="font-weight: 400;"><br />
+</span></p>
+<p><span style="font-weight: 400;">El Plan Biden para fortalecer el compromiso de Estados Unidos con la justicia se basa en varios principios básicos:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Podemos y debemos reducir el número de personas encarceladas en este país y al mismo tiempo reducir la delincuencia.</span><span style="font-weight: 400;"> Nadie debe ser encarcelado solo por el consumo de drogas. En cambio, las personas deben ser dirigidas a tribunales que tratan con personas involucradas con las  drogas y recibir tratamiento. Reducir el número de individuos encarcelados disminuirá el gasto federal penal. Estos ahorros deben ser reinvertidos en las comunidades afectadas por el encarcelamiento masivo.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Nuestro sistema de justicia penal no puede ser justo a menos que erradiquemos del sistema las disparidades raciales, de género y con base en el ingreso.</span><span style="font-weight: 400;"> Las madres y los padres Afro-Americanos  deben sentirse tranquilos de que sus hijos están seguros caminando por las calles de Estados Unidos. Y, cuando un oficial de policía se pone la insignia de  proteccion y sale por la puerta, la familia del oficial debe saber que volverá a casa al final del día. Además, las mujeres y los niños se ven afectados de manera única por el sistema de justicia penal, y este debe abordar sus necesidades únicas.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Nuestro Sistema de justicia penal debe estar enfocado en la redención y la rehabilitación.</span><span style="font-weight: 400;"> Asegurarse de que los individuos previamente encarcelados tengan la oportunidad de ser miembros productivos de nuestra sociedad no solo es lo correcto, sino que también hará crecer nuestra economía.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Nadie debería estar obteniendo ganancias excesivas de nuestro Sistema de justicia penal.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Biden pide la aprobación inmediata de la </span><a href="https://bobbyscott.house.gov/SAFEJusticeAct"><span style="font-weight: 400;">Ley SAFE de Justicia</span></a><span style="font-weight: 400;"> del congresista Bobby Scott,</span> <span style="font-weight: 400;">un proyecto de ley integral basado en evidencia para reformar nuestro sistema de justicia penal “</span><a href="https://bobbyscott.house.gov/SAFEJusticeAct"><span style="font-weight: 400;">desde la reforma inicial de la sentencia hasta las políticas finales de liberación</span></a><span style="font-weight: 400;">”. El Plan Biden también irá más allá. Biden tomará medidas audaces para reducir nuestra población carcelaria, crear una sociedad más justa y hacer que nuestras comunidades sean más seguras, mediante:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">La prevención de la delincuencia y proporcionando oportunidades para todos.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">La eliminación de las disparidades raciales y garantizando sentencias justas.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El ofrecimiento de segundas oportunidades.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">La reducción de la violencia en nuestras comunidades y apoyando a los sobrevivientes de la violencia.</span></li>
+</ul>
+<p><b>I. PREVENIR EL CRIMEN Y PROPORCIONAR OPORTUNIDADES PARA TODOS</b></p>
+<p><span style="font-weight: 400;">Prevenir el crimen es la mejor manera de hacer que nuestras comunidades sean más seguras y reducir el encarcelamiento.</span></p>
+<p><span style="font-weight: 400;">La evidencia nos dice que ciertas experiencias de vida están fuertemente correlacionadas con una mayor probabilidad de encarcelamiento futuro. </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El porcentaje de niñas en nuestro sistema de justicia juvenil que tienen un historial de abuso físico o sexual podría ser tan alto como </span><a href="https://rights4girls.org/wp-content/uploads/r4g/2015/02/2015_COP_sexual-abuse_layout_web-1.pdf"><span style="font-weight: 400;">80% o 90%</span></a><span style="font-weight: 400;">. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Aproximadamente </span><a href="https://jlc.org/news/what-foster-care-prison-pipeline"><span style="font-weight: 400;">1 de cada 4</span></a><span style="font-weight: 400;"> niños que viven en un hogar temporal interactuarán con el sistema de justicia penal tan solo dos años después de salir del cuidado temporal. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Las personas privadas de la libertad tienen </span><a href="https://nces.ed.gov/pubs2007/2007473.pdf"><span style="font-weight: 400;">menores niveles de alfabetización</span></a><span style="font-weight: 400;"> que las personas no involucradas en el sistema de justicia penal. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Demasiadas personas con trastornos de salud mental o de uso de sustancias terminan en la cárcel.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Tenemos que abordar estos factores subyacentes para brindar oportunidades para todos y prevenir el crimen y el encarcelamiento.</span></p>
+<p><span style="font-weight: 400;">Enfocarse en abordar estos factores subyacentes no solo es lo correcto, también es bueno para nuestras comunidades y nuestra economía. Le cuesta al gobierno federal cerca de </span><a href="https://www.federalregister.gov/documents/2018/04/30/2018-09062/annual-determination-of-average-cost-of-incarceration"><span style="font-weight: 400;">$100 dólares por día</span></a><span style="font-weight: 400;"> mantener a alguien en una prisión federal. Y esa cantidad de dólares no comienza a capturar “</span><a href="https://nicic.gov/who-pays-true-cost-incarceration-families"><span style="font-weight: 400;">el verdadero costo del encarcelamiento</span></a><span style="font-weight: 400;">” – emocional y financiero– </span><a href="https://nicic.gov/who-pays-true-cost-incarceration-families"><span style="font-weight: 400;">sobre las familias</span></a><span style="font-weight: 400;"> cuyos seres queridos están encarcelados. Este monto en dólares no captura las formas en que el encarcelamiento masivo puede desgarrar el tejido de una comunidad. Y, no captura el impacto económico de eliminar a los individuos encarcelados de la fuerza laboral.</span></p>
+<p><span style="font-weight: 400;">El Plan Biden cambiará el enfoque de nuestro país del encarcelamiento a la prevención. Como presidente, Biden:</span></p>
+<ul>
+<li><b>Creará un nuevo programa de subvenciones competitivas de $20 mil millones de dólares para alentar a los estados a pasar del encarcelamiento a la prevención. </b><span style="font-weight: 400;">Para acelerar la reforma de la justicia penal a nivel estatal y local, Biden creará un nuevo programa de subvenciones inspirado en una </span><a href="https://www.brennancenter.org/sites/default/files/publications/The_Reverse_Mass_Incarceration_Act%20.pdf"><span style="font-weight: 400;">propuesta</span></a><span style="font-weight: 400;"> del Centro Brennan. Los estados, condados y ciudades recibirán fondos para invertir en esfuerzos comprobados para reducir la delincuencia y el encarcelamiento, incluyendo aquellos para enfrentar algunos de los factores relacionados con el encarcelamiento, como el analfabetismo y el abuso infantil. Para recibir esta financiación, los estados deberán eliminar los mínimos obligatorios para los delitos no violentos, instituir programas de créditos obtenidos y tomar otras medidas para reducir las tasas de encarcelamiento sin afectar la seguridad pública.</span></li>
+<li><b>Invertirá en oportunidades educativas para todos.<span style="font-weight: 400;"> Para crear verdaderamente la oportunidad y enfrentar uno de los impulsores subyacentes del delito, el presidente Biden se asegurará de que el futuro de ningún niño esté determinado por su código postal, el ingreso de los padres, la raza o la discapacidad. Comenzará haciendo el pre-K disponible para todos los niños de tres y cuatro años. Triplicará los fondos para el Título I, el programa federal que financia escuelas con un alto porcentaje de estudiantes de familias de bajos ingresos. Esto eliminará la brecha de financiamiento entre los distritos blancos y no blancos, y los distritos ricos y pobres. Biden también se asegurará de que todos los estudiantes de preparatoria se gradúen con créditos avanzados o con un diploma de la industria en el bolsillo. Y, hará que los centros de estudios superiores sean gratuitos para los estudiantes que califiquen. </span><i><span style="font-weight: 400;">Lea el </span></i><a href="../../education.html"><i><span style="font-weight: 400;">Plan completo de Joe Biden para educadores, estudiantes y nuestro futuro</span></i></a><i><span style="font-weight: 400;">. </span></i></b></li>
+<li>Ampliará la financiación federal para la investigación y los servicios de salud mental y trastornos de uso de sustancias.<span style="font-weight: 400;"> Las personas que experimentan problemas de salud mental y trastornos por el uso de sustancias deben tener acceso a atención médica de calidad y asequible mucho antes de que sus situaciones se intensifiquen e interactúen con el sistema de justicia penal. El Plan Biden </span><a href="../../healthcare..html"><span style="font-weight: 400;">ampliará la cobertura del seguro médico para que más estadounidenses tengan acceso a tratamiento, garantizará el cumplimiento de las leyes de igualdad de la salud mental y ampliará los fondos para los servicios de salud mental</span></a><span style="font-weight: 400;">. Además, Biden </span><span style="font-weight: 400;"><a href="../../education.html">duplicará el número de psicólogos, consejeros, enfermeras, trabajadores sociales y otros profesionales de la salud en nuestras escuelas para que nuestros hijos reciban la atención de salud mental que necesitan.</a></span></li>
+<li><b>Hará que las personas que deberían recibir apoyo con servicios sociales, en lugar de estar en nuestras prisiones, logren conectar con la ayuda que necesitan.</b> Con demasiada frecuencia, las personas que necesitan atención de salud mental o rehabilitación por un trastorno por uso de sustancias no reciben la atención que necesitan. En cambio, terminan teniendo interacciones con la policía que las llevan al encarcelamiento. Lo mismo es cierto para las personas sin hogar. Eso no es justo para esas personas y tampoco para los oficiales de policía. Para cambiar la naturaleza de estas interacciones, la administración Biden financiará iniciativas para asociar a expertos en salud mental y trastornos del uso de sustancias, trabajadores sociales y defensores de la discapacidad, con los departamentos de policía. Estos proveedores de servicios capacitarán a los oficiales de policía para reducir la intensidad de las interacciones con personas con graves trastornos emocionales antes de que se vuelvan violentas. También ayudarán a los oficiales de policía a aprender cómo acercarse mejor a las personas con ciertas discapacidades, como aquellas con <a href="https://www.usnews.com/news/health-news/articles/2019-05-03/for-people-with-autism-encounters-with-police-can-turn-dangerous">autismo </a>o que sean sordas, para que los malos entendidos no lleven al encarcelamiento. Estos proveedores de servicios responderán a las llamadas junto con los oficiales de policía para que las personas que no deban estar en el sistema de justicia penal sean desviadas al tratamiento necesario por temas de adicción o problemas de salud mental, o se les proporcione la vivienda u otros servicios sociales que puedan necesitar.</li>
+</ul>
+<p><b>II. ELIMINAR LAS DISPARIDADES RACIALES Y GARANTIZAR SENTENCIAS JUSTAS</b></p>
+<p><span style="font-weight: 400;">Tenemos que enfrentar las disparidades raciales y con base en los ingresos en nuestro sistema de justicia y eliminar las sentencias demasiado severas para los delitos no violentos. Como presidente, Biden:</span></p>
+<ul>
+<li><b>Ampliará y usará el poder del Departamento de Justicia de los Estados Unidos para abordar la conducta indebida sistémica en los departamentos de policía y las oficinas de los fiscales. <span style="font-weight: 400;">Utilizando la </span><a href="https://www.justice.gov/crt/law-enforcement-misconduct-statute-42-usc-14141"><span style="font-weight: 400;">autoridad</span></a><span style="font-weight: 400;"> en la legislación encabezada por Biden como senador, el Departamento de Justicia de Obama-Biden </span><a href="https://www.justice.gov/crt/file/922421/download"><span style="font-weight: 400;">usó</span></a><span style="font-weight: 400;"> investigaciones de patrones o prácticas y decretos de consentimiento para abordar las circunstancias de “</span><a href="https://www.justice.gov/crt/file/922421/download"><span style="font-weight: 400;">conducta indebida sistémica de la policía</span></a><span style="font-weight: 400;">” y para “</span><a href="https://www.justice.gov/crt/file/922421/download"><span style="font-weight: 400;">restaurar la confianza entre la policía y las comunidades</span></a><span style="font-weight: 400;">” en ciudades como Ferguson. Sin embargo, el Departamento de Justicia del gobierno de Trump ha </span><a href="https://www.justice.gov/opa/press-release/file/1109621/download"><span style="font-weight: 400;">limitado</span></a><span style="font-weight: 400;"> el uso de esta herramienta. Por ejemplo, bajo la administración Trump, los decretos de consentimiento entre el Departamento de Justicia y los departamentos de policía ahora deben ser firmados por un representante político del Departamento. Y, el Departamento de Justicia ha establecido un límite arbitrario en cuanto a la duración de dichos decretos de consentimiento, independientemente de que se justifique la finalización del acuerdo. Bajo la administración Biden, el Departamento de Justicia usará nuevamente su autoridad para erradicar el patrullaje inconstitucional o ilegal. La administración Biden revertirá las limitaciones establecidas por el presidente Trump, y Biden designará a los líderes del Departamento de Justicia que darán prioridad al uso de investigaciones de patrones o prácticas para fortalecer nuestro sistema de justicia. Además, Biden presionará para que la legislación aclare que esta autoridad de investigación de patrón o práctica también pueda ser utilizada para abordar la conducta indebida sistémica por parte de las oficinas de los fiscales.</span></b></li>
+<li style="font-weight: 400;"><b>Establecerá un grupo de trabajo independiente sobre la discreción respecto a las acusaciones.</b><span style="font-weight: 400;"> Las decisiones de los funcionarios encargados de hacer cumplir la ley con respecto a cuándo arrestar, cuándo acusar y qué cargos presentar son puntos de decisión críticos en nuestro sistema de justicia penal. Los cargos, por ejemplo, pueden impactar dramáticamente no solo la sentencia con la que alguien termina, sino también si están obligados a tomar una declaración de culpabilidad. La administración Biden creará un nuevo grupo de trabajo, ubicado afuera del Departamento de Justicia de los Estados Unidos para hacer recomendaciones para enfrentar la discriminación y otros problemas en nuestro sistema de justicia que resultan de las decisiones de arresto e imputación.</span></li>
+<li style="font-weight: 400;"><b>Invertirá en las oficinas de los defensores públicos para garantizar el acceso de los acusados a abogados de calidad. </b><span style="font-weight: 400;">Para crear un sistema de justicia penal más justo, debemos asegurarnos de que las personas que no pueden pagar un abogado tengan una representación de calidad. Y, el acceso a un abogado debe estar disponible a partir del momento en que alguien comparezca ante un juez. En este momento, los recursos y el apoyo de los defensores son demasiado descentralizados y de difícil acceso. Y, como el vicepresidente Biden sabe, por su propia experiencia tras dejar un bufete de abogados para ser un defensor público, la </span><a href="https://theappeal.org/the-high-costs-of-low-pay-for-public-defenders/"><span style="font-weight: 400;">disparidad salarial</span></a><span style="font-weight: 400;"> de los fiscales y los defensores limita la capacidad de las oficinas de los defensores para reclutar a los mejores y más brillantes. Como presidente, Biden ampliará el </span><a href="https://www.justice.gov/archives/atj/indigent-defense-grants-training-and-technical-assistance"><span style="font-weight: 400;">esfuerzo</span></a><span style="font-weight: 400;"> Obama-Biden para ampliar los recursos para las oficinas de los defensores públicos.</span></li>
+<li style="font-weight: 400;"><b>Eliminará los mínimos obligatorios.</b><span style="font-weight: 400;"> Biden apoya el fin de los mínimos obligatorios. Como presidente, trabajará para que se apruebe una legislación que derogue los mínimos obligatorios a nivel federal. Y, dará a los estados incentivos para derogar sus mínimos obligatorios.</span></li>
+<li style="font-weight: 400;"><b>Terminará, de una vez por todas, la disparidad federal de cocaína en polvo y crack. </b><span style="font-weight: 400;">La administración Obama-Biden </span><a href="https://www.congress.gov/bill/111th-congress/senate-bill/1789"><span style="font-weight: 400;">redujo</span></a><span style="font-weight: 400;"> con éxito la disparidad injustificada entre las penas del crack y la cocaína en polvo. La administración Biden eliminará completamente esta disparidad, como el entonces senador Biden </span><a href="https://www.aclu.org/letter/aclu-letter-urging-senators-support-s-1711-drug-sentencing-reform-and-cocaine-kingpin"><span style="font-weight: 400;">propuso</span></a><span style="font-weight: 400;"> en 2007. Y, Biden se asegurará de que este cambio se aplique de forma retroactiva.</span></li>
+<li><b>Despenalizará el uso del cannabis y eliminará automáticamente todas las condenas anteriores por consumo de cannabis.<span style="font-weight: 400;"> Biden cree que nadie debería estar en la cárcel por el uso de cannabis. Como presidente, despenalizará el consumo de cannabis y eliminará automáticamente las condenas anteriores. Además, apoyará la legalización de la mariguana con fines médicos, dejando las decisiones relacionadas con la legalización para uso recreativo a los estados y reformulará el cannabis como un medicamento de tipo II para que los investigadores puedan estudiar sus impactos positivos y negativos.</span></b></li>
+<li>Pondrá fin a todos los encarcelamientos solo por el uso de drogas y, en cambio, dirigirá a las personas a los tribunales de drogas y tratamiento.<span style="font-weight: 400;"> Biden cree que nadie debe ser encarcelado solo por el uso de drogas ilegales. En cambio, Biden requerirá que los tribunales federales deriven a estos individuos a los tribunales de drogas para que reciban tratamiento para tratar su trastorno de uso de sustancias. Incentivará a los estados para que implementen los mismos requisitos. Y, ampliará los fondos para las cortes federales, estatales y locales de drogas.</span></li>
+<li>Ampliará otras alternativas efectivas a la detención. <span style="font-weight: 400;">El gobierno de Biden también adoptará un enfoque basado en la evidencia para aumentar la financiación federal para otras </span><a href="https://www.ussc.gov/sites/default/files/pdf/research-and-publications/research-publications/2017/20170928_alternatives.pdf"><span style="font-weight: 400;">alternativas a los tribunales de detención</span></a> <span style="font-weight: 400;">y programas relacionados para personas convictas por delitos no violentos, como </span><a href="https://www.ussc.gov/sites/default/files/pdf/research-and-publications/research-publications/2017/20170928_alternatives.pdf"><span style="font-weight: 400;">tribunales de veteranos y cortes para delincuentes juveniles</span></a><span style="font-weight: 400;">.</span></li>
+<li>Eliminará la pena de muerte.<span style="font-weight: 400;"> </span><a href="https://deathpenaltyinfo.org/policy-issues/innocence"><span style="font-weight: 400;">Más de 160 personas</span></a><span style="font-weight: 400;"> condenadas a muerte en este país desde 1973 han sido exoneradas posteriormente. Debido a que no podemos asegurarnos de acertar en todos los casos de pena de muerte, Biden trabajará para aprobar una legislación que elimine la pena de muerte a nivel federal e incentive a los estados a seguir el ejemplo del gobierno federal. Estas personas deberían, en cambio, cumplir cadena perpetua sin libertad condicional ni bajo palabra.</span></li>
+<li>Usará el poder de clemencia del presidente para asegurar la liberación de individuos que enfrentan sentencias excesivamente largas por ciertos delitos no violentos y de drogas. <span style="font-weight: 400;">El presidente Obama usó su poder de clemencia más que cualquiera de los </span><a href="https://www.pewresearch.org/fact-tank/2017/01/20/obama-used-more-clemency-power/"><span style="font-weight: 400;">10</span></a><span style="font-weight: 400;"> presidentes anteriores. Biden continuará esta tradición y utilizará ampliamente su poder de clemencia para ciertos delitos no violentos y relacionados con las drogas.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><b>Acabará con la criminalización de la pobreza. </b></li>
+</ul>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Terminará con la fianza en efectivo: </span></i><span style="font-weight: 400;">La fianza en efectivo es la prisión actual de los deudores. El sistema de fianza en efectivo encarcela a los presuntos inocentes y perjudica desproporcionadamente a las personas de bajos ingresos. Biden dirigirá un esfuerzo nacional para poner fin a la fianza en efectivo y reformará nuestro sistema preventivo estableciendo, en cambio, uno que sea justo y no inyecte más discriminación o sesgo en el proceso.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">No más cárcel a las personas por ser demasiado pobres para pagar multas y tarifas: </span></i><span style="font-weight: 400;">Algunas personas terminan sin poder escapar de nuestro sistema de justicia debido a las multas y tarifas que el sistema impone. Biden usará el poder de concesión de subvenciones del gobierno federal para incentivar el fin de las políticas que encarcelan a las personas por no pagar multas y tarifas. También dirigirá políticas para </span><a href="https://finesandfeesjusticecenter.org/tag/drivers-license-suspension/"><span style="font-weight: 400;">revocar las licencias de conducir</span></a><span style="font-weight: 400;"> por multas sin pagar por aparcamiento o por exceso de velocidad. Además, ayudará a las personas encarceladas durante seis meses o más a obtener un verdadero comienzo al incentivar a los estados a que eliminen las multas o tarifas de tránsito pendientes que les impidan obtener una licencia. Estas reformas relacionadas con la licencia no se aplicarán a las licencias revocadas por conducir en estado de ebriedad, manejo imprudente u otras infracciones graves al conducir.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Evitará que las corporaciones se beneficien del encarcelamiento.<span style="font-weight: 400;"> Biden terminará con el uso de prisiones privadas por parte del gobierno federal, construyendo sobre la </span><a href="https://www.justice.gov/archives/opa/file/886311/download"><span style="font-weight: 400;">política</span></a><span style="font-weight: 400;"> </span><a href="https://www.bop.gov/resources/news/pdfs/20170224_doj_memo.pdf"><span style="font-weight: 400;">rescindida</span></a><span style="font-weight: 400;"> de la administración Obama-Biden por parte la administración Trump. Y dejará claro que el gobierno federal no debe usar instalaciones privadas para ninguna detención, incluyendo la de inmigrantes indocumentados. Biden también eliminará las cárceles privadas y todos los demás métodos de obtención de ganancias excesivas del encarcelamiento, incluyendo </span><a href="https://www.nclc.org/images/pdf/criminal-justice/report-commercialized-injustice.pdf"><span style="font-weight: 400;">programas recreativos, fianza comercial y monitoreo electrónico</span></a><span style="font-weight: 400;">,</span><span style="font-weight: 400;"> un requisito para su nuevo programa estatal y local de subvenciones de prevención. Finalmente, Biden apoyará la aprobación de la </span><a href="https://www.congress.gov/bill/115th-congress/senate-bill/2520/text"><span style="font-weight: 400;">legislación</span></a><span style="font-weight: 400;"> que termine con las prácticas de las empresas privadas que cobran a las personas encarceladas y a sus familias tarifas exorbitantes para hacer llamadas.</span></b></li>
+<li style="font-weight: 400;"><b>Responderá a las necesidades únicas de las mujeres encarceladas. </b><span style="font-weight: 400;">Las mujeres tienen inherentemente diferentes necesidades básicas de atención médica que los hombres encarcelados. Biden va a condicionar la recepción de fondos federales de justicia criminal a la </span><a href="https://www.ncchc.org/womens-health-care"><span style="font-weight: 400;">provisión adecuada</span></a><span style="font-weight: 400;"> de atención primaria y ginecológica para las mujeres, incluyendo las mujeres embarazadas. La administración Biden también revisará la eficacia de los programas que permiten a los delincuentes no violentos que son los principales proveedores para sus hijos cumplir sus condenas a través de monitoreo en el hogar.</span></li>
+<li style="font-weight: 400;"><b>Garantizará condiciones humanas de reclusión.</b><span style="font-weight: 400;"> Biden cree que ningún acto puede justificar el trato inhumano de un individuo en manos del gobierno. Como presidente, Biden solicitará una revisión de las prácticas inhumanas de las prisiones. Comenzará poniendo fin al uso del aislamiento, con excepciones muy limitadas, como proteger la vida de una persona encarcelada. Y, requerirá que los estados solucionen los problemas de salud ambiental en las cárceles, como la falta de agua limpia y aire limpio. </span></li>
+<li style="font-weight: 400;"><b>Alentará a los estados a recopilar información suficiente para que podamos establecer políticas de justicia penal basadas en evidencia y eliminar las disparidades. </b><span style="font-weight: 400;">La información es una herramienta poderosa para arrojar luz y estimular la acción para abordar los sesgos en nuestro sistema de justicia penal, pero no tenemos datos suficientes para comprender completamente estos sesgos. Por ejemplo, la </span><a href="https://apps.urban.org/features/latino-criminal-justice-data/"><span style="font-weight: 400;">gran mayoría de los estados</span></a><span style="font-weight: 400;"> no recopilan ni reportan información sobre el origen étnico de las personas que interactúan con el sistema de justicia penal. Esto conduce a una falta de información sobre cómo el sistema afecta a la comunidad  hispana . La administración Biden alentará a los estados a agregar información sobre el origen étnico a su recopilación de datos de justicia penal.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><b>JUSTICIA JUVENIL</b></p>
+<p><span style="font-weight: 400;">Como presidente, Biden dará prioridad a la reforma del sistema de justicia juvenil para asegurarnos de dar a más niños una segunda oportunidad de alcanzar su potencial. Su administración desarrollará e implementará políticas en este espacio basándose en la retroalimentación de niños y adultos jóvenes que interactuaron con el sistema de justicia penal siendo niños.</span></p>
+<p><span style="font-weight: 400;">Para empezar, la administración Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Invertirá mil millones de dólares por año en la reforma de justicia juvenil.</b><span style="font-weight: 400;"> Una de las herramientas más importantes del gobierno federal para configurar la política de justicia juvenil es a través de programas de subvenciones para financiar e incentivar la acción estatal. La Ley de Justicia Juvenil y Prevención de la Delincuencia permite a los estados utilizar fondos para </span><a href="https://crsreports.congress.gov/product/pdf/IN/IN11076"><span style="font-weight: 400;">propósitos como</span></a><span style="font-weight: 400;"> proporcionar a los niños representación legal y ayudarles a sellar y eliminar los registros. A cambio de tomar estos fondos, los estados tienen que cumplir </span><a href="https://crsreports.congress.gov/product/pdf/IN/IN11076"><span style="font-weight: 400;">requisitos como</span></a><span style="font-weight: 400;"> prohibir que los niños sean encarcelados en instalaciones donde interactúen con adultos encarcelados y abordar la representación desproporcionada de niños de color en el sistema de justicia juvenil. El Congreso recientemente volvió a autorizar esta Ley a un nivel de financiamiento de </span><a href="https://crsreports.congress.gov/product/pdf/IN/IN11076"><span style="font-weight: 400;">$176 millones de dólares</span></a><span style="font-weight: 400;"> anuales, pero solo se apropiaron </span><a href="https://crsreports.congress.gov/product/pdf/IN/IN11076"><span style="font-weight: 400;">$60 millones de dólares</span></a><span style="font-weight: 400;"> en fondos para el año fiscal 2019. Como presidente, Biden presionará para obtener la financiación total de la Ley y luego irá más allá, invirtiendo un total de mil millones de dólares anuales para reformar nuestro sistema de justicia juvenil.</span></li>
+<li style="font-weight: 400;"><b>Incentivará a los estados para que dejen de encarcelar a los niños.</b><span style="font-weight: 400;"> Podemos reducir la población de jóvenes encarcelados apoyando alternativas basadas en la comunidad al encarcelamiento, como orientación, asesoría y empleos. Esto no significa brazaletes de tobillo, sino apoyo en persona para nuestros hijos. Con este fin, el presidente Biden creará un nuevo programa de subvenciones para alentar a los estados a (1) colocar a los jóvenes no violentos en alternativas comunitarias a la prisión, y (2) </span><a href="https://www.urban.org/sites/default/files/transforming_closed_youth_prisons_two_pager.pdf"><span style="font-weight: 400;">readaptar</span></a><span style="font-weight: 400;"> las cárceles vacías para el beneficio de la comunidad, de forma que no puedan ser utilizadas en el futuro para detenciones. Esta iniciativa comenzará como un programa piloto de $100 millones de dólares en 15-30 estados y condados. Para recibir este financiamiento de subvención, las localidades deberán llevar a la mesa a los jóvenes y las comunidades afectadas mientras desarrollan planes para reducir el encarcelamiento de menores.</span></li>
+<li style="font-weight: 400;"><b>Ampliará la financiación para programas para después de la escuela, centros comunitarios y trabajos de verano para mantener a los jóvenes activos, ocupados, aprendiendo y divirtiéndose. </b><span style="font-weight: 400;">Biden incrementará la inversión federal en programas que creen espacios seguros y acogedores para que los niños pasen tiempo cuando no estén en la escuela. Biden también creará un programa nacional ampliado de empleos de verano para adultos jóvenes para que tengan la oportunidad de mantenerse ocupados, obtener ingresos y aprender nuevas habilidades</span></li>
+<li style="font-weight: 400;"><b>Pondrá fin al uso de la detención como castigo por delitos de estatus. </b><a href="https://www.vera.org/projects/status-offense-reform-center"><span style="font-weight: 400;">Miles de menores</span></a> <span style="font-weight: 400;">interactúan con nuestro sistema de justicia cada año simplemente porque cometen un acto ilícito que sería legal si fueran mayores. Los niños terminan encarcelados por actos como </span><a href="https://www.vera.org/projects/status-offense-reform-center/learn-more"><span style="font-weight: 400;">ausentismo escolar, uso de alcohol y violaciones al toque de queda</span></a><span style="font-weight: 400;">. Biden agregará a los programas de subsidios de justicia juvenil un requisito de que los estados eliminen la detención como un castigo por delitos de estatus, y en cambio, se aseguren de que estos jóvenes participen en servicios comunitarios, programas de fuerza laboral, asesoría y terapia, según sea necesario.</span></li>
+<li style="font-weight: 400;"><b>Terminará con el trayecto de la escuela a la prisión enfocándose en la prevención. </b><span style="font-weight: 400;">Biden se centrará en invertir en prevención en nuestras escuelas. Comenzará </span><a href="../../education.html"><span style="font-weight: 400;">duplicando el número de profesionales de la salud mental en nuestras escuelas</span></a><span style="font-weight: 400;"> para que los psicólogos, consejeros y trabajadores sociales, no nuestro sistema de justicia penal, aborden los desafíos emocionales y de comportamiento. Además, restablecerá las </span><a href="https://www.ed.gov/news/press-releases/us-departments-education-and-justice-release-school-discipline-guidance-package-"><span style="font-weight: 400;">guías</span></a><span style="font-weight: 400;"> de la administración Obama-Biden para ayudar a las escuelas a hacer frente al alto número de suspensiones y expulsiones que afectan a los estudiantes de color a un ritmo mayor que a los estudiantes blancos. </span></li>
+<li><b>Dará a los niños una verdadera segunda oportunidad protegiendo los registros juveniles.</b><span style="font-weight: 400;"> Un objetivo fundamental del sistema de justicia juvenil es dar a los menores que cometen delitos la posibilidad real de alcanzar su pleno potencial como adultos. Pero, no pueden hacerlo si sus antecedentes penales se hacen públicos o son accesibles de alguna manera que limite su ingreso a la educación y/o empleos. </span><a href="https://juvenilerecords.jlc.org/juvenilerecords/#!/map"><span style="font-weight: 400;">En estados de todo el país</span></a><span style="font-weight: 400;">, las protecciones para los registros juveniles son inadecuadas. Biden agregará a los programas existentes de subsidios de justicia juvenil un requisito para que los estados y las localidades tomen medidas para proteger estos registros, incluyendo </span><a href="https://juvenilerecords.jlc.org/juvenilerecords/#!/map"><span style="font-weight: 400;">la eliminación automática y el sellado</span></a><span style="font-weight: 400;"> de los registros juveniles.</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><b>III. OFRECER SEGUNDAS OPORTUNIDADES</b></p>
+<p><span style="font-weight: 400;">Biden cree en la redención. Después de que las personas encarceladas cumplan su condena, deberían tener la oportunidad de reintegrarse plenamente a la sociedad, ganarse la vida y participar en nuestra democracia como nuestros conciudadanos. No solo los beneficiará a ellos, sino también a toda la sociedad. Asimismo, es nuestra mejor estrategia para reducir la reincidencia.</span></p>
+<p><span style="font-weight: 400;">El presidente Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Establecerá un objetivo nacional de garantizar que el 100% de las personas previamente encarceladas tengan vivienda al reingresar a la sociedad.</b><span style="font-weight: 400;"> Si los individuos encarcelados no encuentran vivienda al reingresar a la sociedad, la falta de esta puede ser completamente desestabilizadora y podría limitar su probabilidad de permanecer exitosamente fuera del sistema de justicia penal y alcanzar su potencial. Biden se esforzará por lograr el objetivo de garantizar que el 100% de las personas previamente encarceladas, a nivel federal y estatal, tengan vivienda al momento de su liberación. Comenzará dirigiendo al Departamento de Vivienda y Desarrollo Urbano de los Estados Unidos a solo contratar entidades que estén abiertas a dar alojamiento a personas que buscan una segunda oportunidad. Y aumentará la financiación para viviendas de transición, la cual ha sido </span><a href="https://www.reuters.com/article/us-usa-justice-prisons-exclusive/exclusive-trump-administration-reduces-support-for-prisoner-halfway-houses-idUSKBN1CI2ZA"><span style="font-weight: 400;">drásticamente recortada</span></a><span style="font-weight: 400;"> bajo el gobierno de Trump.</span></li>
+<li style="font-weight: 400;"><b>Ampliará el acceso a los tratamiento para trastornos de salud mental y por uso de sustancias, así como a las oportunidades educativas y de capacitación laboral para los individuos durante y después del encarcelamiento. </b><span style="font-weight: 400;">Las cárceles no son el enfoque preferido para la rehabilitación. Es por eso que la administración Biden ampliará el uso de los tribunales de drogas y otros programas de derivación, como se describe anteriormente. Pero, cuando los individuos terminan encarcelados y experimentan problemas de salud mental o un trastorno por uso de sustancias, deben tener acceso a un tratamiento adecuado. Todas las personas encarceladas deben tener la oportunidad de obtener educación y capacitación en habilidades para que puedan encontrar empleo más fácilmente después de su liberación. Los individuos encarcelados deben tener la oportunidad de aprender a leer, obtener un GED o aprender un nuevo oficio mientras están encarcelados. La administración Biden ampliará los fondos para todos estos programas y servicios, durante y después del encarcelamiento.</span></li>
+<li style="font-weight: 400;"><b>Eliminará las barreras existentes que impiden que las personas previamente encarceladas participen plenamente en la sociedad. </b><span style="font-weight: 400;">Existen numerosas disposiciones vigentes en las leyes federales, estatales y locales que prohíben que los individuos en prisión preventiva o en libertad condicional tengan acceso a los recursos que necesitan para buscar su segunda oportunidad. Biden dirigirá a su gabinete para que realice una revisión exhaustiva para identificar estas barreras. Luego, trabajará para eliminar estas barreras a través de decretos, cuando sean autorizados, y a través de la leyes. Por ejemplo, Biden eliminará las barreras que impiden que las personas anteriormente encarceladas tengan acceso a la asistencia pública, como SNAP, a subvenciones Pell y apoyo para vivienda. Él simplificará el proceso para dar a las personas en libertad condicional o bajo palabra por delitos no violentos acceso a </span><a href="https://www.jobcorps.gov/"><span style="font-weight: 400;">Job Corps</span></a><span style="font-weight: 400;">. La administración Biden incentivará a los estados a restaurar automáticamente los derechos de voto para las personas condenadas por delitos graves una vez que hayan cumplido sus condenas. Y, la administración Biden ampliará </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2016/11/30/fact-sheet-white-house-announces-new-commitments-fair-chance-business"><span style="font-weight: 400;">la política “ban the box”</span></a><span style="font-weight: 400;">  de la administración Obama-Biden alentando una mayor adopción de estas políticas </span><a href="https://www.nelp.org/publication/ban-the-box-fair-chance-hiring-state-and-local-guide/"><span style="font-weight: 400;">tanto a nivel estatal como local</span></a><span style="font-weight: 400;">. Este esfuerzo no incluirá ninguna restauración automática de los derechos de armas de fuego.</span></li>
+</ul>
+<p><b>IV. REDUCIR LA VIOLENCIA Y APOYAR A SUS SOBREVIVIENTES</b></p>
+<p><span style="font-weight: 400;">Debemos buscar medidas basadas en la evidencia para erradicar los delitos violentos persistentes. Los delincuentes violentos deben ser responsabilizados y los sobrevivientes deben tener acceso a apoyo para enfrentar las consecuencias físicas, psicológicas y financieras de la violencia</span></p>
+<p><span style="font-weight: 400;">El presidente Biden:</span></p>
+<ul>
+<li><b>Contraatacará el aumento de los delitos de odio. </b><span style="font-weight: 400;">La cantidad de delitos de odio en los Estados Unidos alcanzó un máximo de cinco años en 2016, y luego aumentó otro 17% en 2017. Biden enfrentará el aumento de los delitos de odio a través del liderazgo moral, dejando en claro que el veneno no tiene lugar en los Estados Unidos. Estados Y, bajo la administración Biden, el Departamento de Justicia dará prioridad al procesamiento de los delitos de odio.</span></li>
+<li><b>Revitalizará el patrullaje orientado a la comunidad. </b><span style="font-weight: 400;">El patrullaje funciona mejor cuando los oficiales salen de sus cruceros y caminan por las calles, se involucran y conocen a los miembros de sus comunidades. Pero para hacer eso, los departamentos de policía necesitan recursos para contratar a un número suficiente de oficiales. Biden encabezó el programa de Servicios de Patrullaje Orientados a la Comunidad (COPS, por sus siglas en inglés), que autorizó la financiación tanto para la contratación de oficiales de policía adicionales como para la capacitación sobre cómo emprender un enfoque de patrullaje comunitario. Sin embargo, el programa </span><a href="https://fas.org/sgp/crs/misc/RL33308.pdf"><span style="font-weight: 400;">nunca ha sido financiado</span></a><span style="font-weight: 400;"> para cumplir con la visión original del patrullaje comunitario. Biden revitalizará el programa COPS con una inversión de $300 millones de dólares. Como condición de la subvención, la contratación de oficiales de policía debe reflejar la diversidad racial de la comunidad a la que sirven. Además, como presidente, Biden establecerá un panel para examinar qué equipo utiliza la policía en nuestras comunidades.</span></li>
+<li><b>Derrotar a la Asociación Nacional del Rifle &#8211; otra vez. <span style="font-weight: 400;">En los próximos meses, Biden también detallará su plan para enfrentar la epidemia de salud pública de la violencia con armas de fuego en los Estados Unidos, comenzando con verificaciones universales de antecedentes y prohibiciones de armas de asalto y tambores de gran capacidad. El plan de Biden para reducir la violencia con armas de fuego hará frente no solo a los tiroteos en masa, sino también a los actos diarios de violencia con armas de fuego que no ocupan los titulares nacionales. Biden ha vencido a la Asociación Nacional del Rifle en el escenario nacional dos veces antes. Como presidente, volverá a derrotar a la NRA (Asociación Nacional del Rifle, por sus siglas en inglés).</span></b></li>
+<li style="font-weight: 400;"><b>Reducirá la violencia contra las mujeres. </b><span style="font-weight: 400;">Como autor original de la Ley de Violencia contra las Mujeres, Biden trabajará para volver a autorizar y continuar fortaleciendo la Ley, acelerando el progreso en la disminución de la violencia contra las mujeres y las niñas y brindando apoyo a las sobrevivientes. En los próximos meses presentará un plan detallado sobre este tema.</span></li>
+<li style="font-weight: 400;"><b>Apoyará a los sobrevivientes de la violencia, a las comunidades que sufren violencia y a los servicios de emergencia, haciendo frente a los impactos del trauma.</b><span style="font-weight: 400;"> La violencia causatrauma en nuestras comunidades, que afectan no solo a las víctimas de la violencia, sino también a sus comunidades y a los socorristas. Y, la violencia puede tener un impacto traumático en una generación. El temor a los tiroteos escolares está teniendo un </span><a href="https://www.apa.org/news/press/releases/stress/2018/stress-gen-z.pdf"><span style="font-weight: 400;">impacto notable</span></a><span style="font-weight: 400;"> sobre la salud mental de la Generación Z. Además de ampliar los fondos para el tratamiento tradicional de salud mental y duplicar el número de profesionales de salud mental en nuestras escuelas, Biden tomará tres acciones clave para abordar el trauma causado por la violencia. Primero, financiará un proyecto de demostración para ayudar a las escuelas a buscar enfoques no tradicionales para curar traumas, como el arte y los deportes. En segundo lugar, indicará al Departamento de Salud y Servicios Humanos de los Estados Unidos realizar una revisión exhaustiva de todos los programas federales para identificar cómo pueden estar más informados sobre el trauma y apoyar a los sobrevivientes de la violencia. En tercer lugar, Biden trabajará para aumentar el límite de financiación para los </span><a href="https://www.ovc.gov/"><span style="font-weight: 400;">programas de la Ley de Víctimas de Delitos</span></a><span style="font-weight: 400;"> y reemplazar con financiamiento directo cualquier pérdida de ingresos para el programa debido a las propuestas en este paquete. Los programas de la Ley de Víctimas de Delitos </span><a href="https://www.ovc.gov/grants/types.html#formulagrants"><span style="font-weight: 400;">financian apoyo para ayudar</span></a><span style="font-weight: 400;"> a las víctimas de delitos a pagar gastos que incluyen: costos médicos y dentales, terapia, pérdida de salarios y gastos de alojamiento temporal que resulten del delito.</span></li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../justice.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-biden-para-fortalecer-el-compromiso-de-estados-unidos-con-la-justicia/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":418,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

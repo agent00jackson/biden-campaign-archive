@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>The Biden Plan to Build a Modern, Sustainable Infrastructure and an Equitable Clean Energy Future | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The Biden Plan to Build a Modern, Sustainable Infrastructure and an Equitable Clean Energy Future | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="At this moment of profound crisis, we have the opportunity to build a more resilient, sustainable economy – one that will put the United States on an irreversible path to achieve net-zero emissions, economy-wide, by no later than 2050. Joe Biden will seize that opportunity and, in the process, create millions of good-paying jobs that [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/clean-energy/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-05T14:41:57+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Infrastructure_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Infrastructure_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="28 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/clean-energy/#webpage","url":"https://joebiden.com/clean-energy/","name":"The Biden Plan to Build a Modern, Sustainable Infrastructure and an Equitable Clean Energy Future | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-11-14T11:08:15+00:00","dateModified":"2020-08-05T14:41:57+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/clean-energy/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fclean-energy%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fclean-energy%2F&#038;format=xml" />
+<link rel="alternate" href="index.html" hreflang="en" />
+<link rel="alternate" href="../es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda-2/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1616 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda-2/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda-2/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1616 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan to Build a Modern, Sustainable Infrastructure and an Equitable Clean Energy Future</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p>At this moment of profound crisis, we have the opportunity to build a more resilient, sustainable economy – one that will put the United States on an irreversible path to achieve net-zero emissions, economy-wide, by no later than 2050. Joe Biden will seize that opportunity and, in the process, create millions of good-paying jobs that provide workers with the choice to join a union and bargain collectively with their employers.</p>
+<p>President Trump has a devastating pattern of denying science and leaving our country unprepared and vulnerable. Amidst the COVID-19 pandemic, he ignored public health experts, praised the Chinese government, and failed to take the actions needed to protect the American people. And as the crisis accelerated, Trump rolled back environmental standards that protect public health — adding to the 100 similar environmental and public health protections he has rolled back since taking office — even though early data suggests a link between exposure to pollution and serious negative health impacts from the virus.</p>
+<p>Just as with COVID-19, Donald Trump has denied science and failed to step up in the face of the climate crisis. He has called it a hoax. He has allowed our infrastructure to deteriorate and farmers’ fields to flood. He has held back American workers from leading the world on clean energy, giving China and other countries a free pass to outcompete us in key technologies and the jobs that come with them. And instead of supporting more tax credits that keep solar and wind workers employed here at home, Trump showered tax cuts on multinational companies that encourage offshoring. His actions have not only set us back in terms of progress on environmental justice and clean energy jobs, they have made us more vulnerable – weaker and less resilient – as a nation.</p>
+<p>Joe Biden’s Build Back Better plan ensures that – coming out of this profound public health and economic crisis, and facing the persistent climate crisis – we are never caught flat-footed again. He will launch <b>a national effort aimed at creating the jobs we need to build a modern, sustainable infrastructure now and deliver an equitable clean energy future</b>.</p>
+<p>The current coronavirus crisis destroyed millions of American jobs, including hundreds of thousands in clean energy. It has exacerbated historic environmental injustices. And all this comes at a moment when the science tells us there is no time for delay on climate change. Biden will immediately invest in engines of sustainable job creation – new industries and re-invigorated regional economies spurred by innovation from our national labs and universities; commercialized into new and better products that can be manufactured and built by American workers; and put together using feedstocks, materials, and parts supplied by small businesses, family farms, and job creators all across our country.</p>
+<p>We need millions of construction, skilled trades, and engineering workers to build a new American infrastructure and <a href="https://web.archive.org/web/20200731165423/https://joebiden.com/climate-labor-fact-sheet/">clean energy</a> economy. These jobs will create pathways for young people and for older workers shifting to new professions, and for people from all backgrounds and all communities. Their work will improve air quality for our children, increase the comfort of our homes, and make our businesses more competitive. The investments will make sure the communities who have suffered the most from pollution are first to benefit — including low-income rural and urban communities, communities of color, and Native communities. And, Biden’s plan will empower workers to organize unions and bargain collectively with their employers as they rebuild the middle class and a more sustainable future. <b>Biden will make a $2 trillion accelerated investment, with a plan to deploy those resources over his first term, setting us on an irreversible course to meet the ambitious climate progress that science demands.</b></p>
+<p><b></b>Biden will make far-reaching investments in:</p>
+<ul>
+<li><b>Infrastructure: </b>Create millions of good, union jobs rebuilding America’s crumbling infrastructure – from roads and bridges to green spaces and water systems to electricity grids and universal broadband – to lay a new foundation for sustainable growth, compete in the global economy, withstand the impacts of climate change, and improve public health, including access to clean air and clean water.</li>
+<li><b>Auto Industry: </b>Create 1 million new jobs in the American auto industry, domestic auto supply chains, and auto infrastructure, from parts to materials to electric vehicle charging stations, positioning American auto workers and manufacturers to win the 21st century; and invest in U.S. auto workers to ensure their jobs are good jobs with a choice to join a union.</li>
+<li><b>Transit:</b> Provide every American city with 100,000 or more residents with high-quality, zero-emissions public transportation options through flexible federal investments with strong labor protections that create good, union jobs and meet the needs of these cities – ranging from light rail networks to improving existing transit and bus lines to installing infrastructure for pedestrians and bicyclists.</li>
+<li><b>Power Sector: </b>Move ambitiously to generate clean, American-made electricity to achieve a carbon pollution-free power sector by 2035. This will enable us to meet the existential threat of climate change while creating millions of jobs with a choice to join a union.</li>
+<li><b>Buildings: </b>Upgrade 4 million buildings and weatherize 2 million homes over 4 years, creating at least 1 million good-paying jobs with a choice to join a union; and also spur the building retrofit and efficient-appliance manufacturing supply chain by funding direct cash rebates and low-cost financing to upgrade and electrify home appliances and install more efficient windows, which will cut residential energy bills.</li>
+<li><b>Housing: </b>Spur the construction of 1.5 million sustainable homes and housing units.</li>
+<li><b>Innovation: </b>Drive dramatic cost reductions in critical clean energy technologies, including battery storage, negative emissions technologies, the next generation of building materials, renewable hydrogen, and advanced nuclear – and rapidly commercialize them, ensuring that those new technologies are made in America.</li>
+<li><b>Agriculture and Conservation: </b>Create jobs in climate-smart agriculture, resilience, and conservation, including 250,000 jobs plugging abandoned oil and natural gas wells and reclaiming abandoned coal, hardrock, and uranium mines – providing good work with a choice to join or continue membership in a union in hard hit communities, including rural communities, reducing leakage of toxics, and preventing local environmental damage.</li>
+<li><b>Environmental Justice: </b>Ensure that environmental justice is a key consideration in where, how, and with whom we build – creating good, union, middle-class jobs in communities left behind, righting wrongs in communities that bear the brunt of pollution, and lifting up the best ideas from across our great nation – rural, urban, and tribal.</li>
+</ul>
+<p><b>Biden will ensure these investments </b><b>create good, union jobs that expand the middle class. </b>American workers should build American infrastructure and manufacture the materials that go into it, and all of these workers must have the choice to join a union and collectively bargain. Biden will include in the economic recovery legislation he sends to Congress a series of policies to build worker power to raise wages and secure stronger benefits. This legislation will make it easier for workers to organize a union and collectively bargain with their employers by including the Protecting the Right to Organize (PRO) Act, card check, union and bargaining rights for public service workers, and a broad definition of “employee” and tough enforcement to end the misclassification of workers as independent contractors. His bill will also go further than the PRO Act by holding company executives personally liable when they interfere with organizing efforts. He will also ensure that all companies benefitting from his infrastructure and clean energy investments meet the labor protections in Senator Merkley’s Good Jobs for 21st Century Energy Act, applying and strictly enforcing Davis-Bacon prevailing wage guidelines, and that those benefiting from transportation investments meet transit labor protections so that new jobs are good-paying jobs with family sustaining benefits. And, as called for in his plan to strengthen worker organizing, collective bargaining, and unions, Biden will require that companies receiving procurement contracts are using taxpayer dollars to support good American jobs, including a commitment to pay at least $15 per hour, provide paid leave, maintain fair overtime and scheduling practices, and guarantee a choice to join a union and bargain collectively.</p>
+<p><b>Biden will ensure these jobs are filled by diverse, local, well-trained workers</b><b> – </b><b>including women and people of color</b><b> – </b>by requiring federally funded projects to prioritize Project Labor and Community Workforce Agreements and employ workers trained in registered apprenticeship programs. Biden will make investments in pre-apprenticeship programs and in community-based and proven organizations that help women and people of color access high-quality training and job opportunities. Biden’s proposal will make sure national infrastructure and clean energy investments create millions of middle-class jobs that develop a diverse and local workforce and strengthen communities as we rebuild our physical infrastructure.</p>
+<p><b>Biden also reaffirms his commitment to fulfill our obligation to the workers and communities who powered our industrial revolution and decades of economic growth, as outlined in his </b><a href="../climate.html"><b>original climate plan</b></a><b>. </b>This includes securing the benefits coal miners and their families have earned, making an unprecedented investment in coal and power plant communities, and establishing a Task Force on Coal and Power Plant Communities, as the Obama-Biden Administration did for Detroit when the auto industry was in turmoil.</p>
+<p>The key elements of the Biden Plan to Build a Modern, Sustainable Infrastructure and an Equitable Clean Energy Future include:</p>
+<ol>
+<li>Build a Modern Infrastructure</li>
+<li>Position the U.S. Auto Industry to Win the 21st Century with technology invented in America</li>
+<li>Achieve a Carbon Pollution-Free Power Sector by 2035</li>
+<li>Make Dramatic Investments in Energy Efficiency in Buildings, including Completing 4 Million Retrofits and Building 1.5 Million New Affordable Homes</li>
+<li>Pursue a Historic Investment in Clean Energy Innovation</li>
+<li>Advance Sustainable Agriculture and Conservation</li>
+<li>Secure Environmental Justice and Equitable Economy Opportunity</li>
+</ol>
+<ol>
+<li><b>BUILD A MODERN INFRASTRUCTURE</b></li>
+</ol>
+<p>Biden will create millions of good, union jobs building and upgrading a cleaner, safer, stronger infrastructure – including smart roads, water systems, municipal transit networks, schools, airports, rail, ferries, ports, and universal broadband access – for all Americans, whether they live in rural or urban areas.</p>
+<p>Americans deserve infrastructure they can trust: infrastructure that is resilient to floods, fires, and other climate threats, not fragile in the face of these increasing risks. We need infrastructure that supports healthy, safe communities, rather than locking in the cumulative impacts of polluted air and poisonous water. And we need infrastructure, like universal broadband, that unleashes innovation and shared economic progress and educational opportunity to every community, rather than slowing it down.</p>
+<p>Biden will rely on American union labor and American-made materials and products to build this infrastructure. He will create jobs in planning and management, from architects to engineers to designers. And, he will invest in the pre-development, development, and construction of this new and necessary infrastructure, building it in places and with the advanced materials – like clean steel and cement – in a way that promotes the livability of our communities and the accessibility of opportunity. Biden will create good, union jobs that expand the middle class by:</p>
+<ul>
+<li><b>Transforming our crumbling transportation infrastructure – including roads and bridges, rail, aviation, ports, and inland waterways – </b>making the movement of goods and people faster, cheaper, cleaner, and manufactured in America while preserving and growing the union workforce. Biden will also transform the energy sources that power the transportation sector, making it easier for mobility to be powered by electricity and clean fuels, including commuter trains, school and transit buses, ferries, and passenger vehicles. The resulting reduction in air pollution will save thousands of lives and millions in medical costs burdening families.</li>
+<li><b>Sparking the second great railroad revolution. </b>Biden will make sure that America has the cleanest, safest, and fastest rail system in the world — for both passengers and freight. His rail revolution will reduce pollution, connect workers to good union jobs, slash commute times, and spur investment in communities that will now be better linked to major metropolitan areas. To speed that work, Biden will tap existing federal grant and loan programs at the U.S. Department of Transportation, and improve and streamline the loan process. In addition, Biden will work with Amtrak and private freight rail companies to further electrify the rail system, reducing diesel fuel emissions.</li>
+<li><b>Revolutionizing municipal transit networks.</b> Most Americans do not have access to high-quality and zero-emissions options for affordable, reliable public transportation; and where transit exists, it’s often in need of repair. As a result, workers and families rely on cars and trucks, which can be a big financial burden and clog roadways. Biden will aim to provide all Americans in municipalities of more than 100,000 people with quality public transportation by 2030. He will allocate flexible federal investments with strong labor protections to help cities and towns install light rail networks and improve existing transit and bus lines. He’ll also help them invest in infrastructure for pedestrians, cyclists, and riders of e-scooters and other micro-mobility vehicles and integrate technologies like machine-learning optimized traffic lights. And, Biden will work to make sure that new, fast-growing areas are designed and built with clean and resilient public transit in mind. Specifically, he will create a new program that gives rapidly expanding communities the resources to build in public transit options from the start.</li>
+<li><b>Ensuring clean, safe drinking water is a right in all communities – rural to urban, rich and poor </b>– investing in the repair of water pipelines and sewer systems, replacement of lead service pipes, upgrade of treatment plants, and integration of efficiency and water quality monitoring technologies. This includes protecting our watersheds and clean water infrastructure from man-made and natural disasters by conserving and restoring wetlands and developing green infrastructure and natural solutions.</li>
+<li><b>Expanding broadband, or wireless broadband via 5G, to every American </b>– recognizing that millions of households without access to broadband are locked out of an economy that is increasingly reliant on virtual collaboration. Communities without access cannot leverage the next generation of “smart” infrastructure. As the COVID-19 crisis has revealed, Americans everywhere need universal, reliable, affordable, and high-speed internet to do their jobs, participate equally in remote school learning and stay connected. This digital divide needs to be closed everywhere, from lower-income urban schools to rural America, to many older Americans as well as those living on tribal lands. Just like rural electrification several generations ago, universal broadband is long overdue and critical to broadly shared economic success.</li>
+<li><b>Cleaning up and redeveloping abandoned and underused Brownfield properties, old power plants and industrial facilities, landfills, abandoned mines, and other idle community assets </b>that will be transformed into new economic hubs for communities all across America.</li>
+<li><b>Revitalizing communities in every corner of the country so that no one is left behind or cut off from economic opportunities. </b>Biden’s plan will ensure that our infrastructure investments work to address disparities – often along lines of race and class – in access to clean air, clean water, reliable and sustainable transportation, connectivity to high-speed internet, and access to jobs and educational opportunities. This includes ensuring tribes receive the resources and support they need to invest in roads, clean water, wastewater, broadband, and other essential infrastructure needs. It also means funding investments in local and regional strategies to prevent a lack of transportation options in urban, rural, and high-poverty areas from cutting off after-school opportunities for young people and job opportunities for workers seeking better jobs and more economic security for their families.</li>
+</ul>
+<ol start="2">
+<li><b>POSITION THE AMERICAN AUTO INDUSTRY TO WIN THE 21ST CENTURY</b></li>
+</ol>
+<p>Eleven years ago, Joe Biden helped save the auto industry. Today, the industry once again faces a crisis. Not only has Trump overseen a manufacturing recession on his watch, but through neglect and failed trade policies, he has allowed China to race ahead in the competition to lead the auto industry of the future. China is on track to command more than four times the global market share compared to the U.S. in electric vehicle production, even as the Chinese government’s approach threatens to slow down or set back the long-term prospects of clean vehicle innovation.</p>
+<p>As called for in his <a href="../madeinamerica/index.html">Plan to Ensure the Future is Made in All of America by America’s Workers</a>, Biden will use all the levers of the federal government, from purchasing power, R&amp;D, tax, trade, and investment policies to reverse this trend and position America to be the global leader in the manufacture of electric vehicles and their input materials and parts. Biden will vigorously enforce trade rules in response to currency manipulation, overcapacity, and Chinese government abuses in this sector. Here at home, he will spur an expansion of factory floors and a re-tool of existing manufacturing capacity, and <b>create 1 million new jobs in auto manufacturing, auto supply chains, and auto infrastructure</b>. And he’ll ensure those workers have good-paying jobs with a choice to join a union. Between<a href="https://www.epi.org/productivity-pay-gap/"> 1979 and 2018</a>, American workers have increased their productivity by 70%, while their real wages have only grown by 12% — in large part due to the<a href="https://www.epi.org/press/decline-in-union-density-costs-nonunion-workers-133-billion-annually-in-lost-wages/"> decline in union density</a>. Biden will reverse this trend, by ensuring that auto workers have jobs with strong labor standards and working to pass the PRO Act to ensure auto workers can more easily choose to join a union and bargain collectively with their employers. Leveraging the remarkable talents of U.S. auto workers, he will position the auto industry to win the 21st century.</p>
+<ul>
+<li><b>Use the power of federal procurement to increase demand for American-made, American-sourced clean vehicles.</b> As part of his historic commitment to increasing procurement investments, Biden will make a major federal commitment to purchase clean vehicles for federal, state, tribal, postal, and local fleets, making sure that we retain the critical union jobs involved in running and maintaining these fleets. By providing an immediate, clear, and stable source of demand, this procurement commitment will help to dramatically accelerate American industrial capacity to produce clean vehicles and components, while accelerating the upgrade of the 3 million vehicles in these fleets.</li>
+<li><b>Encourage consumers and manufacturers to go clean.</b> Senators Schumer, Stabenow, Brown, and Merkley, alongside organizations like the United Automobile, Aerospace and Agricultural Implement Workers of America and the International Brotherhood of Electrical Workers and leading environmental groups, crafted  a <a href="https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-unveils-new-clean-cars-for-america-climate-proposal-a-transformative-plan-to-reduce-number-of-carbon-emitting-cars-on-the-road-create-jobs-and-accelerate-transition-net-zero-carbon-emissions-"><i>Clean Cars For America</i></a> proposal. Biden will build on their leadership by providing consumers rebates to swap old, less-efficient vehicles for these newer American vehicles built from materials and parts sourced in the United States. These rebates will be accompanied by significant new targeted incentives for manufacturers to build or retool factories to assemble zero-emission vehicles, parts, and associated infrastructure here at home.</li>
+<li><b>Make major public investments in automobile infrastructure — including in 500,000 electric vehicle charging stations — to create good jobs in industries supporting vehicle electrification</b>. These investments are a key part of Biden’s commitment to reinvent the American transportation system from the factory line to the electric vehicle charging station, while promoting strong labor, training, and installation standards. This includes ensuring the workforce is trained in high quality training programs like the <a href="https://evitp.org/">Electric Vehicle Infrastructure Training Program</a> (EVITP).</li>
+<li><b>Accelerate research on battery technology and support the development of domestic production capabilities</b>. The Chinese government, along with other countries, has used state subsidies and industrial strategies to advance its interests. America must accelerate its own R&amp;D with a focus on developing the domestic supply chain for electric vehicles. A specific focus of Biden’s historic R&amp;D and procurement commitments will be on battery technology – for use in electric vehicles and on our grid, as a complement to technologies like solar and wind – increasing durability, reducing waste, and lowering costs, all while advancing new chemistries and approaches. And Biden will ensure that these batteries are built in the United States by American workers in good, union jobs.</li>
+<li><b>Set a goal that all new American-built buses be zero-emissions by 2030,</b> which will create significant demand for the manufacturing of new, clean American-built buses utilizing American-manufactured inputs – and accelerate the progress by converting all 500,000 school buses in our country — including diesel — to zero emissions. Biden will ensure that the existing — and future — workforce is trained and able to operate and maintain this 21st century infrastructure.</li>
+<li><b>Establish ambitious fuel economy standards that save consumers money and cut air pollution</b><i>. </i>Biden will negotiate fuel economy standards with workers and their unions, environmentalists, industry, and states that achieve new ambition by integrating the most recent advances in technology. This will accelerate the adoption of zero-emissions light- and medium duty vehicles, provide long-term certainty for workers and the industry and save consumers money through avoided fuel costs. Paired with historic public investments and direct consumer rebates for American-made, American-sourced clean vehicles, these ambitious standards will position America to achieve a net-zero emissions future, and position American auto workers, manufacturers, and consumers to benefit from a clean energy revolution in transport.</li>
+</ul>
+<ol start="3">
+<li><b>CREATE MILLIONS OF JOBS PRODUCING CLEAN ELECTRIC POWER FOR AMERICAN FAMILIES AND BUSINESSES</b></li>
+</ol>
+<p>Transforming the U.S. electricity sector – and electrifying an increasing share of the economy – represents the biggest job creation and economic opportunity engine of the 21st century. These jobs include every kind of worker from scientists to construction workers to electricity generation workers to welders to engineers. Existing iron casting and steel fabrication plants will have new customers in the solar and wind industries. Workers with experience welding and installing complex wiring will have new job opportunities. Properties idled in communities left behind, like brownfields, will once again become critical hubs for the growth of our economy. If we move ambitiously to generate clean, American-made electricity, while building the infrastructure to electrify major sectors of our economy, we will meet the existential threat of climate change, create millions of good union jobs; make economic growth more accessible in every state and across Indian Country, and lead the world in inventing, manufacturing, and exporting clean energy technologies. Biden will:</p>
+<ul>
+<li><b>Marshal an historic investment in energy efficiency, clean energy, electrical systems and line infrastructure that makes it easier to electrify transportation, and new battery storage and transmission infrastructure that will address bottlenecks and unlock America’s full clean energy potential</b> <b>– built by American workers, using American-made materials.</b> This revolution in the way we power our economy will leverage the breakthroughs we have already seen in distributed and large-scale renewables, onshore and offshore. And it will put welders, electricians, and other skilled labor to work in good union jobs installing the electrical systems and line infrastructure that helps the power sector – the electricity we generate at our power plants, on our roofs, and in our communities – reach a bigger market of customers and, at the same time, makes it easier for us to electrify in buildings, certain industrial processes, and transportation.</li>
+<li><b>Reform and extend the tax incentives we know generate energy efficiency and clean energy jobs; develop innovative financing mechanisms that leverage private sector dollars to maximize investment in the clean energy revolution; and establish a technology-neutral </b><b><i>Energy Efficiency and Clean Electricity Standard</i></b><b> (</b><b><i>EECES</i></b><b>) for utilities and grid operators</b>. Paired with his historic, front-loaded investments in the power sector, Biden’s <i>EECES </i>will cut electricity bills and cut electricity pollution, increase competition in the market and incentivize higher utilization of assets – and achieve carbon-pollution free energy in electricity generation by 2035. Biden will scale up best practices from state-level clean energy standards, which are being implemented in a way that provides renewable credits to developers that follow high labor standards, including through Project Labor and Community Labor Agreements and paying prevailing wages. Together, these steps will unleash a clean energy revolution in America, create good paying union jobs that cannot be outsourced, and spur the installation of millions of solar panels – including utility-scale, rooftop, and community solar systems – and tens of thousands of wind turbines – including thousands of turbines off our coasts – in Biden’s first term. It would also mean continuing to leverage the carbon-pollution free energy provided by existing sources like nuclear and hydropower, while ensuring those facilities meet robust and rigorous standards for worker, public, environmental safety and environmental justice.</li>
+<li><b>Leverage existing infrastructure and assets.</b> To build the next generation of electric grid transmission and distribution, Biden will prioritize re-powering of lines that already exist with new technology. He will take advantage of existing rights-of-way – along roads and railways – and cut red-tape to promote faster and easier permitting. And he will leverage the breakthroughs we have secured in energy storage over the last decade with historic procurement and investments to bring the future within reach for big utilities and rural cooperatives alike. In addition, and in line with recommendations by climate experts, including a study by the <a href="https://www.ipcc.ch/site/assets/uploads/sites/2/2019/05/SR15_SPM_version_report_LR.pdf">Intergovernmental Panel on Climate Change</a>, Biden will double down on research investments and tax incentives for technology that captures carbon and then permanently sequesters or utilizes that captured carbon, which includes lowering the cost of carbon capture retrofits for existing power plants — all while ensuring that overburdened communities are protected from increases in cumulative pollution. He’ll also ensure that the market can access green hydrogen at the same cost as conventional hydrogen within a decade – providing a new, clean fuel source for some existing power plants.</li>
+</ul>
+<ol start="4">
+<li><b>UPGRADE THE BUILDING SECTOR: RETROFITTING BUILDINGS, UPGRADING SCHOOLS, AND BUILDING HOMES ACROSS AMERICA</b></li>
+</ol>
+<ul>
+<li><b>Creating 1 million jobs upgrading 4 million buildings and weatherizing 2 million homes over 4 years</b>. Biden will make an historic investment in energy upgrades of homes, offices, warehouses, and public buildings. This will be a win on multiple levels. It will create at least 1 million construction, engineering and manufacturing jobs, make the places we live, work, and learn healthier, and reduce electricity bills for families, businesses, and local governments. It will improve indoor air quality and indoor environmental health, thus making our buildings safer in the face of future pandemics. At this moment of crisis, when many offices and municipal buildings are shuttered and millions of skilled Americans are out of work, we have a unique, once in a generation opportunity to deliver cost-efficient retrofits in communities across the country.
+<ul>
+<li><b>Biden’s plan to upgrade 4 million commercial buildings will return almost a quarter of the savings from those retrofits to cash-strapped state and local governments</b>. This includes mobilizing a trained and skilled American workforce to manufacture, install, service and maintain high-efficiency LED lighting, electric appliances, and advanced heating and cooling systems that run cleaner and less costly – all manufactured in the United States.</li>
+<li><b>For families, Biden’s plan will include direct cash rebates and low-cost financing to upgrade and electrify home appliances, install more efficient windows, and cut residential energy bills</b>. Biden will also significantly expand weatherization efforts, reaching over 2 million homes within 4 years, including slashing the disproportionately high energy burden for low-income rural households and rural communities of color.</li>
+<li>Biden will also repair the building code process with the goal of establishing building performance standards for existing buildings nationwide and support this effort with new funding mechanisms for states, cities, and tribes to adopt strict building codes and labor standards to ensure quality and predictability.</li>
+<li>Paired with legislation to set a new net-zero emissions standard for all new commercial buildings by 2030,<b> these steps and critical investments in the Build Back Better</b> <b>Plan will accelerate progress to Joe Biden’s target of cutting the carbon footprint of our national building stock in half by 2035.</b></li>
+</ul>
+</li>
+<li><b>Launching a major, multi-year national effort to modernize our nation’s schools and early learning facilities.</b> For most American children, their public school is like a second home. It should be a place that makes them feel safe and healthy. Yet, American public school facilities received a grade of D+ from the American Society of Civil Engineers. In fact, each year the U.S. underfunds school infrastructure by $46 billion, leaving <a href="https://kapost-files-prod.s3.amazonaws.com/published/56f02c3d626415b792000008/2016-state-of-our-schools-report.pdf?kui=wo7vkgV0wW0LGSjxek0N5A">school districts responsible</a> for the majority of construction costs and pushing long-term debt into the billions nationwide. And by not investing in the infrastructure of our public schools, too many schools are outdated, unsafe, unfit, and – in some cases – making kids and educators sick. Biden’s Build Back Better commitment includes a national effort to upgrade America’s schools and early learning facilities. In line with the <a href="https://www.congress.gov/bill/116th-congress/house-bill/865">Rebuild America’s Schools Act</a>, backed by the House Education and Labor Committee, Biden will make an historic investment to improve public school buildings, with resources weighted to those lower-income rural and urban schools — all too often in communities of color — where the poor quality of school buildings is an additional barrier to equal educational opportunity. Those funds will be deployed with a set of priorities in mind: healthy kids, climate resilience, and creating greater educational equity and job creation in underserved communities. First and foremost, those funds will be used to address health risks, such as improving indoor air quality and ventilation and ensuring access to clean water, so that going to school or working at one never makes anyone sick. Second, additional funding will be used to build cutting-edge, energy-efficient, innovative, climate resilient campuses, which not only have the schools with technology and labs to prepare our students for the jobs of the future, but also become themselves the places that provide communities with green space, clean air, and places to gather, especially during emergencies. He’ll also upgrade child care and early learning facilities around the country that are not safe or developmentally appropriate for young children, who are especially vulnerable to environmental contaminants like lead and mold, and to safety hazards like electrical outlets. Biden’s investments will catalyze thousands of good, union jobs, drawing those workers from the communities most in need of economic development. These investments mean work for local businesses and support for local school districts to reduce capital costs, allowing them to spend more on teaching, learning, and other essential needs to support educators and ensure students are prepared to succeed in tomorrow’s economy.</li>
+<li><b>Spurring the construction of 1.5 million homes and public housing units to address the affordable housing crisis, increase energy efficiency, and reduce the racial wealth gap.</b> Biden is building on his housing plan by further increasing the level of federal investment in new affordable, accessible housing construction — including homes for low-income Americans, minority communities, veterans, the elderly, and persons with disabilities. He will ensure these homes are energy efficient from the start – saving the families who live there up to $500 per year. Biden will also drive additional capital into low-income communities to spur the development of affordable housing and small business creation. And, he’ll incentivize smart regional planning that connects housing, transit, and jobs, improving quality of life by cutting commute times, reducing the distance between living and leisure areas, and mitigating climate change.</li>
+</ul>
+<ol start="5">
+<li><b>PURSUE A HISTORIC INVESTMENT IN CLEAN ENERGY INNOVATION</b></li>
+</ol>
+<p>A major focus of Biden’s commitment to increase federal procurement by $400 billion in his first term will be purchasing the key clean energy inputs like batteries and electric vehicles that will help position the U.S. as the world’s clean energy leader. And, as part of Biden’s historic commitment to accelerate R&amp;D investment on a scale well beyond the Apollo-program, he will focus on strategic research areas like clean energy, clean transportation, clean industrial processes, and clean materials over the next four years. This funding will drive large-scale innovation in the industries of the future and create new partnerships to empower a generation of entrepreneurs, engineers, and skilled trade workers in all parts of the United States.  Biden will invest these new dollars in a way that ensures sustained and sustainable job and small business growth in all parts of America – facilitating the formation of regional ecosystems of innovation, investing in the future of manufacturing communities, playing to each region’s strengths, and pulling in people from diverse backgrounds and skills. These investments will not only help us recover from the economic consequences of the Trump Administration’s dangerous decisions, they will help America build back better – an economy that is less vulnerable to shocks and better able to bounce back from future threats. As part of this effort, Biden will:</p>
+<ul>
+<li><b>Create a new Advanced Research Projects Agency on Climate</b>, a new, cross-agency ARPA-C to target affordable, game-changing technologies to help America achieve our 100% clean energy target, including:
+<ul>
+<li>grid-scale storage at one-tenth the cost of lithium-ion batteries;</li>
+<li>advanced nuclear reactors, that are smaller, safer, and more efficient at half the construction cost of today’s reactors;</li>
+<li>refrigeration and air conditioning using refrigerants with no global warming potential;</li>
+<li>zero net energy buildings at zero net cost, including through breakthroughs in smart materials, appliances, and systems management;</li>
+<li>using renewables to produce carbon-free hydrogen at a lower cost than hydrogen from shale gas through innovation in technologies like next generation electrolyzers;</li>
+<li>decarbonizing industrial heat needed to make steel, concrete, and chemicals and reimagining carbon-neutral construction materials;</li>
+<li>decarbonizing the food and agriculture sector, and leveraging research in soil management, plant biologies, and agricultural techniques to remove carbon dioxide from the air and store it in the ground; and</li>
+<li>capturing carbon dioxide through direct air capture systems and retrofits to existing industrial and power plant exhausts, followed by permanently sequestering it deep underground or using it to make alternative products like cement.</li>
+</ul>
+</li>
+<li><b>Accelerate innovation in supply-chain resilience </b>by investing in research to bolster and build critical clean energy supply chains in the United States, addressing issues like reliance on rare earth minerals.</li>
+<li><b>Invest in our national laboratories,</b> high-performance computing capabilities, and the design and construction of other critical infrastructure at and around those national laboratories and the regional innovation ecosystems and economies that they support.</li>
+<li><b>Strengthen land-grant universities, Historically Black Colleges and Universities (HBCUs), and other minority serving institutions (MSIs)</b>, expanding facilities, targeting grants, and supporting the training of talent.</li>
+</ul>
+<ol start="6">
+<li><b>INVEST IN SUSTAINABLE AGRICULTURE AND CONSERVATION </b></li>
+</ol>
+<ul>
+<li><b>Mobilizing the next generation of conservation and resilience workers through a Civilian Climate Corps</b>. Biden will put a new, diverse generation of patriotic Americans to work conserving our public lands, bolstering community resilience, and addressing the changing climate, while putting good-paying union jobs within reach for more Americans, including women and people of color. This initiative will be complemented by a new generation of scientists and land managers committed to ecological integrity and natural climate solutions. These workers will use sound, science-based techniques to thin and sustainably manage our forests, making them more resilient to wildfire and enhancing their carbon intake and habitat integrity; restore wetlands to protect clean water supplies and leverage greater flood protection; repair dilapidated irrigation systems to conserve water; plant millions of trees to help reduce heat stress in urban neighborhoods; protect and restore coastal ecosystems, such as wetlands, seagrasses, oyster reefs, and mangrove and kelp forests, to protect vulnerable coastlines, sequester carbon, and support biodiversity and fisheries; enhance the carbon intake of natural and working lands, wetlands, reefs, and underwater mangrove and kelp forests; remove invasive species; improve wildlife corridors; build hiking and biking trails and access to other recreational amenities; and reinvigorate landscapes and seascapes, unlocking economic and climate resilience in places like the Great Lakes, the Everglades, our nation’s great river systems including the Colorado River, and the Gulf of Mexico.</li>
+<li><b>Creating more than a quarter million jobs immediately to clean up local economies from the impacts of resource extraction. </b>Biden will direct a front-loaded investment to immediately address the backlog of remediation, reclamation, and restoration needs left behind by the CEOs whose corporations failed to meet their responsibilities to the communities where they operated. Across the country, there are several million unplugged, orphaned, and abandoned oil and gas wells that pose ongoing climate, health, and safety risks in communities. The oil, methane and brine that leaks from these wells contaminates the air and water, and the problem is only getting worse. In addition to these wells, tens of thousands of former mining sites for extraction of coal, hardrock minerals, and uranium are causing ongoing environmental damage including to local surface and groundwater supplies. By making an immediate up-front investment, Biden will create more than 250,000 good jobs with a choice to join a union to plug these oil and gas wells and to restore and reclaim these abandoned coal, hardrock, and uranium mines. This program will create jobs for skilled technicians and operators in some of the hardest hit communities in the country, while reducing leakage of toxic chemicals, methane, and other wastes and preventing local environmental damage. Biden will also hold companies accountable for the environmental damage of their operations, including by clawing back golden parachutes and executive bonuses for companies that shift the environmental burdens of their actions onto taxpayers.</li>
+<li><b>Standing up for our farms and ranches.</b> Our family farmers and ranchers were already fighting an uphill battle because of Trump’s irresponsible trade policies and consistent siding with oil lobbyists over American growers, but COVID-19 has placed new pressures on that sector and the rural economies it sustains. Biden will bring back America’s advantage in agriculture, create jobs, and build a bright future for rural communities by investing in the next generation of agriculture and conservation; providing opportunities to new farmers and ranchers, including returning veterans and minorities, to enter the economy; and making it easier to pass farms and ranches onto the next generation, and:
+<ul>
+<li><b>Helping farmers leverage new technologies, techniques, and equipment to increase productivity and profit </b>– including by providing low-cost finance for the transition to new equipment and methods, funding research and development in precision agriculture and new crops, and a establishing a new voluntary carbon farming market that rewards farmers for the carbon they sequester on their land and the greenhouse gas emission reductions, including from methane, that they secure. These efforts to partner with farmers will help them tap into develop new income streams as they tackle the challenge of sequestering carbon, reducing emissions, and continue their track record as global leaders in agricultural innovation. Instead of making things harder for farmers, Biden will stand with them as they fight against the threats of climate change, droughts, flooding and extreme weather, while partnering with them to make American agriculture the first in the world to achieve net-zero emissions.</li>
+<li><b>Pursuing smarter pro-worker and pro-family-farmer trade policies</b> – knowing the difference between strong and effective trade enforcement and the self-defeating strategy Donald Trump has pursued. Biden will help farmers compete instead of crushing them.</li>
+<li><b>Bolstering the security and resilience of our food supply</b>, including by leveraging precision agriculture through regional demonstration projects to minimize the impacts of drought.</li>
+<li><b>Making sure small and medium-sized farms and producers have access to fair markets where they can compete and get fair prices for their products</b> – and requiring large corporations play by the rules instead of writing them – by strengthening enforcement of the Sherman and Clayton Antitrust Acts and the Packers and Stockyards Act.</li>
+<li><b>Investing in diverse farmers to make our agriculture sector stronger and more resilient</b>. American agriculture is strong in part because of our incredible range of farm types and sizes — and we’ve got to make sure that anyone who wants to serve our country as a farmer can get assistance from USDA. As President, Biden will ensure the U.S. Department of Agriculture ends historical discrimination against Black farmers in federal farm programs and that all socially disadvantaged farmers and ranchers have access to programs that support their family farms.</li>
+<li><b>Expanding protections for farm workers.</b> Farm workers have always been essential to working our farms and feeding our country. As President, Biden will ensure farm workers are treated with the dignity and respect they deserve, regardless of immigration status. He will work with Congress to provide legal status based on prior agricultural work history and ensure labor and safety rules, including overtime, humane living conditions, and protection from pesticide and heat exposure, are enforced with respect to these particularly vulnerable working people.</li>
+<li><b>Building on Biden’s </b><a href="../rural.html"><b>rural plan</b></a><b>,</b> which includes proposals to re-invest in land grant universities’ agricultural research so the public, not private companies, owns patents to agricultural advances.</li>
+</ul>
+</li>
+</ul>
+<ol start="7">
+<li><b>SECURE <a href="../environmental-justice/index.html">ENVIRONMENTAL JUSTICE</a> AND CREATE EQUITABLE ECONOMIC OPPORTUNITY</b></li>
+</ol>
+<p>Throughout every aspect of Biden’s plan to rebuild a resilient infrastructure and sustainable, clean energy economy, he will prioritize addressing historic, environmental injustice. Biden has a <a href="../environmental-justice-plan.html">comprehensive environmental justice plan</a>, which includes:</p>
+<ul>
+<li><b>Setting a goal that disadvantaged communities receive 40% of overall benefits of spending in the areas of clean energy and energy efficiency deployment; clean transit and transportation; affordable and sustainable housing; training and workforce development; remediation and reduction of legacy pollution; and development of critical clean water infrastructure. </b>In addition, Biden will directly fund historic investments across federal agencies aimed at eliminating legacy pollution — especially in communities of color, rural and urban low-income communities, and tribal communities — and addressing common challenges faced by disadvantaged communities, such as funds for replacing and remediating lead service lines and lead paint in households, child care centers, and schools in order to ensure all communities have access to safe drinking water and wastewater infrastructure. These investments will create good-paying jobs in frontline and fenceline communities.</li>
+<li><b>Creating a data-driven Climate and Economic Justice Screening Tool to identify disadvantaged communities, from urban to rural to tribal communities – including those threatened by the cumulative stresses of climate change, economic distress, racial inequality, and multi-source environmental pollution. </b>With the power of data – combined with enhanced monitoring of climate emissions, criteria pollutants, and toxics – Biden will enable agencies and the private sector to make investments in the rural, suburban, and urban communities that need them most. In addition, Biden will instruct his Cabinet to prioritize climate change strategies and technologies that reduce traditional air pollution in the disadvantaged communities identified by the <i>Climate and Economic Justice Screening Tool</i>.</li>
+<li><b>Ensure that the Biden Administration prioritizes environmental justice issues and holds polluters accountable. </b>Biden will overhaul and update existing programs at the White House, the Department of Justice, and the Environmental Protection Agency in order to comprehensively address the most pressing, intersectional environmental justice issues and hold polluters accountable. For example, Biden will ensure that frontline and fenceline communities are at the table when enforcement, remediation, and investment decisions affecting those communities are made. Biden will ensure working groups on these issues report directly into the White House, so that communities facing the dual threat of environmental <i>and</i> economic burdens have access to the highest levels of the Biden Administration. And, Biden will establish a new Environmental and Climate Justice Division within the Justice Department, as proposed by Governor Inslee, to complement the work of the Environment and Natural Resources Division and hold polluters accountable.</li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda-2/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="../terms/index.html">Terms and Conditions</a> and <a href="../privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="../contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="../accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="../privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="../terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="../limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="../index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="../joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="../joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="../take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="../coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="../latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, ../wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="../wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../wp-content/uploads/2020/08/Intersect.jpg 558w, ../wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/clean-energy/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":528,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

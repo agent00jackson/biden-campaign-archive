@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>The Biden Plan to End the Opioid Crisis | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="opioidcrisis.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The Biden Plan to End the Opioid Crisis | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="THE BIDEN PLAN TO END THE OPIOID CRISIS AND ENSURE ACCESS TO EFFECTIVE TREATMENT AND RECOVERY FOR SUBSTANCE USE DISORDERS Millions of families are impacted by the opioid crisis. It’s ravaging communities coast to coast, from New Hampshire to California. The challenge of substance use disorders is not limited to opioids. Millions of individuals are [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/opioidcrisis/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-03T20:11:06+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-to-End-the-Opioid-Crisis_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-to-End-the-Opioid-Crisis_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="15 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/opioidcrisis/#webpage","url":"https://joebiden.com/opioidcrisis/","name":"The Biden Plan to End the Opioid Crisis | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-03-04T18:53:22+00:00","dateModified":"2020-08-03T20:11:06+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/opioidcrisis/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fopioidcrisis%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fopioidcrisis%2F&#038;format=xml" />
+<link rel="alternate" href="opioidcrisis.html" hreflang="en" />
+<link rel="alternate" href="es/el-plan-de-biden-para-terminar-con-la-crisis-de-los-opioides/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-2166 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="opioidcrisis.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="opioidcrisis.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-terminar-con-la-crisis-de-los-opioides/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/el-plan-de-biden-para-terminar-con-la-crisis-de-los-opioides/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-2166 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan to End the Opioid Crisis</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><b>THE BIDEN PLAN TO END THE OPIOID CRISIS AND ENSURE ACCESS TO EFFECTIVE TREATMENT AND RECOVERY FOR SUBSTANCE USE DISORDERS</b></p>
+<p><span style="font-weight: 400;">Millions of families are impacted by the opioid crisis. It’s ravaging communities coast to coast, from New Hampshire to California. The challenge of substance use disorders is not limited to opioids. </span><span style="font-weight: 400;">Millions of individuals are affected by misuse of other substances such as alcohol or methamphetamine. Latest estimates indicate that, in 2018, almost </span><a href="https://www.cdc.gov/nchs/data/databriefs/db356-h.pdf"><span style="font-weight: 400;">68,000</span></a><span style="font-weight: 400;"> Americans died from a drug overdose</span><b> – </b><span style="font-weight: 400;">almost </span><a href="https://www.cdc.gov/nchs/data/databriefs/db356_tables-508.pdf#3"><span style="font-weight: 400;">47,000</span></a><span style="font-weight: 400;"> of which involved an opioid. And, the impacts of this crisis reverberate in our classrooms and neighborhoods, in small towns and big cities.</span></p>
+<p><span style="font-weight: 400;">Biden will tackle this crisis by making sure people have access to high quality health care</span><b> – </b><span style="font-weight: 400;">including substance use disorder treatment and mental health services. That’s what Obamacare did by </span><a href="https://aspe.hhs.gov/report/affordable-care-act-expands-mental-health-and-substance-use-disorder-benefits-and-federal-parity-protections-62-million-americans"><span style="font-weight: 400;">designating substance use disorder treatment and mental health services</span></a><span style="font-weight: 400;"> as essential benefits that insurers must cover, and by </span><a href="https://www.kff.org/medicaid/issue-brief/the-effects-of-medicaid-expansion-under-the-aca-updated-findings-from-a-literature-review-august-2019/"><span style="font-weight: 400;">expanding Medicaid</span></a><span style="font-weight: 400;">, the nation’s </span><a href="https://www.medicaid.gov/medicaid/benefits/behavioral-health-services/index.html"><span style="font-weight: 400;">largest payer</span></a><span style="font-weight: 400;"> for mental health services which also plays an increasingly growing role as a payer for substance use disorder services.</span></p>
+<p><span style="font-weight: 400;">But President Trump wants to repeal Obamacare, including its Medicaid expansion. Repeal would be disastrous for communities and families combating the opioid crisis. It is not realistic to think that grant money will fill the hole that eliminating Obamacare and its Medicaid expansion would create.</span></p>
+<p><span style="font-weight: 400;">Step one of Biden’s plan to tackle the opioid epidemic and substance use disorders is to defeat Trump and then </span><a href="healthcare.html"><span style="font-weight: 400;">protect and build on Obamacare</span></a><span style="font-weight: 400;">. And, Biden will pursue a comprehensive, public health approach to deal with opioid and other substance use disorders. His plan will:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hold accountable big pharmaceutical companies, executives, and others responsible for their role in triggering the opioid crisis.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Make effective prevention, treatment, and recovery services available to all, including through a $125 billion federal investment.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Stop overprescribing while improving access to effective and needed pain management.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reform the criminal justice system so that no one is incarcerated for drug use alone.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Stem the flow of illicit drugs, like fentanyl and heroin, into the United States</span><b> – </b><span style="font-weight: 400;">especially from China and Mexico.</span></li>
+</ul>
+<p><b>HOLD ACCOUNTABLE BIG PHARMA COMPANIES, EXECUTIVES, AND OTHERS RESPONSIBLE FOR THEIR ROLE IN TRIGGERING THE OPIOID CRISIS </b></p>
+<p><span style="font-weight: 400;">Biden will demand accountability from pharmaceutical companies and others responsible for the opioid crisis, including manufacturers, distributors, and “pill mill operators.” Pharmaceutical executives should be held personally responsible, including criminally liable where appropriate. </span><span style="font-weight: 400;">Specifically, Biden will:</span></p>
+<p><b>Direct</b> <b>the U.S. Justice Department to make actions that spurred this crisis a top investigative and, where appropriate, civil and criminal enforcement priority.</b><span style="font-weight: 400;"> Biden will make sure the Department has all the necessary resources to complete this work. Building on the efforts of the </span><a href="https://www.fda.gov/drugs/information-drug-class/new-safety-measures-announced-opioid-analgesics-prescription-opioid-cough-products-and"><span style="font-weight: 400;">Obama-Biden Administration</span></a><span style="font-weight: 400;">, Biden will also ensure the Food and Drug Administration takes action when new information reveals harms from previously approved drugs (including the risk of diversion, or the use of drugs by an individual other than the one to whom the drug was prescribed), ensures compliance with risk mitigation strategies, and punishes drug companies for deceptive practices. And, he will appoint an Opioid Crisis Accountability Coordinator to coordinate efforts across federal agencies and support the enforcement efforts of state and local partners.</span></p>
+<p><b>Direct the Drug Enforcement Administration (DEA) to step up its efforts to identify suspicious shipments and protect communities. </b><span style="font-weight: 400;">Opioids distributors knowingly </span><a href="https://www.wvgazettemail.com/news/legal_affairs/drug-firms-poured-m-painkillers-into-wv-amid-rise-of/article_99026dad-8ed5-5075-90fa-adb906a36214.html"><span style="font-weight: 400;">shipped millions of pills</span></a><span style="font-weight: 400;"> to towns with hundreds of residents, helping trigger the opioid epidemic. Biden will empower the DEA to stop drug shipments from pharmaceutical companies and their distributors that create risks of diversion and misuse. Biden will work with Congress to allow the DEA to act expeditiously when a pharmaceutical distributor fails to adequately monitor shipments that could pose an “imminent danger” to vulnerable communities and increase penalties for companies that fail to take action to stop suspicious shipments. In addition, Biden will direct the DEA to improve data collection on wholesalers and pharmacies, including prescribing patterns and suspicious order reports, and to disseminate its analysis to distributors to prevent problems before they become disasters. </span></p>
+<p><b>Ban drug manufacturers from providing payments or incentives to physicians and other prescribers. </b><span style="font-weight: 400;">Pharmaceutical companies work hard to persuade doctors and other medical personnel to prescribe their products. These companies </span><a href="https://www.sciencedaily.com/releases/2019/01/190122084356.htm"><span style="font-weight: 400;">essentially pay</span></a><span style="font-weight: 400;"> providers to prescribe opioids and other drugs by, for example, paying providers to speak at or attend conferences, or consult for their companies. By banning these practices, Biden will ensure that patients’ lives do not take a </span><a href="https://www.sciencedaily.com/releases/2018/05/180514132441.htm"><span style="font-weight: 400;">backseat to doctors’ bottom line</span></a><span style="font-weight: 400;">s</span><span style="font-weight: 400;">.</span></p>
+<p><b>Terminating pharmaceutical corporations’ tax break for advertisement spending.</b><span style="font-weight: 400;"> Drug corporations spent an estimated </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/30620375"><span style="font-weight: 400;">$6 billion</span></a><span style="font-weight: 400;"> in 2016 alone on prescription drug advertisements to increase their sales, a more than four-fold increase from just </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/30620375"><span style="font-weight: 400;">$1.3 billion</span></a><span style="font-weight: 400;"> in 1997. The American Medical Association has even expressed “</span><a href="https://www.ama-assn.org/press-center/press-releases/ama-calls-ban-dtc-ads-prescription-drugs-and-medical-devices"><span style="font-weight: 400;">concerns among physicians about the negative impact of commercially driven promotions, and the role that marketing costs play in fueling escalating drug prices</span></a><span style="font-weight: 400;">.” Currently, drug corporations may count spending on these ads as a deduction to reduce the amount of taxes they owe. But taxpayers should not have to foot the bill for these ads. As President, Biden will end this tax deduction for all prescription drug ads, </span><a href="https://www.shaheen.senate.gov/news/press/shaheen-introduces-legislation-to-close-big-pharma-advertising-tax-loophole-"><span style="font-weight: 400;">as proposed by Senator Jeanne Shaheen</span></a><span style="font-weight: 400;">.</span></p>
+<p><b>MAKE EFFECTIVE PREVENTION, TREATMENT, AND RECOVERY SERVICES AVAILABLE TO ALL WHO NEED THEM</b></p>
+<p><span style="font-weight: 400;">Biden has </span><a href="https://abcnews.go.com/Technology/story?id=3445662&amp;page=1"><span style="font-weight: 400;">long recogniz</span></a><span style="font-weight: 400;">ed and led</span><span style="font-weight: 400;"> on efforts to make clear that substance use disorders are diseases, not a lifestyle choice, and that we need to change how we talk about and treat substance use disorders to align with this fact. </span></p>
+<p><span style="font-weight: 400;">He knows that the most important step we can take to address substance use disorders is to ensure that Americans have access to affordable, high-quality health care, including treatment for mental illnesses and substance use disorder. That’s why Biden has </span><a href="healthcare.html"><span style="font-weight: 400;">a </span><span style="font-weight: 400;">plan</span></a><span style="font-weight: 400;"> to build on the Affordable Care Act and achieve universal coverage. In addition, Biden will redouble efforts to </span><span style="font-weight: 400;">ensure insurance companies stop discriminating against people with behavioral health conditions and instead provide the coverage for treatment of mental illness and substance use disorders that patients and families need. Congress passed a bipartisan parity law </span><a href="https://www.cms.gov/CCIIO/Programs-and-Initiatives/Other-Insurance-Protections/mhpaea_factsheet"><span style="font-weight: 400;">12 years ago</span></a> <span style="font-weight: 400;">requiring that this discrimination stop,</span><span style="font-weight: 400;"> but the enforcement of parity has been insufficient. As Vice President, Biden </span><a href="https://obamawhitehouse.archives.gov/blog/2013/10/25/vice-president-biden-marks-50th-anniversary-community-mental-health-act"><span style="font-weight: 400;">championed</span></a><span style="font-weight: 400;"> efforts to </span><a href="https://www.federalregister.gov/documents/2013/11/13/2013-27086/final-rules-under-the-paul-wellstone-and-pete-domenici-mental-health-parity-and-addiction-equity-act"><span style="font-weight: 400;">implement the </span><span style="font-weight: 400;">Paul Wellstone and Pete Domenici Mental Health Parity and Addiction Equity Act</span></a><span style="font-weight: 400;">. As President, he will finish the job by appointing officials who will hold insurers accountable, enforcing our parity laws to the fullest extent. He will also direct federal agencies to issue</span><span style="font-weight: 400;"> guidance making clear how state officials and the public can file a complaint when their insurers</span><b> – </b><span style="font-weight: 400;">or Medicaid</span><b> – </b><span style="font-weight: 400;">are not living up to their parity obligations.</span></p>
+<p><span style="font-weight: 400;">In addition, Biden will work to make sure that people experiencing substance use disorders have access to quality facilities and providers. As President, he will ensure that the new public option, Medicare, Medicaid, the Indian Health Service, the Military Health System, and the Veterans Health Administration accelerate integration of substance use disorder care into standard health care practice. </span><span style="font-weight: 400;">Biden will double funding for </span><span style="font-weight: 400;">community health centers and </span><span style="font-weight: 400;">expand the supply of health care providers, for example by growing</span><span style="font-weight: 400;"> the </span><a href="https://nhsc.hrsa.gov/"><span style="font-weight: 400;">National Health Service Corps</span></a><span style="font-weight: 400;">. And, he will </span><a href="rural.html"><span style="font-weight: 400;">protect </span><span style="font-weight: 400;">rural hospitals</span></a><span style="font-weight: 400;"> from payment cuts, give them the flexibility they need to remain open, and invest in telehealth so people in remote areas can still have access to mental health and substance use disorder specialists. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><span style="font-weight: 400;">Finally, Biden will make sure federal funds are specifically targeted at improving access to treatment and recovery for opioid and other substance use disorders, and at preventing these disorders in the first place. As Vice President, Biden championed passage of the </span><a href="https://www.congress.gov/114/plaws/publ255/PLAW-114publ255.pdf"><span style="font-weight: 400;">21st Century Cures Act</span></a><span style="font-weight: 400;">, which included $1 billion in funding for states to address the opioid epidemic. That was a down payment. To deal with the immense scope of the opioid and substance use disorder crisis, Biden will dramatically scale up the resources available, with an unprecedented investment of $125 billion over ten years. Funds will be used to:</span></p>
+<p><b>Pursue comprehensive strategies to expand access to treatment, particularly in rural and urban communities with high rates of substance use disorders and a lack of access to substance use disorder treatment services. </b><span style="font-weight: 400;">Biden will invest $75 billion </span><span style="font-weight: 400;">in flexible grants to states and localities for prevention, treatment, and recovery efforts. </span><span style="font-weight: 400;">State and local agencies will also be able to use funds to enhance data systems allowing them to better target resources to individuals and communities most in need of support. </span><span style="font-weight: 400;">As a condition for receiving funding, grant recipients will have to provide long-term, comprehensive strategic plans that address the multifaceted nature of the substance use disorder crisis. Funds may be used to:</span></p>
+<ul>
+<li><b>Invest in evidence-based, cost-effective prevention programs in schools and communities to reduce the development of substance use disorders.</b></li>
+<li><b>Mitigate harms from opioid and other drug use, including overdoses. </b><span style="font-weight: 400;">Local communities will be able to use the funds to implement evidence-based programs designed to stop the spread of diseases like hepatitis C and HIV, including syringe service programs, or to scale up innovative programs like the </span><a href="https://www.c4tbh.org/active-project/safe-station-systematic-evaluation-novel-community-based-model-tackle-opioid-crisis/"><span style="font-weight: 400;">safe station initiative</span></a><span style="font-weight: 400;"> started in Manchester, New Hampshire, which allows those seeking help to go to fire stations in order to be connected to treatment and recovery services. </span></li>
+<li><b>Expand access to ongoing treatment and recovery services.</b><span style="font-weight: 400;"> Communities will be able to use funds to increase </span><span style="font-weight: 400;">access to substance use disorder and mental health treatment and other services to support long-term recovery, including peer support networks and recovery coaches, and better integrate primary care and behavioral health. Recognizing the strong evidence that social supports, including family support, may have a positive impact on the treatment of </span><a href="https://www.researchgate.net/publication/8444591_Social_support_positive_states_of_mind_and_HIV_treatment_adherence_in_men_and_women_living_with_HIVAIDS"><span style="font-weight: 400;">HIV</span></a><span style="font-weight: 400;">, Biden will support the development of family-centered models for substance use disorder treatment and recovery. </span></li>
+</ul>
+<p><b>Make Medication Assisted Treatment (MAT) available to all who need it, reaching universal access no later than 2025. </b><span style="font-weight: 400;">MAT </span><span style="font-weight: 400;">(also referred to as MOUD or Medications for Opioid Use Disorder)</span><span style="font-weight: 400;"> is regarded as the </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5627474/"><span style="font-weight: 400;">gold standard</span></a><span style="font-weight: 400;"> of care for individuals with opioid use disorder. Yet, less than </span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3045214/?report=reader"><span style="font-weight: 400;">50% of substance use disorder facilities</span></a><span style="font-weight: 400;"> around the country offer even one of the FDA-approved medications. </span><span style="font-weight: 400;">The 21st Century Cures Act, legislation Biden championed as Vice President, provided </span><a href="https://www.napsw.org/assets/docs/Advocacy/caracuresact%202.22.17%201.pdf"><span style="font-weight: 400;">resources to states</span></a><span style="font-weight: 400;"> designed to expand access to MAT.  </span><span style="font-weight: 400;">Biden will build on this in order to ensure universal access to MAT for all who need it, including by:</span></p>
+<ul>
+<li><b>Providing $20 billion for grants to dramatically expand capacity to administer MAT across the country, especially in underserved areas, </b><span style="font-weight: 400;">including establishing new facilities and developing training programs to increase the number of professionals able to administer MAT.</span></li>
+<li><b>Stopping insurance companies from erecting barriers to coverage of MAT. </b><span style="font-weight: 400;">For example, insurers have imposed “</span><a href="https://lac.org/wp-content/uploads/2014/07/LAC-The-Case-for-Eliminating-Barriers-to-Medication-Assisted-Treatment.pdf"><span style="font-weight: 400;">fail first</span></a><span style="font-weight: 400;">” protocols which require prescribers to certify that other therapies were tried before covering MAT. Insurers also may require that physicians obtain “prior authorization” for MAT before prescribing it.  </span><b> </b></li>
+<li><b>Removing undue restrictions on prescribing medications for substance use disorder. </b><span style="font-weight: 400;">For example, drugs containing buprenorphine were approved by the FDA in 2002 but a </span><a href="https://www.medpagetoday.com/psychiatry/addictions/71169"><span style="font-weight: 400;">relatively small number</span></a><span style="font-weight: 400;"> of doctors or medical personnel are certified to prescribe them. Biden will ensure that any </span><a href="https://jamanetwork.com/journals/jamapsychiatry/article-abstract/2719455"><span style="font-weight: 400;">undue restrictions</span></a><span style="font-weight: 400;"> on prescribing are lifted and review methadone treatment regulations. </span></li>
+</ul>
+<p><b>Help first responders and community health providers respond to overdoses. </b><span style="font-weight: 400;">Biden will invest $10 billion to provide local communities with the tools needed to prevent overdoses and respond to emergencies emanating from this crisis</span><b>.  </b></p>
+<ul>
+<li><b>Ensure local communities have a sufficient supply of overdose prevention drugs. </b><a href="https://www.drugabuse.gov/related-topics/opioid-overdose-reversal-naloxone-narcan-evzio"><span style="font-weight: 400;">Naloxone</span></a><span style="font-weight: 400;"> (also known as Narcan) is a medication that can reverse an opioid overdose, making it a critical tool in the fight to save lives. Biden will expand grants to states for the purchase of Naloxone to be distributed to local community actors called upon to respond to overdoses, including first responders, public health providers, and the staff at homeless shelters and public libraries. </span></li>
+<li><b>Demand that drug companies charge a fair price for overdose drugs, including Naloxone</b><span style="font-weight: 400;">. The </span><span style="font-weight: 400;">Biden Administration will aggressively </span><span style="font-weight: 400;">negotiate a reduction in the drug’s price, on behalf of the federal government, and state and local communities. </span></li>
+<li><b>Support first responders. </b><span style="font-weight: 400;">Police officers and firefighters are often the first on the scene of an overdose. Biden will ensure they are equipped not just with naloxone, but also with the mental health and resilience support anyone would need after being exposed again and again to such trauma.</span></li>
+<li><b>Invest in community-based prevention programs and a major public education effort to eliminate the stigma surrounding substance use disorder treatment.</b><span style="font-weight: 400;"> Biden will invest $5 billion in community-based prevention efforts and public education initiatives including training educators to recognize the signs of mental health problems and substance use disorders and refer them to appropriate services. Funds will also support evidence-based education programs for young people on mental health and substance use disorders.</span></li>
+</ul>
+<p><b>Expand the pipeline of medical personnel to treat substance use disorders. </b><span style="font-weight: 400;">Building on legislation like the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2892?q=%7B%22search%22%3A%5B%22senate+opioid+workforce+act%22%5D%7D&amp;s=1&amp;r=4"><span style="font-weight: 400;">Opioid Workforce Act</span></a><span style="font-weight: 400;"> of 2019</span><span style="font-weight: 400;">, Biden will work with Congress to invest $5 billion to expand medical residencies and access to education and training for medical personnel in substance use disorder diagnosis and treatment. Funding will support training for primary care providers, as well as other members of the health care team, to build an integrated system of care.</span></p>
+<p><b>Invest in research by doubling funding for the NIH </b><a href="https://www.nih.gov/news-events/news-releases/nih-funds-945-million-research-tackle-national-opioid-crisis-through-nih-heal-initiative"><b>HEAL</b></a><b> (Helping to End Addiction Long-Term) Initiative</b><span style="font-weight: 400;">. </span><span style="font-weight: 400;">This $10 billion investment will support efforts to improve treatments for chronic pain.</span></p>
+<p><b>Provide targeted interventions for particular populations. </b><span style="font-weight: 400;">Biden will invest</span> <span style="font-weight: 400;">$10 billion in efforts specifically designed to support populations with unique situations or needs. </span><span style="font-weight: 400;">Biden will ensure a portion of this funding for state and local governments is set aside for Tribal governments. </span><span style="font-weight: 400;">In addition to </span><a href="veterans.html"><span style="font-weight: 400;">expanding</span></a><span style="font-weight: 400;"> veterans’ access to substance use disorder and mental health treatment, Biden will direct his Secretary of Veterans Affairs to ensure VA medical personnel are sufficiently trained in safe prescribing practices and pain treatment. </span><a href="justice.html"><span style="font-weight: 400;">Biden</span></a> <a href="justice.html"><span style="font-weight: 400;">will call upon</span></a><span style="font-weight: 400;"> the public health and criminal justice systems to provide evidence-based substance use disorder treatment, including MAT, for people during their incarceration and after their release. Finally, Biden will expand investments to help children suffering from Neonatal Abstinence Syndrome or Neonatal Opioid Withdrawal Syndrome, and to ensure their mothers have access to effective treatment and care.</span></p>
+<p><b>STOP OVERPRESCRIBING </b><b>WHILE IMPROVING ACCESS TO EFFECTIVE AND NEEDED PAIN MANAGEMENT</b></p>
+<p><span style="font-weight: 400;">An essential part of our national strategy to address the opioid epidemic must be stopping pharmaceutical companies’ practices that lead to overprescribing. Yet at the same time, physicians still must effectively treat pain. Chronic pain is a growing public health challenge with wide-ranging impacts: keeping individuals out of the workforce, negatively affecting their mental and physical health, contributing to suicidal ideation, and otherwise limiting their quality of life. Biden believes we need to pursue two joint goals: eliminate overprescribing of prescription opioids for pain, and improve the effectiveness of and access to alternative treatment for pain. Biden will:</span></p>
+<p><b>Support development of less addictive pain medications and alternative pain treatments, and improve standards of quality for treatment</b><span style="font-weight: 400;">. We need pain medications that are less addictive and more effective. Biden will invest in NIH research to develop these new medications. By doubling funding for NIH’s HEAL program, Biden will accelerate research regarding alternative treatments and therapies and help providers and patients better understand the options and access alternatives. And, he will direct the FDA to give priority to new pain medications with a documented reduced risk of addiction.  </span></p>
+<p><b>Expand coverage for alternative pain treatments. </b><span style="font-weight: 400;">As documented in a </span><a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2705853"><span style="font-weight: 400;">recent study</span></a><span style="font-weight: 400;"> related to back pain, some non-pharmacological</span> <span style="font-weight: 400;">pain interventions (e.g., psychological counseling, acupuncture, physical therapy, or occupational therapy) are not consistently covered or have administrative barriers to coverage (e.g., pre-authorization, visit limits). In accordance with evidence-based medicine, Biden will call for a requirement that Medicare, Medicaid, his proposed new public option, and private insurance companies consistently and transparently cover alternatives to opioids for chronic pain, without barriers such as prior authorization or high levels of cost-sharing. </span></p>
+<p><b>Crack down on </b><a href="https://www.nytimes.com/2017/12/08/health/FDA-opioids-supplement.html?_r=1"><b>misleading advertising regarding substance use disorder treatment facilities</b></a><b> with no basis in evidence. </b><span style="font-weight: 400;">Biden will ensure that the Federal Trade Commission and the FDA act when companies try to mislead. He will appoint leaders of both agencies who will make this a key priority. </span></p>
+<p><b>Provide training to medical personnel in pain management and substance use disorder treatment</b><span style="font-weight: 400;">. Building on the </span><a href="https://www.statnews.com/2016/05/17/opioid-addiction-medical-schools/"><span style="font-weight: 400;">Obama-Biden Administration’s prior efforts</span></a><span style="font-weight: 400;">, Biden will direct the U.S. Department of Health and Human Services to work with the medical community to support research and the development of curricula and training regarding pain management. He will ensure that the systematic study of pain management and substance use disorder is a mandatory part of the curricula and material on which doctors and other medical personnel are tested. Those seeking </span><span style="font-weight: 400;">a federal DEA license to prescribe controlled substances </span><a href="https://bipartisanpolicy.org/blog/four-impactful-policy-reforms-to-combat-the-opioid-epidemic-in-america/"><span style="font-weight: 400;">will be required</span></a><span style="font-weight: 400;"> to receive training on proper prescribing guidelines and pain management.</span></p>
+<p><b>Expand the effectiveness of monitoring programs designed to prevent inappropriate overprescribing of opioids.</b> <a href="https://www.pewtrusts.org/en/research-and-analysis/data-visualizations/2018/when-are-prescribers-required-to-use-prescription-drug-monitoring-programs"><span style="font-weight: 400;">Prescription Drug Monitoring Programs (PDMPs)</span></a><span style="font-weight: 400;"> are electronic databases designed to prevent drug abuse. For example, a provider can check the database before prescribing in order to determine whether his or her patient has been getting the same prescription from multiple providers. In order to receive any of the $125 billion in new grants under the Biden Administration, states will have to institute a requirement that every prescriber checks the database every time they write a new opioid prescription. Biden will also set aside some of these grant dollars to ensure states improve Prescription Drug Monitoring Programs data-sharing across state lines.</span></p>
+<p><b>Ensure regular updating of the Centers for Disease the Control and Prevention (CDC) prescriber guideline based on the best available evidence. </b><span style="font-weight: 400;">The CDC has issued a </span><a href="https://www.cdc.gov/drugoverdose/prescribing/guideline.html"><span style="font-weight: 400;">guideline</span></a><span style="font-weight: 400;"> to help prescribers make evidence-based decisions regarding when and how to prescribe opioids in order to minimize the risk of abuse while also effectively treating pain. Biden will ask the CDC to commit to regularly updating these guidelines as new evidence emerges regarding opioid abuse risk factors and alternative pain treatments. And, he will partner with health care providers and states to maximize providers’ awareness and use of the guideline.</span></p>
+<p><b>REFORM THE CRIMINAL JUSTICE SYSTEM SO THAT NO ONE IS INCARCERATED FOR DRUG USE ALONE</b></p>
+<p><span style="font-weight: 400;">Biden has released a </span><a href="justice.html"><span style="font-weight: 400;">criminal justice</span></a><span style="font-weight: 400;"> plan that will strengthen America’s commitment to justice and reform our criminal justice system by building a system focused on redemption and rehabilitation. Biden believes that no one should be incarcerated for drug use alone, and as President he will treat drug use as a disease rather than a crime. Specifically, Biden will:</span></p>
+<p><b>End all incarceration for drug use alone and instead divert individuals to drug courts and treatment. </b><span style="font-weight: 400;">Biden will require federal courts to divert these individuals to drug courts so they receive appropriate treatment and services. He’ll incentivize states to put the same requirements in place. And, he’ll expand funding for federal, state, and local drug courts and other programs that divert individuals who commit crimes as a result of or in furtherance of substance use disorders to treatment rather than incarceration.  </span></p>
+<p><b>Get people who should be supported with social services</b><b> – </b><b>instead of in our prisons</b><b>  – </b><b>connected to the help they need. </b><span style="font-weight: 400;">Too often, those in need of mental health care or treatment for a substance use disorder do not get the care that they need. Instead, they end up having interactions with law enforcement that lead to incarceration. To change the nature of these interactions, the Biden Administration will fund initiatives to partner mental health and substance use disorder experts, social workers, and disability advocates with police departments. </span><span style="font-weight: 400;">These service providers will respond to calls with police officers so individuals who should not be in the criminal justice system are diverted to treatment for substance use disorder or mental illness, when appropriate, or are provided with the housing or other social services they may need.</span></p>
+<p><i><span style="font-weight: 400;">Read more about Biden’s plan to reform the criminal justice system at </span></i><span style="font-weight: 400;">https://joebiden.com/justice/.</span></p>
+<p><b>STEM THE FLOW OF ILLICIT DRUGS LIKE FENTANYL, ESPECIALLY FROM CHINA AND MEXICO</b></p>
+<p><span style="font-weight: 400;">As part of a comprehensive agenda that prioritizes prevention, treatment, recovery, and harm reduction, Biden believes that part of the solution to the opioid crisis involves preventing bad actors from smuggling opioids and other illicit drugs into our country. Specifically, Biden will:</span></p>
+<p><b>Make fentanyl a top priority in our dealings with China. <span style="font-weight: 400;">The Treasury Department has already sanctioned a</span><a href="https://home.treasury.gov/news/press-releases/sm756"> <span style="font-weight: 400;">small number of Chinese nationals</span></a><span style="font-weight: 400;"> in connection with fentanyl</span> – <span style="font-weight: 400;">it’s a good start, but going after individuals will not alter Beijing’s thinking long-term. Biden will pressure Beijing to crack down on illicit fentanyl production in China and stem the flow of the drug into the United States. Biden will also develop regional strategies in the Asia-Pacific and the Americas to deal with shifts in the routes and sources of fentanyl in response to a Chinese crackdown.</span></b></p>
+<p><strong>Enhance cooperation with Mexican authorities to disrupt the movement of heroin and fentanyl across the U.S.-Mexico border</strong>.  <a href="https://www.dea.gov/sites/default/files/2018-11/DIR-032-18%202018%20NDTA%20final%20low%20resolution.pdf"><span style="font-weight: 400;">Chinese fentanyl is frequently transshipped through Mexico, and then smuggled across the border in pure form or combined with heroin</span></a><span style="font-weight: 400;">. As China takes steps to police fentanyl and its precursors, production and distribution will increasingly shift to Mexico. Biden will pursue strong, sustained cooperation with Mexican authorities to disrupt suppliers and supply routes, including the importation of precursor chemicals from China. The Biden Administration will also provide technical assistance to enhance the Mexican Post Service’s (SEPOMEX) ability to detect and electronically track shipments of fentanyl and precursors that come through Mexico. As President, Biden will repair the damage to U.S.-Mexico ties inflicted by Donald Trump and develop a common agenda with Mexico that looks beyond our shared border to promote our shared prosperity and protect U.S. national security interests. </span></p>
+<p><strong>Enforce sanctions on international actors engaged in the trafficking of illicit drugs like heroin and fentanyl.</strong><span style="font-weight: 400;"> Biden’s Treasury Department sanctions team will map the financial institutions and networks that facilitate the distribution of fentanyl and key precursors and develop sanctions packages based on that evidence and task the Office of the Director of National Intelligence to support these efforts with a focus on illicit finance.</span></p>
+<p><strong>Increase cooperation among global law enforcement agencies.</strong> <span style="font-weight: 400;">Biden will direct U.S. law enforcement agencies to work closely with foreign counterparts, share threat information, and use technology to assist in tracking and seizing illicit shipments.</span></p>
+<p><strong>Ensure federal agencies have the tools and resources they need to stop the flow of fentanyl from abroad.</strong> <span style="font-weight: 400;">Fentanyl producers have</span><a href="https://www.hsgac.senate.gov/imo/media/doc/Combatting%20the%20Opioid%20Crisis%20-%20Exploiting%20Vulnerabilities%20in%20International%20Mail1.pdf"> <span style="font-weight: 400;">exploited gaps</span></a><span style="font-weight: 400;"> in monitoring through the U.S. Postal Service (USPS) to flood the U.S. with the deadly product. </span><span style="font-weight: 400;">Biden will give the USPS the tools and resources it needs to carry out that mandate and disrupt the large supplies of fentanyl that are sent through the mail system, working with U.S. Customs and Border Protection. In addition, the</span><a href="https://www.hsdl.org/?view&amp;did=810692"> <span style="font-weight: 400;">vast majority</span></a><span style="font-weight: 400;"> of opioids and fentanyl are shipped through legal ports of entry—not in between them. Rather than waste resources building a wall or tearing families apart, Biden will direct resources to the ports of entry to interdict opioid shipments there.</span></p>
+<p><em><strong>Combating the Opioid Epidemic and Substance Use Disorders, Paid for By Making Sure Pharma Pays Its Fair Share</strong></em></p>
+<p>Biden’s $125 billion investment in a comprehensive response to the opioid epidemic and substance use disorders is paid for by raising taxes on the profits of pharmaceutical corporations.</p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="opioidcrisis.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-terminar-con-la-crisis-de-los-opioides/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="opioidcrisis.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/opioidcrisis/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":330,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

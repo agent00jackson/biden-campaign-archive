@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>The Biden Plan for Investing in Our Communities through Housing | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="housing.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The Biden Plan for Investing in Our Communities through Housing | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Joe Biden is running for President to rebuild the middle class and ensure that this time everyone comes along. He believes the middle class isn’t a number, but a value set which includes the ability to own your own home and live in a safe community. Housing should be a right, not a privilege. Today, [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/housing/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-07-29T15:23:45+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Housing_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Housing_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="21 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/housing/#webpage","url":"https://joebiden.com/housing/","name":"The Biden Plan for Investing in Our Communities through Housing | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-02-24T02:47:55+00:00","dateModified":"2020-07-29T15:23:45+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/housing/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fhousing%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fhousing%2F&#038;format=xml" />
+<link rel="alternate" href="housing.html" hreflang="en" />
+<link rel="alternate" href="es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-2009 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="housing.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="housing.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-2009 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan for Investing in Our Communities through Housing</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden is running for President to rebuild the middle class and ensure that this time everyone comes along. He believes the middle class isn’t a number, but a value set which includes the ability to own your own home and live in a safe community. Housing should be a right, not a privilege.</span></p>
+<p><span style="font-weight: 400;">Today, however, far too many Americans lack access to affordable and quality housing. Nationwide, we have a </span><a href="https://reports.nlihc.org/sites/default/files/gap/Gap-Report_2019.pdf"><span style="font-weight: 400;">shortage</span></a><span style="font-weight: 400;"> of available, affordable housing units for low-income individuals. </span><a href="https://www.jchs.harvard.edu/sites/default/files/Harvard_JCHS_State_of_the_Nations_Housing_2018.pdf"><span style="font-weight: 400;">Tens of millions</span></a><span style="font-weight: 400;"> of Americans spend more than 30% of their income on housing – leaving them with nowhere near enough money left over to meet other needs, from groceries to prescription drugs. And, </span><span style="font-weight: 400;">t</span><a href="https://cdn.americanprogress.org/wp-content/uploads/2016/07/14065816/SafeAndHealthyHomes-report.pdf"><span style="font-weight: 400;">ens of millions</span></a><span style="font-weight: 400;"> of Americans live in homes that endanger their health and safety.</span></p>
+<p><span style="font-weight: 400;">Communities of color are disproportionately impacted by the failures in our housing markets, with homeownership rates for </span><a href="https://www.census.gov/housing/hvs/files/currenthvspress.pdf"><span style="font-weight: 400;">Black</span></a><span style="font-weight: 400;"> and </span><a href="https://www.census.gov/housing/hvs/files/currenthvspress.pdf"><span style="font-weight: 400;">Latino</span></a><span style="font-weight: 400;"> individuals falling far below the rate for white individuals. Because home ownership is how many families save and build wealth, these racial disparities in home ownership contribute to the racial wealth gap. It is far past time to put an end to systemic housing discrimination and other contributors to this disparity. </span></p>
+<p><span style="font-weight: 400;">As President, Joe Biden will invest $640 billion over 10 years so every American has access to housing that is affordable, stable, safe and healthy, accessible, energy efficient and resilient, and located near good schools and with a reasonable commute to their jobs. Biden will do this by:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ending redlining and other discriminatory and unfair practices in the housing market.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Providing financial assistance to help hard-working Americans buy or rent safe, quality housing, including down payment assistance through a refundable and advanceable tax credit and fully funding federal rental assistance.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Increasing the supply, lowering the cost, and improving the quality of housing, including through investments in resilience, energy efficiency, and accessibility of homes.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Pursuing a comprehensive approach to ending homelessness.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Housing is an essential part of Biden’s broader strategy to grow strong, healthy communities in every zip code – from his plan to </span><a href="infrastructure/index.html"><span style="font-weight: 400;">rebuild our nation’s infrastructure and revitalize local economies</span></a><span style="font-weight: 400;"> to his plan to </span><a href="education.html"><span style="font-weight: 400;">invest in our public schools</span></a><span style="font-weight: 400;">.</span></p>
+<table>
+<tbody>
+<tr>
+<td><i><span style="font-weight: 400;">The Biden Principles for Housing</span></i></p>
+<p><span style="font-weight: 400;">While the housing challenges Americans face in different rural and urban communities across the country may vary, every American in every zip code should have access to housing that is:</span></p>
+<ul>
+<li><b>Affordable</b><span style="font-weight: 400;"> – taking up no more than </span><a href="https://www.hud.gov/program_offices/comm_planning/affordablehousing/"><span style="font-weight: 400;">30% of income</span></a><span style="font-weight: 400;"> so they have money left over to meet other needs;</span></li>
+<li><b>Stable</b><span style="font-weight: 400;"> – providing families with the consistency they need to </span><a href="https://housingmatters.urban.org/articles/how-housing-affects-childrens-outcomes"><span style="font-weight: 400;">maintain jobs, perform well in school, and develop social networks necessary for well-being</span></a><span style="font-weight: 400;">; </span></li>
+<li><b>Safe and healthy</b><span style="font-weight: 400;"> – protecting families from environmental and social risks from polluted air to lead contamination to gun violence;</span></li>
+<li><b>Accessible</b><span style="font-weight: 400;"> – meeting the needs of individuals with disabilities so they can live in their communities;</span></li>
+<li><b>Energy efficient and resilient</b><span style="font-weight: 400;"> – reducing our greenhouse gas emissions and withstanding the impacts of climate change; and</span></li>
+<li><b>Located near good schools and with a reasonable commute to their jobs.</b></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><b>END REDLINING AND OTHER DISCRIMINATORY AND UNFAIR PRACTICES IN THE HOUSING MARKET</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Protect homeowners and renters from abusive lenders and landlords through a new Homeowner and Renter Bill of Rights. </b><span style="font-weight: 400;">Modeled on the </span><a href="https://oag.ca.gov/hbor"><span style="font-weight: 400;">California Homeowner Bill of Rights</span></a><span style="font-weight: 400;">, Biden will enact legislation to end many shortcomings in the mortgage and rental markets. This new Bill of Rights will prevent mortgage brokers from leading borrowers into loans that cost more than appropriate, prevent mortgage servicers from advancing a foreclosure when the homeowner is in the process of receiving a loan modification, give homeowners a private right of action to seek financial redress from mortgage lenders and servicers that violate these protections, and give borrowers the right to a timely notification on the status of their loan modifications and to be able to appeal modification denials. Building on the Obama-Biden Administration’s </span><a href="https://www.fdic.gov/buying/owned/documents/10-06-16guide-tenantprotectionact-s-896-may20-2009.pdf"><span style="font-weight: 400;">Protecting Tenants at Foreclosure Act</span></a><span style="font-weight: 400;">, the Bill of Rights will also expand protections for renters. For example, the Bill of Rights will include a </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/1986/text"><span style="font-weight: 400;">law</span></a><span style="font-weight: 400;"> prohibiting landlords from discriminating against renters receiving federal housing benefits.  </span></li>
+<li style="font-weight: 400;"><b>Protect tenants from eviction. </b><span style="font-weight: 400;">Housing evictions can have devastating consequences for families and often stem from relatively </span><a href="https://www.nytimes.com/2019/12/12/upshot/eviction-prevention-solutions-government.html"><span style="font-weight: 400;">small shortfalls</span></a><span style="font-weight: 400;"> in rent. As a former public defender, Biden appreciates the difference legal representation can make for those facing eviction. As President, he will work to enact Majority Whip James E. Clyburn and Senator Michael Bennet’s </span><a href="https://www.majoritywhip.gov/?press=majority-whip-clyburn-sen-bennet-reps-price-clarke-and-khanna-introduce-legislation-to-provide-legal-assistance-to-tenants-facing-eviction"><span style="font-weight: 400;">Legal Assistance to Prevent Evictions Act of 2020</span></a><span style="font-weight: 400;">, which will help tenants facing eviction access legal assistance. He also will encourage localities to create eviction diversion programs, including mediation, payment plans, and financial literacy education programs.</span></li>
+<li style="font-weight: 400;"><b>Eliminate local and state housing regulations that perpetuate discrimination. </b><span style="font-weight: 400;">Exclusionary zoning has for decades been strategically used to keep people of color and low-income families out of certain communities. As President, Biden will enact legislation </span><span style="font-weight: 400;">requiring any state receiving federal dollars through the Community Development Block Grants or Surface Transportation Block Grants to develop a strategy for inclusionary zoning</span><span style="font-weight: 400;">, as proposed in the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/4808"><span style="font-weight: 400;">HOME Act of 2019</span></a><span style="font-weight: 400;"> by Majority Whip Clyburn and Senator Cory Booker. Biden will also invest $300 million in </span><a href="https://www.hud.gov/sites/documents/19-FY16CJ-LHPGRANTS.PDF"><span style="font-weight: 400;">Local Housing Policy Grants</span></a><span style="font-weight: 400;"> to give states and localities the technical assistance and planning support they need to eliminate exclusionary zoning policies and other local regulations that contribute to sprawl. </span></li>
+<li style="font-weight: 400;"><b>Hold financial institutions accountable for discriminatory practices in the housing market.</b><span style="font-weight: 400;"> The Obama-Biden Administration held major national financial institutions accountable for discriminatory lending practices, securing </span><a href="https://www.propublica.org/article/disparate-impact-and-fair-housing-seven-cases-you-should-know"><span style="font-weight: 400;">hundreds of millions of dollars</span></a><span style="font-weight: 400;"> in settlements to help borrowers who had been harmed by their practices. And in 2013, the Obama-Biden Administration </span><a href="https://www.hud.gov/sites/documents/DISCRIMINATORYEFFECTRULE.PDF"><span style="font-weight: 400;">codified</span></a><span style="font-weight: 400;"> a long-standing, court-supported view that lending practices that have a discriminatory effect can be challenged even if discrimination was not explicit. But now the Trump Administration is </span><a href="https://www.federalregister.gov/documents/2019/08/19/2019-17542/huds-implementation-of-the-fair-housing-acts-disparate-impact-standard"><span style="font-weight: 400;">seeking</span></a><span style="font-weight: 400;"> to gut this disparate impact standard by significantly increasing the burden of proof for those claiming discrimination. In the Biden Administration, this change will be reversed to ensure financial institutions are held accountable for serving all customers.</span></li>
+<li style="font-weight: 400;"><b>Strengthen and expand the Community Reinvestment Act to ensure that our nation’s bank and non-bank financial services institutions are serving all communities</b><span style="font-weight: 400;">. The </span><a href="https://www.occ.treas.gov/topics/consumers-and-communities/cra/index-cra.html"><span style="font-weight: 400;">Community Reinvestment Act</span> </a><span style="font-weight: 400;">currently regulates banks, but does little to ensure that “fintechs” and non-bank lenders are providing responsible access to all members of the community. On top of that gap, the Trump Administration is </span><a href="https://ncrc.org/proposed-changes-to-the-community-reinvestment-act-will-be-disastrous-for-low-and-moderate-income-communities/"><span style="font-weight: 400;">proposing</span></a><span style="font-weight: 400;"> to </span><a href="https://nationalfairhousing.org/2019/12/13/diverse-coalition-issues-joint-statement-on-proposed-changes-to-community-reinvestment-act/"><span style="font-weight: 400;">weaken</span></a><span style="font-weight: 400;"> the law by allowing lenders to receive a passing rating even if the lenders are excluding many neighborhoods and borrowers. Biden will</span><span style="font-weight: 400;"> expand the Community Reinvestment Act to apply to mortgage and insurance companies, to add a requirement for financial services institutions to provide a statement outlining their commitment to the public interest, and, importantly, to close loopholes that would allow these institutions to avoid lending and investing in all of the communities they serve</span><span style="font-weight: 400;">. </span></li>
+<li style="font-weight: 400;"><b>Roll back Trump Administration policies gutting fair lending and fair housing protections for homeowners. </b><span style="font-weight: 400;">Biden will implement the Obama-Biden Administration’s </span><a href="https://www.huduser.gov/portal/sites/default/files/pdf/AFFH_Final_Rule.pdf"><span style="font-weight: 400;">Affirmatively Furthering Fair Housing Rule</span></a><span style="font-weight: 400;"> requiring communities receiving certain federal funding to proactively examine housing patterns and identify and address policies that have a discriminatory effect. The Trump Administration </span><a href="https://s3.amazonaws.com/public-inspection.federalregister.gov/2018-00106.pdf"><span style="font-weight: 400;">suspended</span></a><span style="font-weight: 400;"> this rule in 2018. Biden will ensure effective and rigorous enforcement of the Fair Housing Act and the Home Mortgage Disclosure Act. And, he will reinstate the federal </span><a href="https://www.hud.gov/program_offices/housing/mfh/progdesc/riskshare542c"><span style="font-weight: 400;">risk-sharing program</span></a><span style="font-weight: 400;"> which has helped secure financing for </span><a href="https://www.ncsha.org/advocacy-issues/fha-hfa-risk-share-program/"><span style="font-weight: 400;">thousands</span> </a><span style="font-weight: 400;">of affordable rental housing units in partnership with housing finance agencies.   </span></li>
+<li style="font-weight: 400;"><b>Restore the federal government&#8217;s power to enforce settlements against discriminatory lenders. </b><span style="font-weight: 400;">The Trump Administration has </span><a href="https://www.washingtonpost.com/news/business/wp/2018/02/01/trump-administration-strips-consumer-watchdog-office-of-enforcement-powers-against-financial-firms-in-lending-discrimination-cases/"><span style="font-weight: 400;">stripped the Office of Fair Lending and Equal Opportunity</span></a><span style="font-weight: 400;">, a division of the Consumer Financial Protection Bureau, of its power to enforce settlements against lenders found to have discriminated against borrowers – for example by charging significantly higher interest rates for people of color than white individuals. Biden will return power to the division so it can protect consumers from discrimination.</span></li>
+<li style="font-weight: 400;"><b>Tackle racial bias that leads to homes in communities of color being assessed by appraisers below their fair value. </b><span style="font-weight: 400;">Housing in communities primarily comprised of people of color is valued at </span><a href="https://www.brookings.edu/wp-content/uploads/2018/11/2018.11_Brookings-Metro_Devaluation-Assets-Black-Neighborhoods_final.pdf"><span style="font-weight: 400;">tens of thousands of dollars</span></a><span style="font-weight: 400;"> below majority-white communities even when all other factors are the same, contributing to the racial wealth gap. To counteract this racial bias, Biden will establish a national standard for housing appraisals that ensures appraisers have adequate training and a full appreciation for neighborhoods and do not hold implicit biases because of a lack of community understanding. An objective national standard for appraisals will also make it harder for financial institutions to put pressure on appraisers to their benefit. </span></li>
+</ul>
+<p><b>PROVIDE FINANCIAL ASSISTANCE TO HELP HARD-WORKING AMERICANS BUY OR RENT QUALITY HOUSING</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Help families buy their first homes and build wealth by creating a new refundable, advanceable tax credit of up to $15,000. </b><span style="font-weight: 400;">Biden’s new First Down Payment Tax Credit will help families offset the costs of homebuying and help millions of families lay down roots for the first time. Building off of a </span><a href="https://www.irs.gov/newsroom/first-time-homebuyer-credit-questions-and-answers-basic-information"><span style="font-weight: 400;">temporary tax credit</span></a><span style="font-weight: 400;"> expanded as part of the Recovery Act, this tax credit will be permanent and advanceable, meaning that homebuyers receive the tax credit when they make the purchase instead of waiting to receive the assistance when they file taxes the following year.</span></li>
+<li style="font-weight: 400;"><b>Provide</b><a href="https://www.benefits.gov/benefit/710"> <b>Section 8 housing vouchers</b></a><b> to every eligible family so that no one has to pay more than 30% of their income for rental housing. </b><a href="http://apps.cbpp.org/shareables_housing_unmet/chart.html"><span style="font-weight: 400;">Roughly three in four</span><span style="font-weight: 400;"> households eligible</span></a><span style="font-weight: 400;"> for Section 8 rental assistance do not receive housing assistance because the program is underfunded. Biden’s approach is straightforward: the Section 8 rental housing assistance program should be fully funded so that everyone eligible gets the assistance they need to pay their rent for a safe home. Biden will devote resources to both voucher-based rental assistance and the project-based program. Over time, this approach will provide assistance to at least </span><a href="http://apps.cbpp.org/shareables_housing_unmet/chart.html"><span style="font-weight: 400;">17 million</span></a><span style="font-weight: 400;"> low-income families. And, as part of the Homeowner and Renter Bill of Rights, Biden will enact a </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/1986/text"><span style="font-weight: 400;">law</span></a><span style="font-weight: 400;"> prohibiting landlords from discriminating against renters receiving federal housing benefits.  </span></li>
+<li style="font-weight: 400;"><b>Create a new renter’s tax credit to help more low-income families. </b><span style="font-weight: 400;">Biden will work with Congress to enact a new </span><a href="https://nlihc.org/resource/terner-center-proposes-renters-tax-credit"><span style="font-weight: 400;">renter’s tax credit</span></a><span style="font-weight: 400;">, designed to reduce rent and utilities to 30% of income for low-income individuals and families who may make too much money to qualify for a Section 8 voucher but still struggle to pay their rent. He will allocate $5 billion in federal funding for the tax credit every year.</span></li>
+<li style="font-weight: 400;"><b>Expand housing benefits for first-responders, public school educators, and other public and national service workers who commit to living in persistently impoverished communities or who work in neighborhoods with low affordable housing stock. </b><span style="font-weight: 400;">Biden will expand the </span><a href="https://www.hud.gov/program_offices/housing/sfh/reo/goodn/gnndabot"><span style="font-weight: 400;">Good Neighbor Next Door</span></a><span style="font-weight: 400;"> program, which is designed to help strengthen communities that have experienced significant underinvestment and high rates of poverty while also providing opportunities for first responders, educators, and those engaged in national service to purchase homes in those same communities. Specifically, Biden will expand the program through additional down-payment assistance, partnering with state housing agencies, tribal governments, local governments, and state/local banks to offer the program’s existing significant discount on the price of a home on a larger pool of homes, and providing access to a low-interest loan to rehabilitate these homes. And, he will ensure these resources are also available to public servants who work in neighborhoods with low affordable housing stock.</span></li>
+<li style="font-weight: 400;"><b>Create the </b><a href="https://www.demos.org/policy-briefs/establish-public-credit-registry"><b>Public Credit Reporting Agency</b></a><b>.</b><span style="font-weight: 400;"> Being able to obtain a credit report is a critical step for homeownership. But today credit reports, which are issued by just three large private companies, are rife with problems: they often contain errors, they leave many </span><a href="https://files.consumerfinance.gov/f/201505_cfpb_data-point-credit-invisibles.pdf"><span style="font-weight: 400;">“</span><span style="font-weight: 400;">credit invisible</span><span style="font-weight: 400;">”</span></a><span style="font-weight: 400;"> due to the sources used to generate a credit score, and they contribute to </span><a href="https://www.nclc.org/images/pdf/credit_discrimination/Past_Imperfect050616.pdf"><span style="font-weight: 400;">racial disparities</span></a><span style="font-weight: 400;">. Biden will create a new public credit reporting agency within the Consumer Financial Protection Bureau to provide consumers with a government option that seeks to minimize racial disparities, for example by ensuring the algorithms used for credit scoring don’t have a discriminatory impact, and by accepting non-traditional sources of data like rental history and utility bills to establish credit.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><i><span style="font-weight: 400;">Reducing Greenhouse Gases and Lowering Working Families’ Electricity Bills</span></i></p>
+<p><span style="font-weight: 400;">As Biden announced in his climate plan, he will set a target of reducing the carbon footprint of the U.S. building stock 50% by 2035, creating incentives for deep retrofits that combine appliance electrification, efficiency, and on-site clean power generation. In addition to the $10 billion retrofitting fund described below, other policies he will pursue to reduce the carbon footprint of residential buildings include:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Directing the U.S. Department of Housing and Urban Development to make housing for low-income communities more efficient. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Directing the U.S. Department of Energy to redouble efforts to accelerate new efficiency standards for household appliances and equipment. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Repairing and accelerating the building code process, and creating a new funding mechanism for states and cities to adopt strict building codes and train builders and inspectors.</span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Biden’s full plan to address the climate emergency at joebiden.com/climate.</span></i></td>
+</tr>
+</tbody>
+</table>
+<p><b>INCREASE THE SUPPLY, LOWER THE COST, AND IMPROVE THE QUALITY OF HOUSING </b></p>
+<ul>
+<li style="font-weight: 400;"><b>Establish a $100 billion Affordable Housing Fund to construct and upgrade affordable housing.</b>
+<ul>
+<li style="font-weight: 400;"><b>$65 billion in new incentives for state housing authorities and the Indian Housing Block Grant program to construct or rehabilitate low-cost, efficient, resilient, and accessible housing in areas where affordable housing is in short supply. </b><span style="font-weight: 400;">These funds will be directed toward communities that are suffering from an affordability crisis and that are willing to implement new zoning laws that encourage more affordable housing. </span></li>
+<li style="font-weight: 400;"><b>$10 billion to make homes more energy efficient.</b><span style="font-weight: 400;"> This retrofitting will lower families’ energy bills, create jobs for workers in the trades in every state in the nation, and reduce our greenhouse gas emissions. </span></li>
+<li style="font-weight: 400;"><b>$5 billion to increase the stock of affordable housing as part of larger community development efforts. </b><span style="font-weight: 400;">Specifically, these funds will</span> <span style="font-weight: 400;">expand the </span><a href="https://www.hud.gov/hudprograms/home-program"><span style="font-weight: 400;">HOME program</span></a><span style="font-weight: 400;">, ensuring that the program’s requirements are more conducive to supporting first-time homebuyers, and the </span><a href="https://www.cdfifund.gov/programs-training/Programs/cmf/Pages/default.aspx"><span style="font-weight: 400;">Capital Magnet Fund</span></a><span style="font-weight: 400;">, which spurs private investment in affordable housing and economic development in distressed communities. Among other uses, localities can use these funds to purchase vacant, underdeveloped, or underutilized property and construct affordable housing.</span></li>
+<li style="font-weight: 400;"><b>Increase funding for the <a href="https://www.hudexchange.info/programs/htf/about/">Housing Trust Fund</a> by $20 billion. <span style="font-weight: 400;">Biden will increase the availability of affordable housing through the Housing Trust Fund, paid for by an increase in the assessment on Fannie Mae and Freddie Mac. These additional dollars will support the construction and rehabilitation of affordable housing units. </span></b></li>
+</ul>
+</li>
+<li><b>Provide tax incentives for the construction of more affordable housing in communities that need it most.</b><span style="font-weight: 400;"> As President, Biden will expand the </span><a href="https://www.huduser.gov/portal/datasets/lihtc.html"><span style="font-weight: 400;">Low-Income Housing Tax Credit</span></a><span style="font-weight: 400;"> – a tax provision designed to incentivize the construction or rehabilitation of affordable housing for low-income tenants that has created </span><a href="https://www.urban.org/sites/default/files/publication/98758/lithc_how_it_works_and_who_it_serves_final_2.pdf"><span style="font-weight: 400;">nearly 3 million</span></a><span style="font-weight: 400;"> affordable housing units since the mid-1980s – with a </span><a href="https://www.treasury.gov/resource-center/tax-policy/Documents/General-Explanations-FY2017.pdf"><span style="font-weight: 400;">$10 billion investment</span></a><span style="font-weight: 400;">. This investment will be designed to make the credit more efficient, dramatically increasing the number of new or rehabilitated affordable housing units. And, he will ensure that urban, suburban, and rural areas all benefit from the credit. Biden will also invest in the development and rehabilitation of single family homes across distressed urban, suburban, and rural neighborhoods through the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3316"><span style="font-weight: 400;">Neighborhood Homes Investment Act</span></a><span style="font-weight: 400;">. </span></li>
+<li><b>Invest in community development. </b><span style="font-weight: 400;">In addition to the community development Biden is proposing as part of his </span><a href="infrastructure.html"><span style="font-weight: 400;">infrastructure initiative</span></a><span style="font-weight: 400;">, he will also expand flexible funding for the Community Development Block Grant by $10 billion over ten years. The </span><a href="https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs"><span style="font-weight: 400;">Community Development Block Grant</span></a><span style="font-weight: 400;"> funds local efforts to expand affordable housing, improve infrastructure, and increase economic opportunities for low-income individuals and communities. These funds are flexible federal grants that localities receive to deal with their specific challenges and support stabilization and infrastructure.</span></li>
+<li><b>Eliminate local and state housing regulations that limit affordable housing options and contribute to urban sprawl. </b><span style="font-weight: 400;">Housing policy can be used as a tool to battle climate change.</span> <span style="font-weight: 400;">Many lower- and middle-income Americans are forced to live far away from job centers due to high housing costs, leading not only to workers being overburdened by long commutes and transportation costs, but also to higher greenhouse gas emissions. Biden will tie new federal investments in housing to a requirement that states and localities eliminate regulations that reduce the availability of affordable housing and contribute to sprawl. He will direct his Secretaries of Housing and Urban Development and Transportation to identify existing federal grant programs that can be amended by adding zoning reform as a requirement. And, Biden will expand investments in </span><a href="https://www.hud.gov/sites/documents/19-FY16CJ-LHPGRANTS.PDF"><span style="font-weight: 400;">Local Housing Policy Grants</span></a><span style="font-weight: 400;"> to give states and localities the technical assistance and planning support they need to modernize housing regulations.</span></li>
+<li><b>Ensure minority-owned businesses benefit from investment in housing construction and repair. </b><span style="font-weight: 400;">To further support wealth creation among Black and Latino families, Biden will require his Administration to take all available steps to make sure minority-owned businesses are able to benefit from ongoing and new federal housing and infrastructure spending. </span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><i><span style="font-weight: 400;">Use federal transit dollars to leverage local investment in transit and affordable housing</span></i></p>
+<p><span style="font-weight: 400;">Smart transit and regional planning policies are essential for ensuring access to affordable housing, avoiding sprawl, improving quality of life by reducing the distance between living and leisure areas, and mitigating climate change. To meet these goals, Biden will ensure a portion of new federal transit dollars are designed to leverage local investment in both transit and affordable housing in transit corridors. Biden has proposed the following new transit investments:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Offer tens of millions of Americans new transportation options. </b><span style="font-weight: 400;">Outside major cities, </span><a href="https://www.apta.com/news-publications/public-transportation-facts/"><span style="font-weight: 400;">most</span></a><span style="font-weight: 400;"> Americans do not have access to high-quality, reliable public transportation; and within urban areas, it’s often in need of repair. As a result, workers and families rely on cars, which can be a big financial burden, clog roadways, and –  along with light-duty trucks – significantly increase U.S. greenhouse gas emissions. As President, Biden will aim to provide all Americans in municipalities of more than 100,000 people with quality public transportation by 2030. To that end, he’ll increase flexible federal investments, helping cities and towns to install light rail networks and to improve existing transit and bus lines. He’ll also help them to invest in infrastructure for pedestrians, cyclists, and riders of e-scooters and other micro-mobility vehicles. And, Biden will work to make sure that new, fast-growing areas are designed and built with public transit in mind. Specifically, he will create a new program that gives rapidly expanding communities the resources to build in public transit options from the start.</span></li>
+<li style="font-weight: 400;"><b>Reduce congestion by working with metropolitan regions to plan smarter growth. </b><span style="font-weight: 400;">Biden will empower city, county, regional, and state leaders to explore new, smarter, climate-friendly strategies to help reduce average commute times and build more vibrant main streets. Specifically, Biden will create a competitive grant program to help leaders rethink and redesign regional transportation systems, to get commuters where they are going safer, faster, and more efficiently. At the same time, Biden will boost highway funding by 10% and allocate the new funding to states that embrace smart climate design and pollution reduction, incentivizing them to invest in greenhouse gas reduction. States will also be free to use existing highway funding for alternative transportation options.</span></li>
+<li style="font-weight: 400;"><b>Connect workers to jobs. </b><span style="font-weight: 400;">For too many low-income workers, the cost of transportation and time it takes them to commute to work every day are significant barriers. As President, Biden will dedicate an additional $10 billion over 10 years specifically for transit projects that serve high-poverty areas with limited transportation options, so that workers seeking a better life won’t have to spend as much getting to their jobs.</span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Biden’s full infrastructure plan at joebiden.com/infrastructure.</span></i></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><b>Ensure rural communities have access to affordable and accessible homes. </b><span style="font-weight: 400;">The Biden Administration will increase funding for needed repairs of affordable rental housing properties and construction of new property through the U.S. Department of Agriculture’s Rural Housing Service, including the </span><a href="https://www.rd.usda.gov/sites/default/files/fact-sheet/RD-FactSheet-RHS-MFHDirect.pdf"><span style="font-weight: 400;">Multi-Family Direct Loans</span></a><span style="font-weight: 400;"> and the </span><span style="font-weight: 400;">Single Family </span><a href="https://www.rd.usda.gov/programs-services/single-family-housing-direct-home-loans"><span style="font-weight: 400;">Direct Loans</span><span style="font-weight: 400;"> program</span></a><span style="font-weight: 400;">s, which support the construction of housing for low income, disabled, or elderly individuals in rural communities. Majority Whip Clyburn’s </span><a href="https://www.majoritywhip.gov/?press=clyburn-op-ed-10-20-30-we-should-leave-no-community-behind"><span style="font-weight: 400;">10-20-30 plan</span></a><span style="font-weight: 400;"> has already been applied to a number of Rural Development programs in order to ensure a portion of funds are dedicated to serving families living in areas facing persistent poverty. As President, Biden </span><a href="infrastructure.html"><span style="font-weight: 400;">will apply</span></a><span style="font-weight: 400;"> the 10-20-30 plan to all federal programs.</span></li>
+<li style="font-weight: 400;"><b>Expand funding for mission-driven, community-based financial institutions that invest in building new housing in underserved areas. </b><span style="font-weight: 400;">As part of his plan to reinvest in communities across the country, including in rural areas, Biden will expand funding for the </span><a href="https://www.cdfifund.gov/Pages/default.aspx"><span style="font-weight: 400;">Community Development Financial Institutions Fund</span></a><span style="font-weight: 400;">, which supports local, “mission-driven” financial institutions in low-income areas around the U.S. – including those invested in building new housing in underserved areas.</span></li>
+<li style="font-weight: 400;"><b>Drive additional capital into low-income communities to spur the development of low-income housing. </b><span style="font-weight: 400;">The New Markets Tax Credit has drawn in</span><a href="https://www.cdfifund.gov/Documents/NMTC%20Fact%20Sheet_Jan2018.pdf"> <span style="font-weight: 400;">$8 of private investment for every $1 of federal investment</span></a><span style="font-weight: 400;"> in low-income communities by providing tax credits to investors in community development organizations that support everything from supermarkets to real estate projects to manufacturing plants. </span><a href="infrastructure/index.html"><span style="font-weight: 400;">Biden </span></a><span style="font-weight: 400;">will </span><a href="infrastructure/index.html"><span style="font-weight: 400;">expand</span></a><span style="font-weight: 400;"> the program to provide $5 billion in support every year, and will make the program permanent so communities can take the credit into account in their long-term planning. </span></li>
+</ul>
+<p><span style="font-weight: 400;">For all of these new housing investments, those receiving assistance will be required to abide by Davis-Bacon Act wage requirements so that jobs created with these investments support family sustaining wages and benefits. And, the Biden Administration will encourage the use of resources and materials that are sourced domestically, as well as the use of project labor agreements.</span></p>
+<table>
+<tbody>
+<tr>
+<td><i><span style="font-weight: 400;">Guarantee safe housing for our military families</span></i></p>
+<p><span style="font-weight: 400;">The government has broken its trust with military families by providing sub-par housing. Now, we have to work twice as hard to rebuild this trust. That will require the utmost transparency and accountability from both the government and the private sector partners charged with housing the families of our service members. The Biden Administration will:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Enforce a comprehensive and standardized tenant Bill of Rights for all military families, and as </span><a href="https://www.militaryfamily.org/whats-changed-for-military-families-frustrated-by-privatized-housing-horrors/"><span style="font-weight: 400;">advocates have rightly demanded</span></a><span style="font-weight: 400;">, ensure U.S. Department of Defense senior leadership enforces compliance. We won’t be making more empty promises to military families. We will hold these landlords, and ourselves, accountable. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Require regular, standardized, objective, and published reporting of military family satisfaction and concerns from all housing. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Establish a public-facing document outlining expectations of quality and consequences for all housing providers and, when necessary, terminate long-term leases held by private companies. </span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Biden’s full plan for military families at joebiden.com/militaryfamilies.</span></i></td>
+</tr>
+</tbody>
+</table>
+<p><b>PURSUE A COMPREHENSIVE APPROACH TO ENDING HOMELESSNESS</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Develop a national strategy for making housing a right for all.</b><span style="font-weight: 400;"> Biden believes everyone should have the right to a safe roof over their head. On the first day of his Administration, he will direct his Secretary of Housing and Urban Development to lead a task force of mayors and other local elected officials to put on his desk within 100 days a roadmap for making this right a reality nationwide. Mayors and local elected officials are on the front lines of tackling homelessness, so Biden will use their expertise to help the federal government identify best practices that should be replicated across the country.</span></li>
+<li style="font-weight: 400;"><b>Provide emergency funding designed to tackle the homelessness crisis. </b><span style="font-weight: 400;">Biden will work with Congress to secure passage of Congresswoman Maxine Waters’ </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1856"><span style="font-weight: 400;">Ending Homelessness Act</span></a><span style="font-weight: 400;">. This bill funds a comprehensive, holistic strategy to ending homelessness, including everything from case management to emergency shelters to additional housing vouchers for homeless individuals. In total, this law will invest $13 billion to tackle homelessness over five years, including $5 billion for McKinney-Vento Homeless Assistance Grants, and the law will create </span><a href="https://financialservices.house.gov/uploadedfiles/ending_homelessness_act_2019_exec_summary_7-24-19.pdf"><span style="font-weight: 400;">more than 400,000</span></a><span style="font-weight: 400;"> additional housing units for homeless individuals. In addition, Biden will ensure part of this grant funding is specifically targeted to assist homeless children and young adults.</span></li>
+<li style="font-weight: 400;"><b>Reform federal housing programs to ensure they take a “housing first” approach to ending homelessness. </b><span style="font-weight: 400;">The Trump Administration has </span><a href="https://www.citylab.com/equity/2019/12/trump-homeless-shelter-agency-robert-g-marbut-texas-housing/603280/"><span style="font-weight: 400;">demonstrated acceptance of a worldview</span></a><span style="font-weight: 400;"> that housing and food should be withheld until homeless individuals tackle challenges such as addiction and mental illness. This view isn’t just inhumane, it defies the evidence regarding what works. </span><span style="font-weight: 400;">M</span><a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">ore and more evidence</span></a><span style="font-weight: 400;"> is making clear that a </span><a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">“housing first” approach</span></a><span style="font-weight: 400;"> – </span><a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">“guided by the belief that people need basic necessities like food and a place to live before attending to anything less critical, such as getting a job, budgeting properly, or attending to substance use issues”</span></a><span style="font-weight: 400;"> – is an effective strategy for reducing homelessness. So, while the Biden Administration will pursue a comprehensive strategy addressing homelessness’ underlying causes – from making sure everyone has access to quality mental health and addiction support, to increasing the minimum wage and expanding workforce training, to changing the culture so more LGBTQ teenagers are accepted in their homes – President Biden will make sure our country commits to a “housing first” approach to ending homelessness. In his first 100 days, Biden will direct his Secretary of Housing and Urban Development to conduct a full review of federal housing policies to make sure they pursue and incentivize the “housing first” approach. The Secretary will identify all ways in which homelessness assistance grants can further support rapid re-housing and long-term supportive housing. Supportive housing </span><a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">has been found </span></a><span style="font-weight: 400;">to have </span><a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">positive long-term impacts</span></a><span style="font-weight: 400;">, and rapid re-housing </span><a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">has been shown</span></a> <a href="https://endhomelessness.org/resource/housing-first/"><span style="font-weight: 400;">to lead to quick exits from homelessness.</span></a></li>
+<li style="font-weight: 400;"><b>Reduce homelessness among veterans. </b><span style="font-weight: 400;">The Obama-Biden Administration </span><a href="https://www.blogs.va.gov/VAntage/29697/federal-agencies-announce-veteran-veteran-homelessness-cut-nearly-half-down-47-percent-since-2010-cut-more-than-half-since-2010/"><span style="font-weight: 400;">cut the population of homeless veterans</span></a><span style="font-weight: 400;"> by almost half. But with just over </span><a href="https://www.va.gov/HOMELESS/pit_count.asp"><span style="font-weight: 400;">23,000 veterans without shelter on any given night</span></a><span style="font-weight: 400;">, we have much more work to do. Biden will work with Congress to continue to drive down veteran homelessness by permanently authorizing the Supportive Services for Veterans Families program, which provides critical funding for wrap-around services for those facing homelessness. President Biden will also work to ensure that we better understand the unique needs of women and LGBTQ veterans experiencing homelessness. And, he will create safe, modern, clean, and recovery-oriented housing for veterans being treated for substance use disorders and those who are homeless by refurbishing buildings condemned or not in use, such as the massive VA Los Angeles campus. </span><i><span style="font-weight: 400;">Read Biden’s full plan to support our veterans at joebiden.com/veterans.</span></i></li>
+<li style="font-weight: 400;"><b>Protect LGBTQ individuals. </b><span style="font-weight: 400;">The Obama-Biden Administration enforced the civil rights of the LGBTQ community, including by ensuring federally funded homeless shelters provide housing </span><a href="https://www.federalregister.gov/documents/2016/09/21/2016-22589/equal-access-in-accordance-with-an-individuals-gender-identity-in-community-planning-and-development"><span style="font-weight: 400;">according to an individual’s gender identity</span></a><span style="font-weight: 400;"> and </span><a href="https://www.federalregister.gov/documents/2012/02/03/2012-2343/equal-access-to-housing-in-hud-programs-regardless-of-sexual-orientation-or-gender-identity"><span style="font-weight: 400;">cannot refuse services</span></a><span style="font-weight: 400;"> based on gender identity or sexual orientation. </span><a href="https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=201904&amp;RIN=2506-AC53"><span style="font-weight: 400;">The Trump Administration</span></a><span style="font-weight: 400;"> has since proposed allowing shelters to discriminate against transgender people when determining their accommodations, for example by forcing transgender women to sleep and use the bathroom in the same place as men. As President, Biden will secure the passage of the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/5"><span style="font-weight: 400;">Equality Act</span></a><span style="font-weight: 400;">, ensuring that no President can ever again single-handedly roll back civil rights protections for LGBTQ individuals, including in housing and homeless shelters. And, he will increase </span><span style="font-weight: 400;">funding for the </span><a href="https://www.acf.hhs.gov/fysb/resource/rhy-act"><span style="font-weight: 400;">Runaway and Homeless Youth Act</span> </a><span style="font-weight: 400;">to ensure LGBTQ individuals have access to transitional living programs that provide essential services like job counseling and mental and physical health care.</span></li>
+<li style="font-weight: 400;"><b>Expand access to supportive housing and services for individuals with disabilities and the elderly. </b><span style="font-weight: 400;">A Biden Administration will increase the availability of supportive and accessible housing for seniors and individuals with disabilities, including through the Supportive Housing for the Elderly (“</span><a href="https://www.hud.gov/program_offices/housing/mfh/progdesc/eld202"><span style="font-weight: 400;">Section 202</span></a><span style="font-weight: 400;">”) and Supportive Housing for Individuals with Disabilities (“</span><a href="https://www.hud.gov/program_offices/housing/mfh/progdesc/disab811"><span style="font-weight: 400;">Section 811</span></a><span style="font-weight: 400;">”) programs. Biden also will increase resources for mental health services and substance use disorder treatment, including through the </span><a href="https://www.samhsa.gov/homelessness-programs-resources/grant-programs-services/path"><span style="font-weight: 400;">Projects for Assistance in Transition from Homelessness</span></a><span style="font-weight: 400;"> program.</span></li>
+<li style="font-weight: 400;"><b>Set a national goal of ensuring 100% of formerly incarcerated individuals have housing upon reentry.</b><span style="font-weight: 400;"> If incarcerated individuals do not find housing upon reentry, that lack of housing can be completely destabilizing and limit their likelihood of successfully staying out of the criminal justice system and fulfilling their potential. Biden will work toward a goal of ensuring 100% of formerly incarcerated individuals – at the federal and state level – have housing upon release. He’ll start by eliminating barriers keeping formerly incarcerated individuals from accessing public assistance, including housing support. He’ll direct the U.S. Department of Housing and Urban Development to only contract with entities that are open to housing individuals looking for a second chance. And, he’ll expand funding for transitional housing, which has been </span><a href="https://www.reuters.com/article/us-usa-justice-prisons-exclusive/exclusive-trump-administration-reduces-support-for-prisoner-halfway-houses-idUSKBN1CI2ZA"><span style="font-weight: 400;">drastically cut</span></a><span style="font-weight: 400;"> under the Trump Administration.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><i><span style="font-weight: 400;">Ensure survivors of domestic and sexual violence have safe, affordable housing</span></i></p>
+<p><span style="font-weight: 400;">Biden has put forward a comprehensive plan to strengthen social supports for survivors of domestic and sexual violence and human trafficking, including helping victims secure housing, gain economic stability, and recover from the trauma of abuse. The U.S. Conference of Mayors has </span><a href="https://www.tuw.org/sites/tuw.org/files/US%20Conference%20of%20Mayors%20Hunger%20and%20Homelessness%20Survey_2015.pdf"><span style="font-weight: 400;">identified</span></a><span style="font-weight: 400;"> domestic violence as a top driver of family homelessness, and </span><a href="https://safehousingpartnerships.org/sites/default/files/2017-05/SHP-Homelessness%20and%20DV%20Inforgraphic_1.pdf"><span style="font-weight: 400;">research</span></a><span style="font-weight: 400;"> points to domestic violence as a key cause of homelessness for many women. And, domestic violence survivors and their children often live in unstable housing conditions, such as with relatives or friends in crowded and potentially exploitative conditions or returning to abusive partners. </span><a href="https://www.usich.gov/news/positive-outcomes-for-victims-of-domestic-violence-and-families-through-hou/"><span style="font-weight: 400;">Research</span></a><span style="font-weight: 400;"> demonstrates that providing flexibility in eligibility, services, and support helps survivors feel safer and rebuild their lives after violence.</span></p>
+<p><span style="font-weight: 400;">The Biden plan will cut through the red tape that can slow down assistance and limit options for survivors. Specifically, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Establish a new coordinated housing initiative.</b><span style="font-weight: 400;"> Current federal housing programs are insufficient for meeting the needs of domestic and sexual violence survivors. Biden will bring federal agencies together to create a comprehensive housing grant program tailored to survivors of domestic and sexual violence. This grant program will include flexible funding to support the practical needs of survivors; advocacy with landlords and housing agencies to keep victims in housing; supportive services including legal assistance, child care, and employment training; new permanent housing vouchers; increased funding for the VAWA transitional housing program; and home ownership opportunities.</span></li>
+<li style="font-weight: 400;"><b>Expand access to housing assistance.</b><span style="font-weight: 400;"> Biden will strengthen the VAWA housing provisions, for example by </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1585/text"><span style="font-weight: 400;">making it easier</span></a><span style="font-weight: 400;"> for victims to retain their federal housing subsidy when needed for safety reasons.</span></li>
+<li style="font-weight: 400;"><b>Protect survivors from housing discrimination.</b><span style="font-weight: 400;"> The </span><a href="https://www.hud.gov/program_offices/fair_housing_equal_opp/fair_housing_act_overview"><span style="font-weight: 400;">Fair Housing Act</span></a><span style="font-weight: 400;"> protects women from gender discrimination in public and private housing, including survivors who may be unfairly evicted from housing because of domestic violence. The Trump Administration </span><a href="https://www.federalregister.gov/documents/2019/08/19/2019-17542/huds-implementation-of-the-fair-housing-acts-disparate-impact-standard"><span style="font-weight: 400;">proposed</span></a><span style="font-weight: 400;"> rolling back Fair Housing protections by making it harder to prove disparate impact claims and allowing landlords and banks to use discriminatory practices. The Biden Administration will vigorously enforce the Fair Housing Act. VAWA also protects survivors from discrimination in subsidized housing and allows survivors to transfer to new units if necessary for safety. But red tape makes these provisions challenging to implement. The Biden plan will make it easier for survivors to transfer their housing assistance and move to a new home so that they can be safe. </span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Biden’s full plan to end violence against women at joebiden.com/VAWA.</span></i></td>
+</tr>
+</tbody>
+</table>
+<p><b><i>Investing In Our Housing to Grow the Middle Class, Paid for by Making Sure Corporations Pay Their Fair Share</i></b></p>
+<p><span style="font-weight: 400;">Biden’s $640 billion investment in America’s housing is paid for by raising taxes on corporations and large financial institutions. Specifically, approximately $300 billion of the housing plan is devoted to new construction and is encompassed in the $1.3 trillion infrastructure plan. The remaining portion is paid for by instituting a financial fee on certain liabilities of firms with over $50 billion in assets. </span></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="housing.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/el-plan-de-biden-para-invertir-en-nuestras-comunidades-a-traves-de-la-vivienda/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="housing.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/housing/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":412,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

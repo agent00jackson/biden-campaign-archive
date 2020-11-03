@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan De Biden Para Combatir El Coronavirus (Covid-19) y Prepararnos Para Futuras Amenazas Para La Salud Mundial | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan De Biden Para Combatir El Coronavirus (Covid-19) y Prepararnos Para Futuras Amenazas Para La Salud Mundial | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Para obtener más información de los Centros para el Control y la Prevención de Enfermedades con respecto al coronavirus, visite aquí. El pueblo estadounidense merece una respuesta urgente, enérgica y profesional a la creciente crisis económica y de salud pública causada por el brote de coronavirus (COVID-19). Es por eso que Joe Biden ha anunciado [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-05T08:41:12+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Vision_1600x836_Digital_062920_V1-1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Vision_1600x836_Digital_062920_V1-1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="37 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial/#webpage","url":"https://joebiden.com/es/el-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial/","name":"El Plan De Biden Para Combatir El Coronavirus (Covid-19) y Prepararnos Para Futuras Amenazas Para La Salud Mundial | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-07-27T18:20:44+00:00","dateModified":"2020-08-05T08:41:12+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial%2F&#038;format=xml" />
+<link rel="alternate" href="../../covid-plan/index.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-3668 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../covid-plan/index.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../covid-plan/index.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-3668 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan De Biden Para Combatir El Coronavirus (Covid-19) y Prepararnos Para Futuras Amenazas Para La Salud Mundial</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><i><span style="font-weight: 400;">Para obtener más información de los Centros para el Control y la Prevención de Enfermedades con respecto al coronavirus, visite </span></i><a href="https://www.cdc.gov/coronavirus/2019-ncov/summary.html"><i><span style="font-weight: 400;">aquí</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+<p><span style="font-weight: 400;">El pueblo estadounidense merece una respuesta urgente, enérgica y profesional a la creciente crisis económica y de salud pública causada por el brote de coronavirus (COVID-19). Es por eso que Joe Biden ha anunciado un plan para organizar:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Una </span><span style="font-weight: 400;">respuesta decisiva de salud pública </span><span style="font-weight: 400;">que garantice la amplia disponibilidad de pruebas gratuitas; la eliminación de todas las barreras de costos para el cuidado preventivo y el tratamiento del COVID-19; el desarrollo de una vacuna; y el despliegue completo y la operación de los suministros, personal e instalaciones necesarias.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Una </span><span style="font-weight: 400;">respuesta económica decisiva </span><span style="font-weight: 400;">que comience con licencia de emergencia con paga para todos los afectados por el brote y provee la ayuda necesaria a los trabajadores, las familias y los pequeños negocios que están siendo afectados por esta crisis. No se equivoquen: esto requerirá un conjunto de medidas económicas inmediatas, ambiciosas y progresistas y acción decisiva adicional para lidiar con el impacto macroeconómico de este brote.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden cree que debemos gastar lo que sea necesario, sin demora, para satisfacer las necesidades de salud pública y enfrentar las crecientes consecuencias económicas. El gobierno federal debe actuar de manera rápida y agresiva para ayudar a proteger y apoyar a nuestras familias, pequeños negocios, personal de respuesta inmediata y trabajadores esenciales para ayudarnos a enfrentar este desafío, a aquellos que son más vulnerables por su salud y los impactos económicos, y a nuestras comunidades más amplias, en vez de culpar a otros o rescatar a las corporaciones.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Las emergencias de salud pública requieren un liderazgo disciplinado y confiable basado en la ciencia. En un momento de crisis, el liderazgo requiere escuchar a los expertos y comunicar información creíble al público estadounidense. Debemos actuar audazmente, con inteligencia y rapidez. Biden sabe cómo organizar una respuesta efectiva a la crisis y elevar las voces de los científicos, los expertos en salud pública y el personal de respuesta inmediata. El ayudó a liderar la respuesta efectiva de la Administración Obama-Biden a la pandemia del H1N1 en el 2009 y la epidemia del ébola en el 2014. Biden también ayudó a liderar la respuesta a la crisis económica más grande desde la Gran Depresión y trabajó en la implementación de la Ley de Recuperación. Él sabe cómo brindar ayuda a las familias, así como recursos a los funcionarios estatales y locales para lidiar con los desafíos que enfrentan.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Y, aun cuando respondamos a esta crisis, debemos prepararnos para la próxima. Como presidente, Biden establecerá y administrará un sistema permanente de salud pública y personal de respuesta inmediata, profesional y con suficientes recursos que proteja al pueblo estadounidense, al ampliar la investigación biomédica, implementar una capacidad de realizar pruebas rápidas, garantizar una vigilancia rigurosa de las enfermedades en todo el país, mantener una fuerza laboral de profesionales de salud pública y personal de primeros auxilios, establecer una autoridad con presupuesto de emergencia flexible y movilizar al mundo para asegurar una preparación mayor y constante para futuras pandemias.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El Congreso ha dado un paso adelante al aprobar un plan inicial bipartidista de emergencia para combatir el COVID-19. La Administración de Trump ahora debe atender a las demandas de la Presidenta de la Cámara de Representantes, Nancy Pelosi, y del líder demócrata del Senado, Chuck Schumer, para que la salud y la seguridad del pueblo estadounidense sean lo primero. Ahora se necesita hacer mucho más para unir a nuestro país, responder a esta emergencia y establecer las bases para reformas a largo plazo, que incluyen garantizar un seguro médico asequible y de calidad y un programa integral de días de enfermedad pagados para todos los estadounidenses.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden estará listo el primer día de su administración para proteger la salud y el bienestar de este país. Pero no esperará hasta entonces para comunicar sus puntos de vista sobre lo que debe hacerse ahora para servir adecuadamente al pueblo estadounidense. Biden cree que los siguientes pasos deben tomarse inmediatamente. Si Trump no los toma, Biden lo hará en su primer día como presidente.</span></p>
+<p><span style="font-weight: 400;"> </span></p>
+<p><span style="font-weight: 400;">El plan de Biden pide:</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li><b><span style="font-weight: 400;">Restaurar la confianza, la credibilidad y el propósito común.</span></b></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Organizar una respuesta nacional de emergencia efectiva que salve vidas, proteja a los trabajadores de primeros auxilios y minimice la propagación del COVID-19.</span></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Eliminar las barreras de costos para la prevención y el cuidado del COVID-19.</span></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Adoptar medidas económicas decisivas para ayudar a los trabajadores, las familias y los pequeños negocios afectados y estabilizar la economía estadounidense.</span></li>
+</ul>
+<ul>
+<li><span style="font-weight: 400;">Movilizar al mundo para enfrentar esta crisis mientras sentamos las bases para el futuro.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden entiende que esta es una situación dinámica. Los pasos propuestos a continuación son un comienzo. A medida que se desarrolle la crisis, Biden se basará en esta política para abordar nuevos desafíos.</span></p>
+<p>&nbsp;</p>
+<p><b>RESTAURAR LA CONFIANZA, LA CREDIBILIDAD Y EL PROPÓSITO COMÚN</b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Detener el teatro político y la desinformación deliberada, que ha aumentado la confusión y la discriminación. </b><span style="font-weight: 400;">Biden cree que debemos poner inmediatamente a los científicos y a los líderes de salud pública en el centro de la comunicación con el pueblo estadounidense, con el fin de proveer orientación frecuente y actualizaciones de salud pública, incluso establecer inmediatamente conferencias de prensa diarias, dirigidas por expertos. Esta comunicación es esencial para combatir la peligrosa epidemia de miedo, caos y estigmatización que puede apoderarse de las comunidades más rápido que el virus. Los actos de racismo y xenofobia contra la comunidad asiático-americana no serán tolerados.</span></li>
+<li style="font-weight: 400;"><b>Asegurar que las decisiones de salud pública sean tomadas por profesionales de salud y no por políticos, </b><span style="font-weight: 400;">y los funcionarios involucrados en la respuesta no tengan temor a represalias o al menosprecio público por realizar su trabajo.</span></li>
+<li style="font-weight: 400;"><b>Restaurar inmediatamente la Dirección para la Seguridad de la Salud y la Biodefensa Mundial en el Consejo de Seguridad Nacional de la Casa Blanca, </b><span style="font-weight: 400;">que fue establecida por la Administración de Obama-Biden y </span><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://www.nytimes.com/2020/03/08/us/politics/trump-coronavirus.html"><span style="font-weight: 400;">eliminada</span></a><span style="font-weight: 400;"> por la Administración de Trump en el 2018.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>ORGANIZAR UNA RESPUESTA NACIONAL DE EMERGENCIA EFECTIVA QUE SALVE VIDAS, PROTEJA A LOS TRABAJADORES DE PRIMEROS AUXILIOS  Y MINIMICE LA PROPAGACIÓN DEL COVID -19</b></p>
+<p>&nbsp;</p>
+<p><b><i>Hacer que las pruebas estén ampliamente disponibles y sean gratuitas</i></b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><b>Asegurar que cada persona que necesite una prueba pueda obtener una,</b> <b>y para aquellos que la necesiten, que la prueba sea gratuita.</b><span style="font-weight: 400;"> Las personas tampoco deberían tener que pagar nada de su bolsillo por la visita en la que se ordena la prueba, independientemente de su situación migratoria. Los Centros para el Control y la Prevención de Enfermedades (CDC, por sus siglas en inglés) deben recurrir a los consejos de científicos para aclarar los criterios para las pruebas, incluyendo la consideración de priorizar al personal de primeros auxilios y a los trabajadores de salud para que puedan volver a lidiar con la crisis.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><b>Establecer al menos diez sitios de pruebas móviles y servicios por ventanilla en cada estado para acelerar las pruebas y proteger a los trabajadores de la salud. <span style="font-weight: 400;">Comenzando en las grandes ciudades y expandiéndose rápidamente fuera de ellas, el CDC deben trabajar con los laboratorios privados y fabricantes para garantizar una capacidad de producción adecuada, control de calidad, capacitación y asistencia técnica. El número de pruebas debe ser millones, no miles.</span></b></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><b>Proveer un informe público diario desde la Casa Blanca sobre cuántas pruebas han sido realizadas </b><span style="font-weight: 400;">por el CDC, las autoridades de salud estatales y locales y los laboratorios privados.</span></li>
+<li style="font-weight: 400;"><b>Ampliar los programas de vigilancia centinela del CDC y otros programas de vigilancia para que podamos ofrecer pruebas, no solo a quienes las piden, sino también a quienes no saben que pueden pedirlas,</b><span style="font-weight: 400;"> especialmente a poblaciones vulnerables como pacientes de hogares de ancianos y personas con otras condiciones médicas. Esto debe hacerse en colaboración con entidades de salud del sector privado.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><b>Solicitar a los Centros de Servicios de Medicare y Medicaid que ayuden a establecer un código de diagnóstico para el COVID-19 en caso de emergencia, de modo que se pueda realizar la vigilancia utilizando los datos de las reclamaciones.</b></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><i>Aumento de la capacidad de prevención, respuesta y tratamiento</i></b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Encargar a todas las agencias federales relevantes que tomen medidas inmediatas para garantizar que la capacidad hospitalaria de los Estados Unidos pueda satisfacer la creciente necesidad,</b><span style="font-weight: 400;"> incluyendo:</span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Prepararse para establecer hospitales temporales con cientos de camas en cualquier ciudad en poco tiempo al desplegar </span><a href="https://www.phe.gov/about/sns/Pages/default.aspx"><span style="font-weight: 400;">estaciones médicas federales existentes en la reserva nacional estratégica</span></a><span style="font-weight: 400;"> y de forma preventiva definir ubicaciones potenciales para su uso cuando sea necesario.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ordenar al Departamento de Defensa de los EE. UU. (DOD, por sus siglas en inglés) que se prepare para el posible despliegue de recursos militares, tanto los componentes activos como la reserva, y trabaje con los gobernadores para prepararse para el posible despliegue de recursos de la Guardia Nacional, para proveer capacidad en instalaciones médicas, apoyo logístico y personal médico adicional si es necesario. Esto incluye la activación de los Cuerpos de Reserva Médica, que constan de </span><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://www.phe.gov/about/oem/prep/Pages/mrc.aspx"><span style="font-weight: 400;">casi 200,000 profesionales </span></a><a href="https://www.phe.gov/about/oem/prep/Pages/mrc.aspx"><span style="font-weight: 400;">voluntarios de </span></a><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://www.phe.gov/about/oem/prep/Pages/mrc.aspx"><span style="font-weight: 400;">cuidado de salud</span></a><span style="font-weight: 400;"> que están listos para servir en todos los Estados Unidos; capacitar y desplegar capacidad adicional de respuesta, incluyendo a los equipos médicos del Departamento de Asuntos de Veteranos/DOD de los EE. UU. y los equipos médicos de asistencia para desastres del Departamento de Salud y Servicios Humanos de los EE. UU. (HHS, por sus siglas en inglés); y dirigir y ayudar a los hospitales existentes a aumentar el cuidado para 20% más pacientes que la capacidad actual a través de personal flexible, uso del apoyo de telemedicina y retrasar las cirugías  electivas.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Instruir al CDC para que establezcan tableros (“dashboards”) para seguir en tiempo real a (1) las hospitalizaciones relacionadas con el COVID-19, especialmente en la unidad de cuidados intensivos (UCI) y departamentos de emergencia, de acuerdo con la Asociación Americana de Hospitales y las grandes cadenas de hospitales, para los que el HHS debe garantizar que los datos se puedan compartir, según sea necesario; y (2) información de la cadena de suministro, incluyendo la disponibilidad, asignación y envío, de equipos esenciales y equipos de protección personal, incluso en los diversos lugares donde puede haber reservas federales. La reserva nacional estratégica debe usarse para complementar cualquier escasez que exista, especialmente para suministros médicos esenciales, como oxígeno, ventiladores y equipo de protección personal.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asegurar que la capacitación, los materiales y recursos lleguen a los centros de salud con calificación federal, las clínicas rurales de salud y los hospitales de la red de seguridad, que son típicamente de escasos recursos y atienden de manera desproporcionada a las poblaciones vulnerables, que serán las más afectadas por el COVID-19. Este esfuerzo creará las bases para una infraestructura de salud pública más profunda y duradera para un cuidado de salud nacional y accesible para todos.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Aumentar las salas de emergencia y las unidades de cuidado intensivo a distancia y la telemedicina a través de un esfuerzo concertado y coordinado de los proveedores de salud, para que el personal pueda manejar a pacientes adicionales y reservar las camas para los que están mas enfermos. </b><span style="font-weight: 400;">Aprovechar los esfuerzos existentes, como </span><a href="https://echo.unm.edu/"><span style="font-weight: 400;">Project ECHO,</span></a><span style="font-weight: 400;"> para garantizar que los profesionales de la salud tengan mentores a distancia y otros recursos de capacitación que necesiten para tomar decisiones informadas. </span></li>
+<li style="font-weight: 400;"><b>Apoyar a los adultos mayores, personas vulnerables y personas con discapacidades. </b><span style="font-weight: 400;">Asegurar que los servicios esenciales en el hogar y en la comunidad continúen y que los Centros para Medicare y Medicaid trabajen para proveer las excepciones necesarias para que quienes dependen de medicamentos tengan suministros suficientes.</span></li>
+<li style="font-weight: 400;"><b>Proteger a los trabajadores de salud, personal de primeros auxilios, personal de asistencia y otros trabajadores de primeros auxilios.</b>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proveer a todos los trabajadores de primeros auxilios equipos de protección personal adecuado y de alta calidad para que no se infecten, en cantidad suficiente, y la capacitación adecuada para usarlos. Si nuestros trabajadores de salud, el personal de primeros auxilios y los trabajadores esenciales, como los trabajadores de transporte y alimentos, no pueden funcionar, no podemos proteger y cuidar al público. El plan de Biden exige que se brinde orientación a los estados, condados y municipios para garantizar que el personal de respuesta inmediata y los funcionarios de salud pública tengan prioridad para recibir equipos de protección personal y lanzar una campaña educativa para informar al público en general sobre los equipos que deben reservarse para los profesionales.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ordenar a la Administración de Seguridad y Salud Ocupacional (OSHA, por sus siglas en inglés) mantener a los trabajadores de primeros auxilios seguros al promulgar un estándar temporal de emergencia que requiera que las instalaciones de médicas implementen planes integrales de control ante la exposición a las enfermedades infecciosas; aumentar el número de investigadores de OSHA para mejorar la supervisión; y trabajar en estrecha colaboración con las agencias estatales de seguridad y salud ocupacional y los gobiernos estatales y locales, y los sindicatos que representan a sus empleados, para garantizar protecciones integrales para los trabajadores de primeros auxilios.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;"><b>Asegurar que los trabajadores de primeros auxilios, incluyendo los departamentos locales de bomberos y los servicios médicos de emergencia, </b><span style="font-weight: 400;">puedan satisfacer las necesidades de personal necesarios para responder y estén entrenados para reconocer los síntomas del COVID-19.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Acelerar el desarrollo de tratamientos y vacunas.</i></b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><b>Asegurar que los Institutos Nacionales de Salud (NIH, por sus siglas en inglés) y la Autoridad de Investigación y Desarrollo Biomédico Avanzado estén acelerando rápidamente el desarrollo de pruebas de diagnóstico rápido, tratamientos y medicinas, y vacunas. </b><span style="font-weight: 400;">El NIH debe ser responsable por las redes de pruebas clínicas y trabajar estrechamente con la Administración de Medicinas y Alimentos de los Estados Unidos (FDA, por sus siglas en inglés) en las aprobaciones de estas pruebas.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><b>Asegurar que el FDA  trabaje con el NIH para priorizar la revisión y autorización para el uso de medidas para combatir el COVID-19 y fortalecer la ciencia reguladora en el FDA para asegurarse que tenga los recursos necesarios para evaluar la seguridad y la eficacia de las nuevas herramientas.</b></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><i>Proporcionar información oportuna y recomendación y orientación médica</i></b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><b>Trabajar con el CDC y el Departamento de Salud y Servicios Humanos de los EE.UU. para garantizar que los departamentos de salud y los proveedores de salud en todo el país brinden acceso a cada persona para una línea telefónica de recomendaciones o asesoramiento interactivo por la web, </b><span style="font-weight: 400;">para que puedan tomar una decisión informada sobre si buscar asistencia o quedarse en casa. Esto preservará el sistema de cuidado de salud para aquellos que están enfermos y evitará que las personas que no necesiten ver a un proveedor se expongan innecesariamente. Asegúrese de que toda la información proporcionada al público esté accesible para las personas con discapacidades, incluyendo los materiales en lenguaje sencillo e intérpretes de lenguaje de señas estadounidense.</span></li>
+<li style="font-weight: 400;"><b>Ordenar a los CDC que brinden orientación clara y paso a paso acerca de recursos sobre contención y mitigación para los distritos escolares locales, instalaciones de cuidado de salud, educación universitaria y administradores escolares, y el público en general. </b><span style="font-weight: 400;">En este momento, hay poca claridad para estos grupos sobre cuándo avanzar hacia medidas de distanciamiento social, como cancelar la escuela, las reuniones masivas y los viajes, y cuándo pasar al modelo de teletrabajo y aprendizaje a distancia.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><b>Asegurar que los bomberos y otro personal de primeros auxilios sean notificados si han estado expuestos a personas infectadas con el COVID-19.</b></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><i>Iniciar mejoras urgentes al sistema de salud pública para el presente y el futuro</i></b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="font-weight: 400;"><b>Trabajar con empresas para expandir la producción de equipos de protección personal, incluyendo mascarillas y guantes, y productos adicionales como blanqueador y desinfectante para las manos a base de alcohol. </b><span style="font-weight: 400;">Incentivar una mayor producción de los proveedores de estos suministros médicos de importancia crítica, incluyendo comprometerse, si es necesario, a compras a gran escala, y la eliminación de todas las barreras comerciales relevantes para su adquisición.</span></li>
+<li style="font-weight: 400;"><b>Encargar al Departamento de Justicia de los EE. UU. combatir el aumento en los precios de  suministros críticos.</b></li>
+<li style="font-weight: 400;"><b>Tomar medidas después de la crisis para producir productos farmacéuticos y suministros médicos de origen estadounidense y que sean fabricados dentro delpaís, </b><span style="font-weight: 400;">para reducir nuestra dependencia de fuentes extranjeras que no son confiables en tiempos de crisis. El gobierno de los Estados Unidos debería trabajar de inmediato con el sector privado para hacer un mapa de los suministros críticos para el cuidado de salud; identificar sus puntos de origen; examinar el proceso de la cadena de suministro; y crear un plan estratégico para desarrollar redundancias y capacidad interna. El objetivo es desarrollar la próxima generación de estudios biomédicos y fabricación, recuperar la manufactura estadounidense de productos médicos de los que dependemos y garantizar que no seamos vulnerables a las interrupciones de la cadena de suministro, ya sea por otra pandemia o por disputas políticas o comerciales..</span></li>
+<li style="font-weight: 400;"><b>Establecer y financiar un Cuerpo de Reservistas del Servicio de Salud Pública de los EE. UU. para activar a los ex oficiales del Cuerpo Comisionado del Servicio de Salud Pública, con el fin de ampliar la capacidad médica y de salud pública. </b><span style="font-weight: 400;">Al crear el Cuerpo de la Reserva, tendremos un equipo más grande de profesionales de la salud para desplegar en todo el país, para ayudar a capacitar a sistemas de cuidado de salud en la detección y respuesta, educar al público, proporcionar cuidado directo al paciente, según sea necesario, y apoyar la infraestructura de salud pública en comunidades que a menudo carecen de recursos y tienen dificultades.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><b>Ampliar la dotación de personal para el programa de subsidios de respuesta adecuada a incendios y emergencias (SAFER, por sus siglas en inglés) para que los departamentos de bomberos (personal de primeros auxilios crítico durante emergencias de salud) puedan aumentar su número de empleados. <span style="font-weight: 400;">Como vicepresidente, Biden </span><a href="https://www.nytimes.com/2015/10/18/business/firefighters-union-owes-clout-to-its-free-spending-chief.html"><span style="font-weight: 400;">aseguró</span></a><span style="font-weight: 400;"> una expansión de la Ley SAFER para mantener a más bomberos  trabajando durante la Gran Recesión. Él ampliará las subvenciones para crear departamentos de bomberos con suficiente personal y bien capacitados en todo el país.</span></b></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><i>Proporcionar los recursos necesarios para lograr estos resultados</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Para implementar esta respuesta nacional de emergencia, el plan de Biden solicita un aumento inmediato de los recursos federales para cubrir todos los gastos federales necesarios, así como la creación de un Fondo de Emergencia Estatal y Local que dé a los líderes estatales y locales el poder para satisfacer necesidades críticas de salud y económicas para combatir esta crisis. Este fondo estará diseñado de la siguiente manera:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Se asignarán los recursos de acuerdo con una fórmula: 45% a gobiernos de los estados; 45% a gobiernos locales; y 10% reservado para asistencia especial para &#8220;puntos críticos&#8221; de propagación comunitaria.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Menús de usos admisibles: se le dará flexibilidad significativa a los gobernadores y alcaldes para asegurar que puedan orientar su inversión de salud y económica donde se necesite más  en sus respectivos estados y ciudades. Dichos usos incluyen:</span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Pagar los suministros médicos y ampliar la infraestructura crítica de salud, incluyendo la construcción de instalaciones nuevas o renovarlas, si es necesario;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expandir la contratación donde sea necesario, incluyendo trabajadores de cuidado de salud y servicios de emergencia, cuidadores en hogares de ancianos, conductores, trabajadores de cuidado infantil, maestros sustitutos y otros;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proveer reembolsos de las horas extra para los trabajadores de la salud, personal de respuesta inmediata y otros trabajadores esenciales.</span></li>
+</ul>
+</li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El fondo también será desplegado para amortiguar el impacto económico más amplio de la crisis, ayudar a las familias y las comunidades más afectadas, como se describe más adelante.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Uniendo a nuestro país</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ahora es el momento de usar la empatía, la decencia y la unidad. En tiempos de crisis, los estadounidenses nos unimos y damos todos un paso adelante para cumplir con nuestro deber cívico compartido. Necesitamos ese espíritu ahora: voluntarios listos para llenar los vacíos esenciales, vecinos que ayudan a sus vecinos, negocios que cuidan a sus trabajadores, personas que contribuyen a organizaciones sin fines de lucro para ayudar a los trabajadores de primera línea, compañías de redes sociales que luchan contra la propagación de la desinformación, las universidades y el sector privado impulsando la innovación en los estudios de nuevos tratamientos y vacunas, y todos nosotros siguiendo la guía de los funcionarios de salud para tomar medidas que reduzcan la propagación del virus. Biden cree que esto no puede ser solo una respuesta del gobierno, sino que debe ser una respuesta de toda la sociedad. </span></p>
+<p>&nbsp;</p>
+<p><b>ELIMINAR LAS BARRERAS DE COSTOS PARA LA PREVENCIÓN Y EL CUIDADO DEL COVID-19</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El costo del cuidado preventivo, el tratamiento y una potencial vacuna podría ser una barrera económica insuperable para muchos estadounidenses. Si no eliminamos esta barrera, estaremos ignorando a a estos estadounidenses en un momento de crisis y pondremos en riesgo a todos al limitar a que las personas se hagan las pruebas y tengan el tratamiento necesarios. El plan de Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Asegura que toda persona, con seguro médico o sin, no tendrá que pagar un dólar de su bolsillo por visitas relacionadas con pruebas del COVID-19, su tratamiento, servicios preventivos y cualquier eventual vacuna. Sin copagos, sin deducibles y sin facturas médicas inesperadas. </b><span style="font-weight: 400;">Esto se logrará al:</span>
+<ul>
+<li style="font-weight: 400;"><b>Enmendar la Ley de Servicios de Salud Pública para cubrir de inmediato todas las pruebas, tratamientos y servicios preventivos que son necesarios para abordar una emergencia de salud pública por una enfermedad infecciosa. </b><span style="font-weight: 400;">Una vez activada por el Secretario del HHS en consulta con los CDC, todos los planes comerciales en todos los mercados deberán cubrir inmediatamente servicios tales como las pruebas del COVID-19 y cualquier vacuna eventual sin copagos ni deducibles, incluidas las visitas en sí.</span></li>
+<li style="font-weight: 400;"><b>Enmendar la Ley del Seguro Social y otros estatutos de autorización para extender el mismo requisito a todos los programas de salud pública. </b><span style="font-weight: 400;">Como tal, no habrá copagos para programas que incluyen, pero no se limitan a, Medicare, Medicaid y CHIP, el Servicio de Salud Indígena, el Departamento de Asuntos de Veteranos, el programa TriCare del Departamento de Defensa (DoD, por sus siglas en inglés) y el Plan de Beneficios de Salud para Empleados Federales.</span></li>
+<li style="font-weight: 400;"><b>Financiar totalmente el Sistema Médico Nacional de Desastres (NDMS, por sus siglas en inglés) y expandir su autoridad para reembolsar a los proveedores de cuidado de salud por los costos de tratamiento relacionados con el COVID-19 que no están cubiertos directamente por el seguro de salud; esto incluye todos los copagos y deducibles para los asegurados, así como los cargos por cuidado no compensados en que incurren las poblaciones sin seguro y con seguro insuficiente. </b><span style="font-weight: 400;">Instruir al Secretario de HHS que ordene al NDMS, en colaboración con los Centros de Servicios de Medicare y Medicaid para apoyo administrativo y ejecución, reembolsar directamente a los proveedores de cuidado de salud:</span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Todos los cuidados no compensados asociados con las pruebas, el tratamiento y las vacunas</span><span style="font-weight: 400;"> para las personas sin seguro que estén asociados con el COVID-19. Esto incluye a los estadounidenses en los planes de seguro de salud “basuras” que no son regulados por su cumplimiento con los estándares para la cobertura bajo la Ley de Cuidado de Precio Bajo. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Todos los copagos, deducibles y cualquier costo compartido para el tratamiento del COVID-19 para los asegurados. </span><span style="font-weight: 400;">Los proveedores presentarán los reclamos por costos compartidos al NDMS que documenten un acuerdo contractual con un seguro privado para los co-pagos. Para garantizar la máxima participación del proveedor y mínimos abusos de facturación a los consumidores, se aplicarán las “condiciones de participación” de la ley actual de Medicare y las prohibiciones del sistema contra la facturación del saldo y las facturas médicas inesperadas. Para protegernos contra el fraude y el abuso por parte de proveedores inescrupulosos de cuidado de salud, se aplicarán severas sanciones civiles y monetarias bajo la Ley de Reclamaciones Falsas.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="font-weight: 400;"><b>Asegurar la inscripción máxima en Medicaid para las poblaciones actualmente elegibles al autorizar explícitamente fondos federales complementarios para la presunta elegibilidad, los procesos de solicitud simplificados y los criterios de elegibilidad. </b><span style="font-weight: 400;">En crisis anteriores de salud pública, como el huracán Katrina y el 11 de septiembre, el gobierno federal proporcionó fondos complementarios para que los estados agilizaran la inscripción de las personas que eran elegibles para Medicaid pero que aún no estaban inscritas. Esta opción debe ponerse a la disposición de los estados específicamente para la crisis de salud pública del COVID-19. Estas políticas son consistentes con la política de FMAP incluida en el paquete de asistencia económica federal a continuación y complementarias a la misma.</span></li>
+<li style="font-weight: 400;"><b>Revocar la regla de la carga pública de la Administración Trump, que establece restricciones nuevas y onerosas para los inmigrantes documentados </b><span style="font-weight: 400;">que reciben beneficios públicos y disuade a todos los inmigrantes de buscar servicios médicos para el COVID-19.</span></li>
+<li style="font-weight: 400;"><b>Apoyar los esfuerzos bipartidistas para retrasar el Reglamento de Responsabilidad Fiscal de Medicaid,</b><span style="font-weight: 400;"> que obliga a los estados a cambiar la forma en que financian sus programas de Medicaid y conduce a reducciones importantes en la financiación del cuidado de salud de importancia crítica.</span></li>
+<li style="font-weight: 400;"><b>Proporcionar autoridad explícita para que el Secretario del HHS apruebe el precio comercial de las vacunas que se desarrollan en conjunto con investigaciones financiadas por el gobierno federal. </b><span style="font-weight: 400;">Esto asegura que el sector privado, así como el público, no estarán sujetos a precios de vacunas que no cumplan con un estándar de costo “justo y razonable” e incluso si la vacuna está disponible de forma gratuita, protegerá al contribuyente de ser extorsionado.</span></li>
+<li style="font-weight: 400;"><b>Asegurar que los trabajadores federales puedan acceder a la compensación para trabajadores y alientar a los estados a hacer lo mismo. </b><span style="font-weight: 400;">Debido a que será difícil para los trabajadores demostrar que estuvieron expuestos al COVID-19 mientras estaban en el trabajo, el plan de Biden garantizará que el programa de la Ley Federal de Compensación de Empleados asuma que estuvieron expuestos mientras trabajaban si su trabajo los colocaba en contacto directo con personas infectadas. Y alentará a los estados a hacer lo mismo.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>ADOPTAR </b><b>MEDIDAS ECONÓMICAS EFECTIVAS PARA AYUDAR A LOS TRABAJADORES, LAS FAMILIAS Y LOS NEGOCIOS PEQUEÑOS AFECTADOS Y PARA ESTABILIZAR LA ECONOMÍA ESTADOUNIDENSE</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El plan de Biden proveerá apoyo financiero para quienes se han perjudicado económicamente por las secuelas de la crisis y ayuda para fortalecer nuestra economía en su totalidad. Esto incluye tomar medidas inmediatas y audaces para ayudar a los estadounidenses que tienen dificultades económicas en este momento. Significa que necesitaremos medidas más abarcadoras y amplias para fortalecer la demanda económica a fin de garantizar que podamos proteger los empleos; mantener el flujo de crédito hacia nuestros creadores de empleos y tener la potencia económica que necesitamos para hacer frente a esta tormenta y lograr que nuestra gente y nuestra economía alcancen su capacidad plena lo antes posible.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Estas medidas inmediatas incluyen tanto apoyo federal directo como un fondo renovable para los gobiernos estatales y locales. Tanto la asistencia federal como la estatal/local se diseñarán para que se extiendan automáticamente tras la certificación por parte del gobierno federal de una amenaza continua para la salud o la economía, determinada por criterios claros de salud y económicos. Esto es crítico para asegurar que nuestra  política no impidan que rondas adicionales de fondos sean desembolsadas con rapidez cuando más se necesitan.</span></p>
+<p>&nbsp;</p>
+<p><b>Joe Biden cree que debemos hacer lo que sea necesario, gastar lo que sea necesario, para brindar alivio a nuestras familias y garantizar la estabilidad de nuestra economía. </b><span style="font-weight: 400;">Esta es una crisis en evolución y la respuesta también deberá evolucionar, con próximos pasos adicionales para enfrentar los crecientes choques económicos. Debemos prepararnos ahora para tomar más medidas decisivas, incluido el alivio directo, que será a gran escala y se centrará en la salud y estabilidad de nuestra economía en general.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Las medidas económicas inmediatas en el plan de Biden constan de tres partes, con medidas adicionales a medida que las circunstancias lo requieran, incluido un alivio directo adicional:</span></p>
+<p>&nbsp;</p>
+<p><b><i>Brindar licencia garantizada de emergencia por enfermedad y para cuidar a un familiar</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como nación, nuestro objetivo debe ser proveer permanentemente el tipo de días de enfermedad y para cuidar a un familiar de 12 semanas con paga prevista en la </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/463/text"><span style="font-weight: 400;">Ley de la FAMILIA</span></a><span style="font-weight: 400;">,</span><span style="font-weight: 400;"> patrocinada por la senadora Kristen Gillibrand y la congresista Rosa DeLauro. También debemos proporcionar el tipo de cobertura que dispone la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1784/all-info"><span style="font-weight: 400;">Ley de Familias Saludables</span></a><span style="font-weight: 400;"> impulsada por DeLauro y la senadora Patty Murray, que garantizará que los trabajadores reciban siete días de enfermedad pagados para necesidades de salud personales y familiares de rutina, así como tiempo para que sobrevivientes de violencia doméstica y agresión sexual busquen servicios.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Proveer acceso generalizado a días de enfermedad pagados no solo permite a las familias recuperarse de la enfermedad, sino que también mantiene a los trabajadores enfermos y a los niños alejados de la población general y ayuda a frenar la propagación de la enfermedad. El plan de Biden propone un programa de licencia de emergencia con paga que garantice que todos los trabajadores puedan tomar días de enfermedad pagados durante la crisis del COVID-19. Exige la aprobación de la Ley de Familias Saludables con la incorporación de un plan de emergencia que pedirá 14 días de licencia con paga para los que están enfermos, han estado expuestos o sujetos a cuarentena, mientras también asegura que los empleadores no incurrirán en costos extra por dicha licencia adicional en medio de esta crisis.</span></p>
+<p>&nbsp;</p>
+<p><b>Tipos de licencia con paga que deben estar cubiertos:</b><span style="font-weight: 400;"> El plan de licencia de emergencia con paga de Joe Biden se puede adaptar para cubrir los diferentes tipos de licencia necesarios para que nuestra nación supere esta crisis. El plan de licencia con paga creará un fondo federal para cubrir el 100% de los salarios semanales, o salarios semanales promedio hasta un límite de $1,400 por semana, la cantidad semanal que corresponde a alrededor de $72,800 en ingresos anuales.</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Licencia con paga para trabajadores enfermos</span><b>;</b></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Licencia con paga para trabajadores que cuidan a familiares u otros seres queridos;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Licencia con paga para personas que no pueden continuar trabajando porque corren un mayor riesgo de complicaciones de salud debido al COVID-19;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Licencia con paga y asistencia para el cuidado de niños debido al cierre de escuelas; y </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Licencia con paga para trabajadores domésticos, cuidadores, trabajadores por encargos (“gigs”) y contratistas independientes.</span><span style="font-weight: 400;">         </span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Reembolsos a los empleadores:</b><span style="font-weight: 400;"> Este plan de emergencia proveerá reembolso a los empleadores o, cuando sea necesario, el pago directo a los trabajadores hasta un máximo de 14 días de licencia por enfermedad o por la duración de la cuarentena o aislamiento obligatorio. Esto será adicional a las vacaciones pagadas existentes que proveen las políticas actuales de una empresa. Ningún trabajador o contratista que tome dicha licencia durante la crisis impondrá una carga financiera adicional a un negocio. Se espera que las empresas financien el pago de licencia por enfermedad y obtengan el reembolso, o los deduzcan del pago de impuestos proyectado, para asegurar que los trabajadores no se cohíben de informar síntomas del COVID-19. El pago directo irá a los trabajadores donde sea necesario según sus arreglos laborales.</span></p>
+<p>&nbsp;</p>
+<p><b>Administración de emergencia:</b><span style="font-weight: 400;"> El plan de Biden proporcionará todos los fondos necesarios para garantizar que dicha licencia por enfermedad con paga estará disponible inmediatamente. Una opción potencial para los trabajadores que requieren pagos directos de licencia por enfermedad será contratar personal en las oficinas existentes de la Administración del Seguro Social para ayudar con la distribución del fondo de licencia de emergencia con paga. Estas oficinas están ubicadas por toda nuestra nación y son el vehículo propuesto por la </span><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://www.congress.gov/bill/116th-congress/senate-bill/463/text"><span style="font-weight: 400;">Ley de la Familia</span></a><span style="font-weight: 400;"> para un plan nacional de licencia con paga &#8211; por lo que esta legislación de emergencia también iniciará el desarrollo de la infraestructura nacional para un beneficio nacional y permanente de licencia con paga, necesario desde hace mucho tiempo.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Asistencia federal a las familias afectadas</i></b></p>
+<p>&nbsp;</p>
+<p><b>Una iniciativa de desempleo por crisis de salud para ayudar a todos los trabajadores que enfrentan una pérdida de trabajo debido a la crisis del COVID-19. </b><span style="font-weight: 400;">La reducción de la demanda de servicios como la hospitalidad, el cierre necesario de los lugares de trabajo y las interrupciones en las cadenas de suministro afectarán a los trabajadores en todo tipo de areas laborales. Así como la Administración Obama-Biden amplió el seguro de desempleo regular durante la Gran Recesión, Joe Biden pedirá nuevamente la ampliación de la compensación de emergencia por desempleo que no solo apoyará a trabajadores que enfrentan períodos prolongados de desempleo, sino que también aumentará los beneficios y la elegibilidad para lidiar con la naturaleza de la pérdida de empleo, que se verá afectada por la duración de la crisis. El plan de Biden exige asistencia federal ampliada inmediatamente para los trabajadores afectados, que incluye:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Garantizar que los beneficios por desempleo (UI, por sus siglas en inglés) estén disponibles para aquellos que pierden sus empleos pero usualmente beneficios serían negados debido a reglas que no deberían aplicarse en una crisis de salud importante y durante una recesión económica:</b><span style="font-weight: 400;"> el plan de Biden exige beneficios de desempleo ampliados y aumentados que garanticen que nuestras políticas de beneficios por desempleo respondan a la profundidad y naturaleza de esta crisis de salud y económica. Eso significa más apoyo para las oficinas estatales que enfrentarán una demanda mucho mayor. Significa no aplicar o flexibilizar los requisitos de historial de trabajo, la espera y búsqueda de trabajo que podrían evitar que millones de personas que pierden el trabajo por causas ajenas a su voluntad se queden fuera. Las reglas actuales de los beneficios por desempleo requieren que los beneficiarios busquen trabajo activamente. La naturaleza de la crisis del COVID-19 significa, sin embargo, que a muchos que pierden sus empleos se les impedirá buscar trabajo debido a las reglas de salud pública relacionadas con contener la propagación en la comunidad. El plan de Biden garantizará que no se le nieguen los beneficios a los trabajadores que pierden sus empleos, pero no pueden cumplir con los requisitos de búsqueda debido a esta crisis de salud pública. Esta iniciativa se puede combinar con esfuerzos para expandir y reformar nuestro programa existente de asistencia de desempleo por desastre.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><b>Alivio de empleo por reducción de horas o arreglo de trabajo compartido:</b><span style="font-weight: 400;"> Además de la asistencia para aquellos que pierden puestos de trabajo, el plan de Biden diseñará beneficios del seguro por desempleo para fomentar la expansión de arreglos de trabajo compartidos para los trabajadores de las empresas que se ven obligadas a recortar la nómina debido a la reducción en demanda económica, la disminución de viajes o la cancelación de pedidos. El plan de Biden garantizará que los beneficios parciales de desempleo estén disponibles para los trabajadores que enfrentan una reducción significativa en las horas, con el fin de alentar a los empleadores a que elijan compartir el trabajo en lugar de los despidos cuando sea posible. Dichas políticas se basarán en las implementadas por la Administración Obama-Biden durante la Gran Recesión. El plan de Biden requerirá que esto se implemente de manera consistente con los acuerdos de negociación colectiva existentes y que cualquier empleador con empleados representados por un sindicato cree estos arreglos en cooperación con los sindicatos.</span></li>
+<li style="font-weight: 400;"><b>Proporcionar alivio de empleo a las trabajadoras domésticas, cuidadores, trabajadores de encargos (“gigs”) o contratistas independientes que enfrentan una reducción en su paga y en sus horas:</b><span style="font-weight: 400;"> con demasiada frecuencia, nuestra asistencia por desempleo solo ayuda a aquellos que tienen relaciones más formales entre empleadores y empleados. Deja de lado a muchas de las personas más trabajadoras y que tienen mayor presión en los Estados Unidos, que manejan automóviles, limpian casas y cuidan de nuestros seres queridos más pequeños y mayores. El plan de Biden ofrecerá alivio económico a todos los trabajadores que puedan mostrar que sus horas se han reducido debido al COVID-19 o al impacto económico resultante.</span></li>
+<li style="font-weight: 400;"><b>Ampliar la asistencia para alimentos para familias y niños que enfrentan dificultades económicas</b><span style="font-weight: 400;">: el plan de Biden exige una iniciativa alimentaria durante crisis de salud que aborde tanto la profundidad de las dificultades económicas potenciales para las familias, como la naturaleza de esta crisis de salud. Las dificultades económicas causadas por la crisis impactarán los presupuestos familiares en maneras que podrían reducir la nutrición necesaria. Muchos estudiantes dependen de comidas gratuitas o con descuento en las escuelas, que podrían tener que cerrar. La iniciativa alimentaria durante crisis de salud del plan de Biden creará una alianza federal y estatal, financiada por el gobierno federal, que ampliará la ayuda de SNAP durante la crisis, y ampliará el tipo de respuestas de ayuda alimentaria disponibles para los estados, desde apoyar a los bancos de alimentos en todo el país hasta incrementar la entrega de alimentos a domicilio en un amplio esfuerzo para reemplazar las comidas escolares perdidas. Ajustará las políticas actuales que recortarán severamente o negarán los beneficios de alimentos a los trabajadores que no pueden encontrar trabajo durante esta crisis. Permitirá a las escuelas enviar solicitudes de dispensas antes de que se vean afectadas por la crisis, lo que les facilitará obtener permiso para ofrecer alimentos incluso cuando la escuela esté cerrada.</span></li>
+<li style="font-weight: 400;"><b>Aumentar el porcentaje de asistencia médica federal (FMAP, por sus siglas en inglés) por el programa de Medicaid administrado por el estado:</b><span style="font-weight: 400;"> el plan de Biden exige un aumento en la parte de Medicaid que paga el gobierno federal, el llamado FMAP. Este es uno de los medios más rápidos y efectivos para abordar simultáneamente las cargas de salud e ingresos que enfrentan los estados al lidiar con una crisis económica. El plan de Biden aumentará el FMAP en al menos un 10 por ciento para todos los estados durante la crisis, con ajustes al alza para los estados que enfrentan tasas de desempleo particularmente altas. También proporcionará incentivos financieros adicionales para los estados que aún no han ampliado su programa de Medicaid y proporcionará el apoyo adicional necesario a Puerto Rico y otros territorios para garantizar que no se descuiden las necesidades de atención médica de estas poblaciones.</span></li>
+<li style="font-weight: 400;"><b>Establecer una línea de crédito temporal para negocios pequeños y medianos:</b><span style="font-weight: 400;"> muchos negocios que de otro modo prosperarían durante los tiempos económicos normales enfrentarán un grave déficit en el flujo de dinero, lo que podría poner en peligro su capacidad de pagar la nóminas, pagar a los acreedores y mantener sus puertas abiertas. Trabajando con la Administración de Negocios Pequeños  y el Departamento del Tesoro, el plan de Biden propone establecer un programa de préstamos temporales para pequeños negocios diseñado para abordar los déficits imprevistos en los ingresos, ofreciendo préstamos sin intereses a los negocios pequeños y medianos en todo el país a lo largo de la crisis. El plan de Biden incluye una mayor capacidad de financiación para la Administración de Negocios Pequeños , además de un nuevo programa, modelado a partir de la Iniciativa de Crédito Estatal para Negocios Pequeños de Obama-Biden, que provee fondos para permitir que los estados aumenten los préstamos a los pequeños negocios. El plan de Biden también pide al Departamento del Tesoro de los EE. UU. que coordine con la Reserva Federal para monitorear y considerar las políticas para abordar los graves desafíos de crédito y liquidez relacionados con las consecuencias del COVID-19 y, por lo tanto, evitar que los pequeños negocios y las industrias impactadas se vean afectadas por recortes severos, cierres y despidos.</span></li>
+<li style="font-weight: 400;"><b>Apoyo para el cuidado infantil y el aprendizaje a la distancia para los estudiantes:</b><span style="font-weight: 400;"> el cierre potencial de las escuelas creará significativos problemas de costos para los padres que buscan cuidado infantil y para las escuelas y los educadores que buscan continuar enseñando de forma remota, incluso en línea. El plan de Biden ampliará la asistencia a los centros federales de cuidado infantil y la asistencia a las escuelas, particularmente a las escuelas de Título I, para aquellos que enfrentan costos adicionales, incluidos los esfuerzos para continuar la educación a la distancia o las actividades remotas que normalmente se realizan después de la escuela.</span></li>
+<li style="font-weight: 400;"><b>Alivio o suspensión temporal de pagos de los préstamos federales para estudiantes e hipotecas respaldadas por el gobierno federal:</b><span style="font-weight: 400;"> el Congreso debe usar de inmediato la nueva legislación o la autoridad existente para brindar asistencia de suspensión temporal a los estudiantes y propietarios de viviendas para ofrecer alivio financiero hasta que termine lo peor de la crisis económica. Como se propone a continuación, también debe haber una alianza federal con los estados y las ciudades para proveer ayuda con el alquiler durante la crisis, de modo que nadie enfrente desalojos debido a los impactos de la crisis del COVID-19.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Proteger los fondos de salud de los sindicatos. </b><span style="font-weight: 400;">Los miembros de los sindicatos han luchado mucho por su seguro de salud. Biden se comprometerá a garantizar que sus fondos de salud por la Ley Taft-Hartley tengan los recursos financieros que necesitan para continuar a pesar de la crisis.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Un fondo de emergencia estatal y local</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Además de estas iniciativas federales, los gobernadores y alcaldes pueden acceder a fondos a través del Fondo de Emergencia Estatal y Local para amortiguar los impactos económicos en sus comunidades. Este fondo, como se señaló anteriormente, también proporcionará a los líderes estatales y locales recursos y flexibilidad para responder a la crisis de salud inmediata y a las consecuencias económicas de la manera que mejor responda a las necesidades de sus pueblos, ciudades y estados. La gama de ayudas incluirá:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Asistencia hipotecaria y de alquiler para los trabajadores afectados:</b><span style="font-weight: 400;"> Nadie debe enfrentar una ejecución hipotecaria o un desalojo porque se han afectado por la crisis del COVID-19. El Fondo de Emergencia Estatal y Local permitirá que los alcaldes y gobernadores implementen asistencia de alquiler, suspensiones temporales de los pagos sin intereses o alivio en el pago de la hipoteca para los trabajadores que han tenido que reducir sus horas, han sido despedidos o de otra manera están ganando menos debido al COVID-19.</span></li>
+<li style="font-weight: 400;"><b>Asistencia al empleador para mantener el trabajo:</b><span style="font-weight: 400;"> los fondos podrían ofrecer ayuda a los empleadores para mantener a los trabajadores en el empleo, o para compartir el trabajo con ayuda a tiempo parcial para los trabajadores, cuando se vean afectados por caídas en la demanda económica o una recesión.</span></li>
+<li style="font-weight: 400;"><b>Préstamos sin intereses para los negocios pequeños:</b><span style="font-weight: 400;"> los gobernadores y alcaldes también podrán complementar sus programas existentes para ayudar a los empresarios locales que se enfrentan a dificultades económicas temporales debido a interrupciones en la cadena de suministro, la disminución de los viajes o en la demanda económica debido a la continua incertidumbre financiera relacionada al COVID-19. Para complementar el programa de préstamos federales, los líderes estatales y locales pueden acceder a estos recursos para ayudar a los  negocios pequeños a hacer frente a un posible recorte brusco de la actividad económica.</span></li>
+<li style="font-weight: 400;"><b>Empleos necesarios:</b><span style="font-weight: 400;"> el fondo estará autorizado para financiar iniciativas de empleo locales o estatales existentes o nuevas, tanto para atender necesidades adicionales debido al COVID-19 como para abordar las reducciones resultantes en el empleo,.</span></li>
+<li style="font-weight: 400;"><b>Asistencia en efectivo o alivio contributivo específico reembolsable:</b><span style="font-weight: 400;"> Donde gobernadores y alcaldes determinen que sea necesario para abordar adecuadamente la gama completa del sufrimiento económico causado por el COVID-19, el fondo autorizará a estos líderes a utilizarlo directamente para implementar una ayuda progresiva más amplia en efectivo o un alivio contributivo: eso podría incluir pagos en efectivo a familias trabajadoras, cuidadores que no son remunerados, personas mayores o con discapacidades, y niños, o un subsidio por hijos. También podría usarse para financiar una nueva legislación con el fin de ampliar el alivio del crédito contributivo estatal por ingresos del trabajo.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b><i>Se necesitará más</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden entiende que la crisis tendrá impactos económicos más amplios que sin duda requerirán más acción. Los pasos descritos anteriormente deben tomarse de inmediato y el Congreso debe avanzar para comprender las implicaciones económicas más amplias y actuar como corresponde. Y, cualquier alivio que se provea a los estados o industrias debe incluir condiciones para apoyar a los trabajadores, incluida la protección de sus trabajos.</span></p>
+<p>&nbsp;</p>
+<p><b><i>Hacer que la economía sea más resistente para crisis futuras</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Biden ha presentado varios planes para construir una clase media más fuerte e inclusiva que aumente la capacidad de recuperación de todos los estadounidenses ante una crisis. Su plan para crear una nueva opción pública es la forma más rápida y efectiva de lograr una cobertura de salud universal. Invertirá en infraestructura, como banda ancha, esencial para mitigar el impacto de futuras pandemias. Y alentará la organización sindical y defenderá la negociación colectiva. Los sindicatos pueden ayudar a negociar una mejores protecciones de seguridad y salud, brindar mejor capacitación para el uso del equipo de protección personal, proteger contra los despidos y ayudar a garantizar salarios y beneficios generosos para ayudar a los trabajadores en una crisis. Y, los sindicatos pueden ofrecer una voz crítica en el manejo de crisis, especialmente aquellos que representan a los muchos trabajadores que se exponen a riesgos para mantener seguros a las personas en los Estados Unidos. </span><i><span style="font-weight: 400;">Lea el plan laboral de Joe Biden </span></i><a href="../joe-biden-lucha-por-nuestra-fuerza-laboral/index.html"><i><span style="font-weight: 400;">aquí</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+<p><b>MOVILIZAR AL MUNDO PARA ENFRENTAR ESTA CRISIS MIENTRAS SENTAMOS LAS BASES PARA EL FUTURO</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La única forma de detener la amenaza de enfermedades infecciosas como el COVID-19 es detectarlas temprano y contenerlas de manera efectiva en las comunidades en todo el mundo. Aún mientras tomamos pasos urgentes para minimizar la propagación del COVID-19 aquí en los Estados Unidos, debemos también ayudar a dirigir la respuesta a esta crisis mundial. Al hacerlo, le sumaremos el liderazgo al ámbito de la seguridad de la salud mundial en el futuro. </span></p>
+<p>&nbsp;</p>
+<p><b><i>Liderando la respuesta global al COVID-19</i></b></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Ordenar a la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID, por sus siglas en inglés), en coordinación con el Departamento de Estado de los Estados Unidos, DOD, HHS y los CDC, movilizar una respuesta internacional </b><span style="font-weight: 400;">que ayude a las naciones vulnerables a detectar, tratar y minimizar la propagación del COVID- 19, incluyendo el despliegue, cuando sea necesario, de los equipos de respuesta de asistencia en desastres de USAID. Biden dará poder al Departamento de Estado para garantizar que los Estados Unidos jueguen un papel importante en todas las decisiones globales sobre el brote y que nuestros expertos tengan el acceso que necesitan a los puntos críticos del COVID-19. Finalmente, mantenernos al margen o delegar en otras naciones nos hace menos seguros.</span></li>
+<li style="font-weight: 400;"><b>Solicitar la creación inmediata de una Junta Mundial de Emergencias de Salud para coordinar la respuesta a las crisis para las comunidades vulnerables. </b><span style="font-weight: 400;">La junta convocará al liderazgo de los Estados Unidos, a nuestros aliados del G-7, y a otros países en apoyo de la Organización Mundial de la Salud (OMS) para crear una respuesta coordinada de salud y económica a nivel mundial, especialmente con respecto a los países vulnerables. La junta reunirá a expertos científicos de la OMS y los CDC, los Centros para el Control y Prevención de Enfermedades de África y otros CDC clave, las instituciones financieras internacionales, y los principales representantes del sector privado y sin fines de lucro para (1) compensar el costo de llevar cualquier eventual vacuna a los países en desarrollo, (2) coordinar las medidas económicas con la respuesta de emergencia a nivel mundial, y (3) establecer y garantizar altos estándares de transparencia y comunicación. En el futuro, la convocatoria de la junta se produciría por una declaración de emergencia de salud pública de preocupación internacional por parte de la OMS.</span></li>
+<li style="font-weight: 400;"><b>Proteger a las tropas estadounidenses y a los ciudadanos desplegados,</b><span style="font-weight: 400;"> reforzando los programas de detección y protección de enfermedades de los CDC y el DOD en el extranjero, planificando la obtención de activos y despliegues diplomáticos y militares en países afectados por el COVID-19, y proporcionando pruebas, cuidado y tratamiento y, si es necesario, evacuación para militares, el personal del servicio de salud pública, el servicio exterior y el servicio civil desplegado que estén infectados.</span></li>
+</ul>
+<p><b><i>Fomentando la seguridad en la salud mundial</i></b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Bajo la administración de Obama-Biden, los Estados Unidos </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2014/09/26/remarks-president-global-health-security-agenda-summit"><span style="font-weight: 400;">establecieron</span></a><span style="font-weight: 400;"> la Agenda de Seguridad de Salud Global para movilizar al mundo contra la amenaza de enfermedades infecciosas emergentes. Una Administración de Biden no solo revitalizará y elevará esta agenda </span><a href="https://foreignpolicy.com/2020/01/31/coronavirus-china-trump-united-states-public-health-emergency-response/"><span style="font-weight: 400;">después de </span></a><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://foreignpolicy.com/2020/01/31/coronavirus-china-trump-united-states-public-health-emergency-response/"><span style="font-weight: 400;">años de negligencia</span></a><span style="font-weight: 400;"> bajo la Administración de Trump, sino que también la ampliará para garantizar que sea adecuada para enfrentar nuevos desafíos. Por encima de todo, necesitamos poner fin a los ciclos de pánico de inversión y negligencia en nuestro sistema de salud pública de los Estados Unidos y los sistemas de salud en todo el mundo. Deben mantenerse fuertes y listos para prevenir, detectar y responder a las amenazas de pandemia, ya sean provocadas por causas naturales y el cambio climático, el bioterrorismo o accidentes en laboratorios. Biden:</span></p>
+<p>&nbsp;</p>
+<ul>
+<li style="font-weight: 400;"><b>Dotará del personal completo todas las agencias federales, los grupos de trabajo y grupos asesores científicos y económicos centrados en la seguridad de la salud. </b><span style="font-weight: 400;">Esto incluye establecer un subsecretario en el Departamento de Estado para supervisar una oficina de Seguridad y Diplomacia en Salud Global, e involucrar a las oficinas regionales y embajadas para mejorar la preparación para la seguridad de la salud, la gobernanza y la coordinación global.</span></li>
+<li style="font-weight: 400;"><b>Adoptará nuevamente el compromiso internacional, incluyendoida la priorización de la financiación sostenida para la seguridad de la salud mundial,</b> <b>más allá de los créditos de emergencia,</b> <b>para fortalecer la capacidad conjunta permanente para la vigilancia biológica y la respuesta a emergencias de salud. </b><span style="font-weight: 400;">Biden exige la creación de un facilitador permanente en la Oficina del Secretario General de las Naciones Unidas para responder a eventos biológicos de grandes consecuencias, según </span><a href="https://www.nti.org/analysis/atomic-pulse/coronavirus-underscores-need-urgent-action-reduce-global-catastrophic-biological-risks/"><span style="font-weight: 400;">recomendado por expertos</span></a><span style="font-weight: 400;">, para facilitar la coordinación en las crisis entre las organizaciones de salud, seguridad y humanitarias. También pide recursos completos para la OMS, especialmente su Fondo de Contingencia para Emergencias.</span></li>
+<li style="font-weight: 400;"><b>Apoyará la financiación sostenible de la seguridad de la salud para llenar urgentemente las lagunas sustanciales en la preparación para una pandemia global. </b><span style="font-weight: 400;">La Administración de Biden construirá una coalición necesaria para llenar las lagunas globales urgentes en preparación para una pandemia, aumentará la rendición de cuentas para dichas inversiones, y producirá resultados medibles.</span></li>
+<li style="font-weight: 400;"><b>Desarrollará una fuerza laboral para la seguridad en la salud global en el siglo XXI. </b><span style="font-weight: 400;">Biden dará prioridad a la inversión y eliminará los obstáculos a la educación de los profesionales de salud pública, especialmente en comunidades menos favorecidas, incluyendo el fortalecimiento del </span><a href="https://www.cdc.gov/globalhealth/healthprotection/fetp/index.htm"><span style="font-weight: 400;">Programa de Capacitación en Epidemiología de Campo</span></a><span style="font-weight: 400;"> y el </span><a href="https://www.cdc.gov/ncbddd/birthdefectscount/training.html"><span style="font-weight: 400;">Programa de Epidemiología de Campo y Laboratorio</span></a><span style="font-weight: 400;"> del CDC. Debemos apoyar las oportunidades para que los expertos mundiales se capaciten juntos, para que estén listos para desplegarse para ayudar a la OMS y los gobiernos asociados a responder a las amenazas de enfermedades infecciosas, independientemente de su origen, incluso en entornos inseguros o inestables.</span></li>
+<li style="font-weight: 400;"><b>Combatirá el cambio climático como motor de amenazas para la salud. </b><span style="font-weight: 400;">La relación entre el cambio climático y la seguridad de la salud </span><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://nca2014.globalchange.gov/report/sectors/human-health"><span style="font-weight: 400;">está bien </span></a><a href="https://nca2014.globalchange.gov/report/sectors/human-health"><span style="font-weight: 400;">documentada</span></a><span style="font-weight: 400;"> y </span><a href="https://translate.google.com/translate?hl=en&amp;prev=_t&amp;sl=auto&amp;tl=es&amp;u=https://nca2014.globalchange.gov/report/sectors/human-health"><span style="font-weight: 400;">crear</span></a><span style="font-weight: 400;">á</span><span style="font-weight: 400;"> una amenaza creciente para los estadounidenses. Una Administración Biden volverá a involucrar a los Estados Unidos con el Acuerdo de París el primer día y liderará un esfuerzo para lograr que cada país importante aumente la ambición de sus objetivos climáticos nacionales. Como presidente, Biden integrará completamente el cambio climático en nuestra política exterior y en estrategias globales de seguridad de la salud, y priorizará los esfuerzos para mitigar los desafíos de enfermedades y migración causados por un planeta que se está calentando. </span><i><span style="font-weight: 400;">Lea el plan completo de Biden sobre el cambio climático </span></i><a href="../el-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental/index.html"><i><span style="font-weight: 400;">aquí</span></i></a><i><span style="font-weight: 400;">.</span></i></li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../covid-plan/index.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-de-biden-para-combatir-el-coronavirus-covid-19-y-prepararnos-para-futuras-amenazas-para-la-salud-mundial/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":670,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

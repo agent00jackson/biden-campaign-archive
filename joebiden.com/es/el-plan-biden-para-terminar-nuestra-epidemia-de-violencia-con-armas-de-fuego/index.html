@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan Biden Para Terminar Nuestra Epidemia De Violencia Con Armas De Fuego | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan Biden Para Terminar Nuestra Epidemia De Violencia Con Armas De Fuego | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Joe Biden sabe que la violencia con armas de fuego es una epidemia de salud pública. Casi 40,000 personas mueren cada año en los Estados Unidos a consecuencia de lesiones por armas de fuego, y muchas más resultan heridas. Algunas de estas muertes y lesiones son el resultado de tiroteos masivos que aparecen en los [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-05T08:34:43+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-to-End-Gun-Violence_1600x836_Digital_062920_Photo_V1-1024x683.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="683" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-to-End-Gun-Violence_1600x836_Digital_062920_Photo_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="18 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego/#webpage","url":"https://joebiden.com/es/el-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego/","name":"El Plan Biden Para Terminar Nuestra Epidemia De Violencia Con Armas De Fuego | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-10-23T18:20:04+00:00","dateModified":"2020-08-05T08:34:43+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego%2F&#038;format=xml" />
+<link rel="alternate" href="../../gunsafety.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1473 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../gunsafety.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../gunsafety.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1473 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan Biden Para Terminar Nuestra Epidemia De Violencia Con Armas De Fuego</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden sabe que la violencia con armas de fuego es una epidemia de salud pública. Casi 40,000 personas mueren cada año en los Estados Unidos a consecuencia de lesiones por armas de fuego, y muchas más resultan heridas. Algunas de estas muertes y lesiones son el resultado de tiroteos masivos que aparecen en los titulares nacionales. Otros son el resultado de actos diarios de violencia armada o suicidios que no aparecen en los titulares, pero son igualmente devastadores para las familias y las comunidades que se dejan atrás.</span></p>
+<p><span style="font-weight: 400;">Joe Biden se enfrentó a la Asociación Nacional del Rifle (NRA por sus siglas en inglés) en el escenario nacional y ganó, dos veces. En el 1993, aprobó en el Congreso la Ley Brady para la Prevención de Violencia con Armas de Fuego, que estableció el sistema de verificación de antecedentes que desde entonces ha mantenido a más de 3 millones de armas de fuego fuera de manos peligrosas. En el 1994, Biden, junto con la senadora Dianne Feinstein, aseguró la aprobación de prohibiciones de 10 años en armas de asalto y cartuchos e municiones de alta capacidad. Como presidente, Joe Biden derrotará a la NRA nuevamente.</span></p>
+<p><span style="font-weight: 400;">Joe Biden también sabe cómo reducir la violencia con armas de fuego mediante decretos ejecutivos. Después de la tragedia en la escuela primaria Sandy Hook en el 2012, el presidente Obama le encargó al vicepresidente Biden el desarrollo de propuestas legislativas y decretos para hacer que nuestras comunidades fuesen más seguras. Como resultado de este esfuerzo, la Administración Obama-Biden ejecutó más de dos docenas de decretos, incluyendo una disminución en las lagunas jurídicas en las exposiciones de armas, aumentando el número de registros en el sistema de verificación de antecedentes y ampliando la financiación de los servicios de salud mental.</span></p>
+<p><span style="font-weight: 400;">Está a nuestro alcance poner fin a nuestra epidemia de violencia armada y respetar la Segunda Enmienda, que tiene límites. Como presidente, Biden buscará políticas constitucionales de seguridad de armas con sentido común. Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Hará que los fabricantes de armas se hagan responsables.</b><span style="font-weight: 400;"> En el 2005, el entonces senador Biden votó en contra de la Ley de Protección del Comercio Legal en Armas, pero los fabricantes de armas presionaron con éxito al Congreso para asegurar su aprobación. Esta ley protege a estos fabricantes de la responsabilidad civil de sus productos, una protección que no se le otorga a ninguna otra industria. Biden priorizará derogar esta protección.</span></li>
+<li style="font-weight: 400;"><b>Sacará las armas de guerra de nuestras calles. </b><span style="font-weight: 400;">Las prohibiciones de armas de asalto y cartuchos  de alta capacidad que Biden, junto con la senadora Feinstein, aseguraron en el 1994 redujeron la letalidad de los tiroteos masivos. Pero para asegurar la aprobación de las prohibiciones, tuvieron que aceptar una disposición de eliminarlas en 10 años y cuando llegó el momento, la Administración Bush no pudo extenderlas. </span></li>
+<li style="font-weight: 400;"><b>Prohibirá la fabricación y venta de armas de asalto y cartuchos de alta capacidad.</b><span style="font-weight: 400;"> La ley federal impide que los cazadores de aves migratorias usen más de tres proyectiles en su escopeta. Eso significa que nuestra ley federal hace más para proteger a los patos que a los niños. Esto no es correcto. Joe Biden promulgará legislación para prohibir nuevamente las armas de asalto. Esta vez, las prohibiciones se diseñarán en base a las lecciones aprendidas en las prohibiciones del 1994. Por ejemplo, la prohibición de las armas de asalto estará diseñada para evitar que los fabricantes eludan la ley al hacer pequeños cambios que no limiten la letalidad del arma. Mientras trabaja para aprobar esta legislación, Biden también usará su autoridad ejecutiva para prohibir la importación de armas de asalto.</span></li>
+<li style="font-weight: 400;"><b>Regulará la posesión de armas de asalto existentes bajo la Ley Nacional de Armas de Fuego.</b><span style="font-weight: 400;"> Actualmente, la Ley Nacional de Armas de Fuego requiere que las personas que poseen ametralladoras, silenciadores y rifles de cañón corto se sometan a una verificación de antecedentes y registren esas armas en la Oficina de Alcohol, Tabaco, Armas de Fuego y Explosivos (ATF por sus siglas en inglés). Debido a estos requisitos, tales armas rara vez se usan en crímenes. Como presidente, Biden buscará legislación para regular la posesión de armas de asalto existentes bajo la Ley Nacional de Armas de Fuego.</span></li>
+<li style="font-weight: 400;"><b>Volverá a comprar las armas de asalto y cargadores de alta capacidad que ya están en nuestras comunidades. </b><span style="font-weight: 400;">Biden también instituirá un programa para re-comprar armas de guerra actualmente en nuestras calles. Esto les dará a las personas que ahora poseen armas de asalto o cartuchos de municiones de alta capacidad dos opciones: vender las armas al gobierno o registrarlas bajo la Ley Nacional de Armas de Fuego.</span></li>
+<li style="font-weight: 400;"><b>Reducirá el almacenamiento de armas. </b><span style="font-weight: 400;">Con el fin de reducir el almacenamiento de armas de fuego, Biden apoya la legislación que restringe a una la cantidad de armas de fuego que un individuo puede comprar por mes.</span></li>
+</ul>
+<p><b>Mantendrá las armas fuera de manos peligrosas.</b><span style="font-weight: 400;"> El sistema federal de verificación de antecedentes (Sistema nacional de verificación de antecedentes penales instantáneos) es una de las mejores herramientas que tenemos para prevenir la violencia armada, pero solo es efectivo cuando se usa. Biden promulgará una legislación universal de verificación de antecedentes y cerrará otras lagunas legales que permiten a las personas a las que se les debe prohibir comprar armas de fuego, realizar esas compras. Específicamente, él:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Requerirá verificación de antecedentes para todas las ventas de armas.</b><span style="font-weight: 400;"> Hoy, se estima que 1 de cada 5 armas de fuego se venden o transfieren sin una verificación de antecedentes. Biden promulgará una legislación universal de verificación de antecedentes, que requiera esta verificación para todas las ventas de armas con excepciones muy limitadas, como obsequios entre familiares cercanos. Esto cerrará las lagunas jurídicas que la Administración Obama-Biden redujo cuando se compran armas en exposiciones o a través del internet, pero que no pueden cerrar por completo solo con la acción ejecutiva.</span></li>
+<li style="font-weight: 400;"><b>Cerrará otras lagunas en el sistema de verificación de antecedentes federales.</b><span style="font-weight: 400;"> Además de cerrar la &#8221; escapatoria de novios&#8221; resaltada a continuación, Biden:</span></li>
+<li style="font-weight: 400;"><b>Restablecerá la política Obama-Biden de mantener las armas fuera del alcance de ciertas personas que no pueden manejar sus asuntos por razones mentales, lo que el presidente Trump revirtió.</b><span style="font-weight: 400;"> En el 2016, la Administración Obama-Biden finalizó una regla para asegurarse de que la Administración del Seguro Social (SSA) envíe al sistema de verificación de antecedentes los registros que tiene de las personas a las que se les prohíbe comprar o poseer armas de fuego porque han sido adjudicadas por la SSA como incapaz de manejar sus asuntos por razones mentales. Pero una de las primeras acciones que Donald Trump tomó como presidente fue revertir esta regla. El presidente Biden promulgará legislación para codificar esta política.</span></li>
+<li style="font-weight: 400;"><b>Cerrará la &#8220;escapatoria de los delitos de odio&#8221;.</b><span style="font-weight: 400;"> Biden promulgará una legislación que prohíba que un individuo &#8220;que haya sido condenado por un delito menor de odio o haya recibido una sentencia reforzada por un delito menor debido al odio o prejuicio en su comisión&#8221; compre o posea un arma de fuego.</span></li>
+<li style="font-weight: 400;"><b>Cerrará la &#8220;escapatoria de Charleston&#8221;.</b><span style="font-weight: 400;"> La escapatoria de Charleston permite a las personas completar una compra de armas de fuego si su verificación de antecedentes no se completa dentro de los tres días laborables. Biden apoya la propuesta en la Ley de Verificación de Antecedentes Mejorada del 2019, que extiende el plazo de 3 a 10 días. Biden también ordenará a la Oficina Federal de Investigaciones (FBI por sus siglas en inglés) que coloque en su escritorio dentro de sus primeros 100 días como presidente, un informe detallado de los casos en que las verificaciones de antecedentes no se completan dentro de los 10 días laborables y los pasos que el gobierno federal puede tomar para reducir o eliminar esta ocurrencia.</span></li>
+<li style="font-weight: 400;"><b>Cerrará la escapatoria de &#8220;fugitivos de la justicia&#8221; creada por la Administración Trump.</b><span style="font-weight: 400;"> Debido a las acciones de la Administración Trump, los registros de casi 500,000 fugitivos de la justicia, a quienes se les prohíbe comprar armas de fuego, fueron eliminados del sistema de verificación de antecedentes. La Administración Biden restaurará estos registros y promulgará legislación para dejar en claro que las personas que enfrentan órdenes de arresto tienen prohibido comprar o poseer armas de fuego.</span></li>
+</ul>
+<p><b>Terminar la venta de armas de fuego y municiones por internet.</b><span style="font-weight: 400;"> Biden promulgará una legislación para prohibir todas las ventas de armas de fuego, municiones, kits y piezas de armas por internet.</span></p>
+<p><b>Creará un programa efectivo para garantizar que las personas a las que se les prohíba poseer armas de fuego renuncien a sus armas.</b><span style="font-weight: 400;"> La ley federal define categorías de individuos a quienes se les prohíbe comprar o poseer armas de fuego, y el sistema de verificación de antecedentes federales es una herramienta eficaz para garantizar que las personas a las que se le prohíba comprar armas de fuego, no lo puedan hacer. Pero carecemos de cualquier herramienta seria para garantizar que cuando alguien se le vuelva a prohibir, por ejemplo, porque comete un delito violento, renuncie a la posesión de sus armas de fuego. Hay algunos modelos prometedores de cómo se podría hacer cumplir esto. Por ejemplo, California tiene un proceso obligatorio para garantizar la renuncia por parte de cualquier individuo recientemente sujeto a una orden de restricción de violencia doméstica. Como presidente, Biden ordenará al FBI y la ATF que elaboren un modelo de proceso de renuncia, promulgará  leyes necesarias para garantizar la renuncia cuando las personas caigan bajo una estas prohibiciones federales y luego brindará asistencia técnica y financiera a los gobiernos estatales y locales para establecer procesos de renuncia por cuenta propia.</span></p>
+<p><b>Incentivará el uso de leyes estatales de &#8220;riesgo extremo&#8221;. </b><span style="font-weight: 400;">Las leyes de riesgo extremo, también llamadas leyes de &#8220;señal de alarma&#8221;, permiten a los miembros de la familia o a los funcionarios encargados de hacer cumplir la ley, que elimine temporalmente el acceso de un individuo a las armas de fuego cuando ese individuo está en crisis y representa un peligro para sí mismo o para otros. Biden incentivará la adopción de estas leyes dando fondos a los estados para implementarlas. Y ordenará al Departamento de Justicia de EE. UU. que emita las mejores prácticas y ofrezca asistencia técnica a los estados interesados ​​en promulgar una ley de riesgo extremo.</span></p>
+<p><b>Dará incentivos a los estados para establecer programas de licencias de armas. </b><span style="font-weight: 400;">Biden promulgará legislación para otorgar subsidios a los gobiernos estatales y locales para que le exijan a las personas a que obtengan una licencia antes de comprar un arma.</span></p>
+<p><b>Financiará adecuadamente el sistema de verificación de antecedentes.</b><span style="font-weight: 400;"> El presidente Obama y el vicepresidente Biden ampliaron los incentivos para que los estados presenten registros de personas a las que se les prohíbe tener armas de fuego, al sistema de verificación de antecedentes. Como presidente, Biden continuará priorizando esa financiación y asegurará que el FBI esté adecuadamente financiado para manejar de manera precisa y eficiente el sistema NICS.</span></p>
+<p><b>ABORDANDO LA COMBINACIÓN MORTAL DE ARMAS Y LA VIOLENCIA DOMÉSTICA</b></p>
+<p><span style="font-weight: 400;">Las estadísticas muestran una historia devastadora y abrumadora. La probabilidad de que una mujer en una situación de violencia doméstica sea asesinada aumenta en un factor de cinco si hay un arma cerca. La mitad de los tiroteos masivos involucran a un individuo disparando a un miembro de la familia o ex pareja íntima. Esta conexión mortal también afecta trágicamente a los niños: el 86% de los niños muertos en tiroteos con cuatro o más víctimas estuvieron involucrados en violencia doméstica o familiar.</span></p>
+<p><span style="font-weight: 400;">Biden reconoce que las epidemias de violencia armada y violencia doméstica están vinculadas y no se pueden resolver de forma aislada. Abordar la conexión de estos desafíos será un enfoque central del trabajo contra la violencia de Biden como presidente.</span></p>
+<p><span style="font-weight: 400;">La Ley de Reautorización de la Violencia Contra las Mujeres del 2019, que el líder McConnell se niega a llevar a votación, incluye una serie de reformas para mantener las armas de fuego fuera del alcance de los abusadores. El senador McConnell debería garantizar que esta legislación se apruebe mucho antes de que el presidente Biden preste juramento. Pero si McConnell se niega a actuar, Biden promulgará una legislación para cerrar la llamada &#8220;laguna de novios&#8221; y la &#8220;laguna de acoso&#8221; al prohibir a todas las personas condenadas por asalto, agresión o acecho comprar o poseer armas de fuego, independientemente de su conexión con la víctima. Esta propuesta sigue el modelo de las leyes existentes en California, Connecticut, Hawai, Nevada, Nueva York y Pensilvania. Biden también apoya la promulgación de la propuesta de prohibir a cualquier persona bajo una orden de restricción temporal comprar o poseer un arma de fuego antes de su audiencia.</span></p>
+<p><span style="font-weight: 400;">Además, el presidente Biden:</span></p>
+<p><b>Establecerá un nuevo grupo de trabajo sobre el acoso y abuso en línea que se enfocará en la conexión entre los tiroteos masivos, el acoso por internet, el extremismo y la violencia contra las mujeres.</b><span style="font-weight: 400;"> Como presidente, Joe Biden convocará un Grupo de Trabajo nacional con agencias federales, líderes estatales, defensores, agentes de la ley y expertos en tecnología para estudiar el crimen desenfrenado por internet que es el acoso sexual, el acecho y las amenazas, incluidos el porno de venganza y las falsificaciones profundas, y la conexión entre este acoso y los tiroteos masivos, el extremismo y la violencia contra las mujeres. El Grupo de trabajo se encargará de desarrollar estrategias y recomendaciones de vanguardia sobre cómo los gobiernos federales y estatales, las empresas de medios sociales, las escuelas y otras entidades públicas y privadas pueden abordar este desafío único. El Grupo de trabajo considerará la responsabilidad de plataformas, los requisitos de informes transparentes para incidentes de acoso y respuesta, y las mejores prácticas.</span></p>
+<p><b>Ampliará el uso de evaluaciones de letalidad basadas en evidencia por parte de la policía en casos de violencia doméstica</b><span style="font-weight: 400;">. Las evaluaciones de letalidad, a veces llamadas evaluaciones de &#8220;riesgo&#8221; o &#8220;peligro&#8221;, son una estrategia comprobada para ayudar a los agentes del orden a identificar a los sobrevivientes de violencia doméstica que corren un alto riesgo de ser asesinados por sus abusadores. Estos sobrevivientes se conectan con programas de servicios sociales que pueden ofrecer servicios y planificación de seguridad. Una evaluación del Programa de Evaluación de Letalidad (LEP) creado por la Red de Maryland contra la Violencia Doméstica mostró resultados prometedores. El aumento de los fondos federales incentivará a las jurisdicciones a aprovechar la implementación de estos programas más ampliamente.</span></p>
+<p><b>Se asegurará de que los propietarios de armas de fuego asuman la responsabilidad de garantizar que sus armas se usen de manera segura.</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Pondrá a Estados Unidos en el camino para garantizar que el 100% de las armas de fuego vendidas en Estados Unidos sean armas inteligentes. </b><span style="font-weight: 400;">Hoy en día tenemos la tecnología para permitir que solo los usuarios autorizados disparen un arma. Por ejemplo, la tecnología de pistola inteligente existente, requiere la verificación de huellas digitales antes de su uso. Biden cree que deberíamos trabajar para eventualmente exigir que el 100% de las armas de fuego vendidas en los EE. UU. sean armas inteligentes. Pero en este momento, el NRA y los fabricantes de armas están acosando a los traficantes de armas de fuego que intentan vender estas armas. Biden se enfrentará a estas tácticas de intimidación y emitirá un llamado a la acción para que los fabricantes de armas, distribuidores y otras entidades públicas y privadas tomen medidas para acelerar nuestra transición a las armas inteligentes.</span></li>
+<li style="font-weight: 400;"><b>Responsabilizará a los adultos por dar acceso a menores a armas de fuego</b><span style="font-weight: 400;">. Biden apoya la legislación que responsabiliza penal y civilmente a los adultos por otorgarle a un menor acceso directo o por negligencia a un arma de fuego, independientemente de si el menor realmente posee el arma de fuego.</span></li>
+<li style="font-weight: 400;"><b>Exigirá a los propietarios de armas que almacenen sus armas de manera segura.</b><span style="font-weight: 400;"> Biden aprobara una legislación que exija que los propietarios de armas de fuego almacenen armas de manera segura en sus hogares.</span></li>
+</ul>
+<p><b>Hará que los agentes de seguridad puedan hacer cumplir efectivamente nuestras leyes sobre las armas.</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Priorizará el enjuiciamiento de los compradores fantasma.</b><span style="font-weight: 400;"> Los “compradores fantasma” compran un arma de fuego para personas que no pueden pasar una verificación de antecedentes. Biden pondrá fin a esas lagunas mediante la promulgación de una ley para hacer que todas las compras fantasma sean un delito federal grave y garantice que el Departamento de Justicia de los Estados Unidos tenga recursos suficientes para priorizar su enjuiciamiento.</span></li>
+<li style="font-weight: 400;"><b>Se notificará a la policía cuando un posible comprador de armas de fuego no pasa una verificación de antecedentes. </b><span style="font-weight: 400;">Con demasiada frecuencia, cuando las personas que están prohibidas a comprar una arma, lo intentan y no pasan una verificación de antecedentes, las autoridades estatales y locales no son informadas del intento. Como presidente, Biden ordenará al FBI que establezca un proceso para garantizar la notificación oportuna de las denegaciones a las fuerzas del orden público estatales y locales, y apoyará la legislación para codificar este proceso. Esto faculta a las fuerzas del orden para hacer un seguimiento y garantizar que las personas con esta prohibición no intenten adquirir armas de fuego por otros medios.</span></li>
+<li style="font-weight: 400;"><b>Requerirá que los propietarios de armas de fuego informen si pierden o les roban su arma. </b><span style="font-weight: 400;">Los propietarios responsables de armas tienen la responsabilidad de informar a la policía si pierden o les roban su arma. Biden promulgará legislación para hacer de esto la ley del país.</span></li>
+<li style="font-weight: 400;"><b>Detendrá las “pistolas fantasmas”. </b><span style="font-weight: 400;">Una forma en que las personas que no pueden obtener legalmente una pistola pueden tener acceso a un arma es armando una por su cuenta, ya sea comprando un kit de piezas de armas desmontadas o imprimiendo en 3D un arma de fuego que funcione. Biden detendrá la proliferación de estas llamadas &#8220;pistolas fantasmas&#8221; al aprobar una legislación que exija que los compradores de kits de armas o código de impresión 3D aprueben una verificación de antecedentes federales. Además, Biden se asegurará de que la autoridad para las exportaciones de armas de fuego permanezca en el Departamento de Estado y, si es necesario, revertirá una norma presentada por el presidente Trump. Esto asegurará que el Departamento de Estado continúe bloqueando el código utilizado para imprimir en 3D las armas de fuego para que no estén disponibles por Internet.</span></li>
+<li style="font-weight: 400;"><b>Reformará, financiará y empoderará al Departamento de Justicia de los EE. UU. para hacer cumplir nuestras leyes sobre armas. </b><span style="font-weight: 400;">Biden ordenará a su Fiscal General a que le entregue dentro de sus primeros 100 días un conjunto de recomendaciones para reestructurar la ATF y las agencias relacionadas del Departamento de Justicia para hacer cumplir de manera más efectiva nuestras leyes sobre armas. Luego, Biden trabajará para asegurar los fondos suficientes para que el Departamento de Justicia haga cumplir efectivamente nuestras leyes de armas existentes, aumente la frecuencia de las inspecciones de los vendedores de armas de fuego y derogue a los conductores que se interponen en el camino de ese trabajo.</span></li>
+<li style="font-weight: 400;"><b>Ordenará que la ATF emita un informe anual sobre el tráfico de armas de fuego.</b><span style="font-weight: 400;"> Este informe proporcionará a los funcionarios información crítica para identificar mejor las estrategias para frenar el tráfico de armas de fuego.</span></li>
+</ul>
+<p><b>ABORDAR LA VIOLENCIA DE ARMAS URBANAS CON INTERVENCIONES COMUNITARIAS BASADAS EN EVIDENCIA</b></p>
+<p><span style="font-weight: 400;">Los actos diarios de violencia armada en nuestras comunidades pueden no ser titulares nacionales, pero son tan devastadores para los sobrevivientes y las familias de las víctimas como la violencia armada que aparece en primera plana. Y, estos actos diarios de violencia armada impactan desproporcionadamente a las comunidades de color. Pero hay razones para ser optimista. Existen estrategias comprobadas para reducir la violencia armada en las comunidades urbanas sin recurrir al encarcelamiento. Por ejemplo, Group Violence Intervention organiza a los líderes de la comunidad para que trabajen con las personas con mayor probabilidad de cometer actos de violencia armada, expresan la demanda de la comunidad de que cese la violencia armada y conectan a las personas que pueden ser perpetradoras con servicios de apoyo social y económico para disuadir la violencia. Este tipo de intervenciones ha reducido los homicidios hasta en un 60%. La Intervención de violencia en el hospital involucra a los jóvenes que han sido heridos por la violencia armada mientras todavía están en el hospital, conectándolos con servicios sociales y económicos que pueden disminuir la probabilidad de que participen o sean víctimas de violencia armada en el futuro. Biden creará una iniciativa de ocho años por $900 millones para financiar este y otros tipos de intervenciones basadas en evidencia de 40 ciudades por todo el país: las 20 ciudades con el mayor número de homicidios y 20 ciudades con el mayor número de homicidios per cápita. Se estima que esta propuesta salvará más de 12,000 vidas durante el programa de ocho años.</span></p>
+<p><b>Dedicará las mentes científicas más brillantes a resolver la epidemia de salud pública por violencia armada.</b><span style="font-weight: 400;"> En el 2013, el presidente Obama emitió un memorando aclarando que una cláusula de apropiaciones de larga data que prohibió a los Centros para el Control y la Prevención de Enfermedades (CDC por sus siglas en inglés) y otras agencias científicas federales usar dólares federales para &#8220;defender o promover el control de armas&#8221; no prohíbe que esas agencias investiguen las causas y la prevención de la violencia armada. Los Institutos Nacionales de Salud (NIH por sus siglas en inglés) posteriormente se embarcaron en financiar parte de esta investigación, aunque el liderazgo republicano en el Congreso se negó a asignar fondos a los CDC para este trabajo. Biden solicitará al Congreso que asigne $50 millones para acelerar esta investigación en los CDC y el NIH.</span></p>
+<p><b>Prohibirá el uso de fondos federales para armar o capacitar a educadores para descargar armas de fuego. </b><span style="font-weight: 400;">Deberíamos aprobar leyes racionales sobre armas que no requieren que los educadores que ya tienen demasiado que hacer también protejan la seguridad de sus estudiantes. Biden apoya prohibir a los estados que usen dólares federales para armar o capacitar a educadores para descargar armas de fuego.</span></p>
+<p><b>Abordará la epidemia de suicidios con armas de fuego</b><span style="font-weight: 400;">. Biden cree que cualquier plan para abordar la epidemia de violencia armada debe abordar los suicidios con armas de fuego, que representan 6 de cada 10 muertes relacionadas con armas de fuego, pero a menudo quedan fuera de la conversación. Muchas de las políticas mencionadas anteriormente, incluidos los requisitos de almacenamiento seguro y las órdenes de protección contra riesgos extremos, tendrán un grave impacto en los esfuerzos para reducir la violencia por armas de fuego. Pero hay mucho más que debemos hacer para apoyar a las personas que experimentan ideas suicidas. En los próximos meses, Biden presentará un plan integral para mejorar el acceso a los servicios de salud mental.</span></p>
+<p><b>APOYO A LOS SOBREVIVIENTES DE VIOLENCIA Y SUS COMUNIDADES</b></p>
+<p><span style="font-weight: 400;">La violencia provoca ondas de trauma en todas nuestras comunidades, impactando no solo a las víctimas de la violencia sino también a sus comunidades y a los que ayudan. El miedo a los tiroteos en la escuela está teniendo un impacto notable en la salud mental de la Generación Z. La violencia de la pareja íntima está relacionada con la depresión, el estrés postraumático y otros desafíos de salud mental entre los sobrevivientes. Y, este trauma puede ser intergeneracional. La ciencia ahora muestra que los niños pequeños que son testigos de la violencia, incluso en su hogar, literalmente alteran las partes de sus cerebros que afectan el &#8220;razonamiento, la planificación y el control del comportamiento&#8221;.</span></p>
+<p><span style="font-weight: 400;">En primer lugar, necesitamos reducir la violencia para evitar que ocurra un trauma. Pero también debemos tratar el trauma resultante como una grave crisis por derecho propio.</span></p>
+<p><span style="font-weight: 400;">Como presidente, Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Hará que los programas federales estén más informados sobre el trauma.</b><span style="font-weight: 400;"> Durante sus primeros 100 días, Biden ordenará que su gabinete lleve a cabo una revisión de todos los programas federales que sirven directamente a las comunidades que puedan experimentar violencia e identifiquen reformas para asegurarse de que estos programas aborden efectivamente el trauma resultante. Luego, Biden invertirá fondos federales importantes para expandir y mejorar el apoyo del gobierno federal a la atención culturalmente informada y basada en el trauma.</span></li>
+<li style="font-weight: 400;"><b>Creará una red de centros de atención de trauma.</b><span style="font-weight: 400;"> Biden reunirá oficinas dentro del gobierno federal para establecer centros especializados en atención de trauma para sobrevivientes de violencia, con un enfoque especial en sobrevivientes de violencia doméstica y sexual. Los servicios de violencia doméstica se centran en satisfacer las necesidades de emergencia de los sobrevivientes, incluyendo la planificación de seguridad y la intervención en crisis. Como resultado, los proveedores primarios carecen de los recursos que necesitan para ofrecer servicios terapéuticos para ayudar a los sobrevivientes a recuperarse de un trauma. Estos centros de atención de trauma serán flexibles para satisfacer las necesidades de las comunidades, y podrían alojarse en centros de crisis de violación, programas de violencia doméstica, universidades y centros de salud mental existentes.</span></li>
+</ul>
+<p><b>Capacitará a los proveedores de servicios de salud y otros en atención centrada en el trauma. </b><span style="font-weight: 400;">Para evitar la revictimización y el trauma secundario, Biden alineará los esfuerzos de capacitación en todos los programas federales relevantes para incluir un enfoque en la comprensión de los efectos traumáticos de la violencia, brindar atención adecuada para evitar el trauma, vincular a los sobrevivientes con terapias de trauma basadas en evidencia y reducir los mitos sobre la violencia doméstica y sexual. Esto se logrará a través de directivas de la agencia, orientación política y condiciones especiales para los concesionarios y contratistas.</span></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../gunsafety.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-biden-para-terminar-nuestra-epidemia-de-violencia-con-armas-de-fuego/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":444,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

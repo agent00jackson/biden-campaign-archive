@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Términos y Condiciones | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Términos y Condiciones | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Términos y condiciones Última actualización: 25 de abril de 2019 POR FAVOR LEA ESTOS TÉRMINOS Y CONDICIONES CUIDADOSAMENTE. AL ACCEDER O UTILIZAR ESTE SITIO, ACEPTA ESTAR OBLIGADO POR LOS TÉRMINOS Y CONDICIONES DESCRITOS AQUÍ. SI NO ESTÁ DE ACUERDO CON TODOS ESTOS TÉRMINOS, NO USE ESTE SITIO. Este sitio es operado por BFPCC, Inc., también [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/terminos/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-07-29T21:57:01+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-to-End-the-Opioid-Crisis-2_1600x836_Digital_062920_Photo_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-to-End-the-Opioid-Crisis-2_1600x836_Digital_062920_Photo_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="18 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/terminos/#webpage","url":"https://joebiden.com/es/terminos/","name":"T\u00e9rminos y Condiciones | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-04-24T21:53:45+00:00","dateModified":"2020-07-29T21:57:01+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/terminos/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fterminos%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fterminos%2F&#038;format=xml" />
+<link rel="alternate" href="../../terms/index.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-561 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../terms/index.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../terms/index.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-561 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">Términos y Condiciones</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p>Términos y condiciones</p>
+<p>Última actualización: 25 de abril de 2019</p>
+<p>POR FAVOR LEA ESTOS TÉRMINOS Y CONDICIONES CUIDADOSAMENTE. AL ACCEDER O UTILIZAR ESTE SITIO, ACEPTA ESTAR OBLIGADO POR LOS TÉRMINOS Y CONDICIONES DESCRITOS AQUÍ. SI NO ESTÁ DE ACUERDO CON TODOS ESTOS TÉRMINOS, NO USE ESTE SITIO.</p>
+<p>Este sitio es operado por BFPCC, Inc., también referido como Biden for President (junto con los afiliados, &#8220;Biden para Presidente&#8221;, &#8220;nosotros&#8221; o &#8220;nos&#8221;). Estos Términos y Condiciones (“Términos”) se aplican únicamente a su acceso y uso del sitio web operado por Biden for President y otros sitios web, sitios móviles y otros servicios en línea que están vinculados a estos Términos y son operados por Biden for President (los “Sitios&#8221;).</p>
+<p>Nos reservamos el derecho de cambiar o modificar cualquiera de los términos y condiciones contenidos en los Términos en cualquier momento y a nuestro exclusivo criterio. Cualquier cambio o modificación entrará en vigencia inmediatamente después de la publicación de las revisiones en los Sitios, y usted renuncia a cualquier derecho que pueda tener para recibir un aviso específico de dichos cambios o modificaciones. Su uso continuo de los Sitios después de la publicación de cambios o modificaciones, confirmará su aceptación de dichos cambios o modificaciones.</p>
+<p>Todas las preguntas o comentarios sobre los Sitios o el contenido del sitio deben dirigirse a <a href="mailto:copyrightcomplaints@joebiden.com">copyrightcomplaints@joebiden.com</a>.</p>
+<p>1. <span style="text-decoration: underline;">Derechos de autor y licencia limitada</span>. A menos que se indique lo contrario en los Sitios, los Sitios y todo el contenido y otros materiales en los Sitios, incluidos, entre otros: el logotipo de Biden for President y todos los diseños, texto, gráficos, imágenes, información, datos, software, herramientas, widgets, archivos de sonido y otros archivos, y la selección y disposición de los mismos (colectivamente, los &#8220;Materiales del sitio&#8221;), son propiedad exclusiva de Biden for President o sus licenciantes o usuarios y están protegidos por las leyes internacionales de derechos de autor y de los Estados Unidos.</p>
+<p>Se le otorga una licencia limitada, no sublicenciable, para tener acceso y utilizar los Sitios y los Materiales del Sitio que pretendemos utilizar para su uso únicamente informativo, no comercial y personal. Dicha licencia está sujeta a los Términos y no incluye: (a) cualquier reventa o uso comercial de los Sitios o los Materiales del Sitio en los mismos; (b) la reproducción, distribución, presentación pública o exhibición pública de cualquier Material del Sitio, excepto según lo expresamente permitido en el Sitio; (c) modificar o hacer cualquier uso derivado de los Sitios o los Materiales del Sitio, o cualquier parte de los mismos; (d) uso de cualquier minería de datos, robots o métodos similares de recolección o extracción de datos; (e) descargar (aparte del almacenamiento en caché de la página) cualquier parte de los Sitios, los Materiales del Sitio o cualquier información contenida en ellos, excepto lo expresamente permitido en los Sitios; o (f) cualquier uso de los Sitios o los Materiales del Sitio que no sea para su propósito previsto. Cualquier uso de los Sitios o los Materiales del Sitio que no sean los específicamente autorizados en este documento, sin el permiso previo por escrito de Biden for President, está estrictamente prohibido y terminará la licencia otorgada en este documento. Dicho uso no autorizado también puede violar las leyes aplicables, incluidas, entre otras, las leyes de derechos de autor y marcas registradas, y los reglamentos y estatutos de comunicaciones aplicables. A menos que se indique explícitamente en el presente documento, nada en estos Términos se interpretará como que confiere una licencia a los derechos de propiedad intelectual, ya sea por impedimento legal, implicación o de otra manera. Esta licencia es revocable en cualquier momento.</p>
+<p>2. <span style="text-decoration: underline;">Marcas registradas</span>. Todos los logotipos y eslóganes contenidos en los Sitios son marcas registradas de Biden for President, sus proveedores o licenciatarios, o terceros, y no pueden ser copiados, imitados o utilizados, en todo o en parte, sin el permiso previo por escrito de Biden for President o el titular de la marca registrada aplicable. No puede utilizar ninguna meta tag ni cualquier otro &#8220;texto oculto&#8221; que utilice &#8220;Biden for President&#8221; o cualquier otro nombre, marca registrada o nombre de producto o servicio de Biden for President sin nuestro permiso previo por escrito. Además, la apariencia del Sitio, incluidos todos los encabezados de página, gráficos personalizados, iconos de botones y textos, es la marca de servicio, marca registrada y/o imagen comercial de Biden for President y no se puede copiar, imitar, ni usar, total o parcialmente, sin nuestro permiso previo por escrito. Todas las demás marcas comerciales, marcas registradas, nombres de productos y nombres de compañías o logotipos mencionados en los Sitios son propiedad de sus respectivos dueños. La referencia a cualquier producto, servicio, proceso u otra información, por nombre comercial, marca registrada, fabricante y proveedor u otro, no constituye o implica respaldo, patrocinio o recomendación de los mismos por parte de nosotros.</p>
+<p>No puede utilizar el logotipo de Biden for President ni otro gráfico de propiedad de Biden for President para enlazar a estos Sitios sin el permiso expreso por escrito de Biden for President. Además, no puede usar, encuadrar o utilizar técnicas de enmarcado para incluir ninguna marca registrada, logotipo u otra información de propiedad de Biden for President, incluidas las imágenes que se encuentran en los Sitios, el contenido de cualquier texto o la disposición/diseño de cualquier página o formulario contenido en una página en los Sitios sin el consentimiento expreso por escrito de Biden for President. Excepto por lo indicado anteriormente, no se le otorga ningún derecho o licencia por implicación, impedimento o de otra manera en o bajo cualquier patente, marca registrada, derecho de autor o derecho de propiedad de Biden for President o cualquier tercero.</p>
+<p>3. <span style="text-decoration: underline;">Sitios de terceros, funcionalidad y contenido</span>. Los Sitios pueden poner información de terceros, anuncios, promociones y otro contenido disponible en o a través de los Sitios (&#8220;<span style="text-decoration: underline;">Contenido de terceros</span>&#8220;). Nuestros Sitios también pueden vincular o proporcionar acceso a sitios web de terceros y otros productos y servicios fuera de nuestro control (en conjunto, &#8220;<span style="text-decoration: underline;">Productos y servicios de terceros</span>&#8220;). Estos Productos y Servicios de Terceros pueden incluir, por ejemplo, el registro y la gestión de eventos y voluntarios, la funcionalidad de donación y pago, y otras características, funcionalidades y servicios impulsados por terceros. Biden for President no respalda, adopta, patrocina, recomienda ni acepta la responsabilidad de ningún Contenido de Terceros o Productos y Servicios de Terceros, y no hacemos ninguna representación o garantía de ningún tipo con respecto a ellos. Estos Productos y Servicios de Terceros y el Contenido de Terceros no están bajo el control de Biden for President, y Biden for President no es responsable de su contenido, calidad, naturaleza, confiabilidad, privacidad, seguridad de datos u otras prácticas o del manejo de su información que pone a disposición de ellos. Sus relaciones comerciales con estos terceros, y los términos, condiciones, garantías o representaciones asociadas con ellos, son únicamente entre usted y dichos terceros. Le recomendamos que revise sus términos y políticas aplicables.</p>
+<p>4. <span style="text-decoration: underline;">Comunicaciones electrónicas y política de privacidad.</span> Usted da su consentimiento para que nos comuniquemos con usted sobre los Sitios y Biden for President por correo electrónico, mensaje de texto u otros medios electrónicos. Consulte nuestra <a href="../politica-de-privacidad/index.html">política de privacidad</a> para obtener información sobre cómo recopilamos, usamos y divulgamos información de nuestros usuarios. Usted acepta que no nos proporcionará la información personal de ninguna otra persona a menos que tenga los derechos para hacerlo conforme a la ley aplicable y haya compartido nuestra <a href="../politica-de-privacidad/index.html">política de privacidad</a> con la persona correspondiente.</p>
+<p>5. <span style="text-decoration: underline;">Conducta prohibida</span>. Usted no puede tener acceso ni usar, o intentar tener acceso o usar, los Sitios para tomar cualquier acción que pudiera perjudicarnos a nosotros o a cualquier otra persona o entidad, ni interferir con el funcionamiento de los Sitios o usar los Sitios de una manera que infrinja cualquier ley. Por ejemplo, y sin limitación, no puede:</p>
+<p>a. Hacerse pasar por cualquier persona o entidad o tergiversar su afiliación o el origen de los materiales que transmite;</p>
+<p>b. Participar en spidering no autorizado, &#8220;scraping&#8221; ni extraer contenido o información personal, tampoco utilizar cualquier otro medio automatizado no autorizado para compilar información;</p>
+<p>c. Usar los Sitios para tener acceso, extraer, copiar, recopilar, reunir o juntar información o datos sobre otros usuarios de los Sitios sin el previo consentimiento expreso del usuario correspondiente;</p>
+<p>d. Realizar cualquier acción que imponga una carga irrazonable o desproporcionadamente grande en nuestra red o infraestructura;</p>
+<p>e. Utilizar cualquier dispositivo, software o rutina para interferir o intentar interferir con el funcionamiento adecuado de los Sitios o cualquier actividad realizada en los Sitios o intentar sondear, examinar, probar la vulnerabilidad o violar la seguridad de cualquier sistema o red, incluidos, sin limitación, a través de virus, datos corruptos u otros archivos dañinos, perjudiciales o destructivos;</p>
+<p>f. Intentar modificar, copiar, realizar trabajos derivados, descifrar, separar, desensamblar o realizar ingeniería inversa de cualquiera de los programas que forman parte de los Sitios o que de alguna manera forman parte de ellos;</p>
+<p>g. Distribuir cualquier material no autorizado o anunciar o promocionar productos, servicios o campañas políticas sin nuestro permiso expreso por escrito (incluido, sin limitación, el envío de correo no deseado);</p>
+<p>h. Sublicenciar cualquiera de sus derechos bajo estos Términos;</p>
+<p>i. Acosar o interferir materialmente de cualquier manera con el uso o disfrute de los Sitios por parte de otro usuario;</p>
+<p>j. Participar en cualquier otra conducta que restrinja o impida a cualquier persona o entidad el uso o disfrute de los Sitios, o que, a nuestro exclusivo juicio, nos exponga a nosotros o a cualquiera de nuestros usuarios, afiliados o cualquier otra persona o entidad a cualquier responsabilidad, daños, o detrimento de cualquier tipo; o</p>
+<p>k. De lo contrario, utilice los Sitios para cualquier propósito ilegal o no autorizado, o participe, aliente o promueva cualquier actividad que viole estos Términos o cualquier otra regla, política o norma adicional publicada en el Sitio o que se le proporcione de otro modo.</p>
+<p>Las violaciones de seguridad del sistema o de la red pueden dar lugar a responsabilidad civil o penal. Podemos investigar y trabajar con las autoridades policiales para procesar a los usuarios que violen estos Términos. Podemos suspender o cancelar su acceso a los Sitios por cualquier motivo o sin motivo, en cualquier momento y sin previo aviso.</p>
+<p>6. <span style="text-decoration: underline;">Entregas</span>. Usted reconoce y acepta que cualquier retroalimentación, pregunta, comentario, sugerencia, idea u otra información o material relacionado con los Sitios o Biden for President que usted proporcione en forma de correo electrónico u otras entregas a Biden for President, o cualquiera de tales publicaciones en los Sitios, no son confidenciales y pasarán a ser propiedad exclusiva de Biden for President. Biden for President tendrá derechos exclusivos, incluidos todos los derechos de propiedad intelectual, y tendrá derecho al uso y la divulgación sin restricciones de estos materiales, para cualquier propósito, sin reconocimiento ni compensación para usted. En la medida en que tenga algún derecho, título o interés en cualquiera de los anteriores, deberá asignar, y por la presente, ceder, todos y cada uno de dichos derechos, título e interés a Biden for President.</p>
+<p>7. <span style="text-decoration: underline;">Contenido del usuario y áreas interactivas</span>. Los Sitios pueden incluir áreas o servicios interactivos, como foros, blogs, salas de chat o tableros de mensajes u otras áreas o servicios en los que usted u otros usuarios puedan crear, publicar, compartir o almacenar contenido, mensajes, materiales, datos, información, texto, gráficos, audio, video u otros elementos o materiales en los Sitios (&#8220;Contenido del usuario&#8221;). Usted es el único responsable de su uso de los Sitios y los utiliza bajo su propio riesgo. Acepta no publicar, subir, transmitir, distribuir, almacenar, crear o publicar de otra manera a través de los Sitios cualquier Contenido de Usuario que infrinja estos Términos, incluidos, entre otros, cualquiera de los siguientes:</p>
+<p>a. Contenido del usuario que sea ilegal, injurioso, difamatorio, falso, obsceno, pornográfico, indecente, lascivo, sugestivo, acosador, amenazador, invasor de privacidad o de derechos de publicidad, abusivo, lleno de odio, incendiario, fraudulento, falaz o engañoso;</p>
+<p>b. Contenido del usuario que constituiría, alentaría o brindaría instrucciones para una ofensa criminal, violaría los derechos de cualquier parte, o que de otro modo crearía responsabilidad o violaría cualquier ley local, estatal, nacional o internacional;</p>
+<p>c. Contenido del usuario que pueda infringir, usar indebidamente o violar cualquier patente, marca registrada, secreto comercial, derecho de autor u otro derecho intelectual o de propiedad de cualquier parte; o</p>
+<p>d. Información privada de terceros, incluyendo, sin limitación, direcciones, números de teléfono, direcciones de correo electrónico, números de Seguridad Social y números de tarjetas de crédito.</p>
+<p>Biden for President no asume ninguna responsabilidad ni ninguna obligación por el Contenido del Usuario publicado, almacenado o subido por usted o por un tercero, o por cualquier pérdida o daño al mismo; ni Biden for President es responsable por cualquier error, difamación, calumnia, injuria, omisión, falsedad, obscenidad, pornografía o blasfemia que pueda usted encontrar. El cumplimento del Contenido del Usuario o las reglas de conducta establecidas en estos Términos está bajo la discreción exclusiva de Biden for President, y el hecho de no hacer cumplir dichas reglas en algunos casos no constituye una renuncia a nuestro derecho de hacer cumplir dichas reglas en otros casos. Además, estas reglas no crean ningún derecho privado de acción por parte de un tercero ni ninguna expectativa razonable de que los Sitios no contengan ningún contenido que esté prohibido por dichas reglas. Como proveedor de servicios interactivos, Biden for President no se hace responsable de ninguna declaración, representación o Contenido del Usuario proporcionado por sus usuarios en ningún foro público, blog u otra área de los Sitios. Aunque Biden for President no tiene la obligación de hacerlo, se reserva el derecho, y tiene la discreción exclusiva, de eliminar, filtrar o editar cualquier Contenido del Usuario publicado o almacenado en los Sitios en cualquier momento y por cualquier motivo o sin motivo, y usted es el único responsable de crear copias de respaldo y reemplazar cualquier Contenido del Usuario que publique o almacene en los Sitios a su exclusivo costo y gasto. Cualquier uso de los Sitios que infrinja lo anterior viola estos Términos y puede resultar, entre otras cosas, en la cancelación o suspensión de sus derechos de uso de los Sitios. Salvo que se indique lo contrario, usted conserva la propiedad de todo el Contenido del Usuario que publique en los Sitios. Sin embargo, si publica Contenido del Usuario en los Sitios, a menos que indiquemos lo contrario, otorgará a Biden for President, y sus afiliados, un derecho no exclusivo, sin regalías, a perpetuidad, de forma irrevocable, atribuible, transferible y totalmente sublicenciable para usar, reproducir, modificar, adaptar, publicar, traducir, crear trabajos derivados, distribuir, interpretar y exhibir dicho Contenido del Usuario en todo el mundo, de cualquier manera o medio conocido o desarrollado posteriormente, que incluye, entre otros, publicidad, recaudación de fondos y otras comunicaciones en apoyo a Biden for President o los candidatos, asuntos, organizaciones o causas que apoye Biden for President, sin ningún derecho de compensación o atribución. Por la presente, renuncia a cualquier derecho moral que pueda tener sobre el Contenido del Usuario. Usted otorga a Biden for President y sus afiliados y sublicencias el derecho libre de regalías, perpetuo, irrevocable, atribuible, transferible y mundial para usar el nombre que usted presente en relación con dicho contenido, si así lo desean. Usted declara y garantiza que (a) es propietario y controla todos los derechos sobre el Contenido del Usuario que publica, o de lo contrario, tiene derecho a publicar dicho Contenido del Usuario en los Sitios; (b) el Contenido del Usuario es exacto y no confuso; y (c) el uso y la publicación del Contenido del Usuario que proporcione no viola estos Términos y no violará ningún derecho ni causará daños a ninguna persona o entidad.</p>
+<p>8. <span style="text-decoration: underline;">Política de reincidencia de infracción</span>. De acuerdo con la Ley de Derechos de Autor del Milenio Digital (&#8220;DMCA&#8221;, por sus siglas en inglés) y otra ley aplicable, Biden for President ha adoptado una política de cancelación -en circunstancias apropiadas según lo determine Biden for President a su entera discreción- a los suscriptores o titulares de cuentas que se consideren sean infractores reincidentes. Biden for President también puede, a su entera discreción, limitar el acceso a los Sitios y/o cancelar las cuentas de cualquier usuario que infrinja, desvíe, o de otro modo viole cualquier derecho de propiedad intelectual de terceros, ya sea que haya o no una infracción repetida, una malversación o violación.</p>
+<p>9. <span style="text-decoration: underline;">Quejas de derechos de autor</span>. Si cree que algo en los Sitios infringe los derechos de autor que usted posee o controla, puede presentar una notificación de dicha violación a nuestro Agente Designado como se establece a continuación.</p>
+<p>Nombre del Agente Designado para recibir notificación de violación reclamada: Departamento Legal de Biden for President</p>
+<p><strong>Dirección completa del Agente Designado al que se debe enviar la notificación:</strong> 1120 20th Street NW, Suite 250, Washington DC 20036</p>
+<p><strong>Número de teléfono del Agente Designado:</strong> 304-446-2020</p>
+<p><strong>Dirección de correo electrónico del Agente Designado:</strong> <a href="mailto:copyrightcomplaints@joebiden.com">copyrightcomplaints@joebiden.com</a></p>
+<p>Por favor vea 17 U.S.C. 512 (c)(3) para los requisitos de una notificación adecuada. Debe tener en cuenta que, si, a sabiendas tergiversa en su notificación el material o la actividad que está infringiendo, será responsable de los daños, incluidos los costos y los honorarios de abogados, incurridos por nosotros o por el presunto infractor como resultado de nuestra confianza en dicha tergiversación al eliminar o deshabilitar el acceso al material o actividad que se alega, infringe.</p>
+<p>10. <span style="text-decoration: underline;">Indemnización</span>. USTED ACEPTA DEFENDER, INDEMNIZAR Y MANTENER A SALVO A BIDEN FOR PRESIDENT, A SUS CONTRATISTAS INDEPENDIENTES, A SUS PROVEEDORES DE SERVICIOS, CONSULTORES Y MIEMBROS DEL COMITÉ CONJUNTO, Y SUS RESPECTIVAS SUBSIDIARIAS, AFILIADOS, DIRECTORES, FUNCIONARIOS, EMPLEADOS, VOLUNTARIOS, BENEFICIARIOS Y AGENTES, DE Y CONTRA TODAS Y CADA UNA DE LAS PÉRDIDAS, RECLAMACIONES, DEMANDAS REALES O AMENAZAS, EXIGENCIAS, DAÑOS, COSTOS, RESPONSABILIDADES Y GASTOS (INCLUIDOS, PERO NO LIMITADOS A, CUOTAS RAZONABLES DE LOS ABOGADOS) QUE SURJAN DE, ASOCIADAS CON, O RELACIONADAS CON SU USO DE LOS SITIOS O CUALQUIER SUPUESTA VIOLACIÓN REALIZADA POR USTED A ESTOS TÉRMINOS O LOS DERECHOS DE CUALQUIER TERCERO, INCLUYENDO, SIN LIMITACIÓN, SU CONDUCTA Y CUALQUIER CONTENIDO DEL USUARIO QUE USTED PUBLIQUE, ALMACENE O DE OTRA MANERA TRANSMITA EN O A TRAVÉS DE LOS SITIOS, O CUALQUIER ACTO U OMISÓN EN RELACIÓN CON LOS SITIOS O EL CONTENIDO DEL USUARIO.</p>
+<p>11. <span style="text-decoration: underline;">Limitación de responsabilidad</span>. EL USO DE LOS SITIOS ES BAJO SU PROPIO RIESGO. EXCEPTO LO EXPRESADO PROPORCIONADO AL CONTRARIO POR ESCRITO POR BIDEN FOR PRESIDENT, LOS SITIOS, LOS MATERIALES DEL SITIO CONTENIDOS EN EL MISMO Y LOS SERVICIOS PROPORCIONADOS EN O EN RELACIÓN CON ELLOS (LOS &#8220;SERVICIOS&#8221;) SE PROPORCIONAN EN UNA BASE &#8220;TAL COMO ESTÁ&#8221; SIN GARANTÍAS DE NINGÚN TIPO, YA SEAN EXPRESAS O IMPLÍCITAS. BIDEN FOR PRESIDENT RECHAZA TODAS LAS OTRAS GARANTÍAS, EXPRESAS O IMPLÍCITAS, INCLUIDAS, SIN LIMITACIÓN, GARANTÍAS IMPLÍCITAS DE COMERCIALIZACIÓN, CAPACIDAD PARA UN PROPÓSITO PARTICULAR, PROPIEDAD Y NO INFRACCIÓN U OTRAS VIOLACIONES DE DERECHOS Y EN CUANTO A EXACTITUD O VERACIDAD DE LA INFORMACIÓN, CONTENIDO, FORMAS U OTROS MATERIALES DEL SITIO A LOS QUE SE TENGA ACCESO A TRAVÉS DEL SITIO. BIDEN FOR PRESIDENT NO REPRESENTA NI GARANTIZA QUE LOS SITIOS, LOS MATERIALES DEL SITIO, CUALQUIER SITIO DE TERCEROS VINCULADOS A O DESDE LOS SITIOS, O LOS SERVICIOS, SEAN ADECUADOS, EXACTOS, COMPLETOS, CONFIABLES, ACTUALES O SIN ERRORES, O QUE LAS FUNCIONES QUE SE PROPORCIONAN SEAN SIN INTERRUPCIÓN, SIN VIRUS O SIN ERRORES.</p>
+<p>BIDEN FOR PRESIDENT NO ES RESPONSABLE DE, Y EXPRESAMENTE RECHAZA RESPONSABILIDAD POR, CUALQUIER ERROR U OMISIÓN EN EL CONTENIDO INCLUIDO EN LOS SITIOS O CUALQUIER SITIO DE TERCEROS RELACIONADOS CON O DESDE LOS SITIOS, INCLUYENDO LOS QUE ESTÁN RELACIONADOS CON EL PRECIO, EL TEXTO Y LA FOTOGRAFÍA, ASÍ COMO LOS PRODUCTOS Y SERVICIOS DE TERCEROS Y CUALQUIER CONTENIDO DE TERCEROS. MIENTRAS BIDEN FOR PRESIDENT INTENTA HACER SEGURO SU ACCESO Y USO DE LOS SITIOS Y SERVICIOS, BIDEN FOR PRESIDENT NO PUEDE, Y NO REPRESENTA NI GARANTIZA QUE LOS SITIOS, LOS MATERIALES DEL SITIO O EL (LOS) SERVIDOR (ES) ESTÉN LIBRES DE VIRUS U OTROS COMPONENTES PERJUDICIALES; POR LO TANTO, DEBE USTED UTILIZAR SOFTWARE RECONOCIDO POR LA INDUSTRIA PARA DETECTAR Y DESINFECTAR LOS VIRUS DE CUALQUIER DESCARGA. BIDEN FOR PRESIDENT TAMPOCO ES RESPONSABLE NI ESTÁ OBLIGADO DE NINGUNA MANERA POR CUALQUIER ACTIVIDAD, PROGRAMA O EVENTOS DE TERCEROS LISTADOS EN LOS SITIOS, NI DE LA CONDUCCIÓN DE CUALQUIER EVENTO, ACTIVIDAD U ORGANIZADORES DE PROGRAMAS U OTROS USUARIOS DE LOS SITIOS O POR LOS PRODUCTOS Y SERVICIOS DE TERCEROS O POR CUALQUIER CONTENIDO DE TERCEROS. Biden for President se reserva el derecho de cambiar cualquier y todo el contenido contenido en los Sitios y los servicios ofrecidos a través de los Sitios en cualquier momento sin previo aviso.</p>
+<p>12. <span style="text-decoration: underline;">Limitación de responsabilidad</span>. EN NINGÚN CASO BIDEN FOR PRESIDENT, O NUESTRAS RESPECTIVAS SUBSIDIARIAS, AFILIADOS, DIRECTORES, FUNCIONARIOS, EMPLEADOS, AGENTES, BENEFICIARIOS O VOLUNTARIOS, SERÁ RESPONSABLE POR NINGÚN DAÑO DIRECTO, ESPECIAL, INDIRECTO, SIGNIFICATIVO, NI DE INDEMNIZACIÓN POR DAÑOS Y PERJUICIOS, NI OTROS DAÑOS DE NINGÚN TIPO, INCLUYENDO PERO NO LIMITADO A, PÉRDIDA DE USO, PÉRDIDA DE BENEFICIOS O PÉRDIDA DE DATOS, YA SEA UNA ACCIÓN EN EL CONTRATO, AGRAVIO (INCLUYENDO PERO NO LIMITADA A LA NEGLIGENCIA) O DE OTRA MANERA, QUE SURJA DE O DE NINGUNA MANERA CONECTADO CON EL USO O LA INCAPACIDAD DE UTILIZAR LOS SITIOS, LOS SERVICIOS, EL CONTENIDO O LOS MATERIALES DEL SITIO CONTENIDOS EN O CON ACCESO A TRAVÉS DEL SITIO, INCLUYENDO, SIN LIMITACIÓN, CUALQUIER DAÑO CAUSADO POR, O RESULTADO DE, LA CONFIANZA DEL USUARIO EN CUALQUIER INFORMACIÓN OBTENIDA DE BIDEN FOR PRESIDENT O QUE SEA RESULTADO DE ERRORES, OMISIONES, INTERRUPCIONES, ELIMINACIÓN DE ARCHIVOS O CORREOS ELECTRÓNICOS, EQUIVOCACIONES, DEFECTOS, VIRUS, RETRASOS EN LA OPERACIÓN O TRANSMISIÓN O CUALQUIER FALTA DE DESEMPEÑO, RESULTE O NO DE ACTOS DE DIOS, FALTA DE COMUNICACIÓN, ROBO, DESTRUCCIÓN O ACCESO NO AUTORIZADO A DOCUMENTOS, PROGRAMAS O SERVICIOS DE BIDEN FOR PRESIDENT, INCLUSO SI UNO O MÁS DE ELLOS HAN SIDO ADVERTIDOS DE LA POSIBILIDAD DE TALES DAÑOS O PÉRDIDAS. EN NINGÚN CASO, LA RESPONSABILIDAD AGREGADA DE BIDEN FOR PRESIDENT, YA SEA CONTRATO, GARANTÍA, AGRAVIO (INCLUYENDO NEGLIGENCIA, YA SEA ACTIVA, PASIVA O ATRIBUIDA), RESPONSABILIDAD DEL PRODUCTO, RESPONSABILIDAD ESTRICTA U OTRA TEORÍA, QUE SURJA DE O ESTÉ RELACIONADA CON EL USO O LA INCAPACIDAD DE UTILIZAR LOS SITIOS O LOS MATERIALES DEL SITIO O ESTOS TÉRMINOS EXCEDEN EL MÁXIMO DE CIEN DÓLARES ($100) O LA CANTIDAD QUE USTED PAGÓ PARA ACCEDER A LOS SITIOS.</p>
+<p>CIERTAS LEYES ESTATALES NO PERMITEN LIMITACIONES EN GARANTÍAS IMPLÍCITAS O LA EXCLUSIÓN O LIMITACIÓN DE CIERTOS DAÑOS. POR LO TANTO, ALGUNAS O TODAS LAS ANTERIORES LIMITACIONES DE RESPONSABILIDAD, EXCLUSIONES O LIMITACIONES, PUEDEN NO APLICARSE A USTED, Y USTED PODRÍA TENER DERECHOS ADICIONALES.</p>
+<p>13. <span style="text-decoration: underline;">Ley aplicable y juzgado</span>. Estos Términos y el uso que usted haga de los Sitios se regirán e interpretarán de acuerdo con las leyes del Estado de Delaware, que se aplican a los acuerdos establecidos y que realizados en su totalidad dentro del Estado de Delaware, sin recurrir a sus disposiciones legales sobre conflictos de leyes. Usted acepta que cualquier acción legal o de equidad que surja de, o esté relacionada, con estos Términos se presentará únicamente en los tribunales estatales y federales ubicados en el Estado de Delaware, y por la presente usted acepta de manera irrevocable e incondicional y se somete a la jurisdicción exclusiva de dichas cortes para cualquier demanda, acción o procedimiento que surja de estos Términos.</p>
+<p>14. <span style="text-decoration: underline;">Terminación</span>. A pesar de cualquiera de estos Términos, Biden for President se reserva el derecho, sin previo aviso y a su entera discreción, de cancelar su licencia de uso de los Sitios, y de bloquear o impedir su acceso y uso de los Sitios.</p>
+<p>15. <span style="text-decoration: underline;">Diverso</span>. Estos Términos constituyen el acuerdo completo entre usted y nosotros, sustituyendo cualquier comunicación y propuesta anterior o contemporánea (ya sea oral, escrita o electrónica) entre usted y nosotros. Si alguna disposición de estos Términos se considera ilegal, nula o inaplicable por cualquier motivo, entonces dicha disposición se considerará separable de estos Términos y no afectará la validez y cumplimiento de las disposiciones restantes y será reemplazada por una disposición exigible que sea más cercana a la intención subyacente de la disposición inaplicable. Usted acepta que no existe una relación de empresa conjunta, sociedad, empleo o de agencia entre usted y nosotros como resultado de estos Términos o su acceso y uso de los Sitios.</p>
+<p>Nuestra incapacidad para hacer cumplir las disposiciones de estos Términos o responder a una violación por parte de cualquier tercero no renuncia a nuestro derecho de hacer cumplir los Términos o de responder a cualquier violación. Nada de lo contenido en estos Términos deroga nuestro derecho a cumplir con las solicitudes o requisitos gubernamentales, judiciales y de cumplimiento de la ley relacionados con su uso de los Sitios o con la información proporcionada o recopilada por nosotros con respecto a dicho uso.</p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../terms/index.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-561 current_page_item menu-item-566 footer__main-nav-item"><a href="index.html" aria-current="page" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/terminos/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":467,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

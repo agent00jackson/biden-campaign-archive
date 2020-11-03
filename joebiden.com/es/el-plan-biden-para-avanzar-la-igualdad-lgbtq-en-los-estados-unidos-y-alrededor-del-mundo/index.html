@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan Biden Para Avanzar La Igualdad Lgbtq+ en Los Estados Unidos Y Alrededor Del Mundo | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan Biden Para Avanzar La Igualdad Lgbtq+ en Los Estados Unidos Y Alrededor Del Mundo | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="“¿A quién amas? ¿A quién amas? ¿Y serás leal a la persona que amas? Y eso es lo que la gente está descubriendo, que es de lo que se tratan todos los matrimonios, en su esencia&#8221;. —Joe Biden, “Meet the Press&#8221;, 6 de mayo de 2012 &nbsp; Joe Biden cree que todo ser humano debe [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/09/social-graphics_HQ_webcard_090220-1024x535.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="535" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="43 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo/#webpage","url":"https://joebiden.com/es/el-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo/","name":"El Plan Biden Para Avanzar La Igualdad Lgbtq+ en Los Estados Unidos Y Alrededor Del Mundo | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-08-05T08:26:52+00:00","dateModified":"2020-08-05T08:26:52+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo%2F&#038;format=xml" />
+<link rel="alternate" href="../../lgbtq-policy.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-4271 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../lgbtq-policy.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../lgbtq-policy.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-4271 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan Biden Para Avanzar La Igualdad Lgbtq+ en Los Estados Unidos Y Alrededor Del Mundo</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><i><span style="font-weight: 400;">“¿A quién amas? ¿A quién amas? ¿Y serás leal a la persona que amas? Y eso es lo que la gente está descubriendo, que es de lo que se tratan todos los matrimonios, en su esencia&#8221;.</span></i></p>
+<p><i><span style="font-weight: 400;">—Joe Biden, “Meet the Press&#8221;, 6 de mayo de 2012</span></i></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Joe Biden cree que todo ser humano debe ser tratado con respeto y dignidad y ser capaz de vivir sin miedo, sin importar quiénes son o a quién aman. Durante la administración Obama-Biden, los Estados Unidos hicieron avances históricos hacia la igualdad de la comunidad LGBTQ+, desde la derogación de “No preguntes, no digas” hasta la declaración histórica de Biden en apoyo a la igualdad matrimonial </span><a href="http://www.nbcnews.com/id/47311900/ns/meet_the_press-transcripts/t/may-joe-biden-kelly-ayotte-diane-swonk-tom-brokaw-chuck-todd/"><span style="font-weight: 400;">en Meet the Press en 2012</span></a><span style="font-weight: 400;"> y el momento sin precedentes avance de las protecciones para las personas LGBTQ+ en los Estados Unidos a nivel federal.</span></p>
+<p><span style="font-weight: 400;">Pero esta lucha no ha terminado. Donald Trump y Mike Pence han instigado el odio contra los refugios seguros de las personas LGBTQ+ y eliminaron protecciones críticas para la comunidad LGBTQ+. Al bloquear la capacidad de las personas transgénero de servir abiertamente a su país, denegar el acceso de las personas LGBTQ+ a cuidado de salud crítico, proponer políticas que permitan a los refugios para personas sin hogar que reciben fondos del gobierno federal rechazar a las personas transgénero y las agencias de adopción que reciben fondos del gobierno federal para rechazar a las parejas del mismo sexo y no abordar La epidemia de violencia contra las personas transgénero, en particular las mujeres de color transgénero, la Administración Trump-Pence ha liderado un esfuerzo sistemático para revertir el progreso realizado por el presidente Obama y el vicepresidente Biden.</span></p>
+<p><span style="font-weight: 400;">El odio y la discriminación contra las personas LGBTQ+ comenzaron mucho antes de que Trump y Pence asumieran sus cargos. Derrotarlos no resolverá el problema, pero es un primer paso esencial para reanudar nuestra marcha hacia la igualdad.</span></p>
+<p><span style="font-weight: 400;">Como presidente, Biden se unirá a la comunidad LGBTQ+ para garantizar que los Estados Unidos finalmente cumpla con la promesa en la que se fundó: igualdad para todos. Aportará el liderazgo moral para defender la igualdad de derechos para todas las personas LGBTQ+, luchará para garantizar que nuestras leyes e instituciones protejan y hagan valer sus derechos, y promoverá la igualdad LGBTQ+ a nivel mundial. Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Protegerá a las personas LGBTQ+ de la discriminación.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Apoyará a los jóvenes LGBTQ+.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Protegerá a las personas LGBTQ+ de la violencia y trabajará para poner fin a la epidemia de violencia contra la comunidad transgénero, en particular las mujeres transgénero de color.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ampliará el acceso a cuidado de salud de alta calidad para las personas LGBTQ+.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Garantizará un trato justo para las personas LGBTQ+ en el sistema de justicia penal.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Recopilará los datos necesarios para apoyar totalmente a la comunidad LGBTQ+.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Promoverá los derechos y el desarrollo de la comunidad LGBTQ+ a nivel global.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>PROTEGERÁ A LAS PERSONAS LGBTQ+ DE LA DISCRIMINACIÓN</b></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">&#8220;Nadie debería ser despedido, negársele un hogar o acceso a los servicios debido a quienes son o a quiénes aman&#8221;.</span></i></p>
+<p><i><span style="font-weight: 400;">—Joe Biden, 17 de mayo de 2019</span></i></p>
+<p>&nbsp;</p>
+<p><a href="http://www.lgbtmap.org/file/2019SCOTUSTitle%20VIICasesBrief.pdf"><span style="font-weight: 400;">La mitad de los estadounidenses LGBTQ</span></a><span style="font-weight: 400;">+ viven en estados sin la protección adecuada de sus derechos civiles. Pueden casarse el domingo y al día siguiente ser despedidos en virtud de la ley estatal debido a quiénes son o a quién aman. Las personas LGBTQ+ aún enfrentan discriminación en casi todos los aspectos de sus vidas, incluido el empleo, el servicio militar, formar una familia y obtener una licencia de conducir con su indicador de género correcto.</span></p>
+<p><span style="font-weight: 400;">La </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/5/text"><span style="font-weight: 400;">Ley de Igualdad</span></a><span style="font-weight: 400;"> es el mejor vehículo para garantizar la igualdad de derechos bajo la ley para los estadounidenses LGBTQ+, y garantizará </span><a href="https://www.hrc.org/resources/the-equality-act"><span style="font-weight: 400;">que las personas LGBTQ+ estén protegidas por las leyes de derechos civiles existentes</span></a><span style="font-weight: 400;">. </span><b>Biden hará que la promulgación de la Ley de Igualdad durante sus primeros 100 días como presidente sea una prioridad legislativa</b><span style="font-weight: 400;">. Biden también ordenará a su gabinete garantizar la aplicación inmediata y plena de la Ley de Igualdad en todos los departamentos y agencias federales.</span></p>
+<p><span style="font-weight: 400;">Además de promulgar la Ley de Igualdad, Biden tomará medidas utilizando su autoridad ejecutiva. Inmediatamente revocará las acciones discriminatorias de la Administración Trump-Pence y luego irá más allá para terminar con la discriminación contra las personas LGBTQ+. Biden:</span></p>
+<p><b>Facultará a las agencias federales para ser campeones de la igualdad</b><span style="font-weight: 400;">. Biden nombrará y nominará funcionarios y jueces federales que representan la diversidad del pueblo estadounidense, incluidas las personas LGBTQ+. Se asegurará de que los líderes de todas las agencias federales se comprometan a hacer cumplir plenamente nuestras leyes de derechos civiles para las personas LGBTQ+. Y se asegurará de darles a las agencias encargadas de hacer cumplir nuestras leyes de no discriminación los fondos que necesitan para cumplir plenamente con esta obligación. Estas agencias incluyen la Comisión de Igualdad de Oportunidades en el Empleo (EEOC, por sus siglas en inglés), la Oficina de Derechos Civiles del Departamento de Educación de los EE. UU. y la División de Derechos Civiles del Departamento de Justicia de los EE. UU.</span></p>
+<p><b>Protegerá a las personas LGBTQ+ de la discriminación laboral basada en la orientación sexual y la identidad de género.</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Reafirmará que la Ley de Derechos Civiles prohíbe la discriminación laboral a base de la orientación sexual y la identidad de género.</b><span style="font-weight: 400;"> En 2014, el </span><a href="https://www.justice.gov/opa/pr/attorney-general-holder-directs-department-include-gender-identity-under-sex-discrimination"><span style="font-weight: 400;">Departamento de Justicia de Obama-Biden</span></a><span style="font-weight: 400;"> afirmó que la prohibición del Título VII de la Ley de Derechos Civiles contra la discriminación laboral a base del sexo se aplica a la discriminación basada en la identidad de género. Posteriormente, la </span><a href="https://www.eeoc.gov/eeoc/newsroom/wysk/enforcement_protections_lgbt_workers.cfm"><span style="font-weight: 400;">EEOC afirmó que el Título VII prohíbe la discriminación basada en la identidad de género y la orientación sexual</span></a><span style="font-weight: 400;">. El Departamento de Justicia de la Administración Trump-Pence ha </span><a href="https://www.justice.gov/ag/page/file/1006981/download"><span style="font-weight: 400;">revertido</span></a><span style="font-weight: 400;"> esta posición, </span><a href="https://www.justice.gov/ag/page/file/1006981/download"><span style="font-weight: 400;">argumentando</span></a><span style="font-weight: 400;"> que el Título VII excluye las protecciones para estos grupos. Biden garantizará la aplicación del Título VII y trabajará para aprobar la Ley de Igualdad para afirmar que la discriminación laboral a base de la identidad de género y la orientación sexual está prohibida.</span></li>
+<li style="font-weight: 400;"><b>Apoyará a personas transgénero y de género no binario en la fuerza laboral</b><span style="font-weight: 400;">. Los estadounidenses transgénero y los no binarios </span><a href="http://www.ustranssurvey.org/"><span style="font-weight: 400;">enfrentan</span></a><span style="font-weight: 400;"> una discriminación significativa cuando buscan empleo. Para abordar estos desafíos únicos, Biden se asegurará de que los programas y recursos de capacitación para la fuerza laboral y empresarial que reciben fondos del Departamento del Trabajo de los EE. UU. y la Administración de Pequeños Negocios se centren y beneficien a esta comunidad. También proporcionará incentivos para que los gobiernos estatales y locales adopten programas que ayuden a preparar a las personas transgénero y no binarias para la fuerza laboral y alienten el espíritu empresarial.</span></li>
+<li style="font-weight: 400;"><b>Detendrá la discriminación laboral en el gobierno federal</b><span style="font-weight: 400;">. El gobierno federal debe liderar con el ejemplo. Biden restablecerá la implementación plena de la </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2014/07/21/executive-order-further-amendments-executive-order-11478-equal-employmen"><span style="font-weight: 400;">orden ejecutiva</span></a><span style="font-weight: 400;"> del presidente Obama que prohíbe la discriminación por parte de los contratistas federales, que Trump ha </span><a href="https://www.federalregister.gov/documents/2019/08/15/2019-17472/implementing-legal-requirements-regarding-the-equal-opportunity-clauses-religious-exemption"><span style="font-weight: 400;">socavado</span></a><span style="font-weight: 400;">. La Administración Biden también trabajará con los líderes de derechos civiles para desarrollar e instituir programas de capacitación sobre prejuicios implícitos para los trabajadores y contratistas federales con el fin de abordar la discriminación a base de raza, sexo, orientación sexual, identidad o expresión de género o discapacidad. Una Administración Biden pondrá a disposición del público los materiales de capacitación resultantes para que otros empleadores puedan llevar a cabo programas similares.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Tratará a los militares y a los veteranos LGBTQ+ con el respeto que se merecen.</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Revocará la prohibición militar transgénero</b><span style="font-weight: 400;">. En 2010, Biden desempeñó un papel de liderazgo en la derogación de la Administración Obama-Biden de “No pregunte, no diga” para permitir que los militares gay, lesbianas y bisexuales sirvan al país que aman sin ocultar su orientación sexual. </span><a href="https://www.defense.gov/Explore/News/Article/Article/822235/transgender-service-members-can-now-serve-openly-carter-announces/"><span style="font-weight: 400;">En junio de 2016, la Administración Obama-Biden revocó la prohibición de que las personas transgénero sirvan abiertamente, sin ocultar su identidad de género</span></a><span style="font-weight: 400;">. Pero Trump </span><a href="https://www.whitehouse.gov/presidential-actions/presidential-memorandum-secretary-defense-secretary-homeland-security/"><span style="font-weight: 400;">revirtió</span></a><span style="font-weight: 400;"> esta política, impidiendo que los patriotas transgénero sirvan abiertamente. Esto es discriminatorio y perjudicial para nuestra seguridad nacional. Todo estadounidense que esté calificado para servir en nuestras fuerzas armadas debería poder hacerlo, independientemente de su orientación sexual o identidad de género y sin tener que ocultar quiénes son. Biden ordenará al Departamento de Defensa de EE. UU. Que permita a los miembros del servicio transgénero servir abiertamente, recibir el tratamiento médico necesario y estar libres de discriminación.</span></li>
+<li style="font-weight: 400;"><b>Revocará las políticas del Departamento de Defensa que perpetúan la estigmatización y la discriminación contra las personas que viven con el VIH</b><span style="font-weight: 400;">. Un tribunal federal de distrito consideró que la política de “</span><a href="https://partner-mco-archive.s3.amazonaws.com/client_files/1518714002.pdf"><span style="font-weight: 400;">Movilízate o Salte</span></a><span style="font-weight: 400;">” de la Administración Trump-Pence, que se usa para licenciar forzosamente a miembros de las fuerzas armadas con </span><a href="https://www.nbcnews.com/feature/nbc-out/pentagon-discriminates-against-hiv-positive-service-members-suit-claims-n950826"><span style="font-weight: 400;">VIH</span></a><span style="font-weight: 400;">, era “</span><a href="https://www.lambdalegal.org/sites/default/files/legal-docs/downloads/roeandvoe_va_20190215_memorandum-opinion.pdf"><span style="font-weight: 400;">irracional, inconsistente y en desacuerdo con la ciencia moderna</span></a><span style="font-weight: 400;">”. El Cuarto Circuito </span><a href="https://www.lambdalegal.org/sites/default/files/legal-docs/downloads/roe_va_20200110_opinion.pdf"><span style="font-weight: 400;">confirmó</span></a><span style="font-weight: 400;"> esta decisión en enero del 2020 por “no tener en cuenta la literatura médica actual y la opinión de expertos sobre el tratamiento actual del VIH y los riesgos de transmisión&#8221;. Si la Administración Trump-Pence continúa tratando de implementar la política, la Administración Biden la rescindirá.</span></li>
+<li style="font-weight: 400;"><b>Apoyará a los veteranos LGBTQ+.</b><span style="font-weight: 400;"> El </span><a href="../../veterans.html"><span style="font-weight: 400;">plan para los veteranos</span></a><span style="font-weight: 400;"> de Biden exige abordar las necesidades únicas de los veteranos LGBTQ+. Como presidente, ordenará a su Secretario de Vivienda y Desarrollo Urbano garantizar que los servicios integrales provistos bajo el Programa de Servicios de Apoyo para Familias de Veteranos aborden las necesidades únicas de los veteranos LGBTQ+ que carecen de una vivienda. Ordenará al Departamento de Asuntos de Veteranos (VA, por sus siglas en inglés) de los EE. UU. establecer protocolos de capacitación en competencia cultural para garantizar que los proveedores en las instalaciones del VA y en los entornos de cuidado comunitario estén equipados para satisfacer las necesidades de los veteranos LGBTQ+ en el entorno del cuidado de salud. Y, Biden instruirá al Secretario de Defensa para garantizar que los veteranos LGBTQ+ licenciados debido a su orientación sexual o identidad de género reciban una revisión inmediata de las solicitudes de actualizaciones de licenciamiento enviadas a las Juntas para la Corrección de Expedientes Militares.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Apoyará la libertad para formar una familia y protegerla. </b><span style="font-weight: 400;">El 6 de mayo de 2012, en una entrevista histórica en Meet the Press, Biden se convirtió en el funcionario electo estadounidense de más alto rango en apoyar la igualdad en el matrimonio. Tres años más tarde, la Corte Suprema de los Estados Unidos estuvo de acuerdo, dictaminando que la libertad de casarse es un derecho fundamental. Junto con la libertad de casarse viene la libertad de formar una familia. Biden cree que las personas LGBTQ+ y las parejas del mismo sexo deberían poder formar sus familias y protegerlas. Sin embargo, muchas agencias de cuidado de crianza y adopción que reciben fondos del gobierno aún discriminan a las familias LGBTQ+ o imponen </span><a href="https://www.hrc.org/resources/every-child-deserves-a-family-act"><span style="font-weight: 400;">cargas</span></a><span style="font-weight: 400;"> adicionales a estas familias durante el proceso de adopción o cuidado de crianza. Del mismo modo, estas agencias a menudo ponen en riesgo a los jóvenes LGBTQ+ al no ubicarlos con familias seguras que le brinden apoyo. En noviembre de 2019, la Administración Trump-Pence </span><a href="https://www.hhs.gov/about/news/2019/11/01/hhs-issues-proposed-rule-to-align-grants-regulation.html"><span style="font-weight: 400;">propuso</span></a><span style="font-weight: 400;"> una regla que permitirá que las agencias de adopción y cuidado de crianza que </span><a href="https://www.hrc.org/blog/hrc-trump-attacks-lgbtq-people-religious-minorities-with-proposed-hhs-regul"><span style="font-weight: 400;">discriminen</span></a><span style="font-weight: 400;"> a las familias LGBTQ+ reciban fondos del gobierno. Como presidente, Biden revocará la regla, si se implementa, y trabajará para garantizar que las familias calificadas no sean discriminadas por motivos de orientación sexual, identidad o expresión de género, sexo, estado civil, discapacidad o religión y que las agencias de bienestar infantil </span><a href="https://pflag.org/resource/every-child-deserves-family-act"><span style="font-weight: 400;">pongan los intereses de los niños primero</span></a><span style="font-weight: 400;">, incluidos los que son LGBTQ+. Además, Biden trabajará con el Departamento de Estado de EE. UU. y otras agencias federales para garantizar trato igual a las parejas del mismo sexo y sus hijos en la aplicación de todos los programas, servicios y beneficios federales, especialmente con respecto a los requisitos de elegibilidad para la ciudadanía y trámites de inmigración y naturalización.</span></p>
+<p><b>Pondrá fin al uso indebido de amplias exenciones para discriminar. </b><span style="font-weight: 400;">La libertad religiosa es un valor estadounidense fundamental. Pero los estados han usado exenciones amplias de manera inapropiada para permitir que las empresas, los proveedores médicos, las agencias de servicios sociales, los funcionarios del gobierno estatal y local y otros discriminen a las personas LGBTQ+. La Administración Trump-Pence ha intentado deliberada y sistemáticamente eliminar las protecciones para la comunidad LGBTQ+ al establecer amplias exenciones religiosas a las leyes y políticas de no discriminación existentes en las agencias federales. Biden revocará las políticas de Trump que usan indebidamente estas amplias exenciones y luchará para que nadie sea rechazado en un negocio o un funcionario del gobierno rehúse proveerle servicios solo por quiénes son o a quién aman.</span></p>
+<p><b>Restablecerá las protecciones para las personas LGBTQ+ que no tienen hogar. </b><span style="font-weight: 400;">La Administración Obama-Biden aseguró que los refugios para personas sin hogar que reciben fondos del gobierno federal provean alojamiento </span><a href="https://www.federalregister.gov/documents/2016/09/21/2016-22589/equal-access-in-accordance-with-an-individuals-gender-identity-in-community-planning-and-development"><span style="font-weight: 400;">de acuerdo a la identidad de género de un individuo</span></a><span style="font-weight: 400;"> y </span><a href="https://www.federalregister.gov/documents/2012/02/03/2012-2343/equal-access-to-housing-in-hud-programs-regardless-of-sexual-orientation-or-gender-identity"><span style="font-weight: 400;">no pueden rechazar servicios</span></a><span style="font-weight: 400;"> a base de la identidad de género u orientación sexual. Desde entonces, </span><a href="https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=201904&amp;RIN=2506-AC53"><span style="font-weight: 400;">la Administración Trump-Pence</span></a><span style="font-weight: 400;"> propuso permitir que los refugios discriminen a las personas transgénero al determinar su alojamiento, por ejemplo, obligando a las mujeres transgénero a dormir y usar el baño en el mismo lugar que los hombres. Como presidente, Biden garantizará la aprobación de la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/5/text"><span style="font-weight: 400;">Ley de Igualdad</span></a><span style="font-weight: 400;">, asegurando que ningún presidente pueda volver a revocar las protecciones de los derechos civiles para las personas LGBTQ+, incluyendo en viviendas y refugios para personas sin hogar.</span></p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden sobre vivienda en joebiden.com/housing.</span></i></p>
+<p>&nbsp;</p>
+<p><b>Apoyará a los Adultos Mayores LGBTQ+. </b><span style="font-weight: 400;">Hay aproximadamente </span><a href="https://www.sageusa.org/resource-category/lgbt-aging/"><span style="font-weight: 400;">3 millones</span></a><span style="font-weight: 400;"> de personas LGBTQ+ en los Estados Unidos mayores de 50 años, y se espera que este número se duplique para el 2030. Estos adultos mayores a menudo enfrentan </span><a href="https://www.sageusa.org/wp-content/uploads/2018/05/sageusa-the-facts-on-lgbt-aging.pdf"><span style="font-weight: 400;">discriminación</span></a><span style="font-weight: 400;"> en todos los aspectos de sus vidas, desde el empleo hasta la vivienda y el cuidado de salud. La Administración Obama-Biden ayudó a proveer apoyo y recursos para los adultos mayores LGBTQ+ a través del programa de recursos Servicios y Apoyo para Adultos Mayores LGBT (SAGE). Biden defenderá la aprobación de la </span><a href="https://www.sageusa.org/wp-content/uploads/2018/05/sageusa-the-facts-on-lgbt-aging.pdf"><span style="font-weight: 400;">Ley de Estadounidenses Mayores LGBT de Ruthie y Connie</span></a><span style="font-weight: 400;"> para garantizar un trato no discriminatorio a los adultos mayores LGBTQ+ en los Estados Unidos. También protegerá y fortalecerá Medicare, preservará y fortalecerá el Seguro Social, y brindará ayuda a los trabajadores LGBTQ+ mayores que desean seguir trabajando. </span><i><span style="font-weight: 400;">Lea el plan completo de Biden para los adultos mayores en los Estados Unidos en joebiden.com/older-americans.</span></i></p>
+<p><b>Afirmará el indicador de género y ampliará el acceso a documentos de identificación correctos. </b><span style="font-weight: 400;">Las personas transgénero y no binarias sin documentos de identificación que reflejen correctamente su identidad de género, a menudo están </span><a href="https://www.transequality.org/sites/default/files/docs/usts/USTS%20Full%20Report%20-%20FINAL%201.6.17.pdf"><span style="font-weight: 400;">expuestas</span></a><span style="font-weight: 400;"> al acoso y la violencia y se les niega el empleo, la vivienda, los beneficios públicos críticos e incluso el derecho al voto. </span><a href="https://travel.state.gov/content/travel/en/passports/need-passport/change-of-sex-marker.html"><span style="font-weight: 400;">El Departamento de Estado de Obama-Biden abrió el camino al actualizar sus políticas de cambio de género para los pasaportes</span></a><span style="font-weight: 400;">. Como presidente, Biden se tomará esta acción como base para garantizar que todas las personas transgénero tengan acceso a documentos de identificación que reflejen correctamente su identidad de género. Biden cree que cada persona transgénero o no binaria debería tener </span><a href="https://transequality.org/issues/resources/faq-gender-neutral-ids"><span style="font-weight: 400;">la opción de cambiar su indicador de género a “M&#8221;, “F” o “X”</span></a><span style="font-weight: 400;"> en identificaciones gubernamentales, pasaportes y otra documentación. Apoyará los esfuerzos estatales y federales para permitir esta representación correcta.</span></p>
+<p><b>Asegurará que los procedimientos para donar sangre se basen en la ciencia. </b><span style="font-weight: 400;">Bajo la Administración Obama-Biden, se eliminó la prohibición discriminatoria de por vida a la donación de sangre basada en el estigma. Biden trabajará con la Administración de Alimentos y Medicamentos (FDA, por sus siglas en inglés) para garantizar que las regulaciones se basen en la ciencia, no en la ficción o el estigma. Según lo </span><a href="https://www.hrc.org/resources/blood-donations"><span style="font-weight: 400;">propuesto por Human Rights Campaign</span></a><span style="font-weight: 400;">, Biden invertirá en “una nueva investigación para estudiar el comportamiento de riesgo” y apoyará “[la consideración de] revisar los cuestionarios de los donantes para que se centren en criterios de comportamiento más refinados y específicos, como historias sexuales recientes que incluyen sexo sin protección o un número significativo de parejas sexuales durante el año anterior &#8220;.</span></p>
+<p><b>APOYARÁ A LA JUVENTUD LGBTQ+</b></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">“Estos niños son las cuerdas de las cometas que elevan nuestras ambiciones nacionales. Y cómo los tratamos es la medida de qué tipo de decencia y honor tenemos como sociedad&#8221;.</span></i></p>
+<p><span style="font-weight: 400;">—Joe Biden, 1 de junio de 2019</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A lo largo de su carrera, Biden ha defendido la igualdad y la inclusión de los jóvenes LGBTQ+. Biden sabe lo importante que es para los jóvenes LGBTQ+ sentirse seguros, apoyados y valorados en casa y en la escuela. A través de políticas y liderazgo público, la Administración Obama-Biden convirtió en una prioridad cambiar la cultura de una de miedo y rechazo a una en la que los jóvenes LGBTQ+ se sintieran seguros, apoyados, aceptados y amados. Como ciudadanos privados, Joe y Jill Biden continuaron este trabajo a través de la campaña “</span><a href="https://archive.bidenfoundation.org/pillars/equality/asyouare/"><span style="font-weight: 400;">Tal como eres</span></a><span style="font-weight: 400;">” de la Fundación Biden, que promovió la comprensión y la aceptación entre los jóvenes LGBTQ+ y sus familias. Como presidente, Biden:</span></p>
+<p><b>Garantizará que los jóvenes LGBTQ+ reciban apoyo y protección en nuestras escuelas y campus universitarios al:</b></p>
+<ul>
+<li style="font-weight: 400;"><b>Garantizar que los estudiantes transgénero tengan acceso a instalaciones a base de su identidad de género.</b><span style="font-weight: 400;"> En su primer día en el cargo, Biden restablecerá la guía de </span><a href="https://www2.ed.gov/about/offices/list/ocr/letters/colleague-201605-title-ix-transgender.pdf"><span style="font-weight: 400;">Obama-Biden</span></a> <a href="https://www.ed.gov/news/press-releases/us-secretary-education-betsy-devos-issues-statement-new-title-ix-guidance"><span style="font-weight: 400;">revocada</span></a><span style="font-weight: 400;"> por la Administración Trump-Pence, que restablecerá el acceso de los estudiantes transgénero a los deportes, baños y vestuarios de acuerdo con su identidad de género. Ordenará a su Departamento de Educación hacer valer enérgicamente los derechos civiles de los estudiantes transgénero e investigar vigorosamente las violaciones.</span></li>
+<li style="font-weight: 400;"><b>Proteger a los estudiantes LGBTQ+ de la agresión sexual, el acoso y la intimidación. </b><span style="font-weight: 400;">Biden ha </span><a href="../../vawa.html"><span style="font-weight: 400;">presentado</span></a><span style="font-weight: 400;"> una serie de propuestas para reducir la violencia sexual, la violencia en el noviazgo y el acoso en línea entre los jóvenes adultos, y se asegurará de que todas estas iniciativas incluyan un enfoque en ayudar a los estudiantes LGBTQ+, quienes</span><a href="https://www.cdc.gov/features/yrbs/index.html"><span style="font-weight: 400;"> reportan tasas más altas</span></a><span style="font-weight: 400;"> de agresión sexual que otros estudiantes. También trabajará para promulgar la </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/1492/text"><span style="font-weight: 400;">Ley contra el Acoso en la Educación Superior Tyler Clementi</span></a><span style="font-weight: 400;">, que establecerá un programa de subvenciones para apoyar los programas contra el acoso en los campus. Y, Biden restablecerá la </span><a href="https://www2.ed.gov/about/offices/list/ocr/letters/colleague-201605-title-ix-transgender.pdf"><span style="font-weight: 400;">Guía de Obama-Biden</span></a><span style="font-weight: 400;"> que exige que las escuelas que reciben fondos del gobierno federal prohíban el acoso por motivos de la orientación sexual e identidad o expresión de género. Biden también apoyará la aprobación de </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/2653"><span style="font-weight: 400;">la Ley de Mejoramiento de Escuelas Seguras</span></a><span style="font-weight: 400;">, que requiere que los distritos escolares desarrollen políticas de acoso y hostigamiento.</span></li>
+<li style="font-weight: 400;"><b>Poner fin a las políticas de disciplina escolar que impactan desproporcionadamente a los estudiantes</b><span style="font-weight: 400;">. LGBTQ+. Los estudiantes LGBTQ+, y especialmente los estudiantes de color LGBTQ+, los estudiantes transgénero y los estudiantes LGBTQ+ con discapacidades, </span><a href="https://www.glsen.org/news/lgbtq-students-face-unfair-school-discipline-pushing-many-out-school"><span style="font-weight: 400;">son más propensos</span></a><span style="font-weight: 400;"> que sus pares no LGBTQ+ a recibir castigos, suspensiones y expulsiones de la escuela, </span><a href="https://www.glsen.org/news/lgbtq-students-face-unfair-school-discipline-pushing-many-out-school"><span style="font-weight: 400;">a menudo</span></a><span style="font-weight: 400;"> como resultado de la discriminación y el acoso. Biden ampliará el trabajo de la Administración Obama-Biden para abordar el impacto desproporcionado de la disciplina escolar en las </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2015/11/13/fact-sheet-advancing-equity-women-and-girls-color"><span style="font-weight: 400;">niñas de color</span></a><span style="font-weight: 400;"> para incluir a estudiantes LGBTQ+, todos los estudiantes de color y estudiantes con discapacidades.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Trabajará para terminar con el suicidio entre los jóvenes LGBTQ+. </b><span style="font-weight: 400;">Las jóvenes lesbianas, los jóvenes homosexuales y los bisexuales </span><a href="https://www.thetrevorproject.org/resources/preventing-suicide/facts-about-suicide/"><span style="font-weight: 400;">tienen cinco veces más probabilidades de intentar suicidarse</span></a><span style="font-weight: 400;"> que sus pares heterosexuales. Y </span><a href="https://www.thetrevorproject.org/2019/02/22/research-brief-data-on-transgender-youth/"><span style="font-weight: 400;">un tercio</span></a><span style="font-weight: 400;"> de los jóvenes transgénero informan que intentaron suicidarse en el último año. Biden se asegurará de que los programas de prevención del suicidio en las escuelas y las comunidades locales se basen en las prácticas recomendadas comprobadas, que el Departamento de Educación de los EE. UU. difundirá. Expandirá el acceso a los recursos de salud mental al duplicar el número de psicólogos, orientadores, enfermeras, trabajadores sociales y otros profesionales de la salud en nuestras escuelas. Partiendo de la propuesta </span><a href="https://www.legis.state.pa.us/cfdocs/billinfo/BillInfo.cfm?syear=2019&amp;sind=0&amp;body=H&amp;type=B&amp;bn=1622"><span style="font-weight: 400;">Ley de Phillip</span></a><span style="font-weight: 400;"> en Pensilvania, Biden ordenará a su secretario de Educación que complete un estudio sobre las necesidades y servicios de salud mental en nuestras escuelas. Y, Biden invertirá en investigación para desarrollar programas más eficaces de prevención del suicidio en adolescentes.</span></p>
+<p><b>Eliminará la falta de vivienda entre los jóvenes LGBTQ+. </b><span style="font-weight: 400;">Los jóvenes LGBTQ+ tienen </span><a href="https://www.chapinhall.org/research/lgbtq-young-adults-experience-homelessness-at-more-than-twice-the-rate-of-peers/"><span style="font-weight: 400;">el doble de probabilidades de quedarse sin hogar</span></a><span style="font-weight: 400;"> que sus contrapartes no LGBTQ+. El plan de vivienda de Biden exige la aprobación de la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1856"><span style="font-weight: 400;">Ley para Terminar con la Falta de Vivienda, que otorgará fondos</span></a><span style="font-weight: 400;"> para una estrategia integral y holística para terminar con la falta de vivienda, que incluye todo, desde el manejo de casos hasta refugios de emergencia y vales de vivienda adicionales para personas sin hogar. Además, Biden se asegurará de que parte de los fondos de esta subvención estén específicamente destinados a ayudar a niños y adultos jóvenes, incluidos los jóvenes LGBTQ+, que carecen de vivienda. Reconociendo que muchos de nuestros jóvenes LGBTQ+ no tienen hogar debido al rechazo de sus familias, compañeros y escuelas, Biden también se basará en su trabajo previo en las campañas “Las cosas mejorarán” y “Tal como eres” para generar una mayor aceptación y apoyos para jóvenes LGBTQ+. Invertirá en programas basados ​​en evidencia que trabajan para prevenir y reducir la falta de vivienda juvenil LGBTQ+, como la </span><a href="https://www.hudexchange.info/homelessness-assistance/resources-for-homeless-youth/lgbtq-youth-homelessness-prevention-initiative-community-plans/"><span style="font-weight: 400;">Iniciativa de Prevención de la Falta de Vivienda Juvenil LGBTQ</span></a><span style="font-weight: 400;"> y el </span><a href="https://www.340blueprintproject.com/#about"><span style="font-weight: 400;">Plan 3/40</span></a><span style="font-weight: 400;">. Además, invertirá en programas que respondan a las necesidades específicas de los jóvenes LGBTQ+ cuando no tienen una vivienda. Específicamente, Biden aumentará los fondos para la </span><a href="https://www.acf.hhs.gov/fysb/resource/rhy-act"><span style="font-weight: 400;">Ley de Jóvenes que Han Huido de sus Casas y No Tienen Hogar</span></a><span style="font-weight: 400;"> para garantizar que las personas LGBTQ+ tengan acceso a programas de vivienda transitoria que brindan servicios esenciales como asesoramiento laboral y servicios de salud mental y física.</span></p>
+<p><i><span style="font-weight: 400;">Lea el plan completo sobre vivienda de Biden en joebiden.com/housing.</span></i></p>
+<p>&nbsp;</p>
+<p><b>Se centrará en la reforma y prevención de la justicia juvenil. </b><span style="font-weight: 400;">Los jóvenes LGBTQ+ están desproporcionadamente sobrerrepresentados en el sistema de justicia juvenil. Si bien se </span><a href="https://www.lgbtmap.org/file/lgbtq-incarcerated-youth.pdf"><span style="font-weight: 400;">estima</span></a><span style="font-weight: 400;"> que los jóvenes LGBTQ+ representan solo el 7-9% de los jóvenes en los Estados Unidos, representan aproximadamente el 20% de los jóvenes encarcelados en centros de detención juvenil o correccionales. Como presidente, Biden priorizará la reforma del sistema de justicia juvenil para asegurarse de que le demos a más niños una segunda oportunidad para alcanzar su potencial. Invertirá $1,000 millones por año en la reforma de la justicia juvenil e incentivará a los estados para que dejen de encarcelar a los niños. Biden creará un nuevo programa piloto de $100 millones para alentar a los estados a (1) colocar a los jóvenes no violentos en alternativas comunitarias a la prisión, y (2) </span><a href="https://www.urban.org/sites/default/files/transforming_closed_youth_prisons_two_pager.pdf"><span style="font-weight: 400;">reutilizar</span></a><span style="font-weight: 400;"> las cárceles vacías para el beneficio de la comunidad para que no puedan ser utilizados en el futuro para la detención. Para recibir esta subvención de $100 millones, se requerirá que las localidades traigan a las personas jóvenes LGBTQ+ y las comunidades afectadas a la mesa cuando desarrollan planes para reducir el encarcelamiento de menores. Aumentará los fondos para programas extracurriculares, centros comunitarios y empleos de verano para mantener a los jóvenes activos, ocupados, aprendiendo y divirtiéndose. Biden ampliará la inversión federal en programas que crean espacios seguros y enriquecedores para que los niños inviertan el tiempo cuando no están en la escuela. Biden también creará un programa nacional ampliado de empleos de verano para jóvenes adultos para que tengan la oportunidad de mantenerse ocupados, obtener ingresos y aprender nuevas habilidades.</span></p>
+<p><b>Protegerá a los Soñadores (</b><b><i>Dreamers)</i></b><b> LGBTQ+. </b><span style="font-weight: 400;">Se estima que hay </span><a href="https://williamsinstitute.law.ucla.edu/research/media-advisory-there-are-over-75000-lgbt-dreamers-36000-have-participated-in-daca/?link_id=2&amp;can_id=d90c309ac9b5a0fa50d294d0b1cdf0b2&amp;source=email-turn-7-dirty-words-into-5-positive-actions&amp;email_referrer=&amp;ema"><span style="font-weight: 400;">75,000 </span><i><span style="font-weight: 400;">Soñadores</span></i><span style="font-weight: 400;"> que se identifican como LGBTQ</span></a><span style="font-weight: 400;">, 36,000 de los cuales son participantes de DACA (Acción Diferida para los Llegados en la Infancia). La Administración Trump-Pence tomó la decisión cruel y contraproducente de terminar con DACA, lo que causó confusión en la vida de millones de Soñadores. Los Soñadores y sus padres deben tener una hoja de ruta hacia la ciudadanía a través de una reforma legislativa de inmigración. Pero mientras tanto, Biden eliminará la incertidumbre para los Soñadores al restablecer el programa de DACA, y explorará todas las opciones legales para proteger a sus familias de la separación inhumana.</span></p>
+<p><b>PROTEGERÁ A LOS INDIVIDUOS LGBTQ+ DE LA VIOLENCIA</b></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">“Me enorgulleció trabajar con los padres de Matthew [Shepard], Judy y Dennis, para extender nuestra ley de crímenes de odio para cubrir la orientación sexual y la identidad de género. Pero aún queda mucho trabajo por hacer: no podemos descansar hasta que cada estadounidense pueda vivir abiertamente y orgulloso sin miedo&#8221;.</span></i></p>
+<p><i><span style="font-weight: 400;">—Joe Biden, 12 de octubre de 2019</span></i></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Una de las fuerzas impulsoras a lo largo de la carrera de Biden ha sido luchar contra los abusos de poder. Esa fuerza lo motivó a escribir y a defender la Ley de Violencia contra las Mujeres de 1994, a derrotar a la Asociación Nacional del Rifle en dos ocasiones y condenar enérgicamente la epidemia de violencia contra la comunidad LGBTQ+, incluidas las mujeres transgénero de color. Como presidente, Biden protegerá a las personas LGBTQ+ de la violencia, ya sea en el hogar, en su comunidad o al ingresar a este país. También se asegurará de que apoyemos a los sobrevivientes de violencia LGBTQ+. Biden:</span></p>
+<p><b>Reducirá la violencia doméstica, la violencia en el noviazgo, la agresión sexual y el acoso contra las personas LGBTQ+ y apoyará a los sobrevivientes de esta violencia. </b><span style="font-weight: 400;">Biden fue autor de la ley original de Violencia contra la Mujer y en 2013 defendió la </span><a href="https://www.congress.gov/bill/113th-congress/senate-bill/47"><span style="font-weight: 400;">reautorización de la ley</span></a><span style="font-weight: 400;">, que por primera vez incluyó protecciones explícitas para las personas LGBTQ+ e identificó a las personas LGBTQ+ como una “población desatendida” para que las organizaciones que sirven a la comunidad LGBTQ+ fueran elegibles para los fondos existentes. La propuesta de </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1585/text#toc-HDEDB6CB38A014D78B0A8EA1BD635672E"><span style="font-weight: 400;">Ley de Reautorización de Violencia Contra la Mujer de 2019</span></a><span style="font-weight: 400;"> contiene protecciones adicionales para las personas LGBTQ+, incluidas las personas transgénero encarceladas. Pero, el líder McConnell se niega a presentar el proyecto de ley en el Senado. No hay ninguna razón por la cual el Senado no deba aprobar esta reautorización ahora y promulgarla mucho antes del primer día del presidente Biden en el cargo. Pero si no lo hacen, Biden hará que promulgar la reautorización de VAWA sea una de sus principales prioridades para los primeros 100 días. También trabajará para incluir protecciones contra la discriminación por la orientación sexual y la identidad de género en la reautorización de la </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2259/text"><span style="font-weight: 400;">Ley de Prevención y Servicios contra la Violencia Familiar (FVPSA, por sus siglas en inglés)</span></a><span style="font-weight: 400;">. Y buscará fondos permanentes para el </span><a href="https://lgbtqipv.org/"><span style="font-weight: 400;">Instituto Nacional LGBTQ sobre V</span></a><span style="font-weight: 400;">iolencia Doméstica</span><span style="font-weight: 400;"> para prevenir y abordar la violencia de pareja íntima LGBTQ+.</span></p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de Biden para poner fin a la violencia contra las mujeres en joebiden.com/vawa.</span></i></p>
+<p>&nbsp;</p>
+<p><b>Combatirá la epidemia de violencia contra las mujeres transgénero de color. </b><span style="font-weight: 400;">Como respuesta directa a las altas tasas de homicidio de personas transgénero, en particular las mujeres transgénero de color, la Administración Biden hará que el enjuiciamiento de sus asesinos sea una prioridad. Y durante sus primeros 100 días en el cargo, Biden dirigirá recursos federales para ayudar a prevenir la violencia contra las mujeres transgénero, particularmente las mujeres transgénero de color. Reconociendo que el empleo y la discriminación en la vivienda conducen a un mayor riesgo de personas sin hogar y violencia, Biden también trabajará para aprobar la Ley de Igualdad para reducir las barreras económicas y el estigma social y la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3280?s=1&amp;r=1"><span style="font-weight: 400;">Ley de Datos Esenciales LGBTQ</span></a><span style="font-weight: 400;"> para ayudar a recopilar una amplia variedad de datos críticos sobre violencia contra los/las transgénero y los factores que la impulsan. También ordenará a su Administración que actualice los Informes Uniformes de Homicidios (UCR-SHR, por sus siglas en inglés) del FBI para incluir orientación sexual e identidad o expresión de género. Actualmente, estos informes no incluyen categorías de orientación sexual e identidad de género, lo que obstaculiza nuestra capacidad para diagnosticar y medir completamente el alcance de los crímenes violentos contra víctimas transgénero, gays, lesbianas y bisexuales. </span></p>
+<p><b>Hará cumplir y fortalecerá la Ley de Prevención de Crímenes de Odio Matthew Shepard y James Byrd, Jr. </b><span style="font-weight: 400;">A lo largo de los años, Biden ha defendido más de una docena de proyectos de ley en torno a los esfuerzos de prevención de crímenes de odio, incluida la legislación de 1989 que exige que el gobierno comience a recopilar datos sobre crímenes de odio basados en la orientación sexual y una legislación histórica en 1994 que permite sanciones más severas por delitos a base de la orientación sexual. En 2009, Obama y Biden defendieron y firmaron la </span><a href="https://www.govinfo.gov/content/pkg/USCODE-2011-title18/pdf/USCODE-2011-title18-partI-chap13-sec249.pdf"><span style="font-weight: 400;">Ley de Prevención de Crímenes de Odio Matthew Shepard y James Byrd, Jr.</span></a><span style="font-weight: 400;">, que amplió la ley de crímenes de odio de la nación para incluir crímenes a base del género real o percibido, la orientación sexual, la identidad de género o discapacidad. Pero hoy todavía hay mucho más trabajo por hacer. Según las </span><a href="https://ucr.fbi.gov/hate-crime/2018/topic-pages/victims"><span style="font-weight: 400;">Estadísticas de Crímenes de Odio del FBI del 2018</span></a><span style="font-weight: 400;">, casi el 19% de los crímenes de odio denunciados en 2018 se basaron en orientación sexual o identidad de género. Biden abordará estos crímenes a través de un liderazgo moral que deja en claro que los insultos no tienen lugar en los Estados Unidos. Además, fortalecerá la aplicación de la Ley Matthew Shepard y James Byrd, Jr., al aumentar los fondos para la capacitación en investigación contra los prejuicios y los crímenes de odio. Trabajará con el Congreso para aprobar tanto la </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2043/text"><span style="font-weight: 400;">Ley NO ODIO de Jabara-Heyer</span></a><span style="font-weight: 400;">, que mejorará la recopilación de datos y la denuncia de crímenes de odio, como </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2355/text"><span style="font-weight: 400;">la Ley de Eliminación de Perfiles Raciales y Religiosos</span></a><span style="font-weight: 400;">, que prohibirá a las fuerzas del orden público atacar a una persona basándose en “raza real o percibida, etnia, origen nacional, religión, género, identidad de género u orientación sexual&#8221;. Y Biden se asegurará de que el Departamento de Justicia de su Administración haga de los crímenes de odio una prioridad de enjuiciamiento.</span></p>
+<p><b>Pondrá fin a nuestra epidemia de violencia armada y su impacto en la comunidad LGBTQ+. </b><span style="font-weight: 400;">Biden ha presentado un </span><a href="../../gunsafety.html"><span style="font-weight: 400;">plan</span></a><span style="font-weight: 400;"> integral para poner fin a nuestra epidemia de violencia armada, que incluye prohibir la fabricación y venta de armas de asalto y los cargadores de alta capacidad y exigir la verificación de antecedentes para todas las ventas de armas. También trabajará para cerrar la “laguna legal de los crímenes de odio” mediante la promulgación de una </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/2708"><span style="font-weight: 400;">legislación</span></a><span style="font-weight: 400;"> que prohíba a un individuo “que ha sido condenado por un delito menor de odio, o recibió una sentencia aumentada por un delito menor debido a odio o prejuicio en su comisión” comprar o poseer un arma de fuego</span></p>
+<p><b>Pondrá fin a las políticas perjudiciales de asilo e inmigración de Trump que perjudican nuestra posición global.</b><span style="font-weight: 400;"> La Estatua de la Libertad ha sido durante mucho tiempo un faro para las personas que “anhelan respirar libremente” en todo el mundo, incluidos los solicitantes de asilo y los refugiados. Pero la Administración Trump-Pence ha socavado esta tradición al limitar severamente la capacidad de los miembros de la comunidad LGBTQ+, un grupo especialmente vulnerable en muchas partes del mundo, de calificar para el asilo como miembros de un “grupo social particular&#8221;. La Administración Trump-Pence también ha instituido Protocolos de Protección de Migrantes, evitando que las personas ingresen a los Estados Unidos mientras esperan su audiencia de asilo. Como presidente, Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Asegurará que las leyes de asilo protejan a las personas que huyen de la persecución. </b><span style="font-weight: 400;">Biden pondrá fin a los Protocolos de Protección de Migrantes de Trump y restaurará nuestras leyes de asilo para que hagan lo que deberían haber sido diseñadas para hacer: proteger a las personas que huyen de la persecución y no pueden regresar a sus hogares de manera segura. Se asegurará de que los refugiados LGBTQ+ y los solicitantes de asilo tengan acceso a los servicios y protecciones necesarios. Y se asegurará de que las agencias federales estén capacitadas para identificar y responder a las necesidades particulares de los refugiados y los solicitantes de asilo LGBTQ+, incluso al agilizar los servicios para las personas LGBTQ+ que pueden ser blanco de violencia o están bajo amenaza en sus países de origen.</span></li>
+<li style="font-weight: 400;"><b>Pondrá fin a la detención prolongada y reinvertirá en un programa de manejo de casos. </b><span style="font-weight: 400;">Los inmigrantes LGBTQ+ </span><a href="https://www.americanprogress.org/issues/lgbtq-rights/news/2018/05/30/451294/ices-rejection-rules-placing-lgbt-immigrants-severe-risk-sexual-abuse/"><span style="font-weight: 400;">enfrentan una mayor tasa</span></a><span style="font-weight: 400;"> de violencia sexual que otros inmigrantes detenidos. Biden invertirá en alternativas comprobadas a los programas de detención y el manejo de casos sin fines de lucro, que apoyan a los migrantes mientras navegan por sus obligaciones legales y son la mejor manera de garantizar que asistan a las citas de inmigración requeridas. Estos programas también permiten a los migrantes vivir con dignidad y seguridad mientras esperan sus audiencias judiciales, facilitando cosas como visitas al médico, servicios sociales e inscripción escolar para niños. La </span><a href="https://scholarship.law.tamu.edu/cgi/viewcontent.cgi?article=1875&amp;context=facscholar"><span style="font-weight: 400;">evidencia muestra</span></a><span style="font-weight: 400;"> que estos programas son altamente efectivos y mucho menos costosos y punitivos que detener a familias.</span></li>
+<li style="font-weight: 400;"><b>Rescindirá las prohibiciones de viaje y de refugiados anti estadounidenses, también conocidas como “prohibiciones musulmanas&#8221;. </b><span style="font-weight: 400;">El prejuicio anti musulmán de la Administración Trump-Pence perjudica nuestra economía y traiciona nuestros valores. Prohibir a los musulmanes, incluidos los de la comunidad LGBTQ+, ingresar al país es moralmente incorrecto, y no hay inteligencia o evidencia que sugiera que esto hace que nuestra nación sea más segura. Es otro abuso de poder por parte de la Administración Trump diseñado para atacar principalmente a inmigrantes negros y otros inmigrantes de color. Biden rescindirá la “prohibición musulmana” en su primer día en el cargo.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Apoyará a los sobrevivientes de violencia LGBTQ+. </b><span style="font-weight: 400;">Biden entiende que la violencia a menudo deja un impacto duradero en sus víctimas y sus comunidades y que el cuidado sensible al trauma es esencial en la recuperación física, emocional y psicológica de los sobrevivientes. Biden ordenará al Departamento de Salud y Servicios Humanos de los EE. UU. que lleve a cabo una revisión exhaustiva de todos los programas federales destinados a servir a las comunidades que puedan experimentar violencia para garantizar que incluyan a la población LGBTQ+ y que puedan abordar cualquier trauma resultante. También aumentará el límite de fondos para los programas de la </span><a href="https://www.ovc.gov/"><span style="font-weight: 400;">Ley de Víctimas del Crimen</span></a><span style="font-weight: 400;">, que brindan </span><a href="https://www.ovc.gov/grants/types.html#formulagrants"><span style="font-weight: 400;">apoyo financiero para ayudar</span></a><span style="font-weight: 400;"> a las víctimas de delitos a pagar los gastos, incluidos los costos médicos y dentales, el asesoramiento, la pérdida de salarios y los gastos de alojamiento temporal que resultan del delito.</span></p>
+<p><b>AMPLIARÁ EL ACCESO AL CUIDADO DE SALUD DE ALTA CALIDAD PARA LAS PERSONAS LGBTQ+</b></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">&#8220;[Nosotros] aprobamos la Ley del Cuidado de Salud a Bajo Precio para que a nadie se le pueda negar la atención médica por su orientación sexual o su identidad de género&#8221;.</span></i></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">—Joe Biden, 23 de marzo de 2014</span></i></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Aprobar Obamacare fue un gran paso adelante en la expansión del acceso a un cuidado de salud asequible y de calidad, especialmente para los estadounidenses LGBTQ+. Pero, todos los días en los últimos diez años, la Ley del Cuidado de Salud a Bajo Precio ha estado bajo un ataque implacable. Biden se opone a todos los esfuerzos para deshacerse de esta ley histórica, incluidos los esfuerzos de los republicanos y los esfuerzos de los demócratas. En lugar de comenzar desde cero y deshacerse del seguro privado, Biden tiene un plan para ampliar la Ley del Cuidado de Salud a Bajo Precio al ofrecer a los estadounidenses más opciones, reducir los costos del cuidado de salud y hacer que nuestro sistema de salud sea menos complejo de navegar. El plan de Biden garantizará que cada estadounidense tenga acceso a un seguro médico asequible y de calidad y ayudará específicamente a los estadounidenses LGBTQ+. Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Garantizará las protecciones antidiscriminatorias de la Ley del Cuidado de Salud a Bajo Precio para la comunidad LGBTQ+. </b><span style="font-weight: 400;">Antes de la Ley del Cuidado de Salud a Bajo Precio, las compañías de seguros podían aumentar las primas simplemente debido al género, la orientación sexual o la identidad de género de una persona. Además, las compañías de seguros podrían aumentar las primas o negar la cobertura por completo debido a la condición de </span><a href="https://www.kff.org/disparities-policy/issue-brief/the-affordable-care-act-and-insurance-coverage-changes-by-sexual-orientation/"><span style="font-weight: 400;">VIH</span></a><span style="font-weight: 400;"> de alguien. Sin embargo, el presidente Trump está tratando de revertir este progreso. Por ejemplo, ha </span><a href="https://www.hhs.gov/about/news/2019/05/24/hhs-proposes-to-revise-aca-section-1557-rule.html"><span style="font-weight: 400;">propuesto</span></a><span style="font-weight: 400;"> permitir una vez más que los proveedores de servicios de salud y las compañías de seguros discriminen a base de la identidad de género del paciente. El presidente Biden defenderá los derechos de todas las personas, independientemente de su género, orientación sexual e identidad de género, a tener acceso a cuidado de salud asequible y de calidad sin discriminación.</span></li>
+<li style="font-weight: 400;"><b>Garantizará la cobertura de cuidado integral para los estadounidenses LGBTQ+. </b><span style="font-weight: 400;">Biden se asegurará de que las personas LGBTQ+ tengan acceso completo a todos los tratamientos y recursos de cuidado de salud adecuados. Esto incluye cubrir el cuidado relacionado con la transición, incluida la cirugía de confirmación de género. E incluye la cobertura del tratamiento y prevención del VIH. Biden se asegurará de que los planes de salud federales brinden cobertura para PrEP (profilaxis previa a la exposición) y PEP (profilaxis posterior a la exposición), medicamentos de prevención de VIH altamente eficaces y que salvan vidas. Afortunadamente, gracias a una </span><a href="https://jamanetwork.com/journals/jama/fullarticle/2735509"><span style="font-weight: 400;">recomendación</span></a><span style="font-weight: 400;"> del Grupo de Trabajo Preventivo de EE. UU. (USPSTF, por sus siglas en inglés), la PrEP debe estar </span><a href="https://www.nastad.org/blog/nastad-applauds-uspstf-recommendation-prep-action-required-fully-implement"><span style="font-weight: 400;">cubierta sin costos compartidos</span></a><span style="font-weight: 400;"> a partir de 2021. Biden se asegurará de que otros costos, </span><a href="https://www.nastad.org/blog/nastad-applauds-uspstf-recommendation-prep-action-required-fully-implement"><span style="font-weight: 400;">incluidos los servicios de laboratorio y clínicos</span></a><span style="font-weight: 400;">, estén cubiertos. También detendrá el aumento de precios por parte de la industria farmacéutica al tomar medidas cuando los fabricantes fijan precios abusivos a los medicamentos.</span></li>
+<li style="font-weight: 400;"><b>Actualizará e implementará la Estrategia Nacional Integral contra el VIH/SIDA de la Administración Obama-Biden. </b><span style="font-weight: 400;">Biden ha luchado por el acceso al tratamiento para las personas con VIH/SIDA y fondos para la investigación del VIH/SIDA, y ayudó a aprobar y expandir el programa Global del SIDA (PEPFAR, por sus siglas en inglés). Como presidente, se comprometerá nuevamente a poner fin a la epidemia de VIH/SIDA para 2025. Biden actualizará e implementará la </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2015/07/30/fact-sheet-national-hivaids-strategy-updated-2020"><span style="font-weight: 400;">estrategia integral de VIH/SIDA</span></a><span style="font-weight: 400;"> de la nación, presentada por primera vez por la Administración Obama-Biden. Esta estrategia reducirá agresivamente los nuevos casos de VIH, al tiempo que aumenta el acceso al tratamiento y elimina el acceso desigual a los servicios y apoyos. Además, Biden otorgará la totalidad de los fondos al </span><a href="https://hab.hrsa.gov/about-ryan-white-hivaids-program/about-ryan-white-hivaids-program"><span style="font-weight: 400;">Programa Ryan White de VIH/SIDA</span></a><span style="font-weight: 400;">, que brinda servicios a personas con VIH/SIDA, y aumentará los fondos federales para la investigación del VIH/SIDA y apoyará un aumento en los fondos para el </span><a href="https://www.benefits.gov/benefit/5888"><span style="font-weight: 400;">programa de Oportunidades de Vivienda para Personas con SIDA</span></a><span style="font-weight: 400;">. Y trabajará para terminar con la discriminación y el estigma para reducir las “</span><a href="https://files.hiv.gov/s3fs-public/nhas-update.pdf"><span style="font-weight: 400;">barreras a la prevención, pruebas y cuidado del VIH</span></a><span style="font-weight: 400;">” a través de la educación, la divulgación y la convocatoria de grupos y partes interesadas clave. Proveerá fondos para implementar programas basados en evidencia diseñados para detener la propagación de enfermedades como el VIH, incluidos los programas de servicios de jeringas.</span></li>
+<li style="font-weight: 400;"><b>Despenalizará la exposición al VIH y las leyes de transmisión. </b><span style="font-weight: 400;">En 2018, 26 estados en Estados Unidos tenían leyes penales de exposición al VIH. Estas leyes perpetúan la discriminación y el estigma hacia las personas con VIH/SIDA, y simplemente no existe una “</span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6058272/"><span style="font-weight: 400;">base científica</span></a><span style="font-weight: 400;">” para ellas. Como presidente, Biden apoyará legislación como la </span><a href="https://www.congress.gov/bill/115th-congress/house-bill/1739/text"><span style="font-weight: 400;">Ley para REVOCAR la Discriminación por el VIH</span></a><span style="font-weight: 400;">, que promueve recomendaciones de mejores prácticas para los estados.</span></li>
+<li style="font-weight: 400;"><b>Prohibirá las llamadas “terapias de conversión&#8221;. </b><a href="https://williamsinstitute.law.ucla.edu/press/conversion-therapy-release/"><span style="font-weight: 400;">Cientos de miles</span></a><span style="font-weight: 400;"> de personas LGBTQ+ han sido sometidas a las llamadas “terapias de conversión” durante su vida, lo que Biden sabe que es </span><a href="https://store.samhsa.gov/system/files/sma15-4928.pdf"><span style="font-weight: 400;">profundamente dañino, muy poco científico y que a menudo conduce a un trauma</span></a><span style="font-weight: 400;">. La Administración Obama-Biden apoyó los esfuerzos legislativos para prohibir las “terapias de conversión” contra los menores, pero hoy esta práctica solo está totalmente prohibida para menores en 19 estados. Como presidente, Biden trabajará para promulgar la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3570"><span style="font-weight: 400;">Ley de Prevención del Fraude Terapéutico</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><b>Restaurará los fondos federales para Planned Parenthood. </b><span style="font-weight: 400;">Los centros de salud de Planned Parenthood en todo el país desempeñan un </span><a href="https://www.plannedparenthood.org/get-care/our-services/lgbt-services"><span style="font-weight: 400;">papel importante</span></a><span style="font-weight: 400;"> en proporcionar atención asequible y culturalmente competente a las personas LGBTQ+. Biden revocará las restricciones de Trump sobre el Título X de la Ley de Servicios de Salud Pública y restablecerá los fondos para Planned Parenthood, para que esta organización vital de salud pública pueda continuar brindando servicios de salud críticos y de calidad a las comunidades pobres y desatendidas, incluidos los servicios de salud reproductiva, pruebas de detección de cáncer, pruebas de VIH, terapias hormonales y cuidado médico general.</span></li>
+<li style="font-weight: 400;"><b>Ampliará los servicios de salud mental y prevención del suicidio para las personas LGBTQ+. </b><span style="font-weight: 400;">Como vicepresidente, Biden defendió los esfuerzos para </span><a href="https://www.federalregister.gov/documents/2013/11/13/2013-27086/final-rules-under-the-paul-wellstone-and-pete-domenici-mental-health-parity-and-addiction-equity-act"><span style="font-weight: 400;">implementar la ley federal de paridad en la salud mental</span></a><span style="font-weight: 400;">, mejorar el acceso a los servicios de salud mental y </span><a href="https://www.youtube.com/watch?v=gFZsIPkfN3Q"><span style="font-weight: 400;">eliminar el estigma en torno a la salud mental</span></a><span style="font-weight: 400;">. Como presidente, redoblará estos esfuerzos para garantizar el cumplimiento con las leyes de paridad de salud mental y amentará los fondos para los servicios de salud mental para la comunidad LGBTQ+.</span></li>
+<li style="font-weight: 400;"><b>Mejorará el acceso al cuidado de salud de calidad para los estadounidenses LGBTQ+ en las comunidades rurales. </b><span style="font-weight: 400;">Las zonas rurales de los Estados Unidos enfrentan desafíos y oportunidades únicas cuando se trata de acceder a cuidado de salud de calidad. Mantener abiertos nuestros hospitales rurales es fundamental para salvar vidas, sin embargo, aproximadamente </span><a href="https://www.ruralhealthweb.org/advocate"><span style="font-weight: 400;">1 de cada 4</span></a><span style="font-weight: 400;"> hospitales rurales están en riesgo de cerrar. Biden inscribirá automáticamente a las personas LGBTQ+ de bajos ingresos, incluidas las personas de color LGBTQ+, que viven en comunidades rurales, que serían elegibles para Medicaid si no hubiese sido por la negativa de su estado a asumir la expansión de Medicaid de la Ley de Cuidado de Salud a Bajo Precio, en una nueva opción pública sin prima. También otorgará fondos adecuadamente a los hospitales rurales y les dará la flexibilidad que necesitan para mantener sus puertas abiertas y atender a sus pacientes LGBTQ+.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo sobre las zonas rurales de Biden en joebiden.com/rural.</span></i></p>
+<p>&nbsp;</p>
+<p><b>ASEGURARÁ EL TRATO JUSTO DE LOS INDIVIDUOS LGBTQ+ EN EL SISTEMA DE JUSTICIA PENAL</b></p>
+<p><i><span style="font-weight: 400;">&#8220;Las personas LGBTQ son más propensas a ser arrestadas en gran parte&#8230; porque son expulsados de sus hogares, no tienen acceso a la vivienda, no tienen acceso a todos los beneficios que todos los demás tienen, y se encuentran siendo víctimas, victimizadas por lo que está sucediendo cuando están solos en la calle, muchos de ellos&#8221;. </span></i></p>
+<p><i><span style="font-weight: 400;">—Joe Biden, 20 de septiembre de 2019.</span></i></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">El sistema de justicia penal de los EE. UU. tiene el deber de garantizar que las personas, incluidas las de la comunidad LGBTQ+, sean tratadas de manera justa y con dignidad. Pero </span><a href="http://www.lgbtmap.org/lgbt-criminal-justice"><span style="font-weight: 400;">la discriminación y el estigma atrapan a las personas LGBTQ+ en el sistema de justicia penal en tasas desproporcionadamente altas</span></a><span style="font-weight: 400;">. Una vez en el sistema, las personas LGBTQ+, </span><a href="https://transequality.org/sites/default/files/docs/resources/TransgenderPeopleBehindBars.pdf"><span style="font-weight: 400;">particularmente</span></a><span style="font-weight: 400;"> las personas transgénero, tienen </span><a href="https://www.lgbtmap.org/lgbt-criminal-justice"><span style="font-weight: 400;">más probabilidades</span></a><span style="font-weight: 400;"> de sufrir violencia. Para garantizar un trato justo y poner fin a la violencia en nuestro sistema de justicia penal, Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Reducirá las interacciones LGBTQ+ con el sistema de justicia penal. </b><span style="font-weight: 400;">Biden cree que la reforma de la justicia penal debe abordar el impacto desproporcionado del sistema en las personas LGBTQ+, en particular </span><a href="http://www.lgbtmap.org/file/lgbt-criminal-justice-trans.pdf"><span style="font-weight: 400;">las mujeres transgénero de color</span></a><span style="font-weight: 400;">. La audaz propuesta de Biden para la reforma de la justicia penal reducirá la población carcelaria, al tiempo que reduce el crimen, al otorgar fondos para un programa de subsidios de $20 mil millones que alienta a los estados a pasar del encarcelamiento hacia la prevención y rehabilitación. Ordenará al Procurador General que convierta en una prioridad de enjuiciamiento erradicar y enjuiciar la mala conducta al usar la investigación de patrones o prácticas y los decretos de consentimiento. También invertirá en defensores públicos y pondrá fin a la fianza en efectivo para que podamos dejar de encarcelar a las personas por no poder pagar multas y cargos.</span></li>
+<li style="font-weight: 400;"><b>Aumentará la seguridad de las personas transgénero encarceladas. </b><span style="font-weight: 400;">La Administración Obama-Biden emitió un </span><a href="https://www.bop.gov/policy/progstat/5200.04.pdf"><span style="font-weight: 400;">Manual sobre Delincuentes Transgénero</span></a><span style="font-weight: 400;">, que exige que se considere la identidad de género al hacer asignaciones de alojamiento. Pero la Oficina Federal de Prisiones de la Administración Trump-Pence </span><a href="https://www.documentcloud.org/documents/4459297-BOP-Change-Order-Transgender-Offender-Manual-5.html"><span style="font-weight: 400;">revocó</span></a><span style="font-weight: 400;"> esta política, que ahora requiere que se use el sexo biológico en las determinaciones de alojamiento y que pone a los reclusos transgénero en grave peligro de agresiones y violación. Como presidente, Biden exigirá a la Oficina de Prisiones que revise el Manual sobre Delincuentes transgénero para incluir nuevamente protecciones para las personas transgénero que están encarceladas. Biden implementará completamente la Ley para Eliminar las Violaciones en Prisión, incluida la implementación por parte del Departamento de Seguridad Nacional. Además, se asegurará de que todos los reclusos transgénero en las instituciones penitenciarias federales tengan acceso a los médicos y la atención médica adecuados, incluidos los OBGYN y la terapia hormonal.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">Lea el plan completo de justicia penal de Biden en joebiden.com/justice.</span></i></p>
+<p>&nbsp;</p>
+<p><b>RECOPILARÁ LOS DATOS NECESARIOS PARA APOYAR TOTALMENTE A LA COMUNIDAD LGBTQ+</b></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">“La igualdad transgénero es el asunto de derechos civiles de nuestro tiempo”.</span></i></p>
+<p><i><span style="font-weight: 400;">—Joe Biden, 25 de enero de 2020.</span></i></p>
+<p><span style="font-weight: 400;">El gobierno federal necesita datos completos y precisos sobre las personas LGBTQ+ en los Estados Unidos para identificar los desafíos que enfrentan y dirigir los recursos adecuados a los lugares y personas adecuados. Históricamente, los datos sobre la comunidad LGBTQ+ han sido escasos porque las encuestas nacionales no han incluido preguntas sobre orientación sexual e identidad de género.</span></p>
+<p><span style="font-weight: 400;">La Administración Obama-Biden avanzó en la recopilación de datos sobre la orientación sexual e identidad de género de las personas. Los beneficios de esta recopilación de datos inclusiva son concretos. Ahora entendemos mejor la </span><a href="https://www.huduser.gov/portal/publications/fairhsg/discrim_samesex.html"><span style="font-weight: 400;">discriminación contra las parejas del mismo sexo en el mercado de alquiler en línea</span></a><span style="font-weight: 400;"> y pudimos </span><a href="https://www.hiv.gov/federal-response/policies-issues/hiv-aids-care-continuum"><span style="font-weight: 400;">enfocar mejor los recursos</span></a><span style="font-weight: 400;"> para </span><a href="https://obamawhitehouse.archives.gov/sites/default/files/docs/lgbt_record.pdf"><span style="font-weight: 400;">abordar las disparidades de salud</span></a><span style="font-weight: 400;"> en el cuidado del VIH/SIDA. Sin embargo, la </span><a href="https://www.americanprogress.org/issues/lgbt/news/2017/03/20/428623/trump-administration-rolling-back-data-collection-lgbt-older-adults/"><span style="font-weight: 400;">Administración Trump-Pence ha intentado borrar a las personas LGBTQ+ de los esfuerzos federales de recopilación de datos.</span></a><span style="font-weight: 400;"> Como presidente, Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Asegurará que las preguntas sobre orientación sexual e identidad de género se incluyan en las encuestas nacionales y en los esfuerzos de recopilación de datos. </b><span style="font-weight: 400;">Biden se asegurará de que las agencias federales y los programas federales relevantes, incluidos el Censo decenal, la Encuesta sobre la Comunidad Estadounidense y la Encuesta de Población Actual, obtengan datos precisos, al tiempo que apliquen enérgicamente las protecciones de privacidad adecuadas. Trabajará para promulgar la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3509?s=1&amp;r=4"><span style="font-weight: 400;">Ley de Inclusión de Datos LGBTQ</span></a><span style="font-weight: 400;">, </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3280?s=1&amp;r=1"><span style="font-weight: 400;">que requerirá que las agencias recopilen información voluntaria sobre orientación sexual e identidad de género en ciertas encuestas de población</span></a><span style="font-weight: 400;">, y la </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3280?s=1&amp;r=1"><span style="font-weight: 400;">Ley de Datos Esenciales LGBTQ</span></a><span style="font-weight: 400;">, que mejorará la recopilación de datos con respecto a la determinación de las principales causas de muertes violentas entre la comunidad LGBTQ+.</span></li>
+<li style="font-weight: 400;"><b>Ordenará a las agencias mejorar la recopilación de otra información demográfica, incluida la raza, el origen étnico y la situación de discapacidad. </b><span style="font-weight: 400;">Esta recopilación de datos garantizará que los subgrupos de la comunidad LGBTQ+ tengan sus necesidades identificadas y atendidas, entre muchos otros beneficios.</span></li>
+<li style="font-weight: 400;"><b>Abordará las lagunas en la recopilación de datos y la investigación con respecto a la salud LGBTQ+. </b><span style="font-weight: 400;">Biden trabajará para abordar las brechas en la recopilación de datos y la investigación con respecto a la salud LBGTQ+ identificada en el </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/22013611"><span style="font-weight: 400;">informe del Instituto de Medicina</span></a><span style="font-weight: 400;">, “La salud de las personas lesbianas, gays, bisexuales y transgénero: construyendo una base para una mejor comprensión&#8221;.</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>PROMOVERÁ LOS DERECHOS Y EL DESARROLLO DE LA COMUNIDAD LGBTQ+ A NIVEL GLOBAL</b></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">&#8220;Juntos, trabajaremos para defender y promover los derechos humanos de todas las personas, y no descansaremos hasta que la igualdad, en nuestro país y en todo el mundo, se haga realidad plenamente&#8221;.</span></i></p>
+<p>&nbsp;</p>
+<p><i><span style="font-weight: 400;">—Joe Biden, 16 de mayo de 2017</span></i></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">La Administración Obama-Biden tomó medidas significativas para reconocer los derechos LGBTQ+ como derechos humanos y priorizar la expansión de las oportunidades económicas y sociales para las personas LGBTQ+ en todo el mundo. Eso incluyó el nombramiento de funcionarios en los niveles superiores de gobierno, incluidos el </span><a href="https://www.npr.org/sections/thetwo-way/2015/02/23/388482554/u-s-appoints-first-ever-special-envoy-for-lgbt-rights"><span style="font-weight: 400;">Departamento de Estado de los EE. UU</span></a><span style="font-weight: 400;">. Y la </span><a href="https://www.washingtonblade.com/2014/07/23/retired-u-n-official-leads-usaid-lgbt-initiatives/"><span style="font-weight: 400;">Agencia de los Estados Unidos para el Desarrollo Internacional</span></a><span style="font-weight: 400;"> (USAID, por sus siglas en inglés), para promover la diplomacia y los programas de desarrollo en apoyo a las personas LGBTQ+ y para promover la protección de éstas. Biden tomará como base estos éxitos y reparará el daño causado por el trato de la Administración Trump-Pence de los estadounidenses LGBTQ+, que indica una tolerancia a los abusos por parte de otros países, y su absoluta incapacidad para defender a los diplomáticos estadounidenses que defienden los derechos LGBTQ+ en el extranjero. En un marcado contraste, Biden se ha expresado personalmente en contra de las medidas brutales y represivas que las naciones, desde Chechenia y El Salvador, hasta Malasia y Uganda, han tomado para oprimir, atacar con violencia e incluso asesinar a sus ciudadanos LGBTQ+. En palabras de Biden, “</span><a href="https://www.washingtonpost.com/opinions/joe-biden-americans-must-stand-with-lgbt-people-around-the-world/2017/05/16/3d42d360-3a51-11e7-8854-21f359183e8c_story.html"><span style="font-weight: 400;">prejuicio es prejuicio; La crueldad es la crueldad. Usar la religión o la cultura como una licencia para la discriminación y demonizar a las personas LGBT para ganar puntos políticos no es más justificable en todo el mundo de lo que es aquí en casa</span></a><span style="font-weight: 400;">&#8220;.</span></p>
+<p><span style="font-weight: 400;">Como presidente, Biden restablecerá la posición de los Estados Unidos como líder mundial en defensa de los derechos y el desarrollo de la comunidad LGBTQ+ y trabajará en estrecha colaboración con nuestros socios y gobiernos de ideas afines para garantizar que la violencia y la discriminación contra las personas LGBTQ+ no pasen desapercibidas. En su primera semana en el cargo, el presidente Biden emitirá un memorándum presidencial priorizando el apoyo de su administración a los derechos humanos y el desarrollo de las personas LGBTQ+ en todo el mundo.</span></p>
+<p><span style="font-weight: 400;">Biden también:</span></p>
+<p><b>Asegurará que los derechos humanos estén en el centro de nuestro compromiso con el mundo. </b><span style="font-weight: 400;">Biden reforzará significativamente las oficinas en el Departamento de Estado y USAID dedicadas a promover los derechos y el desarrollo LGBTQ+ a nivel mundial. Designará líderes de alto nivel en todo el gobierno que defenderán la igualdad global, incluida una persona clave para los derechos LGBTQ+ en el Consejo de Seguridad Nacional a fin de impulsar un mensaje y una estrategia coherentes en nuestro compromiso con países y regiones individuales. Biden designará de inmediato un Enviado Especial para los Derechos Humanos de las personas LGBTQ+ en el Departamento de Estado para coordinar los esfuerzos diplomáticos y combatir la homofobia, la transfobia y el estigma a nivel mundial. También nombrará un Coordinador Especial a cargo de la programación internacional LGBTQ+ en USAID.</span></p>
+<p><b>Fomentará una agenda inclusiva de derechos humanos que promueva los derechos LGBTQ+ integrándolos dentro de una amplia agenda de derechos humanos. </b><span style="font-weight: 400;">Una Administración Biden promoverá los derechos humanos inherentes de todas las personas, independientemente de a quién aman o cómo se identifican, en lugar de aislar los derechos humanos de las personas LGBTQ+ como algo separado o distinto. Buscará promover los derechos de las personas transgénero e intersexuales, que enfrentan marginación y prejuicios particularmente extremos en el país y en el extranjero.</span></p>
+<p><b>Utilizará la gama completa de nuestras herramientas diplomáticas y asistencia extranjera para proteger y promover los derechos humanos y el desarrollo, y combatir activamente la violencia y la discriminación. </b><span style="font-weight: 400;">Biden liderará una coalición de gobiernos y organizaciones internacionales con ideas afines para promover las protecciones para las personas LGBTQ+, luchar por la despenalización de las identidades y relaciones LGBTQ+ y responder de manera rápida y significativa a las amenazas a los derechos o la seguridad de las personas LGBTQ+ a nivel mundial. Cuando los gobiernos se mueven para restringir los derechos de los individuos LGBTQ+, no hacen cumplir las protecciones legales vigentes o permiten o fomentan un clima de intolerancia, la Administración Biden, trabajando con socios, buscará la estrategia más efectiva para influir en el comportamiento de ese gobierno, incluida la diplomacia privada, declaraciones públicas, iniciativas multilaterales en agencias de las Naciones Unidas, y presión directa y concreta. La Administración Biden utilizará agresivamente tácticas de presión, según corresponda, incluidas las sanciones (como las sanciones de Global Magnitsky y las prohibiciones de visado) para responder a las violaciones de los derechos humanos, incluidos los derechos LGBTQ+.</span></p>
+<p><b>Combatirá los prejuicios por orientación sexual e identidad de género. </b><span style="font-weight: 400;">Cambiar las actitudes y prejuicios subyacentes en torno a los problemas LGBTQ+ es fundamental para lograr impactos sostenibles a largo plazo y reducir la violencia y la discriminación contra las comunidades LGBTQ+. Una Administración Biden buscará fomentar campañas de información pública culturalmente apropiadas para promover los derechos humanos de las personas LGBTQ+ y reducir los prejuicios, trabajando en alianza y basándose en el éxito y las prácticas recomendadas de programas como la campaña </span><a href="https://www.unfe.org/"><span style="font-weight: 400;">Libre e Igual de la ONU</span></a><span style="font-weight: 400;">. Tales esfuerzos apoyarán y colaborarán con los movimientos y organizaciones locales que están promoviendo esta agenda en sus propios países, y trabajarán para elevar las voces locales, ejemplos y modelos a seguir.</span></p>
+<p><b>Apoyará a la sociedad civil local. </b><span style="font-weight: 400;">Bajo una Administración Biden, la ayuda extranjera de USAID y el Departamento de Estado priorizará el fortalecimiento de la voz, la capacidad y la agencia de las organizaciones y activistas locales LGBTQ+. Estos grupos están en la primera línea del movimiento para promover los derechos de las personas LGBTQ+ en todo el mundo, y son aliados esenciales. Esto es crítico para el progreso y para la seguridad de quienes trabajan en el movimiento en el terreno. La Administración Obama-Biden estableció una serie de programas que apoyaban directamente a los grupos locales de la sociedad civil LGBTQ+ en todo el mundo. Como presidente, Biden tomará como base ese historial de apoyo.</span></p>
+<p><b>Evaluará la programación para garantizar que las inversiones lleguen a la población a la que se dirigen y hagan una diferencia. </b><span style="font-weight: 400;">La Administración Biden hará especial hincapié en llegar y servir a las personas LGBTQ+ en sus esfuerzos de apoyo diplomático y de desarrollo. Por ejemplo, la asistencia para el desarrollo se examinará y evaluará para garantizar que está ayudando a elevar la situación económica y social de las comunidades LGBTQ+. Del mismo modo, la programación PEPFAR continuará interactuando con las comunidades LGBTQ+ en programas contra el estigma y contra la violencia y la discriminación para que las personas LGBTQ+ puedan acceder al cuidado de salud que necesitan sin temer por su propia seguridad personal.</span></p>
+<p><b>Trabajará con el Congreso para promulgar legislación, como la </b><a href="https://www.congress.gov/bill/116th-congress/house-bill/3874/text"><b>Ley GLOBE</b></a> <span style="font-weight: 400;">actualmente ante la Cámara, que hará que la defensa permanente de los derechos LGBTQ+ sea una prioridad de la política exterior de los Estados Unidos, incluyendo abordar la discriminación y la violencia contra las personas LGBTQ+.</span></p>
+<p><b>EL HISTORIAL DEL VICEPRESIDENTE BIDEN SOBRE LA IGUALDAD LGBTQ+</b></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">A lo largo de su carrera en el servicio público, Biden ha defendido la igualdad, la justicia y la inclusión para las personas LGBTQ+ y ha creado un historial de acción progresiva concreta inigualable, que incluye ocho años trabajando hombro con hombro con el presidente Obama.</span></p>
+<p><span style="font-weight: 400;">El histórico y largo historial de apoyo de Biden a la comunidad LGBTQ+ incluye:</span></p>
+<p><b>Apoyar la libertad para casarse. </b><span style="font-weight: 400;">El 6 de mayo de 2012, en una </span><a href="https://www.nbcnews.com/meet-the-press/video/flashback-bidens-2012-endorsement-of-same-sex-marriage-471856195543"><span style="font-weight: 400;">entrevista histórica</span></a><span style="font-weight: 400;"> en “Meet the Press&#8221;, Biden se convirtió en el funcionario estadounidense de más alto rango en apoyar la igualdad en el matrimonio cuando declaró que el amor es amor. Tres años más tarde, en 2015, la Corte Suprema estuvo de acuerdo y dictaminó en el caso histórico Obergefell v. Hodges que la libertad de casarse es un derecho fundamental.</span></p>
+<p><b>Lograr una reforma histórica del cuidado de salud con protecciones contra la discriminación. </b><span style="font-weight: 400;">La Ley del Cuidado de Salud a Bajo Precio (ACA, por sus siglas en inglés) fue y es algo muy importante. Debido a los esfuerzos de Biden para lograr una reforma histórica del cuidado de salud, 100 millones de personas ya no tienen que preocuparse por la denegación de cobertura porque son LGBTQ+ o pagar primas más altas porque tienen una condición preexistente como el VIH. Como presidente, el plan de cuidado de salud de Biden se basará en la ACA al brindar a todos los estadounidenses más opciones a través de una nueva opción pública, reducir los costos de los servicios de salud y hacer que nuestro sistema de cuidado de salud sea menos complejo de navegar. La opción pública propuesta también ampliará la cobertura a todos los estadounidenses de bajos ingresos, incluidos los estadounidenses LGBTQ+, incluso si viven en estados que se han negado a aceptar la expansión de Medicaid bajo la Ley de Cuidado de Salud a Bajo Precio.</span></p>
+<p><b>Aprobar la Ley de Prevención de Crímenes de Odio Matthew Shepard y James Byrd, Jr. </b><span style="font-weight: 400;">En 2009, el vicepresidente Biden y el presidente Obama defendieron y promulgaron esta legislación histórica, que amplió la ley de crímenes de odio de la nación para incluir crímenes basados en el género real o percibido, la orientación sexual, identidad de género o discapacidad. La victoria se produjo años después del estancamiento partidista y después de más de una docena de proyectos de ley relacionados con los esfuerzos de prevención de crímenes de odio que Biden defendió a lo largo de los años, incluida la legislación de 1989 que exige que el gobierno comience a recopilar datos sobre crímenes de odio basados en la orientación sexual, y la legislación histórica de 1994 permitiendo penas más severas por delitos basados en la orientación sexual.</span></p>
+<p><b>Revocar No pregunte, no diga. </b><span style="font-weight: 400;">En 2010, Biden lideró la derogación por parte de la Administración Obama-Biden de la política discriminatoria para permitir a los miembros homosexuales, lesbianas y bisexuales de las fuerzas armadas la oportunidad de servir al país que aman, y hacerlo abiertamente.</span></p>
+<p><b>Defender las protecciones LGBTQ en la reautorización de la Ley de Violencia contra las Mujeres de 2013. </b><span style="font-weight: 400;">Como autor original de la Ley de Violencia contra la Mujer, Biden ayudó a defender la reautorización de la ley en 2013 que, por primera vez, consagró protecciones para las personas LGBTQ+, las nativas americanas y las inmigrantes.</span></p>
+<p><b>Promover escuelas seguras y prevenir el acoso escolar. </b><span style="font-weight: 400;">Tanto en su carrera como en su vida privada, Biden ha defendido la igualdad y la inclusión de los jóvenes LGBTQ+. En 2010, participó en la campaña “Las cosas mejorarán” para ofrecer apoyo a los jóvenes LGBTQ que luchan con su identidad. Como ciudadano privado después de la Casa Blanca, Joe y Jill Biden fundaron la Fundación Biden que, en parte, se dedicó a garantizar la igualdad LGBTQ+ a través de campañas como “Tal como eres&#8221;, que promovieron la comprensión y la aceptación entre los jóvenes y sus familias.</span></p>
+<p><b>Defender la igualdad de beneficios para las parejas del mismo sexo. </b><span style="font-weight: 400;">En 1992, Biden votó en contra de la legislación que prohíbe que el Distrito de Columbia brinde beneficios iguales, como beneficios de salud o gubernamentales, a parejas del mismo sexo que se otorgaron a parejas heterosexuales legalmente casadas. En 2004 y 2006, Biden votó en contra de una enmienda constitucional que define el matrimonio entre un hombre y una mujer. En 2011, el Departamento de Justicia de Obama-Biden dejó de defender la constitucionalidad de la Ley de Defensa del Matrimonio. Y, en 2014, después de la histórica decisión de la Corte Suprema en Estados Unidos v. Windsor, la Administración tomó medidas rápidas para implementar la decisión de la Corte, lo que llevó a la </span><a href="https://www.hrc.org/press/under-obama-windsor-implementation-constitutes-the-largest-conferral-of-rig"><span style="font-weight: 400;">mayor otorgación</span></a><span style="font-weight: 400;"> de derechos y beneficios a las personas LGBTQ+ en la historia.</span></p>
+<p><b>Abogar por la dignidad en el lugar de trabajo. </b><span style="font-weight: 400;">En 2001 y 2003, Biden fue uno de los patrocinadores originales de la Ley contra la Discriminación en el Empleo para prohibir los prejuicios y la discriminación en el empleo basados ​​en la orientación sexual.</span></p>
+<p><b>Presentar la primera Estrategia Nacional Integral contra el VIH/SIDA. </b><span style="font-weight: 400;">En el 2010, la Administración Obama-Biden presentó la primera estrategia integral de VIH/SIDA de la nación. La </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2015/07/30/fact-sheet-national-hivaids-strategy-updated-2020"><span style="font-weight: 400;">estrategia</span></a><span style="font-weight: 400;"> se actualizó durante la Administración y se implementó “para abordar las disparidades que enfrentan especialmente los hombres homosexuales y bisexuales de todas las razas y etnias y las mujeres transgénero de color&#8221;.</span></p>
+<p><b>Apoyar temprano los recursos sobre VIH/SIDA. </b><span style="font-weight: 400;">Biden ha luchado durante mucho tiempo por el acceso al tratamiento para personas con VIH/SIDA. Desde 1987, votó para autorizar fondos críticos para medicamentos que prolongaran la vida de las personas con SIDA. En 1990, Biden copatrocinó la Ley Ryan White de Emergencia Integral de Recursos contra el SIDA (CARE, por sus siglas en inglés), que creó el </span><a href="https://hab.hrsa.gov/about-ryan-white-hivaids-program/ryan-white-hivaids-program-legislation"><span style="font-weight: 400;">programa gubernamental más grande</span></a><span style="font-weight: 400;"> enfocado específicamente en proveer tratamiento y cuidado que salve vidas a personas de bajos ingresos, pobres y sin seguro que viven con el VIH. En 2008, como presidente del Comité de Relaciones Exteriores del Senado, Biden patrocinó la reautorización del programa Global AIDS (PEPFAR), que amplió significativamente los fondos y los objetivos para el tratamiento, el cuidado y la prevención del VIH/SIDA y derogó una prohibición legal de visas para personas que eran VIH positivas.</span></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../lgbtq-policy.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-biden-para-avanzar-la-igualdad-lgbtq-en-los-estados-unidos-y-alrededor-del-mundo/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":675,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

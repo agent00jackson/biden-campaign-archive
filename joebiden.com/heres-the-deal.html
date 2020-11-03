@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Here&#039;s The Deal | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="heres-the-deal.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Here&#039;s The Deal | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="On “Here’s The Deal,” former Vice President Joe Biden provides a voice of clarity during uncertain times. Each episode will feature in-depth conversations about pressing issues with some of the nation’s top experts — paired with the heart, compassion, and wisdom only Joe can deliver. You can find our podcast on Apple, Spotify, Stitcher, iHeart [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/heres-the-deal/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-07-29T19:13:21+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Our-Best-Days-Still-Lie-Ahead_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Our-Best-Days-Still-Lie-Ahead_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="31 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/heres-the-deal/#webpage","url":"https://joebiden.com/heres-the-deal/","name":"Here's The Deal | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-03-30T12:07:49+00:00","dateModified":"2020-07-29T19:13:21+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/heres-the-deal/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fheres-the-deal%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fheres-the-deal%2F&#038;format=xml" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-2399 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="heres-the-deal.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="heres-the-deal.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-2399 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">Here&#8217;s The Deal</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p>On “Here’s The Deal,” former Vice President Joe Biden provides a voice of clarity during uncertain times. Each episode will feature in-depth conversations about pressing issues with some of the nation’s top experts — paired with the heart, compassion, and wisdom only Joe can deliver. You can find our podcast on Apple, Spotify, Stitcher, iHeart Radio, Pandora, and TuneIn + Alexa.</p>
+<div id="buzzsprout-small-player-961768">
+<p><script type='text/javascript' charset='utf-8' src='https://www.buzzsprout.com/961768.js?container_id=buzzsprout-large-player-961768&#038;player=large'></script></p>
+</div>
+<p><strong>Episode #2: Here&#8217;s the Deal with Governor Gretchen Whitmer on COVID-19</strong></p>
+<div id="buzzsprout-small-player-961768">
+<p><!--block-->Michigan Governor Gretchen Whitmer joins former Vice President Joe Biden for a discussion on what her administration is doing to combat COVID-19, how she’s responding to President Trump’s personal attacks, and the importance of reaching across the aisle to get things done.</p>
+<p>Episode Guide:</p>
+<ul>
+<li><!--block-->1:05 Governor Whitmer joins the Program</li>
+<li><!--block-->1:13 Covid-19 Response in Michigan</li>
+<li><!--block-->7:40 Responding to Trump&#8217;s Attacks</li>
+<li><!--block-->9:32 Reaching Across the Aisle</li>
+<li><!--block-->14:06 Question #1</li>
+<li><!--block-->15:44 Question #2</li>
+<li><!--block-->17:03 Question #3</li>
+</ul>
+<p><!--block-->Note: This episode was recorded on 4/3/2020</p>
+<p><em><strong>Episode #2 Transcript Below: </strong></em></p>
+<p><span style="font-weight: 400;">BIDEN</span></p>
+<p><span style="font-weight: 400;">Hey folks, it’s Joe and we&#8217;re listening to Here&#8217;s the Deal. I&#8217;m sitting in my home in Wilmington, Delaware and I&#8217;m excited to bring you our next podcast episode. This week I&#8217;m joined by Michigan Governor Gretchen Whitmer. Governor Whitmer is an outstanding governor. She is one of the most talented people in the country in my view. She also is a supporter. She is a co-chair. My campaign, she&#8217;s a good friend, but she has been laser focused, laser focused on delivering for her state. And I&#8217;m excited to chat with my friend Gretchen Whitmer on this show today. And I&#8217;m going to start by asking her if she is willing to walk through a little bit of the actions that her administration has taken to combat Covid-19 and then talk a little bit about something we both preach, reaching across the aisle to get consensus. Establish consensus, how to proceed in difficult issues. And we&#8217;re going to end today by taking a couple of questions from you, our listeners. And so with that I&#8217;d like to welcome Governor Whitmer. Governor, welcome! Thank you for being with me. </span></p>
+<p><span style="font-weight: 400;">WHITMER</span></p>
+<p><span style="font-weight: 400;">Thank you. I&#8217;m glad to be with you. </span></p>
+<p><span style="font-weight: 400;">BIDEN</span></p>
+<p><span style="font-weight: 400;">Governor I paid close attention to your leadership in Michigan from the time you got elected while you were campaigning and particularly with this past week. And it&#8217;s impressed me as both how impressive and important your leadership has been. And I think our listeners would benefit from hearing about what governors are doing to combat the Coronavirus in the absence of Presidential leadership. And, and by the way, I want to make it clear you&#8217;re not the only governor with whom I&#8217;ve spoken. You just happen to be, I think doing it as well as anybody can do it. So, you know, governors; Democrat and Republican have not been getting what they expect from Washington DC and the leadership from Washington. I found it very offensive when the President lashed out at you. Will you walk us through what the last week or so has been like for you and what you&#8217;ve had to respond to.</span></p>
+<p><span style="font-weight: 400;">WHITMER</span></p>
+<p><span style="font-weight: 400;">Yeah here&#8217;s what we know. A lot of us governors took our oath of office about 15 months ago and no one anticipated that we would confront a crisis like this. We know that in your administration, yeah, you and Barack Obama confronted some crises like this, but I think that the incredible global nature of Covid-19 shows how easily it&#8217;s transmitted from person to person, how differently people react to it. And the lack of a vaccine and the lack of a cure, is an instance that none of us could have fathomed. And yet here are generally in a situation like this you know, and you, you might be able to attest to this better than anybody. You would expect to be able to call your partners in the federal government no matter what party they&#8217;re in.</span></p>
+<p><span style="font-weight: 400;">We&#8217;re all Americans and all Americans are being impacted by Covid-19, and get some help. And part of our challenges that I think that the crisis was downplayed from the get go and it&#8217;s made our jobs as governors more difficult because we really have to impress on people how serious this is. I think one of the most compelling things that I&#8217;ve heard in the last few weeks is a story about a couple of teachers who were married. Both in their thirties, one contracted Covid-19, and just had some kind of minor symptoms, got tested but didn&#8217;t take it. You know, it didn&#8217;t change life too dramatically. Husband. Got it. And after three days passed away is, despite being young and healthy, he responded very differently to Covid-19. And I think all the mixed messages we&#8217;ve gotten from the federal level has really made it that much harder for governors to navigate and to prepare and to do everything that we need to do.</span></p>
+<p><span style="font-weight: 400;">WHITMER</span></p>
+<p><span style="font-weight: 400;">I&#8217;ll say this, I&#8217;m really grateful that there are governors like Mike DeWine who is a Republican in Ohio, governors like JB Pritzker, a Democrat in Illinois. I&#8217;ve built some relationships with, especially my geographically close governors on both sides of the aisle so we can share those best practices. And when I made a decision to close our schools, Pritzker called me and said, all right, what&#8217;s your thought process there? What are you listening to? What do you know? When I was deciding whether or not to take the next step of closing bars, I called JB and I called Mike DeWine and a few other governors. We&#8217;re seeing the leadership of the gubernatorial level. And, and we&#8217;re, you know, I think that&#8217;s a good thing about what governors can do, but it&#8217;s also, I think something that tells us we need a national strategy. We a patchwork of policies across this country against an enemy that is not one another. It&#8217;s a virus that enemy doesn&#8217;t recognize state lines, that enemy doesn&#8217;t recognize party lines. This is a virus that is going to impact every part of the United States of America. And while great governors on both sides of the aisle can do a lot of good for the people we serve. It doesn&#8217;t supplant the need for a real national strategy and the kind of support that we need out of the federal government. </span></p>
+<p><span style="font-weight: 400;">BIDEN</span></p>
+<p><span style="font-weight: 400;">What do you need most, Gretchen, or Governor? What do you need most from the federal government? </span></p>
+<p><span style="font-weight: 400;">WHITMER: You can call me Gretchen.</span></p>
+<p><span style="font-weight: 400;">WHITMER:</span></p>
+<p><span style="font-weight: 400;">What do we need most? </span></p>
+<p><span style="font-weight: 400;">WHITMER: </span></p>
+<p><span style="font-weight: 400;">So I think Dr. Fauci is great and I think a consistent message out of the  highest, you know, places of power in this country is absolutely essential. When people get mixed messages, they tend not to believe anybody and that&#8217;s happening to the detriment of people&#8217;s lives. We need a national strategy so that there is a policy that blankets the United States of America. And it doesn&#8217;t change from state to state. We need access to the federal buying power so that it&#8217;s not states bidding against one another for N-95 masks and we need full deployment of the defense production act so that we are making these critical components right here in the United States. You know, it, part of the issue that we&#8217;re confronting right now is we don&#8217;t have enough tests and tests are essential to really understand how prevalent Covid-19 is.</span></p>
+<p><span style="font-weight: 400;">Who needs to be isolated, who can safely return into society and into the workplace. Without that data, it&#8217;s hard to make really thoughtful decisions that are going to be the right decisions. But when you do that test, you need swabs. And guess where most swabs come from? Italy, you know, masks, you need N-95 masks. They in large part are coming from China. Both countries have been, you know, come to a standstill in terms of production. And that&#8217;s precisely, you know, compounding the issue that we&#8217;re confronting. And that&#8217;s why all of those points that I made about what would be helpful at the federal level. Are there all pieces I think of a broader solution that will be incredibly important to people across our country.</span></p>
+<p><span style="font-weight: 400;">BIDEN </span></p>
+<p><span style="font-weight: 400;">How do you think the people in your state are responding to the personalization of the President&#8217;s attacks on Governors, calling one governor a snake, calling another governor this and calling you, giving you a nickname. I mean how do you deal with that?  Just blow it off? </span></p>
+<p><span style="font-weight: 400;">WHITMER: </span></p>
+<p><span style="font-weight: 400;">I don&#8217;t think people like it…</span></p>
+<p><span style="font-weight: 400;">Well, I&#8217;ve got thick skin. You know, I don&#8217;t take any of this personally. I&#8217;m doing my job and if someone doesn&#8217;t like how I&#8217;m doing my job, well, you know,it is what it is, I got to keep doing my job. I am fighting for the lives of the people in the state of Michigan. And I&#8217;ll tell you this, I don&#8217;t think people care for that. To be honest, when I ran for governor, I talked about my Republican father and my Democratic mother. I talked about expanding Medicaid by working with a Republican governor. And I never made a personal attack on President Trump. Or even my opponent against whom I was running who was, you know, what the president and every one of his ads, I don&#8217;t think that works.</span></p>
+<p><span style="font-weight: 400;">And I think people really don&#8217;t like it. We&#8217;re talking about people&#8217;s lives on the line. I got neighbors here in the, in the Lansing neighborhood where the residents signs up saying I support the woman from Michigan, which is, you know I appreciate the support and I&#8217;m inspired by the, the incredible frontline workers that we have in our hospitals and in our law enforcement and 911 operators to the janitors, to the people that are stacking the shelves at the grocery store. They&#8217;re the true heroes  here, and that&#8217;s who I&#8217;m fighting for. And I can deal with, you know, any, any junk that I get on Twitter, I&#8217;m not going to dissuade me from doing, pulling out all the stops to do what we gotta do for the people of the state.</span></p>
+<p><span style="font-weight: 400;">BIDEN: </span></p>
+<p><span style="font-weight: 400;">You&#8217;ve always reached across the aisle. You continue to do that. You know and that&#8217;s what happened I think recently with the large stimulus package. It wasn&#8217;t perfect, but it was a start and it took work across the aisle. Something you talk about a lot and you get done. I certainly believe in bipartisanship. I know it&#8217;s not very viewed very favorably by some in our parties. You say you can&#8217;t work with Republicans. I think it&#8217;s become kind of a dirty word in our politics lately. Why do you think that is? Why do you maintain and how do you do it working across the aisle? And why do you believe it&#8217;s so important?</span></p>
+<p><span style="font-weight: 400;">WHITMER</span></p>
+<p><span style="font-weight: 400;">Well, I live in a state where we are, we go back and forth. Everyone knows everyone&#8217;s watching Michigan, what&#8217;s going on in Michigan. I&#8217;ve got a Republican-led legislature that I need to work with and it&#8217;s hard. It&#8217;s not fun. Some days I&#8217;ll be honest with you, but the people of our state expect us to find common ground and we’re at our best when we’re challenging one another. When there&#8217;s a seat at the table for people with different points of view.Doesn&#8217;t mean I always heed their thoughts, but I listen and sometimes I get a better product because we&#8217;re actually talking to one another. </span></p>
+<p><span style="font-weight: 400;">Oh, trying to give people hope too. You know, that even on the hardest days, we seek out sources of inspiration and you know, there&#8217;s a doctor in Detroit who figured out how to make a ventilator work for two people and now you wrote a paper awhile ago, but now all of a sudden there, people are really interested in what she&#8217;s doing. And we&#8217;re going to do some tests around the malaria, the anti-malaria drug at Henry Ford hospital. </span></p>
+<p><span style="font-weight: 400;">You know, we&#8217;re eager to find those stories of hope so that people can get through this. Cause that&#8217;s, we&#8217;ve got a number of tough weeks ahead of us. </span></p>
+<p><span style="font-weight: 400;">BIDEN:</span></p>
+<p><span style="font-weight: 400;">We do,but there&#8217;s so much hope out there when you think about it. This is what amazes me. I know it sounds corny, but I&#8217;m so damn proud to be an American. Look at the way people are coming together in this country.After appealing to their prejudices for three years. And you know that folks from that part of the world is not a good person and we don&#8217;t want anybody in Muslim. We don&#8217;t want this. Well look what they&#8217;re doing. You have these first responders showing up and going into homes and going in and taking people out in ambulances and not,you watch the things that are spontaneously happening. </span></p>
+<p><span style="font-weight: 400;">You thank God the networks we&#8217;re putting them on television. For example, a great good friend of mine used to work for me in the White House is now in and ran for office down in South Carolina. He has three beautiful little daughters. One&#8217;s in kindergarten. He sent me a video of his, the kindergarten teacher called all the kids who were in her class saying, I&#8217;m going to be riding by your house at such and such a time. Why don&#8217;t you go out in your driveway so we can wave and we can talk to each other for a minute. How excited his daughter was. He showed me a picture out on her tricycle, and the teacher came by saying, Hey, how are you honey? What are you doing Finn [inaudible]? And it took her three hours to get through it all. Or watching the people.</span></p>
+<p><span style="font-weight: 400;">A friend of ours is dealing with seniors who are not able to have any visitors in a nursing home.  Sitting outside a window on the first floor and a chair putting her hand up to the window, just touching the hand of the woman inside saying, how are you doing?  passing notes, you know  putting them up to the window. Jill&#8217;s working on dealing with, when we did the candidate Biden cancer initiative, there&#8217;s a woman on the board along with a number of leading Docs who provide for the help that people need to get to their chemotherapists, to have someone watch their child. Well you know, is she getting a lot of calls from people who are isolated now. They are by themselves. They need their chemo treatment. And so Jill is here organizing people to call these individuals and talk to them and spend time with them in terms of a phone and send them a little gift packages.</span></p>
+<p><span style="font-weight: 400;">And it&#8217;s amazing how across the board look at the people who are taking the real chances. As you said, those janitors, they&#8217;re walking into these buildings that need to be essentially fumigated afterwards. You have the doctors and nurses going in with garbage bags on trying to protect themselves in an operating room. I mean, it&#8217;s just amazing who we are. And I just think that the American people have never let the country down given half a chance, never once. And I think I just find the soul of America coming back in a way that I think we&#8217;re going to come out of this stronger. I really do know. Okay. I know I&#8217;m keeping you for a long time. It&#8217;s time for a couple of questions from our listeners. The first one comes from Laurel, a  student at the university of Michigan law school.</span></p>
+<p><span style="font-weight: 400;">QUESTION: “Governor Whitmer, as a lifelong Michigander and Michigan law student, you have brought a sense of comfort and calm to everyone in our state. Amidst the pandemic, I want to know what do you do to de-stress and are there specific things that you can give us hope for the state once a pandemic and stay at home order has dissipated.”</span></p>
+<p><span style="font-weight: 400;">WHITMER:</span></p>
+<p><span style="font-weight: 400;">Oh, that&#8217;s a nice question. It&#8217;s been really lovely how people have been checking in, you know, how are you doing? I feel like I&#8217;m asking a lot of people that and it&#8217;s nice when they ask back how do I de-stress? Well I get a dog and his name is Kevin. That&#8217;s what happens when you let teenagers name your dog. You get a dog named Kevin. And I get my walk in, I drink my coffee about five o&#8217;clock morning and then take Kevin out for a walk and it&#8217;s when I get a little fresh air, a little bit of exercise then get my thoughts together. So that&#8217;s key to taking care of myself. You know, we are going to get through this. Tough times don&#8217;t last, but tough people do. And I think that anyone who&#8217;s in Michigan law school, I know you&#8217;ve got a bright future ahead. I hope that future is right here in the great state of Michigan. When we get on the other side of Covid-19 and it&#8217;s responsible and safe to get resume activity, I know that we&#8217;re going to be able to ramp up and start to bring manufacturing back into our country. So we don&#8217;t ever get into a position where we&#8217;ve got to look for the fundamentals to keep people alive elsewhere.</span></p>
+<p><span style="font-weight: 400;">BIDEN</span></p>
+<p><span style="font-weight: 400;">And next question, Gov, comes from Charlotte in Detroit </span></p>
+<p><span style="font-weight: 400;">QUESTION #2: “Governor Whitmer, a lot of politicians talk about what their favorite and least favorite thing about running for office is. But I wondering what surprised you most about running for Governor last cycle”</span></p>
+<p><span style="font-weight: 400;">WHITMER</span></p>
+<p><span style="font-weight: 400;"> I&#8217;m not sure what was surprising. I&#8217;ll tell you my favorite thing though, of course, was being around people. And so this isolation is, contrary to all of my instincts about hugging people and giving them  a pep talk when one is needed. And there&#8217;s a part of me that would love to go into our hospitals and tell the people on the frontline how amazing they&#8217;re they are and look them right in the eye. We can&#8217;t do that. And that&#8217;s a challenge right now. But I think the surprising thing is that even on the hardest days, there&#8217;s a person or a story or something that happens that; that keeps me going. I think that&#8217;s a humbling thing. I think it&#8217;s what, even when I feel like my job&#8217;s tough. I think about the people that are really on the front line exposing themselves in harm&#8217;s way to help others and am inspired by it. And I think that&#8217;s surprising that even on the hardest days, there&#8217;s these things that are powerful and positive and hopeful.</span></p>
+<p><span style="font-weight: 400;">BIDEN:</span></p>
+<p><span style="font-weight: 400;">Now, the next question I guess for me from Jill from Washington:</span></p>
+<p><span style="font-weight: 400;">QUESTION #3: “Vice President Biden, it&#8217;s really hard to get into a routine and to work from home.I’m, wondering what your routine is like and how you can stay focused working at home?  </span></p>
+<p><span style="font-weight: 400;">It&#8217;s as the governor said it&#8217;s hard to get into a really regular schedule, but for me, I&#8217;ve been sticking to a routine and it helps. It helps me deal with my day.I tried to get out of bed by eight o&#8217;clock in the morning and I have a gym in my house upstairs. I have a treadmill and a Peloton bike and some weights. And I try to work out every morning for me. That sort of gets me going. And then  I take a shower and go down, have some to eat. I usually have a protein shake and then what I do is my day starts and the day starts usually with a, somewhere between 40 minutes and an hour and a half meeting with the medical staff that has been working with me and my staff about what we need to do to deal with the things that the Governor&#8217;s talking about.</span></p>
+<p><span style="font-weight: 400;">How do we get the protective equipment, how do we deal with making sure the tests are available and all those things. So I get a detailed brief every morning from that team. And then right after that I do an event that is the same on the economic side. And then what I do is, I do shows that I get invited to be on from meet the press to do a you know, round tables with, I did one with, with millennials. I did one with people with anyway. So I&#8217;m usually down here in this makeshift studio trying to communicate with people who want to ask me questions and delivering whatever the message of the day is that I think has to go out there. So that&#8217;s sort of my day and I&#8217;m not as tough as the Governor&#8217;s because she&#8217;s in the front line having to make critical decisions that are going to affect people&#8217;s lives and sometimes without much help. So, but anyway. </span></p>
+<p><span style="font-weight: 400;">WHITMER:</span></p>
+<p><span style="font-weight: 400;">I&#8217;ve got a question for you before we go. Cause I know I got to get running, but are fig Newtons, your favorite snack?</span></p>
+<p><span style="font-weight: 400;">BIDEN:</span></p>
+<p><span style="font-weight: 400;">Well they&#8217;re among the favorites, you know why they&#8217;re small and I can sneak them. You know that you can buy little packs of them and I get them on the planes when I fly back and forth.But the thing that everybody makes fun of me is when in doubt I have a peanut butter and jelly sandwich. But I learned everybody was making fun of that. And I found out John Kerry has the same addiction, peanut butter and jelly sandwiches.</span></p>
+<p><span style="font-weight: 400;">WHITMER:</span></p>
+<p><span style="font-weight: 400;">Peanut butter and Jelly sandwiches are always good. My daughter and I enjoyed it when you were in Michigan and you shared your fig Newtons with us. </span></p>
+<p><span style="font-weight: 400;">BIDEN:</span></p>
+<p><span style="font-weight: 400;"> Oh that’s right, I had some then I remember that. Yeah. No, I always have a little packs of them with me. But anyway, thank you. Thank you very much. Gov. I look forward to working with you and doing this again and you&#8217;re just doing an incredible job. The people in Michigan should be so proud of having you and you know, and you&#8217;re respected by all the other governors. I talked to governors from the East coast to the West coast. I&#8217;m on the phone with them all the time, finding out what I can do to be helpful, what they think I can be, what that value added I could be. And you have great respect among Democrats and Republicans. The last point, I want to reiterate you made. You got guys like Mike DeWine and others who are stepping up Republican governors who are stepping up and doing the right thing and working like the devil. And so I don&#8217;t envy your job, but I&#8217;m proud of the one you&#8217;re doing presumptuous. Need to be proud, but I am.</span></p>
+<p><span style="font-weight: 400;">WHITMER:</span></p>
+<p><span style="font-weight: 400;">Oh no, I&#8217;m grateful. I think the mutual admiration society here. So thank you for helping and encouraging and counseling. All of that is incredibly important and, and I&#8217;m a better governor for your friendship and, and all the help you&#8217;ve given, so thank you.[inaudible]</span></p>
+<p><span style="font-weight: 400;">BIDEN:</span></p>
+<p><span style="font-weight: 400;">We&#8217;re going to get through this. The American people have never, never, never, ever let their country down given half a chance to look at the way they&#8217;re stepping up now. I talked about restoring the soul of America. We&#8217;re seeing the real soul of American now. We&#8217;re seeing the real soul. And I&#8217;m proud. I&#8217;m proud to be an American. So are you, I know. Thank you. Thank you.. See ya. </span></p>
+<p><strong>Episode #1: Here&#8217;s the Deal with Ron Klain on COVID-19</strong></p>
+<p>Episode Description: Former Vice President Joe Biden is joined by Ron Klain, former White House Ebola Response Coordinator, for a discussion on President Trump’s handling of COVID-19, what we should be doing differently, and how we move forward.</p>
+<p><em><strong>Episode #1 Transcript Below:</strong></em></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">Hey, Team Biden, it’s Joe. And I&#8217;m sitting here in Wilmington, Delaware. It&#8217;s a scary time. A lot of people out there are confused. Things are changing every day, every hour. So I wanted to have this conversation with you now. Why am I doing this? Well, first so we can keep talking with each other. We can&#8217;t hold rallies anymore, we&#8217;re not gathering in large public spaces. We&#8217;re living in a new normal. But I want you to know that I&#8217;m with you. I&#8217;m on your side. And we’re going to get through this together as a country. And the second reason is: I think this podcast could offer some really helpful information. I&#8217;ve seen these kinds of crises before and I&#8217;ve sat in the situation room in the Oval Office and we&#8217;ve grappled with crises from the Ebola outbreak to the Iran nuclear deal to the auto industry rescue.</span></p>
+<p><span style="font-weight: 400;">And during that time I&#8217;ve been able to work with some pretty accomplished experts &#8212; women and men who have steered us through epidemics and pandemics. So some of the most complex problems that this country could possibly face. People who will provide some advice and logic and information on the Coronavirus crisis that we&#8217;re facing. So each week what I&#8217;m going to try to do is be joined by one of those experts, someone who can come offer us some helpful information. Then the two of us will answer questions from you and our first episode, right now, I’m joined by Ron Klain. Ron is an outside advisor to my campaign, and he ran the Ebola response in President Obama&#8217;s and my administration in 2014. And so he&#8217;s going to talk to us about a few things. First about how President Trump downplays this crisis, how he has rattled public confidence and delayed our country&#8217;s response. Next, we&#8217;ll talk a bit about my plan with the federal government, what they should be doing now. When I say now, I mean immediately to combat this crisis. And finally take on some questions from our listeners. So with that, I&#8217;d like to welcome Ron, who&#8217;s an old friend to the show. Ron, how are you pal? </span></p>
+<p><span style="font-weight: 400;">RON KLAIN: Good, thank you sir. It&#8217;s a pleasure to be with you on your very first pod. Was good to be doing my very first podcast. Things are changing an awful lot and uh, Ron, um, I&#8217;m gonna, uh, with your permission, ask a few questions if that&#8217;s okay. </span></p>
+<p><span style="font-weight: 400;">RON KLAIN: Sure. Sounds great. Let&#8217;s do it. </span></p>
+<p><span style="font-weight: 400;">JOE BIDEN: Ron, I think it&#8217;d be helpful if you could walk our listeners through the question on top of everyone&#8217;s mind. Is there a shortage of testing and why does that exist if there is?</span></p>
+<p><span style="font-weight: 400;">RON KLAIN:</span></p>
+<p><span style="font-weight: 400;">Well, this is one of the biggest problems we&#8217;ve seen with the Coronavirus response. As you&#8217;ve said, Mr. Vice-President, the Coronavirus isn&#8217;t Donald Trump&#8217;s fault, but how we responded to it is, and there&#8217;s no issue that illustrates that more than this testing fiasco. Donald Trump didn&#8217;t take the steps needed to get the testing in place. As a result compared to almost every other developed nation, we&#8217;re behind on getting people tested. We&#8217;ve probably done about one 25th of the test per capita that South Korea has done. And both countries had their first case of the exact same day. There&#8217;s no reason why this country should be so far behind nations like South Korea in testing. We have the same technology, we have the same experts, we have even better doctors and health care facilities. And yet we&#8217;re really far behind. That problem falls squarely on the shoulders of president Trump and his administration.</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">I’m determined that this should not be political. This is not about partisan politics. It&#8217;s about how rapidly we can put in motion the initiatives that are going to save people&#8217;s lives and get us through this process. And, I thank you for clarifying the World Health Organization had the formula we could have used immediately instead of waiting and developing our own way of proceeding. Let me ask another question if I may. A lot of our listeners are interested in how we as a country have handled past health crises. You know, when the Ebola crisis hit, you were, um, my, and president Obama&#8217;s first pick to handle it. Take us through that moment. And what you did, you personally, when we asked you to do it, the president asked you to do it. What did you do on day one?</span></p>
+<p><span style="font-weight: 400;">RON KLAIN: </span></p>
+<p><span style="font-weight: 400;">Well, you know Mr. Vice President, I suppose you were. You were there, you remember it very well. What you and the president told me on day one was to put science first. I&#8217;m not a scientist, I&#8217;m not a doctor. Then the problem we had at the time was that you had great advice from science and doctors were trying, having trouble kind of getting an implemented trouble, getting the treatments into West Africa, trouble getting our hospitals ready, all these logistical challenges. And so the direction I got from President Obama, from you, Vice President Biden was let&#8217;s take the best advice from scientists and doctors and turn that advice into action. And I think by contrast, what we&#8217;ve seen here with the Trump response to Coronavirus is a failure of both things. The President notoriously is rejecting the advice of scientists and doctors. He&#8217;s not listening to people who are telling them he didn&#8217;t have enough tests in January and February when these experts were telling them: we have a big problem. He was downplaying the problem.</span></p>
+<p><span style="font-weight: 400;">He was saying as late as late February, we only have 15 cases. We&#8217;ll be down to five in a little while. He just wasn&#8217;t listening to these great experts we have in the government, nonpartisan experts. Dr Fauci served all the way back to Ronald Reagan and is still working on this. And doctors, people I worked with on the Ebola response, they&#8217;ve been there for decades. He just kind of pushed all these people aside. It was whatever he wanted, his own politics. So that&#8217;s very, very different from what you and president Obama ordered during the Ebola response. And I know it&#8217;s also very, very different from the way you&#8217;ve been thinking Mr. Vice President about the response to Coronavirus. And I guess I&#8217;d like to turn the tables here a little bit and ask you to take a few minutes to talk about your plans for dealing with coronavirus, which I know was so heavily influenced by the leading science and the leading medical experts you consulted. Can you just talk to the people listening to us about your plan and what the key elements of your plan are?</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">Well, first of all, uh, I should let people know that with your help, I put together a panel of experts, including former heads of the CDC and other organizations and, uh, who are not actively in the administration now. And, uh, I do, uh, with your help and coordination and others, a daily brief and they give me a detailed outline ahead of time with charts showing the trend lines, uh, in our country and other countries and so on and how many tests, et cetera. So I think there are a few key things, uh, that we should be looking at. And there&#8217;s an important thing in my plan, it’s  as I said, informed by scientists. First, we&#8217;re gonna make sure that testing is widely available and free because we learned early on there was a fear of people that if I go get a test, is it going to cost me all this money?</span></p>
+<p><span style="font-weight: 400;">How can I pay for it? What will I do? Free but available? And that everyone that needs a test could get it. And we want to establish these mobile testing sites, we came up with the idea of at least 10 of these mobile testing sites per state and drive through facilities to speed testing as well as protect the healthcare workers because that&#8217;s a grave concern as you well know, and a developing concern. Secondly, from the experience I watched you and our military put together in Africa, the ability for us to be able to provide mobile hospitals, and I don&#8217;t just mean the two hospitals ships we have, they&#8217;re important, but mobile hospitals on the ground in places where you can determine ahead of time, there&#8217;s going to be a significant influx of people needing hospital beds and ICU units. And so we, uh, we talked about that. FEMA and the U S military, I argued, to be setting up these emergency hospitals that can be dropped in a parking lot or wherever they&#8217;re needed.</span></p>
+<p><span style="font-weight: 400;">For example, now you know, there&#8217;s, there&#8217;s one being, you know, up in the Javits center, there&#8217;s three of them going up. Uh, this is a little late, but finally the governor got the White House to and, and the national guard to move. But my point is that providing for mobile hospitals, you don&#8217;t have to be, I, I&#8217;m obviously not a doctor either, but you don&#8217;t have to be a doctor and you don&#8217;t have to be clairvoyant to know where they&#8217;re going to need these hospitals. Um, and these additional beds I should say. And the third thing I argued for is: we were going to need to make sure that we&#8217;re protecting the doctors, nurses and all the healthcare workers on the front lines. That means the protective gear so that they can be safe, uh, as they protect Coronavirus patients. You know, the President, we argued, I argued, I said had to in fact invoke the defense production act, which to the average American is, I guess a lot of mumbo jumbo.</span></p>
+<p><span style="font-weight: 400;">But what it means is he has the power under the law to go to a private sector company and say, we want you to stop producing what you&#8217;re producing and begin to produce the things we badly need, we&#8217;ll compensate you for it. But that&#8217;s how it gets done to provide for protective gear, like face masks, critical equipment like ventilators that are so desperately needed in our hospitals. And we as a nation, we&#8217;re the ones that built the arsenal, democracy in the forties and uh, we can make personal protective equipment of health care workers in 2020. Look what we did back in the 1940s. And so it means accelerating our work on cures and vaccines as well as doing the other protective things we have to do to finally overcome this pandemic. And as you know, we&#8217;ve worked on things and when as Vice President, uh, dealing with the Cures Act and other mechanisms, we&#8217;re investing money to look ahead, look down the road, not just waiting for what is on our plate.</span></p>
+<p><span style="font-weight: 400;">The fourth thing we have to do was, is that, uh, finally Ron, is that it&#8217;s about economic aid. People are going to need our help and our guiding principle has to keep everyone paid through this crisis, be able to get a check that they&#8217;ve been getting. We should be doing everything in our power to keep workers on payrolls. Keeps small businesses afloat and help the economy come out the other side. Strong. It means, it means providing guaranteed emergency sick leave and caregiving &#8212;  home caregiving leave. It means increasing social security checks by a couple hundred dollars a month. It means forgiving a minimum of $10,000 per person of federal student loans. We saw how as we came through the last economic crisis, this generation got way behind the eight ball because of the difficulty that it took us to get out of that. And we got out of it, but get out of that Godawful mess and it means all these things and more.</span></p>
+<p><span style="font-weight: 400;">And Ron, the point is we need to put families first during this crisis because, uh, you know, it&#8217;s that, that&#8217;s what it&#8217;s about. I mean, and it&#8217;s one, imagine you&#8217;re in a situation where you have no or very little equity in your home. You&#8217;re renting an apartment, you have no savings. You know, I&#8217;ve spoken a lot over the campaign, unrelated to this about how you have a significant portion of the American public who if they got a bill for $400 that they didn&#8217;t expect, they&#8217;d have to borrow the money and, or go out and sell something. Well, there&#8217;s a lot of people who are just getting by and it&#8217;s day to day today. That&#8217;s the essence of where I think we should be focusing, but it&#8217;s not now. Now, now.</span></p>
+<p><span style="font-weight: 400;">RON KLAIN </span></p>
+<p><span style="font-weight: 400;">Yes. I think that&#8217;s, I think that&#8217;s really helpful for people just to hear, Vice President. I think it&#8217;s important for people to know that you&#8217;re talking almost every day with topic experts about what to do about this. You&#8217;re talking to Congressional leaders, uh, on Capitol Hill and, and making the point that it&#8217;s important that as we fight this economic crisis, we focus on people and families, not corporations. We help the people who need it, the small businesses and not just the big corporations who are in Washington right now looking for government handouts. And so your leadership on this, I know it&#8217;s been very important behind the scenes and I think it&#8217;s great to let people hear it from you directly about what you&#8217;re fighting for.</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN </span></p>
+<p><span style="font-weight: 400;">Now it&#8217;s time for some questions from our listeners and Ron, could you stick around for a few more minutes?</span></p>
+<p><span style="font-weight: 400;">RON KLAIN  </span></p>
+<p><span style="font-weight: 400;">I&#8217;m happy to do it, sir.</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">This first one is from Matt in California.</span></p>
+<p><span style="font-weight: 400;">CALLER: </span></p>
+<p><span style="font-weight: 400;">This is a question for Ron Klain. What were some of the first plans that you put into action when you dealt with Ebola in 2014 </span></p>
+<p><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">RON KLAIN: </span></p>
+<p><span style="font-weight: 400;">Well, it&#8217;s a great question and the thing with Ebola, was we were fighting it both in Africa and tried to protect the United States. So one thing we did was we deployed the US military to Africa to build the kinds of emergency treatment centers over the vice presidents.</span></p>
+<p><span style="font-weight: 400;">But talking about having built here in the United States here at home, we did a lot of the things again that the Vice President&#8217;s been talking about for this crisis, which is really to get capacity to hospitals, get testing labs up to test for potential cases of Ebola. And really try to make sure that our hospitals were ready with the gear, the protective gear they needed to treat patients. So Ebola was very, very different, but also had certain similarities and I think there are lessons we learned there that we should be applying here to this crisis.</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">Okay. This next question is from Emmy in New York City. </span></p>
+<p><span style="font-weight: 400;">CALLER:</span></p>
+<p><span style="font-weight: 400;">Vice President Biden. I wondering what you’re doing to practice safe social distancing</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">First,  I&#8217;m recording this podcast to connect with all of you instead of traveling across the country as I&#8217;ve been doing for most of my, uh, most of the last year. And we aren&#8217;t hosting any large events. Matter of fact, we’re not really hosting any events or rallies, uh, that, uh, as we have been, I&#8217;m staying home and Delaware, Delaware has by the way, a lockdown policy as of Monday or Tuesday morning. It’s just not worth it to go out there and chance getting sick or further spreading the virus. And you know, for example, I miss my grandkids a lot. I have five of them. I FaceTime with them all day. I contact all five, probably drives them crazy every day. Now what I&#8217;m doing, two of my grandchildren, both children live about as far as the Crow flies. About a mile from us.</span></p>
+<p><span style="font-weight: 400;">They can walk through the woods in some neighborhoods to get over to our house because  I have a back porch, and the kids sit out on the back porch on the grass and chairs. We sit on the porch and we talk and we talk about everything from school to what sports, how they&#8217;re doing, when school&#8217;s out&#8230;all the questions they have.. I always bribe them with a little bit ice cream that I drop over the, over the porch there. But, uh, but all kidding aside, um, you know, uh, Jill and I get fresh air. We go out and walk our dogs around the yard. It&#8217;s tough, but, but long-term, this is absolutely, this absolutely the best thing we can do for ourselves and our fellow Americans. And when I have anyone in the house, whether it be blunt about it, whether it&#8217;s secret service, has to command and or staff to set up the mechanisms to do this. They&#8217;re all wearing gloves and masks and we are all staying six feet apart. There&#8217;s not many people coming in, but that&#8217;s how we do it when there has to be folks in the house.</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">And this one is from Allie in Massachusetts.</span></p>
+<p><span style="font-weight: 400;">CALLER:</span></p>
+<p><span style="font-weight: 400;">My name is Allie Mackintosh. I&#8217;m 16 years old and I&#8217;m from Western Massachusetts. Um, my question is: the Coronavirus is officially now in all 50 States. Both the federal government and the States have set restrictions on gatherings and strongly encouraged social distancing. Despite this, many people who are not at high risk of dying from covid-19 are ignoring these warnings and becoming carriers of the virus. On the other hand, thousands of people are ravaging grocery stores and hoarding goods. If you were President, how would you maintain a balanced message to both these parties? Making sure everyone takes the virus seriously, but making sure there is no unnecessary panic?</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN:</span></p>
+<p><span style="font-weight: 400;">Well, Allie, I know it&#8217;s a scary time for everybody. First of all, the young people who think they don&#8217;t have to worry about social distancing, I should say: you know, do it for older people in your life. For those who have underlying or undiagnosed health conditions, who you may inadvertently expose of the virus even though you&#8217;re unaware you have it, but based on the latest data from the center for disease control intervention, that&#8217;s the premier outfit we have in the federal government. It is also clear that young people need to practice social distancing and self isolation for their own personal protection. According to a report last week of the what they call as you know, covid-19, which is a Coronavirus infections that require hospitalization in the United States, nearly 40% were among people aged 20 to 54 but to your point, it&#8217;s critical.</span></p>
+<p><span style="font-weight: 400;">The President cannot resort to fear-mongering and also baseless downplaying or lying about the situation. The President needs to be honest, needs to follow. The science needs to be transparent with the American people. And we need information for people not to scare them, but to get people to pull together because that&#8217;s how we&#8217;re going to beat this. And together. And by the way, Allie, your generation is the best educated, most informed, most engaged education in American history. And we just have to give you all the information that is necessary, not just you, the entire American public. And so I rarely think that, uh, um, look, we&#8217;re going to beat this. We&#8217;re going to beat this. And I&#8217;m going to say one last thing. I know this was the last question. One last thing. You know, I have overwhelming faith in the American people when the American people have never, ever, ever, ever, ever let their country down when faced with a challenge.</span></p>
+<p><span style="font-weight: 400;">Never. And they&#8217;re smart. I am so darn proud. It sounds corny to be an American. How, look how we&#8217;re pulling together. For example, my wife was on the telephone today dealing with, we had a Biden Cancer Initiative and we had a board of some very prominent people from around the country, doctors and Nobel laureates and others on board. Well, one of the people who&#8217;s a patient advocate called and said, there&#8217;s a lot of people who are shut-ins who have cancer. They&#8217;re worried. Can you pick up the phone and call some of them? Can you email them? Can you engage? Well, people are doing that all over and I got a call from a good friend of mine who has three beautiful young daughters in grade school down in North South Carolina, used to work with me. His name is Franny. His wife called and showed us a video of the teacher.</span></p>
+<p><span style="font-weight: 400;">The kindergarten teacher called one of the daughters and said, I&#8217;m going to ride by your house at such and such a time and beeped the horn and just want to say hi to you. The kids were all excited. They went all out. Their tricycles are sitting in the driveway and the teachers ride took the teachers three hours to go through all the neighborhoods where her kids went to school, reaching out, reassuring. And by the way, if you have any friends or relatives or anybody who is shut in, pick up the phone, call them, tell them you&#8217;re thinking of them, see what they need because that&#8217;s what we do when we&#8217;re in trouble. And uh, I am so darn proud of the way the American people are responding. That’s longer than you wanted to hear an answer, Allie. But thank you for the question. Thank you</span></p>
+<p><span style="font-weight: 400;">JOE BIDEN: </span></p>
+<p><span style="font-weight: 400;">Ron. Thanks for sticking around pal. Well thanks. And I&#8217;m going to call on you a lot more. You know, I call on you almost every day for non pod advice. </span></p>
+<p><span style="font-weight: 400;">RON KLAIN: </span></p>
+<p><span style="font-weight: 400;">Yeah. Well thank you. Thank you sir. Thanks for having me on. You. Keep on doing what you&#8217;re doing and, and stay safe. </span></p>
+<p><span style="font-weight: 400;">JOE BIDEN: Well thanks. And, uh, you know, my heart goes out to all those folks who have lost somebody or have someone in the hospital who&#8217;s suffering. It just, it&#8217;s an enormous, enormous burden. And, uh, but, uh, we&#8217;re thinking about you. I really mean it and I, all Americans are pulling together, so we&#8217;re going to get through this. Thanks Ron. And, uh, in the meantime, everybody stay healthy, stay safe, and, uh, I&#8217;ll be talking to you regularly. Thank you so much. </span></p>
+<p>&nbsp;</p>
+</div>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="heres-the-deal.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="heres-the-deal.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/heres-the-deal/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":375,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

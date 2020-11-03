@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan Biden Para Una Revolución De Energía Limpia Y Justicia Ambiental | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan Biden Para Una Revolución De Energía Limpia Y Justicia Ambiental | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Enfrentando la amenaza global del cambio climático y revitalizando la economía de Estados Unidos Desde los pueblos costeros hasta las granjas rurales y los centros urbanos, el cambio climático representa una amenaza existencial, no solo para nuestro medio ambiente, sino también para nuestra salud, nuestras comunidades, nuestra seguridad nacional y nuestro bienestar económico. También daña [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/el-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-05T08:29:56+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Climate-and-Clean-Energy_1600x836_Digital_062920_Photo_V1-1024x682.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="682" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Climate-and-Clean-Energy_1600x836_Digital_062920_Photo_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="55 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/el-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental/#webpage","url":"https://joebiden.com/es/el-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental/","name":"El Plan Biden Para Una Revoluci\u00f3n De Energ\u00eda Limpia Y Justicia Ambiental | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-06-04T16:50:49+00:00","dateModified":"2020-08-05T08:29:56+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/el-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Fel-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental%2F&#038;format=xml" />
+<link rel="alternate" href="../../climate.html" hreflang="en" />
+<link rel="alternate" href="index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-966 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../climate.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../climate.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-966 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan Biden Para Una Revolución De Energía Limpia Y Justicia Ambiental</h1>
+  </div>
+  <div class="page__content-wrap">
+    <div class="video-wrapper" style="padding: 56.2% 0 0; position: relative;"><iframe title="Biden Plan para una Revolución de Energía Limpia y Justicia Ambiental" width="500" height="281" src="https://www.youtube.com/embed/RFU4DFlmieo?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p><i><span style="font-weight: 400;">Enfrentando la amenaza global del cambio climático y </span></i><i><span style="font-weight: 400;">revitalizando la economía de Estados Unidos</span></i></p>
+<p><span style="font-weight: 400;">Desde los pueblos costeros hasta las granjas rurales y los centros urbanos, el cambio climático representa una amenaza existencial, no solo para nuestro medio ambiente, sino también para nuestra salud, nuestras comunidades, nuestra seguridad nacional y nuestro bienestar económico. También daña nuestras comunidades con tormentas que causan estragos en nuestros pueblos y ciudades, hogares y escuelas. Pone en riesgo nuestra seguridad nacional al generar una inestabilidad regional que requerirá actividades de socorro apoyadas por militares de los Estados Unidos y podría hacer que las áreas sean más vulnerables a las actividades terroristas.</span></p>
+<p><span style="font-weight: 400;">El vicepresidente Biden sabe que no hay un desafío mayor para nuestro país y nuestro mundo. Hoy, él está delineando un plan audaz, una Revolución de Energía Limpia, para enfrentar esta grave amenaza y liderar al mundo en la confrontación de la emergencia climática.</span></p>
+<p><span style="font-weight: 400;">Biden cree que el Green New Deal es un marco crucial para atacar los desafíos climáticos que enfrentamos. Captura poderosamente dos verdades básicas que están en el centro de su plan: (1) Estados Unidos necesita con urgencia adoptar una mayor ambición a una escala épica para cumplir el alcance de este desafío, y (2) nuestro medio ambiente y nuestra economía tienen una completa y total conexión.</span></p>
+<p><span style="font-weight: 400;">Si podemos aprovechar toda nuestra energía y talentos, y la inigualable innovación estadounidense, podemos convertir esta amenaza en una oportunidad para revitalizar el sector energético de los Estados Unidos e impulsar el crecimiento de toda la economía. Podemos crear nuevas industrias que revitalicen nuestra manufactura, generen empleos de alta calidad y fortalezcan la clase media en ciudades y pueblos de los Estados Unidos. Podemos dirigir a los Estados Unidos para convertirse en la superpotencia de energía limpia del mundo. Podemos exportar nuestra tecnología de energía limpia a todo el mundo y crear empleos de alta calidad y clase media aquí en casa. </span><span style="font-weight: 400;">Lograr una economía de energía limpia al 100% no es solo una obligación, es una oportunidad. Debemos adoptar un futuro de energía limpia de forma plena, no solo por todos nosotros hoy, sino también por nuestros hijos y nietos, para que su futuro sea más saludable, más seguro y más justo.</span></p>
+<p><span style="font-weight: 400;">Como presidente, Biden dirigirá al mundo para enfrentar la emergencia climática y liderar a través del poder del ejemplo, asegurando que Estados Unidos logre una economía de energía limpia al 100% y emisiones netas cero a más tardar en 2050.</span></p>
+<p><span style="font-weight: 400;">El Plan Biden: </span></p>
+<ol>
+<li style="font-weight: 400;"><b>Asegurará que Estados Unidos logre una economía de energía limpia al 100% y alcance emisiones netas cero a más tardar en 2050. </b><span style="font-weight: 400;">El primer día, Biden firmará una serie de nuevas órdenes ejecutivas con un alcance sin precedentes que irá más allá de la plataforma de la administración Obama-Biden y nos colocará en el camino correcto. Además, Biden exigirá que el Congreso promulgue una legislación en el primer año de su presidencia que: 1) establezca un mecanismo de cumplimiento que incluya importantes hitos a más tardar al final de su primer mandato en 2025; 2) realice una inversión histórica en energía limpia e investigación e innovación climática; 3) incentive el uso rápido de innovaciones de energía limpia en toda la economía, especialmente en las comunidades más afectadas por el cambio climático.</span></li>
+<li style="font-weight: 400;"><b>Construirá una nación más fuerte y con más resiliencia.</b><span style="font-weight: 400;"> El primer día, Biden realizará inversiones inteligentes en infraestructura para reconstruir la nación y garantizar que nuestros edificios, agua, transporte e infraestructura energética puedan soportar los impactos del cambio climático. Cada dólar que se gaste para reconstruir nuestras carreteras, puentes, edificios, la red eléctrica y nuestra infraestructura de agua se utilizará para prevenir, reducir y resistir un clima cambiante. Como presidente, Biden utilizará el poder de convocatoria del gobierno para impulsar los esfuerzos de resiliencia climática, desarrollando planes regionales de resiliencia al clima, en asociación con universidades locales y laboratorios nacionales, con acceso local a la ciencia, datos, información, herramientas y capacitación más relevantes.  </span></li>
+<li style="font-weight: 400;"><b>Unirá al resto del mundo para enfrentar la amenaza del cambio climático. </b><span style="font-weight: 400;">El cambio climático es un desafío global que requiere una acción decisiva de todos los países del mundo. Joe Biden sabe cómo apoyar a los aliados de Estados Unidos, sabe cómo enfrentar a los adversarios y cómo hablar de forma honesta con cualquier líder mundial sobre lo que debe hacerse. No solo volverá a comprometer a los Estados Unidos con el Acuerdo de París sobre el cambio climático, sino que irá mucho más allá. Dirigirá un esfuerzo para lograr que cada país importante aumente la ambición de sus objetivos climáticos nacionales. Se asegurará de que esos compromisos sean transparentes y aplicables, y evitará que los países hagan trampa utilizando el poder del ejemplo y las ventajas económicas de Estados Unidos. Integrará plenamente el cambio climático en nuestras estrategias de política exterior y seguridad nacional, así como en nuestro enfoque comercial.</span></li>
+<li style="font-weight: 400;"><b>Enfrentará el abuso de poder de los contaminadores que dañan de manera desproporcionada a las comunidades de color y de bajos ingresos. </b><span style="font-weight: 400;">Las comunidades vulnerables se ven afectadas de manera desproporcionada por la emergencia climática y la contaminación. El gobierno de Biden tomará medidas contra las compañías de combustibles fósiles y otros contaminadores, los cuales anteponen las ganancias a las personas y, a sabiendas, dañan nuestro medio ambiente y envenenan el aire, la tierra y el agua de nuestras comunidades, además de que ocultan información sobre los riesgos potenciales para la salud y el medio ambiente. El Plan Biden asegurará que las comunidades de todo el país, desde Flint, Michigan, hasta Harlan, Kentucky, y la costa de New Hampshire, tengan acceso a agua potable limpia y segura. Además, garantizará que el desarrollo de soluciones sea un proceso inclusivo, dirigido por la comunidad.</span></li>
+<li style="font-weight: 400;"><b>Cumplirá nuestra obligación para con los trabajadores y las comunidades que impulsaron nuestra revolución industrial y las décadas posteriores de crecimiento económico. </b><span style="font-weight: 400;">Este es el apoyo que se han ganado por alimentar la revolución industrial de nuestro país y las décadas de crecimiento económico. No vamos a dejar atrás a ningún trabajador ni a ninguna comunidad. </span></li>
+</ol>
+<p><span style="font-weight: 400;">Y, el vicepresidente Biden se ha comprometido a que Biden para presidente no acepte contribuciones de ejecutivos ni de corporaciones de petróleo, gas y carbón. </span></p>
+<p><b>El Plan Biden hará una inversión histórica en nuestro futuro de energía limpia y justicia ambiental, echando atrás los incentivos fiscales de Trump, que enriquecen a las corporaciones, a detrimento de los empleos estadounidenses y el medio ambiente. </b><span style="font-weight: 400;">La propuesta de justicia climática y ambiental de Biden hará una inversión federal de $1.7 billones de dólares durante los próximos diez años, aprovechando inversiones adicionales estatales y locales y del sector privado, para un total de más de $5 billones de dólares. La reducción de impuestos del presidente Trump condujo a billones en recompras de acciones y creó nuevos incentivos para trasladar las ganancias al exterior. Joe Biden considera que deberíamos invertir en una Revolución de Energía Limpia que incentive la creación de empleos aquí en casa.</span></p>
+<p><span style="font-weight: 400;">El Plan Biden se pagará revirtiendo los excesos de los recortes de impuestos de Trump para las empresas; reduciendo los incentivos para los paraísos fiscales, la evasión y la subcontratación; garantizando que las empresas paguen su parte justa; cerrando otras lagunas en nuestro código fiscal que recompensan la riqueza, no el trabajo; y poniendo fin a los subsidios a los combustibles fósiles.</span></p>
+<p><span style="font-weight: 400;"> </span></p>
+<table>
+<tbody>
+<tr>
+<td><b>JOE BIDEN: UN “PIONERO DEL CAMBIO CLIMÁTICO”. </b><span style="font-weight: 400;">Joe Biden, desde hace mucho tiempo, ha entendido la enormidad del cambio climático y siempre ha creído que tenemos un imperativo moral y económico de enfrentarlo. En 1986, presentó uno de los primeros proyectos de ley sobre el clima en el Congreso. Politifact recientemente lo llamó &#8220;pionero del cambio climático&#8221; y nombró a su temprano liderazgo &#8220;un punto de inflexión&#8221;.</span></p>
+<p><span style="font-weight: 400;">Como presidente del Comité de Relaciones Exteriores, organizó varias audiencias sobre el cambio climático y reunió apoyo alrededor de una serie de resoluciones no vinculantes sobre el tema, en un intento por generar velocidad y fuerza para lograr acciones contra el cambio climático mundial. En 1998 fue un campeón clave de la Ley de Conservación de Bosques Tropicales, que permitió a Estados Unidos llegar a acuerdos con gobiernos extranjeros para conservar los bosques tropicales a cambio de alivio de la deuda (comúnmente conocidos como canjes de deuda por naturaleza).</span></p>
+<p><span style="font-weight: 400;">En 2006, el senador Biden llevó a ejecutivos de BP y Chevron a retar los subsidios de la industria del petróleo</span><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Como vicepresidente, supervisó la Ley de Recuperación, la mayor inversión individual en energía limpia en la historia de los Estados Unidos. La administración Obama-Biden estableció límites históricos a la contaminación por carbono, duplicó los estándares de economía de combustible para automóviles y camiones, desató el potencial de energía renovable y limpia, y reunió al mundo para lograr los innovadores Acuerdos Climáticos de París.  </span></p>
+<p><span style="font-weight: 400;">Biden también entiende que el movimiento hacia un futuro más limpio viene de todos nosotros. En un discurso reciente en la Conferencia de Alcaldes de los Estados Unidos, aplaudió los esfuerzos que las ciudades y los estados han asumido por su cuenta, dado que el gobierno federal ha estado ausente durante los últimos dos años.      </span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td><b>La promesa de Biden: ciencia, no ficción</b></p>
+<p><b><i>“Los seres humanos han liberado una cantidad cada vez mayor de gases de efecto invernadero a la atmósfera a través de la quema de combustibles fósiles y, en menor medida, mediante la deforestación y los cambios en el uso de la tierra[&#8230;]. Este cambio ha intensificado el efecto invernadero natural, impulsando un aumento en las temperaturas de la superficie y otros cambios generalizados en el clima de la Tierra que no tienen precedentes en la historia de la civilización moderna&#8221;. Cuarta Evaluación Nacional del Clima</i></b></p>
+<p><b>La contribución de los seres humanos al efecto invernadero es indiscutible.</b><span style="font-weight: 400;"> Los principales expertos en clima, incluidos los autores de la Cuarta Evaluación Nacional del Clima y el Informe Especial del Grupo Intergubernamental sobre el Cambio Climático, han llegado a la conclusión de que se estima que las actividades humanas han provocado un aumento aproximado de 1.0°C en la temperatura mundial de la Tierra hasta la fecha. Las emisiones excesivas de CO2 causadas por actividades humanas, como la quema de combustibles fósiles, han contribuido a una grave exacerbación de un fenómeno natural conocido como el efecto invernadero. Este suceso natural tiene lugar cuando la radiación solar dirigida hacia la tierra llega a la atmósfera. La atmósfera refleja parte de la radiación, pero aproximadamente el 90% de la radiación es absorbida por la tierra y el agua, calentando así la tierra. Debido a los gases de efecto invernadero adicionales emitidos por los seres humanos, como el dióxido de carbono, el vapor de agua, el metano, el óxido nitroso y los clorofluorocarbonos, se atrapa más calor de lo normal, lo que contribuye a un aumento general de la temperatura global.</span></p>
+<p><span style="font-weight: 400;">Si la temperatura global continúa aumentando a la tasa actual y supera los 1.5°C, la amenaza existencial para la vida no se limitará solo a los sistemas ecológicos, sino también se extenderá a la vida humana. Ya hemos comenzado a presenciar los impactos en la biodiversidad y el ecosistema, a medida que la pérdida y la extinción de las especies se han acelerado de manera inquietante como resultado del aumento de la temperatura del océano, de la reducción de las capas de hielo, del aumento del nivel del mar y mucho más. Mientras los efectos del calentamiento global empeoren, la salud humana, los medios de subsistencia, la seguridad alimentaria, el suministro de agua y el crecimiento económico, se pondrán en peligro. Nos corresponde a nosotros implementar un plan para reducir las emisiones de gases de efecto invernadero y comenzar a combatir los efectos consiguientes del calentamiento global, a largo y a corto plazo, tanto en el medio ambiente como en los seres humanos.</span></p>
+<p><i><span style="font-weight: 400;">Impactos del cambio climático según la </span></i><i><span style="font-weight: 400;">NASA</span></i><i><span style="font-weight: 400;">:</span></i></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">“Calentamiento de los océanos: los océanos han absorbido gran parte de este aumento de calor, con los 700 metros superiores (aproximadamente 2,300 pies) del océano mostrando un calentamiento de más de 0.4 grados Fahrenheit desde 1969.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">“Disminución de las placas de hielo: las capas de hielo de la Antártida y de Groenlandia han disminuido en masa. Los datos de </span><i><span style="font-weight: 400;">Gravity Recovery and Climate Experiment</span></i><span style="font-weight: 400;"> de la NASA, muestran que Groenlandia perdió un promedio de 286 mil millones de toneladas de hielo por año entre 1993 y 2016, mientras que la Antártida perdió unos 127 mil millones de toneladas de hielo por año durante el mismo período. La tasa de pérdida de masa de hielo en la Antártida se ha triplicado en la última década.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">“Retraimiento de glaciares: los glaciares se están retrayendo en casi todo el mundo, incluso en los Alpes, los Himalaya, los Andes, las Montañas Rocosas, Alaska y África.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">“Aumento del nivel del mar: el nivel global del mar aumentó aproximadamente 8 pulgadas durante el siglo pasado. Sin embargo, la tasa en las últimas dos décadas es de casi el doble de la del siglo pasado y se está acelerando ligeramente cada año.</span></li>
+</ul>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">“Eventos extremos: el número de eventos de temperatura alta récord en los Estados Unidos ha aumentado, mientras que el número de eventos de temperatura baja récord ha ido disminuyendo desde 1950. Estados Unidos también ha sido testigo de un número creciente de eventos de lluvia intensa”.</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2 style="text-align: center;"><b>EL PLAN BIDEN PARA UNA REVOLUCIÓN DE ENERGÍA LIMPIA </b><b>Y JUSTICIA AMBIENTAL </b></h2>
+<ol>
+<li style="text-align: left;"><b> ASEGURAR QUE ESTADOS UNIDOS LOGRE UNA ECONOMÍA 100% DE ENERGÍA LIMPIA Y EMISIONES NETAS CERO A MÁS TARDAR EN 2050</b></li>
+</ol>
+<p><span style="font-weight: 400;">Estados Unidos debe tener un plan audaz para lograr una economía 100% de energía limpia y emisiones netas cero a más tardar en 2050 aquí en casa. El primer día, Biden firmará una serie de órdenes ejecutivas que nos pondrán en ese camino. Además, exigirá que el Congreso promulgue una legislación en el primer año de su presidencia que: 1) establezca un mecanismo de cumplimiento para alcanzar la meta de 2050, incluido un objetivo a más tardar al final de su primer mandato en 2025 para garantizar que lleguemos a la línea de meta; 2) realice una inversión histórica en investigación e innovación energética y climática; 3) incentive el rápido despliegue de innovaciones de energía limpia en toda la economía. El fracaso no es una opción. Si el Congreso no cumple con su deber de actuar, Biden los hará responsables. </span></p>
+<p><b>Acciones ejecutivas sin precedentes del primer día de Biden para impulsar el progreso histórico </b></p>
+<p><span style="font-weight: 400;">El primer día, Biden usará toda la autoridad del poder ejecutivo para avanzar y reducir significativamente las emisiones. Biden reconoce que debemos ir más lejos, más rápido y más agresivamente que nunca, mediante las siguientes acciones:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Exigir límites agresivos a la contaminación por metano de las operaciones nuevas y existentes de petróleo y gas.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Usar el sistema de compras del gobierno federal, que gasta $500 mil millones de dólares cada año, para movernos hacia vehículos 100% de energía limpia y sin emisiones.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Asegurar que todas las plantas, edificios e instalaciones del gobierno de los Estados Unidos sean más eficientes y estén preparadas para el clima, empleando el poder adquisitivo y las cadenas de suministro para impulsar la innovación.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reducir las emisiones de gases de efecto invernadero del transporte, la fuente de más rápido crecimiento de la contaminación del clima de los Estados Unidos, preservando e implementando la existente Ley de Aire Limpio, y desarrollando nuevos estándares rigurosos de ahorro de combustible destinados a garantizar que el 100% de las nuevas ventas de vehículos ligeros y medianos sean eléctricos, y mejoras anuales para los vehículos pesados.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Duplicar los combustibles líquidos del futuro, que hacen de la agricultura una parte clave de la solución al cambio climático. Los biocombustibles avanzados están ahora más cerca que nunca, mientras comenzamos a construir las primeras plantas para biocombustibles, creando empleos y nuevas soluciones para reducir las emisiones en aviones, buques oceánicos y más.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ahorrar dinero a los consumidores y reducir las emisiones a través de nuevos estándares agresivos de eficiencia de electrodomésticos y de edificios.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Comprometer que cada inversión federal en infraestructura reduzca la contaminación climática y requiera que cualquier decisión de permiso federal considere los efectos de las emisiones de gases de efecto invernadero y el cambio climático.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Exigir a las empresas públicas que revelen los riesgos climáticos y las emisiones de gases de efecto invernadero en sus operaciones y cadenas de suministro.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proteger la biodiversidad, reducir las tasas de extinción y ayudar a aprovechar las soluciones climáticas naturales conservando el 30% de las tierras y aguas de Estados Unidos antes de 2030.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Proteger los tesoros naturales de Estados Unidos salvaguardando de forma permanente el Refugio Nacional de Vida Silvestre del Ártico y otras áreas afectadas por el ataque del presidente Trump en tierras y aguas federales, crear parques y monumentos nacionales que reflejen el patrimonio natural de Estados Unidos, prohibir nuevos permisos de petróleo y gas en tierras y aguas públicas, modificar las regalías para justiciar los costos climáticos, y crear programas específicos para mejorar la reforestación y desarrollar energías renovables en tierras y aguas federales con el objetivo de duplicar la energía eólica marina para 2030. </span></li>
+</ul>
+<p>&nbsp;</p>
+<p><b>Agenda legislativa del primer año de Biden sobre el Cambio Climático</b></p>
+<p><span style="font-weight: 400;">Crear un mecanismo de cumplimiento para lograr emisiones netas cero a más tardar en 2050</span><span style="font-weight: 400;">, incluido un objetivo para más tardar al final del primer mandato del presidente Biden en 2025 para asegurarnos de llegar a la línea de meta. Este mecanismo de cumplimiento se basará en los principios de que los contaminadores deben asumir el costo total de la contaminación de carbono que emiten y que nuestra economía debe lograr reducciones ambiciosas en las emisiones en toda la economía en lugar de que solo unos pocos sectores asuman la carga del cambio. El mecanismo de cumplimiento logrará reducciones de emisiones claras y legalmente vinculantes, con integridad ambiental.   </span></p>
+<p><span style="font-weight: 400;">Hacer una inversión histórica en investigación e innovación energética y climática, así como en infraestructura y comunidades limpias y con resiliencia.</span></p>
+<p><span style="font-weight: 400;">A pesar del progreso que hemos logrado en la reducción de emisiones en el sector energético, los combustibles fósiles aún representan casi el 80% del uso de la energía mundial. Hay mucho más trabajo por hacer para identificar soluciones asequibles. Actualmente, estamos en la cúspide de los avances en tecnologías, como las baterías que pueden almacenar energía de manera más eficiente para el uso en momentos de máxima demanda, controles y sensores más eficientes para la manufactura avanzada, un aislamiento más eficaz y más delgado para los edificios y mejoras en la ciberseguridad para hacer que las redes inteligentes sean más resistentes a los ataques.</span></p>
+<p><span style="font-weight: 400;">Tenemos que deshacernos de la vieja forma de pensar en la que la economía limpia y los empleos no van de la mano. </span><i><span style="font-weight: 400;">Claro que combinan</span></i><span style="font-weight: 400;">. Actualmente hay más de tres millones de personas en los Estados Unidos empleadas en la economía de energía limpia. Sin embargo, existe una gran oportunidad para revitalizar el sector energético de Estados Unidos, impulsar el crecimiento en toda la economía y reclamar el cargo de líder mundial en energía limpia y el principal exportador. Y, Joe Biden se asegurará de que los empleos de la economía limpia sean buenos. </span></p>
+<p><i><span style="font-weight: 400;">Para acelerar este progreso, el presidente Biden hará la mayor inversión en investigación e innovación en energía limpia</span></i><span style="font-weight: 400;">. Después de la Segunda Guerra Mundial, la inversión pública en investigación y colaboración entre las universidades y el sector privado estimuló la innovación estadounidense, condujo a un rápido crecimiento económico y laboral, y ayudó a construir una clase media fuerte. El Plan Biden duplicará este enfoque para crear las industrias del futuro invirtiendo $400 mil millones de dólares en diez años. Eso es el doble de la inversión del programa Apollo, que puso a un hombre en la luna, en dólares actuales. Esta inversión nos permitirá desarrollar nuevos avances tecnológicos que crearán empleos y reducirán drásticamente las emisiones.</span></p>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Reunir a los mejores talentos de Estados Unidos para innovar en el clima.</span></i><span style="font-weight: 400;"> Estados Unidos, con el liderazgo del gobierno, ha dirigido el camino en muchas tecnologías e innovaciones, desde el GPS hasta las redes de computadoras. Biden establecerá una nueva agencia de Proyectos de Investigación Interinstitucional Avanzada Centrada en el Clima, ARPA-C (por sus siglas en inglés). Esta iniciativa se centrará en tecnologías asequibles revolucionarias para ayudar a Estados Unidos a alcanzar nuestro objetivo de energía limpia al 100%, con un enfoque específico en lo siguiente, de acuerdo con lo recomendado por el director fundador de ARPA-E:  </span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Almacenamiento a escala de red a una décima parte del costo de las baterías de iones de litio; </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Pequeños reactores nucleares modulares a la mitad del costo de construcción de los reactores actuales; </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Refrigeración y aire acondicionado que utilicen refrigerantes sin potencial de calentamiento global; </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Edificios de energía neta cero a costo neto cero; </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Uso de energías renovables para producir hidrógeno libre de carbono al mismo costo que el gas shale; </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Descarbonizar el calor industrial necesario para fabricar acero, concreto y productos químicos y recrear los materiales de construcción neutros en carbono; </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Descarbonizar el sector alimentario y agrícola, y aprovechar la agricultura para eliminar el dióxido de carbono del aire y almacenarlo en el suelo; y </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Capturar el dióxido de carbono de los extractores de las plantas de energía, seguido de su aislamiento en el subsuelo o usarlo como un producto alternativo. </span></li>
+</ul>
+</li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Enfoque en las emisiones de aerolíneas: </span></i><span style="font-weight: 400;">la aviación representa casi el 2% de las emisiones globales de gases de efecto invernadero, y se espera que esa parte aumente. Lamentablemente, al día de hoy, se han desarrollado pocas tecnologías o combustibles bajos en carbono para enfrentar este desafío. Biden reconoce que esto debe cambiar y buscará medidas para incentivar la creación de combustibles nuevos y sustentables para las aeronaves, así como otros cambios en la tecnología y los estándares de las aeronaves y la gestión del tráfico aéreo.</span></li>
+<li style="font-weight: 400;">Acelerar el desarrollo y despliegue de la tecnología de captura sequestrada de carbono.<span style="font-weight: 400;"> Según la Blue Green Alliance, &#8220;la captura, uso y almacenamiento de carbono (CCUS por sus siglas en inglés) es una tecnología de rápido crecimiento que tiene el potencial de generar beneficios económicos para industrias multiples mientras también reduce significativamente las emisiones de dióxido de carbono&#8221;. Biden comparte el objetivo de la Coalición de Captura de Carbono &#8220;el hacer de CCUS una solución ampliamente disponible, rentable y rápidamente escalable para reducir las emisiones de carbono y cumplir con los objetivos climáticos para mediados de siglo ”. Con este fin, duplicará las inversiones federales y mejorará los incentivos fiscales para CCUS. Al mismo tiempo, Biden continuará financiando la investigación, el desarrollo y la demostración de la captura de carbono para llevar al mercado nuevas tecnologías de captura.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Identificar el futuro de la energía nuclear</span></i><span style="font-weight: 400;">. Para enfrentar la emergencia climática que amenaza a nuestras comunidades, a la economía y a la seguridad nacional, debemos analizar todas las tecnologías de bajo y cero carbonos. Es por eso que Biden apoyará una agenda de investigación a través de ARPA-C para ver los problemas, que van desde el costo a la seguridad hasta los sistemas de eliminación de desechos, que siguen siendo un desafío continuo para la energía nuclear actual.  </span></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Incentivar el despliegue de tecnología limpia en toda nuestra economía.</span><span style="font-weight: 400;"> Crear la mejor y más innovadora tecnología limpia del mundo no es suficiente. También debemos asegurarnos de que sea utilizada por los hogares y la industria para lograr reducciones de emisiones agresivas. Con ese fin, el presidente Biden incentivará el despliegue de tecnología limpia de las siguientes maneras:</span></p>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Mejorar la eficiencia energética de nuestros edificios</span></i><span style="font-weight: 400;">. Sobre la base de sus esfuerzos en la Ley de Recuperación, Biden establecerá el objetivo de reducir la huella de carbono del inventario de edificaciones de los Estados Unidos en un 50% para 2035, creando incentivos para profundas modernizaciones que combinen la electrificación de equipos, la eficiencia y la generación de energía limpia in situ. Trabajará para identificar las barreras para ayudar a compensar el costo inicial de las mejoras de construcción e implementar un programa nacional que tenga como objetivo un paquete de modernizaciones asequibles de eficiencia energética en los hogares estadounidenses. Dirigirá el Departamento de Vivienda y Desarrollo Urbano de los Estados Unidos de forma tal que logre que la vivienda sea más eficiente para las comunidades de bajos ingresos. Dirigirá al Departamento de Energía de los Estados Unidos a redoblar los esfuerzos para acelerar los nuevos estándares de eficiencia para los aparatos y equipos domésticos. Además, reparará y acelerará el proceso del código de construcción y creará un nuevo mecanismo de financiamiento para que los estados y las ciudades adopten códigos de construcción estrictos y capaciten a constructores e inspectores.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Acelerar el uso de vehículos eléctricos. </span></i><span style="font-weight: 400;">Existen actualmente un millón de vehículos eléctricos en los caminos de Estados Unidos, pero una barrera clave para un mayor uso de estos vehículos reductores de gases de efecto invernadero es la falta de estaciones de carga y de coordinación en todos los niveles de gobierno. Como presidente, Biden trabajará con los gobernadores y alcaldes de nuestra nación para apoyar el uso de más de 500,000 nuevos puntos públicos de recarga para fines de 2030. Además, Biden restablecerá el crédito fiscal completo para vehículos eléctricos para incentivar su compra. Se asegurará de que el crédito fiscal esté diseñado para los consumidores de clase media y, en la mayor medida posible, para priorizar la compra de vehículos fabricados en Estados Unidos. Trabajará también para desarrollar un nuevo estándar de economía de combustible que vaya más allá de lo que implementó la administración Obama-Biden.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Empoderar a las comunidades locales para desarrollar soluciones de transporte.</span></i> <span style="font-weight: 400;">Las comunidades en todo el país están experimentando una creciente necesidad de opciones de transporte más limpias y alternativas, incluyendo vías exclusivas de transporte, de bicicletas y peatonales, y conexiones de primera y última milla. El gobierno de Biden transformará la manera en que financiamos el transporte local, brindando a los gobiernos estatales y locales, con aportes de los interesados de la comunidad, más flexibilidad para utilizar los nuevos fondos para crear un ecosistema de transporte más seguro, limpio y accesible.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Asociación con agricultores y ganaderos para que las mejores prácticas agrícolas y el uso de digestores generen nuevas fuentes de ingresos. </span></i><span style="font-weight: 400;">Para nuestros agricultores familiares, ganaderos y terratenientes, la agenda del clima no se trata solo de cultivar alimentos nutritivos y de hacerlos accesibles para todas las familias, sino también de tener agua en la que puedan confiar para cultivar esos alimentos. Se trata de granjas locales y alimentos frescos para cada comunidad, y de asegurarse de que las crecidas en el medio oeste no se lleven las granjas familiares que han alimentado a nuestra gente durante décadas. Biden revisará los obstáculos regulatorios a nuevas innovaciones e invertirá en una agricultura respetuosa del clima, como programas de conservación para cultivos de cobertura y otras prácticas que buscan restaurar el suelo y generar carbono en él, y, en el proceso, evitar la escorrentía y ayudar a los agricultores familiares a usar las más recientes tecnologías para maximizar la productividad. Creará nuevas oportunidades para apoyar el uso de digestores de metano para capturar las potentes emisiones climáticas y generar electricidad. Con estos esfuerzos, los agricultores familiares pueden beneficiarse y ayudar a liderar la Revolución de Energía Limpia. </span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Mitigar el impacto climático de la expansión urbana. </span></i><span style="font-weight: 400;">La política de vivienda se puede utilizar como una herramienta para combatir el cambio climático y expandir la clase media. Muchos estadounidenses de ingresos bajos y medianos se ven obligados a vivir lejos de los centros de trabajo debido a los altos costos de vivienda, lo que lleva no solo a que los trabajadores se sobrecarguen con los largos viajes diarios, sino también a las mayores emisiones asociadas con el aumento del tráfico y los tiempos de viaje extra largos. Modificar las regulaciones locales para eliminar la expansión y permitir viviendas más densas y asequibles cerca del transporte público reduciría los tiempos de viaje de muchos de los trabajadores del país, al tiempo que disminuiría su huella de carbono. Esto significa que las estrategias de reducción de emisiones no solo combaten el cambio climático, sino que también ahorran dinero a los consumidores. Sin embargo, muchas familias a menudo necesitan apoyo para pagar la inversión inicial. Las autoridades locales de vivienda y las empresas de servicios públicos han dado un paso al frente y han ayudado a los hogares a invertir en mejoras de eficiencia energética ofreciendo planes de financiamiento flexibles y créditos fiscales.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Promulgar una estrategia nacional para desarrollar un sector de manufactura con bajas emisiones de carbono en todos los estados, acelerar las tecnologías de vanguardia y garantizar que las empresas y los trabajadores tengan acceso a nuevas tecnologías y habilidades, con un enfoque importante en ayudar a los fabricantes pequeños y grandes a mejorar sus capacidades para tener ambos futuros: competitivo y de bajo carbono</span></i><span style="font-weight: 400;">. La estrategia conectará a universidades de investigación, centros formativos superiores, incubadoras y aceleradoras, institutos de manufactura y empleadores, sindicatos y gobiernos estatales y locales, solos o como parte de un pacto regional, y les proporcionará fondos significativos para usar un plan basado en el lugar para ayudar a su estado o región a construir un futuro competitivo y bajo en carbono en manufactura que refleje los impactos del clima en sus comunidades locales. Las industrias, desde la textil hasta fresadoras, de fabricación de metales hasta las tecnologías de fabricación más avanzadas, serán elegibles para financiamiento para modernizar, competir, crear empleos y avanzar hacia futuros de energía limpia. Créditos fiscales y subsidios asignados estarán disponibles para que las empresas mejoren sus equipos y procesos, para que inviertan en fábricas nuevas o ampliadas e implementen tecnologías bajas en carbono, siempre que todas las partes interesadas contribuyan al proceso de determinar una ganancia final para los empleos, trabajadores, energía limpia e inversión comunitaria a largo plazo. Cuando los estados sientan que las presiones o los requisitos competitivos en respuesta a la emergencia climática pueden amenazar una economía local, la estrategia nacional del presidente Biden financiará los esfuerzos para avanzar hacia un enfoque de manufactura más competitivo o con bajas emisiones de carbono que pueda desarrollar de forma preventiva nuevas estrategias económicas, incluido el uso de fondos federales para tecnologías o centros de innovación en manufactura.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><b>Aprovechar el gran potencial para que los estadounidenses y nuestros trabajadores </b></p>
+<p><b>dirijan la economía del siglo XXI</b></p>
+<p><span style="font-weight: 400;">El vicepresidente Biden sabe que nuestra respuesta a esta emergencia climática también representa una oportunidad. Más de tres millones de personas en los Estados Unidos ya están empleadas en la economía de energía limpia. Pero, eso es solo el comienzo de lo que es posible si aprovechamos todo nuestro talento y creatividad. Si se ejecuta de manera estratégica, nuestra respuesta al cambio climático puede crear más de 10 millones de empleos bien pagados en los Estados Unidos que crecerán como una clase media más fuerte e inclusiva de la cual disfruten las comunidades de todo el país, no solo en las ciudades o a lo largo de las costas. </span></p>
+<p><span style="font-weight: 400;">Estados Unidos tiene una gran oportunidad de liderar las industrias del futuro fortaleciendo las industrias emergentes en la agricultura, la energía limpia y manufactura avanzada. Esto también presenta una oportunidad para que el país cree empleos estables y bien pagados que impulsen la energía limpia aquí y en el extranjero.</span></p>
+<p><span style="font-weight: 400;">Es por eso que Joe Biden hará la más grande inversión en la historia de la innovación estadounidense, incluyendo investigación e innovación para desbloquear y usar nuevas tecnologías de cero emisiones de carbono para el futuro, crear empleos estables y bien pagados en todo Estados Unidos, y hacer de las tecnologías de cero emisiones de carbono la forma más rentable y escalable para satisfacer las necesidades energéticas de nuestro país.</span></p>
+<p><b>Y, Joe Biden garantizará que los empleos de la economía limpia sean buenos trabajos.</b> <span style="font-weight: 400;">Debemos asegurarnos de que los empleos creados como parte de la revolución de la energía limpia ofrezcan buenos salarios, beneficios y protección a los trabajadores. Con este fin, el presidente Biden defenderá los derechos de los trabajadores a formar sindicatos y negociar de forma colectiva en estas industrias emergentes y en crecimiento; buscará nuevas asociaciones con centros de estudios superiores, sindicatos y el sector privado para desarrollar programas que capaciten a toda la fuerza laboral de Estados Unidos para aprovechar la creciente economía de energía limpia; incorporará la capacitación en habilidades de planificación de inversiones en infraestructura, involucrando a las comunidades locales y estatales; y revitalizará y reutilizará a AmeriCorps para la sustentabilidad, de modo que cada estadounidense pueda participar en la economía de energía limpia. Estos esfuerzos se centrarán en el trabajador y serán impulsados en colaboración con las comunidades a las que impactarán.</span></p>
+<p><span style="font-weight: 400;">Desafortunadamente, hoy el gobierno de Trump permite el atraso de Estados Unidos en la carrera por la energía limpia para el futuro. En 2017, China invirtió $3 dólares en energía renovable por cada dólar de Estados Unidos, dando a China una ventaja sobre las tecnologías del mañana que generarán empleos bien pagados. Para 2030, el gobierno de Biden volverá a poner a Estados Unidos en el asiento del conductor, convirtiéndolo en el líder mundial en investigación, inversión, comercialización, fabricación y exportación de energía limpia.</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<ol>
+<li><b> CONSTRUIR UNA NACIÓN MÁS FUERTE, CON MÁS RESILIENCIA </b></li>
+</ol>
+<p><span style="font-weight: 400;">El país ya está experimentando el impacto del cambio climático en comunidades diversas y variadas en toda la nación. A medida que el gobierno de Trump ha abdicado el liderazgo, los alcaldes de Estados Unidos y otros líderes locales han dado un paso al frente para construir ciudades más inteligentes que puedan soportar tormentas, inundaciones, calor urbano, incendios forestales, así como el aumento del nivel del mar y mucho más. El gobierno de Biden otorgará a los líderes locales, una vez más, un verdadero socio en la Casa Blanca, mejorando sus esfuerzos y creando empleos bien pagados para mejorar la resiliencia al clima e invertir en nuestro futuro económico.</span></p>
+<p><span style="font-weight: 400;">La infraestructura es crítica para el crecimiento económico. Un estudio del Fondo Monetario Internacional encontró que aumentar la inversión en infraestructura en un 1% del PIB en los países avanzados puede aumentar el crecimiento en un 0.4% al 1.5% y fomentar la innovación tecnológica. Joe Biden cree que esta inversión es esencial y que, a medida que damos pasos atrasados para mejorar la desmoronada infraestructura, también debemos priorizar el logro de profundas reducciones de emisiones. Con ese fin, Biden se comprometerá a que cada inversión en infraestructura que reciba fondos federales reduzca la contaminación del clima, tanto como sea posible. Los impactos climáticos son regionales, y las soluciones lo serán también.  </span></p>
+<p><span style="font-weight: 400;">Como parte del paquete legislativo de la Revolución de la Energía Limpia, el presidente Biden realizará inversiones innovadoras en infraestructura y comunidades limpias y con resiliencia. Además, el presidente Biden:</span></p>
+<ul>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Definirá la agenda de adaptación climática</span></i><span style="font-weight: 400;">. Biden reunirá a los mejores innovadores para ayudar a diseñar códigos de zonificación y construcción de sentido común, y apoyar a las comunidades a construir y reconstruir antes y después de desastres naturales y otras conmociones y tensiones.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Desarrollará nuevas herramientas para gestionar y reducir el riesgo y el costo de transferir el riesgo.</span></i><span style="font-weight: 400;"> Trabajando con la industria de seguros, el gobierno de Biden identificará formas de reducir las primas de seguros de pertenencia para propietarios y comunidades que invierten en resiliencia, expandiendo programas como el Sistema de Clasificación de la Comunidad que FEMA administra actualmente en todo el país.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Construirá una nueva economía de infraestructura con resiliencia</span></i><span style="font-weight: 400;">. Biden creará una nueva clase de trabajos bien remunerados y capacitación para el empleo en torno a las industrias con resiliencia al clima. Se ha comprobado que la restauración costera; el diseño de infraestructura con resiliencia; la construcción y evaluación (como puentes que soportan fuertes vientos y caminos que no desaparecen durante tormentas e inundaciones); las soluciones naturales (como plantaciones de árboles a gran escala para combatir el calor urbano y sus asociados impactos negativos para la salud), y las soluciones tecnológicas para evaluar fácilmente el riesgo y proteger a las personas y sus propiedades; mejoran la resiliencia de las comunidades. También son oportunidades para el crecimiento del empleo y la vitalidad económica en todo el país.</span></li>
+<li style="font-weight: 400;"><i><span style="font-weight: 400;">Encenderá la segunda gran revolución del ferrocarril. </span></i><span style="font-weight: 400;">Hace dos siglos, la primera gran expansión del ferrocarril impulsó nuestra revolución industrial. Actualmente, Estados Unidos se está quedando atrás de Europa y China en cuanto a seguridad y velocidad ferroviaria. Biden desarrollará un plan para garantizar que el país tenga el sistema ferroviario más limpio, más seguro y más rápido del mundo, tanto para pasajeros como para carga. </span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Respecto a los</span><i><span style="font-weight: 400;"> pasajeros</span></i><span style="font-weight: 400;">: comenzará poniendo el Corredor del Noreste a velocidades más altas y reduciendo a la mitad el tiempo de viaje de D.C. a Nueva York, además, construirá junto con él un nuevo y más seguro Túnel del río Hudson. Avanzará hacia la finalización del proyecto del Tren de Alta Velocidad de California. Ampliará el Corredor Noreste al sur de rápido crecimiento. En todo el Medio Oeste y el Gran Oeste, comenzará la construcción de un sistema de trenes de alta velocidad de extremo a extremo que conectará las costas, desbloqueando un acceso nuevo y asequible para todos los estadounidenses. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Respecto a la </span><i><span style="font-weight: 400;">carga: </span></i><span style="font-weight: 400;">el gobierno de Biden buscará proyectos como un puente que conecte a Oregon y al estado de Washington que no solo mueva camiones, sino también transporte ferroviario, y la finalización del proyecto CREATE en Chicago, que podría reducir a la mitad el tiempo que requieren los bienes vitales para moverse por el país. Este plan reducirá la contaminación, ayudará a conectar a los trabajadores con empleos de calidad con desplazamientos más cortos y estimulará la inversión en comunidades conectadas de manera más eficiente a las principales áreas metropolitanas.</span></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td><b>Estados y ciudades estadounidenses: predicando con el ejemplo</b></p>
+<p><span style="font-weight: 400;">En el vacío dejado por la inacción del gobierno de Trump, los gobernadores y alcaldes estadounidenses han establecido metas ambiciosas y han implementado programas a gran escala para enfrentar el cambio climático. Sus esfuerzos también apuntalan las economías locales: la Oficina de Estadísticas Laborales prevé que los instaladores solares y los técnicos de turbinas eólicas serán las dos ocupaciones de mayor crecimiento hasta 2026 (con un crecimiento del 105% y 96%, respectivamente). Los esfuerzos locales incluyen:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">La gobernadora de Nuevo México, Michelle Lujan Grisham, se comprometió a reducir las emisiones de gases de efecto invernadero en todo el estado en un 45% para 2030; Nuevo México es actualmente el tercer productor de petróleo del país.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El gobernador de Colorado, Jared Polis, comprometió a su estado con el 100% de electricidad limpia para 2040; firmó una orden ejecutiva para mover al estado a estándares de vehículos de cero emisiones y aumentar la adopción de vehículos eléctricos. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Los legisladores de Oregon han presentado un límite de carbono y una propuesta comercial que establecería un límite de 52 millones de toneladas métricas en las emisiones de gases de efecto invernadero. Esto sigue el propio sistema de límites y comercio de California y el de nueve estados del noreste (Connecticut, Delaware, Maine, Maryland, Massachusetts, New Hampshire, Nueva York, Rhode Island y Vermont) que conforman la Iniciativa Regional de Gases de Efecto Invernadero.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Veintinueve estados, tres territorios y Washington D.C., han adoptado los Estándares de Cartera Renovable que obligan a una parte específica de la electricidad que venden los servicios públicos a provenir de recursos renovables.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Las ciudades también han tomado la iniciativa: más de 35 establecieron una meta de reducción de emisiones del 80% para 2050 y más de 400 alcaldes cumplen con el Acuerdo de París. Las ciudades están abordando este problema de manera creativa, incluso mediante la implementación de impuestos a la energía que reducen las emisiones (Boulder, CO), la electrificación del transporte público (por ejemplo, Los Ángeles) y la promesa de que toda la electricidad municipal será generada por fuentes sin carbono para 2020 (por ejemplo, Kansas City, MO).</span></li>
+</ul>
+<p><span style="font-weight: 400;">Estos estados y ciudades merecen nuevamente tener un socio en la Casa Blanca. El presidente Biden será ese socio.</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><b>III. UNIR AL RESTO DEL MUNDO PARA ENFRENTAR LA GRAVE AMENAZA CLIMÁTICA</b></p>
+<p><span style="font-weight: 400;">Los Estados Unidos representan solo el 15% de las emisiones globales, por lo que sabemos que no podemos resolver esta emergencia por nuestra cuenta. El cambio climático es un desafío global que requiere una acción decisiva de todos los países del mundo. Es por eso que el gobierno Obama-Biden movilizó al mundo para lograr el Acuerdo Climático de París 2015. El presidente Trump descartó imprudentemente ese progreso duramente ganado. </span></p>
+<p><span style="font-weight: 400;">Biden se reincorporará al Acuerdo de París, pero solo reincorporarse no es suficiente. Utilizará todas las herramientas de la política exterior de los Estados Unidos para presionar al resto del mundo a elevar sus ambiciones junto con los Estados Unidos. El gobierno de Biden:</span></p>
+<p><span style="font-weight: 400;">Reingresará al Acuerdo de París el primer día de su administración y dirigirá un importante impulso diplomático para aumentar las ambiciones de los objetivos climáticos de los países.</span><span style="font-weight: 400;"> El Acuerdo de París fue un avance histórico para el mundo y reflejó el poder de la diplomacia estratégica y paciente al servicio de los intereses nacionales a largo plazo de los Estados Unidos. El núcleo del acuerdo se basa en que los países aumentan continuamente la ambición de sus objetivos climáticos a lo largo del tiempo. Pero desde que el presidente Trump asumió el cargo, Estados Unidos ha renunciado a su propio compromiso con este acuerdo, y otras naciones emisoras importantes no se han movido lo suficientemente rápido para alcanzar sus propios objetivos. Esto significa que reingresar al Acuerdo de París el primer día de la administración de Biden es solo el primer paso de un esfuerzo importante y sostenido para aumentar dramáticamente la ambición climática global. Biden estuvo junto al presidente Obama para reunir al mundo para lograr el Acuerdo de París; y estará preparado el primer día de su presidencia para llevarlo al siguiente nivel. Para catalizar este esfuerzo, Biden, en sus primeros 100 días en el cargo:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Convocará una cumbre mundial sobre el clima para involucrar directamente a los líderes de las principales naciones del mundo que emiten carbono para persuadirlos a que se unan a los Estados Unidos para hacer promesas nacionales más ambiciosas y más allá de los compromisos que ya han asumido.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Liderará al mundo para asegurar acuerdos internacionales obligatorios para reducir las emisiones en la navegación y la aviación mundial.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Adoptará la Enmienda de Kigali al Protocolo de Montreal, agregando un impulso a la contención de los hidrofluorocarbonos, un gas de efecto invernadero especialmente potente que podría generar una reducción de 0.5 grados Celsius en el calentamiento global para mediados de siglo.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Adoptará nuevas y sólidas medidas para evitar que otros países hagan trampa en sus compromisos climáticos.</span><span style="font-weight: 400;"> Ya no podemos separar la política comercial de nuestros objetivos climáticos. Biden no permitirá que otras naciones, incluida China, jueguen con el sistema, convirtiéndose en economías de destino para los contaminadores, socavando nuestros esfuerzos climáticos y explotando a los trabajadores y empresas estadounidenses. Mientras Estados Unidos tome medidas para hacer que los contaminadores domésticos asuman el costo total de su contaminación por carbono, el gobierno de Biden impondrá aranceles o cuotas de ajuste de carbono a los bienes que consumen mucho carbono de los países que no cumplan con sus obligaciones climáticas y ambientales. Esto asegurará que los trabajadores estadounidenses y sus empleadores no estén en desventaja competitiva, y, al mismo tiempo, alentará a otras naciones a elevar sus ambiciones climáticas. Biden también condicionará los futuros acuerdos comerciales a los compromisos de los socios para cumplir con sus objetivos climáticos de París mejorados.</span></p>
+<p><span style="font-weight: 400;">Evitará que China subvencione las exportaciones de carbón y subcontrate la contaminación por carbono.</span><span style="font-weight: 400;"> China es, por lejos, el mayor emisor de carbono del mundo y, a través de su masiva iniciativa Belt and Road, Beijing también financia anualmente miles de millones de dólares en proyectos de energía de combustibles fósiles sucios en Asia y más allá. Biden reunirá un frente unido de naciones para responsabilizar a China de los altos estándares ambientales en sus proyectos de infraestructura de la iniciativa Belt and Road, para que China no pueda subcontratar la contaminación a otros países. Específicamente, Estados Unidos:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Hará futuros acuerdos bilaterales entre Estados Unidos y China sobre mitigación del carbono, como el acuerdo de 2014 que sentó las bases para el acuerdo de París, dependiendo de que China elimine los subsidios injustificados para la exportación de carbón y otras tecnologías de altas emisiones, y logre un progreso verificable en la reducción de la huella de carbono de los proyectos conectados a la iniciativa Belt and Road.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Buscará un compromiso del G20 para poner fin a todos los subsidios de financiamiento a la exportación de proyectos con alto contenido de carbono, aprovechando los compromisos pasados del G7 e instituciones multilaterales de financiamiento a la exportación para eliminar los fondos para el carbón en todos los países, excepto en los más pobres.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Con nuestros socios, ofreceremos a los países de la iniciativa Belt and Road fuentes alternativas de financiamiento para el desarrollo de inversiones energéticas con menos emisiones de carbono.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reformará las normas del Fondo Monetario Internacional y del banco de desarrollo regional sobre prioridades de pago de la deuda para proyectos de desarrollo. Estados Unidos llevará a naciones de ideas afines a crear reglas que consideren el clima insostenible y los costos de la deuda, como los impuestos por los egoístas proyectos chinos, al momento de priorizar a quienes se les paga bajo la tolerancia de la deuda internacional. Los proyectos con alto impacto de carbono y altos costos de endeudamiento irán al final de la fila, haciéndolos más riesgosos y más costosos.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Exigirá una prohibición mundial de los subsidios a los combustibles fósiles.</span><span style="font-weight: 400;"> Simplemente no hay excusa para subsidiar el combustible fósil, ya sea en Estados Unidos o alrededor del mundo. De hecho, un estudio del Fondo Monetario Internacional de 2015 mostró que la fijación eficiente de precios de los combustibles fósiles habría reducido las emisiones de carbono a nivel mundial en casi un 30%. Biden aprovechará los logros del gobierno Obama-Biden para que los países del G20 eliminen gradualmente los ineficientes subsidios a los combustibles fósiles. Al involucrar a líderes clave, incluso en China, Biden asegurará un compromiso global para eliminar los subsidios a los combustibles fósiles al final de su primer mandato. Predicará con el ejemplo: Estados Unidos eliminará los subsidios a los combustibles fósiles en casa en su primer año y redirigirá estos recursos a la inversión histórica en infraestructura de energía limpia (descrita en la Parte I de este plan).</span></p>
+<p><span style="font-weight: 400;">Crear una Iniciativa para la Inversión y Exportación de Energía Limpia y Clima.</span><span style="font-weight: 400;"> Este es también un momento de oportunidad para la innovación estadounidense. Podemos ser la superpotencia de energía limpia del mundo. Biden establecerá un nuevo esfuerzo gubernamental para promover las exportaciones e inversiones de energía limpia en todo el mundo para impulsar la mitigación, la adaptación y la resiliencia al clima. La iniciativa ofrecerá incentivos para las empresas estadounidenses que suministren soluciones con bajas emisiones de carbono al mercado internacional con el fin de estimular la industria, el empleo y la competitividad de Estados Unidos, y hacer del país el líder mundial en tecnologías de energía limpia. Se dará prioridad a las asociaciones con países que hagan compromisos de alta ambición climática bajo el Acuerdo de París y proporcionará financiamiento de bajo costo a estos países para las exportaciones estadounidenses de energía limpia. Un enfoque inicial serán los pequeños estados insulares en el Pacífico y el Caribe que están demostrando un liderazgo climático ante las amenazas existenciales a sus patrias territoriales.</span></p>
+<p><span style="font-weight: 400;">No financiará energía sucia.</span><span style="font-weight: 400;"> El presidente Biden se asegurará de que la Corporación de Inversión Privada en el Extranjero (OPIC, por sus siglas en inglés), el Banco de Exportación e Importación y la nueva Corporación Financiera para el Desarrollo Internacional reduzcan de forma significa las huellas de carbono de sus carteras. Por ejemplo, a estas agencias se les prohibirá cualquier financiamiento para centrales eléctricas de carbón, por lo que las finanzas de los Estados Unidos ya no son más una alternativa al Banco Mundial. </span></p>
+<p><span style="font-weight: 400;">Cumplirá con el compromiso de financiamiento climático de Estados Unidos y brindará “alivio de deuda verde” a los países en desarrollo que hacen compromisos climáticos.</span><span style="font-weight: 400;"> Biden volverá a comprometer a Estados Unidos con el Fondo Verde para el Clima, cumpliendo el compromiso de nuestro país y mejorando nuestra seguridad ayudando a los países en desarrollo a manejar mejor los efectos adversos del cambio climático, incluyendo conflictos, migración y la fragilidad del estado. Estados Unidos también trabajará con instituciones financieras internacionales para buscar alivio compartido de la deuda para los países, siempre que usen esos fondos para un desarrollo respetuoso del clima.  </span></p>
+<p><span style="font-weight: 400;">Catalizará la investigación global de energía limpia.</span><span style="font-weight: 400;"> En 2015, el gobierno Obama-Biden lanzó la Misión Innovación, una iniciativa mundial de 23 países y la Unión Europea centrada en la investigación, el desarrollo y el uso de posibles tecnologías de vanguardia para acelerar la innovación de la energía limpia. Sin embargo, Estados Unidos se ha retirado de esta asociación aun cuando la ciencia ha reforzado la urgencia de la emergencia climática. Biden trabajará con los países participantes para restablecer el esfuerzo en un camino más ambicioso, comenzando con el compromiso de invertir cuatro veces los recursos financieros originalmente acordados, los cuales ayudarán a apoyar la investigación y el desarrollo y desencadenarán la innovación en universidades e instituciones de investigación de todo el mundo. Biden también trabajará para establecer objetivos basados en el desempeño con resultados tangibles de investigación y desarrollo; mejorará la recopilación de datos y la transparencia para hacer un mejor seguimiento del progreso, mejorará la rendición de cuentas y la cooperación con los empresarios del sector privado; también ayudará a otros países a desarrollar sus capacidades institucionales de investigación y desarrollo para garantizar que más fondos se gasten de manera más efectiva.</span></p>
+<p><span style="font-weight: 400;">Nombrará y avergonzará a los forajidos del clima mundial.</span><span style="font-weight: 400;"> El Departamento de Estado de los Estados Unidos publica clasificaciones de los registros de países sobre trata de personas y derechos humanos. El gobierno de Biden instituirá un nuevo Informe sobre el Cambio Climático Global para que los países se responsabilicen de cumplir con sus compromisos de París o de no hacerlo, y de otros pasos que promuevan o socaven las soluciones climáticas globales.</span></p>
+<p><span style="font-weight: 400;">Perseguirá una moratoria global en la perforación en alta mar en el Ártico y restablecerá el cambio climático como una prioridad para el Consejo Ártico.</span><span style="font-weight: 400;"> El Ártico plantea profundos desafíos de seguridad nacional, ya que su composición física cambia debido al calentamiento extremo en la región ártica. Sin embargo, el gobierno de Trump se ha negado a permitir que el Consejo Ártico utilice incluso las palabras &#8220;cambio climático&#8221;. Biden elevará el cambio climático a la cima de la lista de prioridades para el Consejo, y se centrará en reducir dos contaminantes de corta duración, pero altamente potentes: carbono negro y metano. No solo restablecerá el compromiso de Estados Unidos de eliminar las aguas del Ártico para el arrendamiento de petróleo y gas, sino que también trabajará con las naciones miembro del Consejo Ártico para ampliar esta moratoria a nivel mundial. Además, utilizará el Consejo Ártico para llamar la atención sobre las actividades de Rusia en el Ártico, manteniéndose firme con los socios del consejo para responsabilizar a Rusia de cualquier esfuerzo para militarizar aún más la región.</span></p>
+<p><span style="font-weight: 400;">Fortalecerá la colaboración y la ambición en el continente americano.</span><span style="font-weight: 400;"> En nuestro propio hemisferio, los efectos del cambio climático ya están socavando la seguridad y la prosperidad, así como el aumento de la migración. El Banco Interamericano de Desarrollo estima que los daños proyectados a la región por sequías, inundaciones, el aumento del nivel del mar y otros impactos climáticos asociados con un aumento de la temperatura global de 2 grados centígrados costarán aproximadamente $100 mil millones de dólares por año para 2050. Sin embargo, la emergencia climática también presenta una enorme oportunidad para que la región salte del sucio desarrollo en favor de las tecnologías del futuro. Las inversiones en energía limpia e infraestructura sostenible y con resiliencia impulsarán un auge de la innovación, que nos ayudará a lograr la visión de un hemisferio que sea seguro, de clase media y democrático desde Canadá hasta Chile. Biden trabajará con los países de nuestra región para desarrollar una estrategia integral que responda a estos desafíos y aproveche estas oportunidades. Esta estrategia incluirá:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Un marco para limitar las emisiones de gases de efecto invernadero relacionadas con el uso de la tierra, los bosques y la agricultura.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Nuevos estándares comunes para la transformación ecológica de la industria manufacturera, la minería y el turismo.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Grandes inversiones en tecnologías de energía limpia.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Una red de energía más integrada desde México, atravesando Centroamérica y Colombia, suministrada por energía cada vez más limpia.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Un enfoque especial en el Caribe y el Triángulo del Norte de América Central para promover transiciones hacia la energía limpia, así como la adaptación al cambio climático y la capacidad de recuperación. Las islas del Caribe son particularmente vulnerables al aumento del nivel del mar y a los patrones climáticos más severos, incluidos los huracanes. La sequía sostenida en lugares como el este de Guatemala está causando que más personas huyan en busca de mejores oportunidades.</span></li>
+</ul>
+<p><span style="font-weight: 400;">Hará del cambio climático una prioridad fundamental de seguridad nacional.</span><span style="font-weight: 400;"> El cambio climático es un &#8220;multiplicador de amenazas&#8221; que magnifica los riesgos geopolíticos existentes y relacionados con el clima. Para abordar las advertencias de los líderes de defensa e inteligencia sobre las amenazas que el cambio climático representa para la estabilidad y la seguridad del mundo, Biden elevará el cambio climático a una prioridad de seguridad nacional. De manera específica: </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Encargará una estimación de inteligencia nacional sobre los impactos a la seguridad económica y nacional derivados del cambio climático, incluida la escasez de agua, el aumento de los riesgos de conflicto, los impactos sobre la fragilidad del estado y las implicaciones de seguridad de las resultantes migraciones a gran escala. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Instruirá al secretario de Defensa y al presidente del Estado Mayor Conjunto a informarle anualmente sobre los impactos del cambio climático en la postura de la defensa, la preparación, la infraestructura y el panorama de amenazas, así como la estrategia del Departamento de Defensa para gestionar esos impactos.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Encargará al asesor de Seguridad Nacional, en colaboración con los secretarios de Defensa, del Estado, de Seguridad Nacional y otros, el desarrollo de una estrategia integral para enfrentar las implicaciones de seguridad del cambio climático.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invertirá en la capacidad de resiliencia al clima de nuestras bases militares e infraestructura de seguridad crítica en Estados Unidos y en todo el mundo para hacer frente al riesgo de los efectos del cambio climático, incluidos los fenómenos meteorológicos extremos que causaron más de $8 mil millones de dólares en daños a las bases del Departamento de Defensa tan solo el año pasado. Biden encargará a los secretarios de Defensa y de Energía el desarrollo de inventarios específicos de las vulnerabilidades más cruciales en nuestra crítica infraestructura debido al cambio climático, y priorizará las mejoras, el fortalecimiento y las inversiones de resiliencia para mitigarlas.</span></li>
+</ul>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td><b>El cambio climático plantea graves riesgos para la seguridad nacional de los Estados Unidos</b></p>
+<p><span style="font-weight: 400;">El presidente Trump no solo ha revertido el progreso de Estados Unidos en el cambio climático, sino también ha ignorado las advertencias de sus líderes de defensa e inteligencia sobre las amenazas que el cambio climático representa para la estabilidad y la seguridad del mundo. Estos riesgos van desde amenazas directas a activos militares físicos hasta efectos más indirectos, como la desestabilización regional.</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">En un informe de enero de 2019 al Congreso, el Departamento de Defensa declaró: &#8220;Los efectos de un clima cambiante son un problema de seguridad nacional con posibles impactos para las misiones [del DOD], planes operativos e instalaciones&#8221;. El informe evaluó 79 instalaciones que consideró misión crítica, y llegó a la conclusión de que, en las próximas dos décadas, 53 de las 79 instalaciones enfrentaron amenazas de inundación, 43 enfrentan amenazas de sequía y 36 amenazas de incendios forestales. El ex secretario de Defensa Mattis declaró en su procedimiento de confirmación que: &#8220;el cambio climático está afectando la estabilidad en áreas del mundo donde operan nuestras tropas hoy&#8230; puede ser un factor de inestabilidad y el Departamento de Defensa debe prestar atención a los posibles efectos adversos generados por este fenómeno&#8221;. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El pasado mes de enero, el director de Inteligencia Nacional dijo al Congreso: “la degradación ambiental y ecológica global, así como el cambio climático, probablemente fomentarán competencia por los recursos, angustia económica y descontento social en 2019 y más allá. Daños a la infraestructura energética, de comunicación y de transporte podrían afectar las bases militares bajas, infligir costos económicos y causar desplazamiento humano y pérdida de vidas&#8221;. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El cambio climático conducirá a niveles más altos de inestabilidad regional. Por ejemplo, el aumento del nivel del mar en la costa este de África podría poner en peligro a las grandes ciudades y requerir más actividades de ayuda humanitaria con apoyo militar por parte de Estados Unidos. Además, el deterioro de las condiciones económicas en las áreas afectadas por el clima podría aumentar la piratería y la actividad terrorista, requiriendo una respuesta militar estadounidense. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El Océano Ártico será más accesible al comercio marítimo y la extracción de petróleo/gas, lo que aumentará el riesgo de la militarización de la región y la influencia de Rusia y China. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El aumento del nivel del mar y las mareas relacionadas con tormentas pueden dar como resultado el cierre de instalaciones militares en riesgo. Además, los huracanes cada vez más intensos pueden causar daños estructurales a las bases. Por ejemplo, el huracán Michael impidió que la base aérea Tyndall reanudara las operaciones normales durante casi un mes, lo que afectó a casi un tercio de los F-22 del país.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Las sequías afectan negativamente las operaciones militares al reducir el suministro de agua, retrasar las actividades de capacitación y aumentar la tasa de enfermedades relacionadas con el calor entre los soldados. Dentro de los Estados Unidos, el riesgo de sequía es particularmente alto en el sudoeste. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El deshielo del permafrost puede impedir ejercicios de entrenamiento militar en áreas como Alaska.</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<ol>
+<li><b> LUCHAR CONTRA EL ABUSO DE PODER DE LOS CONTAMINADORES QUE DE FORMA DESPROPORCIONADA DAÑAN A LAS COMUNIDADES DE COLOR Y DE BAJOS INGRESOS</b></li>
+</ol>
+<p><span style="font-weight: 400;">Todos ya están sintiendo los efectos del cambio climático. Pero los impactos -en la salud, la economía y la calidad de vida en general- son mucho más agudos en las comunidades de color, en las tierras tribales y en las comunidades de bajos ingresos. &#8220;El cambio climático no afecta a todos por igual en los Estados Unidos&#8221;, de acuerdo con Rachel Morello-Frosch, autora principal de </span><i><span style="font-weight: 400;">The Climate Gap</span></i><span style="font-weight: 400;">. &#8220;Las personas de color y los pobres serán los más perjudicados, a menos que intervengan los funcionarios y otros legisladores&#8221;.</span></p>
+<p><span style="font-weight: 400;">No podemos hacer caso omiso a la manera en que las cargas y los beneficios ambientales han sido y seguirán siendo distribuidos de manera desigual a lo largo de líneas raciales y socioeconómicas, no solo con respecto al cambio climático, sino también a la contaminación de nuestro aire, agua y tierra. La evidencia de estos daños desproporcionados es clara. Por ejemplo, las personas afroamericanas tienen casi tres veces más probabilidades de morir por causas relacionadas con el asma que las personas blancas. Y casi la mitad de los latinos en los Estados Unidos viven en condados donde el aire no cumple con los estándares de salud pública de la Agencia de Protección Ambiental de los Estados Unidos para el smog. De acuerdo con el gobierno federal estadounidense, 40% de las 567 tribus reconocidas por el gobierno federal en los Estados Unidos viven en Alaska, donde el ritmo acelerado del aumento de las temperaturas y el deshielo marino y de los glaciares amenazan la infraestructura crítica y los medios de vida tradicionales en el estado. Biden restablecerá las protecciones federales, rechazadas por el gobierno de Trump, que fueron diseñadas para proteger a las comunidades. Biden hará que sea una prioridad para todas las agencias involucrarse en enfoques comunitarios para desarrollar soluciones para las injusticias ambientales que afectan a las comunidades de color, de bajos ingresos e indígenas. </span></p>
+<p><span style="font-weight: 400;">Además, él:</span></p>
+<p><span style="font-weight: 400;">Responsabilizará a los contaminadores.</span><span style="font-weight: 400;"> Bajo el gobierno de Trump, la Agencia de Protección Ambiental de los Estados Unidos (EPA, por sus siglas en inglés) ha remitido el menor número de casos criminales de lucha contra la contaminación en 30 años al Departamento de Justicia. Al permitir que las corporaciones continúen contaminando -afectando sin consecuencias la salud y la seguridad tanto de sus trabajadores como de las comunidades circundantes- perpetúa un grave abuso de poder. Biden ordenará a su EPA y al Departamento de Justicia que continúen con estos casos en la medida máxima permitida por la ley y, cuando sea necesario, soliciten legislación adicional para responsabilizar personalmente a los ejecutivos de las empresas, incluyendo tiempo en la cárcel cuando sea necesario. </span></p>
+<p><span style="font-weight: 400;">Garantizará el acceso a agua potable segura para todas las comunidades</span><i><span style="font-weight: 400;">.</span></i><span style="font-weight: 400;"> Las comunidades en todo Estados Unidos están experimentando una crisis de agua, en infraestructura, contaminación, accesibilidad y mucho más. Aquí, en Estados Unidos, desde las áreas rurales a las ciudades, desde Flint, Michigan, hasta Merrimack, New Hampshire, y el condado de Martin, Kentucky, muchos estadounidenses no pueden beber de forma segura el agua de la llave. En gran parte del sudoeste y el oeste, el problema es la falta de agua suficiente, que se espera se agrave con un clima cambiante. Biden hará de la infraestructura del agua una prioridad absoluta, por ejemplo, al establecer sistemas para monitorear el plomo y otros contaminantes en nuestro suministro de agua y tomar las medidas necesarias para eliminar los riesgos para la salud, incluida la responsabilidad de los contaminadores y el apoyo a las comunidades para que mejoren sus sistemas.</span></p>
+<table>
+<tbody>
+<tr>
+<td><b>Agua segura y limpia para todos los estadounidenses</b></p>
+<p><span style="font-weight: 400;">Todos podemos estar de acuerdo en que las amenazas a nuestro sistema de agua son amenazas a nuestra calidad de vida. Los estadounidenses observaban con horror cuando los residentes, especialmente los niños, de Flint tenían agua sucia y contaminada que era puesta a prueba con altos niveles de plomo. Pero, de hecho, existen desafíos relacionados con el agua en todo el país, desde el acceso al agua potable limpia y la modernización de la envejecida infraestructura municipal hasta nuestros puertos, desde la recreación hasta los plásticos oceánicos, desde los derrames de petróleo y la escorrentía hasta el nexo entre el agua, la energía y la infraestructura verde, nuestras aguas y nuestra salud pública enfrentan desafíos y oportunidades interrelacionadas en todo nuestro país.</span></p>
+<p><span style="font-weight: 400;">Un estudio realizado por la Academia Nacional de Ciencias encontró que entre el 3 y el 10% de los estadounidenses viven en áreas donde la calidad del agua es insatisfactoria, a menudo debido al envejecimiento de la infraestructura que debe mejorarse o reemplazarse.  </span></p>
+<p><span style="font-weight: 400;">Según American Rivers, la tubería del alcantarillado estadounidense tiene 33 años, con muchas tuberías que datan de 50 o incluso 100 años. El envejecimiento de la infraestructura también conduce a una mayor escorrentía de aguas pluviales y desbordamientos de alcantarillado. Las fuertes tormentas pueden saturar el sistema, lo que genera aguas residuales sin tratar y aguas pluviales contaminadas que contaminan los arroyos y ríos cercanos.</span></p>
+<p><span style="font-weight: 400;">Otros lugares tienen escasez de agua. Por ejemplo, algunos investigadores creen que el lago Meade, que suministra agua a 21 millones de estadounidenses, estará seco para el 2021. Y, de acuerdo con American Rivers, los embalses en el río Colorado ya pierden 1.8 millones de acres-pie de agua por evaporación en un año promedio, alrededor del 13% del flujo anual del río.</span></p>
+<p><span style="font-weight: 400;">Tormentas más frecuentes y más poderosas resultarán en un aumento de la escorrentía contaminada de las áreas urbanas y rurales, enviando contaminantes desde el paisaje a las vías fluviales cercanas. La amenaza es aún más grave en las comunidades con infraestructura envejecida, en donde una tubería transporta aguas pluviales y aguas residuales juntas; las fuertes tormentas pueden abrumar el sistema, generando aguas residuales sin tratar y aguas pluviales contaminadas que ingresan en arroyos y ríos cercanos.</span></p>
+<p><span style="font-weight: 400;">Las comunidades deben mejorar la infraestructura obsoleta, o experimentarán mayores aumentos en la escorrentía de aguas pluviales y desbordamientos de alcantarillado. </span></p>
+<p><span style="font-weight: 400;">Nuestros desafíos del agua varían según la región:</span><span style="font-weight: 400;"> </span></p>
+<p><b>El Medio Oeste: </b><span style="font-weight: 400;">El reciente aumento de las inundaciones está directamente relacionado con la intensificación de las precipitaciones. En combinación con mayores cantidades de lluvia, los impactos en los Grandes Lagos, hogar del 80% del agua dulce de la nación, exacerban los problemas existentes relacionados con el agua en las comunidades de todo el Medio Oeste, como la proliferación de PFAS, especies invasoras como la carpa asiática y la proliferación de algas en Toledo.</span></p>
+<p><b>Costas del sureste/golfo: </b><span style="font-weight: 400;">Las tormentas tropicales y costeras, incluyendo los huracanes, son cada vez más devastadoras.</span></p>
+<p><b>Litoral oriental, costa del golfo: </b><span style="font-weight: 400;">El aumento del nivel del mar amenaza la vida y las propiedades costeras, y hace que los acuíferos costeros se vuelvan salados e inutilizables.</span></p>
+<p><b>Sudoeste de los Estados Unidos: </b><span style="font-weight: 400;">Las temperaturas más cálidas se combinan con una precipitación reducida para impulsar la pérdida de agua de los embalses de la región y de la superficie terrestre. La sequía intensificada y más caliente ya está afectando a los bosques de la región, con la muerte generalizada de árboles, enfermedades e incendios forestales que remodelan ecosistemas icónicos.</span></p>
+<p><b>Estados Unidos occidentales: </b><span style="font-weight: 400;">Occidente se está calentando más rápido que gran parte del resto de los 48 inferiores, y esto tiene un impacto particular en el agua y facilita el inicio y la propagación de los incendios. Como resultado del calentamiento del clima, más precipitaciones caen como lluvia, en lugar de nieve; hay menos acumulación de nieve en las montañas, y la nieve se derrite más rápido en la primavera debido a las temperaturas más cálidas y el aumento de las precipitaciones.</span></p>
+<p><b>El noroeste: </b><span style="font-weight: 400;">Además del nivel del mar y los impactos hidrológicos mencionados anteriormente, el Noroeste es vulnerable a los cambios en el océano. Agregar CO2 a la atmósfera acidifica el océano y, a medida que el clima se calienta, el océano retiene menos oxígeno.</span></p>
+<p><b>Alaska: </b><span style="font-weight: 400;">El Ártico se está calentando más rápido que cualquier otro lugar del planeta, debido a que la fusión del hielo marino provoca un calentamiento adicional en movimiento que acelera la fusión en un ciclo de auto-refuerzo y amplificación. Alaska es el estado de Estados Unidos con el calentamiento más rápido. Las temperaturas más cálidas están derritiendo el permafrost, creando hundimientos y erosiones que dañan edificios, caminos y tuberías.</span></p>
+<p><b>Hawái:</b><span style="font-weight: 400;"> Hawái está siendo fuertemente impactada por los cambios del océano. El aumento del nivel del mar está comenzando a amenazar los recursos costeros, incluyendo las estructuras, caminos, sitios culturales, playas e infraestructura clave. Un informe reciente estimó que un aumento de 1 millón en el nivel del mar costaría al estado 19 mil millones solo por estructuras y tierras inundadas, y diez veces más eso por daños asociados a caminos y otras infraestructuras, la pérdida de visitantes y los impactos en los recursos naturales.</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">Asegurará que las comunidades perjudicadas por el cambio climático y la contaminación sean las primeras en beneficiarse de la Revolución de Economía Limpia.</span><span style="font-weight: 400;"> Las comunidades de bajos ingresos y las comunidades de color no comparten igualmente los beneficios de las oportunidades de trabajo bien remuneradas que resultan de nuestra economía de energía limpia. Por ejemplo, los afroamericanos tienen solo el 1% de los empleos de energía. Como presidente, Biden se asegurará de que estas comunidades reciban preferencia en los programas de subvenciones competitivas en la Revolución de Economía Limpia.  </span></p>
+<table>
+<tbody>
+<tr>
+<td><b>Las comunidades de personas de color y de bajos ingresos tienen un riesgo especialmente alto en el Cambio Climático y la contaminación </b></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Las comunidades de personas de color y de bajos ingresos tienen más probabilidades de vivir en las áreas más vulnerables a las inundaciones y otros eventos climáticos relacionados con el cambio climático. También es menos probable que tengan los fondos para prepararse y recuperarse de condiciones climáticas extremas. A raíz del huracán Harvey, los residentes negros e hispanos tenían el doble de probabilidades que los individuos blancos no hispanos de reportar un shock de ingresos y la falta de apoyo para la recuperación.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Los niños afroamericanos que viven en la pobreza son más propensos que los niños blancos más ricos a vivir en una comunidad que hace frontera con instalaciones químicas tóxicas. El clima extremo puede aumentar los riesgos para la salud de estar ubicado junto a estas estructuras tóxicas.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El hecho de no reducir las emisiones perjudica de manera desproporcionada a los residentes negros e hispanos que experimentan un 37% más de exposición al dióxido de nitrógeno (un contaminante tóxico) en comparación con los blancos no hispanos. Esto conduce a una mayor tasa de muerte prematura debido a enfermedades del corazón.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Las inversiones de resiliencia pueden aumentar el valor de las propiedades y expulsar a las familias de bajos ingresos de sus vecindarios. Los esfuerzos de mitigación del cambio climático deben proteger conscientemente a las comunidades de bajos ingresos de la &#8220;gentrificación verde&#8221;.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">El cambio climático plantea amenazas particulares para las tribus indígenas, ya que aproximadamente 1.1 millones de indios americanos y nativos de Alaska viven en o cerca de reservas o tierras nativas en el noroeste, suroeste, Alaska y Great Plains.</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><b> CUMPLIR NUESTRA OBLIGACIÓN CON LOS TRABAJADORES Y LAS COMUNIDADES QUE IMPULSARON NUESTRA REVOLUCIÓN INDUSTRIAL Y LAS DÉCADAS DEL CRECIMIENTO ECONÓMICO</b></li>
+</ol>
+<p><span style="font-weight: 400;">Biden comprometerá a nuestro país a cumplir con nuestra obligación para con todos los trabajadores afectados por la transición energética, como los mineros del carbón y los trabajadores de las centrales eléctricas y sus comunidades, quienes asumieron trabajos peligrosos para impulsar nuestra revolución industrial y las décadas de crecimiento económico posterior. A medida que las tendencias económicas continúan alejando a nuestro país del carbón como fuente de energía, tenemos la obligación de ayudar a estos trabajadores y a sus comunidades a tener éxito.</span></p>
+<p><span style="font-weight: 400;">El presidente Biden:</span></p>
+<p><span style="font-weight: 400;">Asegurará los beneficios que los mineros del carbón y sus familias ganaron.</span><span style="font-weight: 400;"> A medida que la competencia en el mercado continúa alejando al país de la electricidad que funciona con carbón, tenemos una obligación con estos empleados que han trabajado arduamente y se han sacrificado por el resto de nosotros. Biden se asegurará de que los mineros del carbón y sus familias reciban no solo el respeto que merecen, sino también las pensiones y los beneficios de salud que se les prometieron. El Congreso debe hacer lo correcto y aprobar la legislación ahora para proteger los beneficios de jubilación debidos a los mineros, sus dependientes y sus viudas. Pero si el Congreso no actúa antes de que Biden asuma el cargo, se asegurará de que cumplamos con esta obligación. Biden incrementará los pagos de las compañías de carbón al programa de beneficios de pulmón negro, reformará el sistema de beneficios de pulmón negro para que ya no esté manipulado en favor de las compañías de carbón que pueden contratar abogados y médicos para garantizar que se nieguen los beneficios de los mineros, expandirá los esfuerzos para ayudar a los mineros a detectar los casos de pulmón negro antes, ampliará el acceso a la atención y hará cumplir las regulaciones para reducir los casos de pulmón negro en primer lugar. </span></p>
+<p><span style="font-weight: 400;">Invertirá en comunidades de carbón y centrales eléctricas y otras comunidades afectadas por la transformación del clima.</span><span style="font-weight: 400;"> Cada una de estas comunidades son necesarias. No podemos descartarlas o actuar como si no importaran. Cada una tiene activos que pueden aprovecharse para diversificar sus economías, crear buenos empleos de clase media y ayudar al país a fortalecerse. Son activos con una rica cultura, belleza natural, una fuerza laboral comprobada y espíritu empresarial. El gobierno federal debe ser un socio para ayudar a estas comunidades a capitalizar estas fortalezas y construir comunidades vibrantes donde haya buenos empleos disponibles y los jóvenes quieran quedarse o regresar a casa. Para apoyar a los trabajadores del carbón y las centrales eléctricas y sus comunidades, el presidente Biden realizará una inversión sin precedentes sobre la base de la visión presentada en el Plan Power + del gobiero Obama-Biden. Y creará un Grupo de trabajo sobre las comunidades de centrales eléctricas y carbón, como lo hizo el gobierno de Obama-Biden para Detroit cuando la industria automotriz estaba en crisis… Por ejemplo, el Grupo de trabajo apoyará a estas comunidades a tener acceso a inversiones federales y aprovechará las inversiones del sector privado para ayudar a crear empleos sindicales bien remunerados con base en los activos únicos de cada comunidad, asociándose con sindicatos y centros de estudios superiores para crear oportunidades de capacitación para estos nuevos empleos, reparar infraestructura, mantener a empleados públicos como bomberos y maestros en la nómina, y mantener abiertos los hospitales locales.</span></p>
+<table>
+<tbody>
+<tr>
+<td><b>El registro del gobierno de Obama-Biden</b></p>
+<p><span style="font-weight: 400;">El gobierno Obama-Biden inició una nueva era de liderazgo estadounidense en energía renovable al realizar inversiones significativas en tecnología de energías limpias y la promulgación de regulaciones para reducir las emisiones de carbono.</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Incluyó en la Ley de Reinversión y Recuperación de Estados Unidos de 2009 más de $90 mil millones de dólares, y $150 mil millones de dólares apalancados en gastos privados y locales fueron para inversiones de energía limpia. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Aumentó la proporción de componentes de turbinas eólicas de producción nacional fabricadas en los Estados Unidos del 35% en 2006-2007 al 67% en 2011 y un desplome espectacular en los costos solares, lo que le permitió acercarse a la paridad de la red (es decir, un costo más bajo que las fuentes de energía tradicionales).</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Puso en marcha el programa de Agencia de Proyectos de Investigación Avanzada de Energía (ARPA-E, por sus siglas en inglés) del Departamento de Energía, que invirtió en 475 tecnologías de energía transformadora y aseguró $1.25 mil millones de dólares en fondos de seguimiento del sector privado para proyectos relacionados.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ayudó a liderar y firmar el Acuerdo Climático de París, colocando al mundo en un camino hacia un futuro sostenible.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Estableció estándares audaces de economía promedio de combustible (CAFE, por sus siglas en inglés) requiriendo un estándar de 54.5 millas por galón para automóviles y camiones livianos para el año modelo 2025, que la Administración Nacional de Seguridad y Tráfico de Caminos predijo: &#8220;[ahorraría] a los consumidores más de $1.7 billones de dólares en costos de gas y [reduciría] el consumo de petróleo estadounidense en 12 mil millones de barriles”.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Implementó los primeros estándares de eficiencia de combustible de servicio mediano y pesado proyectados para ahorrar casi $170 mil millones de dólares en costos de combustible.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Implementó estándares de eficiencia energética para edificios, hogares y electrodomésticos, con un enfoque particular en ahorrar dinero a los consumidores en facturas de calefacción y refrigeración. En el primer mandato del gobierno, los Departamentos de Energía y de Vivienda y Desarrollo Urbano completaron mejoras de eficiencia energética en más de 1 millón de hogares, ahorrando a cada familia más de $400 dólares en promedio.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Amplió o estableció protecciones para más de 550 millones de acres de tierras y aguas federales y prohibió la perforación en grandes partes del Océano Atlántico y Ártico.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ayudó a crear una infraestructura más resistente que pudiera soportar el cambio climático; una Orden Ejecutiva de 2013 también exigió que las agencias federales publicaran planes de adaptación al cambio climático para planificar los impactos adversos de un clima más extremo y el aumento del nivel del mar.</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../climate.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/el-plan-biden-para-una-revolucion-de-energia-limpia-y-justicia-ambiental/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":473,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

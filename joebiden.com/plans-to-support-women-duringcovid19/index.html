@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Highlights of Joe Biden’s Plans to Support Women During the COVID-19 Crisis | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Highlights of Joe Biden’s Plans to Support Women During the COVID-19 Crisis | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Women in the United States are acutely impacted by this pandemic. Millions have lost their jobs or had their hours slashed and are worried about making ends meet. Others are doing essential work that has so often been unseen, underpaid, and undervalued. And, while this virus can hit anyone, anywhere, it doesn’t impact every community [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/plans-to-support-women-duringcovid19/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-07-29T16:01:38+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Leadership-During-COVID-19_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Leadership-During-COVID-19_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="23 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/plans-to-support-women-duringcovid19/#webpage","url":"https://joebiden.com/plans-to-support-women-duringcovid19/","name":"Highlights of Joe Biden\u2019s Plans to Support Women During the COVID-19 Crisis | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-04-29T00:31:48+00:00","dateModified":"2020-07-29T16:01:38+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/plans-to-support-women-duringcovid19/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fplans-to-support-women-duringcovid19%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fplans-to-support-women-duringcovid19%2F&#038;format=xml" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-2566 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../es/inicio/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-2566 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">Highlights of Joe Biden’s Plans to Support Women During the COVID-19 Crisis</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Women in the United States </span><a href="https://iwpr.org/wp-content/uploads/2020/04/QF-Jobs-Day-April-FINAL.pdf"><span style="font-weight: 400;">are acutely impacted</span></a><span style="font-weight: 400;"> by this pandemic. Millions </span><a href="https://iwpr.org/wp-content/uploads/2020/04/QF-Jobs-Day-April-FINAL.pdf"><span style="font-weight: 400;">have lost their jobs</span></a><span style="font-weight: 400;"> or had their hours slashed and are worried about making ends meet. Others </span><a href="https://www.nytimes.com/2020/04/18/us/coronavirus-women-essential-workers.html"><span style="font-weight: 400;">are doing essential</span></a><span style="font-weight: 400;"> work that has so often been unseen, underpaid, and undervalued. And, while this virus can hit anyone, anywhere, it doesn’t impact every community equally. It hits hardest those who are most vulnerable and who have the fewest resources, including </span><a href="https://www.americanprogress.org/issues/women/reports/2020/04/23/483846/frontlines-work-home/"><span style="font-weight: 400;">women of color</span></a><span style="font-weight: 400;"> and low-income women. </span></p>
+<p><span style="font-weight: 400;">This pandemic is pulling back the curtain on so many inequities in our society. Women, especially single mothers, often do the bulk of the </span><a href="https://www.bakerinstitute.org/media/files/files/a87dcbf5/bi-brief-040920-chb-cpf-covid19.pdf"><span style="font-weight: 400;">work to care for their families</span></a><span style="font-weight: 400;">. Too many workers </span><a href="http://www.paidsickdays.org/research-resources/quick-facts.html"><span style="font-weight: 400;">can’t take paid time off if they get sick</span></a><span style="font-weight: 400;">. Those in minimum wage jobs that are essential to our economy and our way of life aren’t </span><a href="https://www.nytimes.com/2020/04/18/us/coronavirus-women-essential-workers.html"><span style="font-weight: 400;">paid a living wage</span></a><span style="font-weight: 400;">. Unemployment insurance </span><a href="../the-biden-plan-to-scale-up-employment-insurance-by-reforming-short-time-compensation-programs/index.html"><span style="font-weight: 400;">isn’t robust enough</span></a><span style="font-weight: 400;"> to help those who need it most. Domestic violence &#8211; an ongoing, often unseen epidemic in the United States &#8211; </span><a href="https://time.com/5803887/coronavirus-domestic-violence-victims/"><span style="font-weight: 400;">threatens the safety</span></a><span style="font-weight: 400;"> and wellbeing of women and families. And, access to reproductive health services too often depends on </span><a href="https://www.kff.org/report-section/beyond-the-numbers-access-to-reproductive-health-care-for-low-income-women-in-five-communities-executive-summary/"><span style="font-weight: 400;">women’s zip codes and economic security</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">We cannot unsee what this pandemic has highlighted about the way our society fails women and their families. As President, Joe Biden will act so that essential workers are safe. He will act so women don’t struggle as much financially through the pandemic. He will act so women can get the health care they need and domestic violence survivors have a safe place to call home. And, he will act so that when the United States begins to recover from COVID-19, women are not left out of the recovery. </span></p>
+<p><span style="font-weight: 400;">Joe Biden has long been a champion for women — for their safety, their health care, their paychecks, and their families. He has released several plans that support women through a decisive response to the COVID-19 crisis at joebiden.com/covid19-leadership. Biden is calling for the following steps to be taken immediately to support women and families. As this crisis continues and evolves over the coming weeks and months, Biden will release additional plans and proposals to address the challenges facing women as a result of this crisis. </span></p>
+<p><b>PROTECT WOMEN PROVIDING ESSENTIAL SERVICES</b></p>
+<p><span style="font-weight: 400;">Women are working in essential jobs in overwhelming numbers — as health care providers, home health aides, child care workers, domestic violence and other social service workers, grocery store workers, and so many more. </span><a href="https://www.nytimes.com/2020/04/18/us/coronavirus-women-essential-workers.html"><span style="font-weight: 400;">One in three jobs</span></a><span style="font-weight: 400;"> held by women are essential, and women of color are the most likely to have those jobs. These women are the best of America — running toward the danger, lifting people up when they are at their most vulnerable, and fighting to protect the health and safety of their neighbors. That’s always been true—but now there’s not a single person across this country who doesn’t see exactly what they are: heroes. </span></p>
+<p><span style="font-weight: 400;">It’s unconscionable that the Trump Administration has failed to do everything in its power to protect the health, safety, and well-being of women working on the frontlines. If Biden was President today, he would: </span></p>
+<p><b>Get our essential workers the protective equipment, testing, and support they need to reduce their risk of getting infected by the virus</b><span style="font-weight: 400;">. All essential workers — health care workers, first responders, homecare workers, child care workers, domestic violence and other social service workers, pharmacy workers, government workers, postal workers, farmworkers, food packagers and processors, grocery store clerks, transportation workers, and many more — should have priority access to personal protective equipment (PPE) and COVID-19 testing based upon their risk of exposure to the virus. The Trump Administration should ramp up capacity to produce masks and other PPE for all essential workers by fully using the Defense Production Act. And, the Trump Administration should appoint and empower a Supply Commander to take control of the national supply chain for essential equipment and gear and to ensure equitable distribution so that at-risk communities and particularly vulnerable populations are fully taken care of.</span></p>
+<p><b>Implement and enforce standards to keep all women safe on the frontlines and ensure that their civil rights are protected. </b><span style="font-weight: 400;">Biden would direct his Occupational Safety and Health Administration to release and enforce an Emergency Temporary Standard to ensure employers provide safe workplaces, and his Administration would work closely with state occupational safety and health agencies and state and local governments, and the unions that represent their employees, to ensure comprehensive protections for frontline workers. He would also ensure the needs of vulnerable populations are considered in the enforcement of all federal workplace protections. This means funding robust enforcement of civil rights protections, including under the Americans with Disabilities Act and the Rehabilitation Act, and fighting to secure passage of the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/2694/text"><span style="font-weight: 400;">Pregnant Workers Fairness Act</span></a><span style="font-weight: 400;"> to better ensure pregnant workers receive reasonable accommodations in the workplace so they don&#8217;t have to choose between work and their health. Biden would also extend Equal Employment Opportunity Commission deadlines for women to file discrimination and harassment complaints during and after the pandemic.</span></p>
+<p><b>Provide a boost in essential workers’ paychecks</b><span style="font-weight: 400;">. There is no substitute for ensuring worker safety, but all frontline workers putting their lives on the line should receive premium pay for their work, in addition to a permanent $15 minimum wage and overtime protections. Women, </span><a href="https://nwlc.org/issue/low-wage-jobs/"><span style="font-weight: 400;">who make up the vast majority of the low-wage workforce</span></a><span style="font-weight: 400;">, should never have to worry about making ends meet for their families — and especially not while protecting our communities during a pandemic.</span></p>
+<p><b>Ensure all essential workers qualify for child care assistance and other emergency support. </b></p>
+<p><strong>Provide every worker with emergency paid leave so workers don’t have to go to work because they’re worried about a paycheck.</strong> <span style="font-weight: 400;">Biden would provide all workers &#8211; no exceptions &#8211; </span><a href="../covid19.html"><span style="font-weight: 400;">paid leave</span></a><span style="font-weight: 400;"> for 14 days or for the duration of their quarantine or isolation, while also ensuring that employers will not bear any additional costs for such additional leave in the midst of this crisis. </span></p>
+<p><b>PROTECT WOMEN’S ECONOMIC SECURITY</b></p>
+<p><span style="font-weight: 400;">Hospitality workers, service industry workers, and millions of other women have already lost their jobs through no fault of their own because of this pandemic. Women — </span><a href="https://www.americanprogress.org/issues/economy/reports/2017/04/27/431228/womens-economic-risk-exposure-savings/"><span style="font-weight: 400;">many of whom were economically insecure even before the crisis</span></a><span style="font-weight: 400;"> — are worried about making rent, paying bills, and keeping food on the table while waiting for relief checks. If Biden was President today, he would: </span></p>
+<p><b>Keep as many women on payroll as possible by transforming unemployment insurance into </b><a href="../the-biden-plan-to-scale-up-employment-insurance-by-reforming-short-time-compensation-programs/index.html"><b>Employment Insurance</b></a><b> for millions of workers. </b><span style="font-weight: 400;">Biden would take steps to get all 50 states to adopt and dramatically scale up short-time compensation programs. Here’s how it works: A business keeps a worker on payroll, but at reduced hours – and the federal government makes up the difference in their wages. The worker gets the same pay – but the burden on the business is much less. The Obama-Biden administration championed this approach – so far</span><a href="https://oui.doleta.gov/unemploy/docs/stc_fact_sheet.pdf"><span style="font-weight: 400;"> more than half of states have created work-sharing programs</span></a><span style="font-weight: 400;">. The Trump Administration should boost assistance to them, to save or restore millions of jobs. </span></p>
+<p><b>Make women who lose their jobs financially whole by ensuring that they get their unemployment insurance on time and in full</b><span style="font-weight: 400;">.</span><span style="font-weight: 400;"> Biden would create a “Banks Defense Production Act” to make sure the banks that work with states prioritize and deliver unemployment payments quickly and </span><span style="font-weight: 400;">require the use of electronic payments and prepaid debit cards </span><span style="font-weight: 400;">to deliver</span><span style="font-weight: 400;"> direct cash relief fast. Families shouldn’t have to wait for President Trump to sign a check. </span><span style="font-weight: 400;">Biden would also work with Congress to extend the boosted unemployment benefits (the extra $600) for however long this crisis lasts.</span></p>
+<p><b>Ensure that all small businesses &#8211; not just those with the right connections &#8211; can access relief quickly. </b><span style="font-weight: 400;">On April 3, Biden asked the Trump Administration to “produce a weekly dashboard to show which small businesses are accessing loans – to make sure that the program isn’t leaving out communities, minority- and women-owned businesses, or the smallest businesses.” They have not done so. It is unacceptable to have a small business program that is leaving minority and women business owners out in the cold, and that firms with fewer than 20 employees have received only about 20% of the first allotment of funding disbursed from the Paycheck Protection Program – even though they make up about one third of payroll.</span></p>
+<p><b>Ensure housing security, including by immediately freezing rent for qualifying individuals and halting foreclosures and evictions</b><span style="font-weight: 400;"> as people get back on their feet during this crisis. </span></p>
+<p><b>Forgive at least $10,000 of student debt per person </b><span style="font-weight: 400;">through the duration of the crisis, including for women, who hold two-thirds of all student debt in America.</span></p>
+<p><b>Ensure food security </b><span style="font-weight: 400;">by increasing SNAP benefits by 15% during the deepening recession, and temporarily provide low-income families with about $100 per month in extra nutritional support. </span></p>
+<p><b>Boost Social Security payments to $200 per month </b><span style="font-weight: 400;">to help older women with any additional expenses they may incur during the pandemic.</span></p>
+<p><b>Provide additional funds to state, local and tribal governments</b><span style="font-weight: 400;"> that are going to get crushed under the weight of falling revenues combined with far higher emergency financial burdens. Biden would make sure the federal government helps communities with their public health response without forcing painful and damaging cuts to public services, education, and public safety. Biden would also expand assistance to schools facing extra costs – particularly Title I schools — including efforts to continue remote education or remote activities normally done after-school.</span></p>
+<p><b>PROTECT CAREGIVERS AND ACCESS TO CHILD CARE AND LONG-TERM SERVICES AND SUPPORTS </b></p>
+<p><span style="font-weight: 400;">In the United States, women overwhelmingly take on the burdens of caring for their families, and they make up the </span><a href="https://iwpr.org/care-workers-united-states/"><span style="font-weight: 400;">vast majority of the care workforc</span></a><span style="font-weight: 400;">e. Many women are taking care of children, as well as elderly parents. If they are lucky enough to have a job during this crisis, they may not be able to </span><a href="https://www.nytimes.com/2020/04/02/us/politics/coronavirus-paid-leave.html"><span style="font-weight: 400;">take paid time off</span></a><span style="font-weight: 400;"> to care for sick loved ones. Meanwhile, many care facilities, especially child care providers, </span><a href="https://www.npr.org/2020/03/31/824385002/essential-child-care-workers-struggle-to-balance-family-needs-safety"><span style="font-weight: 400;">have been forced to close their doors</span></a><span style="font-weight: 400;">. </span></p>
+<p><span style="font-weight: 400;">If businesses that provide care do not survive the pandemic, it will be harder for women to go back to work when we recover. It will be even more difficult for the women who make a living by providing care to get by. We must protect workers who are caring for others during the pandemic, and move aggressively to shore up our care infrastructure so it can better support families during the recovery. </span></p>
+<p><b>Prioritize child care providers, home health care workers, direct support professionals, personal care attendants and other care workers for personal protective equipment and supplies, testing, and premium pay, </b><span style="font-weight: 400;">depending on their risk of exposure</span><b>.</b><span style="font-weight: 400;"> The nature of care work makes social distancing challenging, and we owe these caregivers the safety protections they need.</span></p>
+<p><b>Help stabilize the child care industry, </b><span style="font-weight: 400;">so child care providers can pay their employees, provide safe environments for the children of essential workers, keep paying fixed costs like rent, and be able to fully reopen when people start going back to work. Despite the </span><a href="https://www.nbcnews.com/business/velshi-ruhle/rising-cost-child-care-being-felt-all-across-country-n854926"><span style="font-weight: 400;">high cost of care</span></a><span style="font-weight: 400;"> and </span><a href="https://www.npr.org/sections/health-shots/2016/11/07/500407637/poverty-wages-for-u-s-child-care-workers-may-be-behind-high-turnover"><span style="font-weight: 400;">low wages</span></a><span style="font-weight: 400;">, </span><a href="https://nwlc-ciw49tixgw5lbab.stackpathdns.com/wp-content/uploads/2020/04/CCKeytoEconomicRecoveryNWLC.pdf"><span style="font-weight: 400;">most child care providers operate on very thin margins</span></a><span style="font-weight: 400;">. They are not funded sufficiently to withstand smaller class sizes to help adhere to social distancing standards, and they already had a </span><a href="https://www.npr.org/sections/health-shots/2016/11/07/500407637/poverty-wages-for-u-s-child-care-workers-may-be-behind-high-turnover"><span style="font-weight: 400;">difficult time retaining their workforce</span></a><span style="font-weight: 400;">, putting the industry on brink of collapse. Without a significant infusion of funding, many of the </span><a href="https://www.acf.hhs.gov/sites/default/files/opre/nsece_wf_brief_102913_0.pdf"><span style="font-weight: 400;">nearly 2 million workers &#8211; a majority of whom are women &#8211; who make up the child care workforce</span></a><span style="font-weight: 400;"> may not be able to return to their job and half of all child care slots could disappear, making it more challenging for parents to eventually return back to work.</span></p>
+<p><b>Protect and Expand the Availability of Long-Term Services and Supports. </b><span style="font-weight: 400;">The </span><a href="https://www.nationalpartnership.org/our-work/resources/economic-justice/female-face-family-caregiving.pdf"><span style="font-weight: 400;">majority of family caregivers</span></a><span style="font-weight: 400;"> &#8211; those caring for a loved one with a disability or chronic condition &#8211; are women. Caregiving imposes significant costs &#8211; </span><a href="https://www.nationalpartnership.org/our-work/resources/economic-justice/female-face-family-caregiving.pdf"><span style="font-weight: 400;">economic and health-related</span></a><span style="font-weight: 400;"> &#8211; on these women. At the same time, the </span><a href="https://www.nytimes.com/2020/04/08/nyregion/coronavirus-disabilities-group-homes.html"><span style="font-weight: 400;">risk of getting COVID-19 is even greater</span></a><span style="font-weight: 400;"> for older Americans and individuals with disabilities living in group homes and other care facilities, increasing the demand for care in a home and community-based setting. Biden would increase resources </span><span style="font-weight: 400;">to enable more seniors and people with disabilities to remain in their own home and community. </span></p>
+<p><b>PROTECT ACCESS TO HEALTH CARE, INCLUDING REPRODUCTIVE HEALTH</b></p>
+<p><span style="font-weight: 400;">The pandemic has put additional stress on women’s ability to access the health care they need. Before the pandemic, roughly </span><a href="https://www.kff.org/womens-health-policy/issue-brief/womens-coverage-access-and-affordability-key-findings-from-the-2017-kaiser-womens-health-survey/3Vkihk-7g"><span style="font-weight: 400;">one in four</span></a><span style="font-weight: 400;"> women experienced financial barriers to accessing health care. As women are now laid off or face wage cuts, they may have even more trouble paying for health care. At the same time, several states have used the crisis as an excuse to restrict women’s access to reproductive health, including timely and essential abortion care.</span> <span style="font-weight: 400;">The Trump Administration and all states must ensure all women have access to all the health care they need. Building on Joe Biden’s plan to protect and build on Obamacare [read the full plan at: joebiden.com/healthcare], as President, Biden would:</span></p>
+<p><b>Ensure access to health care by:</b></p>
+<ul>
+<li><span style="font-weight: 400;">Ramping up testing and ensuring that not only testing, but also treatment and any eventual vaccine for COVID-19, is free for all individuals regardless of insurance or immigration status.</span></li>
+<li><span style="font-weight: 400;">Collecting racial, gender and ethnic data on testing and treatment so we can identify and address disparities.</span></li>
+<li><span style="font-weight: 400;">Helping women who have been laid-off keep their health insurance by picking up the full cost of COBRA premiums. </span></li>
+<li><span style="font-weight: 400;">Opening a new Obamacare enrollment period, so women who so badly need insurance can get it, instead of fighting in the courts to gut that landmark law like the Trump Administration is doing. </span></li>
+</ul>
+<p><b>Stop states from using the pandemic to curtail access to abortions. <span style="font-weight: 400;">The </span><a href="https://www.acog.org/news/news-releases/2020/03/joint-statement-on-abortion-access-during-the-covid-19-outbreak"><span style="font-weight: 400;">American College of Obstetricians and Gynecologists</span></a><span style="font-weight: 400;"> and </span><a href="https://www.ama-assn.org/press-center/ama-statements/ama-statement-government-interference-reproductive-health-care"><span style="font-weight: 400;">American Medical Association</span></a><span style="font-weight: 400;"> agree that states should not be using the pandemic as an excuse to delay abortions. In this case, health care delayed means health care denied. States should not be using a public health crisis to infringe on women&#8217;s constitutional rights. If Biden was President today, he would put science over fiction and ensure states treat abortion as the essential health service it is. This builds on his existing women’s health care agenda. His Justice Department will stop the rash of state laws that so blatantly violate </span><i><span style="font-weight: 400;">Roe v. Wade.</span></i><span style="font-weight: 400;"> And, he will work to codify </span><i><span style="font-weight: 400;">Roe,</span></i><span style="font-weight: 400;"> repeal the Hyde Amendment, restore federal funding for Planned Parenthood, including through Medicaid and Title X, and restore access to contraception coverage.</span></b></p>
+<p><strong>Reduce our unacceptably high maternal mortality rate, which especially impacts people of color.</strong><span style="font-weight: 400;"> Before the pandemic, the U.S. already had one of the highest rates of deaths related to pregnancy and childbirth relative to other developed countries, especially among Black women, who were </span><a href="https://www.cdc.gov/nchs/pressroom/nchs_press_releases/2020/202001_MMR.htm"><span style="font-weight: 400;">2.5 times more likely</span></a><span style="font-weight: 400;"> to die from pregnancy complications than non-Hispanic white women. California came up with a strategy that</span><a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2018.0463"> <span style="font-weight: 400;">halved</span></a><span style="font-weight: 400;"> the state’s maternal death rate. As President, Biden will take the California strategy nationwide. And, he will expand access to high quality health care for the populations that need it most, providing access to a public option and doubling America’s investment in community health centers. </span></p>
+<p><b>SUPPORT SURVIVORS OF DOMESTIC AND SEXUAL VIOLENCE AND PROTECT CHILDREN AND YOUTH AT-RISK FOR ABUSE</b></p>
+<p><span style="font-weight: 400;">The COVID-19 pandemic has increased the risk for domestic violence, sexual assault, and abuse for women and girls nationwide. For many women and children, home is not a safe place, and sheltering in place restrictions </span><a href="https://time.com/5803887/coronavirus-domestic-violence-victims/"><span style="font-weight: 400;">further isolate</span></a><span style="font-weight: 400;"> those at risk of domestic violence. At the same time, community-based supports like domestic violence shelters, sexual assault programs, and child advocacy centers have had to limit in-person services to keep staff and clients safe, while adapting to provide text, chat, and phone-based assistance. The economic fallout of the pandemic will likely increase </span><a href="https://nnedv.org/content/about-financial-abuse/"><span style="font-weight: 400;">financial insecurity</span></a><span style="font-weight: 400;"> for survivors, creating further obstacles for leaving an abusive relationship. Shelters and other service providers need support to adapt to the pandemic, and keep pace with the increased demand for assistance to survivors that is expected to only go up after the lockdowns have been lifted.</span></p>
+<p><span style="font-weight: 400;">Survivors and the courageous frontline advocates working to ensure their safety need immediate support. While Biden would work with Congress to provide additional funding, women and vulnerable youth across the country cannot wait another day for the support they need. He would do everything in his power to immediately get funding to service providers and survivors, including by enlisting Federal Emergency Management Agency (FEMA), and he would encourage governors to recognize survivors of domestic violence, sexual assault and child abuse as vulnerable populations in need of state funding. </span></p>
+<p><b>Provide survivors and their children with a safe place to live, and support shelter staff and residents to stay healthy. </b><span style="font-weight: 400;">Not everyone has a safe place to call home. Shelters, which often have shared bathrooms and communal cooking spaces, need new avenues for providing survivors with a safe living space that adheres to social distancing requirements. Biden would: </span></p>
+<ul>
+<li><b>Empower FEMA to work with states to</b> <b>immediately increase shelter options, including contracting with hotels and motels and providing shelter modifications like sleeping and bathroom trailers</b><span style="font-weight: 400;">. </span></li>
+<li><b>Encourage states to ensure all shelters, not just the larger ones, receive funding</b><span style="font-weight: 400;">. Smaller shelters serving communities of color, tribal programs, or shelters for immigrant and refugee survivors may have less capacity to access federal grant funding and need support. </span></li>
+<li><b>Fund programs providing shelters and other housing options</b><span style="font-weight: 400;"> including the Family Violence Prevention and Services Act (FVPSA), VAWA transitional housing, Housing and Urban Development’s Continuum of Care Domestic Violence Bonus to provide housing for survivors experiencing homelessness, and VAWA emergency transfer tenant protection voucher assistance for rental assistance for survivors.</span></li>
+</ul>
+<p><b>Provide personal protective equipment and cleaning supplies to victim services providers, <span style="font-weight: 400;">including domestic violence and sexual assault programs, child welfare professionals, and other essential social services workers.</span></b></p>
+<p><b>Expand the safety net for survivors </b><span style="font-weight: 400;">&#8211; including by providing cash assistance, unemployment insurance flexible to their needs, and paid safe days and sick leave &#8211; as well as ensuring service providers who support them have adequate health coverage, paid sick leave, and overtime compensation. </span></p>
+<ul>
+<li><b>Provide</b> <b>emergency cash assistance to survivors </b><span style="font-weight: 400;">through grants to community-based organizations, and make longer-term investments in cash assistance, as Biden called for in November in his plan to </span><a href="../vawa.html"><span style="font-weight: 400;">End Violence Against Women</span></a><span style="font-weight: 400;">. Biden would also direct FEMA to work with states to provide shelters with food, including prepared food.</span></li>
+<li><b>Work to ensure that survivors who quit their job because they are unable to telework are able to access and obtain unemployment insurance</b><span style="font-weight: 400;"> from the newly created Pandemic Unemployment Assistance program. </span></li>
+<li><b>Provide safe days and 12 weeks of paid safe leave for survivors of domestic violence, sexual assault, or stalking </b><span style="font-weight: 400;">who need time to seek physical or mental care, seek counsel, find new housing, or take other action related to the violence they experienced.</span></li>
+<li><b>Provide</b> <b>emergency funding to the Office on Violence Against Women for domestic violence and sexual assault programs, ensuring enhanced funding streams for tribes and culturally specific victim services, </b><span style="font-weight: 400;">and provide funding for non-residential programs, in addition to shelters, under the Family Violence Prevention and Services Act (FVPSA).</span></li>
+</ul>
+<p><b>Ensure survivors are able to access and service providers are able to provide remote victim advocacy through text, chat, phone, and other virtual services.</b></p>
+<ul>
+<li><b>Provide funding to expand the reach of the National Domestic Violence Hotline’s texting and chat services, and create a texting service for the National Sexual Assault Hotline. </b><span style="font-weight: 400;">The National Domestic Violence Hotline and National Sexual Assault Hotline are both available to those that need it. For those who cannot call their local shelter or the hotline because they are living in close proximity with the person harming them, the National Domestic Violence Hotline offers both online chat and texting services, the latter of which Biden premiered in </span><a href="https://www.thehotline.org/about-the-hotline/history-domestic-violence-advocates-2/"><span style="font-weight: 400;">2011</span></a><span style="font-weight: 400;"> by sending the first text ever for the service. The National Sexual Assault Hotline offers chat-based support; Biden would fund a texting service. He would also provide funding for both hotlines to hire more advocates.</span></li>
+<li><b>Ensure service providers and survivors have all the tools they need to connect virtually and safely. <span style="font-weight: 400;">Domestic violence and sexual violence programs, including rape crisis centers, </span><a href="http://reachingvictims.org/wp-content/uploads/2020/03/Tele-Advocacy-during-the-COVID-19-Pandenmic-NNEDV-Slides.pdf"><span style="font-weight: 400;">offer tele-advocacy and crisis support through text, chat, video, and phone services</span></a><span style="font-weight: 400;">. To do this, they need technology including computers, upgraded broadband, hotspots, teleconferencing licenses, and other software licenses. And although technology-based services have the benefit of reaching survivors where they are, they also introduce new risks for victim privacy, safety, and confidentiality and need support to mitigate those risks. As President, Biden would:</span></b></li>
+<li><b>Get technology to service providers immediately</b><span style="font-weight: 400;">. Biden would direct FEMA to consider technology that is eligible for emergency support and work with Congress to increase funding for domestic violence and sexual assault service programs, including for the Sexual Assault Services Program and the Family Violence Prevention and Services Act so they can boost their capacity to provide virtual services.</span> <span style="font-weight: 400;">And he would leverage private-public partnerships where possible.</span></li>
+<li><b>Expand the Office on Violence Against Women’s training and technical assistance for domestic violence and sexual assault programs so that service providers can safely use technology-based services with survivors. </b></li>
+<li><strong>The Federal Communication Commission should reverse changes that <a href="https://www.wired.com/story/opinion-during-covid-19-the-fcc-needs-to-provide-internet-for-all/">reduced access</a> to wireless service to people who need it most — including <a href="https://www.nclc.org/images/pdf/take-action/lifeline/lifeline-breakdown-fact-sheet.pdf">domestic violence survivors</a>.</strong> The Lifeline program offers low-income adults subsidies for wireless services, but under the Trump Administration, the <a href="https://www.wired.com/story/opinion-during-covid-19-the-fcc-needs-to-provide-internet-for-all/">FCC scaled back help from this program</a>. In November, Biden <a href="../infrastructure/index.html">called</a> for the FCC to reform its Lifeline program to increase the number of participating broadband providers, reduce fraud and abuse, and ultimately offer more low-income Americans the subsidies needed to access high-speed internet. And now, connection couldn&#8217;t be more important.</li>
+<li><b>Ensure telehealth is widely accessible to victims of domestic violence and sexual assault, including through expanded funding for Sexual Assault Nurse Exams, and pediatric Sexual Assault Nurse Exams for child victims of sexual abuse. </b></li>
+</ul>
+<p><b>Support the diverse needs of groups most vulnerable to abuse, including survivors from </b><a href="https://www.cdc.gov/violenceprevention/pdf/nisvs_executive_summary-a.pdf"><b>communities of color</b></a><b>, </b><a href="https://nij.ojp.gov/topics/articles/violence-against-american-indian-and-alaska-native-women-and-men"><b>Alaska Native and American Indian</b></a><b> survivors, </b><a href="https://ncadv.org/blog/posts/domestic-violence-and-the-lgbtq-community"><b>LGBTQ</b></a><b> survivors, </b><a href="http://www.ncdsv.org/images/NCADV_ImmigrantVictimsOfDV.pdf"><b>immigrant</b></a><b> and refugee survivors, and </b><a href="http://www.ncdsv.org/images/NCADV_AbuseInLaterLife.pdf"><b>older adults</b></a><b> and </b><a href="https://www.thehotline.org/is-this-abuse/domestic-violence-disabilities-2/"><b>persons with disabilities</b></a><b>. </b><span style="font-weight: 400;">These communities experience domestic and sexual violence at disproportionately high rates, and often face systemic barriers to accessing justice, safety, and health care, making them more at-risk during the pandemic. As President, Biden would: </span></p>
+<ul>
+<li><b>Ensure that people who need it most and are often underserved are receiving funding.</b></li>
+</ul>
+<ul>
+<li><strong>Expand funding for culturally specific services.</strong> <span style="font-weight: 400;">Since 2005, the Violence Against Women Act has funded domestic and sexual violence programs offering trauma-informed and culturally specific services for survivors from racial and ethnic minority communities. Given the pandemic’s disparate impact on communities of color, it is imperative these programs have all the funding they need.</span></li>
+</ul>
+<ul>
+<li><strong>Protect immigrant women.</strong> <span style="font-weight: 400;">In addition to ensuring that testing and treatment for COVID-19 is readily available to everyone, regardless of immigration status or English-language ability, Biden would take proactive steps to protect immigrant women, who are often the most vulnerable and least able to access supportive resources. The Trump Administration should immediately halt the implementation of its un-American new Public Charge rules, </span><a href="https://www.cnn.com/2020/04/24/politics/supreme-court-public-charge-pandemic/index.html"><span style="font-weight: 400;">which may discourage immigrant women from seeking vital food and housing support</span></a><span style="font-weight: 400;"> they need to remain safe and healthy. It should also automatically extend immigration statuses and work authorizations set to expire within one year of the declaration of a national emergency on March 13, 2020, and Congress should ensure that no immigrant who loses their status during this time, or during the 90 days after the national emergency declaration is ended, accrues unlawful presence that could impact their future immigration status. The Trump Administration should also follow the recommendation of public health officials and vastly reduce the number of people in the custody of Immigration and Customs Enforcement and the Border Patrol by releasing to their families or community-based care organizations those individuals in immigration detention who pose no risk to the community. Neither should Trump be wasting resources on ICE enforcement actions to terrorize immigrant families, especially during a pandemic. Sensitive locations should always be protected against ICE actions, and immigrant survivors who have applied for protection under the </span><span style="font-weight: 400;">Violence Against Women Act and Trafficking Victims Protection Act should not be detained or deported while their applications are in process. </span></li>
+</ul>
+<ul>
+<li><strong>Ensure tribes receive sufficient resources in all funding streams, and reaffirm Tribal sovereignty to support victims and hold offenders accountable.</strong> <span style="font-weight: 400;">The Obama-Biden Administration ensured tribal governments have the power to investigate, prosecute, convict and sentence non-Native Americans who assault indigenous women on tribal lands, </span><a href="http://www.ncai.org/tribal-vawa/sdvcj-overview"><span style="font-weight: 400;">through the 2013 Violence Against Women Act</span></a><span style="font-weight: 400;">. This must be reaffirmed, and the federal government should provide emergency financial support to tribal governments and service providers so they can support Native women.</span></li>
+</ul>
+<ul>
+<li><strong>Make services accessible for older survivors and survivors with disabilities.</strong> <span style="font-weight: 400;">Funding should be provided to ensure remote advocacy services are accessible to people who often cannot or do not wish to leave home, including for the National Deaf Domestic Violence Hotline and other adaptive and inclusive services for survivors who need accommodation.</span></li>
+</ul>
+<p><strong>Enhance protections for vulnerable children and youth at-risk for abuse.</strong> <span style="font-weight: 400;">Before the pandemic, at-risk kids had protective support from teachers, coaches, and other caring adults who were </span><a href="https://www.childwelfare.gov/pubPDFs/educator.pdf"><span style="font-weight: 400;">most likely to report abuse</span></a><span style="font-weight: 400;">. Now, families are homebound under increasingly stressful circumstances, adding to the risk of child abuse or neglect. The National Parent Helpline is available to support overwhelmed parents and caregivers. As President, Biden would work with Congress to fund the Helpline to add texting service, as well as increase funding for child advocacy centers, and other child welfare programs that prevent and respond to child abuse and neglect, including sexual abuse.</span></p>
+<p><strong>Establish an Emergency Anti-Violence Task Force</strong> <span style="font-weight: 400;">that includes representatives of advocacy groups, community-based organizations, and state and local governments, along with legal, housing, and public health experts, to consult with stakeholders, track the unique problems happening now, identify best practices and guidance for responding to them, work with agencies and Congress to adapt to them, and eventually create a report with both an analysis of the problems faced during the pandemic and shortcomings of policy levers, as well as a roadmap for future emergencies. The Task Force would also immediately work on ways to help leverage the private sector to play a role in the response. As President, Biden would immediately task his Office on Violence Against Women with using this information to create a preparedness plan for future national emergency, which should include ways to make programs and funding streams sufficiently flexible, and to determine ways to leverage public-private partnerships, such as with hotel chains and technology and telecommunications companies.</span></p>
+<p><b>Ensure an Equitable Recovery </b></p>
+<p><span style="font-weight: 400;">Women and people of color have historically been left out or left behind in times of recovery — and we can’t make that mistake again. To rebuild a stronger, more inclusive middle class that will make our economy more resilient in any future crisis, when it comes time for economic recovery we must: </span></p>
+<p><b>Require jurisdictions that receive funding to develop and report on metrics for addressing potential racial and gender disparities</b><span style="font-weight: 400;">, and the Small Business Administration and Treasury should similarly track Paycheck Protection Program and other SBA program lending to ensure that minority and women business owners – </span><a href="https://assets.aspeninstitute.org/content/uploads/2017/01/Bridging-the-Divide.pdf?_ga=2.172696224.208515703.1587662452-427856960.1587662452"><span style="font-weight: 400;">who have traditionally faced unequal access to credit and capital</span></a><span style="font-weight: 400;"> – are treated fairly.</span></p>
+<p><b>Stop the exploitation of low-wage workers &#8211; most of whom are women</b><span style="font-weight: 400;"> &#8211; and who everyone now sees are essential and should be compensated as such. Biden will increase the minimum wage to $15 per hour, support the elimination of the tipped minimum wage, ensure overtime protections, and dismantle the barriers to higher-paying jobs for these workers. </span></p>
+<p><b>Finish the Obama-Biden Administration’s work on ending unequal pay</b><span style="font-weight: 400;">. The first bill signed into law during the Obama-Biden administration was the Lilly Ledbetter Fair Pay Act, which made it easier for women to fight back if they were unfairly paid less than their male coworkers. The Obama-Biden Administration also </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2014/04/08/executive-order-non-retaliation-disclosure-compensation-information"><span style="font-weight: 400;">protected more workers</span></a><span style="font-weight: 400;"> against retaliation for discussing wages and required employers to collect and </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2016/01/29/fact-sheet-new-steps-advance-equal-pay-seventh-anniversary-lilly"><span style="font-weight: 400;">report wage gaps</span></a><span style="font-weight: 400;"> to the federal government. As President, Biden will build on this critical work by increasing pay transparency, making it easier for workers to join together in class action lawsuits, shifting the burden to employers to prove pay gaps exist for job-related reasons, and increasing penalties against companies that discriminate, as called for in Senator Patty Murray and Congresswoman Rosa DeLauro’s </span><a href="https://edlabor.house.gov/imo/media/doc/2019-02-26%20Paycheck%20Fairness%20Section%20by%20Section.pdf"><span style="font-weight: 400;">Paycheck Fairness Act</span></a><span style="font-weight: 400;">.</span></p>
+<p><b>Provide access to affordable, high quality child care. </b><span style="font-weight: 400;">Biden will increase the child care tax credit to as much as $8,000 per family and expand access to quality, affordable child care through increased funding for grants to states to ensure low and moderate-income families can afford child care. And, he will expand funding for after-school programs, community centers, and national summer jobs programs, to keep kids active and learning after school hours. Biden also will provide high-quality, universal pre-kindergarten for all three- and four-year-olds. </span></p>
+<p><b>Permanently provide family, medical, and safe leave as well as sick and safe days. </b><span style="font-weight: 400;">As President, Biden will work to</span> <span style="font-weight: 400;">provide the type of comprehensive 12 weeks of paid family and medical leave envisioned in the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/463/text"><span style="font-weight: 400;">FAMILY Act</span></a><span style="font-weight: 400;"> sponsored by Senator Kristen Gillibrand and Representative Rosa DeLauro. Biden will pay for this proposal by returning the estate tax to 2009 levels. Biden will also work to provide the type of coverage in the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/1784"><span style="font-weight: 400;">Healthy Families Act</span></a><span style="font-weight: 400;"> spearheaded by Congresswoman Rosa DeLauro and Senator Patty Murray, which will ensure workers receive seven days of paid sick leave for routine personal and family health needs, as well as time for survivors of domestic violence and sexual assault to seek services.</span></p>
+<p><b>Ensure women have access to fair and flexible scheduling, </b><span style="font-weight: 400;">in addition to providing permanent paid sick and safe leave, and 12 weeks of paid family and medical leave.</span></p>
+<p><b>Transform our education system</b><span style="font-weight: 400;"> by tripling funding for disadvantaged schools, fully funding the Individuals with Disabilities Education Act, offering universal pre-K, providing 4 years of tuition at public colleges and under-resourced Minority Serving Institutions to families earning less than $125K per year, investing in community college and workforce training, and easing the burden of student debt.</span></p>
+<p><b>Protect and build on Obamacare</b><span style="font-weight: 400;">, ensuring all Americans have access to affordable, quality health insurance.</span></p>
+<p><b>Provide retirement security. <span style="font-weight: 400;">Biden will preserve and strengthen Social Security, including by providing a higher benefit for the oldest Americans, protecting widows and widowers from steep cuts in benefits, and eliminating penalties for teachers and other public-sector workers. And he’ll allow caregivers to make “catch-up” contributions to retirement accounts, even if they’re not earning income in the formal labor market.</span></b></p>
+<p><strong>Expand long overdue rights to domestic workers and farmworkers.</strong> <span style="font-weight: 400;">More than a million women and 700,000 women farmworkers &#8211; many of whom are immigrants &#8211; care for our children, elderly, and people with disabilities, and pick our fruits and vegetables so we can put food on the table. Now more than ever the world sees just how essential they are. But they have far too long been left out of basic workplace protections. Biden will change that, starting by signing into law: </span></p>
+<ul>
+<li><span style="font-weight: 400;">Senator Harris and Congresswoman Jayapal’s </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2112/text"><span style="font-weight: 400;">Domestic Workers’ Bill of Rights</span></a><span style="font-weight: 400;">, which, among other things, establishes a federal wage and standard board to set fair wage levels and define working conditions for domestic workers across the United States;</span></li>
+<li><span style="font-weight: 400;">Senator Kamala Harris’ </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/385"><span style="font-weight: 400;">Fairness for Farm Workers Act</span></a><span style="font-weight: 400;">, to extend employment protections including overtime to farmworkers;</span></li>
+<li><span style="font-weight: 400;">He will also protect the pay of migrant farmworkers, unlike the Trump Administration, which has considered </span><a href="https://www.epi.org/blog/trump-administration-reportedly-looking-to-cut-the-already-low-wages-of-h-2a-migrant-farmworkers-while-giving-their-bosses-a-multibillion-dollar-bailout/"><span style="font-weight: 400;">cutting it</span></a><span style="font-weight: 400;"> during a pandemic.</span></li>
+</ul>
+<p><b>Address International Impacts of the Pandemic</b></p>
+<p><span style="font-weight: 400;">COVID-19 isn’t just a threat to women across the United States. This is a global health crisis that also disproportionately impacts women around the globe. Domestic violence is rising, both </span><a href="https://www.usnews.com/news/us/articles/2020-04-05/un-chief-urges-end-to-domestic-violence-citing-global-surge"><span style="font-weight: 400;">in the developed world</span></a><span style="font-weight: 400;"> and in the developing world. For example, in </span><a href="https://www.latinpost.com/articles/144984/20200422/mounting-cases-domestic-violence-chilling-consequence-quarantine.htm"><span style="font-weight: 400;">Bogotá, Colombia</span></a><span style="font-weight: 400;">, violence against women reports have increased 225% during lockdowns, while in </span><a href="https://www.theguardian.com/global-development/2020/apr/21/domestic-abuse-women-in-herat-afghanistan-may-survive-coronavirus-but-not-lockdown"><span style="font-weight: 400;">Afghanistan</span></a><span style="font-weight: 400;">, domestic violence rates that were already as high as 50% are compounded by reports of women’s shelters shutting down to protect against the spread of the virus. Meanwhile, </span><span style="font-weight: 400;">w</span><a href="https://apps.who.int/iris/bitstream/handle/10665/311314/WHO-HIS-HWF-Gender-WP1-2019.1-eng.pdf?sequence=1&amp;isAllowed=y"><span style="font-weight: 400;">omen constitute an estimated 70% of workers</span></a><span style="font-weight: 400;"> in the health and social sectors globally, putting them on the frontlines of fighting COVID-19 and increasing their risk of contracting the virus. The COVID-19 pandemic is also likely to mean dramatically increased caregiving responsibilities for women, extended unemployment, and lost business and income as well as greater income inequality. The Ebola epidemic in West Africa in 2014 provides insight into the impacts we can expect to see on adolescent girls, which include an </span><a href="https://www.sl.undp.org/content/sierraleone/en/home/library/crisis_prevention_and_recovery/assessing-sexual-and-gender-based-violence-during-the-ebola-cris.html"><span style="font-weight: 400;">increased vulnerability to physical and sexual abuse</span></a><span style="font-weight: 400;">, an </span><a href="https://www.rescue.org/sites/default/files/document/3593/genderandgbvfindingsduringevdresponseindrc-final8march2019.pdf"><span style="font-weight: 400;">increase in domestic responsibilities</span></a><span style="font-weight: 400;">, a loss of pathways to </span><a href="https://www.cgdev.org/blog/containing-epidemic-should-schools-close-coronavirus"><span style="font-weight: 400;">prevent child marriage</span></a><span style="font-weight: 400;"> or </span><a href="https://www.savethechildren.org/content/dam/global/reports/emergency-humanitarian-response/ebola-rec-sierraleone.pdf"><span style="font-weight: 400;">early childbearing</span></a><span style="font-weight: 400;">, and a lower rate of return to school, limiting economic opportunity. And, among the more than 70 million displaced people around the world, women and girls are already among the most vulnerable. Now, in fragile states, displaced persons camps, or tightly populated migrant neighborhoods, they are among the least able to protect themselves against COVID-19. A Biden Administration will reassert global leadership and </span><span style="font-weight: 400;">return a government-wide focus to championing the rights of women and girls at home and around the world, including by: </span></p>
+<p><b>Elevating the voices of women in the response. </b><span style="font-weight: 400;">As President, Biden will ensure the voices of women leaders help shape and spearhead efforts globally, leveraging their expertise, networks and skills to optimize the global response and recovery.</span></p>
+<p><b>Prioritizing responses to gender-based violence internationally, human trafficking, and survivors’ lack of access to humanitarian assistance and employment opportunities. </b><span style="font-weight: 400;">In addition, as President, Joe Biden will ensure that domestic violence victims once again have a pathway to claim asylum and will support the Safe from the Start Act, which calls for attention to preventing gender-based violence in humanitarian response.</span></p>
+<p><b>Ensuring that global health and humanitarian aid prioritize women and remove barriers to accessing reproductive health services. </b><span style="font-weight: 400;">As President, Biden will call on leaders globally to ensure that “essential services” — including sexual and reproductive health clinics, domestic violence shelters, and abortion service providers — remain available to serve women. </span></p>
+<p><b>Calling for an expanded emphasis on education for girls and boys in refugee and displaced persons camps<span style="font-weight: 400;"> and supporting programs generally to help teachers, school staff, and communities implement inclusive learning methods for girls, reinforcing the message that girls and boys need equal access to opportunities. Already, </span><a href="https://downloads.ctfassets.net/0oan5gk9rgbh/6TMYLYAcUpjhQpXLDgmdIa/dd1c2ad08886723cbad85283d479de09/GirlsEducationandCOVID19_MalalaFund_04022020.pdf"><span style="font-weight: 400;">research</span></a><span style="font-weight: 400;"> warns that girls in many countries will be less likely to go back to school once this pandemic ends. As President, Biden will build on the work of the Obama-Biden Administration to promote girls’ education, and ensure girls have the same opportunities as boys to reach their full potential. </span></b></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="../terms/index.html">Terms and Conditions</a> and <a href="../privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="../contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="../accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="../privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="../terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="../limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="../index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="../joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="../joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="../take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="../coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="../latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, ../wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="../wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../wp-content/uploads/2020/08/Intersect.jpg 558w, ../wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/plans-to-support-women-duringcovid19/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":444,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

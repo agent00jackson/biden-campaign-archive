@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>LIFT EVERY VOICE: THE BIDEN PLAN FOR BLACK AMERICA | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="blackamerica.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="LIFT EVERY VOICE: THE BIDEN PLAN FOR BLACK AMERICA | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Joe Biden knows that African Americans can never have a fair shot at the American Dream so long as entrenched disparities are allowed to quietly chip away at opportunity. He is running for President to rebuild our economy in a way that finally brings everyone along—and that starts by rooting out systemic racism from our [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/blackamerica/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-10-05T17:33:16+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Black-America_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Black-America_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Dave Lewis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="42 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/blackamerica/#webpage","url":"https://joebiden.com/blackamerica/","name":"LIFT EVERY VOICE: THE BIDEN PLAN FOR BLACK AMERICA | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-05-04T18:36:12+00:00","dateModified":"2020-10-05T17:33:16+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/blackamerica/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fblackamerica%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fblackamerica%2F&#038;format=xml" />
+<link rel="alternate" href="blackamerica.html" hreflang="en" />
+<link rel="alternate" href="es/puntos-importantes-de-la-agenda-de-joe-biden-para-la-comunidad-negra/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-2628 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="blackamerica.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="blackamerica.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/puntos-importantes-de-la-agenda-de-joe-biden-para-la-comunidad-negra/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="es/puntos-importantes-de-la-agenda-de-joe-biden-para-la-comunidad-negra/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-2628 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">LIFT EVERY VOICE: THE BIDEN PLAN FOR BLACK AMERICA</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p><span style="font-weight: 400;">Joe Biden knows that African Americans can never have a fair shot at the American Dream so long as entrenched disparities are allowed to quietly chip away at opportunity. He is running for President to rebuild our economy in a way that finally brings everyone along—and that starts by rooting out systemic racism from our laws, our policies, our institutions, and our hearts.</span></p>
+<p><span style="font-weight: 400;">This mission is more important now than ever before, as the health and economic impacts of COVID-19 have shined a light on—and cruelly exacerbated—the disparities long faced by African Americans. In April 2020, Biden </span><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-on-the-racial-inequities-of-covid-19-5e4f17f8fa0c"><span style="font-weight: 400;">called on</span></a><span style="font-weight: 400;"> the Centers for Disease Control and Prevention to collect more data regarding how COVID-19 is affecting communities, including breaking down its impacts by race. The </span><a href="https://www.washingtonpost.com/nation/2020/04/07/coronavirus-is-infecting-killing-black-americans-an-alarmingly-high-rate-post-analysis-shows/?arc404=true"><span style="font-weight: 400;">data we’ve seen so far</span></a><span style="font-weight: 400;"> suggests that African Americans are dying from COVID-19 at a higher rate than whites. Long-standing systemic inequalities are  contributing to this disparity—including the fact that African Americans are more likely to be </span><a href="https://www.kff.org/uninsured/state-indicator/rate-by-raceethnicity/?currentTimeframe=0&amp;sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D"><span style="font-weight: 400;">uninsured</span></a><span style="font-weight: 400;"> and to live in communities where they are</span><a href="https://www.nytimes.com/2020/04/07/climate/air-pollution-coronavirus-covid.html"> <span style="font-weight: 400;">exposed to high levels of air pollution</span></a><span style="font-weight: 400;">. African Americans also represent an especially high</span><a href="https://www.theguardian.com/commentisfree/2020/apr/16/black-workers-coronavirus-covid-19"> <span style="font-weight: 400;">percentage</span></a><span style="font-weight: 400;"> of the front-line workers putting themselves at greater risk to sustain the economy and keep the rest of the country safe and fed—and are less likely to have a job they can do from home, forcing them to make the difficult choice between their health and a paycheck. While there’s a lot we don’t yet know about COVID-19, we do know that equitable distribution of resources, like testing and medical equipment, can make a difference in fighting the virus. Biden believes this should be a priority and action must be taken now.</span></p>
+<p><span style="font-weight: 400;">COVID-19 is also having a disproportionate economic impact on African American families. African American small businesses </span><a href="https://www.nytimes.com/2020/04/10/business/minority-business-coronavirus-loans.html"><span style="font-weight: 400;">have been hit hard</span></a><span style="font-weight: 400;">, and over </span><a href="https://www.responsiblelending.org/sites/default/files/nodes/files/research-publication/crl-cares-act2-smallbusiness-apr2020.pdf?mod=article_inline"><span style="font-weight: 400;">90% of African American-owned</span></a><span style="font-weight: 400;"> businesses are estimated to be shut out of the initial relief program due to preexisting, systemic disparities in lending. This is especially dire given that African American families have </span><a href="https://rooseveltinstitute.org/wp-content/uploads/2009/11/fin-savings_investments.pdf"><span style="font-weight: 400;">less of a financial cushion</span></a><span style="font-weight: 400;"> to fall back on in hard times. Biden </span><a href="the-biden-make-it-work-checklist/index.html"><span style="font-weight: 400;">has been</span> </a><span style="font-weight: 400;">calling for the nation’s relief and recovery efforts to be equitable and just, including by designing relief programs in ways that avoid methods we know lead to disparate outcomes—so that funds can actually reach African American families, communities, and small businesses. President Trump has not heeded his warnings. If Biden were President today, he would make it a top priority to ensure that African American workers, families, and small businesses got the relief they need and deserve. </span></p>
+<p><span style="font-weight: 400;">Tackling systemic racism and fighting for civil rights has been a driving force throughout Biden’s career in public service. He has a record of fighting for and delivering for the African American community. As a U.S. Senator he co-sponsored the </span><a href="https://www.congress.gov/bill/101st-congress/senate-bill/2104?s=1&amp;r=12"><span style="font-weight: 400;">Civil Rights Act of 1990</span></a><span style="font-weight: 400;"> to protect against employment discrimination and led multiple reauthorizations of the </span><a href="https://votesmart.org/public-statement/194189/biden-hails-senate-passage-of-voting-rights-act-renewal#.Xq3pupNKhQI"><span style="font-weight: 400;">Voting Rights Act</span><span style="font-weight: 400;">,</span></a><span style="font-weight: 400;"> protecting African Americans&#8217; right to vote. Biden also </span><a href="https://www.jstor.org/stable/20868473?seq=1"><span style="font-weight: 400;">led efforts</span></a><span style="font-weight: 400;"> to reauthorize and extend the Fair Housing Act, and as Delaware&#8217;s Senator, was a vocal advocate and supporter of Delaware State University, the state&#8217;s Historically Black University. </span></p>
+<p><span style="font-weight: 400;">Today, we need a comprehensive agenda for African Americans with ambition that matches the scale of the challenge and with recognition that race-neutral policies are not a sufficient response to race-based disparities. </span></p>
+<p><span style="font-weight: 400;">The Biden Plan for Black America will: </span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Advance the economic mobility of African Americans and close the racial wealth and income gaps.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expand access to high-quality education and tackle racial inequity in our education system.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Make far-reaching investments in ending health disparities by race.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Strengthen America’s commitment to justice.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Make the right to vote and the right to equal protection real for African Americans.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Address environmental justice.</span></li>
+</ul>
+<p><b>ADVANCE THE ECONOMIC MOBILITY OF AFRICAN AMERICANS AND CLOSE THE RACIAL WEALTH AND INCOME GAPS</b></p>
+<p><b>Invest in African American Businesses and Entrepreneurs</b></p>
+<p><span style="font-weight: 400;">Approximately </span><a href="https://www.brookings.edu/research/five-star-reviews-one-star-profits-the-devaluation-of-businesses-in-black-communities/"><span style="font-weight: 400;">4% of small business owners</span></a><span style="font-weight: 400;"> are African American, even though African Americans make up approximately </span><a href="https://www.pewresearch.org/fact-tank/2018/02/22/5-facts-about-blacks-in-the-u-s/."><span style="font-weight: 400;">13% of the population</span></a><span style="font-weight: 400;">. To build wealth in African American communities, we must invest in the success of African American businesses and entrepreneurs. </span><b> </b></p>
+<p><b>Ensuring equal access to credit and capital. </b><span style="font-weight: 400;">African American businesses often lack the capital they need to succeed. </span><span style="font-weight: 400;">African American businesses are </span><a href="https://www.clevelandfed.org/en/newsroom-and-events/press-releases/2017/pr-20171108-atlanta-and-cleveland-feds.aspx"><span style="font-weight: 400;">rejected</span></a><span style="font-weight: 400;"> at a rate nearly 20% higher than the white-owned firms. Even worse, African American businesses that do get funding receive </span><a href="https://www.clevelandfed.org/en/newsroom-and-events/press-releases/2017/pr-20171108-atlanta-and-cleveland-feds.aspx"><span style="font-weight: 400;">only 40%</span> </a><span style="font-weight: 400;">of the funds requested as compared to 70% for white businesses. </span><span style="font-weight: 400;">To increase investment and access to capital, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Double funding for the State Small Business Credit Initiative.</b><span style="font-weight: 400;"> The Obama-Biden Administration created the </span><a href="https://www.treasury.gov/resource-center/sb-programs/Pages/ssbci.aspx"><span style="font-weight: 400;">State Small Business Credit Initiative</span></a><span style="font-weight: 400;"> (SSBCI) to support small businesses, driving $10 billion in new lending for each $1 billion in SSBCI funds. Biden will extend the program through 2025 and double its federal funding to $3 billion, driving close to $30 billion of private sector investments to small businesses all told, especially those owned by women and people of color.</span></li>
+<li style="font-weight: 400;"><b>Expand the New Markets Tax Credit, make the program permanent, and double Community Development Financial Institutions (CDFI) funding. </b><span style="font-weight: 400;">The New Markets Tax Credit has helped draw</span><a href="https://www.cdfa.net/cdfa/cdfaweb.nsf/ord/2018SSITCFC-Dick_Davies.html/$file/NMTC%20101.pdf"> <span style="font-weight: 400;">tens of billions</span></a><span style="font-weight: 400;"> of dollars in new capital to low-income communities, providing tax credits to investors in community development organizations that support everything from supermarkets to real estate projects to manufacturing plants.  As part of his plan to reinvest in communities across the country, including in rural areas, Biden will also double funding for the Community Development Financial Institutions (CDFI) Fund, which</span><a href="https://www.cdfifund.gov/Pages/default.aspx"> <span style="font-weight: 400;">supports</span></a><span style="font-weight: 400;"> local, mission-driven financial institutions in low-income areas around the U.S. This builds on Biden’s</span><a href="rural.html"> <span style="font-weight: 400;">proposal</span></a><span style="font-weight: 400;"> to support entrepreneurs in small towns and rural areas by expanding both the Rural Microentrepreneur Assistance Program and the number of Rural Business Investment Companies, to help rural businesses attract capital.</span></li>
+<li style="font-weight: 400;"><b>Improve and expand the Small Business Administration programs that most effectively support African American-owned businesses.</b><span style="font-weight: 400;"> The Small Business Administration’s (SBA) programs have been and remain one of the most effective ways of accessing capital for African American-owned businesses. Biden will strengthen these existing programs by:</span>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensuring the SBA has the funding it needs to support African American-owned business and others in the current crisis and beyond. Trump has</span><a href="https://nsba.biz/fy2021-budget-cuts-to-sba/"> <span style="font-weight: 400;">once again</span></a><span style="font-weight: 400;"> proposed a </span><a href="https://www.usatoday.com/story/money/usaandmain/2020/02/26/does-president-trump-hate-small-businesses/4869747002/"><span style="font-weight: 400;">massive cut</span></a><span style="font-weight: 400;"> of 25% in the SBA budget for FY2021, including a 35% cut in funding to Small Business Development Centers, a 20% cut to the SBA Microloan Program, and significantly increased fees for the </span><a href="https://www.sba.gov/partners/lenders/7a-loan-program/types-7a-loans"><span style="font-weight: 400;">7(a) loan program</span></a><span style="font-weight: 400;">, which is SBA’s main loan program for small businesses.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Making permanent the successful Community Advantage loan program, originally </span><a href="https://www.federalregister.gov/documents/2011/02/18/2011-3758/community-advantage-pilot-program"><span style="font-weight: 400;">created</span></a><span style="font-weight: 400;"> during the Obama-Biden Administration. The program, which provides capital for startups and growing small businesses located in particularly underserved communities through CDFIs and other mission-driven lenders, has been run as a pilot program since 2011. Biden will make this program permanent and reverse </span><a href="https://smallbusiness.house.gov/uploadedfiles/05-21-19_hearing_memo.pdf"><span style="font-weight: 400;">rules enacted by the Trump Administration</span></a><span style="font-weight: 400;"> that are making it more difficult for lenders to participate in the program and lend to African American-owned businesses and other businesses located in underserved communities.</span></li>
+</ul>
+</li>
+</ul>
+<p><b>Increase opportunities for African American-owned businesses to obtain or participate in federal contracts.</b><span style="font-weight: 400;"> In the aftermath of the 2008-2009 financial crisis, well over $100 billion of federal prime contracting dollars were </span><a href="https://www.sba.gov/sites/default/files/files/small_business_report_final.pdf"><span style="font-weight: 400;">awarded</span></a><span style="font-weight: 400;"> to minority-owned small businesses. And, between 2013 and 2016, the Obama-Biden Administration </span><a href="https://www.sba.gov/about-sba/sba-newsroom/press-releases-media-advisories/federal-government-achieves-small-business-contracting-goal-fifth-consecutive-year-record-breaking"><span style="font-weight: 400;">increased</span></a><span style="font-weight: 400;"> federal prime contract dollars going to Small Disadvantaged Businesses by nearly 30%, from $30.6 billion to $39.1 billion. The Obama-Biden Administration also </span><a href="https://obamawhitehouse.archives.gov/the-press-office/presidential-memorandum-interagency-task-force-federal-contracting-opportunities-sm"><span style="font-weight: 400;">created</span></a><span style="font-weight: 400;"> an Interagency Task Force on Federal Contracting Opportunities for Small Businesses, which included a focus on contracting opportunities for minority-owned businesses. The Obama-Biden Administration implemented its vision of more equitable access to federal contracts through a variety of channels, including </span><a href="https://www.mbda.gov/news/press-releases/2011/11/mbda-invests-175-million-launch-new-federal-procurement-business-center"><span style="font-weight: 400;">by launching</span></a><span style="font-weight: 400;"> the Federal Procurement Center (FPC) as part of the Commerce Department&#8217;s Minority Business Development Agency (MBDA). The FPC, a first-of-its-kind program, helps minority-owned firms apply for and win federal government contracts. As President, Biden will build on these efforts to support the expansion of opportunities for minority-owned small businesses.  </span></p>
+<p><b>Increase funding for the Minority Business Development Agency budget. </b><span style="font-weight: 400;">MBDA plays a critical role in supporting the development and growth of minority-owned businesses around the country, as well as providing needed assistance to federal and state agencies so that they award minority-owned businesses procurement contracts. The Trump Administration has pushed for a 75% </span><a href="https://www.commerce.gov/sites/default/files/2019-03/fy2020_mbda_congressional_budget_justification.pdf"><span style="font-weight: 400;">cut</span></a><span style="font-weight: 400;"> in MBDA’s budget. Biden would protect and call for increased funding for it.</span></p>
+<p><b>Protect small and disadvantaged businesses from federal and state contract bundling which often locks out African American-owned smaller firms from effectively bidding on procurement contracts. </b><span style="font-weight: 400;">Biden will build on the anti-bundling provisions of the </span><a href="https://fas.org/sgp/crs/misc/R41133.pdf"><span style="font-weight: 400;">Small Business Jobs Act of 2010</span></a><span style="font-weight: 400;">, by having the Office of Management and Budget, SBA, and MBDA conduct a government-wide review of existing contract bundling to determine whether agencies are following existing rules and whether agencies have the ability to further ensure small business participation in federal and state procurement opportunities.</span></p>
+<p><b>Make sure economic relief because of COVID-19 reaches the African American businesses that need it most.</b><span style="font-weight: 400;"> The first installment of the Paycheck Protection Program (PPP) largely left out minority-owned businesses. The Center for Responsible Lending estimates</span><a href="https://www.responsiblelending.org/sites/default/files/nodes/files/research-publication/crl-cares-act2-smallbusiness-apr2020.pdf?mod=article_inline"> <span style="font-weight: 400;">that</span></a><span style="font-weight: 400;"> more than 90% of small businesses owned by people of color will not receive loans. The program is not taking into account the specific challenges that African American businesses face in accessing funding and complying with the program’s requirements. The financial institutions best positioned to help African American small businesses don’t have the systems to quickly deploy the funding in a first-come first-served approach. The second phase set aside </span><a href="https://www.everycrsreport.com/reports/IN11355.html"><span style="font-weight: 400;">$60 billion</span></a><span style="font-weight: 400;"> for community banks and CDFIs, as well as mid-sized banks, which can better serve smaller businesses and minority-owned firms. This is a good start, but more needs to be done:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Provide AfricanAmerican entrepreneurs and other small business owners technical assistance</b><span style="font-weight: 400;"> to help them apply for funding, as well as legal and accounting support to ensure their documentation (such as their financial records, tax filings, and other legal documents) is all in correct order. The Trump Administration and Congress should provide an additional infusion of operating capital to these CDFIs and community-focused lenders to ensure all African American entrepreneurs have access to the technical assistance and support they need.</span></li>
+<li style="font-weight: 400;"><b>Reserve half of all the new PPP funds for small businesses with 50 employees or less</b><span style="font-weight: 400;">, so the bigger and more well-connected aren’t able to win in a first-come, first-served race. While this will help the vast majority of small businesses, it should also help target more funding to minority-owned businesses, given 98% of all minority-and women-owned businesses have fewer than 50 employees. </span></li>
+<li style="font-weight: 400;"><b>Produce a weekly dashboard to show which small businesses are accessing loans.</b><span style="font-weight: 400;"> Such a dashboard would help drive better data collection on the beneficiaries of small business support related to the COVID-19 epidemic, including in particular collecting data by gender and race, in order to ensure that the program isn’t leaving out communities, minority- and women-owned businesses, or the smallest businesses.</span></li>
+</ul>
+<table>
+<tbody>
+<tr>
+<td><b>SUPPORTING AFRICAN AMERICAN CHURCHES DURING THE COVID-19 CRISIS</b><b><br />
+</b><span style="font-weight: 400;">Shelter-in-place orders, while critical to protecting the health of parishioners, have hit churches hard as collection revenue has virtually stopped. African American churches are especially at-risk during the downturn. </span><a href="http://www.thearda.com/ncs/explorencs.asp?rowvar=18&amp;colvar=8"><span style="font-weight: 400;">One survey</span></a><span style="font-weight: 400;"> put the typical African American membership at just 75 congregants, while </span><a href="https://www.reuters.com/www.reuters.com/article/us-health-coronavirus-usa-church-finance/empty-pews-empty-collection-baskets-coronavirus-hits-u-s-church-finances-idUSKCN21T0EH"><span style="font-weight: 400;">others have noted</span></a><span style="font-weight: 400;"> that annual revenue is down since much of it is typically collected during Easter season. At a time when many Americans will seek spiritual assistance and social support, we must ensure the preservation of religious institutions. The decision by Congress to include non-profits, including religious institutions, in the Paycheck Protection Program and Emergency Injury Disaster Loan programs was a critical first step. But the support has not flowed to these institutions the way it should. Well-connected companies were first in line for the support funding.</span><span style="font-weight: 400;">Biden’s </span><a href="smallbusinesses/index.html"><span style="font-weight: 400;">True Small Business Fund</span></a><span style="font-weight: 400;"> would also apply to non-profit groups like African American churches. </span></td>
+</tr>
+</tbody>
+</table>
+<p><b>Expand African American Homeownership and Access to Affordable, Safe Housing</b><b> </b></p>
+<p><span style="font-weight: 400;">The gap between African American and white homeownership </span><a href="https://www.urban.org/urban-wire/these-five-facts-reveal-current-crisis-black-homeownership"><span style="font-weight: 400;">is larger today</span></a><span style="font-weight: 400;"> than when the Fair Housing Act was passed in 1968. This has contributed to a jaw-dropping </span><a href="https://www.federalreserve.gov/econres/notes/feds-notes/recent-trends-in-wealth-holding-by-race-and-ethnicity-evidence-from-the-survey-of-consumer-finances-20170927.htm"><span style="font-weight: 400;">racial wealth gap</span></a><span style="font-weight: 400;">—nearly 1,000%—between median white and African American households. Because home ownership is how most families save and build wealth, the disparity in home ownership is a central driver of the racial wealth gap. As President, Biden will invest $640 billion over 10 years so every American has access to housing that is affordable, stable, safe and healthy, accessible, energy efficient and resilient, and located near good schools and with a reasonable commute to their jobs. Biden will:</span></p>
+<p><b>Help families buy their first homes and build wealth by creating a new refundable, advanceable tax credit of up to $15,000. </b><span style="font-weight: 400;">Building off of a </span><a href="https://www.irs.gov/newsroom/first-time-homebuyer-credit-questions-and-answers-basic-information"><span style="font-weight: 400;">temporary tax credit</span></a><span style="font-weight: 400;"> expanded as part of the Recovery Act, this tax credit will be permanent and advanceable, meaning that homebuyers receive the tax credit when they make the purchase instead of waiting to receive the assistance when they file taxes the following year.</span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Tackle racial bias that leads to homes in communities of color being assessed by appraisers below their fair value. </b><span style="font-weight: 400;">Housing in communities primarily comprised of people of color is valued at </span><a href="https://www.brookings.edu/wp-content/uploads/2018/11/2018.11_Brookings-Metro_Devaluation-Assets-Black-Neighborhoods_final.pdf"><span style="font-weight: 400;">tens of thousands of dollars</span></a><span style="font-weight: 400;"> below majority-white communities even when all other factors are the same, contributing to the racial wealth gap. To counteract this racial bias, Biden will establish a national standard for housing appraisals that ensures appraisers have adequate training and a full appreciation for neighborhoods and do not hold implicit biases because of a lack of community understanding. </span></p>
+<p><b>Roll back Trump Administration policies gutting fair lending and fair housing protections, strongly enforce fair credit reporting laws, </b><b>and create a new </b><a href="https://www.demos.org/policy-briefs/establish-public-credit-registry"><b>Public Credit Reporting Agency</b></a><b>.</b><span style="font-weight: 400;"> Being able to obtain a credit report is a critical step for homeownership. Biden has long been an advocate for eliminating discrimination in the provision of credit, including </span><a href="https://www.congress.gov/bill/94th-congress/senate-bill/1927?s=1&amp;r=4"><span style="font-weight: 400;">his legislation amending</span></a><span style="font-weight: 400;"> the Equal Credit Opportunity Act which prohibited creditors from discriminating against consumer applicants for credit. Today’s credit reports, which are issued by just three large private companies, are rife with problems: they often contain errors, they leave many </span><a href="https://files.consumerfinance.gov/f/201505_cfpb_data-point-credit-invisibles.pdf"><span style="font-weight: 400;">“</span><span style="font-weight: 400;">credit invisible</span><span style="font-weight: 400;">”</span></a><span style="font-weight: 400;"> due to the sources used to generate a credit score, and they contribute to </span><a href="https://www.nclc.org/images/pdf/credit_discrimination/Past_Imperfect050616.pdf"><span style="font-weight: 400;">racial disparities</span></a><span style="font-weight: 400;">, </span><a href="https://www.urban.org/node/100204"><span style="font-weight: 400;">widening the African American homeownership gap</span></a><span style="font-weight: 400;">, Biden will create a new public credit reporting agency within the Consumer Financial Protection Bureau to provide consumers with a government option that seeks to minimize racial disparities, for example by ensuring the algorithms used for credit scoring don’t have a discriminatory impact, and by accepting non-traditional sources of data like rental history and utility bills to establish credit.</span></p>
+<p><b>Protect homeowners and renters from abusive lenders and landlords through a new Homeowner and Renter Bill of Rights.</b><span style="font-weight: 400;"> This new Bill of Rights will prevent mortgage brokers from leading borrowers into loans that cost more than appropriate, prevent mortgage servicers from advancing a foreclosure when the homeowner is in the process of receiving a loan modification, give homeowners a private right of action to seek financial redress from mortgage lenders and servicers that violate these protections, and give borrowers the right to a timely notification on the status of their loan modifications and to be able to appeal modification denials.</span></p>
+<p><b>Roll back Trump Administration policies gutting fair lending and fair housing protections for homeowners. </b></p>
+<ul>
+<li style="font-weight: 400;"><b>Give local elected officials the tools and resources they need to combat gentrification. </b><span style="font-weight: 400;">Biden will implement the Obama-Biden Administration’s </span><a href="https://www.huduser.gov/portal/sites/default/files/pdf/AFFH_Final_Rule.pdf"><span style="font-weight: 400;">Affirmatively Furthering Fair Housing Rule</span></a><span style="font-weight: 400;"> requiring communities receiving certain federal funding to proactively examine housing patterns and identify and address policies that have a discriminatory effect. The Trump Administration </span><a href="https://s3.amazonaws.com/public-inspection.federalregister.gov/2018-00106.pdf"><span style="font-weight: 400;">suspended</span></a><span style="font-weight: 400;"> this rule in 2018. Biden will ensure effective and rigorous enforcement of the Fair Housing Act and the Home Mortgage Disclosure Act. And, he will reinstate the federal </span><a href="https://www.hud.gov/program_offices/housing/mfh/progdesc/riskshare542c"><span style="font-weight: 400;">risk-sharing program</span></a><span style="font-weight: 400;"> which has helped secure financing for </span><a href="https://www.ncsha.org/advocacy-issues/fha-hfa-risk-share-program/"><span style="font-weight: 400;">thousands</span><b> </b></a><span style="font-weight: 400;">of affordable rental housing units in partnership with housing finance agencies.   </span></li>
+<li style="font-weight: 400;"><b>Hold financial institutions accountable for discriminatory practices in the housing market.</b><span style="font-weight: 400;"> In 2013, the Obama-Biden Administration </span><a href="https://www.hud.gov/sites/documents/DISCRIMINATORYEFFECTRULE.PDF"><span style="font-weight: 400;">codified</span></a><span style="font-weight: 400;"> a long-standing, court-supported view that lending practices that have a discriminatory effect can be challenged even if discrimination was not explicit. But now the Trump Administration is </span><a href="https://www.federalregister.gov/documents/2019/08/19/2019-17542/huds-implementation-of-the-fair-housing-acts-disparate-impact-standard"><span style="font-weight: 400;">seeking</span></a><span style="font-weight: 400;"> to gut this disparate impact standard by significantly increasing the burden of proof for those claiming discrimination. In the Biden Administration, this change will be reversed to ensure financial institutions are held accountable for serving all customers. </span></li>
+<li style="font-weight: 400;"><b>Restore the federal government’s power to enforce settlements against discriminatory lenders. </b><span style="font-weight: 400;">The Trump Administration has </span><a href="https://www.washingtonpost.com/news/business/wp/2018/02/01/trump-administration-strips-consumer-watchdog-office-of-enforcement-powers-against-financial-firms-in-lending-discrimination-cases/"><span style="font-weight: 400;">stripped the Office of Fair Lending and Equal Opportunity</span></a><span style="font-weight: 400;">, a division of the Consumer Financial Protection Bureau, of its power to enforce settlements against lenders found to have discriminated against borrowers – for example by charging significantly higher interest rates for people of color than white individuals. Biden will return power to the division so it can protect consumers from discrimination.</span></li>
+</ul>
+<p><b>Strengthen and expand the Community Reinvestment Act to ensure that our nation’s bank and non-bank financial services institutions are serving all communities.</b><span style="font-weight: 400;"> The </span><a href="https://www.occ.treas.gov/topics/consumers-and-communities/cra/index-cra.html"><span style="font-weight: 400;">Community Reinvestment Act</span><b> </b></a><span style="font-weight: 400;">currently regulates banks, but does little to ensure that “fintechs” and non-bank lenders are providing responsible access to all members of the community. On top of that gap, the Trump Administration is </span><a href="https://ncrc.org/proposed-changes-to-the-community-reinvestment-act-will-be-disastrous-for-low-and-moderate-income-communities/"><span style="font-weight: 400;">proposing</span></a><span style="font-weight: 400;"> to </span><a href="https://nationalfairhousing.org/2019/12/13/diverse-coalition-issues-joint-statement-on-proposed-changes-to-community-reinvestment-act/"><span style="font-weight: 400;">weaken</span></a><span style="font-weight: 400;"> the law by allowing lenders to receive a passing rating even if the lenders are excluding many neighborhoods and borrowers. Biden will expand the Community Reinvestment Act to apply to mortgage and insurance companies, to add a requirement for financial services institutions to provide a statement outlining their commitment to the public interest, and, importantly, to close loopholes that would allow these institutions to avoid lending and investing in all of the communities they serve. </span></p>
+<p><b>Eliminate local and state housing regulations that perpetuate discrimination. </b><span style="font-weight: 400;">Exclusionary zoning has for decades been strategically used to keep people of color and low-income families out of certain communities. As President, Biden will enact legislation requiring any state receiving federal dollars through the Community Development Block Grants or Surface Transportation Block Grants to develop a strategy for inclusionary zoning, as proposed in the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/4808"><span style="font-weight: 400;">HOME Act of 2019</span></a><span style="font-weight: 400;"> by Majority Whip Clyburn and Senator Cory Booker. Biden will also invest $300 million in </span><a href="https://www.hud.gov/sites/documents/19-FY16CJ-LHPGRANTS.PDF"><span style="font-weight: 400;">Local Housing Policy Grants</span></a><span style="font-weight: 400;"> to give states and localities the technical assistance and planning support they need to eliminate exclusionary zoning policies and other local regulations that contribute to sprawl. </span></p>
+<p><b>Increase access to affordable housing. </b><span style="font-weight: 400;">Biden will invest in expanding the supply of affordable housing by: </span></p>
+<ul>
+<li style="font-weight: 400;"><b>Establishing a $100 billion Affordable Housing Fund to construct and upgrade affordable housing. </b><span style="font-weight: 400;">He will ensure funding supports community development efforts, expanding the </span><a href="https://www.hud.gov/hudprograms/home-program"><span style="font-weight: 400;">HOME program</span></a><span style="font-weight: 400;"> and the </span><a href="https://www.cdfifund.gov/programs-training/Programs/cmf/Pages/default.aspx"><span style="font-weight: 400;">Capital Magnet Fund</span></a><span style="font-weight: 400;">, which spurs private investment in affordable housing and economic development in distressed communities.</span></li>
+<li style="font-weight: 400;"><b>Providing tax incentives for the construction of more affordable housing in communities that need it most.</b><span style="font-weight: 400;"> As President, Biden will expand the </span><a href="https://www.huduser.gov/portal/datasets/lihtc.html"><span style="font-weight: 400;">Low-Income Housing Tax Credit</span></a><span style="font-weight: 400;"> – a tax provision designed to incentivize the construction or rehabilitation of affordable housing for low-income tenants that has created </span><a href="https://www.urban.org/sites/default/files/publication/98758/lithc_how_it_works_and_who_it_serves_final_2.pdf"><span style="font-weight: 400;">nearly 3 million</span></a><span style="font-weight: 400;"> affordable housing units since the mid-1980s – with a </span><a href="https://www.treasury.gov/resource-center/tax-policy/Documents/General-Explanations-FY2017.pdf"><span style="font-weight: 400;">$10 billion investment</span></a><span style="font-weight: 400;">. Biden will also invest in the development and rehabilitation of single family homes across distressed urban, suburban, and rural neighborhoods through the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3316"><span style="font-weight: 400;">Neighborhood Homes Investment Act</span></a><span style="font-weight: 400;">. </span></li>
+</ul>
+<p><b>Protect homeowners during the COVID-19 crisis. </b><span style="font-weight: 400;">Biden has previously called for a rent freeze for qualifying individuals for the duration of the crisis, and a halt to foreclosures and evictions as people get back on their feet. </span><a href="https://www.cnbc.com/2020/04/11/jpmorgan-chase-to-raise-mortgage-borrowing-standards-as-economic-outlook-darkens.html"><span style="font-weight: 400;">Some banks</span></a><span style="font-weight: 400;"> are raising mortgage borrowing standards and requiring significantly higher down payments. Biden would also restrict the big banks’ ability to abandon the African American community by withdrawing from housing markets for all but the best-off buyers. </span></p>
+<p><i><span style="font-weight: 400;">Read Joe Biden’s full housing plan at </span></i><a href="housing.html"><i><span style="font-weight: 400;">joebiden.com/housing</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+<p><b>Promote More Equitable Wealth Building and a More Secure Retirement</b></p>
+<p><span style="font-weight: 400;">The typical white family holds </span><a href="https://www.brookings.edu/blog/up-front/2020/02/27/examining-the-black-white-wealth-gap/"><span style="font-weight: 400;">approximately</span></a><span style="font-weight: 400;"> ten times the wealth as the typical African Americans family—a disparity that dramatically increased over the past half century. Today, the typical wealth of a white family is $171,000, </span><a href="https://apps.urban.org/features/wealth-inequality-charts/index.html"><span style="font-weight: 400;">compared </span></a><span style="font-weight: 400;">to just $17,600 for the typical African American family. This inequity means that many African American families have insufficient wealth to enjoy a secure retirement. In fact, </span><a href="https://apps.urban.org/features/wealth-inequality-charts/"><span style="font-weight: 400;">in 2016, the average African American family had just $25,000 saved for retirement</span></a><span style="font-weight: 400;">—due in part to a retirement saving system that affords limited incentives for middle-class African American families to save for retirement. To make the U.S. retirement system more secure and equitable, Biden will:</span></p>
+<p><b>Equalize the tax benefits of defined contribution plans.</b><span style="font-weight: 400;"> The current tax benefits for retirement savings are based on the concept of deferral, whereby savers get to exclude their retirement contributions from tax, see their savings grow tax free, and then pay taxes when they withdraw money from their account. This system provides upper-income families with a much stronger tax break for saving and a limited benefit for middle-class and other workers with lower earnings. </span></p>
+<p><span style="font-weight: 400;">The Biden Plan will equalize benefits across the income scale, so that low- and middle-income workers will also get a tax break when they put money away for retirement.  </span></p>
+<p><b>Remove penalties for caregivers who want to save for retirement.</b><span style="font-weight: 400;"> African Americans are </span><a href="https://www.caregiver.org/caregiver-statistics-demographics"><span style="font-weight: 400;">more likely to be caregivers than whites</span><span style="font-weight: 400;">. </span><span style="font-weight: 400;">They also bear disproportionate caregiving responsibilities</span></a><span style="font-weight: 400;"> relative to white caregivers. Biden will support informal caregivers by allowing them to make “catch-up” contributions to retirement accounts, even if they’re not earning income in the formal labor market, as has been </span><a href="https://walorski.house.gov/caregivers-retirement-savings/"><span style="font-weight: 400;">proposed in bipartisan legislation</span> </a><span style="font-weight: 400;">by Representatives Jackie Walorski and Harley Rouda.</span></p>
+<p><b>Give small businesses a tax break for starting a retirement plan and giving workers the chance to save at work.</b> <a href="https://www.aarp.org/content/dam/aarp/ppi/2014-10/aarp-workplace-retirement-plans-build-economic-security.pdf"><span style="font-weight: 400;">Half of African American workers</span></a><span style="font-weight: 400;"> lack access to a retirement saving plan at work. Biden calls for widespread adoption of workplace savings plans and offers tax credits to small businesses to offset much of the costs. Under Biden’s plan, almost all workers without a pension or 401(k)-type plan will have access to an “automatic 401(k),” which provides the opportunity to easily save for retirement at work—putting millions of middle-class families in the path to a secure retirement.</span></p>
+<p><b>Make Social Security benefits more generous and equitable.</b><span style="font-weight: 400;"> Older African Americans </span><a href="https://www.ncpssm.org/our-issues/social-security/african-americans-and-social-security/"><span style="font-weight: 400;">disproportionately</span></a><span style="font-weight: 400;"> depend on Social Security benefits for retirement income. To bolster retirement security for older African Americans who have spent a lifetime working, the Biden Social Security reform plan will raise benefits for vulnerable beneficiaries—including widows and widowers, low-wage workers, and long duration beneficiaries who may have exhausted all other assets. In addition, Biden proposes to boost average benefits across the board while putting Social Security on a long-term path to solvency by raising payroll taxes for workers with more than $400,000 in earnings. </span></p>
+<p><b>Invest in Communities that Need it Most</b></p>
+<p><b>Fully implement Congressman Clyburn’s </b><a href="https://clyburn.house.gov/press-release/clyburn-booker-announce-major-legislation-fight-poverty-america-new-report-details"><b>10-20-30 Plan</b></a><b> to help all individuals living in persistently impoverished communities. </b><span style="font-weight: 400;">To tackle persistent poverty in all communities, in both urban and rural America, Vice President Biden supports applying Congressman James Clyburn’s </span><a href="https://clyburn.house.gov/press-release/clyburn-booker-announce-major-legislation-fight-poverty-america-new-report-details"><span style="font-weight: 400;">10-20-30 formula</span></a><span style="font-weight: 400;"> to all federal programs, targeting funds to census tracts with persistent poverty.</span></p>
+<p><b>Create a White House “StrikeForce” to partner with rural communities to help them access federal funds. </b><span style="font-weight: 400;">The Biden Administration will create a White House StrikeForce consisting of agency leaders who will partner with community-building organizations in persistent poverty rural communities and help them unlock federal resources. This approach is modeled on the </span><a href="https://nifa.usda.gov/topic/strikeforce"><span style="font-weight: 400;">StrikeForce</span></a><span style="font-weight: 400;"> Secretary Tom Vilsack successfully established in the U.S. Department of Agriculture during the Obama-Biden Administration.</span></p>
+<p><b>Drive additional capital into low-income communities to spur the development of low-income housing.</b><span style="font-weight: 400;"> The </span><a href="https://www.cdfifund.gov/programs-training/Programs/new-markets-tax-credit/Pages/default.aspx"><span style="font-weight: 400;">New Markets Tax Credit</span></a><span style="font-weight: 400;"> draws in $8 of private investment for every $1 of federal investment in low-income communities by providing tax credits to investors in community development organizations that support everything from supermarkets to real estate projects to manufacturing plants. Biden will expand the program to provide $5 billion in support every year, and will make the program permanent so communities can take the credit into account in their long-term planning. </span></p>
+<p><b>Build and modernize infrastructure in communities that need it most.</b><span style="font-weight: 400;"> Biden has offered a </span><a href="infrastructure/index.html"><span style="font-weight: 400;">transformational $1.3 trillion plan</span></a><span style="font-weight: 400;"> to create millions of good-paying, union jobs—roads, ports, waterways, schools, broadband, schools, and more. His plan includes specific measures to close the resource gap in communities of color. Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Invest in historically marginalized communities and bring everyone to the table for transportation planning.</b><span style="font-weight: 400;"> Biden will create a new Community Restoration Fund, specifically for neighborhoods where historic transportation investments cut people off from jobs, schools, and businesses. And, he will work to make sure towns and cities directly receive a portion of existing federal transportation investments.</span></li>
+<li style="font-weight: 400;"><b>Bring broadband to every American household.</b><span style="font-weight: 400;"> As President, Biden will close the digital divide. First, he will invest $20 billion in rural broadband infrastructure. He will triple funding to expand broadband access in rural areas, and ensure that the work of installing broadband provides high-paying jobs with benefits. He will encourage competition among providers, to increase speeds and decrease prices in urban, suburban, and rural areas. Biden will also work with the FCC to reform its Lifeline program, increasing the number of participating broadband providers, reducing fraud and abuse, and ultimately offering more low-income Americans the subsidies needed to access high-speed internet. Finally, Biden will work with Congress to pass the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/1167"><span style="font-weight: 400;">Digital Equity Act</span></a><span style="font-weight: 400;">, to help communities tackle the digital divide.</span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Joe Biden’s full plan to invest in infrastructure and our communities at joebiden.com/infrastructure, and his full plan for older Americans at joebiden.com/older-Americans.</span></i></p>
+<p><b>Support African American Workers</b><b> </b></p>
+<p><span style="font-weight: 400;">Biden is proposing a plan to grow a stronger, more inclusive middle class—the backbone of the American economy—by strengthening public and private sector unions and helping all workers bargain successfully for what they deserve. Biden knows that African Americans face unique challenges as workers. Biden will support these workers by:</span></p>
+<p><b>Fight for equal pay.</b><span style="font-weight: 400;"> African American women </span><a href="https://nwlc-ciw49tixgw5lbab.stackpathdns.com/wp-content/uploads/2018/10/The-Wage-Gap-Who-How-Why-and-What-to-Do-2018.pdf"><span style="font-weight: 400;">earn</span></a><span style="font-weight: 400;">ed</span><span style="font-weight: 400;"> 61 cents for every dollar earned by white men in 2017. This totals $23,653 less in earnings in a year and $946,120 less in a lifetime.</span><span style="font-weight: 400;"> The Obama-Biden Administration protected more workers against retaliation for discussing wages and required employers to collect and report wage gaps to the federal government. As President, Biden will codify this into law, and he’ll make it easier for workers to join together in class action lawsuits, shift the burden to employers to prove pay gaps exist for job-related reasons, and increase penalties against companies that discriminate, as called for in the </span><a href="https://edlabor.house.gov/imo/media/doc/2019-02-26%20Paycheck%20Fairness%20Section%20by%20Section.pdf"><span style="font-weight: 400;">Paycheck Fairness Act</span></a><span style="font-weight: 400;">. And, he’ll hold companies accountable by increasing funding for investigators and enforcement actions.</span></p>
+<p><b>Ensure federally funded projects protect workers. </b><span style="font-weight: 400;">Biden will propose infrastructure legislation that incorporates labor provisions contained in Senator Merkley’s </span><a href="https://www.merkley.senate.gov/imo/media/doc/Good%20Jobs%20for%2021st%20Century%20Energy%20Act%201%20pager.pdf"><span style="font-weight: 400;">Good Jobs for 21st Century Energy Act</span></a><span style="font-weight: 400;">, adopting all basic labor protections, ensuring that all investments meet Davis-Bacon wage guidelines, and banning anti-worker provisions like forced arbitration and the overuse of temporary staffing agencies. He will require federally funded projects to employ workers trained in registered apprenticeship programs, and to prioritize Project Labor and Community Workforce Agreements in federal procurement procedures. His proposal will make sure that national infrastructure investments create millions of middle-class jobs, benefiting union and non-union workers across industries. </span><i><span style="font-weight: 400;">Read Joe Biden’s full plan to encourage unions and collective bargaining at joebiden.com/empowerworkers.</span></i></p>
+<p><b>Encourage diverse hiring and promotion practices. </b><span style="font-weight: 400;">To push companies to look hard at their hiring practices and root out discrimination, Biden will require companies to make public their overall workforce diversity and senior-level diversity. He will support employers in increasing diverse hiring and promotion by providing federal grants to states, cities, and organizations to develop and implement evidence-based practices and innovative solutions, such as </span><a href="https://s27147.pcdn.co/wp-content/uploads/Ban-the-Box-Fair-Chance-Fact-Sheet.pdf"><span style="font-weight: 400;">ban the box legislation</span></a><span style="font-weight: 400;">, to push employers to hire and retain diverse employees and end discriminatory hiring policies. And, he will hold companies accountable by increasing funding for the Equal Employment Opportunity Commission, the U.S. Labor Department’s Office of Federal Contract Compliance Programs (OFCCP), and the U.S. Justice Department’s Civil Rights Division to increase the number of investigators. </span></p>
+<p><b>Restore the federal government’s role in setting the bar for other employers to advance opportunities for all workers. </b><span style="font-weight: 400;">Biden will restore and build on the Obama-Biden Administration’s Fair Pay and Safe Workplaces </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2014/07/31/fact-sheet-fair-pay-and-safe-workplaces-executive-order"><span style="font-weight: 400;">executive order</span></a><span style="font-weight: 400;">, which </span><a href="https://www.federalregister.gov/documents/2017/11/06/2017-23588/guidance-for-executive-order-13673-fair-pay-and-safe-workplaces"><span style="font-weight: 400;">Trump revoked</span></a><span style="font-weight: 400;">, requiring employers’ compliance with labor and employment laws be taken into account in determining whether they are sufficiently responsible to be entrusted with federal contracts. And, he will mandate that contractors publicly disclose plans to recruit and advance people of color, women, people with disabilities, and covered veterans and will increase enforcement efforts, including pursuing debarment where contractors refuse to end discriminatory practices. </span></p>
+<p><b>Protect essential workers in the COVID-19 crisis. </b><span style="font-weight: 400;">A </span><a href="https://www.mckinsey.com/industries/public-sector/our-insights/covid-19-investing-in-black-lives-and-livelihoods"><span style="font-weight: 400;">report</span></a><span style="font-weight: 400;"> published in April found that “Black Americans are overrepresented in nine of the ten lowest-paid, high-contact essential services, which elevates their risk of contracting the virus.” Joe Biden </span><a href="joe-bidens-4-point-plan-for-our-essential-workers.html"><span style="font-weight: 400;">has released a plan</span></a><span style="font-weight: 400;"> to protect these essential workers, and give them the respect, dignity, and pay they deserve.  If he were President, he would:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure all frontline workers, like grocery store employees, qualify for priority access to personnel protective equipment (PPE) and COVID-19 testing based upon their risk of exposure to the virus, as well as child care assistance, and other forms of emergency COVID-19 support.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expand access to effective personal protective equipment, including through use of the Defense Production Act.  </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Establish and enforce health and safety standards for workplaces. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Enact premium pay for frontline workers putting themselves at risk. There is no substitute for ensuring worker safety, but all frontline workers putting their lives on the line should receive </span><a href="https://medium.com/@JoeBiden/joe-biden-outlines-new-steps-to-ease-economic-burden-on-working-people-e3e121037322"><span style="font-weight: 400;">premium pay</span></a><span style="font-weight: 400;"> for their work. This premium pay should be in addition to paid sick leave and care-giving leave for every worker, which Biden </span><a href="joe-bidens-4-point-plan-for-our-essential-workers.html"><span style="font-weight: 400;">called for</span></a><span style="font-weight: 400;"> in his plan, and $15 minimum wage for all workers. </span></li>
+</ul>
+<p><b>Turn unemployment insurance into </b><a href="the-biden-plan-to-scale-up-employment-insurance-by-reforming-short-time-compensation-programs/index.html"><b>employment insurance</b></a><b>. </b><span style="font-weight: 400;">African American workers </span><a href="https://www.mckinsey.com/industries/public-sector/our-insights/covid-19-investing-in-black-lives-and-livelihoods"><span style="font-weight: 400;">are more likely</span></a><span style="font-weight: 400;"> to work in jobs subject to reduced hours, furloughs, and layoffs during the pandemic. Biden would transform unemployment insurance into employment insurance for millions of workers by getting states to adopt and dramatically scale up short-time compensation programs. Under short-time compensation—also known as work sharing—firms in distress keep workers employed but at reduced hours and the federal government helps make up the difference in wages. The Obama-Biden administration </span><a href="https://oui.doleta.gov/unemploy/docs/stc_report.pdf"><span style="font-weight: 400;">championed this approach</span></a><span style="font-weight: 400;"> in the U.S., and so far </span><a href="https://oui.doleta.gov/unemploy/docs/stc_fact_sheet.pdf"><span style="font-weight: 400;">more than half of states have established</span></a><span style="font-weight: 400;"> short-time compensation programs. For the current crisis, the administration should move rapidly to scale up short-time compensation in all 50 states, the District of Columbia, Puerto Rico, and the U.S. Virgin Islands to save or restore millions of jobs. </span></p>
+<p><b>EXPAND ACCESS TO HIGH-QUALITY EDUCATION AND TACKLE RACIAL INEQUITY IN OUR EDUCATION SYSTEM</b></p>
+<p><span style="font-weight: 400;">As President, Biden will ensure that no child’s future is determined by their zip code, parents’ income, race, or disability. Biden will build an education system that starts with investing in our children at birth and helps every student get some education beyond a high school diploma, whether a certification, associate’s degree, or bachelor’s degree. Biden will:</span></p>
+<p><b>Provide high-quality, universal pre-kindergarten </b><b>for all three- and four-year-olds. </b><span style="font-weight: 400;">For families with young children, finding highly quality </span><span style="font-weight: 400;">pre</span><span style="font-weight: 400;">-K is a major financial, logistical, and emotional burden, with potentially lifelong consequences for their children. As President, Biden will work with states to offer </span><span style="font-weight: 400;">pre</span><span style="font-weight: 400;">-K for all three- and four-year-olds. </span></p>
+<p><b>Eliminate the funding gap between white and non-white districts, and rich and poor districts in order to give teachers a raise and expand STEM curriculum in underserved school districts. </b><span style="font-weight: 400;">There’s an estimated </span><a href="https://edbuild.org/content/23-billion"><span style="font-weight: 400;">$23 billion</span></a><span style="font-weight: 400;"> annual funding gap between white and non-white school districts today. Biden will work to close this gap by nearly tripling Title I funding,</span><span style="font-weight: 400;"> the federal program funding schools with a high percentage of students from low-income families. This new funding will first be used to ensure teachers at Title I schools are paid competitively, three- and four-year olds have access to pre-school, and districts provide access to rigorous coursework</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">including computer science and other STEM subjects</span><span style="font-weight: 400;">—</span><span style="font-weight: 400;">across all their schools, not just a few.</span></p>
+<p><b>Improve teacher diversity</b><b><i>.</i></b> <span style="font-weight: 400;">For African American students, having </span><a href="https://www.iza.org/publications/dp/10630"><span style="font-weight: 400;">just one African American teacher</span></a><span style="font-weight: 400;"> in elementary school reduces the probability of dropping out. Biden will support more innovative approaches to recruiting teachers of color, including supporting high school students in accessing dual-enrollment classes that give them an edge in teacher preparation programs, helping paraprofessionals work towards their teaching certificate, and working with Historically Black Colleges and Universities and Minority-Serving Institutions to recruit and prepare teachers. </span></p>
+<p><b>Reinstate the Obama-Biden Administration’s actions to diversify our schools</b><b><i>. </i></b><span style="font-weight: 400;">As President, Biden will reinstate the Department of Education </span><a href="https://www2.ed.gov/rschstat/research/pubs/advancing-diversity-inclusion.pdf"><span style="font-weight: 400;">guidance</span></a><span style="font-weight: 400;"> that supported schools in legally pursuing desegregation strategies and recognized institutions of higher education’s interests in creating diverse student bodies. And, he will provide grants to school districts to create plans and implement strategies to diversify their schools.</span></p>
+<p><b>Ensure that African American students are not inappropriately identified as having disabilities, while also ensuring that African American students with disabilities have the support to succeed.</b><span style="font-weight: 400;"> African American students are</span><a href="https://www.childtrends.org/child-trends-5/5-things-know-racial-ethnic-disparities-special-education"> <span style="font-weight: 400;">40%</span></a><span style="font-weight: 400;"> more likely to be identified as having any disability, and</span><a href="https://www.childtrends.org/child-trends-5/5-things-know-racial-ethnic-disparities-special-education"> <span style="font-weight: 400;">twice</span></a><span style="font-weight: 400;"> as likely to be identified as having certain disabilities, such as emotional disturbance and intellectual disabilities. The Obama-Biden Administration issued </span><a href="https://www2.ed.gov/policy/speced/reg/idea/part-b/idea-part-b-significant-disproportionality-final-regs-unofficial-copy.pdf"><span style="font-weight: 400;">regulations</span></a><span style="font-weight: 400;"> to address racial disparities in special education programs, including disproportionate identification. The Trump Administration attempted to</span><a href="https://www.nytimes.com/2019/03/08/us/politics/betsy-devos-special-education.html"> <span style="font-weight: 400;">illegally delay</span></a><span style="font-weight: 400;"> the Obama-Biden Administration’s regulation. Biden will fully implement this </span><a href="https://www.ed.gov/news/press-releases/fact-sheet-equity-idea"><span style="font-weight: 400;">regulation</span></a><span style="font-weight: 400;"> and provide educators the resources that they need to provide students with disabilities a high-quality education by fully funding the Individuals with Disabilities Education Act (IDEA).  </span></p>
+<p><b>Address the African American student debt crisis. </b><span style="font-weight: 400;">The student debt burden has a disproportionate impact on African Americans. </span><span style="font-weight: 400;">The typical bachelor’s degree graduate has about </span><a href="https://www.brookings.edu/research/black-white-disparity-in-student-loan-debt-more-than-triples-after-graduation/"><span style="font-weight: 400;">$16,000 in debt compared to $23,400</span></a><span style="font-weight: 400;"> for African Americans students. </span><span style="font-weight: 400;">According to a recent </span><a href="https://www.brookings.edu/research/the-looming-student-loan-default-crisis-is-worse-than-we-thought/"><span style="font-weight: 400;">Brookings Institution</span></a><span style="font-weight: 400;"> study, African Americans graduating with a four year degree are 5 times more likely to default on their student loans than white graduates. African American students are three times more likely to default on their student loans than white student borrowers. The inequitable burden of student loan debt contributes to the stark racial wealth gap that exists in society. Biden’s plans to address student loan debt will alleviate student debt burdens by:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Including in the COVID-19 response an immediate cancellation of a minimum of $10,000 of federal student loan debt.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Forgiving all undergraduate tuition-related federal student debt from two- and four-year public colleges for debt-holders earning up to $125,000. This will also apply to individuals holding federal student loans for tuition from private HBCUs and MSIs.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Forgiving loan payments for individuals making $25,000 or less per year and capping loan payments at 5% of discretionary income for those making more. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Fixing the Public Service Loan Forgiveness Program and forgiving $10,000 of undergraduate or graduate student debt for every year of national or community service, up to five years. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Cracking down on private lenders profiteering off of students by empowering the Consumer Financial Protection Bureau to take action against private lenders who are misleading students about their options and do not provide an affordable payment plan when individuals are experiencing </span><a href="https://files.consumerfinance.gov/f/documents/cfpb_annual-report_student-loan-ombudsman_2017.pdf"><span style="font-weight: 400;">acute periods of financial hardship</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Permitting the discharge of student loans in bankruptcy. </span></li>
+</ul>
+<p><b>Increase college completion by making college affordable for African American students. </b><span style="font-weight: 400;">Our postsecondary education system has not done enough to help African American students access, afford, and succeed in high-quality postsecondary education. 64% of white students graduate from four year institutions, </span><a href="https://nces.ed.gov/programs/raceindicators/indicator_red.asp"><span style="font-weight: 400;">compared</span></a><span style="font-weight: 400;"> to only 40% of African Americans. To help African American students access and complete college, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Make public colleges and universities tuition-free for all students whose family incomes are below $125,000, including students at public HBCUs.  </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Providing two years of community college or other high-quality training programs without debt for any hard-working individual looking to learn and improve their skills to keep up with the changing nature of work.</span> <span style="font-weight: 400;">This commitment includes two-year public HBCUs. Individuals will also be able to use these funds to pursue training programs that have a track record of participants completing their programs and securing good jobs, including adults who never had the chance to pursue additional education beyond high school or who need to learn new skills. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Targeting additional financial support to low-income and middle-class individuals by doubling the maximum value of Pell grants, significantly increasing the number of middle-class Americans who can participate in the program. According to the </span><a href="https://nces.ed.gov/pubs2019/2019487.pdf"><span style="font-weight: 400;">Department of Education</span></a><span style="font-weight: 400;">, almost 60% of African American undergraduates received a Pell grant during the 2015-2016 academic year. Biden also will </span><a href="justice.html"><span style="font-weight: 400;">restore</span></a><span style="font-weight: 400;"> formerly incarcerated individuals’ eligibility for Pell.</span></li>
+</ul>
+<p><b> </b><b>Invest over $70 billion in the Historically Black Colleges and Universities and Minority-Serving Institutions that will train our next generation of African American professionals. </b><span style="font-weight: 400;">Historically Black Colleges and Universities (HBCUs) </span><span style="font-weight: 400;">are key to educating our next generations of African American leaders. They enroll about 10% of African American students, while accounting for more than </span><a href="https://www.tmcf.org/about-us/member-schools/about-hbcus/"><span style="font-weight: 400;">20%</span></a><span style="font-weight: 400;"> of African American bachelor’s degrees awarded. </span><a href="https://www.tmcf.org/about-us/member-schools/about-hbcus/"><span style="font-weight: 400;">40% of African American engineers and 80% of African American judges</span></a><span style="font-weight: 400;"> are HBCU graduates. But these institutions do not receive the investment that reflects their importance. The Thurgood Marshall College Fund estimates that the typical HBCU endowment is </span><a href="https://www.tmcf.org/about-us/member-schools/about-hbcus/"><span style="font-weight: 400;">one-eighth the average size</span></a><span style="font-weight: 400;"> of historically white colleges. </span><span style="font-weight: 400;">As President, Biden will take steps to rectify the funding disparities faced by HBCUs so that the United States can benefit from their unique strengths. Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Make HBCUs more affordable for their students. Biden will invest $18 billion in grants to four-year HBCUs and Minority-Serving Institutions (MSIs), equivalent to up to two years of tuition per low-income and middle class student. He will invest additional funds in private, non-profit HBCUs and under-resourced MSIs so they are not undermined by the Biden proposal to make four-year public colleges and universities tuition-free for students. Schools must invest in lowering costs, improving retention and graduation rates, and closing equity gaps year over year for students of color.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reduce disparities in funding for HBCUs and MSIs. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invest $10 billion to create at least 200 new centers of excellence that serve as research incubators and connect students underrepresented in fields critical to our nation’s future – including fields tackling climate change, globalization, inequality, health disparities, and cancer – to learning and career opportunities.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Build the high tech labs and facilities and digital infrastructure needed for learning, research, and innovation at HBCUs and MSIs. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Invest $5 billion in graduate programs in teaching, health care, and STEM and will develop robust internship and career pipelines at major research agencies. </span></li>
+</ul>
+<p><b>Create a “</b><a href="https://www.aft.org/sites/default/files/aft-hea-recs2019_complete.pdf"><b>Title I for postsecondary education</b></a><b>” to help students at under-resourced four-year schools complete their degrees. </b><span style="font-weight: 400;">The Biden Administration will establish a new grant program to support under-resourced four-year schools that serve large numbers of Pell-eligible students. The funds will be used to foster collaboration between colleges and community-based organizations to provide wraparound support services for students, including additional financial aid to cover textbook and transportation costs that often keep students from staying enrolled, to child care and mental health services, faculty mentoring, tutoring, and peer support groups. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Make a $50 billion investment in workforce training, including community-college business partnerships and apprenticeships. </b><span style="font-weight: 400;">These funds will create and support partnerships between community colleges, businesses, unions, state, local, and tribal governments, universities, and high schools to identify in-demand knowledge and skills in a community and develop or modernize training programs – which could be as short as a few months or as long as two years – that lead to a relevant, high-demand industry-recognized credential. </span></p>
+<p><i><span style="font-weight: 400;">Read Joe Biden’s full education plans at joebiden.com/education and joebiden.com/beyondHS.</span></i><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>MAKE FAR-REACHING INVESTMENTS IN ENDING HEALTH DISPARITIES BY RACE</b></p>
+<p><span style="font-weight: 400;">The COVID-19 pandemic has highlighted the long-standing, pervasive disparities that exist across our health care system due to unequal access to treatment. An early analysis indicates that counties with majority-African American populations have coronavirus infection rates </span><a href="https://www.washingtonpost.com/nation/2020/04/07/coronavirus-is-infecting-killing-black-americans-an-alarmingly-high-rate-post-analysis-shows/?arc404=true"><span style="font-weight: 400;">three times higher</span></a><span style="font-weight: 400;"> than counties with majority white residents, with death rates nearly six times higher. Although COVID-19 can hit anyone anywhere, it does not affect every community the same. African Americans are more likely to be</span><a href="https://www.kff.org/uninsured/state-indicator/rate-by-raceethnicity/?currentTimeframe=0&amp;sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D"> <span style="font-weight: 400;">uninsured</span></a><span style="font-weight: 400;"> and</span><a href="https://www.cdc.gov/nchs/fastats/black-health.htm"> <span style="font-weight: 400;">report higher rates of chronic health problems</span></a><span style="font-weight: 400;">, and these factors increase their chances of becoming seriously ill and dying from this disease. This is unconscionable. Biden calls on Congress to immediately enact Senator Kamala Harris’ bill to</span><a href="https://www.vox.com/2020/5/1/21243960/kamala-harris-coronavirus-disparities"> <span style="font-weight: 400;">create</span></a><span style="font-weight: 400;"> a task force to address the racial disparities that have been laid bare by this pandemic. As President, he will do everything in his power to eliminate health care disparities.</span></p>
+<p><b>Ensuring access to health care during this crisis</b><span style="font-weight: 400;">. In the short-term, Biden’s COVID-19 response plan </span><a href="https://www.axios.com/coronavirus-biden-trump-drop-aca-obama-case-61ace1bc-b3cf-4a6f-83ff-cf77e2a0c33f.html"><span style="font-weight: 400;">calls on</span></a><span style="font-weight: 400;"> the Trump Administration to drop its support of a lawsuit to overturn Obamacare. Millions of Americans may lose their health insurance because they lose their job, and millions more may find health care increasingly difficult to afford. During this crisis, Biden would expand access to quality, affordable health care for all through:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Creating a public option;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Providing full payment of premiums for COBRA plans;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Increasing Affordable Care Act subsidies;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Reopening Obamacare enrollment so uninsured individuals can get insured;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Increasing federal investments in Medicaid;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensuring that every person, whether insured or uninsured, will not have to pay a dollar out-of-pocket for visits related to COVID-19 testing, treatment, preventative services, and any eventual vaccine. No co-payments, no deductibles, and no surprise medical billing. </span></li>
+</ul>
+<p><b>Ensure access to affordable, high-quality health care beyond the crisis. </b><span style="font-weight: 400;">Because of Obamacare, over </span><a href="https://avalere.com/press-releases/repeal-of-acas-pre-existing-condition-protections-could-affect-health-security-of-over-100-million-people"><span style="font-weight: 400;">100 million people</span></a><span style="font-weight: 400;"> no longer have to worry that an insurance company will deny coverage or charge higher premiums just because they have a </span><a href="https://www.healthcare.gov/coverage/pre-existing-conditions/"><span style="font-weight: 400;">pre-existing condition</span></a><span style="font-weight: 400;"> – whether cancer or diabetes or heart disease or a mental health challenge. Insurance companies </span><a href="https://www.hhs.gov/healthcare/about-the-aca/benefit-limits/index.html"><span style="font-weight: 400;">can no longer set annual or lifetime limits</span></a><span style="font-weight: 400;"> on coverage. </span><a href="https://www.kff.org/uninsured/fact-sheet/key-facts-about-the-uninsured-population/"><span style="font-weight: 400;">Roughly 20 million additional Americans </span></a><span style="font-weight: 400;">obtained the peace of mind that comes with health insurance. Young people who are in transition from school to a job have the option to </span><a href="https://www.healthcare.gov/young-adults/children-under-26/"><span style="font-weight: 400;">stay covered by their parents’ plan</span></a><span style="font-weight: 400;"> until age 26. As President, Joe Biden will build on Obamacare. He will help address racial disparities in the health care system in the following ways:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Reducing the uninsured rate for African Americans by</b><a href="healthcare..html"> <b>creating a public option health plan</b></a><b>.</b> <a href="https://www.kff.org/uninsured/state-indicator/rate-by-raceethnicity/?currentTimeframe=0&amp;sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D"><span style="font-weight: 400;">Nationally</span></a><span style="font-weight: 400;">, </span><span style="font-weight: 400;">11% of nonelderly African Americans are uninsured, compared to 8% of white people. This disparity is far greater in states with Republican governors who have not expanded Medicaid. Biden will give all Americans a new choice, a public health insurance option like Medicare. And he will ensure the individuals who would be eligible for Medicaid but for their state’s inaction are automatically enrolled on to the public option, at no cost to the individual.</span></li>
+<li style="font-weight: 400;"><b>Improving care for patients with chronic conditions</b><span style="font-weight: 400;">, by</span><a href="healthcare..html"> <span style="font-weight: 400;">coordinating</span></a><span style="font-weight: 400;"> among all of a patient’s doctors. This is particularly important for patients with chronic conditions, such as</span><a href="https://www.diabetes.org/resources/statistics/statistics-about-diabetes"> <span style="font-weight: 400;">diabetes</span></a><span style="font-weight: 400;"> and</span><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4108512/"> <span style="font-weight: 400;">hypertension</span></a><span style="font-weight: 400;">, which</span><a href="https://www.cdc.gov/nchs/fastats/black-health.htm"> <span style="font-weight: 400;">disproportionately</span></a><span style="font-weight: 400;"> impact African Americans.</span></li>
+<li style="font-weight: 400;"><b>Lowering costs for African Americans</b><a href="https://www.cms.gov/About-CMS/Agency-Information/OMH/research-and-data/information-products/data-highlights/Race-Ethnicity-and-Language-Preference-in-the-Health-Insurance-Marketplace"> <b>enrolled in Obamacare plans</b></a><span style="font-weight: 400;"> by increasing the value of tax credits to lower premium and lowering deductibles by making other changes to how the tax credits are calculated.</span></li>
+<li style="font-weight: 400;"><b>Lowering drug prices</b><span style="font-weight: 400;">, by allowing Medicare to negotiate with drug prices and stopping drug companies from price gouging on new drugs. </span></li>
+<li style="font-weight: 400;"><b>Reducing our unacceptably high African American maternal mortality rate.</b><span style="font-weight: 400;"> African American women are</span><a href="https://www.cdc.gov/nchs/pressroom/nchs_press_releases/2020/202001_MMR.htm"> <span style="font-weight: 400;">2.5 times more likely</span></a><span style="font-weight: 400;"> to die from pregnancy complications than non-Hispanic white women. California came up with a strategy that</span><a href="https://www.healthaffairs.org/doi/abs/10.1377/hlthaff.2018.0463"> <span style="font-weight: 400;">halved</span></a><span style="font-weight: 400;"> the state’s maternal death rate. The Biden plan takes the California strategy nationwide.</span></li>
+<li style="font-weight: 400;"><b>Expanding access to reproductive health care, including contraception and protecting the constitutional right to choose.</b><span style="font-weight: 400;"> Biden supports repealing the Hyde Amendment.</span><span style="font-weight: 400;"> He will also rest</span><span style="font-weight: 400;">ore funding for Planned Parenthood, which</span><a href="https://www.plannedparenthood.org/uploads/filer_public/ec/e5/ece5feec-bcce-4aba-8e2e-2fe986c38d9e/190909-reducing-barriers-to-care-in-black-communities-d02.pdf"> <span style="font-weight: 400;">provides</span></a><span style="font-weight: 400;"> services necessary to address health disparities, including breast cancer screenings and HIV/AIDS counseling, screening, and treatment. The breast cancer death rate is over </span><a href="https://www.cdc.gov/mmwr/volumes/65/wr/mm6540a1.htm"><span style="font-weight: 400;">40% higher</span></a><span style="font-weight: 400;"> for African Americans than white women, and in 2016, African American women comprised </span><a href="https://www.cdc.gov/mmwr/volumes/68/wr/mm6818a3.htm?s_cid=mm6818a3_w"><span style="font-weight: 400;">60%</span></a><span style="font-weight: 400;"> of new HIV cases.</span></li>
+<li style="font-weight: 400;"><b>Doubling the nation’s investment in community health centers.</b><span style="font-weight: 400;"> Community health centers provide primary, prenatal, and other important care, and their patients are disproportionately members of racial and ethnic minority groups, including</span><a href="http://www.nachc.org/wp-content/uploads/2018/06/Chartbook_FINAL_6.20.18.pdf"> <span style="font-weight: 400;">African Americans.</span></a></li>
+<li style="font-weight: 400;"><b>Expanding access to mental health care.</b><span style="font-weight: 400;"> African Americans are</span><a href="https://minorityhealth.hhs.gov/omh/browse.aspx?lvl=4&amp;lvlid=24"> <span style="font-weight: 400;">far less likely</span></a><span style="font-weight: 400;"> to receive mental health services or compared to white adults.  Biden will ensure mental health parity and eliminating the stigma around mental health are critical to closing this gap.</span></li>
+<li style="font-weight: 400;"><b>Tackling social determinants of health. </b><span style="font-weight: 400;">Because racial health disparities are the result of years of systemic inequality not only in our health care system, but across our economy, other parts of Joe Biden’s agenda are also necessary to improve the overall well-being of African Americans. For example, </span><span style="font-weight: 400;">African Americans are </span><a href="https://projects.iq.harvard.edu/files/covid-pm/files/pm_and_covid_mortality.pdf"><span style="font-weight: 400;">more likely</span></a><span style="font-weight: 400;"> to face exposure to air pollutants that cause respiratory illnesses that make them particularly vulnerable to COVID-19.</span></li>
+</ul>
+<p><b>Invest in the diverse talent at Historically Black Colleges and Universities (HBCUs) and Minority Serving Institutions (MSIs) to solve the country’s most pressing problems, including health disparities.</b><span style="font-weight: 400;"> As part of Biden’s more than $70 billion investment in HBCUs and MSIs, he will invest $10 billion to create at least 200 new centers of excellence that serve as research incubators and connect students underrepresented in fields critical to our nation’s future to learning and career opportunities. He will develop robust internship and career pipelines at major research agencies, including National Institutes of Health. He will </span><span style="font-weight: 400;">also dedicate additional and increased priority funding streams at federal agencies for grants and contracts for HBCUs and MSIs. And, he will require any federal research grants to universities with an endowment of over $1 billion to form a meaningful partnership and enter into a 10% minimum subcontract with an HBCU, TCU, or MSI. </span></p>
+<p><b>Build a diverse pipeline of health care professionals by investing in health care graduate programs at HBCUs and MSIs.</b><span style="font-weight: 400;"> As part of Biden’s more than $70 billion investment in HBCUs and MSis, he will invest $5 billion in graduate programs in health care, along with teaching and STEM, at HBCUs and MSIs. </span></p>
+<p><i><span style="font-weight: 400;">Read Joe Biden’s full health care plan at </span></i><a href="healthcare.html"><i><span style="font-weight: 400;">joebiden.com/healthcare</span></i></a><i><span style="font-weight: 400;">.</span></i></p>
+<p><b>STRENGTHEN AMERICA’S COMMITMENT TO JUSTICE</b></p>
+<p><span style="font-weight: 400;">Today, too many people are incarcerated in the United States – and too many of them are African American. To build safe and healthy communities, we need to rethink who we’re sending to prison, how we treat those in prison, and how we help them get the health care, education, jobs, and housing they need to successfully rejoin society after they serve their time. As President, Biden will strengthen America’s commitment to justice and reform our criminal justice system. </span></p>
+<p><span style="font-weight: 400;">The Biden Plan for Strengthening America’s Commitment to Justice is based on several core principles:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>We can and must reduce the number of people incarcerated in this country while also reducing crime.</b><span style="font-weight: 400;"> Reducing the number of incarcerated individuals will reduce federal spending on incarceration. These savings should be reinvested in the communities impacted by mass incarceration.</span></li>
+<li style="font-weight: 400;"><b>Our criminal justice system cannot be just unless we root out the racial, gender, and income-based disparities in the system.</b><span style="font-weight: 400;"> African American mothers and fathers should feel confident that their children are safe walking the streets of America. And, when a police officer pins on that shield and walks out the door, the officer’s family should know they’ll come home at the end of the day. Additionally, women and children are uniquely impacted by the criminal justice system, and the system needs to address their unique needs.</span></li>
+<li style="font-weight: 400;"><b>Our criminal justice system must be focused on redemption and rehabilitation.</b><span style="font-weight: 400;"> Making sure formerly incarcerated individuals have the opportunity to be productive members of our society is not only the right thing to do, it will also grow our economy.</span></li>
+<li style="font-weight: 400;"><b>No one should be profiteering off of our criminal justice system.</b><b><br />
+</b></li>
+</ul>
+<p><span style="font-weight: 400;">Biden will call for the immediate passage of Congressman Bobby Scott’s </span><a href="https://bobbyscott.house.gov/SAFEJusticeAct"><span style="font-weight: 400;">SAFE Justice Act</span></a><span style="font-weight: 400;">, an evidence-based, comprehensive bill to reform our criminal justice system “</span><a href="https://bobbyscott.house.gov/SAFEJusticeAct"><span style="font-weight: 400;">from front-end sentencing reform to back-end release policies</span></a><span style="font-weight: 400;">.” The Biden Plan will also go further. Biden will take bold action to reduce our prison population, create a more just society, and make our communities safer. He will: </span></p>
+<p><b>Expand and use the power of the U.S. Justice Department to address systemic misconduct in police departments and prosecutors’ offices. </b><span style="font-weight: 400;">Using </span><a href="https://www.justice.gov/crt/law-enforcement-misconduct-statute-42-usc-14141"><span style="font-weight: 400;">authority</span></a><span style="font-weight: 400;"> in legislation spearheaded by Biden as senator, the Obama-Biden Justice Department </span><a href="https://www.justice.gov/crt/file/922421/download"><span style="font-weight: 400;">used</span></a><span style="font-weight: 400;"> pattern-or-practice investigations and consent decrees to address circumstances of “</span><a href="https://www.justice.gov/crt/file/922421/download"><span style="font-weight: 400;">systemic police misconduct</span></a><span style="font-weight: 400;">” and to “</span><a href="https://www.justice.gov/crt/file/922421/download"><span style="font-weight: 400;">restore trust between police and communities</span></a><span style="font-weight: 400;">” in cities such as Ferguson. Yet, the Trump Administration’s Justice Department has </span><a href="https://www.justice.gov/opa/press-release/file/1109621/download"><span style="font-weight: 400;">limited</span></a><span style="font-weight: 400;"> the use of this tool. Under the Biden Administration, the Justice Department will again use its authority to root out unconstitutional or unlawful policing. In addition, Biden will push for legislation to clarify that this pattern-or-practice investigation authority can also be used to address systemic misconduct by prosecutors’ offices. </span></p>
+<p><b>Establish an independent Task Force on Prosecutorial Discretion. </b><span style="font-weight: 400;">The Biden Administration will create a new task force, placed outside of the U.S. Department of Justice, to make recommendations for tackling discrimination and other problems in our justice system that results from arrest and charging decisions.</span></p>
+<p><b>Reinvigorate community-oriented policing. </b><span style="font-weight: 400;">Policing works best when officers are out of their cruisers and walking the streets, engaging with and getting to know members of their communities. But in order to do that, police departments need resources to hire a sufficient number of officers. Biden spearheaded the Community Oriented Policing Services (COPS) program, which authorized funding both for the hiring of additional police officers and for training on how to undertake a community policing approach. However, the program has </span><a href="https://fas.org/sgp/crs/misc/RL33308.pdf"><span style="font-weight: 400;">never been funded</span></a><span style="font-weight: 400;"> to fulfill the original vision for community policing. Biden will reinvigorate the COPS program with a $300 million investment. As a condition of the grant, hiring of police officers must mirror the racial diversity of the community they serve. Additionally, as President, Biden will establish a panel to scrutinize what equipment is used by law enforcement in our communities.</span></p>
+<p><b>Invest in public defenders’ offices to ensure defendants’ access to quality counsel.</b><span style="font-weight: 400;"> Defenders’ resources and support are too decentralized and too hard to access. Biden will expand the Obama-Biden </span><a href="https://www.justice.gov/archives/atj/indigent-defense-grants-training-and-technical-assistance"><span style="font-weight: 400;">effort</span></a><span style="font-weight: 400;"> to expand resources for public defenders’ offices.</span></p>
+<p><b>Create a $20 billion grant program to support criminal justice reform at the state and local level.</b><span style="font-weight: 400;"> Funds can be used by cities and states on measures proven to reduce crime and incarceration, and require states to eliminate mandatory minimums for non-violent crimes in order to receive funding. </span></p>
+<p><b>Reform sentencing. </b><span style="font-weight: 400;">Biden will work with Congress to reform federal sentencing and provide incentives to state and local systems to do the same. He will end, once and for all, the federal crack and powder cocaine disparity, decriminalize the use of cannabis and automatically expunge all prior cannabis use convictions, and end all incarceration for drug use alone and instead divert individuals to drug courts and treatment. He will work to eliminate mandatory minimums and the death penalty. </span></p>
+<p><b>End the criminalization of poverty. </b><span style="font-weight: 400;">Cash bail is the modern-day debtors’ prison. Biden will lead a national effort to end cash bail and reform our pretrial system by putting in place, instead, a system that is fair and does not inject further discrimination or bias into the process. And, he will work to end the practice of jailing people for being too poor to pay fines and fees.</span></p>
+<p><b>Stop corporations from profiteering off of incarceration.</b><span style="font-weight: 400;"> Biden will end the federal government’s use of private prisons, building off an Obama-Biden Administration’s </span><a href="https://www.justice.gov/archives/opa/file/886311/download"><span style="font-weight: 400;">policy</span></a> <a href="https://www.bop.gov/resources/news/pdfs/20170224_doj_memo.pdf"><span style="font-weight: 400;">rescinded</span></a><span style="font-weight: 400;"> by the Trump Administration. And, he will make clear that the federal government should not use private facilities for any detention, including detention of undocumented immigrants. </span></p>
+<p><b>Eliminate existing barriers preventing formerly incarcerated individuals from fully participating in society.</b><span style="font-weight: 400;"> For example, Biden will eliminate barriers keeping formerly incarcerated individuals from accessing public assistance such as SNAP, Pell grants, and housing support. The Biden Administration will incentivize states to automatically restore voting rights for individuals convicted of felonies once they have served their sentences. He will also expand access to mental health and substance use disorder treatment, as well as educational opportunities and job training for individuals during and after incarceration.  </span></p>
+<p><b>Reform the juvenile justice system.</b><span style="font-weight: 400;"> Biden will invest $1 billion per year in juvenile justice reform. He will </span><span style="font-weight: 400;">expand funding for after-school programs, community centers, and summer jobs to keep young people active, busy, learning, and having fun. </span><span style="font-weight: 400;">Biden will </span><a href="education.html"><span style="font-weight: 400;">double the number of mental health professionals in our schools</span></a><span style="font-weight: 400;"> so behavioral and emotional challenges can be addressed by appropriately skilled psychologists, counselors, and social workers, not our criminal justice system. And, he will restore the Obama-Biden Administration </span><a href="https://www.ed.gov/news/press-releases/us-departments-education-and-justice-release-school-discipline-guidance-package-"><span style="font-weight: 400;">guidance</span></a><span style="font-weight: 400;"> to help schools address the high number of suspensions and expulsions that affect students of color at a higher rate than white students.</span></p>
+<p><b>Make our communities safer. </b><span style="font-weight: 400;">Biden will </span><span style="font-weight: 400;">pursue evidence-based measures to root out persistent violent crime. Violent offenders need to be held accountable, and survivors need to have access to support to deal with the physical, psychological, and financial consequences of violence. Biden will tackle the rise in hate crimes through moral leadership that makes clear such vitriol has no place in the United States. And, in the Biden Administration, the Justice Department will prioritize prosecuting hate crimes. Additionally, Biden will address the daily acts of gun violence in our communities that may not make national headlines, but are just as devastating to survivors and victims’ families as gun violence that does make the front page. These daily acts of gun violence disproportionately impact communities of color. Biden will create a </span><a href="https://www.thetrace.org/2019/07/we-cant-end-inequality-until-we-stop-urban-gun-violence/"><span style="font-weight: 400;">$900 million, eight-year initiative</span></a><span style="font-weight: 400;"> to fund evidence-based interventions in 40 cities across the country – the 20 cities with the highest number of homicides, and 20 cities with the highest number of homicides per capita. This proposal is </span><a href="https://www.thetrace.org/2019/07/we-cant-end-inequality-until-we-stop-urban-gun-violence/"><span style="font-weight: 400;">estimated to save more than 12,000 lives</span></a><span style="font-weight: 400;"> over the eight-year program.</span></p>
+<p><i><span style="font-weight: 400;">Read Joe Biden&#8217;s full criminal justice plan at </span></i><a href="justice.html"><i><span style="font-weight: 400;">joebiden.com/justice</span></i></a><i><span style="font-weight: 400;"> and his plan to reduce gun violence at joebiden.com/gunsafety.</span></i></p>
+<p><b>MAKE THE RIGHT TO VOTE AND THE RIGHT TO EQUAL PROTECTION REAL FOR AFRICAN AMERICANS </b></p>
+<p><span style="font-weight: 400;">President Trump has </span><a href="https://civilrights.org/trump-rollbacks"><span style="font-weight: 400;">rolled back civil rights enforcement</span></a><span style="font-weight: 400;"> across the government and </span><a href="https://www.vice.com/en_us/article/bjq37m/exclusive-trumps-justice-department-is-investigating-60-fewer-civil-rights-cases-than-obamas"><span style="font-weight: 400;">cut staff</span></a><span style="font-weight: 400;"> for the Civil Rights Division of the U.S. Department of Justice.  In the first two years of the Trump Administration, the Division started </span><a href="https://www.vice.com/en_us/article/bjq37m/exclusive-trumps-justice-department-is-investigating-60-fewer-civil-rights-cases-than-obamas"><span style="font-weight: 400;">60% fewer investigations</span></a><span style="font-weight: 400;"> than during the Obama-Biden Administration. As President, Biden will reverse the damage done by Trump and increase funding for civil rights enforcement. He will ensure that the Civil Rights Division of the Department of Justice, the EEOC, and agency civil rights enforcement offices have the resources they need to root out and stop discrimination. He will also: </span></p>
+<p><b>Ensure that political appointees, including the President’s Cabinet, look like the country they serve, and ensure that our federal workforce is representative of the demographics in our country. </b><span style="font-weight: 400;">The Obama-Biden Administration made </span><a href="https://www.eeoc.gov/federal/reports/fsp2016/index.cfm#_Toc525551161"><span style="font-weight: 400;">great progress</span></a><span style="font-weight: 400;"> in building a diverse federal workforce, but Biden knows work remains for the country to fully realize the benefits of the talents, abilities, and perspectives of a workforce that looks like the country. As President, Biden will nominate and appoint people who look like the country they serve and share Biden’s commitment to rigorous enforcement of civil rights protections. He will </span><span style="font-weight: 400;">reissue and mandate strict compliance with the Obama-Biden </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2011/08/18/executive-order-13583-establishing-coordinated-government-wide-initiativ"><span style="font-weight: 400;">executive order</span></a><span style="font-weight: 400;"> to promote diversity and inclusion. He will rebuild the pipeline of workers into the federal government and incentivize more qualified workers to choose public service by forgiving $10,000 a year in student debt for up to five years of public service. He’ll tap into the best and brightest talent from every source by developing career pipelines from Historically Black Colleges and Universities and Minority Serving Institutions into federal agencies. Biden</span><span style="font-weight: 400;"> will also provide more training and mentoring opportunities to improve retention, and collect better data about who is applying for federal service positions as well as being promoted.</span></p>
+<p><b>Appoint U.S. Supreme Court justices and federal judges who look like America, are committed to the rule of law, understand the importance of individual civil rights and civil liberties in a democratic society, and respect foundational precedents</b> <b>like </b><b><i>Brown vs. Board of Education </i></b><b>and </b><b><i>Roe v. Wade</i></b><b>.</b><span style="font-weight: 400;"> Biden has also pledged to appoint the first African American woman to the U.S. Supreme Court, a move which is long overdue. We can’t have four more years of Trump appointees filling lifetime judiciary seats. Trump has already appointed </span><a href="https://www.acslaw.org/judicial-nominations/"><span style="font-weight: 400;">193</span></a><span style="font-weight: 400;"> federal judges &#8211; including two Supreme Court justices. Only </span><a href="https://www.acslaw.org/judicial-nominations/diversity-of-the-federal-bench/"><span style="font-weight: 400;">eight</span></a><span style="font-weight: 400;"> are African American. Seven Trump appointees were </span><a href="https://www.vox.com/policy-and-politics/2019/12/23/21031430/senate-republicans-judges-american-bar-association-unqualified-mitch-mcconnell-donald-trump"><span style="font-weight: 400;">rated</span></a><span style="font-weight: 400;"> “not qualified” by the American Bar Association.</span></p>
+<p><b>Ensure every vote counts. </b><span style="font-weight: 400;">Since the Supreme Court decision in </span><i><span style="font-weight: 400;">Shelby County v. Holder</span></i><span style="font-weight: 400;">, an </span><a href="https://www.vox.com/policy-and-politics/2019/6/25/18701277/shelby-county-v-holder-anniversary-voting-rights-suppression-congress"><span style="font-weight: 400;">increasing number</span></a><span style="font-weight: 400;"> of states have passed laws with no apparent purpose besides making it more difficult to vote, especially for people of color. It’s just as un-American now as it was during Jim Crow. As President, Biden will strengthen our democracy by guaranteeing that every American’s vote is protected. He will start by passing the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/4/text"><span style="font-weight: 400;">Voting Rights Advancement Act</span></a><span style="font-weight: 400;"> to update section 4 of the Voting Rights Act and develop a new process for pre-clearing election changes. He also will </span><span style="font-weight: 400;">ensure that the Justice Department challenges state laws suppressing the right to vote. Biden supports automatic voter registration, same-day voter registration, and many more steps to make exercising one’s right to vote easier. Biden will ensure that the Justice Department has the resources and authority to enforce laws that protect our voting rights. Biden believes we need to end gerrymandering and we must protect our voting booths and voter rolls from foreign powers that seek to undermine our democracy and interfere in our elections.</span> <span style="font-weight: 400;">And, the Biden Administration will incentivize states to automatically restore voting rights for individuals convicted of felonies once they have served their sentences.  </span></p>
+<p><b>Combat the epidemic of violence against transgender women of color. </b><span style="font-weight: 400;">As a direct response to the high rates of homicide of transgender people—particularly transgender women of color—the Biden Administration will make prosecuting their murderers a priority. And, during his first 100 days in office, Biden will direct federal resources to help prevent violence against transgender women, particularly transgender women of color. Recognizing that employment and housing discrimination lead to increased risk of homelessness and violence, Biden will also work to pass the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/5/text"><span style="font-weight: 400;">Equality Act</span></a><span style="font-weight: 400;"> to reduce economic barriers and social stigma and the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/3280?s=1&amp;r=1"><span style="font-weight: 400;">LGBTQ Essential Data Act</span></a><span style="font-weight: 400;"> to help collect a wide variety of critical data about anti-trans violence and the factors that drive it. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Tackle systemic racism and support a study of the continuing impacts of slavery. </b><span style="font-weight: 400;">We must acknowledge that there can be no realization of the American dream without grappling with the original sin of slavery, and the centuries-long campaign of violence, fear, and trauma wrought upon African American people in this country. As Biden has said in this campaign, a Biden Administration will support a study of reparations. Biden will begin on day one of his Administration to address the systemic racism that persists across our institutions today. That’s why he developed </span><a href="education.html"><span style="font-weight: 400;">education</span></a><span style="font-weight: 400;">, </span><a href="climate/index.html"><span style="font-weight: 400;">climate change</span></a><span style="font-weight: 400;">, and </span><a href="health-care-communities-of-color/index.html"><span style="font-weight: 400;">health care policies</span></a><span style="font-weight: 400;">, among others, that will root out this systemic racism and ensure that all Americans have a fair shot at living the American dream. </span></p>
+<p><b>ADDRESS ENVIRONMENTAL JUSTICE</b></p>
+<p><span style="font-weight: 400;">Biden knows we cannot turn a blind eye to the way in which environmental burdens and benefits have been and will continue to be distributed unevenly along racial and socioeconomic lines – not just with respect to climate change, but also pollution of our air, water, and land. The evidence of these disproportionate harms is clear. According to the </span><a href="https://www.aafa.org/media/1633/ethnic-disparities-burden-treatment-asthma-report.pdf"><span style="font-weight: 400;">Asthma and Allergy Foundation of America</span></a><span style="font-weight: 400;"> and the National Pharmaceutical Council, African Americans are almost three times more likely to die from asthma related causes than their white counterparts. People of color are more likely to live in areas most vulnerable to flooding and other climate change-related weather events. They are also less likely to have the funds to prepare for and recover from extreme weather. In the wake of Hurricane Harvey, African American and Hispanic residents were twice as likely as non-Hispanic white individuals to report experiencing an income shock and lack of recovery support. </span></p>
+<p><span style="font-weight: 400;">As President, Biden will stand up to the abuse of power by polluters who disproportionately harm communities of color and low-income communities. He has asked his campaign to commence a process to more deeply engage with environmental justice leaders and develop additional policies related to environmental justice. The policies, to be announced in the weeks ahead, will build on the proposals he has put forward to date:</span></p>
+<p><b>Reinstate federal protections, rolled back by the Trump Administration, that were designed to protect communities.</b><span style="font-weight: 400;"> Biden will make it a priority for all agencies to engage in community-driven approaches to develop solutions for environmental injustices affecting communities of color, low-income, and indigenous communities. </span></p>
+<p><b>Hold polluters accountable.</b><span style="font-weight: 400;"> African American children living in poverty are more likely than wealthier white children to live in a community that borders toxic chemical facilities. Extreme weather can increase the health risks of being co-located with these toxic structures. Under the Trump Administration, the U.S. Environmental Protection Agency (EPA) has referred the fewest number of criminal anti-pollution cases to the Justice Department in 30 years. Allowing corporations to continue to pollute – affecting the health and safety of both their workers and surrounding communities – without consequences perpetuates an egregious abuse of power. Failure to reduce emissions disproportionately hurts African American and Hispanic residents who experience 37% higher exposure to nitrogen dioxide (a toxic pollutant) compared to non-Hispanic whites. This leads to an increased rate of premature death due to heart disease. As President, Biden will direct EPA and the Justice Department to pursue these cases to the fullest extent permitted by law and, when needed, seek additional legislation as needed to hold corporate executives personally accountable – including jail time where merited. </span></p>
+<p><b>Ensure access to safe drinking water for all communities</b><span style="font-weight: 400;">. Biden will make water infrastructure a top priority, for example, by establishing systems to monitor lead and other contaminants in our water supply and take necessary action to eliminate health risks, including holding polluters accountable and support communities in upgrading their systems. In addition, Biden will double federal investments in clean drinking water and water infrastructure, and focus new funding on low-income rural, suburban, and urban areas that are struggling to replace pipes and treatment facilities – and especially on communities at high risk of lead or other kinds of contamination. In addition, Biden will </span><a href="https://www.democrats.senate.gov/files/documents/ABlueprinttoRebuildAmericasInfrastructure.pdf"><span style="font-weight: 400;">reduce the matching funds</span></a><span style="font-weight: 400;"> required of local governments that don’t have the tax base to be able to afford borrowing to repair their water systems.</span></p>
+<p><b>Monitor for lead and other contaminants and hold polluters accountable. </b><span style="font-weight: 400;">As President, Biden will also require state and local governments to monitor their water systems for lead and other contaminants, and he will provide them with the resources to do so. Biden will also work with the EPA and the Justice Department to hold companies that pollute our waterways accountable, aggressively enforcing existing regulations and prosecuting any violations. Corporations and their executives cannot break the law and expect to get away with it.</span></p>
+<p><b>Prioritize communities harmed by climate change and pollution.</b><span style="font-weight: 400;"> Low-income communities and communities of color don’t equally share in the benefits of well-paying job opportunities that result from our clean energy economy. As President, Biden will make sure these communities receive preference in competitive grant programs in the Clean Economy Revolution. In addition, Biden will pursue new partnerships with community colleges, unions, and the private sector to develop programs to train all of America’s workforce to tap into the growing clean energy economy; incorporate skills training into infrastructure investment planning by engaging state and local communities; and reinvigorate and repurpose AmeriCorps for sustainability, so that every American can participate in the clean energy economy. We also know that resiliency investments can raise property values and push lower-income families out of their neighborhoods. Climate change mitigation efforts must consciously protect low-income communities from “green gentrification.”</span></p>
+<p><strong>Additional materials:</strong></p>
+<ul>
+<li><a href="fact-sheet-joe-and-kamala-will-empower-black-men/index.html">FACT SHEET: Joe and Kamala will Empower Black Men </a></li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="blackamerica.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="es/puntos-importantes-de-la-agenda-de-joe-biden-para-la-comunidad-negra/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="terms/index.html">Terms and Conditions</a> and <a href="privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="blackamerica.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="wp-content/uploads/2020/08/Intersect.jpg 558w, wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/blackamerica/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":322,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

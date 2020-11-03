@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Joe Biden for President: Official Campaign Website Remarks from Joe Biden on Racial Economic Equity |</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Joe Biden for President: Official Campaign Website Remarks from Joe Biden on Racial Economic Equity |" />
+	<meta property="og:description" content="Racial equity is not just an aspiration, but a theory of change and how we build our economic future to include everyone. Thank you, Wayne Jefferson, and everyone at the Hicks center for hosting us. You and your staff do God’s work. This community center gives people hope and a place to belong. I saw [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:published_time" content="2020-07-28T22:39:17+00:00" />
+	<meta property="article:modified_time" content="2020-08-04T04:06:09+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/09/social-graphics_HQ_webcard_090220-1024x535.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="535" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="13 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/#webpage","url":"https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/","name":"Joe Biden for President: Official Campaign Website Remarks from Joe Biden on Racial Economic Equity |","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-07-28T22:39:17+00:00","dateModified":"2020-08-04T04:06:09+00:00","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/"]}]},{"@type":"Article","@id":"https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/#article","isPartOf":{"@id":"https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/#webpage"},"author":{"@id":"https://joebiden.com/#/schema/person/0d1b1bdf7e815ab33786b1ff427f1173"},"headline":"Remarks from Joe Biden on Racial Economic Equity","datePublished":"2020-07-28T22:39:17+00:00","dateModified":"2020-08-04T04:06:09+00:00","mainEntityOfPage":{"@id":"https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/#webpage"},"publisher":{"@id":"https://joebiden.com/#organization"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://joebiden.com/#/schema/person/0d1b1bdf7e815ab33786b1ff427f1173","name":"Aalok Kanani","image":{"@type":"ImageObject","@id":"https://joebiden.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/302db9f45b1c180bf3c047b0814a459a?s=96&d=mm&r=g","caption":"Aalok Kanani"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2F2020%2F07%2F28%2Fremarks-on-racial-economic-equity%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2F2020%2F07%2F28%2Fremarks-on-racial-economic-equity%2F&#038;format=xml" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+   
+
+<body class="post-template-default single single-post postid-3954 single-format-standard bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="index.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../../../../index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../../../../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../../../../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../../../../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../../../../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../../../../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../../../../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../../../../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../../../../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../../../es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../../../../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../../../../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../../../../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../../../../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../../../../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../../../../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../../../../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../../../es/inicio/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+        
+<article class="bfp__margin--large page__body" class="post-3954 post type-post status-publish format-standard hentry" id="post-3954">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">Remarks from Joe Biden on Racial Economic Equity</h1>
+  </div>
+  <figure class="page__figure-wrap">
+    <div class="page__figure">
+          </div><!-- .featured-media-inner -->
+  </figure><!-- .featured-media -->
+  <div class="page__content-wrap">
+    <p id="772b" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Racial equity is not just an aspiration, but a theory of change and how we build our economic future to include everyone.</p>
+<p data-selectable-paragraph=""><span id="more-3954"></span></p>
+<p class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Thank you, Wayne Jefferson, and everyone at the Hicks center for hosting us.</p>
+<p id="a534" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">You and your staff do God’s work. This community center gives people hope and a place to belong.</p>
+<p id="7ca9" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">I saw that hope as a Senator. And when he was Attorney General of Delaware, my son Beau would attend mass at Sacred Heart and then walk here to listen, notebook in his pocket, and find ways to help.</p>
+<p id="9b0c" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It’s on the East Side, where I was a lifeguard at the local pool as a teenager, where I started my career as a public defender. And this center is named after my friend, William “Hicks” Anderson.</p>
+<p id="c29d" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Hicks and I went way back.</p>
+<p id="7dd7" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Walk around Wilmington and everyone has a story about him.</p>
+<p id="3751" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">How he cared. How he was always there for you. How he built a wonderful family, including his twin sons Al and Nnamdi, who give back so much to this community</p>
+<p id="16df" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">They served in the United States Army. They now jointly serve as poet laureates of the State of Delaware.</p>
+<p id="28c0" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Nnamdi is now a State Representative. Hicks, his family, and everyone at this center, embody the defining story of America.</p>
+<p id="32c7" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">For generations, Americans who are Black, Brown, Native American, immigrant, haven’t always been fully included in our democracy or our economy.</p>
+<p id="7bfb" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But by pure courage, heart and gut, they never give up as they pursue the full promise of America.</p>
+<p id="7923" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That’s the story of the people of this community and of this country.</p>
+<p id="8c06" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That’s why I couldn’t think of a more meaningful place to talk about my Build Back Better economic agenda. A bold, practical plan that will help build a stronger, more just, more sustainable economy where everyone is included in the deal.</p>
+<p id="21bc" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And it’s the story of two civil rights heroes we lost last week — and who show us the way forward.</p>
+<p id="a1cf" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The Reverend C.T. Vivian, who faced down drownings and beatings to say “You cannot turn your back upon the idea of justice.”</p>
+<p id="2ec1" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And my friend, an American hero, Congressman John Lewis, who crossed the Edmund Pettus bridge one last time on Sunday, and who once said “freedom is not a state, it is an act.”</p>
+<p id="fb26" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">When I spoke to John just before he died, instead of answering my concerns for him,<br />
+he asked about me, about us.</p>
+<p id="a8d4" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">He asked that we stay focused on the work left undone to heal this nation.</p>
+<p id="e4cb" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">To remain undaunted by the public health crisis and the economic crisis that has taken the blinders off the crisis of systemic racism that still plagues this nation.</p>
+<p id="6214" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">One thing the Senate and this President can do right away is pass the bill to restore the Voting Rights Act — just yesterday renamed in memory of John Lewis.</p>
+<p id="ca07" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Back the effusive praise we’ve heard since he passed, especially from our Republican friends, with action. Protect the sacred right to vote that he was willing to die for.</p>
+<p id="e5f3" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">If they don’t, it will be one of the first things I do as President. We cannot let that fundamental right to vote be denied, especially in the middle of a pandemic that rages on.</p>
+<p id="9f15" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Nearly 150,000 Americans are now dead from Covid-19, and counting. More than 4 million Americans have tested positive, and counting. Black and Latino people have been three times as likely to be infected — and two times as likely to die from the virus as white people. More than 30 Million people are collecting unemployment checks.</p>
+<p id="f33f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Black unemployment is at 15%, Latino unemployment is at 14.5%.</p>
+<p id="0e05" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Over 40% of black-owned businesses — 440,000 in total — reportedly had to shut down.</p>
+<p id="1573" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And everything is worsened by the crisis of presidential leadership.</p>
+<p id="09d1" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">A change of “tone” over a few days does not change the facts of the last four years.</p>
+<p id="15a8" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Donald Trump fails the basic threshold test of being president — the duty to care about the entire country, not just himself.</p>
+<p id="3b0a" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">He has shown that he can’t beat the pandemic to keep you safe. He can’t turn the economy around to get Americans back to work.</p>
+<p id="39e3" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And he is — horrifyingly, but not surprisingly — intentionally stoking the flames of division in this country.</p>
+<p id="da47" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">I’ve said from the outset of the recent protests that there is no place for violence or the destruction of property.</p>
+<p>Peaceful protesters should be protected — but arsonists and anarchists should be prosecuted — and local law enforcement can do that.</p>
+<p>When President Obama and I were in office we protected federal property.</p>
+<p>And we were able to do it without turning DHS into a private militia.</p>
+<p>That could be done today. But that wouldn’t help Trump’s political interests. He is determined to stoke division and chaos.</p>
+<p>It’s not good for the country — but Trump doesn’t care.</p>
+<p>His campaign is failing and he’s looking for a political lifeline.</p>
+<p>This isn’t about law and order.</p>
+<p>This is a political strategy to revive a failing campaign.</p>
+<p>Every instinct Trump has is to add fuel to any fire. And it’s the last thing we need.</p>
+<p>We need leadership that will calm the waters and lower the temperature.</p>
+<p>That’s how we’ll restore peace to the streets.</p>
+<p id="a38f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But this election is not just about voting against Donald Trump.</p>
+<p id="ad4f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It’s about rising to this moment of crisis, understanding people’s struggle, and building a future worthy of their courage and ambition to overcome.</p>
+<p id="460c" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Last month, I stopped by Bethel AME Church here in Wilmington. I talked with a group of faith and local leaders. They shared their pain, anger, and frustration at the state of affairs — in our justice system, our politics, our economy. There’s just that sense the deck is stacked.</p>
+<p id="edc7" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The common theme was how do we break the cycle — in good times, communities of color still lag, in bad times, they get hit first and the hardest and in recovery, take the longest to bounce back.</p>
+<p id="d160" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It is about justice.</p>
+<p id="7564" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">I’ve proposed a criminal justice reform and policing reform agenda and I’m committed to working with the Congress to seeing it through as President.</p>
+<p id="8f77" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It’s also about jobs. Good-paying jobs, financial stability, and building wealth for families of color and passing it down to their kids.</p>
+<p id="531d" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It’s about economic growth for our country, and outcompeting the world.</p>
+<p id="8a02" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And it’s also about dignity for working people and the middle class.</p>
+<p id="803d" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Over the last few weeks, I’ve laid out my Build Back Better plan based on those necessities and on the idea that we can’t just build back to the way things were before.</p>
+<p id="4b96" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">We have to Build Back Better.</p>
+<p id="0a06" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">We need to make bold, practical investments — to recover from the economic mess we’re in, and to rebuild for the economic future our country deserves. I’ve explained how these investments are paid for.</p>
+<p id="1a2c" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Today, I’m here to explain how Build Back Better will deal with systemic racism and advance racial equity in our economy.</p>
+<p id="4df2" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">So far, Build Back Better has had three parts.</p>
+<p id="93d1" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">First, it’s investing in American manufacturing and technology so the future is Made in America and includes all Americans.</p>
+<p id="dddf" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Under my plan, we will mobilize the biggest investment in rebuilding our country since World War 2, creating millions of good-paying union jobs.</p>
+<p id="e341" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That includes a historic investment in federal procurement, which is the way the government purchases goods and services.</p>
+<p>Under my proposal, we would make sure those goods and services are American-made in American supply chains — like American steel for our buildings and energy efficient vehicles.</p>
+<p id="f4f4" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But for too long, federal contracting for this work has been inaccessible for too many Black and Brown entrepreneurs and businesses.</p>
+<p id="0365" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">They too often never get a fair shot to apply.</p>
+<p id="57da" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">My plan makes sure contractors and subcontractors of color get a fair shot.</p>
+<p id="d614" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">We will triple the federal goal for contracting with small disadvantaged businesses from 5 percent to a minimum of 15 percent by 2025.</p>
+<p id="89b1" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And we will create jobs and growth along the way. We can do that.</p>
+<p id="973c" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The second plank of Build Back Better advances racial equity by modernizing our infrastructure and taking on climate change with jobs.</p>
+<p id="5e6f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Take infrastructure, for example.</p>
+<p id="91f6" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">In too many underserved communities of color — the roads are falling apart, street lights are out, sidewalks are cracked, school buildings are outdated.</p>
+<p>Parks aren’t safe for kids to play and adults to exercise, and there’s nowhere to buy fresh food for miles.</p>
+<p>Air pollution causes childhood asthma that follows them as adults, and abandoned homes crush property values and diminish the quality of life in neighborhoods.</p>
+<p>But notwithstanding these systemic barriers, look at the energy, pride, and achievement of communities of color.</p>
+<p>Imagine if we could truly unleash their full potential.</p>
+<p>My Build Back Better plan would make sure families in these communities are the ones who benefit from hundreds of billions in federal investments.</p>
+<p>To rebuild those roads, fill the sidewalk cracks, install broadband to close the digital divide, and create spaces to live, work, and play safely.</p>
+<p>Where they can drink clean water, breathe clean air, and shop at nearby grocery stores that stock fresh and healthy food.</p>
+<p>We can’t rebuild our economy and meet the climate crisis unless we create opportunities for people to rebuild their own communities.</p>
+<p>This is about jobs. But it’s also about dignity.</p>
+<p>It’s about pride. We can do this.</p>
+<p id="6da4" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The third plank of Build Back Better invests in our caregivers — who take care of our aging loved ones and kids.</p>
+<p id="1b31" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">If we truly want to reward work in this country, we have to ease the financial burden of care that families are carrying.</p>
+<p>And we have to elevate the compensation, benefits, and dignity of caregiving workers and early childhood educators.</p>
+<p id="d300" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Families are squeezed emotionally and financially trying to raise their kids and care for their parents or loved ones living with a disability.</p>
+<p id="3182" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">They need help, but often can’t find it or afford it.</p>
+<p id="058c" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And the professional caregivers out there — home health workers, child care workers —<br />
+who are more often women, women of color, and immigrants — are too often underpaid, unseen, and undervalued.</p>
+<p id="a74a" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But there are things we can do right now to ease the burden.</p>
+<p id="9ea2" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">My plan would help clear a waiting list of 800,000 people who are eligible for home and community care through Medicaid and who have signed up for it, but are just waiting.</p>
+<p id="601f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">My plan would make sure every 3- and 4-year-old child gets access to free, high-quality preschool like students have at this center. And low- to middle-income families won’t spend more than 7% of their income on child care for children under age 5.</p>
+<p id="c8f6" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The most hard-pressed working families won’t have to spend a dime.</p>
+<p id="21b7" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And my plan would pay and support our caregivers, who are overwhelmingly women and women of color.</p>
+<p id="dd3e" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">This plan will help workers, especially those without a college degree, gain new skills in good-paying industries like health care, and provide new pathways to advance their careers.</p>
+<p>For example, a home health worker can access the training needed to become an EMT, a nurse, a physician’s assistant, or a doctor.</p>
+<p>We won’t just put millions of Americans to work in new care and early childhood education jobs.</p>
+<p>We will also free up millions more people to join the paid labor force.</p>
+<p>Meaning at least 2 million additional jobs and more economic growth for our nation.</p>
+<p id="59eb" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">We can do this.</p>
+<p id="65b3" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Today, I’m laying out the fourth part of Build Back Better — advancing racial equity across the American economy, not just as part of the other pillars of Build Back Better, but in its own right.</p>
+<p id="cb16" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">To start, we will create a new Small Business Opportunity Fund. It dramatically expands an successful Obama-Biden initiative that generated more than $5 in private investment for every $1 in public investment in small businesses — particularly in hard-pressed areas.</p>
+<p id="ea77" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">We will take $30 Billion from our Made in America investments I announced earlier and put it into this Fund.</p>
+<p id="4d0e" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That will allow us to expand federal support for the most effective state, local, and non-profit programs that provide venture capital and financing for minority business owners and communities in need.</p>
+<p id="4503" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It will also allow us to support the community development banks that have a proven record of investing in minority small businesses.</p>
+<p id="9cf1" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That $30 billion will leverage $150 Billion in new financing and equity for more Black and Brown small businesses.</p>
+<p id="6ffc" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">So say our Small Business Opportunity Fund supports an investment in a small manufacturer of color seeking to commercialize a new technology.</p>
+<p id="8543" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That helps the manufacturer get started. Then private investors notice the promise of that business and invest their private dollars too.</p>
+<p id="055e" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That helps the manufacturer scale and grow.</p>
+<p id="c23a" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That’s how we will make sure that those with the best ideas are not denied the venture capital or financing they need because of their race or zip code.</p>
+<p id="96a5" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Here’s why that matters.</p>
+<p id="116a" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Right now, we’re in the midst of one of the greatest threats to small businesses our country has ever seen.</p>
+<p id="d4d5" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">What does Donald Trump do?</p>
+<p id="3401" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Give big banks the green light to make millions of dollars in fees by favoring their most well-off and well-connected clients while shutting the door on smaller Black and Brown businesses without those connections.</p>
+<p id="fb75" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The result?</p>
+<p id="d615" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Billions of dollars in the Covid-relief program for small businesses benefited ones who had the lawyers and accountants to help better connected businesses jump the line.</p>
+<p id="4cbd" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Black and Brown small businesses that needed help the most got shut out.</p>
+<p id="f8a0" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">In fact, just 12% of Black and Brown businesses surveyed seeking help got the aid they asked for.</p>
+<p id="2126" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Now half of them say they’ll have to close up shop.</p>
+<p>Our economy can’t afford for them to close. Their families can’t afford for them to close.</p>
+<p>Under my plan, fifty percent of emergency small business relief would be reserved for the smallest businesses with 50 employees or fewer.</p>
+<p>This would help minority-owned businesses get life-saving loans before more well-connected businesses jump ahead in line.</p>
+<p>But removing the barriers for Black and Brown entrepreneurs to start and grow their businesses is only one of many things we must do to close the racial wealth gap in our nation.</p>
+<p>Expanding black and brown homeownership is another.</p>
+<p>Today, there are American cities where about 75% of white Americans own homes, while only about 25% of their fellow Black citizens do.</p>
+<p>Even in middle class communities of color, the same homes as in white communities are often valued significantly less.</p>
+<p>Those Black residents then see their wealth accumulate more slowly.</p>
+<p>When a house is an asset that helps build equity and wealth, the homeownership disparity denies equal opportunities.</p>
+<p>My housing plan from a $15,000 first-time home-buyer tax credit to expanding affordable housing to reversing Trump’s efforts to gut fair housing enforcement, will remove the barriers to homeownership that now hold back too many Americans of color on the pathway to the middle class.</p>
+<p id="606f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But we also have to remove another piece of the systemic barrier for too many Black and Brown Americans.</p>
+<p id="ce25" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">What’s holding back too many people of color — in finding a good job or starting a business — is a criminal record that follows them every step of the way.</p>
+<p id="4b1f" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Getting caught for smoking marijuana shouldn’t deny you a good-paying job and career, a loan, or ability to rent an apartment.</p>
+<p id="4ad7" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But right now, that criminal record is the weight that holds back too many people of color.</p>
+<p id="ccea" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The process to seal or expunge those records can be complicated and costly.</p>
+<p id="fd60" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And a life of second chances passes by.</p>
+<p id="9f35" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Now, some safeguards are necessary, but some do more harm than good.</p>
+<p id="aca6" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And more and more states recognize the significant cost to their economy when people with certain nonviolent criminal records can’t fully contribute their full talents and capacity.</p>
+<p id="de0d" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">But even when those states want to give that person a second chance and seal or expunge certain nonviolent criminal records, their record keeping systems are outdated.</p>
+<p id="9db6" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">It is paper spread across different courthouses.</p>
+<p id="4c6b" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Under my plan, if a state decides it wants to implement an automated system for sealing or expunging certain nonviolent criminal records, the federal government will help them do that.</p>
+<p id="3aa2" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That’s what racial equity in our economy looks like.</p>
+<p id="ee51" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">And here’s another step we will take under my Build Back Better plan to fully include more people into the deal — strengthen the Federal Reserve’s focus on racial economic equity.</p>
+<p id="5b54" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">The Fed has a profound impact on our economy.</p>
+<p id="65e7" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Its existing mandate promotes maximum employment and stable prices.</p>
+<p id="6845" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Under my plan, I believe the Fed should add to that responsibility and aggressively target persistent racial gaps in jobs, wages, wealth, and revise its hiring and employment practices to achieve greater diversity at all levels of the institution — including diverse nominees for the Board of Governors and the regional Federal Reserve Banks. So when the Chairman of the Federal Reserve provides a report on the health of the economy — we’ll know if the economy is working for everyone.</p>
+<p id="8922" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That’s when racial equity is not just an aspiration, but a theory of change and how we build our economic future to include everyone.</p>
+<p id="4b0b" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">To include all those remarkable people out there doing extraordinary things if given just half a chance.</p>
+<p id="1c84" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">People like Markevis Gideon, who I just met backstage.</p>
+<p>His Mom and Dad never went to college. He was 12 when he got an old laptop handed to him. He took it apart and put it back together. It changed his life. At 17, he got certified to become an IT systems specialist.</p>
+<p>He went to college. Studied abroad. Came back home to see the digital divide in his community. So he started a business getting computers to folks.</p>
+<p>He’s 22 now. Married with a little baby. He also has 7 employees.</p>
+<p>His goal is to teach people how to repair and recycle computers and create a workforce development program to get them trained for good-paying IT jobs.</p>
+<p>It’s incredible. And he is incredible.</p>
+<p>Some of the people he’s helped only had an 8th grade education. Never used a computer before.</p>
+<p>Five weeks later, they know how. Some are now earning $15/hr for the first time.</p>
+<p>They are incredible.</p>
+<p>Markevis wants to scale his business and continue reinvesting in the people of this community.</p>
+<p>That’s pure courage, heart, and gut.</p>
+<p id="4641" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">He never gives up in pursuit of the full promise of America.</p>
+<p id="d85a" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">That’s who we are. That’s what this election is about. We are America.</p>
+<p id="8c99" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">We don’t settle. We aspire. We succeed.</p>
+<p id="83c2" class="gn go cd gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf cv ap" data-selectable-paragraph="">Thank you.</p>
+  </div>
+
+</article><!-- .post -->
+
+        </main><!-- .site-main -->
+    </div><!-- .content-area -->
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../../../../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="index.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../../../../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../../../../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../../../../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../../../../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../../../../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../../../../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../../../../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../../../es/inicio/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="../../../../terms/index.html">Terms and Conditions</a> and <a href="../../../../privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="../../../../contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="../../../../accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="../../../../privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="../../../../terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="../../../../limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="../../../../index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="../../../../joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="../../../../joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="../../../../together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="../../../../take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="../../../../coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="../../../../latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../../../../index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="index.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../../../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../../../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, ../../../../wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="../../../../wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../../../wp-content/uploads/2020/08/Intersect.jpg 558w, ../../../../wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/2020/07/28/remarks-on-racial-economic-equity/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkVbXVMKXA==","queueTime":0,"applicationTime":351,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

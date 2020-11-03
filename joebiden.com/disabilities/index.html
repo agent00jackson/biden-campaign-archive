@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Plan for Full Participation and Equality for People with Disabilities | Joe Biden </title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="description" content="There are 43 million Americans with disabilities. Joe Biden will include, protect and uplift these individuals as he rebuilds the middle class." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="../disabilities.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:locale:alternate" content="es_MX" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Americans with Disabilities | Joe Biden" />
+	<meta property="og:description" content="There are 43 million Americans with disabilities. Joe Biden will include, protect and uplift these individuals as he rebuilds the middle class." />
+	<meta property="og:url" content="https://joebiden.com/disabilities/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-10-02T14:10:59+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Americans-with-Disabilities_1600x836_Digital_062920_V1.png" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="836" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Americans with Disabilities | Joe Biden" />
+	<meta name="twitter:description" content="There are 43 million Americans with disabilities. Joe Biden will include, protect and uplift these individuals as he rebuilds the middle class." />
+	<meta name="twitter:image" content="https://joebiden.com/wp-content/uploads/2020/07/Web-Card_HQ_Joes-Plan-for-Americans-with-Disabilities_1600x836_Digital_062920_V1.png" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Aalok Kanani">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="36 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"en-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://joebiden.com/disabilities/#webpage","url":"https://joebiden.com/disabilities/","name":"Plan for Full Participation and Equality for People with Disabilities | Joe Biden\u00a0","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2019-07-26T21:20:38+00:00","dateModified":"2020-10-02T14:10:59+00:00","description":"There are 43 million Americans with disabilities. Joe Biden will include, protect and uplift these individuals as he rebuilds the middle class.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/disabilities/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fdisabilities%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fdisabilities%2F&#038;format=xml" />
+<link rel="alternate" href="../disabilities.html" hreflang="en" />
+<link rel="alternate" href="../es/el-plan-de-biden-para-la-participacion-plena-y-la-igualdad-para-las-personas-con-discapacidades/index.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1117 bfp__body language-en" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="../disabilities.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Chip in today</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Your contribution will benefit Joe Biden</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="9ksvGDxa9JdMfqxNHxSEYcwg" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Show Live Stream    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>It&#8217;s time to get ready to vote Trump out of office. <strong>Check out voting options in your state here </strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Battle <em>for the</em><br>Soul <em>of the </em>Nation
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Donate                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menu</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Close</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="../disabilities.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li id="menu-item-7589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li id="menu-item-7590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li id="menu-item-7591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li id="menu-item-7973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li id="menu-item-7593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../es/el-plan-de-biden-para-la-participacion-plena-y-la-igualdad-para-las-personas-con-discapacidades/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  About
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Volunteer
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Shop
+          </a>
+  </div>
+                                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../es/el-plan-de-biden-para-la-participacion-plena-y-la-igualdad-para-las-personas-con-discapacidades/index.html" class="header__nav-item-link">
+                                      ES
+                                  </a>
+              </li>
+                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1117 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">The Biden Plan for Full Participation and Equality for People With Disabilities </h1>
+  </div>
+  <div class="page__content-wrap">
+    <p class="p1"><i>Read Joe Biden’s plan to support people with disabilities during the COVID-19 pandemic at <a href="../covid19-disabilities/index.html">https://joebiden.com/covid19-disabilities/</a>. </i></p>
+<p><span style="font-weight: 400;">Joe Biden believes that everyone should be treated with dignity and have a fair shot at getting ahead. This year, on July 26, we will mark the 30</span><span style="font-weight: 400;">th</span><span style="font-weight: 400;"> anniversary of the Americans with Disabilities Act (ADA). Thanks to the leadership of people with disabilities, disability advocates, and their allies, we have made progress towards the goals of this law—“</span><a href="https://www.law.cornell.edu/uscode/text/42/12101"><span style="font-weight: 400;">equality of opportunity, full participation, independent living, and economic self-sufficiency</span></a><span style="font-weight: 400;">” for people with disabilities. But, there is much more work to do in order to ensure that all people with disabilities are able to participate fully in our communities and enjoy the same kinds of choices and opportunities that many Americans take for granted.  </span></p>
+<p><span style="font-weight: 400;">At the beginning of the Obama-Biden Administration, our country faced a significant economic downturn, and President Obama </span><a href="https://obamawhitehouse.archives.gov/realitycheck/the-press-office/vice-president-biden-oversee-administrations-implementation-recovery-acts-provision"><span style="font-weight: 400;">tapped</span></a><span style="font-weight: 400;"> Vice President Biden to implement a stimulus package to improve our economy and the financial well-being of millions of Americans. Today, our country is once again facing enormous economic challenges, brought on by the pandemic and the impact it is having on businesses and workers across the globe. As President, Biden will lead an effort to rebuild our economy. He will build an economy that is more inclusive, more just, and more accessible for millions of Americans with disabilities and their families. </span></p>
+<p><span style="font-weight: 400;">Biden will work with the disability community to build a stronger, more expansive middle class so that everyone—regardless of race, gender, religion, sexual orientation, or disability—can find a place. That means amending our laws, policies, and culture to ensure full inclusion of the </span><a href="https://www.cdc.gov/media/releases/2018/p0816-disability.html"><span style="font-weight: 400;">61 million</span></a><span style="font-weight: 400;"> individuals with disabilities in the United States in all parts of our society. Biden will prioritize enacting and implementing policies that break down the barriers to access for people with disabilities living and succeeding in their chosen communities, which means good jobs in </span><span style="font-weight: 400;">competitive, integrated employment; affordable, accessible, and integrated housing; accessible and affordable transportation; inclusive voting processes; and any needed long-term services and supports. </span></p>
+<p><a href="https://www.cbpp.org/research/health/suit-challenging-aca-legally-suspect-but-threatens-loss-of-coverage-for-millions"><span style="font-weight: 400;">President Trump</span></a><span style="font-weight: 400;"> and Republicans in Congress have attempted to repeal Obamacare, the landmark law that protected health care coverage for 100 million Americans with preexisting conditions, including people with disabilities; to undermine the ADA, including by </span><a href="https://www.justice.gov/opa/pr/attorney-general-jeff-sessions-rescinds-25-guidance-documents"><span style="font-weight: 400;">making</span></a><span style="font-weight: 400;"> it harder for people with disabilities to file claims; and to fundamentally </span><a href="https://www.cbpp.org/blog/presidents-budget-would-hurt-people-with-disabilities-1"><span style="font-weight: 400;">restructure</span></a><span style="font-weight: 400;"> the Medicaid and Supplemental Security Income programs which directly benefit people with disabilities. As President, Biden will reverse the damage done by Trump’s presidency, fight efforts to weaken the civil rights of all Americans, and work diligently with Congress and the disability community to expand access to needed services.</span></p>
+<p><span style="font-weight: 400;">Biden recognizes that we need to view all policies—ranging from climate change and the economy to education and housing—through an inclusive lens. He will ensure people with disabilities have a voice in their government and are included in policy development and implementation. </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">To accomplish these goals, as President, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure full inclusion of people with disabilities in policy development and aggressively enforce the civil rights of people with disabilities.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Guarantee access to high-quality, affordable health care, including mental health care, and expand access to home and community-based services and long-term services and supports in the most integrated setting appropriate to each person’s needs and based on self-determination.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expand competitive, integrated employment opportunities for people with disabilities.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Protect and strengthen economic security for people with disabilities.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Ensure that students with disabilities have access to educational programs and support they need to succeed, from early interventions to post-secondary education.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Expand access to accessible, integrated, and affordable housing, transportation, and assistive technologies and protect people with disabilities in emergencies. </span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Advance global disability rights.</span></li>
+</ul>
+<p><b>ENSURE FULL INCLUSION OF PEOPLE WITH DISABILITIES IN POLICY DEVELOPMENT AND AGGRESSIVELY ENFORCE THE CIVIL RIGHTS OF PEOPLE WITH DISABILITIES</b></p>
+<p><span style="font-weight: 400;">Throughout his career, Biden has fought for the rights and opportunities of people with disabilities—</span><span style="font-weight: 400;">working to pass anti-discrimination protections in the </span><a href="https://www.ada.gov/pubs/adastatute08.pdf"><span style="font-weight: 400;">Americans with Disabilities Act</span></a><span style="font-weight: 400;">, the Rehabilitation Act of 1973, the </span><a href="https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg1619.pdf#page=18"><span style="font-weight: 400;">Fair Housing Amendments Act of 1988</span></a><span style="font-weight: 400;">, the original </span><a href="https://www.govinfo.gov/content/pkg/STATUTE-89/pdf/STATUTE-89-Pg773.pdf"><span style="font-weight: 400;">Individuals with Disabilities Education Act</span></a><span style="font-weight: 400;"> in 1975, and the Affordable Care Act in 2010. As President, Biden will make sure these protections are fully enforced and that people with disabilities have a voice in policy development and implementation. As President, Biden will:</span></p>
+<p><b>Ensure people with disabilities are included in policy development by creating a senior position in the White House dedicated to disability community engagement and policy coordination.</b><span style="font-weight: 400;"> Biden will appoint a director of disability policy within the Domestic Policy Council to ensure that these issues receive the attention they deserve at the highest levels of government and are integrated in broader policy discussions. This senior White House official will also engage with a variety of disability stakeholders, including disability community leaders, representatives from disability organizations, and people with disabilities and their family members. The position will ensure that the Administration is getting diverse perspectives and that policy is being developed, implemented, and evaluated with input from people with disabilities. In addition, Biden will ensure senior leaders across federal agencies, including in the Departments of Health and Human Services, Education, Labor, Housing and Urban Development, Transportation, State, and Justice, and the Consumer Financial Protection Bureau, share his commitment to breaking down the barriers that hold back people with disabilities. Biden will identify and aggressively recruit qualified people with disabilities to fill leadership positions across the Administration, not merely those positions that relate to disability programs and policies. </span></p>
+<p><b>Aggressively enforce existing civil rights laws for people with disabilities, </b><span style="font-weight: 400;">including the </span><a href="https://www.ada.gov/pubs/adastatute08.pdf"><span style="font-weight: 400;">Americans with Disabilities Act</span></a><span style="font-weight: 400;">, the Individuals with Disabilities Education Act, the </span><a href="https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg1619.pdf#page=18"><span style="font-weight: 400;">Fair Housing Act</span></a><span style="font-weight: 400;">, the </span><a href="https://www.justice.gov/crt/civil-rights-institutionalized-persons"><span style="font-weight: 400;">Civil Rights of Institutionalized Persons Act</span></a><span style="font-weight: 400;">, the Rehabilitation Act, the </span><a href="https://www.congress.gov/bill/107th-congress/house-bill/3295/text"><span style="font-weight: 400;">Help America Vote Act</span></a><span style="font-weight: 400;">, and the Air Carrier Access Act. </span><span style="font-weight: 400;">Biden will begin by appointing leaders in the Departments of Justice, Education, Health and Human Services, Labor, and Housing and Urban Development, and the Equal Employment Opportunity Commission, and across the rest of the federal government, who share his commitment to tough and effective enforcement of all civil rights laws</span><span style="font-weight: 400;">. </span><span style="font-weight: 400;">Biden recognizes that </span><a href="https://www.lgbtmap.org/file/LGBT-People-With-Disabilities.pdf%20--%20%22People%20with%20disabilities%20report%20incredibly%20high%20rates%20of%20employment%20discrimination%20and%20unemployment.%20In%202017,%20only%2036%%20of%20adults%20with%20a%20disability%20were%20employed%20compared%20to%2077%%20of%20those%20without%20a%20disability.%20This%20discrimination%20compounded%20by%20the%20discrimination%20based%20on%20sexual%20orientation%20and%20gender%20identity,%20as%20well%20as%20racial%20and%20ethnic%20discrimination,%20means%20that%20LGBT%20people%20with%20disabilities%20may%20struggle%20to%20find%20and%20keep%20jobs,%20and%20to%20access%20support%20services%20like%20unemployment%20benefits,%20leaving%20them%20and%20their%20families%20economically%20insecure.%22"><span style="font-weight: 400;">people with disabilities</span></a><span style="font-weight: 400;"> who are also people of color and LGBTQ+ often face greater discrimination based on the intersection of disability, race, sexual orientation and/or gender identity, and will aggressively enforce civil rights protections based on race, gender, gender identity and sexual orientation while working to enact stronger protections through new legislation including the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/5/text"><span style="font-weight: 400;">Equality Act</span></a><span style="font-weight: 400;"> and the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/7/text"><span style="font-weight: 400;">Paycheck Fairness Act</span></a><span style="font-weight: 400;">. Biden also will give the agencies charged with enforcing these non-discrimination laws, as well as other existing civil rights laws, the funds they need to fully pursue this obligation. And, Biden will:   </span></p>
+<ul>
+<li><b>Work with Congress to pass legislation ensuring adherence to the U.S. Supreme Court’s </b><a href="https://www.law.cornell.edu/supct/pdf/98-536P.ZO"><b><i>Olmstead </i></b><b>decision</b></a><b>.</b><span style="font-weight: 400;"> The </span><i><span style="font-weight: 400;">Olmstead</span></i><span style="font-weight: 400;"> decision </span><a href="https://www.ada.gov/olmstead/q&amp;a_olmstead.htm"><span style="font-weight: 400;">requires government programs</span></a><span style="font-weight: 400;"> to provide people with disabilities the choice to “live, work, and receive services in integrated settings” appropriate to their needs. The Obama-Biden Administration </span><a href="https://www.ada.gov/olmstead/q&amp;a_olmstead.htm"><span style="font-weight: 400;">made enforcement</span></a><span style="font-weight: 400;"> of </span><i><span style="font-weight: 400;">Olmstead </span></i><span style="font-weight: 400;">a top priority. As President, Biden will ensure every agency aggressively enforces </span><i><span style="font-weight: 400;">Olmstead</span></i><span style="font-weight: 400;">’s integration mandate, including in housing, education, health care, employment, and transportation. As President, Biden will work with Congress to ensure that people with disabilities no longer have to wait for decades to access community-based services.</span></li>
+<li><b>Safeguard against efforts to weaken the ADA and push for strong ADA compliance. <span style="font-weight: 400;">Although much progress has been made in achieving accommodations for people with disabilities through the ADA, Biden will continue to advocate for stronger ADA enforcement. He will support the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2290"><span style="font-weight: 400;">Disabled Access Credit Expansion Act</span></a><span style="font-weight: 400;">, which will increase tax credits for small businesses to improve accessibility and comply with the ADA.  </span>  <span style="font-weight: 400;"> </span> </b></li>
+<li><b>Nominate judges who support disability rights and reflect the diversity of our country. </b><span style="font-weight: 400;">Biden will nominate individuals to the judiciary who are committed to the rule of law, understand the importance of individual civil rights and civil liberties in a democratic society, and respect foundational precedents including </span><a href="https://www.law.cornell.edu/supct/pdf/98-536P.ZO"><i><span style="font-weight: 400;">Olmstead v. LC</span></i></a><span style="font-weight: 400;">. Biden will also make it a priority to appoint judges who reflect the diversity of our country, including people with disabilities. </span></li>
+<li><b>Direct the U.S. Department of Justice to review guardianship laws</b><span style="font-weight: 400;">, with an eye toward ensuring that citizens with disabilities are able to exercise self-determination consistent with the ADA. And, the Biden Administration will promote efforts to provide people with disabilities viable alternatives to guardianship if they need decision-making assistance, including supported decision-making. </span></li>
+<li><b>Protect the parental rights of people with disabilities.</b><span style="font-weight: 400;"> Many </span><a href="https://cascw.umn.edu/wp-content/uploads/2017/03/Policy-Brief-10_a.pdf"><span style="font-weight: 400;">states</span></a><span style="font-weight: 400;"> have laws that allow a parent’s disability to be considered in making a determination regarding their fitness to be a parent. Biden will ensure that child welfare agencies and family courts do not violate the rights of parents with disabilities and that they have appropriate training to fairly assess parental capacity in a non-discriminatory manner. </span><span style="font-weight: 400;"> </span></li>
+</ul>
+<p><b>Ensure our criminal justice system treats people with disabilities fairly. </b>Biden will fund initiatives to partner mental health, disability, and substance use disorder experts and social workers with police departments and first responders. These service providers will train police officers and other frontline responders to better de-escalate interactions with people in severe emotional distress and to respectfully and appropriately interact with individuals with disabilities. The training will vary and be specific to the needs of each impacted community, differentiating strategies for the mental health community and the disability community. Biden will also appoint Justice Department leadership that will prioritize the role of using pattern-or-practice investigations to strengthen our justice system, under <a href="https://www.justice.gov/crt/law-enforcement-misconduct-statute-42-usc-14141">authority</a> in legislation spearheaded by Biden as Senator. And, Biden will ensure greater enforcement of the ADA across the justice system so that people with disabilities are not denied accommodations whether they are victims, defendants, or witnesses. In addition, he will get people who should be supported with social services—instead of in our prisons—connected to the help they need. He will expand access to voluntary, community-based mental health and substance use disorder treatment, as well as educational opportunities and job training for people during and after incarceration. He will also ensure that young people with disabilities who are incarcerated receive accommodations for their education. <i>Read Biden’s full plan on strengthening America’s commitment to justice at </i><a href="../justice.html"><i>https://joebiden.com/justice/</i></a><i>.</i><i> </i></p>
+<p><b></b><b>Fully implement the </b><a href="https://www.congress.gov/bill/107th-congress/house-bill/3295/text"><b>Help America Vote Act</b></a><b>, including the section </b><a href="https://www.congress.gov/bill/107th-congress/senate-bill/565/cosponsors"><b>championed</b></a><b> by Biden requiring that voting systems be accessible for people with disabilities. </b><span style="font-weight: 400;">Biden will also work to pass the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/3206?s=2&amp;r=1"><span style="font-weight: 400;">Accessible Voting Act</span></a><span style="font-weight: 400;">, which will require states and localities to provide accessible voting information, training for poll workers, and accommodations for older adults and voters with disabilities. And, he will make sure every vote counts by ending discriminatory state voter identification laws, and promoting automatic voter registration, same-day voter registration, curbside voting, e-mail registration, voting by mail, and early voting. </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><b>Immediately revoke the Trump Administration’s </b><a href="https://www.uscis.gov/archive/archive-news/final-rule-public-charge-ground-inadmissibility"><b>public charge rule, which discriminates against </b></a><a href="https://thehill.com/regulation/healthcare/460901-disability-rights-groups-join-challenge-to-public-charge-rule"><b>immigrants with disabilities</b></a><b>. </b><span style="font-weight: 400;">Immigrants with disabilities</span> <span style="font-weight: 400;">may be prevented from receiving an immigration status simply because of their disability or, conversely, may have to forego necessary medical services in order to be granted a visa or residency status. Biden will ensure that our country welcomes immigrants with disabilities and their families, including refugees, asylum-seekers, and victims of domestic violence, sexual assault, and human trafficking, and that they can access services and support they need to succeed in the United States. </span><span style="font-weight: 400;">He will ensure that newly arrived immigrants are not subject to mistreatment and receive appropriate accommodations and that the U.S. Customs and Immigration Services (USCIS) complies with the ADA at every step of the naturalization process.</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><b>Protect people with disabilities from abuse and violence. </b><span style="font-weight: 400;">Biden recognizes that people with disabilities are at greater risk of abuse, violence, and harassment in their homes, places of employment, and schools. From 2009 to 2015, people with disabilities were “</span><a href="https://ovc.ncjrs.gov/ncvrw2018/info_flyers/fact_sheets/2018NCVRW_VictimsWithDisabilities_508_QC.pdf"><span style="font-weight: 400;">twice as likely to be victims of violent victimization as people without disabilities.</span></a><span style="font-weight: 400;">” Women with disabilities on college campuses </span><a href="https://www.aau.edu/sites/default/files/%40%20Files/Climate%20Survey/AAU_Campus_Climate_Survey_12_14_15.pdf"><span style="font-weight: 400;">report higher rates</span></a><span style="font-weight: 400;"> of sexual assault relative to those without a disability. And, “</span><a href="https://www.npr.org/2018/01/08/570224090/the-sexual-assault-epidemic-no-one-talks-about"><span style="font-weight: 400;">[p]eople with intellectual disabilities are sexually assaulted at a rate seven times higher than those without disabilities.</span></a><span style="font-weight: 400;">” The Biden Administration will </span><a href="https://medium.com/@JoeBiden/statement-by-vice-president-joe-biden-on-the-trump-administration-rule-to-undermine-title-ix-and-e5dbc545daa"><span style="font-weight: 400;">put a quick end</span></a><span style="font-weight: 400;"> to Trump and Secretary DeVos’ rule undermining Title IX protections for students, and strengthen and expand Violence Against Women Act (VAWA) protections to women and young people with disabilities who are too often left out of current VAWA programs. He will expand funding for the Training and Services to </span><a href="https://www.justice.gov/ovw/page/file/1117461/download"><span style="font-weight: 400;">End Violence Against Women with Disabilities Grant Program</span></a><span style="font-weight: 400;">, which helps victim services organizations and states, tribes, territories, and local governments modify advocacy programs to be accessible and inclusive of people with disabilities.</span><span style="font-weight: 400;"> Biden will also support efforts to provide youth with disabilities accessible, developmentally-appropriate information on bodily autonomy, consent, and the dynamics of healthy relationships. The Biden Administration will invest significant federal funds in expanding and improving the federal government’s support for trauma-informed and culturally responsive care, including for the disability community. In addition, he will ensure that colleges and universities address the needs of students with disabilities in their programs related to campus sexual assault. He will also provide funding to ensure remote advocacy services are accessible to people who often cannot or do not wish to leave home, including for the National Deaf Domestic Violence Hotline and other adaptive and inclusive services for survivors who need accommodation. </span><a href="../vawa.html"><i><span style="font-weight: 400;">Read Biden’s full plan on ending violence against women at joebiden.com/vawa</span></i></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><b>GUARANTEE ACCESS TO HIGH-QUALITY, AFFORDABLE HEALTH CARE, INCLUDING MENTAL HEALTH CARE, AND EXPAND ACCESS TO HOME AND COMMUNITY-BASED SERVICES AND LONG-TERM SERVICES AND SUPPORTS </b><b><br />
+</b><b><br />
+</b><span style="font-weight: 400;">Today, the Affordable Care Act (ACA) is still a big deal—especially for people with disabilities. Because of Obamacare, over </span><a href="https://avalere.com/press-releases/repeal-of-acas-pre-existing-condition-protections-could-affect-health-security-of-over-100-million-people"><span style="font-weight: 400;">100 million people</span></a><span style="font-weight: 400;"> no longer have to worry that an insurance company will deny them coverage or charge them higher premiums just because they have a </span><a href="https://www.healthcare.gov/coverage/pre-existing-conditions/"><span style="font-weight: 400;">pre-existing condition</span></a><span style="font-weight: 400;">—such as a disability. Insurance companies </span><a href="https://www.hhs.gov/healthcare/about-the-aca/benefit-limits/index.html"><span style="font-weight: 400;">can no longer set annual or lifetime limits</span></a><span style="font-weight: 400;"> on coverage, which is especially critical for people with disabilities. But we have much more to do to expand access to high-quality, affordable health care and to long-term services and supports in the most integrated setting appropriate to each person’s needs. As President, Biden will: </span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><b>Expand access to high-quality, affordable health care. </b><span style="font-weight: 400;">Biden’s health care </span><a href="../healthcare.html"><span style="font-weight: 400;">plan</span></a><span style="font-weight: 400;"> will build on the ACA and achieve universal coverage. </span><span style="font-weight: 400;">The Biden Plan will ensure all low-income people are covered through Medicaid or a new public option like Medicare. His plan will give everyone—regardless of whether they currently are uninsured or have employer insurance—the choice to purchase the public health insurance option. As with Medicare, the Biden public option will reduce costs for patients by negotiating lower prices with hospitals and other health care providers. It will also </span><a href="https://www.medicare.gov/manage-your-health/coordinating-your-care"><span style="font-weight: 400;">better coordinate</span></a><span style="font-weight: 400;"> care among all patients&#8217; doctors to improve the efficacy and quality of their care, and cover primary care without any co-payments. </span><span style="font-weight: 400;">And, Biden will work with private insurers to develop approaches to integrated care that include access to the services and supports that allow people with disabilities to live and work in their communities. As President, Biden will protect Medicaid and Medicare and charge the incoming Centers for Medicare and Medicaid Services (CMS) Administrator to review and—where appropriate—make changes to existing Medicare coverage guidelines, including with respect to home health; therapies, including vision rehabilitation; and equipment that people with disabilities rely on to make sure people have access to the equipment and services that they need. He will also promote access to the care, services, and technology needed to support people with disabilities as they transition and adapt to changing life circumstances and empower people with disabilities to make decisions about what that looks like.</span><span style="font-weight: 400;">  </span></p>
+<p><b>Stand up to abuse of power by prescription drug corporations. </b><span style="font-weight: 400;">Too many Americans with disabilities cannot afford their prescription drugs, and prescription drug corporations are profiteering off of the pocketbooks of people that need medication to survive. Biden will put a stop to runaway drug prices and the profiteering of the drug industry. He will repeal the outrageous exception allowing drug corporations to avoid negotiating with Medicare over drug prices. He will also limit launch prices for drugs that face no competition and are being abusively priced by manufacturers and limit price increases for all brand, biotech, and abusively priced generic drugs to inflation. He will stop insurance companies from erecting inappropriate barriers to coverage of needed medications, such as “</span><a href="https://lac.org/wp-content/uploads/2014/07/LAC-The-Case-for-Eliminating-Barriers-to-Medication-Assisted-Treatment.pdf"><span style="font-weight: 400;">fail first</span></a><span style="font-weight: 400;">” protocols that require prescribers to certify that other therapies were tried or requiring physicians to obtain “prior authorization.” And, he will improve the supply of quality generics. </span></p>
+<p><b>Lower health care costs for people with disabilities and their families. </b><span style="font-weight: 400;">Biden will work to lower costs of health care for all Americans, including people with disabilities who might face high medical bills and medical debt. Biden will increase premium tax credits, so more people will have lower premiums and lower deductibles. He will also stop “surprise billing,” barring health care providers from charging patients out-of-network rates when the patient doesn’t have control over which provider the patient sees (for example, during a hospitalization). In addition, Biden adopted Senator Warren&#8217;s comprehensive proposal, </span><i><span style="font-weight: 400;">Fixing Our Bankruptcy System to Give People a Second Chance</span></i><span style="font-weight: 400;">. This plan will allow those with unmanageable debt, including medical debt, to more easily obtain relief through the bankruptcy system.</span></p>
+<p><b>Ensure non-discrimination in access to health care. </b><span style="font-weight: 400;">Biden will defend the rights of all people to have access to quality, affordable, and accessible health care free from discrimination by ensuring that health care non-discrimination protections are fully enforced. His HHS Office for Civil Rights will issue guidance for states and health insurance programs clarifying how the ADA applies to benefits and reimbursement decisions. Also, as directed by Section 1557 of the Affordable Care Act and Section 504 of the Rehabilitation Act, Biden will ensure that entities funded by HHS do not deny medical care based on disability or age.   </span></p>
+<p><b>E</b><b>xpand the defi</b><b>nition of </b><a href="https://data.hrsa.gov/tools/shortage-area/mua-find"><b>Medically Underserved Population</b></a><b> (MUP</b><b>) to include people with disabilities</b><span style="font-weight: 400;">, which will drive investments through the Health Resources and Services Administration for expanding access to primary health service providers. </span></p>
+<p><b>Ensure access to quality mental and behavioral health treatment. </b><span style="font-weight: 400;">Biden is proud that the ACA provided individuals with pre-existing conditions, including mental health conditions and substance use disorders, access to health insurance. The ACA also </span><a href="https://aspe.hhs.gov/report/affordable-care-act-expands-mental-health-and-substance-use-disorder-benefits-and-federal-parity-protections-62-million-americans"><span style="font-weight: 400;">requires</span></a><span style="font-weight: 400;"> insurance companies to cover mental and behavioral health treatment as an </span><a href="https://aspe.hhs.gov/report/affordable-care-act-expands-mental-health-and-substance-use-disorder-benefits-and-federal-parity-protections-62-million-americans"><span style="font-weight: 400;">essential</span></a><span style="font-weight: 400;"> benefit, and cover that care at parity with physical health benefits. Yet, despite this progress, Biden knows too many people are still denied the care they need. As Vice President, Biden was a champion for efforts to </span><a href="https://www.federalregister.gov/documents/2013/11/13/2013-27086/final-rules-under-the-paul-wellstone-and-pete-domenici-mental-health-parity-and-addiction-equity-act"><span style="font-weight: 400;">implement the federal mental health parity law</span></a><span style="font-weight: 400;">, </span><a href="https://obamawhitehouse.archives.gov/the-press-office/2013/12/10/vice-president-biden-announces-100-million-increase-access-mental-health"><span style="font-weight: 400;">improve access to mental health care</span></a><span style="font-weight: 400;">, and </span><a href="https://www.youtube.com/watch?v=gFZsIPkfN3Q"><span style="font-weight: 400;">eliminate the stigma around mental health</span></a><span style="font-weight: 400;">. As President, he will redouble these efforts. He will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Enforce parity laws. </b><span style="font-weight: 400;">Currently, </span><a href="http://www.ncsl.org/research/health/mental-health-benefits-state-mandates.aspx"><span style="font-weight: 400;">states vary</span></a><span style="font-weight: 400;"> in how they define essential health benefits when it comes to mental health. Biden will set clear standards raising the bar for mental health coverage, including habilitative services and other forms of behavioral health care. </span></li>
+<li style="font-weight: 400;"><b>Integrate mental health and substance use disorder treatment into primary care and expand community-based programs.</b><span style="font-weight: 400;"> Biden will expand community-based programs that incorporate the full spectrum of services that are necessary for successful treatment, including supported employment and housing. He will support efforts to expand the successful Certified Community Behavioral Health Clinics (“</span><a href="https://www.thenationalcouncil.org/topics/certified-community-behavioral-health-clinics/"><span style="font-weight: 400;">CCBHC</span></a><span style="font-weight: 400;">”) </span><span style="font-weight: 400;">Demonstration program in order to expand access to high-quality, evidence-based behavioral health services at the community level.</span><span style="font-weight: 400;"> </span></li>
+<li style="font-weight: 400;"><b>Increase the number of mental health professionals and paraprofessionals.</b> <span style="font-weight: 400;">Biden will increase funding for the </span><a href="https://nhsc.hrsa.gov/"><span style="font-weight: 400;">National Health Service Corps</span></a><span style="font-weight: 400;">, and develop high school-community college-health center partnerships to inspire young people, including diverse young people with disabilities, to pursue jobs in health care. He will build on the work done through the </span><a href="https://www.congress.gov/114/plaws/publ255/PLAW-114publ255.pdf"><span style="font-weight: 400;">21st Century Cures Act</span></a><span style="font-weight: 400;">, which included resources designed to increase the number of mental health and substance use disorder professionals and paraprofessionals</span><span style="font-weight: 400;">. Biden will also double the number of psychologists, counselors, nurses, social workers, and other health professionals in our schools. </span></li>
+<li style="font-weight: 400;"><b>Guarantee high-quality mental health care to our veterans and military dependents. </b><span style="font-weight: 400;">A Biden Administration will work aggressively to facilitate immediate access to mental health services for veterans in crisis. During his first year in office, Biden will have a goal of completely eliminating wait times for veterans who reach out with suicidal ideation so that they are immediately taken into treatment. Biden will also invest in an infrastructure that promotes health and well-being, reduces risky behaviors, and provides timely, convenient access to high-quality mental health and substance use/abuse services for military dependents. </span><i><span style="font-weight: 400;">Read Biden’s plan to support veterans at </span></i><a href="../veterans.html"><i><span style="font-weight: 400;">joebiden.com/veterans</span></i></a><i><span style="font-weight: 400;"> and military families at </span></i><a href="../militaryfamilies.html"><i><span style="font-weight: 400;">joebiden.com/militaryfamilies</span></i></a><i><span style="font-weight: 400;">.</span></i></li>
+</ul>
+<p><b>Invest in research. </b><span style="font-weight: 400;">Trump’s most recent budget proposal </span><a href="https://www.washingtonpost.com/science/trump-budget-cuts-funding-for-health-science-environment-agencies/2020/02/10/9c8dd784-4c2d-11ea-b721-9f4cdc90bc1c_story.html"><span style="font-weight: 400;">makes</span></a><span style="font-weight: 400;"> significant cuts to health and science agencies, including the National Institutes of Health (NIH). Biden will increase funding for NIH and will remain committed to advancing the </span><a href="https://obamawhitehouse.archives.gov/precision-medicine"><span style="font-weight: 400;">Precision Medicine Initiative</span></a><span style="font-weight: 400;"> and will make a renewed investment in the </span><a href="https://obamawhitehouse.archives.gov/BRAIN"><span style="font-weight: 400;">BRAIN (Brain Research through Advancing Innovative Neurotechnologies) Initiative to make advancements in treating diseases like Alzheimer’s and Parkinson’s.</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span></a><b>Ensure access to necessary pain treatment. </b><span style="font-weight: 400;">Biden will work to ensure access to needed pain medication and pain management care.</span><span style="font-weight: 400;"> In addition, he will i</span><span style="font-weight: 400;">nvest in research by doubling funding for the NIH </span><a href="https://www.nih.gov/news-events/news-releases/nih-funds-945-million-research-tackle-national-opioid-crisis-through-nih-heal-initiative"><span style="font-weight: 400;">HEAL</span></a><span style="font-weight: 400;"> (Helping to End Addiction Long-Term) Initiative, which will support efforts to improve treatments for chronic pain.</span><span style="font-weight: 400;"> A Biden Administration will prioritize the research needed to advance science-based federal policies related to the use of marijuana for medical conditions, chronic pain, and disabilities. </span><i><span style="font-weight: 400;">Read Biden’s full plan on tackling substance use disorders and the opioid crisis at </span></i><a href="../opioidcrisis.html"><i><span style="font-weight: 400;">joebiden.com/opioidcrisis</span></i></a><span style="font-weight: 400;">.</span><b><br />
+</b><b><br />
+</b><b>Provide greater access to home and community-based services and long-term services and supports in the most integrated setting appropriate to each person’s needs. </b><span style="font-weight: 400;">Access to long-term services and supports is essential to many people with disabilities, and essential to living up to the spirit of the Supreme Court’s </span><i><span style="font-weight: 400;">Olmstead </span></i><span style="font-weight: 400;">decision. As President, Biden will expand access to long-term services and supports, end the institutional bias in the Medicaid program, and build the capacity of our system to deliver home and community-based services by: </span></p>
+<ul>
+<li style="font-weight: 400;"><b>Ending the institutional bias in the Medicaid program. </b><span style="font-weight: 400;">Biden will work with the disability community and Congress to put home and community-based services (HCBS) on equal footing with institutional settings for Medicaid eligibility, while also investing in building the capacity of the Medicaid system to provide HCBS.  </span></li>
+<li style="font-weight: 400;"><b>Affirming the right of people with disabilities to self-direct services. </b><span style="font-weight: 400;">Biden will </span><a href="https://www.nasddds.org/uploads/documents/NCD_SelfDirection_ReportFINAL508Apr10.pdf"><span style="font-weight: 400;">encourage</span></a><span style="font-weight: 400;"> more states to allow older Americans and people with disabilities receiving long-term services and supports under </span><a href="https://www.medicaid.gov/medicaid/long-term-services-supports/self-directed-services/index.html"><span style="font-weight: 400;">Medicaid</span></a><span style="font-weight: 400;"> the option of self-directing their own home and community-based services, including the right to hire family members as support workers. He will direct the Administration for Community Living to identify best practices in self-direction and make them available to people who need them.  </span></li>
+<li style="font-weight: 400;"><b>Working with Congress to secure permanent reauthorization of and investing in the Money Follows the Person (MFP) program. </b><span style="font-weight: 400;">The MFP program provides funding to states to expand the number of people with disabilities who have the choice to live in their homes or in their communities. Biden will secure reauthorization of the MFP program and increase funding for it.</span></li>
+<li style="font-weight: 400;"><b>Fully implementing the </b><a href="https://www.medicaid.gov/medicaid/home-community-based-services/guidance/home-community-based-services-final-regulation/index.html"><b>HCBS Final Rule</b></a><span style="font-weight: 400;"> to ensure that community services for older adults and people with disabilities are integrated and do not look, feel, or act like institutional settings. Biden will reverse roll backs and delays in enforcement </span><a href="https://www.medicaid.gov/sites/default/files/Federal-Policy-Guidance/Downloads/smd19001.pdf"><span style="font-weight: 400;">undertaken by the Trump Administration</span></a><span style="font-weight: 400;"> and work to pass legislation to provide funding to states to support implementation of the rule, including capacity building for HCBS.</span></li>
+<li style="font-weight: 400;"><b>Making </b><a href="https://www.congress.gov/116/bills/s2000/BILLS-116s2000is.pdf"><b>HCBS Spousal Impoverishment Protections</b></a> <b>permanent </b><span style="font-weight: 400;">to ensure that Medicaid’s “spousal impoverishment protections” enable aging and people with disabilities who need a higher level of care to qualify for long-term care through Medicaid while their spouse is permitted to retain a certain level of income and assets.</span></li>
+<li style="font-weight: 400;"><b>Improving the Medicaid buy-in program and modernizing Medicaid eligibility </b><span style="font-weight: 400;">so that people with disabilities do not have to keep working low-wage jobs or turn down promotions in order to access the services that they need. The </span><a href="https://nationaldisabilitynavigator.org/ndnrc-materials/fact-sheets/fact-sheet-15/"><span style="font-weight: 400;">Medicaid buy-in program</span></a><span style="font-weight: 400;"> allows workers with disabilities to maintain their Medicaid benefits. Biden will work to improve the Medicaid buy-in program, including by allowing those over 65 to qualify and permanently authorizing their ability to purchase Medicaid and by expanding incentives for states to offer buy-in programs. </span></li>
+</ul>
+<p><b>Invest in the direct care workforce. </b><span style="font-weight: 400;">Biden will ensure that people with disabilities receive support from direct care professionals who earn a living wage, have access to affordable health care, and do not have to get a second job to pay household bills. In order to support and increase the direct care workforce, Biden will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Increase the minimum wage to $15 per hour and provide federally-funded paid  leave.</b><span style="font-weight: 400;"> Every worker deserves to earn enough to live a middle-class lifestyle, provide for their family, save for retirement, and send their kids to college. The Obama-Biden Administration </span><a href="https://www.dol.gov/newsroom/releases/whd/whd20130917"><span style="font-weight: 400;">extended</span></a><span style="font-weight: 400;"> long overdue overtime and minimum wage protections to nearly 2 million home care workers. As President, Biden will codify these protections into law and build on them. Biden will support indexing the minimum wage to the </span><a href="https://equitablegrowth.org/bolstering-bottom-indexing-minimum-wage-median-wage/"><span style="font-weight: 400;">median hourly wage</span></a><span style="font-weight: 400;"> so that low-wage workers’ wages keep up with those of middle-income workers. He will also ensure that Medicaid reimbursement levels reflect fair wages, while increasing access to HCBS—alleviating tension between access to services and paying people a fair wage.  </span></li>
+<li style="font-weight: 400;"><b>Sign into law Senator Harris and Congresswoman Jayapal’s </b><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2112/text"><b>Domestic Workers’ Bill of Rights</b></a><span style="font-weight: 400;">, which, among other things, establishes a federal wage and standard board to set fair wage levels and define working conditions for domestic workers, including direct care workers, across the United States. He will protect the right of all workers to participate in a union. And, he will reinstate the </span><a href="https://www.federalregister.gov/documents/2014/01/16/2014-00487/medicaid-program-state-plan-home-and-community-based-services-5-year-period-for-waivers-provider"><span style="font-weight: 400;">Obama-Biden rule</span></a><span style="font-weight: 400;">, which the </span><a href="https://www.federalregister.gov/documents/2019/05/06/2019-09118/medicaid-program-reassignment-of-medicaid-provider-claims"><span style="font-weight: 400;">Trump Administration has since reversed</span></a><span style="font-weight: 400;">, that makes it easier for independent-provider home care workers to participate in a union. And, he will both stop the misclassification of workers as independent contractors and give the right to collectively bargain to independent contractors. He will also ensure that domestic workers have the right to basic workplace protections, including safe and healthy work environments. </span></li>
+<li style="font-weight: 400;"><b>Provide support for direct care workers to engage with consumers to develop appropriate training and career opportunities to improve community living services.</b><span style="font-weight: 400;"> H</span><span style="font-weight: 400;">e will </span><span style="font-weight: 400;">direct states to consult care providers, labor unions, and community advocates on decisions that impact the quality, affordability, or access of care</span><span style="font-weight: 400;">. </span><i><span style="font-weight: 400;">Read Biden’s full plan at </span></i><a href="../empowerworkers.html"><i><span style="font-weight: 400;">https://joebiden.com/empowerworkers</span></i></a><i><span style="font-weight: 400;">.</span></i></li>
+</ul>
+<p><b>Support informal or family caregivers.</b><span style="font-weight: 400;"> Biden will ensure that informal or family caregivers receive the support they need to care for their family members by:</span></p>
+<ul>
+<li><b>Creating a $5,000 tax credit for informal caregivers.</b></li>
+<li><b>Passing legislation that will provide 12 weeks of paid leave for all workers for their own or a family member’s serious health condition.</b><span style="font-weight: 400;"> </span></li>
+<li><b>Allowing caregivers to make “catch-up” contributions to retirement accounts, even if they’re not earning income in the formal labor market.</b></li>
+<li><b>Providing Social Security credits to people who leave the workforce to care for their loved ones, as proposed in the </b><a href="https://www.congress.gov/bill/116th-congress/senate-bill/2317/text"><b>Social Security Caregiver Credit Act</b></a><b>.</b><span style="font-weight: 400;"> </span></li>
+<li><b>Increasing the child and dependent care tax credit to up to $8,000.</b></li>
+<li><b>Working with Congress to ensure that caregivers currently paid through Medicaid are able to earn credit towards Medicare and Social Security,</b><span style="font-weight: 400;"> so that caring for family members in poverty does not impoverish them in their elder years.</span></li>
+<li><b>E</b><b>nsuring that caregivers of active duty service members receive adequate professional and peer support,</b><span style="font-weight: 400;"> including competent mental health care, financial readiness training, and transition support throughout the rehabilitation timeline and ensure that the eligibility expansion for the VA Caregiver Support Program meets its timelines. </span><i><span style="font-weight: 400;">Read Biden’s full plan on fulfilling our commitment to military families, caregivers, and survivors at </span></i><a href="../militaryfamilies.html"><i><span style="font-weight: 400;">joebiden.com/militaryfamilies/</span></i></a><i><span style="font-weight: 400;">.</span></i></li>
+</ul>
+<p><b>EXPAND COMPETITIVE, INTEGRATED EMPLOYMENT OPPORTUNITIES FOR PEOPLE WITH DISABILITIES </b></p>
+<p><span style="font-weight: 400;">Workers with disabilities deserve equal employment opportunities as well as a powerful commitment from the federal government to break down barriers, like discrimination, that keep them from seeking, getting, and keeping jobs in competitive, integrated employment. Biden has made that commitment throughout his career and, as President, he will continue to fight to help workers with disabilities find jobs that secure their place in the middle class. Biden’s commitment extends to </span><a href="https://www.lgbtmap.org/file/LGBT-People-With-Disabilities.pdf"><span style="font-weight: 400;">LGBTQ+ Americans with disabilities</span></a><span style="font-weight: 400;"> and </span><a href="https://www.nationaldisabilityinstitute.org/wp-content/uploads/2019/02/disability-race-poverty-in-america.pdf"><span style="font-weight: 400;">people of color with disabilities</span></a><span style="font-weight: 400;"> who, because of their race or sexual orientation, may face unique and especially difficult economic challenges. Biden will enforce the ADA to ensure that employers do not discriminate against people with disabilities, and provide reasonable accommodations for them to succeed at work. He also will: </span></p>
+<p><b>Safeguard workers with disabilities’ rights to workplace accommodations and equal employment opportunity.</b><span style="font-weight: 400;"> In 2019, </span><a href="https://www.bls.gov/news.release/disabl.nr0.htm"><span style="font-weight: 400;">fewer than one in five people with disabilities were employed</span></a><span style="font-weight: 400;">, and workers with disabilities in every age group were less likely to be employed than workers without disabilities. Biden will direct his Labor Department to work with the EEOC and the Justice Department to eliminate the discrimination that bars too many workers with disabilities from employment. This includes requiring employers to disclose whether they have successfully engaged in an “interactive process” with workers with disabilities to provide those workers with the accommodations they need to overcome barriers in the workplace and the job application process.    </span></p>
+<p><b></b><b>Phase out the subminimum wage based on disability and work with Congress to ensure that there is funding for impacted employees with disabilities to receive support in competitive and integrated work settings. </b><span style="font-weight: 400;">Biden will work to pass the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/260/text?q=%7B%22search%22%3A%5B%22s260%22%5D%7D&amp;r=1&amp;s=7"><span style="font-weight: 400;">Transformation to Competitive Employment Act</span></a><span style="font-weight: 400;"> and expand supported and customized employment by:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Providing technical assistance and funding for jobs that allow people with disabilities to put their skills, talents, and abilities to work with reasonable accommodations in settings that include workers who do not have disabilities. </b><span style="font-weight: 400;"> </span></li>
+<li style="font-weight: 400;"><b>Restoring the Department of Justice’s guidance on the application of the Supreme Court’s </b><b><i>Olmstead </i></b><b>decision to state and local employment services</b><span style="font-weight: 400;">, which the Trump Administration </span><a href="https://www.ada.gov/withdrawn_olmstead.html"><span style="font-weight: 400;">revoked</span></a><span style="font-weight: 400;">. This guidance affirmed that state and local employment services must follow Olmstead’s mandate to “administer services, programs, and activities in the most integrated setting appropriate to the needs of qualified individuals with disabilities.” </span></li>
+<li style="font-weight: 400;"><b>Directing the Department of Education’s Rehabilitation Services Administration to enforce the integrated employment provisions of the </b><a href="https://www.congress.gov/113/plaws/publ128/PLAW-113publ128.pdf"><b>Workforce Innovation and Opportunity Act</b></a><b> </b><span style="font-weight: 400;">consistent with the </span><a href="https://www.doleta.gov/WIOA/Docs/Final-Rules-A-Detailed-Look-Fact-Sheet.pdf"><span style="font-weight: 400;">regulations</span></a><span style="font-weight: 400;"> issued by the Obama-Biden Administration in 2016, directing resources under the vocational rehabilitation program to be used for people with disabilities seeking competitive, integrated employment. </span></li>
+<li style="font-weight: 400;"><b>Increasing tax credits to employers, including small businesses, by passing the </b><a href="https://www.congress.gov/bill/116th-congress/senate-bill/255/text"><b>Disability Employment Incentive Act</b></a><span style="font-weight: 400;"> to provide any employer hiring a person with a disability up to a $5,000 tax credit the first year and $2,500 if the worker with a disability completes a second year of employment, and up to $30,000 in tax credits to improve the accessibility of their workplace. </span></li>
+<li style="font-weight: 400;"><b>Increase funding for state vocational rehabilitation agencies.</b></li>
+</ul>
+<p><b>Provide small business resources for people with disabilities.</b><span style="font-weight: 400;"> Biden will ensure that entrepreneurial training programs funded by the Small Business Administration focus on and benefit entrepreneurs with disabilities. He will also provide incentives for states and local governments to adopt programs that support entrepreneurship and small business development among the disability community.</span></p>
+<p><b>Ensure those working in the federal government or for government contractors reflect the diversity of our country, including people with disabilities.</b><span style="font-weight: 400;"> Biden will fully and aggressively enforce Section 503 of the Rehabilitation Act, which requires that federal contractors “</span><a href="https://www.law.cornell.edu/cfr/text/41/60-741.44"><span style="font-weight: 400;">engage in affirmative action efforts to employ and advance in employment qualified individuals with disabilities</span></a><span style="font-weight: 400;">.” Biden will also work with civil rights leaders to develop and institute implicit bias training programs for federal workers and contractors to address discrimination based on race, sex, sexual orientation, gender identity or expression, or disability. And, he will promote flexible work arrangements both in government and in the private sector, including for people with disabilities, employees with a serious health condition, and older workers, as well as caregivers.</span></p>
+<p><b>PROTECT AND STRENGTHEN ECONOMIC SECURITY FOR PEOPLE WITH DISABILITIES</b></p>
+<p><span style="font-weight: 400;">The Trump Administration has systematically attacked the Social Security disability programs—from </span><a href="https://www.forbes.com/sites/imanibarbarin/2019/04/11/how-a-trump-proposal-could-reduce-happy-disabled-people/#4c5bebee636c"><span style="font-weight: 400;">proposing monitoring people with disabilities</span></a><span style="font-weight: 400;"> through social media in order to cancel their benefits, including their health care, to tightening eligibility through a proposal to  </span><a href="https://www.huffpost.com/entry/trump-disability-cuts-social-security_n_5e6bb096c5b6bd8156f68c4d"><span style="font-weight: 400;">redefine</span></a><span style="font-weight: 400;"> the number of hours in a work week so some applicants do not receive benefits. The National Council on Disability found that “</span><a href="https://ncd.gov/newsroom/2017/disability-poverty-connection-2017-progress-report-release"><span style="font-weight: 400;">people with disabilities live in poverty at more than twice the rate of people without disabilities.</span></a><span style="font-weight: 400;">” To protect the economic security of people with disabilities and increase employment opportunities, Biden will take a </span><a href="https://ncd.gov/rawmedia_repository/b01bc342_353d_4b08_ba4b_7f0edfb0dd68.pdf"><span style="font-weight: 400;">holistic approach</span></a><span style="font-weight: 400;"> to </span><a href="https://www.ssa.gov/pubs/EN-05-11000.pdf"><span style="font-weight: 400;">Supplemental Security Income</span></a><span style="font-weight: 400;"> (SSI), </span><a href="https://www.ssa.gov/pubs/EN-05-10029.pdf"><span style="font-weight: 400;">Social Security Disability Insurance</span></a><span style="font-weight: 400;"> (SSDI), Medicaid, and other programs to support people with disabilities. He will: </span></p>
+<ul>
+<li style="font-weight: 400;"><b>Increase the benefit level for people receiving SSI.</b><span style="font-weight: 400;"> Biden will set a federal benefit rate of at least 100% of the poverty level. </span></li>
+<li style="font-weight: 400;"><b>Eliminate the five-month waiting period for SSDI and two-year waiting period for Medicare.</b><span style="font-weight: 400;"> Biden will work to pass legislation to ensure working people who develop a condition or disability are able to get their Social Security support as well as their Medicare benefits as soon as they qualify. </span></li>
+<li style="font-weight: 400;"><b>Eliminate the “benefit cliff” for SSDI. </b><span style="font-weight: 400;">E</span><span style="font-weight: 400;">arnings limits under SSDI can discourage people with disabilities from engaging in employment or internship opportunities when they depend on SSDI funds. Biden will increase this limit and phase out this benefit gradually so people with disabilities don’t have to choose between employment and health ca</span><span style="font-weight: 400;">re. </span></li>
+<li style="font-weight: 400;"><b>Reform the SSI program so that it doesn’t limit beneficiaries’ freedom to marry, save, or live where they choose. </b><span style="font-weight: 400;">Biden will work with Congress and the disability community to eliminate the SSI marriage penalty and </span><a href="https://www.ssa.gov/ssi/text-living-ussi.htm"><span style="font-weight: 400;">“in-kind support and maintenance</span><span style="font-weight: 400;">”</span></a><span style="font-weight: 400;"> provision and raise the asset limits associated with SSI that have not been increased since 1984.</span><b> </b></li>
+<li style="font-weight: 400;"><b>Expand access to tax-advantaged savings accounts, ABLE accounts, </b><span style="font-weight: 400;">which provide people with disabilities a way to pay for “</span><a href="https://www.nationaldisabilityinstitute.org/financial-wellness/able-accounts/"><span style="font-weight: 400;">qualified disability-related expenses, such as education, housing and transportation.</span></a><span style="font-weight: 400;">” Biden will work to pass the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/651"><span style="font-weight: 400;">ABLE Age Adjustment Act</span></a><span style="font-weight: 400;">, which will make ABLE accounts available to 6 million additional adults with disabilities, including 1 million veterans. </span></li>
+<li style="font-weight: 400;"><b>Reverse damage done to Social Security rules by the Trump Administration.</b><span style="font-weight: 400;"> President Trump announced that he wants to </span><a href="https://www.federalregister.gov/documents/2019/11/18/2019-24700/rules-regarding-the-frequency-and-notice-of-continuing-disability-reviews"><span style="font-weight: 400;">change the Social Security rules</span><span style="font-weight: 400;"> </span></a><span style="font-weight: 400;">for people who get disability benefits, including SSI and SSDI. His proposed change would require many to re-verify their disability </span><a href="https://www.inquirer.com/news/social-security-ssi-ssdi-trump-administration-disability-20191212.html"><span style="font-weight: 400;">every two years</span></a><span style="font-weight: 400;">, a tough enough process to get through once, </span><a href="https://www.nytimes.com/2020/01/16/opinion/trump-disability.html?auth=login-email&amp;login=email"><span style="font-weight: 400;">targeting</span></a><span style="font-weight: 400;"> adults with disabilities who are close to retirement, children with disabilities, and people with certain medical conditions including cancer and behavioral disorders. If approved by the Trump Administration, Biden will rescind this harmful proposal.</span></li>
+<li style="font-weight: 400;"><b>Strengthen the Social Security Administration.</b><span style="font-weight: 400;"> Ensuring that Social Security benefits are easy to access and that field offices and teleservice centers are fully funded is key to our bedrock commitment to seniors and people with disabilities. Cutting Social Security services will only hurt the most vulnerable in our communities. Biden will provide sufficient resources for staffing needs to meet the needs of beneficiaries today and into the future.</span></li>
+</ul>
+<p><b>ENSURE THAT STUDENTS WITH DISABILITIES HAVE ACCESS TO EDUCATIONAL PROGRAMS AND SUPPORT THEY NEED TO SUCCEED </b></p>
+<p><span style="font-weight: 400;">As President, Biden will make sure that students with disabilities receive the services and support they need to succeed. He will: </span></p>
+<p><b>Invest in our children at birth.</b><span style="font-weight: 400;"> Biden will provide funds to ensure that there is an early childhood development expert in every community health center. He will also provide grants to help cities place early childhood development experts in pediatrician offices with a high percentage of Medicaid and Children’s Health Insurance Program patients. These experts, as part of the primary care team, will help identify whether children are reaching development milestones, help connect families to additional services like home visiting when needed, and answer parents’ questions regarding child development. He will work to ensure “continuous language learning support services” are covered under insurance for Deaf and Hard of Hearing Children and their caregivers.</span> <span style="font-weight: 400;">And, Biden will double funding for home visiting.</span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Make sure children and parents with disabilities have access to affordable, quality child care. </b><span style="font-weight: 400;">Biden will work to ensure that child care facilities are physically accessible for all children and their parents, that early childhood and child care staff have skills to care for children with disabilities by investing in training, and that child care staff have access to resources, including specialists who can help them care for and enhance the development of very young children with disabilities. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Expand access to high-quality early childhood supports and education. </b><span style="font-weight: 400;">Biden will fully fund the </span><a href="https://www.govinfo.gov/content/pkg/STATUTE-89/pdf/STATUTE-89-Pg773.pdf"><span style="font-weight: 400;">Individuals with Disabilities Education Act</span></a><span style="font-weight: 400;"> (IDEA), including </span><a href="https://sites.ed.gov/idea/regs/c"><span style="font-weight: 400;">Part C</span></a><span style="font-weight: 400;">, which </span><a href="https://sites.ed.gov/idea/regs/c/a/303.1:%20describes%20purpose."><span style="font-weight: 400;">provides resources and support</span></a><span style="font-weight: 400;"> for infants and toddlers with disabilities, and Section 619, which provides resources for preschool children with disabilities. Biden will direct his HHS to ensure that all eligible children receive </span><a href="https://www.medicaid.gov/medicaid/benefits/early-and-periodic-screening-diagnostic-and-treatment/index.html"><span style="font-weight: 400;">Early and Periodic Screening, Diagnosis, and Treatment (EPSDT)</span></a><span style="font-weight: 400;"> services and address the challenges outlined in GAO’s 2019 </span><a href="https://www.gao.gov/products/GAO-19-481"><span style="font-weight: 400;">report</span></a><span style="font-weight: 400;">. IDEA Part C, Part B Section 619, and EPSDT services are critical in identifying potential vision, hearing, developmental, and other issues and providing needed supports and services for children. For example, language deprivation for children who are Deaf or Hard of Hearing in the early years of life can have lasting impact on a </span><a href="https://www.mdpi.com/2227-7102/9/2/133/htm"><span style="font-weight: 400;">child’s language and cognitive skills</span></a><span style="font-weight: 400;">. Biden will provide parents, health care providers, and early childhood professionals the resources needed to support these children, including access to Augmentative and Alternative Communication (AAC) and</span> <span style="font-weight: 400;">language-rich environments, and work with the community to develop development milestones. He will ensure that early intervention professionals provide equitable resources to support language learning to parents of children aged 0-5. </span></p>
+<p><b>Support students with disabilities in elementary and secondary school. </b><span style="font-weight: 400;">Biden will ensure that no child’s future is determined by their zip code, parents’ income, race, or disability. He will: </span></p>
+<ul>
+<li style="font-weight: 400;"><b>Fulfill </b><a href="https://www.govinfo.gov/content/pkg/STATUTE-89/pdf/STATUTE-89-Pg773.pdf"><b>IDEA</b></a><b>’s promise of </b><a href="https://www2.ed.gov/about/offices/list/ocr/docs/edlite-FAPE504.html"><b>free appropriate public education</b></a><b> in the </b><a href="https://www.ncld.org/get-involved/learn-the-law/idea/"><b>least restrictive environment</b></a> <b>for students with disabilities. </b><span style="font-weight: 400;">Biden will fully fund and enforce </span><a href="https://www.govinfo.gov/content/pkg/STATUTE-89/pdf/STATUTE-89-Pg773.pdf"><span style="font-weight: 400;">IDEA</span><span style="font-weight: 400;"> and </span></a><span style="font-weight: 400;">triple Title I funding to increase resources available to educators to meet the needs of students with disabilities. Biden will ensure that schools provide students with disabilities appropriate support, including sign language interpreters, readers, door-to-door transportation, computer-assisted devices, augmentative and alternative communication, as well as braille materials. He will also increase funding for Parent Training Centers.</span></li>
+<li style="font-weight: 400;"><b>Ensure educators and schools have the resources to educate students with disabilities.</b><span style="font-weight: 400;"> Biden will support efforts to recruit and retain special education teachers, including diverse special education teachers. He will also provide professional development opportunities to all teachers and paraprofessionals who work with students with disabilities. In a Biden Administration, teachers will be able to choose to earn an additional certification in special education while they are still teaching without accumulating debt. Biden will also direct the Department of Education to support teacher preparation programs to ensure that all teacher candidates have the ability to support students with disabilities in their classrooms. His Administration will promote</span> <span style="font-weight: 400;">universal design</span> <span style="font-weight: 400;">in teaching practices and classroom features, such as instructional techniques, classroom materials and resources, classroom seating, testing, and note-taking. As </span><a href="https://elizabethwarren.com/plans/disability-rights-and-equality"><span style="font-weight: 400;">proposed</span></a><span style="font-weight: 400;"> by Senator Warren, he will support efforts to include the history of the disability movement and the contributions made by people with disabilities in school curricula, and lift up the voices of young people with disabilities. And, he will invest $100 billion to modernize our nation’s schools, including ensuring they are accessible and built with cutting-edge technology.  </span></li>
+<li style="font-weight: 400;"><b>Address the disparities in school discipline, including suspension, expulsion, and segregation. </b><span style="font-weight: 400;">Biden will </span><a href="https://www2.ed.gov/about/offices/list/ocr/docs/edlite-FAPE504.html"><span style="font-weight: 400;">fully</span></a><span style="font-weight: 400;"> implement the </span><a href="https://www.ed.gov/news/press-releases/fact-sheet-equity-idea"><span style="font-weight: 400;">special education significant disproportionality regulation</span></a><span style="font-weight: 400;"> that the Obama-Biden Administration put in place and support the passage of the </span><a href="https://www.congress.gov/115/bills/hr7124/BILLS-115hr7124ih.pdf"><span style="font-weight: 400;">Keeping All Students Safe Act</span></a><span style="font-weight: 400;">, which will end the use of seclusion and prevent and decrease the use of physical restraints in schools.</span></li>
+<li style="font-weight: 400;"><b>Ensure that students of color are not inappropriately identified as having disabilities, while also ensuring that students of color with disabilities have the support to succeed.</b><span style="font-weight: 400;"> African American students are</span> <a href="https://www.childtrends.org/child-trends-5/5-things-know-racial-ethnic-disparities-special-education"><span style="font-weight: 400;">40%</span></a><span style="font-weight: 400;"> more likely to be identified as having any disability, and</span> <a href="https://www.childtrends.org/child-trends-5/5-things-know-racial-ethnic-disparities-special-education"><span style="font-weight: 400;">twice</span></a><span style="font-weight: 400;"> as likely to be identified as having certain disabilities, such as emotional disturbance and intellectual disabilities. The Obama-Biden Administration issued </span><a href="https://www2.ed.gov/policy/speced/reg/idea/part-b/idea-part-b-significant-disproportionality-final-regs-unofficial-copy.pdf"><span style="font-weight: 400;">regulations</span></a><span style="font-weight: 400;"> to address racial disparities in special education programs, including disproportionate identification. The Trump Administration attempted to</span><a href="https://www.nytimes.com/2019/03/08/us/politics/betsy-devos-special-education.html"> <span style="font-weight: 400;">illegally delay</span></a><span style="font-weight: 400;"> the Obama-Biden Administration’s regulation. Biden will fully implement this </span><a href="https://www.ed.gov/news/press-releases/fact-sheet-equity-idea"><span style="font-weight: 400;">regulation</span><span style="font-weight: 400;"> and provide educators with the resources they need to provide students with disabilities a high-quality education. </span></a><span style="font-weight: 400;">  </span></li>
+<li style="font-weight: 400;"><b>Prevent bullying in schools.</b><span style="font-weight: 400;"> Biden will support passage of the </span><a href="https://www.congress.gov/bill/116th-congress/house-bill/2653/text"><span style="font-weight: 400;">Safe Schools Improvement Act</span></a><span style="font-weight: 400;">, which will require school districts to develop bullying and harassment policies. He will also double the number of mental health care professionals in our schools. </span></li>
+</ul>
+<p><b>Support transition to employment for youth with disabilities. </b><span style="font-weight: 400;">While our country’s high school graduation rate is at a </span><a href="https://nces.ed.gov/programs/coe/indicator_coi.asp"><span style="font-weight: 400;">record high</span></a><span style="font-weight: 400;">, there is still far </span><a href="https://www.americaspromise.org/2019-building-grad-nation-report"><span style="font-weight: 400;">too large a gap</span></a><span style="font-weight: 400;"> between the graduation rate of students with disabilities and their peers without disabilities. Even once students with disabilities graduate and enroll in college, too many of them do not get the continued support they need to </span><a href="https://hechingerreport.org/vast-majority-students-disabilities-dont-get-college-degree/"><span style="font-weight: 400;">complete their post-secondary degree</span></a><span style="font-weight: 400;"> and </span><a href="https://www.cbsnews.com/news/americans-with-disabilities-still-cant-land-jobs/"><span style="font-weight: 400;">obtain a good job</span></a><span style="font-weight: 400;">. Biden will ensure that school districts are meeting their </span><a href="https://sites.ed.gov/idea/regs/b/a/300.43"><span style="font-weight: 400;">obligations</span> </a><span style="font-weight: 400;">under </span><a href="https://www.pacer.org/transition/learning-center/laws/idea.asp"><span style="font-weight: 400;">IDEA </span></a><span style="font-weight: 400;">to provide transition services to all students with disabilities by the time </span><a href="https://sites.ed.gov/idea/files/postsecondary-transition-guide-may-2017.pdf"><span style="font-weight: 400;">they turn 16</span></a><span style="font-weight: 400;">, and encourage them to start even earlier—at age 14 so they can graduate ready for continuing education or employment. He will direct the Department of Education to provide additional guidance to states and school districts on ensuring that all pathways to college and the workforce, such as advanced coursework, dual enrollment opportunities, and high-quality career and technical education, are accessible to all students with disabilities. In addition, he will make sure students with disabilities have access to models, mentors, and activities to raise awareness of potential job opportunities and skills development. For example, he will charge the Director of the </span><a href="https://www.nationalservice.gov/about/pathway-to-employment"><span style="font-weight: 400;">Corporation for National and Community Service</span><span style="font-weight: 400;"> (CNCS)</span></a><span style="font-weight: 400;"> to ensure that programs supporting service-learning in schools and full-time service across the nation incorporate youth with disabilities. He will ensure that the 15% set aside in vocational rehabilitation for youth internships, summer employment, and after school or weekend jobs for students with disabilities is fully implemented. </span></p>
+<p><b>Support postsecondary education for students with disabilities. </b><span style="font-weight: 400;">Biden has released a bold plan for education and training </span><a href="../beyondhs.html"><span style="font-weight: 400;">beyond high school</span></a><span style="font-weight: 400;"> designed to ensure that all our students can get the education and training they need to be successful. W</span><span style="font-weight: 400;">hile students with disabilities in higher education are protected by federal law, which prohibits discrimination and mandates access to appropriate services and resources, many colleges and postsecondary institutions are still struggling to meet the needs of these students. </span><span style="font-weight: 400;">As President, Biden will i</span><span style="font-weight: 400;">ncrease </span><span style="font-weight: 400;">funding for programs such as the</span><a href="https://www2.ed.gov/programs/coordinatingcenter/faq.html"><span style="font-weight: 400;"> Model Comprehensive Transition and Postsecondary Program for Students with Intellectual Disabilities Coordinating Center</span></a> <span style="font-weight: 400;">and the </span><a href="https://www2.ed.gov/programs/tpsid/index.html"><span style="font-weight: 400;">Transition and Postsecondary Programs for Students with Intellectual and Developmental Disabilities</span></a><span style="font-weight: 400;"> (TPSIDs), which provide funding to community colleges and 4-year colleges and universities to create inclusive postsecondary programs for young people with intellectual and developmental disabilities. In addition, he will direct the Department of Education to provide guidance to all postsecondary programs to accept the accommodations students with disabilities have used in pre K-12 settings for postsecondary settings. He’ll also direct the Department of Education to conduct a comprehensive review of how postsecondary programs support youth who have a disability or develop one during their college age years. And, Biden will give states financial incentives to foster collaboration between community colleges and community-based organizations to provide wraparound support services for students with disabilities, including child care, mental health services, faculty mentoring, tutoring, and peer support groups. </span></p>
+<p><b>EXPAND ACCESS TO ACCESSIBLE, INTEGRATED AND AFFORDABLE HOUSING, TRANSPORTATION, AND ASSISTIVE TECHNOLOGIES AND PROTECT PEOPLE WITH DISABILITIES IN EMERGENCIES  </b><b><br />
+</b></p>
+<p><span style="font-weight: 400;">In order for people with disabilities to live independent lives in the community of their choice, Biden will expand access to accessible, integrated, and affordable housing and accessible transportation. His administration will support the development of new assistive technologies and expand access to them in the classroom, at home, and at work. And he will ensure that our emergency response systems take into account the needs of people with disabilities.   </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Expand the availability of accessible, integrated, and affordable housing for people with disabilities. </b><span style="font-weight: 400;">As President, Biden </span><a href="../housing.html"><span style="font-weight: 400;">will invest</span></a><span style="font-weight: 400;"> in constructing new affordable housing and repairing existing housing units. He’ll make historic investments in federal homelessness assistance grants and reform all federal programs to ensure they take a “housing first” approach to ending homelessness. He’ll make sure that everyone who qualifies for Section 8 housing is able to obtain it. And, he’ll create a $15,000 down payment tax credit for first-time home buyers. Recognizing that people with disabilities face greater challenges with respect to housing, Biden will ensure that his housing plan meets the needs of individuals with disabilities so they can live in their communities, including in rural areas. He will expand models of community living options that include access to health care and other supports, and ensure that integrating people with disabilities into communities takes into account the range of disabilities and types of communities. In addition, he will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Fully enforce protections in housing for people with disabilities. </b><span style="font-weight: 400;">Biden will fully enforce the</span> <a href="https://www.justice.gov/crt/fair-housing-act-2"><span style="font-weight: 400;">Fair Housing Act</span></a><span style="font-weight: 400;">, S</span><a href="https://legcounsel.house.gov/Comps/Rehabilitation%20Act%20Of%201973.pdf"><span style="font-weight: 400;">ection 504 of the </span><span style="font-weight: 400;">Rehabilitation Act</span></a><span style="font-weight: 400;">, the </span><a href="https://www.ada.gov/pubs/adastatute08.pdf"><span style="font-weight: 400;">ADA</span></a><span style="font-weight: 400;"> prohibition on discrimination based on disability, and the</span> <a href="https://www.access-board.gov/the-board/laws/architectural-barriers-act-aba"><span style="font-weight: 400;">Architectural Barriers Act</span></a><span style="font-weight: 400;"> requirement that “buildings or facilities that were designed, built, or altered with federal dollars or leased by federal agencies after August 12, 1968 be accessible.” Biden will implement the Obama-Biden Administration’s </span><a href="https://www.huduser.gov/portal/sites/default/files/pdf/AFFH_Final_Rule.pdf"><span style="font-weight: 400;">Affirmatively Furthering Fair Housing Rule</span></a><span style="font-weight: 400;"> requiring communities receiving certain federal funding to proactively examine housing patterns and identify and address policies that have a discriminatory effect.  He will also ensure that federal investments in existing and new housing stock are accessible and embrace universal design.  </span></li>
+<li style="font-weight: 400;"><b>Expand access to supportive housing and services for individuals with disabilities and aging Americans. </b><span style="font-weight: 400;">A Biden Administration will increase the availability of supportive and accessible housing for seniors and individuals with disabilities, including through the Supportive Housing for the Elderly (“</span><a href="https://www.hud.gov/program_offices/housing/mfh/progdesc/eld202"><span style="font-weight: 400;">Section 202</span></a><span style="font-weight: 400;">”) and Supportive Housing for Individuals with Disabilities (“</span><a href="https://www.hud.gov/program_offices/housing/mfh/progdesc/disab811"><span style="font-weight: 400;">Section 811</span></a><span style="font-weight: 400;">”) programs. He will ensure new investments in creating or renovating housing is accessible and integrated and that people with disabilities receive priority for accessible, integrated housing. Biden also will increase resources for mental health services and substance use disorder treatment, including through the </span><a href="https://www.samhsa.gov/homelessness-programs-resources/grant-programs-services/path"><span style="font-weight: 400;">Projects for Assistance in Transition from Homelessness</span></a><span style="font-weight: 400;"> program.</span></li>
+</ul>
+<p><i><span style="font-weight: 400;">Read Biden’s full plan at </span></i><a href="../housing.html"><i><span style="font-weight: 400;">joebiden.com/housing/</span></i></a><span style="font-weight: 400;">.</span></p>
+<p><b>Promote universal design and affordable, accessible public and private transportation.</b><span style="font-weight: 400;"> People with disabilities, including people with mobility, developmental, and sensory disabilities, must have accessible transportation in order to live, attend school, work, or shop; access health care; and participate in the community. Biden has proposed a </span><a href="../infrastructure.html"><span style="font-weight: 400;">comprehensive infrastructure plan</span></a><span style="font-weight: 400;"> which will increase flexible federal investments, help cities and towns install light rail networks, and improve existing transit and bus lines. And, he will create a new program that gives rapidly expanding communities the resources to build in public transit options from the start. Whether improving existing systems or creating new public transit options, those systems will be accessible to all people with disabilities and people with disabilities will be included in the design and implementation of those systems. In addition, he will:</span></p>
+<ul>
+<li style="font-weight: 400;"><b>Implement policies to address barriers to accessible transportation. </b><span style="font-weight: 400;">All too often public transit </span><a href="https://www.bts.dot.gov/sites/bts.dot.gov/files/docs/browse-statistical-products-and-data/transportation-statistics-annual-reports/Preliminary-TSAR-Full-2018-a.pdf"><span style="font-weight: 400;">fails to comply</span></a><span style="font-weight: 400;"> with ADA. Biden will increase federal funding to increase accessible transportation and expand services to better meet the needs of all residents including the needs of travelers with disabilities.</span></li>
+<li style="font-weight: 400;"><b>Ensure new modes of transportation use universal design and incorporate the needs of people with disabilities. </b><span style="font-weight: 400;">As new innovations are developed—including autonomous vehicles and on-demand transportation—Biden will create both guidance and incentives for researchers, scientists, venture capitalists, and all entrepreneurs to include people with disabilities from the beginning to ensure accessibility.</span></li>
+<li style="font-weight: 400;"><b>Ensure that air travel is accessible to people with disabilities.</b><span style="font-weight: 400;"> Biden will work to pass the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/669/text"><span style="font-weight: 400;">Air Carrier Access Amendments Act</span></a><span style="font-weight: 400;"> to ensure that airline carriers do not discriminate against people with disabilities, improving the enforcement of the Air Carrier Access Act (ACAA), which prohibits discrimination by airlines with respect to travelers with disabilities. This includes ensuring individual video systems on airlines are open and closed caption ready and have the option of picture-in-picture American Sign Language as a language option. In addition, he will also ensure that people with disabilities can receive compensation when disability equipment, including wheelchairs, are lost or damaged by transportation carriers.</span></li>
+<li style="font-weight: 400;"><a href="https://www.afb.org/press-room/press-release-archive/applauds-house-intro-disability-access-transportation-act"><b>Improve</b></a><b> paratransit services. </b><span style="font-weight: 400;">Biden will create a pilot program with transit agencies that will address transportation challenges in paratransit services as called for in the Disability Access to Transportation Act. Biden will also work to end long wait times in processing applicants for paratransit services and ensure that riders who receive paratransit services in one jurisdiction can be eligible for the services in another jurisdiction. </span></li>
+</ul>
+<p><b>Provide assistive technologies to people with disabilities at home, at school, and at work.</b><span style="font-weight: 400;"> Assistive technologies make it possible for people with disabilities and older adults to remain in their homes and live in their neighborhoods. As President, Biden will partner with Congress and the disability community to expand access to assistive technologies at home, at school, and at work. Biden will work with Congress to pass the </span><a href="https://www.govinfo.gov/content/pkg/PLAW-108publ364/html/PLAW-108publ364.htm"><span style="font-weight: 400;">Assistive Technology Act (ATA)</span></a><span style="font-weight: 400;">, which will expand the nationwide but seriously underfunded state assistive technology programs and ensure they are connected to programs that reach all people with disabilities. Biden will call for a new Assistive Technology Innovation Fund administered by the Department of Commerce to create public-private partnerships focused on creating new technologies to increase the independence of people with disabilities. Biden will fully enforce Section 508 of the Rehabilitation Act, which ensures that the information and communication technology that federal agencies create or obtain (including by federal procurement) must be accessible and reflect the needs of people with varying types of disabilities. He will take into account the needs of the disability community when strengthening and enforcing data privacy protections. He will also provide incentives to employers to develop and obtain more assistive technology to help create more inclusive workplaces, and support Department of Education initiatives to encourage schools to use innovative technology to assist students with disabilities.  </span></p>
+<p><b>Increase access to the internet. </b><span style="font-weight: 400;">According to a Pew Research Center </span><a href="https://www.pewresearch.org/fact-tank/2017/04/07/disabled-americans-are-less-likely-to-use-technology/"><span style="font-weight: 400;">survey</span></a><span style="font-weight: 400;">, “</span><a href="https://www.pewresearch.org/fact-tank/2017/04/07/disabled-americans-are-less-likely-to-use-technology/"><span style="font-weight: 400;">[d]isabled Americans are about three times as likely as those without a disability to say they never go online.</span></a><span style="font-weight: 400;">” And, adults with disabilities younger than 65 are </span><a href="https://www.pewresearch.org/fact-tank/2017/04/07/disabled-americans-are-less-likely-to-use-technology/"><span style="font-weight: 400;">less likely</span></a><span style="font-weight: 400;"> to have broadband at home than adults without a disability. Biden will fully implement and enforce the </span><a href="https://www.fcc.gov/consumers/guides/21st-century-communications-and-video-accessibility-act-cvaa"><span style="font-weight: 400;">21st Century Communications and Video Accessibility Act</span></a><span style="font-weight: 400;"> (CVAA), which President Obama signed into law in 2010, to expand accessibility for people with disabilities in telecommunications and video programming. He will also expand access to broadband. As </span><span style="font-weight: 400;">President, Biden will invest $20 billion in rural broadband infrastructure; direct the federal government to support cities and towns that want to build municipally-owned broadband networks, and increase funding for states to expand broadband by passing the </span><a href="https://www.congress.gov/bill/116th-congress/senate-bill/1167"><span style="font-weight: 400;">Digital Equity Act</span></a><span style="font-weight: 400;"> to help communities tackle the digital divide.</span></p>
+<p><b>Protect people with disabilities in emergencies.</b><span style="font-weight: 400;"> The Obama-Biden Administration </span><a href="https://www.fema.gov/news-release/2011/03/11/fema-and-national-disability-rights-network-sign-agreement-strengthen"><span style="font-weight: 400;">prioritized</span></a><span style="font-weight: 400;"> whole community readiness and built a national disability inclusive approach to emergency preparedness and disaster response, recovery, and mitigation. As President, Biden will secure passage of the </span><a href="https://www.congress.gov/116/bills/hr3208/BILLS-116hr3208ih.pdf"><span style="font-weight: 400;">REAADI for Disasters Act</span></a><span style="font-weight: 400;">, which will ensure older adults and people with disabilities have a strong voice in the planning for disasters and that shelters and recovery services are accessible to all, and the </span><a href="https://www.congress.gov/116/bills/s1754/BILLS-116s1754is.pdf"><span style="font-weight: 400;">Disaster Relief Medicaid (DRM) Act</span></a><span style="font-weight: 400;">, which will make it possible for people who depend on Medicaid and must move out of state because of a disaster to continue to receive Medicaid. He will also ensure that FEMA is prepared for concurrent emergencies that may disproportionately affect older Americans and people with disabilities.  </span></p>
+<p><b>ADVANCE GLOBAL DISABILITY RIGHTS</b><b><br />
+</b><b><br />
+</b><span style="font-weight: 400;">The Obama-Biden Administration provided strong leadership in recognizing disability rights as human rights and in expanding opportunities for persons with disabilities in countries around the world. That included</span><a href="https://obamawhitehouse.archives.gov/the-press-office/2013/12/04/fact-sheet-obama-administration-leadership-international-human-rights"> <span style="font-weight: 400;">appointing</span></a><span style="font-weight: 400;"> the first Special Advisor for International Disability Rights at the State Department as well as the first Coordinator for Disability and Inclusive Development at </span><span style="font-weight: 400;">the US Agency for International Development (USAID). Biden will build on this work by:</span><span style="font-weight: 400;"> </span></p>
+<p><b>Promoting human rights and advancing the inclusion of persons with disabilities through diplomacy and development.</b> <span style="font-weight: 400;">Biden will appoint a Special Envoy for International Disability Rights. The Special Envoy will work across federal agencies to guarantee that our foreign assistance programs are advancing community-based care and inclusion for persons with disabilities. Biden’s guiding principle will be to maximize the inclusion of persons with disabilities, including providing community-based education, living, and employment opportunities in order to prevent the institutionalization of persons with disabilities, which often leads to abuse and prevents t</span><span style="font-weight: 400;">hem from being productive members of society. Biden will also ensure that our foreign assistance programs are disability-inclusive and take protective measures to address the needs of persons with disabilities, including those with invisible disabilities. He will also direct the State Department and USAID to ensure that responses to humanitarian crises, conflict situations, and the global COVID-19 pandemic are disability inclusive. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><b>Working to ratify the Disabilities Treaty. </b><span style="font-weight: 400;">The United States in 2009</span><a href="https://obamawhitehouse.archives.gov/issues/disabilities"> <span style="font-weight: 400;">signed</span></a><span style="font-weight: 400;"> the United Nations Convention on the Rights of Persons with Disabilities, a treaty which reflects the principles of the American with Disabilities Act. Biden will work with the Senate to ratify the Disabilities Treaty and regain our global standing as a leader on disability rights. </span></p>
+<p><b></b><b>Celebrating the United Nations International Day of Persons with Disabilities</b><span style="font-weight: 400;">, every December 3, to recognize the accomplishments and challenges of persons with disabilities in the U.S. and around the world and amplify the mantra of the disability rights movement: “Nothing About Us, Without Us.”</span></p>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Together we can make Donald Trump a one term President. <strong>Donate today:</strong></p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Other"
+                   href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+                >Other</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Other"
+                 href="https://secure.actblue.com/donate/biden2020_fr_webfooter?refcode=web-homepage-donorbar-footer&amount="
+              >Other</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="../disabilities.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              About
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7588 bfp__cta-copy header__nav-item"><a href="../joes-vision/&#32;.html" class="header__nav-item-link">Joe’s Vision</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7589 bfp__cta-copy header__nav-item"><a href="../joes-story/index.html" class="header__nav-item-link">Meet Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7590 bfp__cta-copy header__nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="header__nav-item-link">Meet Kamala</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7591 bfp__cta-copy header__nav-item"><a href="../latest/index.html" class="header__nav-item-link">The Latest</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7973 bfp__cta-copy header__nav-item"><a href="../notes-from-joe/index.html" class="header__nav-item-link">Notes from Joe</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Volunteer
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7592 bfp__cta-copy header__nav-item"><a href="../take-action/index.html" class="header__nav-item-link">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7593 bfp__cta-copy header__nav-item"><a href="../coalitions/index.html" class="header__nav-item-link">Join a Coalition</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+        How to Vote
+    </a>
+    <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Shop
+      </a>
+                                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../es/el-plan-de-biden-para-la-participacion-plena-y-la-igualdad-para-las-personas-con-discapacidades/index.html" class="header__nav-item-link">
+                  En Español                </a>
+              </li>
+                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                      LET'S DO THIS. TOGETHER.                                  </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/join_the_team?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Email Address *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Email Address</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="ZIP Code *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">ZIP Code</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Mobile Phone">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Mobile Phone</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">This button leads off-site.</span>
+                      Join Us                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Thank you for joining our campaign to elect Joe Biden. By providing your mobile phone number you consent to receive recurring text messages from Biden for President. Message &amp; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. <a href="../terms/index.html">Terms and Conditions</a> and <a href="../privacy-policy/index.html">Privacy Policy</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                      <p>Support our presidential campaign to elect Joe Biden by signing up to <a href="https://go.joebiden.com/page/s/volunteer">volunteer</a> or making a <a href="https://secure.actblue.com/donate/biden2020_fr_web?refcode=web-homepage-footer">donation online</a>.</p>
+<p><a href="../contribute-by-mail/index.html">To contribute by mail, please click here.</a></p>
+                                  </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134 footer__main-nav-item"><a href="../accessibility/index.html" class="footer__main-nav-link">Accessibility</a></li>
+<li id="menu-item-357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-357 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Work with Us</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-801 footer__main-nav-item"><a href="https://go.joebiden.com/page/s/contact-us" class="footer__main-nav-link">Contact Us</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61 footer__main-nav-item"><a href="../privacy-policy/index.html" class="footer__main-nav-link">Your Privacy Rights</a></li>
+<li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-567 footer__main-nav-item"><a href="../terms/index.html" class="footer__main-nav-link">Terms and Conditions</a></li>
+<li id="menu-item-2532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2532 footer__main-nav-item"><a href="../limited-license/index.html" class="footer__main-nav-link">Limited License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3385 footer__main-nav-item"><a href="../index.html" class="footer__main-nav-link">Home</a></li>
+<li id="menu-item-2198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2198 footer__main-nav-item"><a href="../joes-vision/&#32;.html" class="footer__main-nav-link">Joe&#8217;s Vision</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34 footer__main-nav-item"><a href="../joes-story/index.html" class="footer__main-nav-link">Joe&#8217;s Story</a></li>
+<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359 footer__main-nav-item"><a href="../together-we-will-beat-donald-trump/index.html" class="footer__main-nav-link">Kamala&#8217;s Story</a></li>
+<li id="menu-item-3278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3278 footer__main-nav-item"><a href="../take-action/index.html" class="footer__main-nav-link">Volunteer</a></li>
+<li id="menu-item-4595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595 footer__main-nav-item"><a href="../coalitions/index.html" class="footer__main-nav-link">Coalitions</a></li>
+<li id="menu-item-3548" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3548 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">How to Vote</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Store</a></li>
+<li id="menu-item-3202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3202 footer__main-nav-item"><a href="../latest/index.html" class="footer__main-nav-link">The Latest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit"> Paid for by Biden For President, a campaign made up of millions of grassroots donors — and absolutely zero malarkey.</span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="../disabilities.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continue to JoeBiden.com              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../wp-content/uploads/2020/08/lightbox_convention__desktop.jpg 480w, ../wp-content/uploads/2020/08/lightbox_convention__desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="315" src="../wp-content/uploads/2020/08/Intersect.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../wp-content/uploads/2020/08/Intersect.jpg 558w, ../wp-content/uploads/2020/08/Intersect-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="100">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">ELECTION DAY IS ALMOST HERE</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">We’re in the homestretch of this campaign. We’ve come so far, but need to keep up the momentum. Can you chip in? </p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $2800"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=2800&express_lane=true"
+                          >$2800</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Other"
+                             href="https://secure.actblue.com/donate/biden2020_web_lightbox?refcode=web-lightbox&amount=&express_lane=true"
+                          >Other</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>If you’ve saved your payment information with ActBlue Express, your donation will go through immediately.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/disabilities/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Please enter a valid email","firstName":"Please enter your first name","lastName":"Please enter your last name","zip":"Please enter a five-digit zip code","mobile":"Please enter a ten-digit phone number"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":440,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

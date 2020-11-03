@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="es-US" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta data-state="GA">
+        <script>
+            window.jbregion = "GA";
+        </script>
+                <link rel="preload" href="https://src.joebiden.com/js/snippet/18214532831.js" as="script">
+        <link rel="preconnect" href="https://logx.optimizely.com">
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"853c31a225",applicationID:"143000334"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M96J785');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="apple-touch-icon" href="../../wp-content/themes/bexc/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="../../wp-content/themes/bexc/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bexc/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bexc/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/bexc/favicons/site.webmanifest">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="mask-icon" href="../../wp-content/themes/bexc/favicons/safari-pinned-tab.svg" color="#233f94">
+    <link rel="shortcut icon" href="../../wp-content/themes/bexc/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="https://joebiden.com/wp-content/themes/bexc/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>El Plan Biden Para Asegurar Nuestros Valores Como Una Nación De Inmigrantes | Joe Biden for President: Official Campaign Website</title>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="../inmigrantes.html" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="El Plan Biden Para Asegurar Nuestros Valores Como Una Nación De Inmigrantes | Joe Biden for President: Official Campaign Website" />
+	<meta property="og:description" content="Es un fracaso moral y una vergüenza nacional cuando un padre y su pequeña hija se ahogan llegando a nuestras costas. Cuando los niños están encerrados en centros de detención superpoblados y el gobierno busca mantenerlos allí indefinidamente. Cuando nuestro gobierno argumenta en la corte para no darle a esos niños cepillos de dientes y [&hellip;]" />
+	<meta property="og:url" content="https://joebiden.com/es/inmigrantes/" />
+	<meta property="og:site_name" content="Joe Biden for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/joebiden" />
+	<meta property="article:modified_time" content="2020-08-05T08:32:23+00:00" />
+	<meta property="og:image" content="https://joebiden.com/wp-content/uploads/2020/09/social-graphics_HQ_webcard_090220-1024x535.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="535" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@JoeBiden" />
+	<meta name="twitter:site" content="@JoeBiden" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="Pamela Stamoulis">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="35 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://joebiden.com/#organization","name":"Biden For President","url":"https://joebiden.com/","sameAs":["https://www.facebook.com/joebiden","https://www.instagram.com/joebiden","https://www.linkedin.com/company/biden-2020/","https://www.youtube.com/joebiden","https://twitter.com/JoeBiden"],"logo":{"@type":"ImageObject","@id":"https://joebiden.com/#logo","inLanguage":"es-US","url":"https://joebiden.com/wp-content/uploads/2020/09/rm-logo-blue.jpg","width":1405,"height":586,"caption":"Biden For President"},"image":{"@id":"https://joebiden.com/#logo"}},{"@type":"WebSite","@id":"https://joebiden.com/#website","url":"https://joebiden.com/","name":"Joe Biden for President: Official Campaign Website","description":"","publisher":{"@id":"https://joebiden.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://joebiden.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"es-US"},{"@type":"WebPage","@id":"https://joebiden.com/es/inmigrantes/#webpage","url":"https://joebiden.com/es/inmigrantes/","name":"El Plan Biden Para Asegurar Nuestros Valores Como Una Naci\u00f3n De Inmigrantes | Joe Biden for President: Official Campaign Website","isPartOf":{"@id":"https://joebiden.com/#website"},"datePublished":"2020-01-30T23:58:46+00:00","dateModified":"2020-08-05T08:32:23+00:00","inLanguage":"es-US","potentialAction":[{"@type":"ReadAction","target":["https://joebiden.com/es/inmigrantes/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='stylesheet' id='scranton-main-css'  href='../../wp-content/themes/bexc/css/scranton-main.css%3Fver=1.62.css' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/modernizr.min.js%3Fver=3.6.0' id='modernizr-js'></script>
+<link rel="alternate" type="application/json+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Finmigrantes%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://joebiden.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjoebiden.com%2Fes%2Finmigrantes%2F&#038;format=xml" />
+<link rel="alternate" href="../../immigration.html" hreflang="en" />
+<link rel="alternate" href="../inmigrantes.html" hreflang="es" />
+
+        <script src="https://src.joebiden.com/js/snippet/18214532831.js"></script>
+    
+                <script src="https://secure.actblue.com/cf/assets/actblue.js" async></script>
+            <script>window.actBlueConfig = {styleSheetHref: "https://joebiden.com/wp-content/themes/bexc/css/actblue-min.css"};</script>
+    	        <script type="text/javascript" src="https://script.crazyegg.com/pages/scripts/0098/3828.js" async="async"></script>
+	</head>
+
+
+<body class="page-template-default page page-id-1955 bfp__body language-es" id="body">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M96J785"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="header__skip-wrap" id="skip">
+  <a class="bfp__cta header__skip-cta" href="../inmigrantes.html#main-body">Skip to Main Content</a>
+</div>
+
+
+<section class="bfp__bg--darkest-blue live-vid__body-wrap live-vid__body-wrap--hidden" id="live-video">
+  <div class="live-vid__body">
+    <button aria-label="hide live stream video" class="live-vid__cta-wrap" id="hide-live-video">
+      <div class="live-vid__close-wrap">
+        <div class="live-vid__close-line"></div>
+        <div class="live-vid__close-line"></div>
+      </div>
+    </button>
+     <div class="live-vid__video-block">
+         <div class="live-vid__video-wrap" id="live-video-wrap"></div>
+                         <div class="live-vid__donate-wrap" id="live-donate-wrap">
+                 <div class="live-vid__donate actblue-form-embed">
+                   <h1 class="bfp__title--sm live-vid__donate-title">Contribuya lo que pueda</h1>
+                   <h2 class="bfp__title--sm live-vid__donate-subtitle">Por favor, ayude a que Joe regrese a la Casa Blanca</h2>
+                     <ul class="live-vid__donate-button-list">
+                                                                                                                 <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="15">
+                                                                            <a class="live-vid__donate-link" >$15</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="32">
+                                                                            <a class="live-vid__donate-link" >$32</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="50">
+                                                                            <a class="live-vid__donate-link" >$50</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="100">
+                                                                            <a class="live-vid__donate-link" >$100</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="250">
+                                                                            <a class="live-vid__donate-link" >$250</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="500">
+                                                                            <a class="live-vid__donate-link" >$500</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="2800">
+                                                                            <a class="live-vid__donate-link" >$2800</a>
+                                                                      </li>
+                                                             <li class="bfp__button live-vid__donate-button-item" data-token="DTbe783sSnD4fxAttBmQcMEs" data-amount="">
+                                                                            <a class="live-vid__donate-link" >OTHER</a>
+                                                                      </li>
+                                                                         </ul>
+                 </div>
+             </div>
+     </div>
+  </div>
+</section>
+<section class="bfp__copy bfp__show-live-video--hidden" id="show-live-video">
+      <button class="bfp__cta-copy live-vid__banner-copy-wrap">
+      Ver La Transmisión en Vivo    </button>
+  </section>
+<!-- Normal alert bar -->
+      <a class="alertNormal__link" onclick="event.stopPropagation()" href=https://iwillvote.com/?lang=es&partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-alertbar-fallback-es  target="_blank" rel="noopener" >
+        <div class="alertNormal__body" id="alert-bar-normal">
+      <div class="bfp__copy alertNormal__copy-wrap">
+        <p>Es hora de prepararnos para sacar a Trump de la Casa Blanca. <strong>Eche un vistazo a las opciones para votar en su estado aquí</strong></p>
+      </div>
+    </div>
+        </a>
+  
+<header class="site-header-wrapper header__body-wrap" id="header">
+  <div class="header__banner">
+      <div class="header__banner-copy-wrap">
+          <h2 class="header__banner-copy">
+                          Batalla <em>por el</em><br> Alma <em>de la</em> Nación
+                      </h2>
+      </div>
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--blue" src="../../wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--blue" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-blue.svg" alt="Joe Biden homepage">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <div class="header__cta-body-wrap">
+          <div class="header__banner-button-wrap">
+                                                                                                                    <a href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-nav" class="bfp__button header__banner-button" id="donate" target="_blank" onClick="ga('send', 'event', 'header', 'click', 'donate')">
+                  <span class="bfp__helper-text">This button leads off-site in a new tab.</span>
+                  Contribuya                </a>
+                        </div>
+          <button class="header__menu-btn header__menu-btn--closed" id="header__hamburger" aria-haspopup="dialog">
+                                <span class="header__menu-btn-label header__menu-btn-label--menu">Menú</span>
+                  <span class="header__menu-btn-label header__menu-btn-label--close">Cerrar</span>
+                            <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+              <div class="header__menu-btn-line"></div>
+          </button>
+          
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_header"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="../inmigrantes.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li id="menu-item-7596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../immigration.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+      </div>
+      <div class="header__nav-body--desktop">
+        <div class="header__nav">
+  <div class="header__broken-nav-block header__broken-nav-block--left">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Este es Joe
+                        </button>
+      <ul class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+      </ul>
+    </div>
+        <a class="header__broken-nav-item" href="https://iwillvote.com/?partner=bfp-web&partner_campaign=web-bfp-home-20200919edu-IWV-menu-fallback-es&lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      </div>
+  <div class="header__broken-nav-block header__broken-nav-block--right">
+    <div class="header__broken-nav-item--dropdown">
+      <button data-toggle="header__broken-nav-item--dropdown"
+        class="header__broken-dropdown-button" aria-label="toggle drop down navigation">
+                  Ayuda a Joe
+                        </button>
+      <ul  class="header__broken-dropdown">
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+      </ul>
+    </div>
+    <a class="header__broken-nav-item" href="https://store.joebiden.com/" target="_blank">
+      <span class="bfp__helper-text">This will take you off site</span>
+              Tienda
+          </a>
+  </div>
+                                <li class="bfp__cta-copy header__broken-lang">
+                <a href="../../immigration.html" class="header__nav-item-link">
+                                      EN
+                                  </a>
+              </li>
+                                  </div>
+
+
+<script>
+  document.querySelectorAll('[data-toggle~=header__broken-nav-item--dropdown]').forEach(setupDropdown);
+
+  function setupDropdown(dropdownToggle) {
+    dropdownToggle.setAttribute('aria-haspopup', 'true');
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    var dropdownMenu = dropdownToggle.parentNode.querySelector('.header__broken-dropdown');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+    dropdownToggle.onclick = toggleDropdown;
+
+    function toggleDropdown() {
+      if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdownMenu.setAttribute('aria-hidden', 'true');
+        dropdownToggle.parentNode.classList.remove('dropdown-on');
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdownMenu.setAttribute('aria-hidden', 'false');
+        dropdownToggle.parentNode.classList.add('dropdown-on');
+        dropdownMenu.children[0].focus();
+      }
+    }
+  }
+
+  function toggleParentClass(elem, className) {
+    elem.parentNode.classList.toggle(className);
+  }
+
+  function addParentClass(elem, className) {
+    elem.parentNode.classList.add(className);
+  }
+
+  function removeParentClass(elem, className) {
+    elem.parentNode.classList.remove(className);
+  }
+
+  function toggleMenu() {
+    elem.classList.toggle('menu-on');
+  }
+</script>
+      </div>
+  </div>
+</header>
+<a class="main-body__anchor" name="main" id="main-body"></a>
+<main id="main-content">
+<div id="donate-trigger"></div>
+
+<article class="bfp__margin--large page__body" class="view-page post-1955 page type-page status-publish hentry">
+
+  <div class="page__header-wrap">
+    <h1 class="bfp__title--largest page__title">El Plan Biden Para Asegurar Nuestros Valores Como Una Nación De Inmigrantes</h1>
+  </div>
+  <div class="page__content-wrap">
+    <p>Es un fracaso moral y una vergüenza nacional cuando un padre y su pequeña hija se ahogan llegando a nuestras costas. Cuando los niños están encerrados en centros de detención superpoblados y el gobierno busca mantenerlos allí indefinidamente. Cuando nuestro gobierno argumenta en la corte para no darle a esos niños cepillos de dientes y jabón. Cuando el presidente Trump utiliza la separación familiar como un arma contra madres, padres y niños desesperados que buscan seguridad y una vida mejor. Cuando amenaza con redadas masivas que separarían a familias que han estado en este país durante años y atacan a personas en lugares sensibles, como hospitales y escuelas. Cuando los niños mueren mientras están bajo custodia debido a la falta de atención adecuada.</p>
+<p>Trump ha lanzado un ataque implacable contra nuestros valores y nuestra historia como una nación de inmigrantes.</p>
+<p>Esto está mal y se detendrá cuando Joe Biden sea elegido presidente.</p>
+<p>A menos que sus antepasados fueran nativos de estas costas, o esclavizados por la fuerza y traídos aquí como parte de nuestro pecado original como nación, la mayoría de los estadounidenses pueden rastrear su historia familiar hasta una decisión, una decisión de dejar atrás todo lo que le era familiar en busca de nuevas oportunidades y una nueva vida. Esa es una fuente irrefutable de nuestra fortaleza. Generaciones de inmigrantes han venido a este país con poco más que la ropa que llevan puesta, la esperanza en sus corazones y el deseo de reclamar su propio pedazo del sueño americano. Es la razón por la que constantemente hemos sido capaces de renovarnos, crecer como una nación que es mejor y más fuerte y enfrentar nuevos desafíos. La inmigración es esencial a lo que somos como nación, nuestros valores fundamentales y nuestras aspiraciones para nuestro futuro. Bajo una Administración Biden, nunca daremos la espalda a quienes somos o lo que nos hace únicos y orgullosamente estadounidenses. Los Estados Unidos merecen una política de inmigración que refleje nuestros más altos valores como nación.</p>
+<p>Hoy, nuestro sistema de inmigración está bajo mayor estrés como resultado directo de las políticas equivocadas de Trump, ya que no ha invertido en tecnología fronteriza más inteligente que mejoraría nuestra revisión de la carga.</p>
+<p>Su obsesión por construir un muro no hace nada para abordar los desafíos de seguridad mientras le cuesta a los contribuyentes miles de millones de dólares. La mayoría del contrabando llega a través de nuestros puertos legales de entrada. Se estima que casi la mitad de las personas indocumentadas que viven en los EE.UU. se han quedado luego de que se ha vencido su visa, no cruzaron la frontera ilegalmente. Las familias que huyen de la violencia en Centroamérica se están presentando voluntariamente ante los oficiales de la patrulla fronteriza. Y las amenazas reales a nuestra seguridad, los carteles de la droga y los traficantes de personas, pueden evadir más fácilmente los esfuerzos de aplicación de la ley porque Trump ha asignado indebidamente los recursos para intimidar a los solicitantes de asilo legítimos. Fundamentalmente, Trump no entiende cómo mantener a los Estados Unidos a salvo porque le importa más gobernar con el miedo y la división que las soluciones de sentido común.</p>
+<p>Las políticas de Trump también son perjudiciales para nuestra economía. Durante generaciones, los inmigrantes han fortalecido nuestra ventaja competitiva más valiosa: nuestro espíritu de innovación y emprendimiento. Las investigaciones sugieren que “la contribución anual total de los trabajadores nacidos en el extranjero es de aproximadamente $2 billones”. Sectores clave de la economía de los Estados Unidos, desde la agricultura hasta la tecnología, dependen de la inmigración. Los inmigrantes en edad laboral mantienen nuestra economía en crecimiento, nuestras comunidades prosperan y el país avanza.</p>
+<p>Los desafíos a los que nos enfrentamos no se resolverán con una “emergencia nacional” constitucionalmente dudosa para construir un muro, separando a las familias o negando el asilo a las personas que huyen de la persecución y la violencia. Lidiar con la crisis humanitaria creada por Trump en nuestra frontera, unir a nuestra nación, reafirmar nuestros valores fundamentales y reformar nuestro sistema de inmigración requerirá un liderazgo real y soluciones verdaderas. Biden está preparado para ofrecer ambos desde el primer día de su presidencia.</p>
+<p><strong>Como presidente, Biden aplicará con firmeza políticas que salvaguarden nuestra seguridad, provean un sistema justo y equitativo que ayude a crecer y mejorar nuestra economía, y asegure nuestros preciados valores. </strong>Él:</p>
+<ul>
+<li>Tomará medidas urgentes para revertir el daño causado por Trump y recuperar los valores de los Estados Unidos</li>
+<li>Modernizará el sistema de inmigración de los Estados Unidos.</li>
+<li>Dará la bienvenida a los inmigrantes en nuestras comunidades</li>
+<li>Reafirmará el compromiso de los Estados Unidos con los solicitantes de asilo y los refugiados.</li>
+<li>Lidiará con las causas fundamentales de la migración irregular.</li>
+<li>Implementará una revisión efectiva en las fronteras</li>
+</ul>
+<p><strong>El compromiso de Biden con un sistema de inmigración justo y humano</strong></p>
+<p>Joe Biden comprende el dolor que sienten todas las familias de los EE.UU., a las que se ha removido a un ser querido del país, incluso bajo la administración Obama-Biden, y cree que debemos hacerlo mejor para poner en vigor nuestras leyes de manera humana y preservar la dignidad de las familias inmigrantes, los refugiados y solicitantes de asilo.</p>
+<p>La Administración Obama-Biden apoyó firmemente la solución bipartidista de inmigración integral que aprobó el Senado en el 2013 y que habría colocado las políticas de inmigración de nuestro país en una posición mucho más fuerte. Cuando la Cámara de Representantes republicana se negó a incluso llevar ese proyecto de ley a votación, la Administración tomó medidas para cambiar fundamentalmente el curso de las políticas de inmigración de nuestra nación, ofreciendo alivio y estabilidad a cientos de miles de inmigrantes indocumentados que contribuyen a nuestras comunidades todos los días.</p>
+<p>Como vicepresidente, Biden abogó por la creación y expansión del programa de Acción Diferida para los Llegados en la Infancia (DACA, por sus siglas en inglés); el programa de Acción Diferida para Padres de los Estadounidenses (DAPA, por sus siglas en inglés); el programa de menores centroamericanos, que permitió a los padres con estatus legal en los EE.UU. presentar una solicitud para traer a sus hijos de América Central para que vivieran con ellos; y la creación de un grupo de trabajo de la Casa Blanca para apoyar a los nuevos estadounidenses y ayudarlos a integrarse en sus nuevos hogares y comunidades.</p>
+<p>En una desviación de sus predecesores, la administración Obama-Biden tomó medidas para priorizar los recursos de aplicación de la ley en eliminar las amenazas a la seguridad nacional y la seguridad pública, no a las familias. También emitió unas guías diseñadas para poner fin a las redadas masivas en los lugares de trabajo y para evitar las actividades de aplicación de la ley en lugares sensibles como escuelas, hospitales y lugares de culto.</p>
+<p>Críticamente, la administración Obama-Biden reconoció que la migración irregular de los países del Triángulo Norte de América Central no puede abordarse de manera efectiva si las soluciones solo se centran en nuestra frontera sur. La mejor respuesta radica en abordar las causas fundamentales que empujan a las personas desesperadas a huir de sus hogares en primer lugar: violencia e inseguridad, falta de oportunidades económicas y gobiernos corruptos. Como vicepresidente, Biden encabezó los esfuerzos de la administración en El Salvador, Guatemala y Honduras, atrayendo atención de alto nivel a estos problemas y asegurando apoyo bipartidista para un paquete de ayuda de $750 millones, con el fin de ayudar a los países del Triángulo Norte a implementar reformas críticas y concretas. Estos esfuerzos comenzaron a generar resultados y reducir las tasas de migración hasta que Trump congeló la mayoría de los fondos, comenzó su campaña para aterrorizar a los inmigrantes y atacar la dignidad de la comunidad latina, y creó la actual crisis humanitaria en nuestra frontera con sus políticas irresponsables e inhumanas.</p>
+<p>Como presidente, Biden terminará el trabajo de construir un sistema de inmigración justo y humano, restaurando el progreso que Trump ha revertido cruelmente y llevándolo más lejos. Asegurará nuestra frontera, garantizando al mismo tiempo la dignidad de los migrantes y defendiendo su derecho legal a solicitar asilo. Hará cumplir nuestras leyes sin atacar a las comunidades, violar el debido proceso o separar a las familias. Se asegurará de que nuestros valores estén directamente en el centro de nuestras políticas de inmigración y seguridad.</p>
+<p><strong>Tomará medidas urgentes para deshacer el daño de Trump y recuperar los valores de los Estados Unidos</strong></p>
+<p>El próximo presidente deberá tomar medidas urgentes para poner fin a las políticas draconianas de la Administración Trump, basadas en el miedo y el racismo en lugar de los hechos, trabajar para sanar las heridas infligidas en las comunidades de inmigrantes y restaurar el liderazgo moral de los Estados Unidos. Como presidente, Biden actuará de inmediato para garantizar que los EE.UU. cumplan con sus responsabilidades tanto como una nación de leyes y como una nación de inmigrantes.</p>
+<p>En los primeros 100 días, una Administración Biden:</p>
+<ul>
+<li><strong>Revertirá inmediatamente las políticas crueles y sin sentido de la Administración Trump que separan a los padres de sus hijos en nuestra frontera, </strong>incluyendo terminar con el enjuiciamiento de los padres por violaciones menores de inmigración como una táctica de intimidación, y dará prioridad a la reunificación de los niños que aún están separados de sus familias.</li>
+<li><strong>Pondrá fin a las políticas de asilo perjudiciales de Trump. </strong>La Estatua de la Libertad ha sido durante mucho tiempo un faro para las personas que “anhelan respirar libremente” en todo el mundo, incluidos los solicitantes de asilo y los refugiados. Pero la Administración Trump ha trabajado en contra de esta tradición para restringir drásticamente el acceso al asilo en los Estados Unidos, incluida la imposición de restricciones adicionales a cualquier persona que viaje por México o Guatemala; intentar evitar que las víctimas de pandillas y violencia doméstica reciban asilo; enjuiciar sistemáticamente a los solicitantes de asilo adultos por delitos menores de entrada ilegal; y limitar severamente la capacidad de los miembros de la comunidad LGBTQ, un grupo especialmente vulnerable en muchas partes del mundo, de calificar para el asilo como miembros de un “grupo social particular”. Biden pondrá fin a estas políticas, comenzando con los protocolos de protección de migrantes de Trump, y restaurará nuestras leyes de asilo para que hagan lo que están diseñadas para hacer &#8212; proteger a las personas que huyen de la persecución y que no pueden regresar a sus hogares de manera segura.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Pondrá fin a la mala administración del sistema de asilo, que alimenta la violencia y el caos en la frontera. </strong>La desastrosa política de “medición” de Trump, que limita el número de solicitudes de asilo aceptadas cada día, obliga a las personas que buscan asilo a esperar en las calles de las ciudades fronterizas mexicanas, a menudo peligrosas, durante semanas, antes de que se les permita presentar una solicitud. Ha creado un horrible ecosistema de violencia y explotación, con carteles secuestrando, agrediendo violentamente y extorsionando a los migrantes. Biden dirigirá los recursos necesarios para garantizar que las solicitudes de asilo se procesen de manera justa y eficiente, mientras trata a las familias y a los niños con compasión y sensibilidad.<strong> </strong></li>
+</ul>
+<ul>
+<li><strong>Incrementará los recursos humanitarios en la frontera y fomentará iniciativas público-privadas.</strong> Las necesidades humanitarias se satisfacen mejor a través de una red de organizaciones, como refugios religiosos, organizaciones de ayuda no gubernamentales, organizaciones legales sin fines de lucro y agencias de asistencia a refugiados que trabajan en equipo. Biden aumentará drásticamente los recursos del gobierno de los EE.UU. para apoyar a los migrantes que esperan la evaluación de sus solicitudes de asilo y a las organizaciones que atienden sus necesidades.</li>
+</ul>
+<ul>
+<li><strong>Terminará con la detención prolongada y reinvertirá en un programa de manejo de casos</strong>. La Administración Trump ha tratado de eludir el acuerdo de Flores y mantener a los niños detenidos indefinidamente. Pero las alternativas probadas a los programas de detención y manejo de casos sin fines de lucro, que apoyan a los migrantes mientras navegan por sus obligaciones legales, son la mejor manera de garantizar que asistan a todas las citas de inmigración requeridas. Estos programas también permiten a los migrantes vivir con dignidad y seguridad mientras esperan sus audiencias en la corte, facilitando cosas como visitas al médico, servicios sociales e inscripción escolar para los niños. La evidencia muestra que estos programas son altamente efectivos y mucho menos costosos y punitivos que detener a familias. Biden codificará las protecciones para salvaguardar a los niños con el fin de asegurar que su tratamiento sea coherente con su mejor interés e invertirá en programas de manejo de casos en la comunidad, incluidos aquellos respaldados por organizaciones religiosas como los Servicios Luteranos de Inmigración y Refugiados, para trasladar a los migrantes a entornos seguros lo más rápido posible.</li>
+</ul>
+<ul>
+<li><strong>Revocará la regla de carga pública de Trump,</strong> que va en contra de nuestros valores como estadounidenses y la historia de nuestra nación. Permitir que los funcionarios de inmigración hagan que la capacidad de un individuo para recibir una visa u obtener la residencia permanente dependa del uso de servicios gubernamentales, como los beneficios de SNAP o Medicaid, los ingresos de su hogar y otros criterios discriminatorios, socava el carácter de los Estados Unidos como una tierra de oportunidades abierta que acoge a todos, no solo a los ricos.</li>
+<li><strong>Terminará con la llamada Emergencia Nacional que desvía fondos federales del Departamento de Defensa para construir un muro</strong>. Construir un muro hará poco para disuadir a los delincuentes y los carteles que buscan explotar nuestras fronteras. En lugar de robar recursos de las escuelas para los hijos de los militares y los esfuerzos de recuperación en Puerto Rico, Biden dirigirá los recursos federales a los esfuerzos de control fronterizo inteligentes, como las inversiones para mejorar la infraestructura de revisión en nuestros puertos de entrada, que en efecto mantendrán a los Estados Unidos más seguros.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Protegerá a los “dreamers” (“soñadores”) y a sus familias</strong>. La Administración Obama-Biden creó DACA en 2012 para proteger a los &#8220;dreamers&#8221;, inmigrantes indocumentados que fueron traídos a los Estados Unidos cuando eran niños, obedecieron la ley cuando llegaron aquí, y se quedaron en la escuela o se alistaron en el ejército. DACA proporcionó permisos de trabajo temporales y protección contra la deportación a los jóvenes que aprobaron una verificación de antecedentes y un proceso de solicitud. La Administración Trump tomó la decisión cruel y contraproducente de terminar con DACA, lo que provocó inestabilidad en la vida de millones de “dreamers”. Los “dreamers” y sus padres deben tener una hoja de ruta hacia la ciudadanía a través de la legislación de reforma migratoria. Pero mientras tanto, Biden eliminará la incertidumbre de los “dreamers” al restablecer el programa de DACA, y explorará todas las opciones legales para proteger a sus familias de la separación inhumana. Biden también asegurará que los “dreamers” sean elegibles para la ayuda federal para estudiantes (préstamos, becas Pell) y están incluidos en sus propuestas para proveer acceso a los colegios comunitarios sin deudas, e invertirá en colegios y universidades históricamente negras/instituciones que sirven a los hispanos/instituciones que sirven a las minorías, lo que ayudará a los “dreamers” a contribuir aún más a nuestra economía.</li>
+</ul>
+<ul>
+<li><strong>Rescindirá las prohibiciones de viajar y de refugiados antiamericanas, también conocidas como las “prohibiciones musulmanas”. </strong>El prejuicio antimusulmán de la Administración Trump perjudica nuestra economía, traiciona nuestros valores y puede servir como una poderosa herramienta de reclutamiento de terroristas. Prohibir a los musulmanes ingresar al país es moralmente incorrecto, y no hay inteligencia o evidencia que sugiera que esto haga que nuestra nación sea más segura. Es otro abuso de poder por parte de la Administración Trump diseñado para atacar principalmente a inmigrantes negros y latinos. Biden rescindirá de inmediato las “prohibiciones musulmanas”.</li>
+<li><strong>Solicitará una revisión inmediata del Estatus de Protección Temporal (TPS) para las poblaciones vulnerables que no pueden encontrar seguridad en sus países destrozados por la violencia o el desastre.</strong> Las decisiones políticamente motivadas de la Administración Trump para rescindir el estado de protección de cientos de miles de personas que huyen de países afectados por la guerra y los desastres naturales, sin tener en cuenta las condiciones actuales del país, son una receta para el desastre. Biden protegerá a las personas con TPS y salidas forzadas diferidas (DED, por sus siglas en inglés) de ser devueltos a países que no son seguros. A las personas con TPS/DED que hayan estado en el país durante un período prolongado de tiempo y hayan construido vidas en los Estados Unidos también se les ofrecerá un camino hacia la ciudadanía a través de la legislación de reforma migratoria.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Restaurará las prioridades sensatas para la aplicación de la ley. </strong>Enfocarse en las personas que nunca han sido condenadas por un delito grave y que han vivido, trabajado y contribuido a nuestra economía y nuestras comunidades durante décadas es la definición de contraproducente. Biden dirigirá los esfuerzos de aplicación de la ley hacia las amenazas a la seguridad pública y la seguridad nacional, mientras se asegura de que las personas sean tratadas con el debido proceso al que tienen derecho y que sus derechos humanos estén protegidos. El presidente Biden pondrá fin a las redadas en el lugar de trabajo para garantizar que las amenazas basadas en el estatus de los trabajadores no interfieran con su capacidad de organizarse y mejorar sus salarios y condiciones de trabajo. También protegerá los lugares sensibles de las acciones de aplicación de las leyes de inmigración. Nadie debería tener miedo de buscar atención médica, ir a la escuela, su trabajo o su lugar de culto por temor a una acción de inmigración.</li>
+</ul>
+<ul>
+<li><strong>Asegurará que el personal de la Oficina de Inmigración y Aduanas (ICE, por sus siglas en inglés) y el personal del Servicio de Aduanas y Protección Fronteriza (CBP, por sus siglas en inglés) cumplan con los estándares profesionales y rindan cuentas por el trato inhumano. </strong>Biden aumentará los recursos para la capacitación y exigirá transparencia y supervisión independiente a las actividades de ICE y CBP. Bajo una Administración Biden, habrá profesionales responsables, confirmados por el Senado, que liderarán estas agencias, y responderán directamente al presidente.</li>
+</ul>
+<ul>
+<li><strong>Protegerá y ampliará las oportunidades para las personas que arriesgan sus vidas en el servicio militar. </strong>Biden no se enfocará en los hombres y mujeres que sirvieron en uniforme, ni en sus familias, para la deportación. También ordenará al Secretario de Seguridad Nacional que cree un proceso de libertad condicional para los veteranos deportados por la Administración Trump, para reunirlos con sus familias y colegas militares en los EE.UU.<strong> </strong></li>
+</ul>
+<ul>
+<li><strong>Restaurará y defenderá el proceso de naturalización para las personas con la tarjeta verde. </strong>Una Administración Biden agilizará y mejorará el proceso de naturalización para que sea más accesible para las personas con tarjetas verdes calificadas. La Administración Trump ha dificultado demasiado que las personas con tarjetas verdes que califican obtengan las tarjetas verdes. En pocas palabras, esto está mal. Biden restablecerá la fe en el proceso de ciudadanía eliminando obstáculos a la naturalización y a obtener el derecho al voto, abordando la acumulación de solicitudes al dar prioridad al flujo de trabajo de las adjudicaciones y asegurando que las solicitudes se procesen rápidamente, y rechazando la imposición de tarifas irrazonables.<strong> </strong></li>
+</ul>
+<ul>
+<li><strong>Revitalizará el Grupo de Trabajo sobre los Nuevos Estadounidenses e impulsará nuestra economía priorizando la integración, promoviendo el emprendimiento de inmigrantes, aumentando el acceso a la enseñanza de idiomas y promoviendo la participación civil. </strong>Integrar los talentos de los nuevos inmigrantes en nuestras comunidades y ayudarlos a prosperar enriquece a nuestra nación y nuestra economía. Bajo la presidencia de Biden, el Grupo de Trabajo sobre los Nuevos Estadounidenses coordinará una vez más las agencias federales y los recursos para brindar apoyo a la comunidad en una variedad de temas, que incluyen aprendizaje de idiomas, emprendimiento y administración financiera, capacitación de la fuerza laboral y orientación sobre el proceso de naturalización.<strong> </strong></li>
+</ul>
+<ul>
+<li><strong>Convocará una reunión regional de líderes, incluyendo El Salvador, Guatemala, Honduras, México y Canadá, para abordar los factores que impulsan la migración y proponer una solución de reasentamiento regional. </strong>La migración fuera del Triángulo Norte ha impactado a más países además de los EE.UU. Belice, Costa Rica, México y otros también han visto un número creciente de personas que huyen de la violencia y la falta de oportunidades. Un problema regional requiere una solución regional, por lo que Biden convocará inmediatamente a los socios regionales para instituir un plan integral y multinacional para abordar los desafíos.</li>
+</ul>
+<p><strong>Modernizará el sistema de inmigración de los Estados Unidos </strong></p>
+<p>Como presidente, Biden comprometerá un importante capital político para finalmente aprobar legislación para una reforma migratoria con el fin de garantizar que los Estados Unidos permanezcan abiertos y acojan a personas de todas partes del mundo, y para sacar de las sombras a personas trabajadoras que han enriquecido nuestras comunidades y nuestro país, en algunos casos durante décadas. Esto no solo preocupa a las comunidades latinas, sino que afecta a las familias de todos los orígenes y trasfondos. Hay aproximadamente 1.7 millones de inmigrantes indocumentados de Asia en los EE.UU., así como cientos de miles de personas de Europa, Medio Oriente, África y el Caribe. Biden inmediatamente comenzará a trabajar con el Congreso para modernizar nuestro sistema, con la prioridad de mantener a las familias unidas al proporcionar una hoja de ruta a la ciudadanía para casi 11 millones de inmigrantes indocumentados; haciendo crecer nuestra economía y expandiendo las oportunidades económicas en todo el país al mejorar y aumentar las oportunidades de inmigración legal; y preservar la antigua directiva de nuestro sistema de inmigración para reunir a las familias y aumentar nuestra diversidad.</p>
+<p>Los inmigrantes son esenciales para la fortaleza de nuestro país y la economía de los Estados Unidos. Cuando los inmigrantes eligen venir a los Estados Unidos, aportan sus tradiciones y contribuciones únicas al rico tapiz cultural de nuestro país. También son un motor clave del crecimiento económico. La Oficina de Presupuesto del Congreso descubrió que la legislación integral de inmigración de 2013 habría aumentado, con el tiempo, el tamaño de la economía en más del 5 por ciento. Actualmente, no estamos aprovechando la capacidad de los Estados Unidos para atraer a los mejores y más brillantes trabajadores del mundo. Un sistema de inmigración moderno debe permitir que nuestra economía crezca, al tiempo que protege los derechos, los salarios y las condiciones de trabajo de todos los trabajadores, y pide cuentas a los empleadores si no cumplen con las reglas. Los derechos de los inmigrantes y los derechos de los trabajadores están profundamente conectados. Debemos asegurarnos de que todos los trabajadores estén protegidos, puedan unirse a un sindicato y puedan ejercer sus derechos laborales, independientemente de su estatus migratorio, para la seguridad de todos los trabajadores.</p>
+<p>Joe Biden trabajará con el Congreso para aprobar legislación que:</p>
+<ul>
+<li><strong>Cree una hoja de ruta hacia la ciudadanía para los casi 11 millones de personas que han estado viviendo en nuestro país y fortaleciéndolo durante años.</strong> Estas son nuestras madres, padres, hermanos y hermanas. Son nuestros vecinos, compañeros de trabajo y miembros de nuestras congregaciones y equipos de Pequeñas Ligas. Contribuyen de innumerables maneras a nuestras comunidades, fuerza laboral y economía. En 2015, el IRS recaudó $23,600 millones de 4.4 millones de trabajadores sin números de Seguro Social, muchos de los cuales eran indocumentados. Biden abogará agresivamente por una legislación que cree una hoja de ruta clara hacia el estatus legal y la ciudadanía para los inmigrantes no autorizados que se registren, estén al día con sus impuestos y hayan pasado una verificación de antecedentes.</li>
+</ul>
+<ul>
+<li><strong>Reforme el programa de visas para trabajadores temporales en industrias selectas. </strong>Un conjunto de industrias depende de los trabajadores temporeros, o trabajadores que solo buscan estar en los Estados Unidos por un corto tiempo. El sistema actual para acomodar a estos trabajadores es engorroso, burocrático e inflexible: aumenta los incentivos para eludir el sistema mediante la contratación de trabajadores indocumentados y permite que los empleadores que controlan la visa paguen salarios artificialmente bajos. Biden trabajará con el Congreso para reformar el sistema actual de visas de trabajo temporal para permitir que los trabajadores en estas industrias selectas cambien de trabajo, mientras certifica la necesidad en el mercado laboral de trabajadores extranjeros. Los empleadores deberían poder proveer datos que muestren la falta de disponibilidad de mano de obra y el daño que resultaría si los trabajadores temporales no estuvieran disponibles. Esta flexibilidad, junto con fuertes salvaguardas que requieran a los empleadores pagar un cálculo justo del salario vigente y garantizar el derecho de todos los trabajadores a afiliarse a un sindicato y ejercer sus derechos laborales, ayudará a satisfacer las necesidades de los empleadores en la nación, a mantener salarios más altos tanto para los trabajadores estadounidenses como para los extranjeros, incentivar a los trabajadores y empleadores a operar dentro de los canales legales, prevenir la explotación de los trabajadores temporales e impulsar las economías locales.<strong> </strong></li>
+</ul>
+<ul>
+<li><strong>Reforme el sistema de visas temporales. </strong>Las visas temporales altamente calificadas no deben usarse con el fin de desincentivar el reclutamiento de trabajadores que ya están en los Estados Unidos para ocupaciones de gran demanda. Un sistema de inmigración que desplaza a los trabajadores altamente calificados a favor de solo salarios y habilidades de nivel básico amenaza la innovación y la competitividad de los Estados Unidos. Biden trabajará con el Congreso para reformar primero las visas temporales con el fin de establecer un proceso de asignación basado en los salarios y establecer mecanismos de aplicación para garantizar que estén alineados con el mercado laboral y no se usen para socavar los salarios. Luego, Biden apoyará la expansión de la cantidad de visas altamente calificadas y la eliminación de los límites de visas basadas en el empleo por país, lo que crea retrasos inaceptablemente largos.<strong> </strong></li>
+</ul>
+<ul>
+<li><strong>Provea un camino a la legalización para los trabajadores agrícolas que han trabajado durante años en granjas de los Estados Unidos y continúan trabajando en la agricultura. </strong>Asegurar una ayuda adecuada y estacional en el sector agrícola puede ser ineficiente y difícil de navegar, lo que hace que las personas eviten o exploten el sistema, incluso cuando los trabajos permanecen sin cubrir. Biden apoya una legislación de consenso entre los trabajadores agrícolas y el sector agrícola que proporcionará un estatus legal basado en el historial de trabajo agrícola anterior, y una vía más rápida hacia una tarjeta verde y, en última instancia, la ciudadanía. Biden también garantizará que se apliquen las normas laborales y de seguridad, incluyendo el pago de las horas extras, las condiciones de vida humanas y la protección contra los pesticidas y la exposición al calor, con respecto a estas personas trabajadoras particularmente vulnerables.</li>
+</ul>
+<ul>
+<li><strong>Rechace la falsa elección entre inmigración por el empleo y por la familia. </strong>Cada día, en todos los estados del país, millones de inmigrantes a quienes se les otorga una visa por sus lazos familiares hacen valiosas contribuciones a nuestro país y economía. Mantener unidas a las familias y permitir que los inmigrantes elegibles se unan a sus parientes estadounidenses en territorio estadounidense es de vital importancia, pero el sistema actual está mal diseñado, con límites por país que impiden que las solicitudes se aprueben de manera oportuna. Eso significa que los solicitantes aprobados pueden esperar décadas para reunirse con sus familias. Como presidente, Biden apoyará la inmigración por la familia al preservar la unificación familiar como base de nuestro sistema de inmigración; al permitir que cualquier solicitante aprobado reciba una visa temporal de no inmigrante hasta que se procese la visa permanente; y al apoyar la legislación que trata al cónyuge e hijos de las personas con la tarjeta verde como los parientes inmediatos que son, eximiéndolos de los límites y permitiendo que los padres traigan a sus hijos menores en el momento de la inmigración.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Preserve las preferencias por la diversidad en el sistema actual.</strong> Trump se ha propuesto abolir la lotería de Visa de Diversidad. Este es un programa que trae hasta 50,000 inmigrantes de países subrepresentados a los Estados Unidos cada año. Ha despreciado el sistema como un &#8220;espectáculo de terror&#8221; y tergiversa repetidamente cómo se administra la lotería, mientras demoniza e insulta con connotaciones racistas a quienes reciben las visas. Las preferencias de diversidad son esenciales para preservar un sistema de inmigración robusto y vibrante. Como presidente, Biden reafirmará nuestros valores fundamentales y preservará el papel crítico de las preferencias de diversidad para garantizar que los inmigrantes en todas partes tengan la oportunidad de convertirse legalmente en ciudadanos estadounidenses.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Aumente la cantidad de visas ofrecidas para la inmigración permanente por el empleo según las condiciones macroeconómicas.</strong> Actualmente, el número de visas por el empleo está limitado a 140,000 cada año, sin la capacidad de responder al estado del mercado laboral o las demandas de los empleadores de la nación. Como presidente, Biden trabajará con el Congreso para aumentar el número de visas otorgadas para la inmigración permanente por el empleo, y promover mecanismos para reducir temporalmente el número de visas en tiempos de alto desempleo en los Estados Unidos. También estará exento de cualquier límite los graduados recientes de programas de doctorado en campos STEM en los Estados Unidos, quienes están preparados para hacer algunas de las contribuciones más importantes a la economía mundial. Biden cree que los graduados extranjeros de un programa de doctorado de los EE.UU. deben recibir una tarjeta verde con su título y que perder a estos trabajadores altamente capacitados en economías extranjeras es un perjuicio para nuestra propia competitividad económica.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><strong>Cree una nueva categoría de visa para permitir que las ciudades y los condados soliciten niveles más altos de inmigrantes para apoyar su crecimiento. </strong>La disparidad en el crecimiento económico entre las ciudades de los Estados Unidos, y entre las comunidades rurales y las áreas urbanas, es uno de los grandes desequilibrios de la economía actual. Algunas ciudades y muchas comunidades rurales luchan con la disminución de la población, la erosión de las oportunidades económicas y empresas locales que enfrentan desafíos únicos. Otros simplemente luchan por atraer una fuerza laboral productiva y emprendedores innovadores. Como presidente, Biden apoyará un programa para permitir que cualquier ejecutivo del condado o municipal de un condado o ciudad grande o mediana solicite visas de inmigrantes adicionales para apoyar la estrategia de desarrollo económico de la región, siempre que los empleadores en esas regiones certifiquen que hay trabajos disponibles, y que no hay trabajadores para llenarlos. Los titulares de estas visas estarían obligados a trabajar y residir en la ciudad o condado que los solicitó, y estarían sujetos a las mismas protecciones de certificación que otros inmigrantes por el empleo.</li>
+</ul>
+<ul>
+<li><strong>Aplique las reglas para proteger a los trabajadores estadounidenses y extranjeros por igual. </strong>El sistema de inmigración de los EE.UU. debe proteger contra los recortes salariales en la economía debido a la explotación de trabajadores extranjeros por parte de empleadores inescrupulosos que socavan el sistema, al contratar trabajadores inmigrantes por debajo de la tasa de mercado, o encontrar trabajadores fuera del sistema de inmigración. Biden trabajará con el Congreso para garantizar que los empleadores no se aprovechen de los trabajadores inmigrantes y que los trabajadores ciudadanos estadounidenses no sean subvalorados por los empleadores que no cumplen con las normas. Biden también trabajará para garantizar que los empleadores tengan las herramientas adecuadas para certificar la situación laboral de sus trabajadores y restablecerá el enfoque en los empleadores abusivos en lugar de en los trabajadores vulnerables a quienes están explotando.</li>
+</ul>
+<ul>
+<li><strong>Amplíe las protecciones para los inmigrantes indocumentados que denuncian violaciones laborales.</strong> Cuando los inmigrantes indocumentados son víctimas de delitos graves y ayudan en la investigación de esos crímenes, son elegibles para visas U. La Administración Obama-Biden amplió el programa de visa U a ciertos delitos en el lugar de trabajo. Como presidente, Biden extenderá aún más estas protecciones a las víctimas de cualquier violación de las leyes laborales federales, estatales o locales en el lugar de trabajo al asegurar la aprobación de la Ley POWER. Y, una Administración Biden se asegurará de que los trabajadores con visas temporales estén protegidos para que puedan ejercer los derechos laborales a los que tienen derecho.<strong> </strong></li>
+<li><strong>Aumente las visas para sobrevivientes de violencia doméstica. </strong>Bajo la Administración Trump, existen retrasos inaceptables en el procesamiento de la adjudicación de solicitudes de autopeticiones de VAWA, visas U y visas T. Como presidente, Biden pondrá fin a estos retrasos y brindará a las víctimas la seguridad y certeza que necesitan. Y Biden triplicará el límite actual de 10,000 en visas U; este límite es insuficiente para satisfacer las graves necesidades de las víctimas y obstaculiza nuestra seguridad pública.</li>
+</ul>
+<p><strong>Dará la bienvenida a los inmigrantes en nuestras comunidades</strong></p>
+<p>Los inmigrantes aportan un enorme valor económico, cultural y social a sus nuevas comunidades. Incluso en las ciudades afectadas por la pérdida de empleos en la manufactura, los inmigrantes son un motor clave del espíritu empresarial y el crecimiento de la población.</p>
+<p>Según un informe de 2017 de la Nueva Economía Americana (“New American Economy”), de 2000 a 2015, los inmigrantes representaron el 49.7% de todo el crecimiento de la población en la región de los Grandes Lagos, más de 1.5 millones de personas, lo que ayudó a compensar los impactos del declive de la población en ciudades como Syracuse y Akron. Los inmigrantes están trayendo una nueva vida a las economías locales, iniciando negocios, pagando impuestos y gastando sus dólares en sus nuevas comunidades. El Center for American Progress ha estimado que los beneficiarios de DACA contribuirán con aproximadamente $460.300 millones al producto interno bruto nacional durante la próxima década. Los Estados Unidos necesitan retener el talento y el impulso de los “dreamers” criados en los Estados Unidos para asegurar esos beneficios para nuestra propia salud económica.</p>
+<p>Es hora de que el gobierno federal escuche y aprenda de los municipios locales de todo el país que han construido comunidades y economías vibrantes e inclusivas mediante el desarrollo de políticas concretas y recomendaciones de programas de base para brindar oportunidades a los nuevos inmigrantes.</p>
+<p>Como presidente, Biden:</p>
+<ul>
+<li><strong>Dirigirá recursos federales, a través del restablecimiento del Grupo de Trabajo para los Nuevos Americanos, con el fin de apoyar los esfuerzos comunitarios para recibir a los inmigrantes.</strong> Los esfuerzos concretos sucederán con mayor frecuencia en las comunidades individuales, pero las agencias federales tienen una enorme cantidad de información y recursos para apoyar los esfuerzos liderados por la comunidad. Al adoptar iniciativas promovidas por organizaciones como Welcoming America, una Administración Biden mejorará el acceso a las agencias federales y apoyará mejor las iniciativas locales, tales como:
+<ul>
+<li>Establecer Oficinas de Asuntos de Inmigrantes en los ayuntamientos, o a nivel de condado y estado, para que haya funcionarios del gobierno local centrados en hacer que las políticas sean inclusivas;</li>
+<li>Crear centros de recursos en los vecindarios o centros de bienvenida para ayudar a todos los residentes a encontrar trabajo; acceso a los servicios y oportunidades de aprendizaje del idioma inglés; y navegar el sistema escolar, el sistema de cuidado de salud y otras facetas importantes de la vida diaria;</li>
+<li>Apoyar incubadoras de emprendedores dirigidas a inmigrantes y proveer recursos para ayudar a acceder a préstamos comerciales, asesoría y capital;</li>
+<li>Promover sellos estatales de alfabetización bilingüe para reconocer a las personas que se gradúan de la escuela secundaria que hablan varios idiomas;</li>
+<li>Impulsar campañas para ayudar a los residentes legales permanentes a naturalizarse;</li>
+<li>Facilitar los esfuerzos estatales para reducir las barreras para otorgar licencias de títulos profesionales y certificaciones de otros países;</li>
+<li>Aumentar la representación de inmigrantes en las juntas comunitarias;</li>
+<li>Asegurar que todas las escuelas públicas tengan suficiente apoyo para el aprendizaje del idioma inglés con el fin de ayudar a todos los niños a alcanzar su potencial; e</li>
+<li>Invertir en programas para conectar a profesionales inmigrantes con otros en su campo o crear eventos culturales y otra programación para construir capital social en las comunidades inmigrantes.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Presionará para derogar leyes estatales extremas antiinmigrantes que tienen un efecto desalentador en la capacidad de inmigrantes que son víctimas de violencia doméstica, sobrevivientes de asalto sexual y otras víctimas de delitos para buscar seguridad y justicia. </strong>Algunas leyes estatales llevan a las víctimas y testigos a las sombras y amenazan la seguridad pública. Como se documentó en una encuesta nacional reciente, las víctimas inmigrantes de violencia doméstica, agresión sexual y tráfico humano tienen cada vez más miedo de contactar a la policía, emprender casos civiles o penales, o ir a la corte para buscar seguridad. Esto atrapa a las víctimas que solicitan ayuda y corren el riesgo de ser deportadas, enfrentan represalias por parte de un abusador y la separación de sus hijos, o se quedan con una pareja violenta y arriesgan sus vidas. Como presidente, Biden trabajará en colaboración con ciudades, estados, organizaciones sin fines de lucro y las fuerzas del orden público para generar confianza y presionar a los estados para que deroguen las leyes que desalientan la denuncia de incidentes de violencia doméstica y amenazan la seguridad pública.</li>
+</ul>
+<ul>
+<li><strong>Ampliará los derechos atrasados a los trabajadores agrícolas y domésticos. </strong>Cuando el Congreso extendió los derechos laborales y las protecciones a los trabajadores, los trabajadores agrícolas y los trabajadores domésticos, quienes son desproporcionadamente inmigrantes y personas de color, quedaron excluidos. Aún hoy, millones de estos trabajadores no están totalmente protegidos por la ley laboral federal. Como presidente, Biden apoyará legislación, incluyendo la Ley de Equidad para los Trabajadores Agrícolas y la Declaración de Derechos de las Trabajadoras Domésticas, que amplíe las protecciones federales a los trabajadores agrícolas y domésticas, asegurando que ellos también tengan el derecho a las protecciones básicas en el lugar de empleo y a organizarse y negociar colectivamente. Y, a través de la Declaración de Derechos de las Trabajadoras Domésticas, Biden se asegurará de que las trabajadoras domésticas tengan voz en el lugar de empleo a través de una junta de salarios y normas.</li>
+</ul>
+<p><strong>Reafirmará el compromiso de los Estados Unidos con los solicitantes de asilo y los refugiados </strong></p>
+<p>Las políticas de la Administración Trump han creado un desastre humanitario en nuestra frontera y han administrado terriblemente mal los recursos sin precedentes que el Congreso le ha asignado. Trump ha desviado dinero para aterrorizar a las familias inmigrantes, incluso cuando las instalaciones del CBP en la frontera están desbordadas. Después de casi tres años, esta Administración todavía no tiene un plan coherente para la protección y el procesamiento de niños y familias. Los oficiales de CBP sobre el terreno, que no están capacitados ni equipados para este trabajo, están asumiendo una responsabilidad descomunal para manejar esta crisis. Y a través de sus políticas del Protocolo de Protección de Migrantes, Trump ha cerrado efectivamente nuestro país a los solicitantes de asilo, forzándolos a elegir entre esperar en situaciones peligrosas, vulnerables a la explotación por parte de los carteles y otras personas con malas intenciones, o arriesgarse a intentar cruzar entre los puertos de entrada. En otras palabras, las políticas de Trump en realidad están alentando a las personas a cruzar de manera irregular, en lugar de solicitar de manera legal, segura y ordenada en los puertos.</p>
+<p>Como presidente, Biden:</p>
+<ul>
+<li><strong>Aumentará los oficiales de asilo para revisar de manera eficiente los casos de cruces fronterizos recientes y mantendrán casos con hallazgos positivos de temor creíble en la División de Asilo.</strong> Este cambio, recomendado por el Instituto de Política de Migración, una entidad no partidista, eliminará la duplicación de recursos y las investigaciones mientras se revisa el mérito de los casos de asilo y aliviará la carga de los tribunales de inmigración que están saturados. No todos los que salen de América Central son solicitantes de asilo, pero muchos lo son, y cada caso debe revisarse de manera justa y de conformidad con la ley. Los migrantes que califican para una solicitud de asilo serán admitidos en el país a través de un proceso ordenado y conectados con recursos que los ayudarán a cuidarse a sí mismos. Los migrantes que no califican tendrán la oportunidad de presentar su reclamo ante un juez de inmigración, pero si no pueden satisfacer al tribunal, el gobierno ayudará a facilitar su reintegración exitosa en sus países de origen.</li>
+<li><strong>Restaurará la elegibilidad de asilo para sobrevivientes de violencia doméstica. </strong>Bajo la Administración Biden, el Departamento de Justicia de los Estados Unidos restablecerá las protecciones explícitas de asilo, rescindidas por la Administración Trump, para sobrevivientes de violencia doméstica y violencia sexual cuyos gobiernos de origen no pueden protegerlos o no los protegerán.</li>
+</ul>
+<ul>
+<li><strong>Aplicará las leyes de asilo de los Estados Unidos a aquellos que huyen de la persecución política. </strong>Las víctimas de persecución basadas en creencias políticas también han sufrido debido a la restricción de Trump de los procesos de asilo y su incapacidad para aplicar adecuadamente las leyes de asilo de los Estados Unidos.</li>
+<li><strong>Duplicará el número de jueces de inmigración, personal de la corte e intérpretes. </strong>Hay una acumulación de más de un millón de casos de inmigración en el sistema administrativo, lo que hace que los solicitantes a menudo esperen años antes de que se escuchen sus casos. Este aumento en la dotación de personal vital de los tribunales de inmigración respaldará la adjudicación oportuna y justa de los asilos y otros casos.</li>
+</ul>
+<ul>
+<li><strong>Pondrá fin a los centros de detención con fines de lucro. </strong>Ningún negocio debería beneficiarse del sufrimiento de las personas desesperadas que huyen de la violencia. Biden se asegurará de que las instalaciones que albergan temporalmente a los migrantes que buscan asilo cumplan con los más altos estándares de cuidado y prioricen la seguridad y la dignidad de las familias, sobre todo.</li>
+</ul>
+<ul>
+<li><strong>Aumentará la cantidad de refugiados que serán bienvenidos en el país.</strong> Con más de 70 millones de personas desplazadas en el mundo de hoy, este es un momento que exige el liderazgo estadounidense. Ofrecer esperanza y refugio a los refugiados es parte de lo que somos como país. Como senador, Joe Biden copatrocinó la legislación que crea nuestro programa de refugiados, que Trump ha diezmado constantemente. Su administración redujo el límite de reasentamiento de refugiados a sus niveles más bajos en décadas y cerró la puerta a miles de personas que sufren persecución, muchas de las cuales enfrentan amenazas de violencia o incluso la muerte en sus países de origen. No podemos movilizar a otros países para que cumplan con sus obligaciones humanitarias si no defendemos nuestros valores democráticos más preciados y rechazamos firmemente la retórica y las acciones nativistas de Trump. Biden abraza los valores centrales que nos han hecho quienes somos y priorizará la restauración de las admisiones de refugiados en línea con nuestra práctica histórica tanto en administraciones demócratas como republicanas. Establecerá el límite anual de admisión global de refugiados a 125,000, y tratará de aumentarlo con el tiempo de acuerdo con nuestra responsabilidad, nuestros valores y la necesidad mundial sin precedentes.</li>
+</ul>
+<p><strong>Abordará las causas fundamentales de la migración</strong></p>
+<p>El peor lugar para lidiar con la migración irregular es en nuestra propia frontera. En lugar de trabajar en cooperación con los países de la región para manejar la crisis, el enfoque errático de Trump solo está empeorando las cosas. La mejor manera de resolver este desafío es abordar la violencia subyacente, la inestabilidad y la falta de oportunidades que obligan a las personas a abandonar sus hogares en los países del Triángulo Norte de El Salvador, Guatemala y Honduras, en primer lugar. Como vicepresidente, Biden fue el arquitecto de un importante programa de asistencia de los Estados Unidos para avanzar las reformas en Centroamérica y abordar los factores clave que impulsan la migración.</p>
+<p>Como presidente, Biden adoptará una <strong>estrategia integral para fortalecer la seguridad y la prosperidad de América Central en una alianza con los pueblos de la región que:</strong></p>
+<ul>
+<li><strong>Aborde las causas fundamentales de la migración al fomentar una mayor seguridad, desarrollo económico y respeto por el estado de derecho en América Central. </strong>El Triángulo Norte está dividido por la violencia, plagado de narcotráfico y preso del miedo a las organizaciones criminales que manejan armas de uso militar, y es particularmente peligroso para las mujeres y los niños. Biden propondrá un paquete de asistencia de cuatro años y $4 mil millones para la región, con ayuda vinculada a los gobiernos de la región que ofrezca reducciones cuantificables de la violencia de pandillas y de género, mejoras en los sistemas legales y educativos, y la implementación de medidas anticorrupción, entre otras cosas. Este apoyo también se complementará con donantes internacionales y socios regionales.</li>
+</ul>
+<ul>
+<li><strong>Fortalezca las respuestas humanitarias regionales. </strong>La incapacidad de los países del Triángulo Norte para detener la violencia y el terror en la región ha creado un desafío regional para los refugiados. Casi todos los países de la región reciben refugiados y luchan por proteger y cuidar a los niños y las familias. Como líderes en la región, los Estados Unidos tienen la responsabilidad de ayudar a nuestros vecinos y socios a procesar y apoyar a los refugiados y solicitantes de asilo. Esto también ayudará a aliviar la presión en nuestra propia frontera.</li>
+</ul>
+<ul>
+<li><strong>Maneje la migración a través del reasentamiento de refugiados y otros programas legales. </strong>Siempre que sea posible, debemos permitir que los solicitantes de asilo presenten su reclamo sin emprender el peligroso viaje a los EE.UU. Biden actualizará el programa de menores centroamericanos para ciertos niños que buscan reunirse con familiares estadounidenses, permitiéndoles solicitar la entrada desde sus países de origen; ampliar los esfuerzos para inscribir y procesar a los refugiados en la región para su reasentamiento en los Estados Unidos y otros países; y ampliar las oportunidades para las personas que buscan visas de trabajadores temporales u otra forma de estatus legal para el cual pueden calificar para poder venir a los EE.UU.</li>
+</ul>
+<p><strong>Implementará una revisión efectiva en la frontera</strong></p>
+<p>Al igual que todas las naciones, los EE.UU. tienen el derecho y el deber de asegurar nuestras fronteras y proteger a nuestra gente contra las amenazas. Pero sabemos que los inmigrantes y las comunidades de inmigrantes no son una amenaza para nuestra seguridad, y el gobierno nunca debe usar la xenofobia o los tácticas de miedo para asustar a los votantes y obtener ventaja política. Es irresponsable y antiestadounidense. Construir un muro de un “mar radiante al otro” no es una solución política seria, es un desperdicio de dinero y desvía los recursos críticos de las amenazas reales. Hoy en día, es más probable que las drogas ilícitas pasen de contrabando a través de uno de los puertos de entrada legales de los Estados Unidos. Se esconden entre la carga comercial en camiones semi-remolque o en un compartimento oculto en un vehículo de pasajeros. Un muro no es un elemento disuasivo severo para las organizaciones criminales sofisticadas que emplean túneles fronterizos, buques semi-sumergibles y tecnología aérea para vencer las barreras físicas en la frontera, o incluso para personas con una sierra alternante.</p>
+<p>Necesitamos políticas inteligentes y sensatas que realmente fortalezcan nuestra capacidad de detectar estas amenazas reales, al mejorar los procedimientos de detección en nuestros puertos legales de entrada e invertir en nuevas tecnologías. La frontera entre México y los Estados Unidos no debe ser tratada como una zona de guerra; debe ser un lugar donde la gobernanza y la cooperación efectiva entre nuestros dos países ayude a nuestras comunidades a prosperar y crecer juntas, facilitando el comercio y la conexión, y alimentando el intercambio de culturas e ideas.</p>
+<p>Como presidente, Biden:</p>
+<ul>
+<li><strong>Invertirá en mejor tecnología </strong>junto con protecciones de privacidad en la frontera, tanto en los puertos de entrada como entre ellos, incluyendo cámaras, sensores, máquinas de rayos X a gran escala y torres fijas. Biden también invertirá considerablemente en mejorar la infraestructura anticuada en todos nuestros puertos de entrada.</li>
+</ul>
+<ul>
+<li><strong>Mejorará la colaboración entre agencias. </strong>Múltiples agencias federales recopilan información sobre organizaciones criminales transnacionales que trafican personas, armas y narcóticos ilegales. Para combatir de manera más efectiva el tráfico de bienes ilícitos en los puertos de entrada, de acuerdo con nuestro compromiso con la privacidad, debemos mejorar nuestra coordinación entre agencias gubernamentales.</li>
+</ul>
+<ul>
+<li><strong>Trabajará con México y Canadá como socios, no como adversarios. </strong>Una mejor cooperación con nuestros vecinos se traduce en una mayor seguridad para todos nuestros países. En lugar de intimidar a nuestros amigos, Biden creará alianzas basadas en el respeto de nuestros intereses comunes y mejorará nuestras capacidades e información compartidas.</li>
+</ul>
+  </div>
+</article>
+
+    <section class="donate__body-wrap hidden" id="donate-nav">
+    <div class="donate__body">
+      <button class="donate__copy-button" type="button" name="button" id="donate-toggle">
+        <div class="bfp__copy donate__body-lede">
+                                                <p>Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda.</p>
+                                    </div>
+        <noscript><img class="donate__button-icon" src="../../wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate"></noscript><img class="lazyload donate__button-icon" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/blue-arrow-small.svg" alt="Toggle Donate">
+      </button>
+      <ul class="donate__donate-bar donate__donate-bar--desktop">
+                            <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $15"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+                >$15</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $32"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+                >$32</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $50"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+                >$50</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now $250"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=250"
+                >$250</a>
+            </li>
+                    <li class="donate__donate-bar-item">
+                <a class="bfp__button donate__donate-bar-link"
+                    target="_blank"
+                    rel="noopener"
+                   aria-label="donate now Otra"
+                   href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+                >Otra</a>
+            </li>
+              </ul>
+      <ul class="donate__donate-bar donate__donate-bar--mobile">
+                              <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $15"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=15"
+              >$15</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $32"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=32"
+              >$32</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now $50"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount=50"
+              >$50</a>
+            </li>
+                      <li class="donate__donate-bar-item">
+              <a class="bfp__button donate__donate-bar-link" target="_blank" rel="noopener"
+                 aria-label="donate now Otra"
+                 href="https://secure.actblue.com/donate/spjoe2020?refcode=web-homepage-donorbar-footer&amount="
+              >Otra</a>
+            </li>
+                          </ul>
+            
+<nav class="header__nav-wrap header__nav-wrap--closed header__nav-body--mobile" aria-label="primary" role="dialog" aria-modal="true" id="nav_donate"
+     role="dialog"
+     aria-modal="true">
+    <div class="header__nav-body-wrap" id="nav_label" tabindex="-1">
+            <a class="header__banner-logo-wrap" href="../inicio/index.html" id="nav-banner" tabindex="0" aria-current="page">
+        <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+      </a>
+      <a class="header__banner-logo-wrap" href="../inmigrantes.html" id="nav-banner" tabindex="0" aria-current="page">
+  <noscript><img class="header__banner-logo header__banner-logo--white" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload header__banner-logo header__banner-logo--white" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+</a>
+<div class="header__nav-body">
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Este es Joe
+                  </button>
+    <ul class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594 bfp__cta-copy header__nav-item"><a href="../la-vision-de-joe/index.html" class="header__nav-item-link">La Visión de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7595 bfp__cta-copy header__nav-item"><a href="../la-historia-de-joe/index.html" class="header__nav-item-link">La Historia de Joe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7596 bfp__cta-copy header__nav-item"><a href="../ultimo/index.html" class="header__nav-item-link">Último</a></li>
+    </ul>
+  </div>
+  <div class="header__collapse-nav-item--dropdown">
+    <button class="header__collapse-dropdown-button" aria-label="toggle drop down navigation">
+              Ayuda a Joe
+                  </button>
+    <ul  class="header__collapse-dropdown">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7597 bfp__cta-copy header__nav-item"><a href="../actua-por-joe/index.html" class="header__nav-item-link">Actúa por Joe</a></li>
+    </ul>
+  </div>
+      <a class="header__nav-item header__collapse-nav-item" href="https://iwillvote.com/?lang=es" target="_blank">
+      ¡Vota!
+    </a>
+      <a class="header__nav-item header__collapse-nav-item" href="https://store.joebiden.com/" target="_blank">
+    <span class="bfp__helper-text">This will take you off site</span>
+          Tienda
+      </a>
+                                <li class="bfp__cta-copy header__nav-item header__collapse-lang">
+                <a href="../../immigration.html" class="header__nav-item-link">
+                  English                </a>
+              </li>
+                                    <div class="header__nav-spacer"></div>
+  </div>
+    <div class="header__social-wrap">
+                                    <div class="header__social-item">
+                    <a href="https://twitter.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'twitter')">
+                        <span class="icon-twitter"></span>
+                        <span class="bfp__element-invisible">Twitter</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.facebook.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'facebook')">
+                        <span class="icon-facebook"></span>
+                        <span class="bfp__element-invisible">Facebook</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.instagram.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'instagram')">
+                        <span class="icon-instagram"></span>
+                        <span class="bfp__element-invisible">Instagram</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://www.youtube.com/joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'youtube')">
+                        <span class="icon-youtube"></span>
+                        <span class="bfp__element-invisible">Youtube</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="https://medium.com/@joebiden" class="header__social-link"  onClick="ga('send', 'event', 'link', 'click', 'medium')">
+                        <span class="icon-medium"></span>
+                        <span class="bfp__element-invisible">Medium</span>
+                    </a>
+                </div>
+                                                <div class="header__social-item">
+                    <a href="../../heres-the-deal.html" class="header__social-link" id="nav-last-focus" onClick="ga('send', 'event', 'link', 'click', 'podcast')">
+                        <span class="icon-podcast"></span>
+                        <span class="bfp__element-invisible">Podcast</span>
+                    </a>
+                </div>
+                        </div>
+    </div>
+</nav>
+    </div>
+  </section>
+</main>
+<!-- footer template -->
+<footer class="footer__body-wrap">
+    <section class="bfp__bg--dark-blue footer__pre-footer">
+                    <div class="footer__pre-img-wrap">
+              <div class="footer__pre-img" style="background-image: url(../../wp-content/uploads/2020/07/Group-1110-1.jpg);"></div>
+            </div>
+                <div class="footer__pre-input-wrap">
+                                        <h2 class="bfp__title--sm footer__pre-input-lede">
+                                                            HAGÁMOSLO. JUNTOS.                                                      </h2>
+
+              <form name="signup" action="https://go.joebiden.com/page/s/unete-al-equipo?source=web-homepage-footer" method="post">
+                <div class="bfp__input-wrap footer__pre-input-body">
+                  <div class="bfp__input-field bfp__input--large footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="email" id="footer_email" inputmode="email" name="email" placeholder="Correo Electrónico *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_email">Correo Electrónico</label>
+                    </div>
+                    <div class="bfp__input-field  bfp__input--small footer__pre-input">
+                      <input required class="bfp__title--smallest bfp__input" type="text" autocomplete="postal-code" id="footer_zip" inputmode="numeric" name="zip" placeholder="Código Postal *">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_zip">Código Postal</label>
+                    </div>
+                    <div class="bfp__input-field bfp__input--small footer__pre-input">
+                      <input class="bfp__title--smallest bfp__input" type="text" autocomplete= "tel-national" id="footer_mobile" name="mobile" inputmode="tel" placeholder="Número de Teléfono Móvil">
+                      <label class="bfp__title--smallest bfp__cta-copy bfp__input-label" for="footer_mobile">Número de Teléfono Móvil</label>
+                    </div>
+                    <button type="submit" class="bfp__cta bfp__input-cta footer__pre-button" onClick="ga('send', 'event', 'link', 'click', 'footer_signup')">
+                      <span class="bfp__helper-text">Al hacer clic en este botón, saldrá de está página web.</span>
+                      Vamos                    </button>
+                </div>
+              </form>
+                                <div class="bfp__disclaimer footer__pre-input-disclaimer">
+                        <p>Cuando proporciona su número de teléfono móvil da su consentimiento para recibir mensajes recurrentes de Biden para Presidente. Cargos por mensaje y datos pueden aplicar. Envíe un texto – HELP – para información. Un texto de STOP lo deja afuera. No se requiere ninguna compra. <a href="../terminos/index.html">Términos y Condiciones</a> y <a href="../politica-de-privacidad/index.html">Política de Privacidad</a>.</p>
+                  </div>
+                                  </div>
+    </section>
+    <div class="bfp__bg--darkest-blue footer__main-body-wrap">
+        <div class="footer__main-body">
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                                            <p>Apoye nuestra campaña presidencial para elegir a Joe Biden inscribiéndose como <a href="https://go.joebiden.com/page/s/volunteer">voluntario</a> o haciendo una <a href="https://secure.actblue.com/donate/spjoe2020">donación</a>.</p>
+                                                      </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137 footer__main-nav-item"><a href="../accesibilidad/index.html" class="footer__main-nav-link">Accesibilidad</a></li>
+<li id="menu-item-358" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-358 footer__main-nav-item"><a href="https://jobs.lever.co/joebiden" class="footer__main-nav-link">Empleos</a></li>
+<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 footer__main-nav-item"><a href="../politica-de-privacidad/index.html" class="footer__main-nav-link">Política de Privacidad</a></li>
+<li id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 footer__main-nav-item"><a href="../terminos/index.html" class="footer__main-nav-link">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                    <ul class="footer__main-nav-wrap">
+                        <li id="menu-item-3386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3386 footer__main-nav-item"><a href="../inicio/index.html" class="footer__main-nav-link">Inicio</a></li>
+<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139 footer__main-nav-item"><a href="../la-vision-de-joe/index.html" class="footer__main-nav-link">La Visión de Joe</a></li>
+<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129 footer__main-nav-item"><a href="../la-historia-de-joe/index.html" class="footer__main-nav-link">La Historia de Joe</a></li>
+<li id="menu-item-3280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3280 footer__main-nav-item"><a href="../actua-por-joe/index.html" class="footer__main-nav-link">Actúa por Joe</a></li>
+<li id="menu-item-3550" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3550 footer__main-nav-item"><a target="_blank" rel="noopener noreferrer" href="https://iwillvote.com/?lang=es&#038;partner=bfp-web&#038;partner_campaign=web-bfp-home-20200919edu-IWV-menu" class="footer__main-nav-link">Cómo Votar</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 footer__main-nav-item"><a href="https://store.joebiden.com/" class="footer__main-nav-link">Tienda</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 footer__main-nav-item"><a href="../ultimo/index.html" class="footer__main-nav-link">Último</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__main-block">
+                <div class="footer__main-content-wrap">
+                                    <a class="footer__main-logo-wrap" href="../inicio/index.html" aria-current="page">
+                      <noscript><img class="footer__main-logo" src="../../wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage"></noscript><img class="lazyload footer__main-logo" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E' data-src="https://joebiden.com/wp-content/themes/bexc/img/rm-logo-white.svg" alt="Joe Biden homepage">
+                  </a>
+                                          <span class="bfp__cta-copy footer__main-credit">Pagado por Biden For President, una campaña con millones de donantes de base, y absolutamente cero tonterías. </span>
+                                        <p class="footer__main-copyright">&copy; Copyright 2020. Derechos Reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__social-wrap ">
+                            <ul class="footer__social-list">
+                                                            <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://twitter.com/joebiden">
+                                <span class="icon-twitter"></span>
+                                <span class="bfp__element-invisible">Twitter</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.facebook.com/joebiden">
+                                <span class="icon-facebook"></span>
+                                <span class="bfp__element-invisible">Facebook</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.instagram.com/joebiden">
+                                <span class="icon-instagram"></span>
+                                <span class="bfp__element-invisible">Instagram</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://www.youtube.com/joebiden">
+                                <span class="icon-youtube"></span>
+                                <span class="bfp__element-invisible">Youtube</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="https://medium.com/@joebiden">
+                                <span class="icon-medium"></span>
+                                <span class="bfp__element-invisible">Medium</span>
+                            </a>
+                        </li>
+                                                                                <li class="footer__social-item">
+                            <a class="bfp__cta-copy footer__social-link" href="../../heres-the-deal.html">
+                                <span class="icon-podcast"></span>
+                                <span class="bfp__element-invisible">Podcast</span>
+                            </a>
+                        </li>
+                                                </ul>
+            </div>
+</footer>
+
+  
+    
+      <script type="text/javascript">
+        var modal_expires = 0;
+                var modal_cookie = 'modal-lightbox';
+              </script>
+
+      
+        <section class="modal__body-wrap" id="modal"
+                 role="dialog"
+                 aria-labelledby="donate_label"
+                 aria-modal="true">
+          <div class="modal__body">
+            <div class="modal__close-wrap" tabindex="-1">
+              <a class="bfp__cta-copy close modal-close modal__body-close" href="../inmigrantes.html#" id="modal-close">
+                <div class="modal__close-button-wrap">
+                  <div class="modal__close-line"></div>
+                  <div class="modal__close-line"></div>
+                </div>
+                Continuar al sitio              </a>
+            </div>
+
+            
+            
+            <div class="modal__content-img-wrap">
+                                                  <img width="480" height="868" src="../../wp-content/uploads/2020/08/lightbox-desktop.jpg" class="modal__content-img modal__content-img--desktop" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-desktop.jpg 480w, ../../wp-content/uploads/2020/08/lightbox-desktop-166x300.jpg 166w" sizes="(max-width: 480px) 100vw, 480px" />                                                  <img width="558" height="314" src="../../wp-content/uploads/2020/08/lightbox-mobile.jpg" class="modal__content-img modal__content-img--mobile" alt="" loading="eager" srcset="../../wp-content/uploads/2020/08/lightbox-mobile.jpg 558w, ../../wp-content/uploads/2020/08/lightbox-mobile-300x169.jpg 300w" sizes="(max-width: 558px) 100vw, 558px" />                            </div>
+            <div class="bfp__bg--med-blue modal__donate-wrap" id="dialog1_desc">
+              <div class="modal__donate-body">
+                <div class="modal__copy-wrap" data-window="40">
+                                                                                <h1 id="donate_label" class="bfp__title--med modal__content-title">JUNTOS, VENCEREMOS A DONALD TRUMP.</h1>
+                                                                                  <p class="bfp__copy modal__content-copy">Joe Biden y Kamala Harris recuperarán la Casa Blanca, pero necesitan tu ayuda. Contribuye hoy para asegurarnos de que tenemos los recursos que necesitamos para construir una campaña ganadora.</p>
+                                                      </div>
+                                <ul class="modal__donate-list">
+                                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $15"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=15&express_lane=true"
+                          >$15</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $32"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=32&express_lane=true"
+                          >$32</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $50"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=50&express_lane=true"
+                          >$50</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $100"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=100&express_lane=true"
+                          >$100</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $250"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=250&express_lane=true"
+                          >$250</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $500"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=500&express_lane=true"
+                          >$500</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now $1000"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=1000&express_lane=true"
+                          >$1000</a>
+                        </li>
+                                              <li class="modal__donate-item">
+                          <a class="bfp__button modal__donate-link" target="_blank"
+                             aria-label="donate now Otra"
+                             href="https://secure.actblue.com/donate/spjoe2020?refcode=web-lightbox-rmamouncement &amount=&express_lane=true"
+                          >Otra</a>
+                        </li>
+                                                        </ul>
+                                  <div class="bfp__copy--merc bfp__disclaimer modal__donate-disclaimer">
+                    <em><p>Si haz guardado tu información de pago con ActBlue Express, tu donativo se realizará de inmediato.</p>
+</em>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </section>
+
+      
+      
+<noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='../../wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js%3Fao_version=2.7.8'></script><script type='text/javascript' src='../../wp-content/themes/bexc/js/min/swiper.min.js%3Fver=1.62' id='swiper-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/mediabox.min.js%3Fver=1.62' id='mediabox-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/imagesloaded.min.js%3Fver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/masonry.min.js%3Fver=4.2.2' id='masonry-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/bodyScrollLock.min.js%3Fver=1.62' id='bodyScrollLock-js'></script>
+<script type='text/javascript' id='scranton-main-js-extra'>
+/* <![CDATA[ */
+var bexc_wpLocalization = {"templateDirectoryUri":"https:\/\/joebiden.com\/wp-content\/themes\/bexc","liveVideoHtml":"<iframe title=\"Vice President Joe Biden Speaks LIVE at Get Out The Vote Event in Pittsburgh, PA\" width=\"640\" height=\"360\" src="https://joebiden.com/es/inmigrantes/\&quot;https:\/\/www.youtube.com\/embed\/wWaPPjGMGO0?feature=oembed&amp;autoplay=1&amp;mute=1&amp;rel=0\&quot;" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen frameborder=\"0\"><\/iframe>"};
+var bexc_validationLocalization = {"email":"Por favor, ingresa tu correo electr\u00f3nico","firstName":"Por favor, ingresa tu nombre","lastName":"Por favor, ingresa tu apellido","zip":"Por favor, ingresa tu c\u00f3digo postal (5 d\u00edgitos)","mobile":"Por favor, ingrese su n\u00famero de tel\u00e9fono (10 d\u00edgitos)"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-main.min.js%3Fver=1.62' id='scranton-main-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/bexc/js/min/scranton-quiz.min.js%3Fver=1.62' id='scranton-quiz-js'></script>
+<script defer>
+/*
+ __        _______    _    ____       _      __  __    _    ____  _  __
+ \ \      / / ____|  / \  |  _ \     / \    |  \/  |  / \  / ___|| |/ /
+  \ \ /\ / /|  _|   / _ \ | |_) |   / _ \   | |\/| | / _ \ \___ \| ' /
+   \ V  V / | |___ / ___ \|  _ <   / ___ \  | |  | |/ ___ \ ___) | . \
+    \_/\_/  |_____/_/   \_\_| \_\ /_/   \_\ |_|  |_/_/   \_\____/|_|\_\
+            https://store.joebiden.com/Biden-Harris-facemask/
+*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"853c31a225","applicationID":"143000334","transactionName":"MVxbNkICCxEEVUZaWwgWeAFECgoMSkZTVFE=","queueTime":0,"applicationTime":395,"atts":"HRtYQAoYGB8=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
